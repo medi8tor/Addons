@@ -1,1 +1,414 @@
-local v0={};local v1=string.char;local v2=string.byte;local v3=string.sub;local v4=bit32 or bit ;local v5=v4.bxor;local v6=table.concat;local v7=table.insert;local function v8(v93,v94) local v95={};for v169=1, #v93 do v7(v95,v1(v5(v2(v3(v93,v169,v169 + 1 )),v2(v3(v94,1 + (v169% #v94) ,1 + (v169% #v94) + 1 )))%256 ));end return v6(v95);end v0[137 + 248 ]=v8("\231\114\231\164\53\57\201\248\100\244","\231\148\17\149\205\69\77");v0[1381 -1004 ]=v8("\238\121\33\89\228\115\198\202\122\33\68\241\50\220\206\100\100\71\245\60\221\199\115\100\86\248\115\205\197\118\38\88\248\55","\168\171\23\68\52\157\83");v0[405 -(22 + 7) ]=v8("\233\3\247\204\247\14\251\221\226\49\242\198\240\39\244\204\234\11\255\218","\169\135\98\154");v0[153 + 221 ]=v8("\57\90\210\44\144\90\95\35\94\236\33\143\65\123\57\94\210\32\133\69","\62\87\59\191\73\224\54");v0[124 + 249 ]=v8("\171\171\46\27\3\8\198\69\160\153\43\17\4\37\203\93","\49\197\202\67\126\115\100\167");v0[2356 -(1266 + 719) ]=v8("\162\47\166\78\215\91\31\29\169\29\163\68\208\118\18\5","\105\204\78\203\43\167\55\126");v0[958 -(268 + 335) ]=v8("\41\23\52\21\111\46\6\39\14\116\46\28","\61\97\82\102\90");v0[642 -(60 + 230) ]=v8("\248\114\122\79\221\73\176\180\33\44\77\210\92\225\230\125\121\77\199\93\174","\128\132\17\28\41\187\47");v0[923 -(426 + 146) ]=v8("\76\185\199\189\0\234\199\189\0\234\196\181\81\184\205\190\84\166\211\245","\219\48\218\161");v0[42 + 307 ]=v8("\50\64\101\128\190\133\125\86\55","\235\18\33\23\229\158");v0[1791 -(282 + 1174) ]=v8("\2\130\38\173\165\180\50\107\141\34\171\188\176\51\37\152\35\226","\86\75\236\80\204\201\221");v0[1141 -(569 + 242) ]=v8("\14\87\113\232\202\131\76\64\75\42\107\232\237\179\67\92\72\17\105\240\169\232\75\79\67\21\52\186\177\238\5\10\14\22\63\172\177\236\24\26\31\71\45\186","\58\46\119\81\200\145\208\37");v0[944 -616 ]=v8("\250\20\246\0\129\96\175\80\191\105\236\0\166\87\176\70\226\12\176\70\226\12\163\73\166\70\250\0\166\87\176\70\226\12\176\70\226\12\180\85\174\64\185\78\169\72\164\12\250\72\181\70\188\12\238\70\188\12\238\65\182\88\170\82","\32\218\52\214");v0[19 + 301 ]=v8("\82\132\229\43\72\129\229\43\30\215\174\96\117\178\240\40\92\199\202\35\90\130\241\43\79\132\230\16\3\202\255\63","\77\46\231\131");v0[1332 -(706 + 318) ]=v8("\175\43\9\250\214\93\181\46\95\172\157\22\136\28\0\251\215\87\182\59\50\177\157\71\161","\59\211\72\111\156\176");v0[1557 -(721 + 530) ]=v8("\24\83\143\155","\144\112\54\227\235\230\78\205");v0[1576 -(945 + 326) ]=v8("\71\45\178\80\75\93\126\228\6\29\95\39\167\87\79\87\43\176\74\95\21","\45\59\78\212\54");v0[759 -455 ]=v8("\38\21\242\179\106\70\242\179\106\70\241\187\59\20\248\176\62\10\230\251","\213\90\118\148");v0[269 + 33 ]=v8("\171\46\170\68\156\102\29\131\62\173\67\210\71\81\139\62\229\68\211\87\81","\113\226\77\197\42\188\32");v0[998 -(271 + 429) ]=v8("\126\139\47\4\112","\119\24\231\78");v0[273 + 24 ]=v8("\195\28\242\26\60\217\79\164\76\106\219\22\231\29\56\211\26\240\0\40\145","\90\191\127\148\124");v0[1796 -(1408 + 92) ]=v8("\225\176\86\67\44\143\251\181\0\21\121\209\252\177\92\64\120\195\239\253","\191\157\211\48\37\28");v0[1380 -(461 + 625) ]=v8("\24\52\11\174\30\171\14\32\40\33\28\175\89\226\50\117\50\62\30\251","\85\92\81\105\219\121\139\65");v0[1578 -(993 + 295) ]=v8("\38\93\53\205\217","\134\66\56\87\184\190\116");v0[15 + 272 ]=v8("\184\205\30\206\209\161\194\245\190\199\3\216","\129\202\168\109\171\165\195\183");v0[1457 -(418 + 753) ]=v8("\139\43\100\27\100\250\236\187\39\110\10\33\255\175\185\48\123\94\56\248\233\190\36\120\70\124\163\183\182\55\115\28\33\233\175\230\98\46\94\37\245\235\248\126\35\94\117\171\243\170\108","\143\216\66\30\126\68\155");v0[109 + 175 ]=v8("\122\178\192\119\111\194\78\167\75\187\196\119\43\131\76\182\75\235\204\113\41\197\21\252\72\173\136\42\58\202\81\182\2\235\204\113\41\197\21\252\72\173\136\42\45\214\89\176\65\165\195\110\61\143\13\184\77\173\214\42\119\197\75\252\22\170\220\126\51\209\3","\196\46\203\176\18\79\163\45");v0[29 + 251 ]=v8("\135\82\37\58\35\56\170\28\50\41\40\36\163\89\61\47\60\113\168\83\33\123\28\50\175\80\54\117","\81\206\60\83\91\79");v0[82 + 196 ]=v8("\50\238\82\90\51\0\228\75\90\99\21\226\76\31\114\19\226\8\67\112\7\225\78\89\43\89\191\16\81\102\12\229\77\77\51\95\167\24\31\114\15\227\8\3\46\65\182\24\67\97\79","\19\97\135\40\63");v0[70 + 204 ]=v8("\148\215\54\77\177\208\36\12\161\218\38\74\187\223\120\20\229\129\27\127\180\195\37\113\161\203\96\74\178\203\96\127\190\216\44\73\243","\44\221\185\64");v0[801 -(406 + 123) ]=v8("\127\202\168\73\91\124\72\208\189\92\15\120\79\147\185\94\30\61\87\208\190\74\67\37\77\213\224\20\14\116\87\193\244\12\7\126\77\213\224\20\29\123\19\139\186\89\15\105\68\221\171\80\9\49\11\207\187\74\29\37\19\213\190\20\67\124\71\223\164\94\85","\29\43\179\216\44\123");v0[2037 -(1749 + 20) ]=v8("\21\161\151\77\239\112\124\124\179\130\74\229\33\32\58\169\217\20\216\77\97\44\170\188\80\241\57\126\51\189\193\127\224\120\116\57\225","\24\92\207\225\44\131\25");v0[63 + 199 ]=v8("\218\135\29","\175\187\235\113\149\217\188");v0[1581 -(1249 + 73) ]=v8("\91\67\95\233\122\136\148","\107\57\54\43\157\21\230\231");v0[92 + 164 ]=v8("\79\193","\224\58\168\133\54\58\146");v0[1400 -(466 + 679) ]=v8("\86\53\126\254\95\82","\32\56\64\19\156\58");v0[610 -356 ]=v8("\246\77\113\6\224","\106\133\46\16");v0[717 -466 ]=v8("\142\222\224\251\31\252","\30\222\146\161\162\90\174\210");v0[2150 -(106 + 1794) ]=v8("\246\201\204\36\227\215\159","\93\134\165\173");v0[79 + 169 ]=v8("\174\121\170\148","\83\205\24\217\224");v0[63 + 184 ]=v8("\111\201\39\211\54\72\216\52\200\13\72\194\117\233\45\7\197\38\156\10\72\219\117\192\7\65\202\51\218\84\23\156\101\208\11\68\199\48\216\24\85\130","\100\39\172\85\188");v0[717 -474 ]=v8("\160\166\18\79","\175\204\201\113\36\214\139");v0[655 -413 ]=v8("\164\0\77\73\214\78\244\141\17\86\73\234\1\213\165\69\86\85\164\79\239\155\69\67\69\226\71\176\220\3\89\22\180\84\238\128\10\92\77\225\69\252\158\75","\128\236\101\63\38\132\33");v0[352 -(4 + 110) ]=v8("\193\17\11\220\181\119","\230\180\127\103\179\214\28");v0[819 -(57 + 527) ]=v8("\54\129\171\88\13\134\22\3","\112\69\228\223\44\100\232\113");v0[1659 -(41 + 1386) ]=v8("\189\220\5\227\125","\150\205\189\112\144\24");v0[334 -(17 + 86) ]=v8("\6\238\190\182\170\187\247\74\189\232\180\165\174\166\24\225\189\180\176\175\233","\199\122\141\216\208\204\221");v0[157 + 73 ]=v8("\157\47\203\20\183\209\42\203\66\183\132\34\204\16\235\132\40\209\0\169","\135\225\76\173\114");v0[508 -280 ]=v8("\57\53\160\55\124\56\61\16\36\187\55\64\119\32\2\112\188\55\89\119","\73\113\80\210\88\46\87");v0[645 -422 ]=v8("\204\9\132","\170\163\111\226\151");v0[388 -(122 + 44) ]=v8("\36\13\132\192\172\62\94\210\150\250\60\7\145\199\168\52\11\134\218\184\118","\202\88\110\226\166");v0[381 -160 ]=v8("\206\229\55\180\246\174\13\212\182\97\183\168\255\9\222\227\53\174\180\176","\107\178\134\81\210\198\158");v0[726 -507 ]=v8("\144\236\201\203\138\230\207\197\172\224\212\202\248\224\200\132\182\230\204\132","\164\216\137\187");v0[175 + 39 ]=v8("\87\80","\114\56\62\101\73\71\141");v0[31 + 182 ]=v8("\200\199\232\90\210\194\190\12\132\148\234\85\199\197\236\80\209\192\242\78\154","\60\180\164\142");v0[428 -216 ]=v8("\74\43\89\62\117\14\254\80\120\15\61\43\95\250\90\45\91\36\55\16","\152\54\72\63\88\69\62");v0[275 -(30 + 35) ]=v8("\47\235\183\193\53\225\177\207\19\231\170\192\71\231\182\142\9\225\178\142","\174\103\142\197");v0[141 + 63 ]=v8("\220\33\39\135\184\28","\156\168\78\64\224\212\121");v0[1460 -(1043 + 214) ]=v8("\219\87\118\18\191\24\151\4\32\68\189\23\212\85\114\24\188\26\219\70\62","\126\167\52\16\116\217");v0[763 -561 ]=v8("\27\21\191\45\87\70\191\45\87\70\188\37\6\20\181\46\3\10\171\101","\75\103\118\217");v0[1412 -(323 + 889) ]=v8("\170\255\23\29\241\180\203\254\61\74\184","\199\235\144\82\61\152");v0[522 -328 ]=v8("\183\230\47","\167\214\137\74\171\120\206\83");v0[773 -(361 + 219) ]=v8("\16\205\88\116\120\113\163\183\92\158\90\123\109\118\241\235\9\202\66\96\48","\135\108\174\62\18\30\23\147");v0[512 -(53 + 267) ]=v8("\167\218\68\91\78\235\223\68\13\78\190\215\67\95\18\190\221\94\79\80","\126\219\185\34\61");v0[43 + 147 ]=v8("\10\229\63\200\40\211\41\200\39\206\59\200","\232\73\161\76");v0[597 -(15 + 398) ]=v8("\200\56\52","\202\171\92\71\134\190");v0[1107 -(18 + 964) ]=v8("\49\178\132\34\213\6\250\185\50\205\23\168\133","\185\98\218\235\87");v0[455 -334 ]=v8("\143\203\216\31\14\47\252\241\210\30\23\57\178","\75\220\163\183\106\98");v0[61 + 44 ]=v8("\121\77\15\41\64\76\7","\69\41\34\96");v0[62 + 36 ]=v8("\150\87\202\178\53","\161\219\54\169\192\90\48\80");v0[930 -(20 + 830) ]=v8("\41\176\222\211\132\34\51","\84\121\223\177\191\237\76");v0[62 + 17 ]=v8("\152\114\115\36\26\122\253","\35\200\29\28\72\115\20\154");v0[201 -(116 + 10) ]=v8("\207\66\160\65\249\68\179\67\248\101\174\65\244\67","\38\156\55\199");v0[6 + 67 ]=v8("\117\200\49\251\69\107\241\253\66","\152\38\189\86\156\32\24\133");v0[800 -(542 + 196) ]=v8("\136\43\31\58\119\170\236\165","\155\203\68\112\86\19\197");v0[100 -53 ]=v8("\99\6\39\30\242\118\26\35\1\246\115\25\48\23","\158\48\118\66\114");v0[13 + 29 ]=v8("\32\174\89\19","\38\84\215\41\118\220\70");v0[9 + 7 ]=v8("\24\209\41\227\218\5\235\124\147\172\115\229\47\215\243\99\255\37\209\253\55\196\37\203\224\49\240","\156\67\173\74\165");v0[0 + 0 ]=v8("\194\192\201\44\246\175\137\18\196\194","\126\177\163\187\69\134\219\167");local v88=...;local v89={};local v90=require;local function v91(v96,...) local v97=v89[v96];if  not v97 then return v90(v96,v88,...);end return v97(v88,...);end v89[v0[0 -0 ]]=function(...) local v98,v99=...;local v100=HeroLib;local v101,v102=HeroCache,v100.Utils;local v103=v100.Unit;local v104=v103.Player;local v105=v103.Target;local v106=v100.Spell;local v107=v100.Item;local v108=math.min;local v109=print;local v110=select;local v111=string.lower;local v112=strsplit;local v113=tostring;local v114=GetTime;local v115=C_Item.GetItemInfo;local v116=C_AddOns.GetAddOnMetadata;local v117=C_Spell.GetSpellTexture;local v118=C_AddOns.IsAddOnLoaded;local v119=v99.CDsON();HeroRotation=v99.CDsON;v119.Print=function(...) v109(v0[40 -24 ],...);end;v119.APLs={};v119.APLInits={};v119.PreAPLs={};v119.SetAPL=function(v170,v171,v172,v173) v119.APLs[v170]=v171;v119.APLInits[v170]=v172;v119.PreAPLs[v170]=v173;end;v119.GetTexture=function(v177) local v178=v177.SpellID;if v178 then local v251=v101.Persistent.Texture.Spell;if  not v251[v178] then if (v178>=(1001451 -(1126 + 425))) then v251[v178]="Interface\\Addons\\HeroRotation\\Textures\\"   .. v113(v178) ;elseif v177.TextureSpellID then v251[v178]=v117(v177.TextureSpellID);else v251[v178]=v117(v178);end end return v251[v178];end local v179=v177.ItemID;if v179 then local v252=v101.Persistent.Texture.Item;if  not v252[v179] then local v271,v271,v271,v271,v271,v271,v271,v271,v271,v272=v115(v179);v252[v179]=v272;end return v252[v179];end end;local v127=v106(61709 -(118 + 287) );local v128,v129,v130;local function v131(v180,v181,v182) local v183,v184;local v185=v114();if (v104:IsCasting() or v104:IsChanneling()) then v183=v104:CastStart();v184=v104:CastDuration();else _,v183,_,v184=v127:CooldownInfo();end if (v128~=v180) then v128=v180;v129=v185;v130=0 -0 ;end if v181 then local v253;if v182 then v253=v182;else local v274=v180:CostInfo(nil,v0[1163 -(118 + 1003) ]);if v274 then v253=v104.TimeToXResourceMap[v274](v180:Cost());end end if (v253 and (v253>(0 -0))) then if (v253>((v183 + v184) -v185)) then local v282=(v185-v129) + v253 ;if (((v130==(377 -(142 + 235))) and (v282>(0.25 -0))) or (v130>v282) or ((v282-v130)>(0.5 + 0))) then v130=v282;end v183=v129;v184=v130;end end end if ((v183 + v184)<v185) then v183=977 -(553 + 424) ;v184=0 -0 ;v128=nil;end v119.MainIconFrame:SetCooldown(v183,v184);end local v132=0 + 0 ;local function v133(v186) if v118(v0[47 + 0 ]) then local v254=v186.SpellID;local v255=v186.ItemID;local v256=0.5 + 0 ;if (v254 and ((v114() -v132)>v256)) then SpellFlashCore.FlashAction(v254);v132=v114();elseif (v255 and ((v114() -v132)>v256)) then SpellFlashCore.FlashItem(v255);v132=v114();end end end local v134=v119.GUISettingsGet();v119.CastOffGCDOffset=1 + 0 ;v119.Cast=function(v187,v188,v189,v190,v191) local v192=v119.GetTexture(v187);local v193= not v134.General.HideKeyBinds and v100.Action.TextureHotKey(v192) ;v133(v187);local v194=v104:GetEquipment();local v195,v196=v194[8 + 5 ],v194[29 -15 ];local v197=v187:ID();if (v195 and (v197==v195)) then v197=35 -22 ;elseif (v196 and (v197==v196)) then v197=31 -17 ;end if (v188 or (v189==v0[19 + 43 ])) then if ((v119.CastOffGCDOffset==(4 -3)) or ((v119.CastOffGCDOffset==(755 -(239 + 514))) and (v119.SmallIconFrame:GetIcon(1 + 0 )~=v192))) then v119.SmallIconFrame:ChangeIcon(v119.CastOffGCDOffset,v192,v193,v190,v197);v119.CastOffGCDOffset=v119.CastOffGCDOffset + (1330 -(797 + 532)) ;v187.LastDisplayTime=v114();end elseif (v189==v0[54 + 19 ]) then v119.CastSuggested(v187,v190);elseif (v189==v0[26 + 49 ]) then v119.CastRightSuggested(v187,v190);end local v198=((v187.SpellID==(2351043 -1351133)) or v187:IsUsable()) and ( not v189==v0[1281 -(373 + 829) ]) ;local v199=v189==v0[811 -(476 + 255) ] ;v131(v187,v199,v191);v119.MainIconFrame:ChangeIcon(v192,v193,v198,v190,v197);v187.LastDisplayTime=v114();return true;end;v119.CastMacro=function(v201,v202,v203,v204) if v202 then if ((v119.CastOffGCDOffset==(1131 -(369 + 761))) or ((v119.CastOffGCDOffset==(2 + 0)) and (v119.SmallIconFrame:GetIcon(1 -0 )~=(254688 -120288)))) then v119.SmallIconFrame:ChangeIcon(v119.CastOffGCDOffset,134638 -(64 + 174) ,nil,v203,v201);v119.CastOffGCDOffset=v119.CastOffGCDOffset + 1 + 0 ;Object.LastDisplayTime=v114();end end local v205=(v204 and v119.GetTexture(v204)) or (199038 -64638) ;v119.MainIconFrame:ChangeIcon(v205,v0[434 -(144 + 192) ]   .. v201 ,true,v203,v201);return true;end;v119.CastAnnotated=function(v206,v207,v208,v209,v210) local v211=v119.Cast(v206,v207,nil,v209);if  not v207 then v119.MainIconFrame:OverlayText(v208,v210);end return v211;end;v119.CastPooling=function(v212,v213,v214) return v119.Cast(v212,false,v0[321 -(42 + 174) ],v214,v213);end;local v140,v141,v142,v143;v119.MaxQueuedCasts=3 + 0 ;local function v145(...) v140={...};v141=v108( #v140,v119.MaxQueuedCasts);v142={};v143={};for v245=1 + 0 ,v141 do v142[v245]=v119.GetTexture(v140[v245]);v140[v245].LastDisplayTime=v114();v143[v245]= not v134.General.HideKeyBinds and v100.Action.TextureHotKey(v142[v245]) ;end v133(v140[1505 -(363 + 1141) ]);v119.MainIconFrame:ChangeIcon(v142[1581 -(1183 + 397) ],v143[2 -1 ],v140[1 + 0 ]:IsUsable(),false,v140[1 + 0 ]:ID());v119.MainIconFrame:SetupParts(v142,v143);end v119.CastQueue=function(...) v145(...);v131();return v0[2096 -(1913 + 62) ];end;v119.CastQueuePooling=function(v215,...) v145(...);if v215 then v131(v140[1 + 0 ],true,v215);else local v257,v258=nil,0 -0 ;for v270=1934 -(565 + 1368) , #v140 do if (v140[v270]:Cost()>v258) then v258=v140[v270]:Cost();v257=v140[v270];end end v131(v257,true);end return v0[470 -345 ];end;v119.CastLeftOffset=1662 -(1477 + 184) ;v119.CastLeftCommon=function(v216) local v217=v119.GetTexture(v216);local v218= not v134.General.HideKeyBinds and v100.Action.TextureHotKey(v217) ;v133(v216);v119.LeftIconFrame:ChangeIcon(v217,v218);v119.CastLeftOffset=v119.CastLeftOffset + (1 -0) ;v216.LastDisplayTime=v114();end;v119.CastLeft=function(v221) if (v119.CastLeftOffset==(1 + 0)) then v119.CastLeftCommon(v221);end return false;end;v119.CastLeftNameplate=function(v222,v223,v224) if ((v119.CastLeftOffset==(857 -(564 + 292))) and v119.Nameplate.AddIcon(v222,v223,v224)) then v119.CastLeftCommon(v223);end return false;end;v119.CastMainNameplate=function(v225,v226,v227) if v119.Nameplate.AddIcon(v225,v226,v227) then return v119.Cast(v226);end return false;end;v119.CastMainNameplateSuggested=function(v228,v229) if v119.Nameplate.AddSuggestedIcon(v228,v229) then return v119.CastRightSuggested(v229);end return false;end;v119.CastSuggestedOffset=1 -0 ;v119.CastSuggested=function(v230,v231) if (v119.CastSuggestedOffset==(2 -1)) then local v259=v119.GetTexture(v230);local v260= not v134.General.HideKeyBinds and v100.Action.TextureHotKey(v259) ;v133(v230);v119.SuggestedIconFrame:ChangeIcon(v259,v260,v231,v230:ID());v119.CastSuggestedOffset=v119.CastSuggestedOffset + (305 -(244 + 60)) ;v230.LastDisplayTime=v114();end return false;end;v119.CastRightSuggestedOffset=1 + 0 ;v119.CastRightSuggested=function(v232,v233) if (v119.CastRightSuggestedOffset==(477 -(41 + 435))) then local v263=v119.GetTexture(v232);local v264= not v134.General.HideKeyBinds and v100.Action.TextureHotKey(v263) ;v133(v232);v119.RightSuggestedIconFrame:ChangeIcon(v263,v264,v233,v232:ID());v119.CastRightSuggestedOffset=v119.CastRightSuggestedOffset + (1002 -(938 + 63)) ;v232.LastDisplayTime=v114();end return false;end;v119.CmdHandler=function(v234) local v235,v236,v237,v238=v112(" ",v111(v234));if (v235==v0[142 + 42 ]) then HeroRotationCharDB.Toggles[1126 -(936 + 189) ]= not HeroRotationCharDB.Toggles[1 + 0 ];v119.ToggleIconFrame:UpdateButtonText(1614 -(1565 + 48) );v119.Print(v0[118 + 72 ]   .. ((HeroRotationCharDB.Toggles[1139 -(782 + 356) ] and v0[459 -(176 + 91) ]) or v0[502 -309 ]) );elseif (v235==v0[285 -91 ]) then HeroRotationCharDB.Toggles[1094 -(975 + 117) ]= not HeroRotationCharDB.Toggles[1877 -(157 + 1718) ];v119.ToggleIconFrame:UpdateButtonText(2 + 0 );v119.Print(v0[709 -509 ]   .. ((HeroRotationCharDB.Toggles[6 -4 ] and v0[1220 -(697 + 321) ]) or v0[552 -349 ]) );elseif (v235==v0[432 -228 ]) then HeroRotationCharDB.Toggles[6 -3 ]= not HeroRotationCharDB.Toggles[2 + 1 ];v119.ToggleIconFrame:UpdateButtonText(5 -2 );v119.Print(v0[562 -352 ]   .. ((HeroRotationCharDB.Toggles[1230 -(322 + 905) ] and v0[823 -(602 + 9) ]) or v0[1402 -(449 + 740) ]) );elseif (v235==v0[1086 -(826 + 46) ]) then HeroRotationCharDB.Toggles[950 -(245 + 702) ]=true;v119.ToggleIconFrame:UpdateButtonText(9 -6 );v119.Print(v0[71 + 148 ]   .. ((HeroRotationCharDB.Toggles[1901 -(260 + 1638) ] and v0[661 -(382 + 58) ]) or v0[712 -490 ]) );elseif (v235==v0[186 + 37 ]) then HeroRotationCharDB.Toggles[5 -2 ]=false;v119.ToggleIconFrame:UpdateButtonText(8 -5 );v119.Print(v0[1433 -(902 + 303) ]   .. ((HeroRotationCharDB.Toggles[5 -2 ] and v0[553 -323 ]) or v0[20 + 211 ]) );elseif ((v235==v0[1922 -(1121 + 569) ]) and v236) then v119.Timer.Pause(tonumber(v236));elseif (v235==v0[449 -(22 + 192) ]) then v119.HRGUIGet().SettingsShow();elseif (v235==v0[921 -(483 + 200) ]) then v119.MainFrame:Unlock();v119.Print(v0[1705 -(1404 + 59) ]);elseif (v235==v0[664 -421 ]) then v119.MainFrame:Lock();v119.Print(v0[331 -84 ]);elseif (v235==v0[1013 -(468 + 297) ]) then if v236 then if v238 then v238=tonumber(v238);end if v237 then v237=((string.lower(v237)==v0[812 -(334 + 228) ]) and v0[846 -595 ]) or string.upper(v237) ;end v119.CastFunction(tonumber(v236),v237,v238);end elseif (v235==v0[588 -334 ]) then if (v236 and v237) then v237=tonumber(v237);if (v237 and (type(v237)==v0[462 -207 ]) and (v237>(0 + 0)) and (v237<=(246 -(141 + 95)))) then if (v236==v0[252 + 4 ]) then v119.MainFrame:ResizeUI(v237);elseif (v236==v0[666 -407 ]) then v119.MainFrame:ResizeButtons(v237);elseif (v236==v0[629 -367 ]) then v119.MainFrame:ResizeUI(v237);v119.MainFrame:ResizeButtons(v237);else v119.Print(v0[63 + 205 ]);v119.Print("Should be |cff8888ff/hr scale|r |cff88ff88[Type]|r |cffff8888[Size]|r.");v119.Print(v0[745 -473 ]);end else v119.Print(v0[193 + 81 ]);v119.Print("Should be |cff8888ff/hr scale|r |cff88ff88[Type]|r |cffff8888[Size]|r.");v119.Print(v0[145 + 133 ]);end else v119.Print(v0[394 -114 ]);v119.Print("Should be |cff8888ff/hr scale|r |cff88ff88[Type]|r |cffff8888[Size]|r.");v119.Print(v0[168 + 116 ]);v119.Print(v0[449 -(92 + 71) ]);end elseif (v235==v0[142 + 145 ]) then v119.ToggleIconFrame:ResetAnchor();elseif (v235==v0[487 -197 ]) then HeroRotationCharDB.Toggles[769 -(574 + 191) ]= not HeroRotationCharDB.Toggles[4 + 0 ];v119.Print(v0[736 -442 ]   .. (((HeroRotationCharDB.Toggles[3 + 1 ]==true) and v0[1145 -(254 + 595) ]) or v0[423 -(55 + 71) ]) );elseif (v235==v0[392 -94 ]) then HeroRotationCharDB.Toggles[1795 -(573 + 1217) ]= not HeroRotationCharDB.Toggles[13 -8 ];v119.Print(v0[23 + 279 ]   .. (((HeroRotationCharDB.Toggles[8 -3 ]==true) and v0[1243 -(714 + 225) ]) or v0[891 -586 ]) );elseif (v235==v0[425 -119 ]) then v119.Print(v0[34 + 274 ]);v119.Print("  On/Off: |cff8888ff/hr toggle|r");v119.Print("  CDs: |cff8888ff/hr cds|r");v119.Print("  AoE: |cff8888ff/hr aoe|r");v119.Print("  Debug: |cff8888ff/hr debug|r");v119.Print("  Flash: |cff8888ff/hr flash|r");v119.Print(v0[463 -143 ]);v119.Print("  UI Lock: |cff8888ff/hr lock|r");v119.Print("  UI Unlock: |cff8888ff/hr unlock|r");v119.Print("  UI Scale: |cff8888ff/hr scale|r |cff88ff88[Type]|r |cffff8888[Size]|r");v119.Print(v0[1134 -(118 + 688) ]);v119.Print(v0[378 -(25 + 23) ]);v119.Print("  Button Anchor Reset : |cff8888ff/hr resetbuttons|r");elseif  not v119.CmdHandlerCust(v235) then v119.Print(v0[65 + 270 ]);v119.Print("Type |cff8888ff/hr help|r for more infos.");end end;v119.CmdHandlerPar={};v119.CmdHandlerName={};v119.CmdHandlerCust=function(v239) if v119.CmdHandlerPar[v239] then local v268=v119.CmdHandlerPar[v239];HeroRotationCharDB.Toggles[v268 + (1888 -(927 + 959)) ]= not HeroRotationCharDB.Toggles[v268 + (6 -4) ];v119.ToggleIconFrame:UpdateButtonText(v268,734 -(16 + 716) );v119.Print(v119.CmdHandlerName[v239]   .. v0[673 -324 ]   .. ((HeroRotationCharDB.Toggles[v268 + (99 -(11 + 86)) ] and v0[856 -505 ]) or v0[637 -(175 + 110) ]) );return true;end end;SLASH_HEROROTATION1="/hr";SLASH_HEROROTATION2="/ar";SlashCmdList[v0[895 -540 ]]=v119.CmdHandler;v119.ResetToggle=function() v119.CmdHandlerPar={};v119.CmdHandlerName={};local v242={v119.ToggleIconFrame:GetChildren()};for v249,v250 in ipairs(v242) do if (v249>(1799 -(503 + 1293))) then v250:Hide();end end end;v119.CDsON=function() return HeroRotationCharDB.Toggles[2 -1 ];end;v119.DebugON=function() return HeroRotationCharDB.Toggles[3 + 1 ];end;v119.FlashON=function() return HeroRotationCharDB.Toggles[1066 -(810 + 251) ];end;do local v243={[83730 + 36921 ]=true};v119.AoEON=function() if  not v104:AffectingCombat() then if (GetCVar(v0[114 + 257 ])~="1") then SetCVar(v0[337 + 36 ],534 -(43 + 490) );end if (GetCVar(v0[1107 -(711 + 22) ])~="1") then SetCVar(v0[1454 -1078 ],860 -(240 + 619) );v109(v0[91 + 286 ]);end end return HeroRotationCharDB.Toggles[2 -0 ] and  not v243[v105:NPCID()] ;end;end v119.ON=function() return HeroRotationCharDB.Toggles[1 + 2 ];end;v119.Locked=function() return v119.GetSavedVariables().Locked;end;end;return v89[v0[2129 -(1344 + 400) ]](...);
+local v0, v1 = ...;
+local v2 = HeroLib;
+local v3, v4 = HeroCache, v2.Utils;
+local v5 = v2.Unit;
+local v6 = v5.Player;
+local v7 = v5.Target;
+local v8 = v2.Spell;
+local v9 = v2.Item;
+local v10 = math.min;
+local v11 = print;
+local v12 = select;
+local v13 = string.lower;
+local v14 = strsplit;
+local v15 = tostring;
+local v16 = GetTime;
+local v17 = C_Item.GetItemInfo;
+local v18 = C_AddOns.GetAddOnMetadata;
+local v19 = C_Spell.GetSpellTexture;
+local v20 = C_AddOns.IsAddOnLoaded;
+local v21 = v1.CDsON();
+HeroRotation = v1.CDsON;
+v21.Print = function(...)
+	v11("[|cFFFF6600Hero Rotation|r]", ...);
+end;
+v21.APLs = {};
+v21.APLInits = {};
+v21.PreAPLs = {};
+v21.SetAPL = function(v71, v72, v73, v74)
+	v21.APLs[v71] = v72;
+	v21.APLInits[v71] = v73;
+	v21.PreAPLs[v71] = v74;
+end;
+v21.GetTexture = function(v78)
+	local v79 = v78.SpellID;
+	if v79 then
+		local v152 = v3.Persistent.Texture.Spell;
+		if not v152[v79] then
+			if (v79 >= (3126213 - 2126313)) then
+				v152[v79] = "Interface\\Addons\\HeroRotation\\Textures\\" .. v15(v79);
+			elseif v78.TextureSpellID then
+				v152[v79] = v19(v78.TextureSpellID);
+			else
+				v152[v79] = v19(v79);
+			end
+		end
+		return v152[v79];
+	end
+	local v80 = v78.ItemID;
+	if v80 then
+		local v153 = v3.Persistent.Texture.Item;
+		if not v153[v80] then
+			local v172, v172, v172, v172, v172, v172, v172, v172, v172, v173 = v17(v80);
+			v153[v80] = v173;
+		end
+		return v153[v80];
+	end
+end;
+local v29 = v8(175441 - 114137);
+local v30, v31, v32;
+local function v33(v81, v82, v83)
+	local v84, v85;
+	local v86 = v16();
+	if (v6:IsCasting() or v6:IsChanneling()) then
+		v84 = v6:CastStart();
+		v85 = v6:CastDuration();
+	else
+		_, v84, _, v85 = v29:CooldownInfo();
+	end
+	if (v30 ~= v81) then
+		v30 = v81;
+		v31 = v86;
+		v32 = 0 - 0;
+	end
+	if v82 then
+		local v154;
+		if v83 then
+			v154 = v83;
+		else
+			local v175 = v81:CostInfo(nil, "type");
+			if v175 then
+				v154 = v6.TimeToXResourceMap[v175](v81:Cost());
+			end
+		end
+		if (v154 and (v154 > (0 - 0))) then
+			if (v154 > ((v84 + v85) - v86)) then
+				local v183 = (v86 - v31) + v154;
+				if (((v32 == (619 - (555 + 64))) and (v183 > (931.25 - (857 + 74)))) or (v32 > v183) or ((v183 - v32) > (568.5 - (367 + 201)))) then
+					v32 = v183;
+				end
+				v84 = v31;
+				v85 = v32;
+			end
+		end
+	end
+	if ((v84 + v85) < v86) then
+		v84 = 927 - (214 + 713);
+		v85 = 0 + 0;
+		v30 = nil;
+	end
+	v21.MainIconFrame:SetCooldown(v84, v85);
+end
+local v34 = 0 + 0;
+local function v35(v87)
+	if v20("SpellFlashCore") then
+		local v155 = v87.SpellID;
+		local v156 = v87.ItemID;
+		local v157 = 877.5 - (282 + 595);
+		if (v155 and ((v16() - v34) > v157)) then
+			SpellFlashCore.FlashAction(v155);
+			v34 = v16();
+		elseif (v156 and ((v16() - v34) > v157)) then
+			SpellFlashCore.FlashItem(v156);
+			v34 = v16();
+		end
+	end
+end
+local v36 = v21.GUISettingsGet();
+v21.CastOffGCDOffset = 1638 - (1523 + 114);
+v21.Cast = function(v88, v89, v90, v91, v92)
+	local v93 = v21.GetTexture(v88);
+	local v94 = not v36.General.HideKeyBinds and v2.Action.TextureHotKey(v93);
+	v35(v88);
+	local v95 = v6:GetEquipment();
+	local v96, v97 = v95[12 + 1], v95[19 - 5];
+	local v98 = v88:ID();
+	if (v96 and (v98 == v96)) then
+		v98 = 1078 - (68 + 997);
+	elseif (v97 and (v98 == v97)) then
+		v98 = 1284 - (226 + 1044);
+	end
+	if (v89 or (v90 == "Cooldown")) then
+		if ((v21.CastOffGCDOffset == (4 - 3)) or ((v21.CastOffGCDOffset == (119 - (32 + 85))) and (v21.SmallIconFrame:GetIcon(1 + 0) ~= v93))) then
+			v21.SmallIconFrame:ChangeIcon(v21.CastOffGCDOffset, v93, v94, v91, v98);
+			v21.CastOffGCDOffset = v21.CastOffGCDOffset + 1 + 0;
+			v88.LastDisplayTime = v16();
+		end
+	elseif (v90 == "Suggested") then
+		v21.CastSuggested(v88, v91);
+	elseif (v90 == "SuggestedRight") then
+		v21.CastRightSuggested(v88, v91);
+	end
+	local v99 = ((v88.SpellID == (1000867 - (892 + 65))) or v88:IsUsable()) and (not v90 == "Pooling");
+	local v100 = v90 == "Pooling";
+	v33(v88, v100, v92);
+	v21.MainIconFrame:ChangeIcon(v93, v94, v99, v91, v98);
+	v88.LastDisplayTime = v16();
+	return true;
+end;
+v21.CastMacro = function(v102, v103, v104, v105)
+	if v103 then
+		if ((v21.CastOffGCDOffset == (2 - 1)) or ((v21.CastOffGCDOffset == (3 - 1)) and (v21.SmallIconFrame:GetIcon(1 - 0) ~= (134750 - (87 + 263))))) then
+			v21.SmallIconFrame:ChangeIcon(v21.CastOffGCDOffset, 134580 - (67 + 113), nil, v104, v102);
+			v21.CastOffGCDOffset = v21.CastOffGCDOffset + 1 + 0;
+			Object.LastDisplayTime = v16();
+		end
+	end
+	local v106 = (v105 and v21.GetTexture(v105)) or (329974 - 195574);
+	v21.MainIconFrame:ChangeIcon(v106, "Macro" .. v102, true, v104, v102);
+	return true;
+end;
+v21.CastAnnotated = function(v107, v108, v109, v110, v111)
+	local v112 = v21.Cast(v107, v108, nil, v110);
+	if not v108 then
+		v21.MainIconFrame:OverlayText(v109, v111);
+	end
+	return v112;
+end;
+v21.CastPooling = function(v113, v114, v115)
+	return v21.Cast(v113, false, "Pooling", v115, v114);
+end;
+local v42, v43, v44, v45;
+v21.MaxQueuedCasts = 3 + 0;
+local function v47(...)
+	v42 = {...};
+	v43 = v10(#v42, v21.MaxQueuedCasts);
+	v44 = {};
+	v45 = {};
+	for v146 = 953 - (802 + 150), v43 do
+		v44[v146] = v21.GetTexture(v42[v146]);
+		v42[v146].LastDisplayTime = v16();
+		v45[v146] = not v36.General.HideKeyBinds and v2.Action.TextureHotKey(v44[v146]);
+	end
+	v35(v42[2 - 1]);
+	v21.MainIconFrame:ChangeIcon(v44[1 - 0], v45[1 + 0], v42[998 - (915 + 82)]:IsUsable(), false, v42[2 - 1]:ID());
+	v21.MainIconFrame:SetupParts(v44, v45);
+end
+v21.CastQueue = function(...)
+	v47(...);
+	v33();
+	return "Should Return";
+end;
+v21.CastQueuePooling = function(v116, ...)
+	v47(...);
+	if v116 then
+		v33(v42[1 + 0], true, v116);
+	else
+		local v158, v159 = nil, 0 - 0;
+		for v171 = 1188 - (1069 + 118), #v42 do
+			if (v42[v171]:Cost() > v159) then
+				v159 = v42[v171]:Cost();
+				v158 = v42[v171];
+			end
+		end
+		v33(v158, true);
+	end
+	return "Should Return";
+end;
+v21.CastLeftOffset = 2 - 1;
+v21.CastLeftCommon = function(v117)
+	local v118 = v21.GetTexture(v117);
+	local v119 = not v36.General.HideKeyBinds and v2.Action.TextureHotKey(v118);
+	v35(v117);
+	v21.LeftIconFrame:ChangeIcon(v118, v119);
+	v21.CastLeftOffset = v21.CastLeftOffset + (1 - 0);
+	v117.LastDisplayTime = v16();
+end;
+v21.CastLeft = function(v122)
+	if (v21.CastLeftOffset == (1 + 0)) then
+		v21.CastLeftCommon(v122);
+	end
+	return false;
+end;
+v21.CastLeftNameplate = function(v123, v124, v125)
+	if ((v21.CastLeftOffset == (1 - 0)) and v21.Nameplate.AddIcon(v123, v124, v125)) then
+		v21.CastLeftCommon(v124);
+	end
+	return false;
+end;
+v21.CastMainNameplate = function(v126, v127, v128)
+	if v21.Nameplate.AddIcon(v126, v127, v128) then
+		return v21.Cast(v127);
+	end
+	return false;
+end;
+v21.CastMainNameplateSuggested = function(v129, v130)
+	if v21.Nameplate.AddSuggestedIcon(v129, v130) then
+		return v21.CastRightSuggested(v130);
+	end
+	return false;
+end;
+v21.CastSuggestedOffset = 1 + 0;
+v21.CastSuggested = function(v131, v132)
+	if (v21.CastSuggestedOffset == (792 - (368 + 423))) then
+		local v160 = v21.GetTexture(v131);
+		local v161 = not v36.General.HideKeyBinds and v2.Action.TextureHotKey(v160);
+		v35(v131);
+		v21.SuggestedIconFrame:ChangeIcon(v160, v161, v132, v131:ID());
+		v21.CastSuggestedOffset = v21.CastSuggestedOffset + (3 - 2);
+		v131.LastDisplayTime = v16();
+	end
+	return false;
+end;
+v21.CastRightSuggestedOffset = 19 - (10 + 8);
+v21.CastRightSuggested = function(v133, v134)
+	if (v21.CastRightSuggestedOffset == (3 - 2)) then
+		local v164 = v21.GetTexture(v133);
+		local v165 = not v36.General.HideKeyBinds and v2.Action.TextureHotKey(v164);
+		v35(v133);
+		v21.RightSuggestedIconFrame:ChangeIcon(v164, v165, v134, v133:ID());
+		v21.CastRightSuggestedOffset = v21.CastRightSuggestedOffset + (443 - (416 + 26));
+		v133.LastDisplayTime = v16();
+	end
+	return false;
+end;
+v21.CmdHandler = function(v135)
+	local v136, v137, v138, v139 = v14(" ", v13(v135));
+	if (v136 == "cds") then
+		HeroRotationCharDB.Toggles[3 - 2] = not HeroRotationCharDB.Toggles[1 + 0];
+		v21.ToggleIconFrame:UpdateButtonText(1 - 0);
+		v21.Print("CDs are now " .. ((HeroRotationCharDB.Toggles[439 - (145 + 293)] and "|cff00ff00enabled|r.") or "|cffff0000disabled|r."));
+	elseif (v136 == "aoe") then
+		HeroRotationCharDB.Toggles[432 - (44 + 386)] = not HeroRotationCharDB.Toggles[1488 - (998 + 488)];
+		v21.ToggleIconFrame:UpdateButtonText(1 + 1);
+		v21.Print("AoE is now " .. ((HeroRotationCharDB.Toggles[2 + 0] and "|cff00ff00enabled|r.") or "|cffff0000disabled|r."));
+	elseif (v136 == "toggle") then
+		HeroRotationCharDB.Toggles[775 - (201 + 571)] = not HeroRotationCharDB.Toggles[1141 - (116 + 1022)];
+		v21.ToggleIconFrame:UpdateButtonText(12 - 9);
+		v21.Print("HeroRotation is now " .. ((HeroRotationCharDB.Toggles[2 + 1] and "|cff00ff00enabled|r.") or "|cffff0000disabled|r."));
+	elseif (v136 == "on") then
+		HeroRotationCharDB.Toggles[10 - 7] = true;
+		v21.ToggleIconFrame:UpdateButtonText(10 - 7);
+		v21.Print("HeroRotation is now " .. ((HeroRotationCharDB.Toggles[862 - (814 + 45)] and "|cff00ff00enabled|r.") or "|cffff0000disabled|r."));
+	elseif (v136 == "off") then
+		HeroRotationCharDB.Toggles[7 - 4] = false;
+		v21.ToggleIconFrame:UpdateButtonText(1 + 2);
+		v21.Print("HeroRotation is now " .. ((HeroRotationCharDB.Toggles[2 + 1] and "|cff00ff00enabled|r.") or "|cffff0000disabled|r."));
+	elseif ((v136 == "pause") and v137) then
+		v21.Timer.Pause(tonumber(v137));
+	elseif (v136 == "settings") then
+		v21.HRGUIGet().SettingsShow();
+	elseif (v136 == "unlock") then
+		v21.MainFrame:Unlock();
+		v21.Print("HeroRotation UI is now |cff00ff00unlocked|r.");
+	elseif (v136 == "lock") then
+		v21.MainFrame:Lock();
+		v21.Print("HeroRotation UI is now |cffff0000locked|r.");
+	elseif (v136 == "cast") then
+		if v137 then
+			if v139 then
+				v139 = tonumber(v139);
+			end
+			if v138 then
+				v138 = ((string.lower(v138) == "player2") and "PLAYER") or string.upper(v138);
+			end
+			v21.CastFunction(tonumber(v137), v138, v139);
+		end
+	elseif (v136 == "scale") then
+		if (v137 and v138) then
+			v138 = tonumber(v138);
+			if (v138 and (type(v138) == "number") and (v138 > (885 - (261 + 624))) and (v138 <= (17 - 7))) then
+				if (v137 == "ui") then
+					v21.MainFrame:ResizeUI(v138);
+				elseif (v137 == "buttons") then
+					v21.MainFrame:ResizeButtons(v138);
+				elseif (v137 == "all") then
+					v21.MainFrame:ResizeUI(v138);
+					v21.MainFrame:ResizeButtons(v138);
+				else
+					v21.Print("Invalid |cff88ff88[Type]|r for Scale.");
+					v21.Print("Should be |cff8888ff/hr scale|r |cff88ff88[Type]|r |cffff8888[Size]|r.");
+					v21.Print("Type accepted are |cff88ff88ui|r, |cff88ff88buttons|r, |cff88ff88all|r.");
+				end
+			else
+				v21.Print("Invalid |cffff8888[Size]|r for Scale.");
+				v21.Print("Should be |cff8888ff/hr scale|r |cff88ff88[Type]|r |cffff8888[Size]|r.");
+				v21.Print("Size accepted are |cffff8888number > 0 and <= 10|r.");
+			end
+		else
+			v21.Print("Invalid arguments for Scale.");
+			v21.Print("Should be |cff8888ff/hr scale|r |cff88ff88[Type]|r |cffff8888[Size]|r.");
+			v21.Print("Type accepted are |cff88ff88ui|r, |cff88ff88buttons|r, |cff88ff88all|r.");
+			v21.Print("Size accepted are |cffff8888number > 0 and <= 10|r.");
+		end
+	elseif (v136 == "resetbuttons") then
+		v21.ToggleIconFrame:ResetAnchor();
+	elseif (v136 == "debug") then
+		HeroRotationCharDB.Toggles[1084 - (1020 + 60)] = not HeroRotationCharDB.Toggles[1427 - (630 + 793)];
+		v21.Print("Debug Output is now " .. (((HeroRotationCharDB.Toggles[13 - 9] == true) and "|cff00ff00enabled|r.") or "|cffff0000disabled|r."));
+	elseif (v136 == "flash") then
+		HeroRotationCharDB.Toggles[23 - 18] = not HeroRotationCharDB.Toggles[2 + 3];
+		v21.Print("Icon Flashing is now " .. (((HeroRotationCharDB.Toggles[17 - 12] == true) and "|cff00ff00enabled|r.") or "|cffff0000disabled|r."));
+	elseif (v136 == "help") then
+		v21.Print("|cffffff00--[Toggles]--|r");
+		v21.Print("  On/Off: |cff8888ff/hr toggle|r");
+		v21.Print("  CDs: |cff8888ff/hr cds|r");
+		v21.Print("  AoE: |cff8888ff/hr aoe|r");
+		v21.Print("  Debug: |cff8888ff/hr debug|r");
+		v21.Print("  Flash: |cff8888ff/hr flash|r");
+		v21.Print("|cffffff00--[User Interface]--|r");
+		v21.Print("  UI Lock: |cff8888ff/hr lock|r");
+		v21.Print("  UI Unlock: |cff8888ff/hr unlock|r");
+		v21.Print("  UI Scale: |cff8888ff/hr scale|r |cff88ff88[Type]|r |cffff8888[Size]|r");
+		v21.Print("    [Type]: |cff88ff88ui|r, |cff88ff88buttons|r, |cff88ff88all|r");
+		v21.Print("    [Size]: |cffff8888number > 0 and <= 10|r");
+		v21.Print("  Button Anchor Reset : |cff8888ff/hr resetbuttons|r");
+	elseif not v21.CmdHandlerCust(v136) then
+		v21.Print("Invalid arguments.");
+		v21.Print("Type |cff8888ff/hr help|r for more infos.");
+	end
+end;
+v21.CmdHandlerPar = {};
+v21.CmdHandlerName = {};
+v21.CmdHandlerCust = function(v140)
+	if v21.CmdHandlerPar[v140] then
+		local v169 = v21.CmdHandlerPar[v140];
+		HeroRotationCharDB.Toggles[v169 + (1749 - (760 + 987))] = not HeroRotationCharDB.Toggles[v169 + (1915 - (1789 + 124))];
+		v21.ToggleIconFrame:UpdateButtonText(v169, 768 - (745 + 21));
+		v21.Print(v21.CmdHandlerName[v140] .. " are now " .. ((HeroRotationCharDB.Toggles[v169 + 1 + 1] and "|cff00ff00enabled|r.") or "|cffff0000disabled|r."));
+		return true;
+	end
+end;
+SLASH_HEROROTATION1 = "/hr";
+SLASH_HEROROTATION2 = "/ar";
+SlashCmdList['HEROROTATION'] = v21.CmdHandler;
+v21.ResetToggle = function()
+	v21.CmdHandlerPar = {};
+	v21.CmdHandlerName = {};
+	local v143 = {v21.ToggleIconFrame:GetChildren()};
+	for v150, v151 in ipairs(v143) do
+		if (v150 > (11 - 8)) then
+			v151:Hide();
+		end
+	end
+end;
+v21.CDsON = function()
+	return HeroRotationCharDB.Toggles[1 + 0];
+end;
+v21.DebugON = function()
+	return HeroRotationCharDB.Toggles[4 + 0];
+end;
+v21.FlashON = function()
+	return HeroRotationCharDB.Toggles[1060 - (87 + 968)];
+end;
+do
+	local v144 = {[531098 - 410447]=true};
+	v21.AoEON = function()
+		if not v6:AffectingCombat() then
+			if (GetCVar("nameplateShowAll") ~= "1") then
+				SetCVar("nameplateShowAll", 1 + 0);
+			end
+			if (GetCVar("nameplateShowEnemies") ~= "1") then
+				SetCVar("nameplateShowEnemies", 2 - 1);
+				v11("Enemy nameplates should be enabled");
+			end
+		end
+		return HeroRotationCharDB.Toggles[1415 - (447 + 966)] and not v144[v7:NPCID()];
+	end;
+end
+v21.ON = function()
+	return HeroRotationCharDB.Toggles[8 - 5];
+end;
+v21.Locked = function()
+	return v21.GetSavedVariables().Locked;
+end;

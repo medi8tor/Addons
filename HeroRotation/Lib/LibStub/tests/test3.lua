@@ -1,1 +1,14 @@
-local v0={};local v1=string.char;local v2=string.byte;local v3=string.sub;local v4=bit32 or bit ;local v5=v4.bxor;local v6=table.concat;local v7=table.insert;local function v8(v19,v20) local v21={};for v29=1, #v19 do v7(v21,v1(v5(v2(v3(v19,v29,v29 + 1 )),v2(v3(v20,1 + (v29% #v20) ,1 + (v29% #v20) + 1 )))%256 ));end return v6(v21);end v0[37 -26 ]=v8("\184\39\2\63\99\177\181\167\49\17","\155\203\68\112\86\19\197");v0[1276 -(97 + 1169) ]=v8("\99\25\47\23\234\88\31\44\21","\158\48\118\66\114");v0[1073 -(68 + 997) ]=v8("\26\184\9\24\169\43\68\49\165\9\31\178\102\78\49\165\76","\38\84\215\41\118\220\70");v0[1277 -(226 + 1044) ]=v8("\16\194\39\192\232\43\196\36\194","\156\67\173\74\165");v0[0 -0 ]=v8("\194\192\201\44\246\175\137\18\196\194","\126\177\163\187\69\134\219\167");local v14=...;local v15={};local v16=require;local function v17(v22,...) local v23=v15[v22];if  not v23 then return v16(v22,v14,...);end return v23(v14,...);end v15[v0[117 -(32 + 85) ]]=function(...) debugstack=debug.traceback;strmatch=string.match;loadfile("../LibStub.lua")();local v26=newproxy();assert( not pcall(LibStub.NewLibrary,LibStub,v26,1 + 0 ));local v27,v28=pcall(LibStub.GetLibrary,v26,true);assert( not v27 or  not v28 );assert( not pcall(LibStub.NewLibrary,LibStub,v0[2 + 5 ],v0[965 -(892 + 65) ]));assert( not LibStub:GetLibrary(v0[23 -13 ],true));end;return v15[v0[20 -9 ]](...);
+debugstack = debug.traceback
+strmatch = string.match
+
+loadfile("../LibStub.lua")()
+
+local proxy = newproxy() -- non-string
+
+assert(not pcall(LibStub.NewLibrary, LibStub, proxy, 1)) -- should error, proxy is not a string, it's userdata
+local success, ret = pcall(LibStub.GetLibrary, proxy, true)
+assert(not success or not ret) -- either error because proxy is not a string or because it's not actually registered.
+
+assert(not pcall(LibStub.NewLibrary, LibStub, "Something", "No number in here")) -- should error, minor has no string in it.
+
+assert(not LibStub:GetLibrary("Something", true)) -- shouldn't've created it from the above statement

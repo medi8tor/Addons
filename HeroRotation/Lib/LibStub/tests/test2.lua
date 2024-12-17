@@ -1,1 +1,27 @@
-local v0={};local v1=string.char;local v2=string.byte;local v3=string.sub;local v4=bit32 or bit ;local v5=v4.bxor;local v6=table.concat;local v7=table.insert;local function v8(v23,v24) local v25={};for v32=1, #v23 do v7(v25,v1(v5(v2(v3(v23,v32,v32 + 1 )),v2(v3(v24,1 + (v32% #v24) ,1 + (v32% #v24) + 1 )))%256 ));end return v6(v25);end v0[33 -15 ]=v8("\10\188\195\214\157\56\122\21\170\208","\84\121\223\177\191\237\76");v0[31 -14 ]=v8("\133\100\80\33\17","\35\200\29\28\72\115\20\154");v0[365 -(87 + 263) ]=v8("\209\78\139\79\254","\38\156\55\199");v0[193 -(67 + 113) ]=v8("\107\196\26\245\66","\152\38\189\86\156\32\24\133");v0[9 + 2 ]=v8("\134\61\60\63\113","\155\203\68\112\86\19\197");v0[21 -12 ]=v8("\125\15\14\27\252","\158\48\118\66\114");v0[6 + 1 ]=v8("\25\174\101\31\190","\38\84\215\41\118\220\70");v0[19 -14 ]=v8("\14\212\6\204\254","\156\67\173\74\165");v0[952 -(802 + 150) ]=v8("\194\192\201\44\246\175\137\18\196\194","\126\177\163\187\69\134\219\167");local v18=...;local v19={};local v20=require;local function v21(v26,...) local v27=v19[v26];if  not v27 then return v20(v26,v18,...);end return v27(v18,...);end v19[v0[0 -0 ]]=function(...) debugstack=debug.traceback;strmatch=string.match;loadfile("../LibStub.lua")();for v33,v34 in LibStub:IterateLibraries() do assert(v33~=v0[9 -4 ] );end assert( not LibStub:GetLibrary(v0[6 + 1 ],true));assert( not pcall(LibStub.GetLibrary,LibStub,v0[1006 -(915 + 82) ]));local v30=LibStub:NewLibrary(v0[31 -20 ],1 + 0 );assert(v30);assert(rawequal(LibStub:GetLibrary(v0[16 -3 ]),v30));assert(LibStub:NewLibrary(v0[1202 -(1069 + 118) ],4 -2 ));local v31=0 -0 ;for v35,v36 in LibStub:IterateLibraries() do if (v35==v0[3 + 14 ]) then v31=v31 + (1 -0) ;assert(rawequal(v36,v30));end end assert(v31==(1 + 0) );end;return v19[v0[809 -(368 + 423) ]](...);
+debugstack = debug.traceback
+strmatch = string.match
+
+loadfile("../LibStub.lua")()
+
+for major, library in LibStub:IterateLibraries() do
+	-- check that MyLib doesn't exist yet, by iterating through all the libraries
+	assert(major ~= "MyLib")
+end
+
+assert(not LibStub:GetLibrary("MyLib", true)) -- check that MyLib doesn't exist yet by direct checking
+assert(not pcall(LibStub.GetLibrary, LibStub, "MyLib")) -- don't silently fail, thus it should raise an error.
+local lib = LibStub:NewLibrary("MyLib", 1) -- create the lib
+assert(lib) -- check it exists
+assert(rawequal(LibStub:GetLibrary("MyLib"), lib)) -- verify that :GetLibrary("MyLib") properly equals the lib reference
+
+assert(LibStub:NewLibrary("MyLib", 2))	-- create a new version
+
+local count=0
+for major, library in LibStub:IterateLibraries() do
+	-- check that MyLib exists somewhere in the libraries, by iterating through all the libraries
+	if major == "MyLib" then -- we found it!
+		count = count +1
+		assert(rawequal(library, lib)) -- verify that the references are equal
+	end
+end
+assert(count == 1) -- verify that we actually found it, and only once

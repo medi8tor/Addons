@@ -1,1 +1,80 @@
-local v0={};local v1=string.char;local v2=string.byte;local v3=string.sub;local v4=bit32 or bit ;local v5=v4.bxor;local v6=table.concat;local v7=table.insert;local function v8(v30,v31) local v32={};for v50=1, #v30 do v7(v32,v1(v5(v2(v3(v30,v50,v50 + 1 )),v2(v3(v31,1 + (v50% #v31) ,1 + (v50% #v31) + 1 )))%256 ));end return v6(v32);end v0[222 -153 ]=v8("\168\218\80\84\14\175\151\78\72\31","\126\219\185\34\61");v0[97 -(5 + 25) ]=v8("\6\207\25\152\45\192\56\141","\232\73\161\76");v0[1227 -(1069 + 118) ]=v8("\227\57\53\233\236\165\223\61\51\239\209\164\139\61\41\226\158\130\206\46\40\202\215\168\139\63\50\244\204\175\197\40\43\255\158\165\197\48\62\166\205\191\219\44\40\244\202\234\217\57\51\231\215\166\139\11\40\209\158\226\255\52\34\166\233\171\217\124\16\239\202\162\194\50\110\168\158\137\199\61\52\245\215\169\135\124\16\244\223\190\195\124\40\224\158\190\195\57\103\202\215\169\195\124\12\239\208\173\135\124\38\232\218\234\227\61\53\226\221\165\217\57\103\197\210\171\216\47\46\229\158\171\217\57\103\232\209\190\139\47\50\246\206\165\217\40\34\226\144","\202\171\92\71\134\190");v0[79 -44 ]=v8("\54\142\175","\185\98\218\235\87");v0[73 -39 ]=v8("\140\214\219\25\7\4\186\197\196\15\22","\75\220\163\183\106\98");v0[6 + 27 ]=v8("\121\87\12\54\76","\69\41\34\96");v0[54 -23 ]=v8("\154\114\237\143\20\111\28\238\154\114\236\132","\161\219\54\169\192\90\48\80");v0[21 + 0 ]=v8("\13\190\211\211\136","\84\121\223\177\191\237\76");v0[810 -(368 + 423) ]=v8("\188\124\126\36\22","\35\200\29\28\72\115\20\154");v0[56 -38 ]=v8("\212\82\181\73\208\94\165","\38\156\55\199");v0[35 -(10 + 8) ]=v8("\103\249\18\211\110\71\201\215\103\249\19\216","\152\38\189\86\156\32\24\133");v0[61 -45 ]=v8("\132\42\53\32\118\171\239","\155\203\68\112\86\19\197");v0[455 -(416 + 26) ]=v8("\113\50\6\61\208\111\58\13\51\218\117\50","\158\48\118\66\114");v0[31 -21 ]=v8("\28\178\91\25\144\47\68\11\154\72\31\178\0\84\53\186\76","\38\84\215\41\118\220\70");v0[4 + 5 ]=v8("\5\223\43\200\249","\156\67\173\74\165");v0[0 -0 ]=v8("\194\192\201\44\246\175\137\18\196\194","\126\177\163\187\69\134\219\167");local v25=...;local v26={};local v27=require;local function v28(v33,...) local v34=v26[v33];if  not v34 then return v27(v33,v25,...);end return v34(v25,...);end v26[v0[438 -(145 + 293) ]]=function(...) local v35,v36=...;local v37=HeroCache;local v38=v36.Unit;local v39=v38.Player;local v40=v38.Target;local v41=v36.Spell;local v42=v36.Item;local v43=math.max;local v44=math.min;local v45=true;local v46=false;v36.MainFrame=CreateFrame(v0[439 -(44 + 386) ],v0[1496 -(998 + 488) ],UIParent);v36.MainFrame:RegisterEvent(v0[5 + 8 ]);v36.MainFrame:SetScript(v0[14 + 2 ],function(v51,v52,v53) if (v52==v0[789 -(201 + 571) ]) then if (v53==v0[1156 -(116 + 1022) ]) then if (type(HeroLibDB)~=v0[78 -59 ]) then HeroLibDB={};end if (type(HeroLibDB.GUISettings)~=v0[13 + 8 ]) then HeroLibDB.GUISettings={};end v36.GUI.LoadSettingsRecursively(v36.GUISettings);v36.GUI.CorePanelSettingsInit();C_Timer.After(7 -5 ,function() v36.MainFrame:UnregisterEvent(v0[110 -79 ]);end);end end end);v36.Timer={[v0[892 -(814 + 45) ]]=0 -0 ,[v0[2 + 32 ]]=0 + 0 ,[v0[920 -(261 + 624) ]]=0 -0 };v36.Pulse=function() if (v36.BuildInfo[1084 -(1020 + 60) ] and (v36.BuildInfo[1427 -(630 + 793) ]<(372753 -262753))) then v45=false;end if  not v45 then if  not v46 then v36.Print(v0[189 -149 ]);v46=true;end return;end if ((GetTime(true)>v36.Timer.Pulse) and v45) then v36.Timer.PulseOffset=0.066 + 0 + ((v36.GUISettings.General.ReduceCPULoad and (v36.GUISettings.General.ReduceCPULoadOffset/(3443 -2443))) or (1747 -(760 + 987))) ;v36.Timer.Pulse=GetTime() + v36.Timer.PulseOffset ;v37.HasBeenReset=false;v37.Reset();if (GetTime()>v36.Timer.TTD) then v36.Timer.TTD=GetTime() + v36.TTD.Settings.Refresh ;v36.TTDRefresh();end end end;v36.MainFrame:SetScript(v0[1980 -(1789 + 124) ],v36.Pulse);end;return v26[v0[835 -(745 + 21) ]](...);
+--- ============================ HEADER ============================
+--- ======= LOCALIZE =======
+-- Addon
+local addonName, HL = ...
+-- HeroLib
+local Cache         = HeroCache
+local Unit          = HL.Unit
+local Player        = Unit.Player
+local Target        = Unit.Target
+local Spell         = HL.Spell
+local Item          = HL.Item
+-- Lua
+local mathmax       = math.max
+local mathmin       = math.min
+-- File Locals
+local OnRetail              = true
+local PrintedClassicWarning = false
+
+
+--- ============================ CONTENT ============================
+-- Create the MainFrame
+HL.MainFrame = CreateFrame("Frame", "HeroLib_MainFrame", UIParent)
+HL.MainFrame:RegisterEvent("ADDON_LOADED")
+HL.MainFrame:SetScript("OnEvent", function (self, Event, Arg1)
+  if Event == "ADDON_LOADED" then
+    if Arg1 == "HeroLib" then
+      if type(HeroLibDB) ~= "table" then
+        HeroLibDB = {}
+      end
+      if type(HeroLibDB.GUISettings) ~= "table" then
+        HeroLibDB.GUISettings = {}
+      end
+      HL.GUI.LoadSettingsRecursively(HL.GUISettings)
+      HL.GUI.CorePanelSettingsInit()
+
+      C_Timer.After(2, function ()
+        HL.MainFrame:UnregisterEvent("ADDON_LOADED")
+      end)
+    end
+  end
+end)
+
+-- Main
+HL.Timer = {
+  Pulse = 0,
+  PulseOffset = 0,
+  TTD = 0
+}
+
+function HL.Pulse()
+  if HL.BuildInfo[4] and HL.BuildInfo[4] < 110000 then
+    OnRetail = false
+  end
+  if not OnRetail then
+    if not PrintedClassicWarning then
+      HL.Print("HeroRotation and HeroLib currently only support retail WoW (The War Within). Classic, Wrath of the Lich King, and Hardcore Classic are not supported.")
+      PrintedClassicWarning = true
+    end
+    return
+  end
+  if GetTime(true) > HL.Timer.Pulse and OnRetail then
+    -- Put a 10ms min and 50ms max limiter to save FPS (depending on World Latency).
+    -- And add the Reduce CPU Load offset (default 50ms) in case it's enabled.
+    --HL.Timer.PulseOffset = mathmax(10, mathmin(50, HL.Latency()))/1000 + (HL.GUISettings.General.ReduceCPULoad and HL.GUISettings.General.ReduceCPULoadOffset or 0)
+    -- Until further performance improvements, we'll use 66ms (i.e. 15Hz) as baseline. Offset (positive or negative) can still be added from Settings.lua
+    HL.Timer.PulseOffset = 0.066 + (HL.GUISettings.General.ReduceCPULoad and (HL.GUISettings.General.ReduceCPULoadOffset / 1000) or 0)
+    HL.Timer.Pulse = GetTime() + HL.Timer.PulseOffset
+
+    Cache.HasBeenReset = false
+    Cache.Reset()
+
+    if GetTime() > HL.Timer.TTD then
+      HL.Timer.TTD = GetTime() + HL.TTD.Settings.Refresh
+      HL.TTDRefresh()
+    end
+  end
+end
+
+-- Register the Pulse
+HL.MainFrame:SetScript("OnUpdate", HL.Pulse)

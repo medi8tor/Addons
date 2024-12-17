@@ -1,1 +1,667 @@
-local v0={};local v1=string.char;local v2=string.byte;local v3=string.sub;local v4=bit32 or bit ;local v5=v4.bxor;local v6=table.concat;local v7=table.insert;local function v8(v136,v137) local v138={};for v210=1, #v136 do v7(v138,v1(v5(v2(v3(v136,v210,v210 + 1 )),v2(v3(v137,1 + (v210% #v137) ,1 + (v210% #v137) + 1 )))%256 ));end return v6(v138);end v0[307 + 565 ]=v8("\170\15\145\40\18\33\226\181\25\130","\204\217\108\227\65\98\85");v0[2199 -(797 + 532) ]=v8("\50\27\168\66\184\231\3\160\13\7\231\102\188\232\22\173\11\7\231\68\178\240\22\189\11\6\169\22\181\229\4\233\0\12\162\88\253\241\7\173\3\29\162\82\253\226\24\187\66\25\166\66\190\236\87\248\83\71\247\24\237\170\87\250\82\71\247\3\243\182\67","\201\98\105\199\54\221\132\119");v0[631 + 237 ]=v8("\11\175\62\111\226\228","\136\111\198\77\31\135");v0[293 + 574 ]=v8("\215\120\229\28\21\70","\42\147\17\150\108\112");v0[2028 -1165 ]=v8("\18\227\146\84\255\47\44\11\249","\89\123\141\230\49\141\93");v0[2064 -(373 + 829) ]=v8("\231\112\166\6\151\220\107\162\23","\229\174\30\210\99");v0[1589 -(476 + 255) ]=v8("\144\64\90","\78\228\33\56");v0[1987 -(369 + 761) ]=v8("\25\207\93","\224\77\174\63\139\38\175");v0[494 + 359 ]=v8("\200\220\47\80\35\84\223\194","\55\187\177\78\60\79");v0[1546 -694 ]=v8("\183\204\1\181\51\113\235\160\210","\168\228\161\96\217\95\81");v0[1587 -749 ]=v8("\222\239\20\254\22\201\216\18\253\37\217\239\24\196\8\196\224\21\239\31\194\242\14\187\30\200\225\24\245\9\196\241\24","\122\173\135\125\155");v0[1067 -(64 + 174) ]=v8("\51\13\215\167\235\213\185\14\9\211\185\245\213\175\113\5\215\178\253\222\174\56\23\215","\221\81\97\178\212\152\176");v0[117 + 702 ]=v8("\17\47\54\111\185\119\0\33\44\117\179\122\82\36\61\122\185\122\1\41\46\121","\20\114\64\88\28\220");v0[1173 -380 ]=v8("\231\0\8\240\6\127\180\229\27\30\229\7\124","\217\161\114\109\149\98\16");v0[1126 -(144 + 192) ]=v8("\110\120\114\14\118\153\66\82\98","\45\61\22\19\124\19\203");v0[1003 -(42 + 174) ]=v8("\1\93\93\226\221\58\65\66\243\245","\153\83\50\50\150");v0[589 + 195 ]=v8("\156\248\6\86\144\183\250\4\5\140\184\180\37\87\134\187\240\12\72\195\187\250\23\68\141\185\248\10\75\132","\227\222\148\99\37");v0[646 + 133 ]=v8("\230\199\22\215\78\255\166\195\139\28\194\29\208\186\193\206\23\203\80\182\142\214\196\9\193\83\182\138\205\197\23\215","\200\164\171\115\164\61\150");v0[328 + 442 ]=v8("\54\244\38\49\119\1\248","\22\114\157\85\84");v0[2271 -(363 + 1141) ]=v8("\196\162\191\199\167\88","\57\148\205\214\180\200\54");v0[2336 -(1183 + 397) ]=v8("\164\188\242\213\137\186\224\239\183\177\236\197\164\180\242\217\185\187\166\192\164\176\229\223\187\183\231\196\246\225","\176\214\213\134");v0[2286 -1535 ]=v8("\168\132\188\215\133\130\174\237\169\140\166\209\174\132\174\219\185\140\188\219\181\131\232\194\168\136\171\221\183\143\169\198\250\223","\178\218\237\200");v0[547 + 199 ]=v8("\189\38\189\123\171\182\74\186\134\34\190\102\190\255\85\166\188\32\164\121\189\190\81\244\235","\212\217\67\203\20\223\223\37");v0[518 + 175 ]=v8("\109\31\57\121\65\19\35\115\65\30\28\115\93\3\56\124\106\21\54\110\70\80\52\117\65\28\51\117\89\30\36\58\22","\26\46\112\87");v0[2656 -(1913 + 62) ]=v8("\96\69\192\97\112\71\95\218\53\4\75\88\205\125","\80\36\42\174\21");v0[426 + 250 ]=v8("\197\39\233\89\105\120\197\162\55\244\89\68\120\210\231\47\244\28\125\126\212\162","\166\130\66\135\60\27\17");v0[1752 -1090 ]=v8("\54\217\135\246\239\201\7\220\151\246\218\200\16\222\135\239\203\201\5\220\142","\167\115\181\226\155\138");v0[2583 -(565 + 1368) ]=v8("\60\131\114\181\50\189\123\174\56\135\122\168\62\144\127\180","\220\81\226\28");v0[2399 -1761 ]=v8("\95\10\206\188\39\219\78\4\212\166\45\214\28\22\212\174\44\220\93\23\196\239\116\136","\184\60\101\160\207\66");v0[2292 -(1477 + 184) ]=v8("\195\147\21\255\55\235\103\214\142\4\236\60\224\76\130\146\2\255\55\234\89\208\133\86\171\97","\56\162\225\118\158\89\142");v0[851 -226 ]=v8("\48\173\142\205\213\51\139\159\235\200\117\167\159\243\212\49\181\153\246\154\96\228","\186\85\212\235\146");v0[576 + 42 ]=v8("\252\219\17\219\73\178\239\222\43\198\70\190\248\193\16\149\93\163\252\195\16\212\92\179\189\153\76","\215\157\173\116\181\46");v0[1468 -(564 + 292) ]=v8("\61\45\236\226\63\59\252\227\1\44\237\227\55\52\252\177\45\43\248\255\58\62\235\245\126\107\169","\145\94\95\153");v0[1047 -440 ]=v8("\224\12\84\243\222\240\189\33\238\50\77\246\222\221\144\39\239\5\77\251\212\247\145\110\251\25\88\240\223\227\144\42\168\94\1","\78\136\109\57\158\187\130\226");v0[1814 -1212 ]=v8("\195\78\55\197\22\196\70\13\222\4\204\79\55\196\69\210\86\51\216\1\192\80\54\150\86\151","\101\161\34\82\182");v0[901 -(244 + 60) ]=v8("\141\189\63\18\119\79\155\136\179\62\14\70\90\154\197\161\39\10\70\74\136\151\182\115\88\28","\233\229\210\83\107\40\46");v0[456 + 137 ]=v8("\228\209\55\197\224\54\195\86\248\218\114\233\251\49\242\70\224\218\54\186\188\98","\34\129\168\82\154\143\80\156");v0[1060 -(41 + 435) ]=v8("\180\234\119\230\236\200\165\228\109\252\230\197\247\246\109\244\231\207\182\247\125\181\186\155","\171\215\133\25\149\137");v0[1578 -(938 + 63) ]=v8("\36\199\95\84\180\32\195\73\101\160\45\216\95\86\183\101\194\78\91\189\33\208\72\94\243\119\137","\211\69\177\58\58");v0[438 + 131 ]=v8("\32\59\209\92\39\43\219\79\106\61\193\90\36\42\212\73\46\110\135\13","\59\74\78\181");v0[1688 -(936 + 189) ]=v8("\136\244\90\59\28\73\69\152\242\64\62\82\95\110\141\243\72\51\0\72\58\222\169","\26\236\157\44\82\114\44");v0[184 + 374 ]=v8("\255\252\48\203\200\242\46\223\246\254\57\220\227\224\124\193\227\242\50\214\246\225\56\146\165\161","\178\151\147\92");v0[2165 -(1565 + 48) ]=v8("\138\178\195\252\90\250\142\179\135\232\67\254\142\163\198\233\83\191\210\247","\159\224\199\167\155\55");v0[335 + 206 ]=v8("\252\112\248\160\32\63\184\251\119\202\186\55\44\147\252\49\230\185\36\35\131\245\99\241\237\116\117","\231\148\17\149\205\69\77");v0[1673 -(782 + 356) ]=v8("\202\97\33\90\250\54\218\216\72\55\92\244\54\196\207\55\55\64\252\61\204\202\101\32\20\172\101","\168\171\23\68\52\157\83");v0[792 -(176 + 91) ]=v8("\228\16\239\218\230\6\255\219\216\17\238\219\238\9\255\137\244\22\251\199\227\3\232\205\167\83\174","\169\135\98\154");v0[1349 -831 ]=v8("\63\90\210\36\133\68\97\56\93\224\61\136\83\97\37\82\216\33\148\83\81\34\72\159\58\148\87\80\51\90\205\45\192\7\12","\62\87\59\191\73\224\54");v0[755 -242 ]=v8("\167\166\38\13\0\1\195\110\173\171\46\19\22\22\135\66\177\171\45\26\18\22\195\17\244\250","\49\197\202\67\126\115\100\167");v0[1598 -(975 + 117) ]=v8("\166\59\175\76\202\82\16\29\236\61\191\74\201\83\31\27\168\110\243","\105\204\78\203\43\167\55\126");v0[2372 -(157 + 1718) ]=v8("\9\61\10\35\98\0\32\11\59\80\4\60\18\41\29\18\38\7\52\89\0\32\2\122\11","\61\97\82\102\90");v0[394 + 91 ]=v8("\247\121\117\76\215\75\223\235\119\67\93\211\74\223\246\120\123\65\207\74\239\241\98\60\90\207\78\238\224\112\110\77\155\27","\128\132\17\28\41\187\47");v0[1654 -1188 ]=v8("\88\187\204\182\85\168\254\180\86\133\205\178\87\178\213\251\67\174\192\181\84\187\211\191\16\232","\219\48\218\161");v0[1500 -1061 ]=v8("\118\72\97\140\240\142\77\85\120\137\242\203\122\64\122\136\251\153\77\78\113\186\242\130\117\73\99\197\172\219","\235\18\33\23\229\158");v0[1452 -(697 + 321) ]=v8("\40\158\37\191\168\185\51\57\179\35\184\187\180\61\46\204\56\173\164\176\51\57\179\63\170\150\177\63\44\132\36\236\248\229","\86\75\236\80\204\201\221");v0[1168 -739 ]=v8("\70\22\60\165\244\162\122\85\72\40\37\160\244\143\87\83\73\31\37\173\254\165\86\26\70\22\60\165\244\162\122\85\72\40\61\161\246\184\81\26\31\65","\58\46\119\81\200\145\208\37");v0[898 -474 ]=v8("\184\88\179\83\169\81\178\127\178\85\187\77\191\70\246\72\187\89\187\69\168\107\185\70\133\88\191\71\178\64\246\17\238","\32\218\52\214");v0[965 -546 ]=v8("\68\146\231\42\67\130\237\57\14\143\226\32\67\130\241\18\65\129\220\33\71\128\235\57\14\214\177","\77\46\231\131");v0[161 + 252 ]=v8("\187\41\2\241\213\73\140\39\9\195\199\73\178\60\7\188\216\90\190\37\10\238\239\84\181\23\3\245\215\83\167\104\94\172","\59\211\72\111\156\176");v0[762 -355 ]=v8("\21\79\134\180\137\40\146\228\9\68\195\131\135\35\160\245\2\105\140\141\185\34\164\247\24\66\195\211","\144\112\54\227\235\230\78\205");v0[1072 -672 ]=v8("\72\38\189\83\65\95\17\187\80\114\79\38\177\105\95\82\41\188\66\72\84\59\167\22\94\79\47\186\82\76\73\42\244\0","\45\59\78\212\54");v0[1622 -(322 + 905) ]=v8("\63\15\241\138\53\16\203\161\35\4\180\189\59\27\249\176\40\41\251\179\5\26\253\178\50\2\180\225","\213\90\118\148");v0[999 -(602 + 9) ]=v8("\138\44\168\71\217\82\46\141\43\154\70\213\71\25\150\109\173\75\209\77\20\144\18\170\76\227\76\24\133\37\177\10\142","\113\226\77\197\42\188\32");v0[1568 -(449 + 740) ]=v8("\126\142\60\18\122\139\33\24\124\199\45\24\119\139\42\24\111\137\61\87\41\209","\119\24\231\78");v0[1244 -(826 + 46) ]=v8("\221\30\231\8\51\208\17\203\19\60\224\19\253\27\50\203\95\247\19\53\211\27\251\11\52\204\95\165\72","\90\191\127\148\124");v0[1311 -(245 + 702) ]=v8("\249\186\70\76\114\218\194\167\95\73\112\159\254\188\95\73\120\208\234\189\67\5\45\141","\191\157\211\48\37\28");v0[1137 -777 ]=v8("\49\62\4\190\23\255\30\58\58\14\14\183\22\249\56\117\63\62\6\183\29\228\54\59\47\113\88\235","\85\92\81\105\219\121\139\65");v0[111 + 232 ]=v8("\1\89\36\204\158\36\233\54\81\56\214","\134\66\56\87\184\190\116");v0[2232 -(260 + 1638) ]=v8("\185\205\3\223\204\173\210\237\234\203\2\196\201\167\216\246\164\219\77\157","\129\202\168\109\171\165\195\183");v0[769 -(382 + 58) ]=v8("\185\52\123\16\35\242\225\191\29\105\12\37\239\231\248\33\113\17\40\255\224\175\44\109\94\112","\143\216\66\30\126\68\155");v0[1039 -715 ]=v8("\66\162\215\122\59\208\114\174\91\175\215\127\42\205\89\228\77\164\223\126\43\204\90\170\93\235\130","\196\46\203\176\18\79\163\45");v0[262 + 53 ]=v8("\153\83\33\63\111\62\168\28\20\55\32\35\183\28\3\58\61\37\183","\81\206\60\83\91\79");v0[628 -324 ]=v8("\35\235\77\76\96\8\233\79\80\117\50\230\75\77\122\7\238\75\90\51\49\230\90\75\106","\19\97\135\40\63");v0[873 -579 ]=v8("\148\215\52\73\175\218\37\95\174\208\47\66\253\214\46\12\137\216\50\75\184\205","\44\221\185\64");v0[1491 -(902 + 303) ]=v8("\98\221\172\73\9\126\78\192\171\69\20\115\11\220\182\12\54\114\94\192\189\67\13\120\89","\29\43\179\216\44\123");v0[603 -328 ]=v8("\30\163\132\95\240\112\118\59\239\142\74\163\73\106\51\187\132\79\247\112\119\50\239\177\77\241\109\97","\24\92\207\225\44\131\25");v0[650 -380 ]=v8("\247\138\8\181\182\210\143\243\138\31\241\170\156\255\218\153\5\236","\175\187\235\113\149\217\188");v0[23 + 234 ]=v8("\125\95\93\244\123\131\199\56\81\95\78\241\113\198\131\14\95\83\69\238\124\144\130","\107\57\54\43\157\21\230\231");v0[1938 -(1121 + 569) ]=v8("\77\199\247\82\101\253\134\101\207\233\89\72\235\192\94\205\227\83\84\225\137\76\205\165\14","\224\58\168\133\54\58\146");v0[449 -(22 + 192) ]=v8("\79\47\97\248\101\79\94\31\116\240\85\82\65\96\85\253\83\84\80\41\125\232\82\69\116\41\116\244\78\98\77\38\117","\32\56\64\19\156\58");v0[906 -(483 + 200) ]=v8("\228\92\116\15\235\90\79\14\224\72\117\4\225\75\98\74\225\75\118\15\235\93\121\28\224\14\38","\106\133\46\16");v0[1675 -(1404 + 59) ]=v8("\185\231\192\208\62\199\179\112\129\253\199\253\59\192\177\119\187\252\213\253\49\199\188\121\173\178\197\199\60\203\188\109\183\228\196\130\110","\30\222\146\161\162\90\174\210");v0[544 -345 ]=v8("\234\196\212\2\233\203\242\53\231\203\201\46\166\193\200\59\227\203\222\52\240\192\141\111","\93\134\165\173");v0[255 -65 ]=v8("\167\109\189\135\62\168\118\173\192\35\191\125\186\143\62\175\121\173\192\98\255","\83\205\24\217\224");v0[947 -(468 + 297) ]=v8("\70\218\48\210\3\66\222\38\227\23\79\197\48\208\0\7\220\39\217\7\72\193\55\221\16\7\157\101","\100\39\172\85\188");v0[736 -(334 + 228) ]=v8("\175\166\31\87\179\232\221\173\189\24\75\184\171\223\190\172\18\75\187\233\206\184\233\64\22","\175\204\201\113\36\214\139");v0[569 -400 ]=v8("\141\23\92\71\234\68\223\152\10\77\84\225\79\244\204\21\77\67\231\78\237\142\4\75\6\181\17","\128\236\101\63\38\132\33");v0[379 -215 ]=v8("\216\22\0\219\162\111\185\222\10\3\212\187\121\136\192\95\23\193\179\127\137\217\29\6\199\246\36","\230\180\127\103\179\214\28");v0[287 -128 ]=v8("\33\129\169\67\16\129\30\30\26\133\170\94\5\200\1\2\32\135\176\65\6\137\5\80\115","\112\69\228\223\44\100\232\113");v0[40 + 99 ]=v8("\185\220\2\247\125\226\185\220\2\247\125\226","\150\205\189\112\144\24");v0[372 -(141 + 95) ]=v8("\62\204\149\145\139\152\149","\199\122\141\216\208\204\221");v0[133 + 2 ]=v8("\165\8","\135\225\76\173\114");v0[344 -210 ]=v8("\57\21\147\20\107\5","\73\113\80\210\88\46\87");v0[319 -186 ]=v8("\247\46\172\220","\170\163\111\226\151");v0[31 + 101 ]=v8("\12\15\140\205\234\57\0\134\134\130\61\15\142\195\184","\202\88\110\226\166");v0[358 -227 ]=v8("\250\195\16\158\131\204","\107\178\134\81\210\198\158");v0[92 + 38 ]=v8("\144\236\218\200\189\251","\164\216\137\187");v0[68 + 61 ]=v8("\108\127\43\2","\114\56\62\101\73\71\141");v0[180 -52 ]=v8("\224\197\224\87","\60\180\164\142");v0[75 + 52 ]=v8("\120\39\81\61","\152\54\72\63\88\69\62");v0[288 -(92 + 71) ]=v8("\38\226\169","\174\103\142\197");v0[58 + 58 ]=v8("\234\34\37\133\176","\156\168\78\64\224\212\121");v0[186 -75 ]=v8("\243\117\94\63","\126\167\52\16\116\217");v0[864 -(574 + 191) ]=v8("\40\24\249\3\2\23\181\63\15\38\188\57\4\19\183\63","\75\103\118\217");v0[80 + 16 ]=v8("\166\255\48\94\247\178\133\228\114\82\234\231\169\255\33\78","\199\235\144\82\61\152");v0[237 -142 ]=v8("\153\231\106\233\23\189\32\194\165","\167\214\137\74\171\120\206\83");v0[49 + 45 ]=v8("\45\194\73\115\103\100","\135\108\174\62\18\30\23\147");v0[940 -(254 + 595) ]=v8("\148\215\2\112\17\185\218\77\72\16\175\153\77\79\94\152\214\77\81\26\180\206\76\78","\126\219\185\34\61");v0[214 -(55 + 71) ]=v8("\6\207\108\165\38\195\47\135\60\207\56","\232\73\161\76");v0[114 -27 ]=v8("\252\53\51\238\158\153\198\61\43\234\158\137\239\47","\202\171\92\71\134\190");v0[1875 -(573 + 1217) ]=v8("\53\179\159\63\153\49\183\138\59\213\66\181\153\119\250\13\181\135\51\214\21\180\152","\185\98\218\235\87");v0[229 -146 ]=v8("\139\202\195\2\66\8\179\204\219\14\13\60\178\208","\75\220\163\183\106\98");v0[7 + 73 ]=v8("\103\77\20\101\124\81\5\33","\69\41\34\96");v0[122 -46 ]=v8("\154\67\221\175\122\68\49\195\251\66\198\224\46\81\34\198\190\66","\161\219\54\169\192\90\48\80");v0[1006 -(714 + 225) ]=v8("\41\173\222\203\185\24\16","\84\121\223\177\191\237\76");v0[183 -120 ]=v8("\152\111\115\60\22\119\238\74\167\115","\35\200\29\28\72\115\20\154");v0[81 -22 ]=v8("\204\69\168\82\249\84\179\79\243\89\131\67\250\82\169\85\245\65\162\85","\38\156\55\199");v0[6 + 49 ]=v8("\101\210\59\241\79\118\246","\152\38\189\86\156\32\24\133");v0[75 -22 ]=v8("\140\33\30\51\97\164\247","\155\203\68\112\86\19\197");v0[853 -(118 + 688) ]=v8("\96\58\3\43\219\98\41\16\55\217\117\56\29\55\208\113\52\14\55\218","\158\48\118\66\114");v0[79 -(25 + 23) ]=v8("\4\155\104\47\153\20\121\17\134\124\63\140\11\99\26\131\118\53\148\7\104\19\146\109","\38\84\215\41\118\220\70");v0[6 + 21 ]=v8("\0\204\57\209\188\11\204\39\200\249\49\141\37\195\188\9\216\57\209\245\32\200\106\141\213\45\217\47\215\238\54\221\62\140","\156\67\173\74\165");v0[1886 -(927 + 959) ]=v8("\194\192\201\44\246\175\137\18\196\194","\126\177\163\187\69\134\219\167");local v131=...;local v132={};local v133=require;local function v134(v139,...) local v140=v132[v139];if  not v140 then return v133(v139,v131,...);end return v140(v131,...);end v132[v0[0 -0 ]]=function(...) local v141,v142=...;local v143=HeroDBC.DBC;local v144=HeroLib;local v145=HeroCache;local v146=v144.Unit;local v147=v146.Player;local v148=v146.Target;local v149=v146.MouseOver;local v150=v146.Pet;local v151=v144.Spell;local v152=v144.Item;local v153=HeroRotation();local v154=v153.AoEON;local v155=v153.CDsON;local v156=v153.Cast;local v157=v153.Commons().Everyone.num;local v158=v153.Commons().Everyone.bool;local v159=math.max;local v160=math.min;local v161=v151.Paladin.Protection;local v162=v152.Paladin.Protection;local v163={v162.ManicGrieftorch:ID()};local v164={{v161.HammerofJustice,v0[312 -(175 + 110) ],function() return true;end}};local v165;local v166;local v167,v168;local v169,v170;local v171=24 -19 ;local v172;local v173=12907 -(503 + 1293) ;local v174=31030 -19919 ;local v175,v176,v177,v178;local v179;local v180=v147:GetEquipment();local v181=(v180[10 + 3 ] and v152(v180[1074 -(810 + 251) ])) or v152(0 + 0 ) ;local v182=(v180[5 + 9 ] and v152(v180[13 + 1 ])) or v152(533 -(43 + 490) ) ;v144:RegisterForEvent(function() v180=v147:GetEquipment();v181=(v180[746 -(711 + 22) ] and v152(v180[50 -37 ])) or v152(859 -(240 + 619) ) ;v182=(v180[4 + 10 ] and v152(v180[21 -7 ])) or v152(0 + 0 ) ;end,v0[1775 -(1344 + 400) ]);local function v183() return v162.ManicGrieftorch:IsEquipped() and (v162.ManicGrieftorch:CooldownUp() or (v162.ManicGrieftorch:CooldownRemains()<=v147:GCDRemains())) ;end local function v184() return v162.AlgetharPuzzleBox:IsEquipped() and (v162.AlgetharPuzzleBox:CooldownUp() or (v162.AlgetharPuzzleBox:CooldownRemains()<=v147:GCDRemains())) ;end v144:RegisterForEvent(function() v173=11516 -(255 + 150) ;v174=8752 + 2359 ;end,v0[26 + 21 ]);local v185=v153.GUISettingsGet();local v186=v153.Commons().Everyone;local v187=v153.Commons().Paladin;local v188={[v0[226 -173 ]]=v185.General,[v0[177 -122 ]]=v185.APL.Paladin.Commons,[v0[1798 -(404 + 1335) ]]=v185.APL.Paladin.ProtectionDefensives,[v0[469 -(183 + 223) ]]=v185.APL.Paladin.Protection,[v0[81 -14 ]]=v185.APL.Paladin.ProtTTD};local function v189() if (v185.General.AutoTab and v147:AffectingCombat()) then v153.TopPanelAlternative:ChangeIcon(1 + 0 ,2 + 1 );return v0[413 -(10 + 327) ];end end local function v190(v211) return v172 or v186.ISSolo() or (v211==(0 + 0)) or v186.Buggedmobs[v148:NPCID()] or ((v174>=v211) and (v174<(8115 -(118 + 220)))) ;end local function v191(v212,v213) return ((v212~=v0[27 + 53 ]) and v190(v188.ProtTTD.TrinketsTTD) and (((v212==v0[532 -(108 + 341) ]) and v153.CDsON()) or ((v212==v0[39 + 46 ]) and (SmallCDToggle or v153.CDsON())) or ((v212==v0[367 -280 ]) and SmallCDToggle) or ((v212==v0[1581 -(711 + 782) ]) and (v169>=v188.Protection.Mobcount)) or ((v212==v0[174 -83 ]) and ((v169>=v188.Protection.Mobcount) or v155())) or (v212==v0[563 -(270 + 199) ]) or ((v212==v0[31 + 64 ]) and v172) or ((v212==v0[1915 -(580 + 1239) ]) and (v172 or (v169>=v188.Protection.Mobcount))))) or ((v212==v0[294 -195 ]) and (v213~=nil) and (v147:HealthPercentageWeighted()<v213)) ;end local function v192() return v147:BuffUp(v161.ArdentDefender) or v147:BuffUp(v161.GuardianofAncientKings) or v147:BuffUp(v161.DivineShield) ;end local function v193() return v188.Protection.Consecration or  not v147:IsMoving() ;end local v194={8118 + 217845 ,522669 -322487 ,197521 -(645 + 522) ,225373 + 111 ,575471 -379095 ,660009 -399268 ,427165 -(351 + 154) ,412771 -(28 + 238) ,257373 -(1381 + 178) ,205967 + 49467 ,910635 -646485 ,412170 -(381 + 89) ,278603 + 133355 ,265712 -(1074 + 82) ,203517 -(214 + 1570) ,110443 + 157464 ,253373 + 7178 ,259133 -(1668 + 58) ,1112362 -685703 };local function v195(v214) local v215=nil;for v224,v225 in pairs(v214) do if (v147~=v225) then if ((v225:Role()~=v0[229 -118 ]) and ((v188.ProtectionDefensives.BoPDebuff and (v186.unitHasDebuffFromList(v186.DebuffList[v0[403 -287 ]],v225) or v186.unitHasDebuffFromList(v194,v225))) or (v225:HealthPercentageWeighted()<=v188.ProtectionDefensives.BoPHP)) and v225:DebuffDown(v161.ForbearanceDebuff)) then v215=v225;end end end return v215;end local function v196(v216) local v217=v188.ProtectionDefensives.IntercessionUnit;if (v217==v0[59 + 66 ]) then for v238,v239 in pairs(v216) do if v239:IsDeadOrGhost() then return v239;end end return nil;end local v218={[v0[24 + 103 ]]={},[v0[112 + 16 ]]={v0[2123 -(109 + 1885) ]},[v0[1599 -(1269 + 200) ]]={v0[946 -(98 + 717) ]},[v0[958 -(802 + 24) ]]={v0[167 -34 ],v0[103 + 31 ]},[v0[23 + 112 ]]={v0[378 -242 ]}};local v219=v218[v217] or {} ;for v226,v227 in pairs(v216) do local v228=v227:Role();local v229=v227:IsDeadOrGhost();for v230,v231 in ipairs(v219) do if ((v228==v231) and v229) then return v227;end end end return nil;end local function v197(v220) local v221=UnitGUID(v0[463 -324 ]);if (v220~=nil) then for v240,v241 in pairs(v220) do if ((v241:GUID()==v221) and ((v148:CastSpellID()==(114736 + 206052)) or (v148:CastSpellID()==(131778 + 191952)))) then if (v241~=nil) then return v241;end end end end end local function v198(v222) return v222:DebuffRemains(v161.JudgmentDebuff);end local function v199() return v147:BuffDown(v161.DevotionAura) and v147:BuffDown(v161.ConcentrationAura) and v147:BuffDown(v161.CrusaderAura) ;end local function v200() if  not v161.OfDuskandDawn:IsAvailable() then return  -(1 + 0);end return ((5 + 1) -v187.HPGCount) -(v147:BuffStack(v161.BlessingofDawnBuff) * (2 + 1)) ;end local function v201() if (v161.DevotionAura:IsCastable() and (v199())) then if v156(v161.DevotionAura) then return v0[1592 -(797 + 636) ];end end if (v161.LightsJudgment:IsCastable() and v148:IsInMeleeRange(24 -19 ) and RacialsSetting) then if v156(v161.LightsJudgment) then return v0[1783 -(1427 + 192) ];end end if (v161.ArcaneTorrent:IsCastable() and v148:IsInMeleeRange(3 + 5 ) and RacialsSetting) then if v156(v161.ArcaneTorrent) then return v0[391 -222 ];end end if (v161.Consecration:IsCastable() and v193() and v148:IsInMeleeRange(5 + 0 )) then if v156(v161.Consecration) then return v0[79 + 95 ];end end if (v161.AvengersShield:IsCastable() and v148:IsSpellInRange(v161.AvengersShield) and v148:IsSpellInRange(v161.AvengersShield)) then if v156(v161.AvengersShield) then return v0[508 -(192 + 134) ];end end if (v161.Judgment:IsReady() and v148:IsSpellInRange(v161.Judgment) and v148:IsSpellInRange(v161.Judgment)) then if v156(v161.Judgment) then return v0[1466 -(316 + 960) ];end end end local function v202() if ((v147:HealthPercentage()<=v188.ProtectionDefensives.LoHHP) and v161.LayonHands:IsCastable() and v147:DebuffDown(v161.ForbearanceDebuff)) then if v156(v161.LayonHands,nil) then return v0[111 + 88 ];end end if (v161.GuardianofAncientKings:IsCastable() and (((v147:HealthPercentageWeighted()<=v188.ProtectionDefensives.GoAKHP) and v147:BuffDown(v161.ArdentDefenderBuff)) or (v188.ProtectionDefensives.TankBusters and v147:IncomingSpell(v186.TankBustersList2))) and  not v192()) then if v156(v161.GuardianofAncientKingsCast,nil) then return v0[164 + 48 ];end end if (v161.ArdentDefender:IsCastable() and ((v147:HealthPercentageWeighted()<=v188.ProtectionDefensives.ArdentDefenderHP) or (v188.ProtectionDefensives.TankBusters and v147:IncomingSpell(v186.TankBustersList2))) and  not v192()) then if v156(v161.ArdentDefender,nil) then return v0[207 + 16 ];end end if (v161.WordofGlory:IsReady() and v147:BuffUp(v161.ShiningLightFreeBuff) and v161.FaithintheLight:IsAvailable() and  not v147:BuffUp(v161.FaithintheLightBuff) and v188.ProtectionDefensives.WordofGloryFaithintheLight) then if v156(v161.WordofGlory) then return v0[898 -663 ];end end if (v161.WordofGlory:IsReady() and ((v147:HealthPercentageWeighted()<=v188.ProtectionDefensives.WordofGloryPlayerHP) or ((v147:HealthPercentageWeighted()<=v188.ProtectionDefensives.FreeWordofGloryPlayerHP) and v147:BuffUp(v161.ShiningLightFreeBuff))) and  not v147:HealingAbsorbed()) then if v156(v161.WordofGlory) then return v0[799 -(83 + 468) ];end end if ((v147:HealthPercentageWeighted()<=v188.ProtectionDefensives.BubbleHP) and v161.DivineShield:IsCastable() and v147:DebuffDown(v161.ForbearanceDebuff)) then if v156(v161.DivineShield,nil) then return v0[2063 -(1202 + 604) ];end end end local function v203() v175=v186.UnitsinRange(v161.FlashofLight);v176=v186.GetLowestHealthUnit(v175);v177=v176:HealthPercentageWeighted();v178=v196(v175);BoPTarget=v195(v175);if  not v176:DebuffUp(v161.ForbearanceDebuff) then if (v161.LayonHands:IsReady() and (v177<=v188.ProtectionDefensives.LoHPartyHP)) then v176:Cast(v161.LayonHands);return v0[1260 -990 ];end end if v161.BlessingofProtection:IsReady() then if ((BoPTarget~=nil) and (BoPTarget~=v147)) then BoPTarget:Cast(v161.BlessingofProtection);return v0[457 -182 ];end end if v161.Intercession:IsReady() then if (v149:UnitIsFriend() and v149:UnitIsPlayer() and v149:Exists() and v149:IsDeadOrGhost()) then v153.CastTarget(v161.Intercession,v153.TName().MOUSEOVER);return v0[791 -505 ];end if (v188.ProtectionDefensives.IntercessionTarget and v148:UnitIsFriend() and v148:Exists() and v148:IsDeadOrGhost()) then v153.Cast(v161.Intercession);return v0[619 -(45 + 280) ];end end if (v161.BlessingofSacrifice:IsReady() and (v177<=v188.ProtectionDefensives.BlessingOfSacrificeHP) and (v147:HealthPercentage()>(87 + 3)) and v147:BuffDown(v161.BlessingofProtection)) then v176:Cast(v161.BlessingofSacrifice);return v0[266 + 38 ];end if (v161.WordofGlory:IsReady() and ((v177<=v188.ProtectionDefensives.WordofGloryPartyHP) or ((v177<=v188.ProtectionDefensives.FreeWordofGloryPartyHP) and v147:BuffUp(v161.ShiningLightFreeBuff)))) then v176:Cast(v161.WordofGlory);return v0[116 + 199 ];end end local function v204() if (v161.LightsJudgment:IsCastable() and RacialsSetting and v148:IsInRange(3 + 2 ) and v148:IsSpellInRange(v161.LightsJudgment)) then if v156(v161.LightsJudgment,false,nil, not v148:IsSpellInRange(v161.LightsJudgment)) then return v0[57 + 267 ];end end if (v161.AvengingWrath:IsCastable() and AvengingWrathSetting and v148:IsInRange(9 -4 )) then if v156(v161.AvengingWrath,false) then return v0[2240 -(340 + 1571) ];end end if (v161.Sentinel:IsCastable() and AvengingWrathSetting and v148:IsInRange(2 + 3 )) then if v156(v161.Sentinel,false) then return v0[2106 -(1733 + 39) ];end end if (v188.Commons.Enabled.Potions and PotionSetting and (v147:BuffUp(v161.AvengingWrathBuff))) then local v232=v186.PotionSelected();if (v232 and v232:IsReady()) then v153.CastMacro(8 -5 ,nil,nil,v232);return v0[1377 -(125 + 909) ];end end if (v161.MomentofGlory:IsCastable() and ((v147:BuffUp(v161.AvengingWrathBuff) and (v147:BuffRemains(v161.AvengingWrathBuff)<(1963 -(1096 + 852)))) or (((v144.CombatTime()>(5 + 5)) or (v161.AvengingWrath:CooldownRemains()>(20 -5))) and v161.AvengersShield:CooldownDown() and v161.Judgment:CooldownDown() and v161.HammerofWrath:CooldownDown()))) then if v156(v161.MomentofGlory,false) then return v0[350 + 10 ];end end if (v161.DivineToll:IsCastable() and DivineTollSetting and (v169>=(515 -(409 + 103)))) then if v156(v161.DivineToll) then return v0[600 -(46 + 190) ];end end if (v161.BastionofLight:IsCastable() and (v147:BuffUp(v161.AvengingWrathBuff) or (v161.AvengingWrath:CooldownRemains()<=(125 -(51 + 44))))) then if v156(v161.BastionofLight,false) then return v0[105 + 267 ];end end if (v161.Fireblood:IsCastable() and v148:IsInMeleeRange(1322 -(1114 + 203) ) and RacialsSetting and (v147:BuffRemains(v161.AvengingWrathBuff)>(734 -(228 + 498)))) then if v156(v161.Fireblood) then return v0[83 + 296 ];end end end local function v205() if (v161.HammerofLight:IsReady() and v148:IsInRange(7 + 5 ) and (v147:BuffUp(v161.BlessingofDawnBuff) or  not v161.OfDuskandDawn:IsAvailable() or (v169>=(668 -(174 + 489))))) then if v156(v161.EyeofTyr) then return v0[1010 -622 ];end end if (v161.EyeofTyr:IsCastable() and EyeOfTyrSetting and v148:IsInMeleeRange(1913 -(830 + 1075) ) and ((v200()==(529 -(303 + 221))) or  not v161.OfDuskandDawn:IsAvailable())) then if v156(v161.EyeofTyr) then return v0[1664 -(231 + 1038) ];end end if (v161.ShieldoftheRighteous:IsReady() and v148:IsInMeleeRange(5 + 0 ) and (v200()==(1166 -(171 + 991)))) then if v156(v161.ShieldoftheRighteous,true) then return v0[1648 -1248 ];end end if (v161.EyeofTyr:IsCastable() and EyeOfTyrSetting and v148:IsInMeleeRange(21 -13 ) and ((v200()==(2 -1)) or v147:BuffUp(v161.BlessingofDawnBuff))) then if v156(v161.EyeofTyr) then return v0[326 + 81 ];end end if (v161.HammerofWrath:IsReady() and v148:IsSpellInRange(v161.HammerofWrath)) then if v156(v161.HammerofWrath) then return v0[1447 -1034 ];end end if (v161.Judgment:IsReady() and v148:IsSpellInRange(v161.Judgment)) then if v156(v161.Judgment) then return v0[1208 -789 ];end end if (v161.BlessedHammer:IsCastable() and v148:IsInMeleeRange(8 -3 )) then if v156(v161.BlessedHammer) then return v0[1310 -886 ];end end if (v161.HammeroftheRighteous:IsCastable() and v148:IsInMeleeRange(1253 -(111 + 1137) )) then if v156(v161.HammeroftheRighteous) then return v0[587 -(91 + 67) ];end end if (v161.CrusaderStrike:IsCastable() and v148:IsInMeleeRange(14 -9 )) then if v156(v161.CrusaderStrike) then return v0[109 + 325 ];end end if (v161.DivineToll:IsReady() and v148:IsInRange(553 -(423 + 100) ) and DivineTollSetting) then if v156(v161.DivineToll) then return v0[4 + 435 ];end end end local function v206() if (v161.LightsGuidance:IsAvailable() and ((v161.EyeofTyr:CooldownRemains()<(5 -3)) or v161.HammerofLight:IsLearned()) and ( not v161.Redoubt:IsAvailable() or (v147:BuffStack(v161.RedoubtBuff)>=(2 + 0)) or  not v161.BastionofLight:IsAvailable()) and (v161.HammerofLight:Cost()>(771 -(326 + 445)))) then local v233=v205();if v233 then return v233;end end if (v161.HammerofLight:IsReady() and v148:IsInRange(52 -40 ) and ((v147:BuffRemains(v161.LightsDeliveranceBuff)<(4 -2)) or (v147:BuffRemains(v161.ShaketheHeavensBuff)<(2 -1)) or v147:BuffDown(v161.ShaketheHeavensBuff) or (v161.EyeofTyr:CooldownRemains()<(712.5 -(530 + 181))) or (v173<(883 -(614 + 267))))) then if v156(v161.EyeofTyr) then return v0[498 -(19 + 13) ];end end local v223=1625 -626 ;if v161.RighteousProtector:IsAvailable() then local v234=v160(v161.ShieldoftheRighteous:TimeSinceLastCast(),v161.WordofGlory:TimeSinceLastCast());v223=v159(0 -0 ,(2 -1) -v160(v161.ShieldoftheRighteous:TimeSinceLastCast(),v161.WordofGlory:TimeSinceLastCast()) );end if (v161.ShieldoftheRighteous:IsReady() and v148:IsInMeleeRange(2 + 3 ) and ( not v161.RighteousProtector:IsAvailable() or (v223==(0 -0))) and  not v161.HammerofLight:IsLearned()) then if v156(v161.ShieldoftheRighteous,true) then return v0[1005 -520 ];end end if (v161.SacredWeapon:IsCastable() and (v147:BuffDown(v161.SacredWeaponBuff) or ((v147:BuffRemains(v161.SacredWeaponBuff)<(1818 -(1293 + 519))) and v147:BuffDown(v161.AvengingWrathBuff) and (v161.AvengingWrath:CooldownRemains()<=(61 -31))))) then if v156(v161.SacredWeapon) then return v0[1297 -800 ];end end if (v161.Judgment:IsReady() and v148:IsSpellInRange(v161.Judgment) and (v169>(5 -2)) and (v147:BuffStack(v161.BulwarkofRighteousFuryBuff)>=(12 -9)) and (v147:HolyPower()<(6 -3))) then if v156(v161.Judgment) then return v0[268 + 238 ];end end if (v147:BuffUp(v161.BlessedAssuranceBuff) and (v169<(1 + 2))) then if (v161.BlessedHammer:IsCastable() and v148:IsInMeleeRange(11 -6 )) then if v156(v161.BlessedHammer) then return v0[119 + 394 ];end end if (v161.HammeroftheRighteous:IsCastable() and v148:IsInMeleeRange(2 + 3 )) then if v156(v161.HammeroftheRighteous) then return v0[324 + 194 ];end end end if (v161.CrusaderStrike:IsCastable() and v148:IsInMeleeRange(1101 -(709 + 387) ) and v147:BuffUp(v161.BlessedAssuranceBuff) and (v169<(1860 -(673 + 1185)))) then if v156(v161.CrusaderStrike) then return v0[1522 -997 ];end end if (v161.AvengersShield:IsCastable() and v148:IsSpellInRange(v161.AvengersShield) and v147:BuffDown(v161.BulwarkofRighteousFuryBuff) and v161.BulwarkofRighteousFury:IsAvailable() and (v169>=(9 -6))) then if v156(v161.AvengersShield) then return v0[880 -345 ];end end if (v161.HammerofWrath:IsReady() and v148:IsSpellInRange(v161.HammerofWrath)) then if v156(v161.HammerofWrath) then return v0[387 + 154 ];end end if (v161.Judgment:IsReady() and v148:IsSpellInRange(v161.Judgment) and ((v161.Judgment:Charges()>=(2 + 0)) or (v161.Judgment:FullRechargeTime()<=(v147:GCD() + (0.25 -0))))) then if v156(v161.Judgment) then return v0[136 + 416 ];end end if (v161.HolyBulwark:IsCastable() and (v161.HolyBulwark:Charges()==(3 -1))) then if v156(v161.HolyBulwark) then return v0[1095 -537 ];end end if (v161.DivineToll:IsReady() and v148:IsInRange(1910 -(446 + 1434) ) and DivineTollSetting) then if v156(v161.DivineToll) then return v0[1846 -(1040 + 243) ];end end if (v161.Judgment:IsReady() and v148:IsSpellInRange(v161.Judgment)) then if v156(v161.Judgment) then return v0[1698 -1129 ];end end if (v161.AvengersShield:IsCastable() and v148:IsSpellInRange(v161.AvengersShield) and  not v161.LightsGuidance:IsAvailable()) then if v156(v161.AvengersShield) then return v0[2424 -(559 + 1288) ];end end if (v161.Consecration:IsCastable() and v193() and v148:IsInMeleeRange(1936 -(609 + 1322) ) and (v147:BuffDown(v161.ConsecrationBuff))) then if v156(v161.Consecration) then return v0[1038 -(13 + 441) ];end end if (v161.EyeofTyr:IsCastable() and EyeOfTyrSetting and v148:IsInMeleeRange(29 -21 ) and ((v161.InmostLight:IsAvailable() and (v169<=(2 -1))) or (v169>=(14 -11))) and  not v161.LightsDeliverance:IsAvailable()) then if v156(v161.EyeofTyr) then return v0[23 + 570 ];end end if v161.HolyBulwark:IsCastable() then if v156(v161.HolyBulwark) then return v0[2168 -1571 ];end end if (v161.BlessedHammer:IsCastable() and v148:IsInMeleeRange(2 + 3 )) then if v156(v161.BlessedHammer) then return v0[264 + 338 ];end end if (v161.HammeroftheRighteous:IsCastable() and v148:IsInMeleeRange(14 -9 )) then if v156(v161.HammeroftheRighteous) then return v0[333 + 274 ];end end if (v161.CrusaderStrike:IsCastable() and v148:IsInMeleeRange(8 -3 )) then if v156(v161.CrusaderStrike) then return v0[405 + 207 ];end end if (v161.AvengersShield:IsCastable() and v148:IsSpellInRange(v161.AvengersShield)) then if v156(v161.AvengersShield) then return v0[344 + 274 ];end end if (v161.EyeofTyr:IsCastable() and EyeOfTyrSetting and v148:IsInMeleeRange(6 + 2 ) and  not v161.LightsDeliverance:IsAvailable()) then if v156(v161.EyeofTyr) then return v0[525 + 100 ];end end if (v161.ArcaneTorrent:IsCastable() and v148:IsInMeleeRange(8 + 0 ) and RacialsSetting and (v147:HolyPower()<(438 -(153 + 280)))) then if v156(v161.ArcaneTorrent) then return v0[1821 -1190 ];end end if (v161.Consecration:IsCastable() and v193() and v148:IsInMeleeRange(5 + 0 ) and (v147:BuffDown(v161.SanctificationEmpowerBuff))) then if v156(v161.Consecration) then return v0[252 + 386 ];end end end local function v207() if (v183() and v147:AffectingCombat() and (((v181:ID()==v162.ManicGrieftorch:ID()) and Trinket1Setting) or ((v182:ID()==v162.ManicGrieftorch:ID()) and Trinket2Setting)) and v190(v188.ProtTTD.TrinketsTTD) and v148:IsInRange(21 + 19 )) then if v156(v162.ManicGrieftorch) then return v0[590 + 60 ];end end if (v162.ElementiumPocketAnvil:IsEquippedAndReady() and v147:AffectingCombat() and (((v181:ID()==v162.ElementiumPocketAnvil:ID()) and Trinket1Setting) or ((v182:ID()==v162.ElementiumPocketAnvil:ID()) and Trinket2Setting)) and v148:IsInRange(4 + 1 )) then if v156(v162.ElementiumPocketAnvil) then return v0[1007 -345 ];end end if (v147:BuffUp(v161.AvengingWrathBuff) or  not v161.AvengingWrath:IsAvailable() or v161.Sentinel:IsAvailable() or (v173<=(25 + 15))) then local v235,v236,v237=v147:GetUseableItems(v163);if v235 then if ((((v236==(680 -(89 + 578))) and Trinket1Setting) or ((v236==(11 + 3)) and Trinket2Setting)) and v148:IsInRange(v237) and v188.Commons.Enabled.Trinkets and v147:BuffDown(v161.ConcoctionKissofDeathBuff)) then if v156(v235,false) then return v0[1404 -728 ]   .. v236   .. v235:Name() ;end end end end end local function v208() if v147:IsChanneling(v162.ManicGrieftorch.ItemUseSpell) then return v0[1730 -(572 + 477) ];end if (((v181:ID()==v162.ConcoctionKissofDeath:ID()) or (v182:ID()==v162.ConcoctionKissofDeath:ID())) and v147:BuffUp(v161.ConcoctionKissofDeathBuff) and (v147:BuffRemains(v161.ConcoctionKissofDeathBuff)<(1 + 0))) then if v156(v162.ConcoctionKissofDeath,true) then return v0[416 + 277 ];end end v175=v186.UnitsinRange(v161.FlashofLight);UnitForFreezingBinds=v197(v175);SmallCDToggle=v153.ToggleIconFrame:GetToggle(1 + 0 );TabToggle=v153.ToggleIconFrame:GetToggle(88 -(84 + 2) );InterruptToggle=v153.ToggleIconFrame:GetToggle(4 -1 );DispelToggle=v153.ToggleIconFrame:GetToggle(3 + 1 );v167=v147:GetEnemiesInRange(850 -(497 + 345) );v168=v147:GetEnemiesInRange(1 + 29 );v175=v186.UnitsinRange(v161.FlashofLight);if (v154()) then v169= #v167;v170= #v168;else v169=1 + 0 ;v170=1334 -(605 + 728) ;end RacialsSetting=v191(v188.Protection.RacialsSetting) and v190(v188.ProtTTD.RacialsTTD) ;Trinket1Setting=v191(v188.Protection.Trinket1Setting,v188.Protection.TrinketHP);Trinket2Setting=v191(v188.Protection.Trinket2Setting,v188.Protection.TrinketHP);PotionSetting=v191(v188.Protection.PotionSetting) and  not v186.ISSolo() ;DivineTollSetting=v191(v188.Protection.DivineTollSetting) and v190(v188.ProtTTD.DivineTollTTD) and v148:IsInRange(22 + 8 ) ;AvengingWrathSetting=v191(v188.Protection.AvengingWrathSetting) and v190(v188.ProtTTD.AvengingWrathTTD) ;EyeOfTyrSetting=v191(v188.Protection.EyeOfTyrSetting) and v190(33 -18 ) ;if (v186.TargetIsValid() or v147:AffectingCombat()) then v165=v147:ActiveMitigationNeeded();v166=v147:IsTankingAoE(1 + 7 ) or v147:IsTanking(v148) ;v173=v144.BossFightRemains();v172=true;v174=v173;if (v174==(41079 -29968)) then v172=false;v174=v144.FightRemains(v167,false);end end if (v161.DevotionAura:IsCastable() and v147:BuffDown(v161.DevotionAura,true) and (v199())) then if v156(v161.DevotionAura) then return v0[673 + 73 ];end end if v161.RiteofSanctification:IsCastable() then if v153.CastLeft(v161.RiteofSanctification) then return v0[2080 -1329 ];end end if v161.RiteofAdjuration:IsCastable() then if v153.CastLeft(v161.RiteofAdjuration) then return v0[571 + 185 ];end end if v186.TargetIsValid() then if ( not v147:AffectingCombat() and v188.Protection.AttackOutOfCombat) then v179=v201();if v179 then return v179;end end if (v161.CleanseToxins:IsReady() and v188.Protection.UseCleanse and DispelToggle) then v179=v186.DispelCycle(v161.CleanseToxins,v0[1256 -(457 + 32) ]);if v179 then return v179;end v179=v186.DispelCycle(v161.CleanseToxins,v0[327 + 443 ]);if v179 then return v179;end v179=v186.AfflictedLogic(v161.CleanseToxins);if v179 then return v179;end if v179 then return v179;end end if (v161.BlessingofFreedom:IsReady() and v188.Protection.UseFreedom) then if UnitForFreezingBinds then if UnitForFreezingBinds:Cast(v161.BlessingofFreedom) then return v0[2181 -(832 + 570) ];end end if (v147:DebuffElapsed(v161.EntangledDebuff)>(2 + 0)) then if v147:Cast(v161.BlessingofFreedom) then return v0[205 + 579 ];end end v179=v186.DispelCycle(v161.BlessingofFreedom,v0[2784 -1997 ],nil,v175);if v179 then return v179;end v179=v186.DispelCycle(v161.BlessingofFreedom,v0[381 + 409 ],nil,v175);if v179 then return v179;end v179=v186.DispelCycle(v161.BlessingofFreedom,v0[1589 -(588 + 208) ],nil,v175);if v179 then return v179;end end if InterruptToggle then v179=v186.InterruptCycle(v161.Rebuke,13 -8 ,true,nil,false);if v179 then return v179;end v179= not v147:IsMoving() and v186.InterruptCycle(v161.HammerofJustice,1810 -(884 + 916) ,false,nil,true) ;if v179 then return v179;end v179= not v147:IsMoving() and v186.InterruptCycle(v161.BlindingLight,20 -10 ,false,nil,true,true) ;if v179 then return v179;end end if (v148:AffectingCombat() or v188.Protection.AttackOutOfCombat) then if v166 then v179=v202();if v179 then return v179;end end if (v147:AffectingCombat() and v147:IsInParty() and  not v147:IsInRaid()) then v179=v203();if v179 then return v179;end end if (v161.Consecration:IsCastable() and v193() and v148:IsInMeleeRange(3 + 2 ) and ((v144.CombatTime()<(658 -(232 + 421))) or v188.ProtectionDefensives.MostDefensive) and (v147:BuffDown(v161.ConsecrationBuff) or (v147:BuffStack(v161.DivineGuidanceBuff)>=(1894 -(1569 + 320))))) then if v156(v161.Consecration) then return v0[201 + 618 ];end end if (v161.BlessedHammer:IsCastable() and v148:IsInMeleeRange(2 + 8 ) and (v144.CombatTime()<(16 -11)) and (v161.BlessedHammer:TimeSinceLastCast()>(610 -(316 + 289))) and v188.ProtectionDefensives.MostDefensive) then if v156(v161.BlessedHammer) then return v0[2169 -1340 ];end end if (v161.ShieldoftheRighteous:IsReady() and v148:IsInMeleeRange(1 + 9 ) and v188.ProtectionDefensives.MostDefensive and v147:BuffDown(v161.ShieldoftheRighteousBuff)) then if v156(v161.ShieldoftheRighteous,true) then return v0[2291 -(666 + 787) ];end end v179=v204();if v179 then return v179;end if (v188.Commons.Enabled.Trinkets or v188.Commons.Enabled.Items) then v179=v207();if v179 then return v179;end end v179=v206();if v179 then return v179;end end v179=(v169>(425 -(360 + 65))) and  not v148:IsInRange(8 + 0 ) and v189() ;if v179 then return v179;end end end local function v209() v188.Protection.Display();v153.ResetToggle();v153.ToggleIconFrame:AddButtonCustom("S",255 -(79 + 175) ,v0[1343 -491 ],v0[666 + 187 ]);v153.ToggleIconFrame:AddButtonCustom("T",5 -3 ,v0[1649 -792 ],v0[1757 -(503 + 396) ]);v153.ToggleIconFrame:AddButtonCustom("I",184 -(92 + 89) ,v0[1671 -809 ],v0[443 + 420 ]);v153.ToggleIconFrame:AddButtonCustom("D",3 + 1 ,v0[3395 -2528 ],v0[119 + 749 ]);v153.Print(v0[1983 -1113 ]);end v153.SetAPL(58 + 8 ,v208,v209);end;return v132[v0[417 + 455 ]](...);
+local v0, v1 = ...;
+local v2 = HeroDBC.DBC;
+local v3 = HeroLib;
+local v4 = HeroCache;
+local v5 = v3.Unit;
+local v6 = v5.Player;
+local v7 = v5.Target;
+local v8 = v5.MouseOver;
+local v9 = v5.Pet;
+local v10 = v3.Spell;
+local v11 = v3.Item;
+local v12 = HeroRotation();
+local v13 = v12.AoEON;
+local v14 = v12.CDsON;
+local v15 = v12.Cast;
+local v16 = v12.Commons().Everyone.num;
+local v17 = v12.Commons().Everyone.bool;
+local v18 = math.max;
+local v19 = math.min;
+local v20 = v10.Paladin.Protection;
+local v21 = v11.Paladin.Protection;
+local v22 = {v21.ManicGrieftorch:ID()};
+local v23 = {{v20.HammerofJustice,"Cast Hammer of Justice (Interrupt)",function()
+	return true;
+end}};
+local v24;
+local v25;
+local v26, v27;
+local v28, v29;
+local v30 = 936 - (857 + 74);
+local v31;
+local v32 = 11679 - (367 + 201);
+local v33 = 12038 - (214 + 713);
+local v34, v35, v36, v37;
+local v38;
+local v39 = v6:GetEquipment();
+local v40 = (v39[4 + 9] and v11(v39[3 + 10])) or v11(877 - (282 + 595));
+local v41 = (v39[1651 - (1523 + 114)] and v11(v39[13 + 1])) or v11(0 - 0);
+v3:RegisterForEvent(function()
+	v39 = v6:GetEquipment();
+	v40 = (v39[1078 - (68 + 997)] and v11(v39[1283 - (226 + 1044)])) or v11(0 - 0);
+	v41 = (v39[131 - (32 + 85)] and v11(v39[14 + 0])) or v11(0 + 0);
+end, "PLAYER_EQUIPMENT_CHANGED");
+local function v42()
+	return v21.ManicGrieftorch:IsEquipped() and (v21.ManicGrieftorch:CooldownUp() or (v21.ManicGrieftorch:CooldownRemains() <= v6:GCDRemains()));
+end
+local function v43()
+	return v21.AlgetharPuzzleBox:IsEquipped() and (v21.AlgetharPuzzleBox:CooldownUp() or (v21.AlgetharPuzzleBox:CooldownRemains() <= v6:GCDRemains()));
+end
+v3:RegisterForEvent(function()
+	v32 = 12068 - (892 + 65);
+	v33 = 26505 - 15394;
+end, "PLAYER_REGEN_ENABLED");
+local v44 = v12.GUISettingsGet();
+local v45 = v12.Commons().Everyone;
+local v46 = v12.Commons().Paladin;
+local v47 = {General=v44.General,Commons=v44.APL.Paladin.Commons,ProtectionDefensives=v44.APL.Paladin.ProtectionDefensives,Protection=v44.APL.Paladin.Protection,ProtTTD=v44.APL.Paladin.ProtTTD};
+local function v48()
+	if (v44.General.AutoTab and v6:AffectingCombat()) then
+		v12.TopPanelAlternative:ChangeIcon(1 - 0, 4 - 1);
+		return "Auto tab to target";
+	end
+end
+local function v49(v69)
+	return v31 or v45.ISSolo() or (v69 == (350 - (87 + 263))) or v45.Buggedmobs[v7:NPCID()] or ((v33 >= v69) and (v33 < (7957 - (67 + 113))));
+end
+local function v50(v70, v71)
+	return ((v70 ~= "Not Used") and v49(v47.ProtTTD.TrinketsTTD) and (((v70 == "With Cooldowns") and v12.CDsON()) or ((v70 == "With Small or Cooldowns") and (SmallCDToggle or v12.CDsON())) or ((v70 == "With Small CDs") and SmallCDToggle) or ((v70 == "On Mobcount") and (v28 >= v47.Protection.Mobcount)) or ((v70 == "On Mobcount or Cooldowns") and ((v28 >= v47.Protection.Mobcount) or v14())) or (v70 == "Always") or ((v70 == "On Bosses") and v31) or ((v70 == "Mobcount or Boss") and (v31 or (v28 >= v47.Protection.Mobcount))))) or ((v70 == "On HealthPercent") and (v71 ~= nil) and (v6:HealthPercentageWeighted() < v71));
+end
+local function v51()
+	return v6:BuffUp(v20.ArdentDefender) or v6:BuffUp(v20.GuardianofAncientKings) or v6:BuffUp(v20.DivineShield);
+end
+local function v52()
+	return v47.Protection.Consecration or not v6:IsMoving();
+end
+local v53 = {(554776 - 328813),(795620 - 595438),(528651 - 332297),(164128 + 61356),(556053 - 359677),(342911 - 82170),(967968 - 541308),(71714 + 340791),(253768 + 2046),(802747 - 547313),(1016114 - 751964),(1314524 - 902824),(728932 - 316974),(264986 - (44 + 386)),(64089 + 137644),(268679 - (201 + 571)),(1084743 - 824192),(939713 - 682306),(427518 - (814 + 45))};
+local function v54(v72)
+	local v73 = nil;
+	for v82, v83 in pairs(v72) do
+		if (v6 ~= v83) then
+			if ((v83:Role() ~= "TANK") and ((v47.ProtectionDefensives.BoPDebuff and (v45.unitHasDebuffFromList(v45.DebuffList['Bleed'], v83) or v45.unitHasDebuffFromList(v53, v83))) or (v83:HealthPercentageWeighted() <= v47.ProtectionDefensives.BoPHP)) and v83:DebuffDown(v20.ForbearanceDebuff)) then
+				v73 = v83;
+			end
+		end
+	end
+	return v73;
+end
+local function v55(v74)
+	local v75 = v47.ProtectionDefensives.IntercessionUnit;
+	if (v75 == "All") then
+		for v96, v97 in pairs(v74) do
+			if v97:IsDeadOrGhost() then
+				return v97;
+			end
+		end
+		return nil;
+	end
+	local v76 = {None={},Tank={"TANK"},Healer={"HEALER"},["Tank and Healer"]={"TANK","HEALER"},DD={"DAMAGER"}};
+	local v77 = v76[v75] or {};
+	for v84, v85 in pairs(v74) do
+		local v86 = v85:Role();
+		local v87 = v85:IsDeadOrGhost();
+		for v88, v89 in ipairs(v77) do
+			if ((v86 == v89) and v87) then
+				return v85;
+			end
+		end
+	end
+	return nil;
+end
+local function v56(v78)
+	local v79 = UnitGUID("targettarget");
+	if (v78 ~= nil) then
+		for v98, v99 in pairs(v78) do
+			if ((v99:GUID() == v79) and ((v7:CastSpellID() == (321868 - (1020 + 60))) or (v7:CastSpellID() == (325153 - (630 + 793))))) then
+				if (v99 ~= nil) then
+					return v99;
+				end
+			end
+		end
+	end
+end
+local function v57(v80)
+	return v80:DebuffRemains(v20.JudgmentDebuff);
+end
+local function v58()
+	return v6:BuffDown(v20.DevotionAura) and v6:BuffDown(v20.ConcentrationAura) and v6:BuffDown(v20.CrusaderAura);
+end
+local function v59()
+	if not v20.OfDuskandDawn:IsAvailable() then
+		return -(3 - 2);
+	end
+	return ((28 - 22) - v46.HPGCount) - (v6:BuffStack(v20.BlessingofDawnBuff) * (2 + 1));
+end
+local function v60()
+	if (v20.DevotionAura:IsCastable() and (v58())) then
+		if v15(v20.DevotionAura) then
+			return "devotion_aura precombat 6";
+		end
+	end
+	if (v20.LightsJudgment:IsCastable() and v7:IsInMeleeRange(17 - 12) and RacialsSetting) then
+		if v15(v20.LightsJudgment) then
+			return "lights_judgment precombat 8";
+		end
+	end
+	if (v20.ArcaneTorrent:IsCastable() and v7:IsInMeleeRange(1755 - (760 + 987)) and RacialsSetting) then
+		if v15(v20.ArcaneTorrent) then
+			return "arcane_torrent precombat 10";
+		end
+	end
+	if (v20.Consecration:IsCastable() and v52() and v7:IsInMeleeRange(1918 - (1789 + 124))) then
+		if v15(v20.Consecration) then
+			return "consecration precombat 12";
+		end
+	end
+	if (v20.AvengersShield:IsCastable() and v7:IsSpellInRange(v20.AvengersShield) and v7:IsSpellInRange(v20.AvengersShield)) then
+		if v15(v20.AvengersShield) then
+			return "avengers_shield precombat 10";
+		end
+	end
+	if (v20.Judgment:IsReady() and v7:IsSpellInRange(v20.Judgment) and v7:IsSpellInRange(v20.Judgment)) then
+		if v15(v20.Judgment) then
+			return "judgment precombat 12";
+		end
+	end
+end
+local function v61()
+	if ((v6:HealthPercentage() <= v47.ProtectionDefensives.LoHHP) and v20.LayonHands:IsCastable() and v6:DebuffDown(v20.ForbearanceDebuff)) then
+		if v15(v20.LayonHands, nil) then
+			return "lay_on_hands defensive 2";
+		end
+	end
+	if (v20.GuardianofAncientKings:IsCastable() and (((v6:HealthPercentageWeighted() <= v47.ProtectionDefensives.GoAKHP) and v6:BuffDown(v20.ArdentDefenderBuff)) or (v47.ProtectionDefensives.TankBusters and v6:IncomingSpell(v45.TankBustersList2))) and not v51()) then
+		if v15(v20.GuardianofAncientKingsCast, nil) then
+			return "guardian_of_ancient_kings defensive 4";
+		end
+	end
+	if (v20.ArdentDefender:IsCastable() and ((v6:HealthPercentageWeighted() <= v47.ProtectionDefensives.ArdentDefenderHP) or (v47.ProtectionDefensives.TankBusters and v6:IncomingSpell(v45.TankBustersList2))) and not v51()) then
+		if v15(v20.ArdentDefender, nil) then
+			return "ardent_defender defensive 6";
+		end
+	end
+	if (v20.WordofGlory:IsReady() and v6:BuffUp(v20.ShiningLightFreeBuff) and v20.FaithintheLight:IsAvailable() and not v6:BuffUp(v20.FaithintheLightBuff) and v47.ProtectionDefensives.WordofGloryFaithintheLight) then
+		if v15(v20.WordofGlory) then
+			return "word_of_glory FaithintheLightBuff";
+		end
+	end
+	if (v20.WordofGlory:IsReady() and ((v6:HealthPercentageWeighted() <= v47.ProtectionDefensives.WordofGloryPlayerHP) or ((v6:HealthPercentageWeighted() <= v47.ProtectionDefensives.FreeWordofGloryPlayerHP) and v6:BuffUp(v20.ShiningLightFreeBuff))) and not v6:HealingAbsorbed()) then
+		if v15(v20.WordofGlory) then
+			return "word_of_glory defensive 8";
+		end
+	end
+	if ((v6:HealthPercentageWeighted() <= v47.ProtectionDefensives.BubbleHP) and v20.DivineShield:IsCastable() and v6:DebuffDown(v20.ForbearanceDebuff)) then
+		if v15(v20.DivineShield, nil) then
+			return "Divine Shield defensive";
+		end
+	end
+end
+local function v62()
+	v34 = v45.UnitsinRange(v20.FlashofLight);
+	v35 = v45.GetLowestHealthUnit(v34);
+	v36 = v35:HealthPercentageWeighted();
+	v37 = v55(v34);
+	BoPTarget = v54(v34);
+	if not v35:DebuffUp(v20.ForbearanceDebuff) then
+		if (v20.LayonHands:IsReady() and (v36 <= v47.ProtectionDefensives.LoHPartyHP)) then
+			v35:Cast(v20.LayonHands);
+			return "Lay on Hands Party";
+		end
+	end
+	if v20.BlessingofProtection:IsReady() then
+		if ((BoPTarget ~= nil) and (BoPTarget ~= v6)) then
+			BoPTarget:Cast(v20.BlessingofProtection);
+			return "Blessing of Protection Party";
+		end
+	end
+	if v20.Intercession:IsReady() then
+		if (v8:UnitIsFriend() and v8:UnitIsPlayer() and v8:Exists() and v8:IsDeadOrGhost()) then
+			v12.CastTarget(v20.Intercession, v12.TName().MOUSEOVER);
+			return "Intercession on Mouseover";
+		end
+		if (v47.ProtectionDefensives.IntercessionTarget and v7:UnitIsFriend() and v7:Exists() and v7:IsDeadOrGhost()) then
+			v12.Cast(v20.Intercession);
+			return "Intercession on Target";
+		end
+	end
+	if (v20.BlessingofSacrifice:IsReady() and (v36 <= v47.ProtectionDefensives.BlessingOfSacrificeHP) and (v6:HealthPercentage() > (856 - (745 + 21))) and v6:BuffDown(v20.BlessingofProtection)) then
+		v35:Cast(v20.BlessingofSacrifice);
+		return "BlessingofSacrifice Party";
+	end
+	if (v20.WordofGlory:IsReady() and ((v36 <= v47.ProtectionDefensives.WordofGloryPartyHP) or ((v36 <= v47.ProtectionDefensives.FreeWordofGloryPartyHP) and v6:BuffUp(v20.ShiningLightFreeBuff)))) then
+		v35:Cast(v20.WordofGlory);
+		return "Word of Glory Party";
+	end
+end
+local function v63()
+	if (v20.LightsJudgment:IsCastable() and RacialsSetting and v7:IsInRange(2 + 3) and v7:IsSpellInRange(v20.LightsJudgment)) then
+		if v15(v20.LightsJudgment, false, nil, not v7:IsSpellInRange(v20.LightsJudgment)) then
+			return "lights_judgment cooldowns 2";
+		end
+	end
+	if (v20.AvengingWrath:IsCastable() and AvengingWrathSetting and v7:IsInRange(13 - 8)) then
+		if v15(v20.AvengingWrath, false) then
+			return "avenging_wrath cooldowns 4";
+		end
+	end
+	if (v20.Sentinel:IsCastable() and AvengingWrathSetting and v7:IsInRange(19 - 14)) then
+		if v15(v20.Sentinel, false) then
+			return "sentinel cooldowns 6";
+		end
+	end
+	if (v47.Commons.Enabled.Potions and PotionSetting and (v6:BuffUp(v20.AvengingWrathBuff))) then
+		local v90 = v45.PotionSelected();
+		if (v90 and v90:IsReady()) then
+			v12.CastMacro(1 + 2, nil, nil, v90);
+			return "Cast Potion";
+		end
+	end
+	if (v20.MomentofGlory:IsCastable() and ((v6:BuffUp(v20.AvengingWrathBuff) and (v6:BuffRemains(v20.AvengingWrathBuff) < (12 + 3))) or (((v3.CombatTime() > (1065 - (87 + 968))) or (v20.AvengingWrath:CooldownRemains() > (66 - 51))) and v20.AvengersShield:CooldownDown() and v20.Judgment:CooldownDown() and v20.HammerofWrath:CooldownDown()))) then
+		if v15(v20.MomentofGlory, false) then
+			return "moment_of_glory cooldowns 10";
+		end
+	end
+	if (v20.DivineToll:IsCastable() and DivineTollSetting and (v28 >= (3 + 0))) then
+		if v15(v20.DivineToll) then
+			return "divine_toll cooldowns 12";
+		end
+	end
+	if (v20.BastionofLight:IsCastable() and (v6:BuffUp(v20.AvengingWrathBuff) or (v20.AvengingWrath:CooldownRemains() <= (67 - 37)))) then
+		if v15(v20.BastionofLight, false) then
+			return "bastion_of_light cooldowns 14";
+		end
+	end
+	if (v20.Fireblood:IsCastable() and v7:IsInMeleeRange(1418 - (447 + 966)) and RacialsSetting and (v6:BuffRemains(v20.AvengingWrathBuff) > (21 - 13))) then
+		if v15(v20.Fireblood) then
+			return "fireblood cooldowns 16";
+		end
+	end
+end
+local function v64()
+	if (v20.HammerofLight:IsReady() and v7:IsInRange(1829 - (1703 + 114)) and (v6:BuffUp(v20.BlessingofDawnBuff) or not v20.OfDuskandDawn:IsAvailable() or (v28 >= (706 - (376 + 325))))) then
+		if v15(v20.EyeofTyr) then
+			return "hammer_of_light hammer_of_light 2";
+		end
+	end
+	if (v20.EyeofTyr:IsCastable() and EyeOfTyrSetting and v7:IsInMeleeRange(12 - 4) and ((v59() == (15 - 10)) or not v20.OfDuskandDawn:IsAvailable())) then
+		if v15(v20.EyeofTyr) then
+			return "eye_of_tyr hammer_of_light 4";
+		end
+	end
+	if (v20.ShieldoftheRighteous:IsReady() and v7:IsInMeleeRange(2 + 3) and (v59() == (8 - 4))) then
+		if v15(v20.ShieldoftheRighteous, true) then
+			return "shield_of_the_righteous standard 6";
+		end
+	end
+	if (v20.EyeofTyr:IsCastable() and EyeOfTyrSetting and v7:IsInMeleeRange(22 - (9 + 5)) and ((v59() == (377 - (85 + 291))) or v6:BuffUp(v20.BlessingofDawnBuff))) then
+		if v15(v20.EyeofTyr) then
+			return "eye_of_tyr hammer_of_light 8";
+		end
+	end
+	if (v20.HammerofWrath:IsReady() and v7:IsSpellInRange(v20.HammerofWrath)) then
+		if v15(v20.HammerofWrath) then
+			return "hammer_of_wrath hammer_of_light 10";
+		end
+	end
+	if (v20.Judgment:IsReady() and v7:IsSpellInRange(v20.Judgment)) then
+		if v15(v20.Judgment) then
+			return "judgment hammer_of_light 12";
+		end
+	end
+	if (v20.BlessedHammer:IsCastable() and v7:IsInMeleeRange(1270 - (243 + 1022))) then
+		if v15(v20.BlessedHammer) then
+			return "blessed_hammer hammer_of_light 14";
+		end
+	end
+	if (v20.HammeroftheRighteous:IsCastable() and v7:IsInMeleeRange(19 - 14)) then
+		if v15(v20.HammeroftheRighteous) then
+			return "hammer_of_the_righteous hammer_of_light 16";
+		end
+	end
+	if (v20.CrusaderStrike:IsCastable() and v7:IsInMeleeRange(5 + 0)) then
+		if v15(v20.CrusaderStrike) then
+			return "crusader_strike hammer_of_light 18";
+		end
+	end
+	if (v20.DivineToll:IsReady() and v7:IsInRange(1210 - (1123 + 57)) and DivineTollSetting) then
+		if v15(v20.DivineToll) then
+			return "divine_toll hammer_of_light 20";
+		end
+	end
+end
+local function v65()
+	if (v20.LightsGuidance:IsAvailable() and ((v20.EyeofTyr:CooldownRemains() < (2 + 0)) or v20.HammerofLight:IsLearned()) and (not v20.Redoubt:IsAvailable() or (v6:BuffStack(v20.RedoubtBuff) >= (256 - (163 + 91))) or not v20.BastionofLight:IsAvailable()) and (v20.HammerofLight:Cost() > (1930 - (1869 + 61)))) then
+		local v91 = v64();
+		if v91 then
+			return v91;
+		end
+	end
+	if (v20.HammerofLight:IsReady() and v7:IsInRange(4 + 8) and ((v6:BuffRemains(v20.LightsDeliveranceBuff) < (6 - 4)) or (v6:BuffRemains(v20.ShaketheHeavensBuff) < (1 - 0)) or v6:BuffDown(v20.ShaketheHeavensBuff) or (v20.EyeofTyr:CooldownRemains() < (1.5 + 0)) or (v32 < (2 - 0)))) then
+		if v15(v20.EyeofTyr) then
+			return "hammer_of_light standard 2";
+		end
+	end
+	local v81 = 939 + 60;
+	if v20.RighteousProtector:IsAvailable() then
+		local v92 = v19(v20.ShieldoftheRighteous:TimeSinceLastCast(), v20.WordofGlory:TimeSinceLastCast());
+		v81 = v18(1474 - (1329 + 145), (972 - (140 + 831)) - v19(v20.ShieldoftheRighteous:TimeSinceLastCast(), v20.WordofGlory:TimeSinceLastCast()));
+	end
+	if (v20.ShieldoftheRighteous:IsReady() and v7:IsInMeleeRange(1855 - (1409 + 441)) and (not v20.RighteousProtector:IsAvailable() or (v81 == (718 - (15 + 703)))) and not v20.HammerofLight:IsLearned()) then
+		if v15(v20.ShieldoftheRighteous, true) then
+			return "shield_of_the_righteous standard 4";
+		end
+	end
+	if (v20.SacredWeapon:IsCastable() and (v6:BuffDown(v20.SacredWeaponBuff) or ((v6:BuffRemains(v20.SacredWeaponBuff) < (3 + 3)) and v6:BuffDown(v20.AvengingWrathBuff) and (v20.AvengingWrath:CooldownRemains() <= (468 - (262 + 176)))))) then
+		if v15(v20.SacredWeapon) then
+			return "holy_armaments standard 6";
+		end
+	end
+	if (v20.Judgment:IsReady() and v7:IsSpellInRange(v20.Judgment) and (v28 > (1724 - (345 + 1376))) and (v6:BuffStack(v20.BulwarkofRighteousFuryBuff) >= (691 - (198 + 490))) and (v6:HolyPower() < (13 - 10))) then
+		if v15(v20.Judgment) then
+			return "judgment standard 8";
+		end
+	end
+	if (v6:BuffUp(v20.BlessedAssuranceBuff) and (v28 < (6 - 3))) then
+		if (v20.BlessedHammer:IsCastable() and v7:IsInMeleeRange(1211 - (696 + 510))) then
+			if v15(v20.BlessedHammer) then
+				return "blessed_hammer standard 10";
+			end
+		end
+		if (v20.HammeroftheRighteous:IsCastable() and v7:IsInMeleeRange(10 - 5)) then
+			if v15(v20.HammeroftheRighteous) then
+				return "hammer_of_the_righteous standard 12";
+			end
+		end
+	end
+	if (v20.CrusaderStrike:IsCastable() and v7:IsInMeleeRange(1267 - (1091 + 171)) and v6:BuffUp(v20.BlessedAssuranceBuff) and (v28 < (1 + 1))) then
+		if v15(v20.CrusaderStrike) then
+			return "crusader_strike standard 14";
+		end
+	end
+	if (v20.AvengersShield:IsCastable() and v7:IsSpellInRange(v20.AvengersShield) and v6:BuffDown(v20.BulwarkofRighteousFuryBuff) and v20.BulwarkofRighteousFury:IsAvailable() and (v28 >= (9 - 6))) then
+		if v15(v20.AvengersShield) then
+			return "avengers_shield standard 16";
+		end
+	end
+	if (v20.HammerofWrath:IsReady() and v7:IsSpellInRange(v20.HammerofWrath)) then
+		if v15(v20.HammerofWrath) then
+			return "hammer_of_wrath standard 18";
+		end
+	end
+	if (v20.Judgment:IsReady() and v7:IsSpellInRange(v20.Judgment) and ((v20.Judgment:Charges() >= (6 - 4)) or (v20.Judgment:FullRechargeTime() <= (v6:GCD() + (374.25 - (123 + 251)))))) then
+		if v15(v20.Judgment) then
+			return "judgment standard 20";
+		end
+	end
+	if (v20.HolyBulwark:IsCastable() and (v20.HolyBulwark:Charges() == (9 - 7))) then
+		if v15(v20.HolyBulwark) then
+			return "holy_armaments standard 22";
+		end
+	end
+	if (v20.DivineToll:IsReady() and v7:IsInRange(728 - (208 + 490)) and DivineTollSetting) then
+		if v15(v20.DivineToll) then
+			return "divine_toll standard 24";
+		end
+	end
+	if (v20.Judgment:IsReady() and v7:IsSpellInRange(v20.Judgment)) then
+		if v15(v20.Judgment) then
+			return "judgment standard 26";
+		end
+	end
+	if (v20.AvengersShield:IsCastable() and v7:IsSpellInRange(v20.AvengersShield) and not v20.LightsGuidance:IsAvailable()) then
+		if v15(v20.AvengersShield) then
+			return "avengers_shield standard 28";
+		end
+	end
+	if (v20.Consecration:IsCastable() and v52() and v7:IsInMeleeRange(1 + 4) and (v6:BuffDown(v20.ConsecrationBuff))) then
+		if v15(v20.Consecration) then
+			return "consecration standard 30";
+		end
+	end
+	if (v20.EyeofTyr:IsCastable() and EyeOfTyrSetting and v7:IsInMeleeRange(4 + 4) and ((v20.InmostLight:IsAvailable() and (v28 <= (837 - (660 + 176)))) or (v28 >= (1 + 2))) and not v20.LightsDeliverance:IsAvailable()) then
+		if v15(v20.EyeofTyr) then
+			return "eye_of_tyr standard 32";
+		end
+	end
+	if v20.HolyBulwark:IsCastable() then
+		if v15(v20.HolyBulwark) then
+			return "holy_armaments standard 34";
+		end
+	end
+	if (v20.BlessedHammer:IsCastable() and v7:IsInMeleeRange(207 - (14 + 188))) then
+		if v15(v20.BlessedHammer) then
+			return "blessed_hammer standard 36";
+		end
+	end
+	if (v20.HammeroftheRighteous:IsCastable() and v7:IsInMeleeRange(680 - (534 + 141))) then
+		if v15(v20.HammeroftheRighteous) then
+			return "hammer_of_the_righteous standard 38";
+		end
+	end
+	if (v20.CrusaderStrike:IsCastable() and v7:IsInMeleeRange(3 + 2)) then
+		if v15(v20.CrusaderStrike) then
+			return "crusader_strike standard 40";
+		end
+	end
+	if (v20.AvengersShield:IsCastable() and v7:IsSpellInRange(v20.AvengersShield)) then
+		if v15(v20.AvengersShield) then
+			return "avengers_shield standard 48";
+		end
+	end
+	if (v20.EyeofTyr:IsCastable() and EyeOfTyrSetting and v7:IsInMeleeRange(8 + 0) and not v20.LightsDeliverance:IsAvailable()) then
+		if v15(v20.EyeofTyr) then
+			return "eye_of_tyr standard 50";
+		end
+	end
+	if (v20.ArcaneTorrent:IsCastable() and v7:IsInMeleeRange(8 + 0) and RacialsSetting and (v6:HolyPower() < (10 - 5))) then
+		if v15(v20.ArcaneTorrent) then
+			return "arcane_torrent standard 58";
+		end
+	end
+	if (v20.Consecration:IsCastable() and v52() and v7:IsInMeleeRange(7 - 2) and (v6:BuffDown(v20.SanctificationEmpowerBuff))) then
+		if v15(v20.Consecration) then
+			return "consecration standard 60";
+		end
+	end
+end
+local function v66()
+	if (v42() and v6:AffectingCombat() and (((v40:ID() == v21.ManicGrieftorch:ID()) and Trinket1Setting) or ((v41:ID() == v21.ManicGrieftorch:ID()) and Trinket2Setting)) and v49(v47.ProtTTD.TrinketsTTD) and v7:IsInRange(112 - 72)) then
+		if v15(v21.ManicGrieftorch) then
+			return "manic_grieftorch";
+		end
+	end
+	if (v21.ElementiumPocketAnvil:IsEquippedAndReady() and v6:AffectingCombat() and (((v40:ID() == v21.ElementiumPocketAnvil:ID()) and Trinket1Setting) or ((v41:ID() == v21.ElementiumPocketAnvil:ID()) and Trinket2Setting)) and v7:IsInRange(3 + 2)) then
+		if v15(v21.ElementiumPocketAnvil) then
+			return "ElementiumPocketAnvil";
+		end
+	end
+	if (v6:BuffUp(v20.AvengingWrathBuff) or not v20.AvengingWrath:IsAvailable() or v20.Sentinel:IsAvailable() or (v32 <= (26 + 14))) then
+		local v93, v94, v95 = v6:GetUseableItems(v22);
+		if v93 then
+			if ((((v94 == (409 - (115 + 281))) and Trinket1Setting) or ((v94 == (32 - 18)) and Trinket2Setting)) and v7:IsInRange(v95) and v47.Commons.Enabled.Trinkets and v6:BuffDown(v20.ConcoctionKissofDeathBuff)) then
+				if v15(v93, false) then
+					return "Generic use_items for " .. v94 .. v93:Name();
+				end
+			end
+		end
+	end
+end
+local function v67()
+	if v6:IsChanneling(v21.ManicGrieftorch.ItemUseSpell) then
+		return "Dont cut Torch";
+	end
+	if (((v40:ID() == v21.ConcoctionKissofDeath:ID()) or (v41:ID() == v21.ConcoctionKissofDeath:ID())) and v6:BuffUp(v20.ConcoctionKissofDeathBuff) and (v6:BuffRemains(v20.ConcoctionKissofDeathBuff) < (1 + 0))) then
+		if v15(v21.ConcoctionKissofDeath, true) then
+			return "ConcoctionKissofDeath cooldowns 8";
+		end
+	end
+	v34 = v45.UnitsinRange(v20.FlashofLight);
+	UnitForFreezingBinds = v56(v34);
+	SmallCDToggle = v12.ToggleIconFrame:GetToggle(2 - 1);
+	TabToggle = v12.ToggleIconFrame:GetToggle(7 - 5);
+	InterruptToggle = v12.ToggleIconFrame:GetToggle(870 - (550 + 317));
+	DispelToggle = v12.ToggleIconFrame:GetToggle(5 - 1);
+	v26 = v6:GetEnemiesInRange(10 - 2);
+	v27 = v6:GetEnemiesInRange(83 - 53);
+	v34 = v45.UnitsinRange(v20.FlashofLight);
+	if (v13()) then
+		v28 = #v26;
+		v29 = #v27;
+	else
+		v28 = 286 - (134 + 151);
+		v29 = 1666 - (970 + 695);
+	end
+	RacialsSetting = v50(v47.Protection.RacialsSetting) and v49(v47.ProtTTD.RacialsTTD);
+	Trinket1Setting = v50(v47.Protection.Trinket1Setting, v47.Protection.TrinketHP);
+	Trinket2Setting = v50(v47.Protection.Trinket2Setting, v47.Protection.TrinketHP);
+	PotionSetting = v50(v47.Protection.PotionSetting) and not v45.ISSolo();
+	DivineTollSetting = v50(v47.Protection.DivineTollSetting) and v49(v47.ProtTTD.DivineTollTTD) and v7:IsInRange(57 - 27);
+	AvengingWrathSetting = v50(v47.Protection.AvengingWrathSetting) and v49(v47.ProtTTD.AvengingWrathTTD);
+	EyeOfTyrSetting = v50(v47.Protection.EyeOfTyrSetting) and v49(2005 - (582 + 1408));
+	if (v45.TargetIsValid() or v6:AffectingCombat()) then
+		v24 = v6:ActiveMitigationNeeded();
+		v25 = v6:IsTankingAoE(27 - 19) or v6:IsTanking(v7);
+		v32 = v3.BossFightRemains();
+		v31 = true;
+		v33 = v32;
+		if (v33 == (13979 - 2868)) then
+			v31 = false;
+			v33 = v3.FightRemains(v26, false);
+		end
+	end
+	if (v20.DevotionAura:IsCastable() and v6:BuffDown(v20.DevotionAura, true) and (v58())) then
+		if v15(v20.DevotionAura) then
+			return "devotion_aura precombat 2";
+		end
+	end
+	if v20.RiteofSanctification:IsCastable() then
+		if v12.CastLeft(v20.RiteofSanctification) then
+			return "rite_of_sanctification precombat 2";
+		end
+	end
+	if v20.RiteofAdjuration:IsCastable() then
+		if v12.CastLeft(v20.RiteofAdjuration) then
+			return "rite_of_adjuration precombat 4";
+		end
+	end
+	if v45.TargetIsValid() then
+		if (not v6:AffectingCombat() and v47.Protection.AttackOutOfCombat) then
+			v38 = v60();
+			if v38 then
+				return v38;
+			end
+		end
+		if (v20.CleanseToxins:IsReady() and v47.Protection.UseCleanse and DispelToggle) then
+			v38 = v45.DispelCycle(v20.CleanseToxins, "Poison");
+			if v38 then
+				return v38;
+			end
+			v38 = v45.DispelCycle(v20.CleanseToxins, "Disease");
+			if v38 then
+				return v38;
+			end
+			v38 = v45.AfflictedLogic(v20.CleanseToxins);
+			if v38 then
+				return v38;
+			end
+			if v38 then
+				return v38;
+			end
+		end
+		if (v20.BlessingofFreedom:IsReady() and v47.Protection.UseFreedom) then
+			if UnitForFreezingBinds then
+				if UnitForFreezingBinds:Cast(v20.BlessingofFreedom) then
+					return "Blessing of Freedom Frozen Binds";
+				end
+			end
+			if (v6:DebuffElapsed(v20.EntangledDebuff) > (7 - 5)) then
+				if v6:Cast(v20.BlessingofFreedom) then
+					return "Blessing of Freedom entangling";
+				end
+			end
+			v38 = v45.DispelCycle(v20.BlessingofFreedom, "RootDispel", nil, v34);
+			if v38 then
+				return v38;
+			end
+			v38 = v45.DispelCycle(v20.BlessingofFreedom, "SnareRoot", nil, v34);
+			if v38 then
+				return v38;
+			end
+			v38 = v45.DispelCycle(v20.BlessingofFreedom, "FreedomDispel", nil, v34);
+			if v38 then
+				return v38;
+			end
+		end
+		if InterruptToggle then
+			v38 = v45.InterruptCycle(v20.Rebuke, 1829 - (1195 + 629), true, nil, false);
+			if v38 then
+				return v38;
+			end
+			v38 = not v6:IsMoving() and v45.InterruptCycle(v20.HammerofJustice, 13 - 3, false, nil, true);
+			if v38 then
+				return v38;
+			end
+			v38 = not v6:IsMoving() and v45.InterruptCycle(v20.BlindingLight, 251 - (187 + 54), false, nil, true, true);
+			if v38 then
+				return v38;
+			end
+		end
+		if (v7:AffectingCombat() or v47.Protection.AttackOutOfCombat) then
+			if v25 then
+				v38 = v61();
+				if v38 then
+					return v38;
+				end
+			end
+			if (v6:AffectingCombat() and v6:IsInParty() and not v6:IsInRaid()) then
+				v38 = v62();
+				if v38 then
+					return v38;
+				end
+			end
+			if (v20.Consecration:IsCastable() and v52() and v7:IsInMeleeRange(785 - (162 + 618)) and ((v3.CombatTime() < (4 + 1)) or v47.ProtectionDefensives.MostDefensive) and (v6:BuffDown(v20.ConsecrationBuff) or (v6:BuffStack(v20.DivineGuidanceBuff) >= (4 + 1)))) then
+				if v15(v20.Consecration) then
+					return "consecration defensive";
+				end
+			end
+			if (v20.BlessedHammer:IsCastable() and v7:IsInMeleeRange(21 - 11) and (v3.CombatTime() < (8 - 3)) and (v20.BlessedHammer:TimeSinceLastCast() > (1 + 4)) and v47.ProtectionDefensives.MostDefensive) then
+				if v15(v20.BlessedHammer) then
+					return "blessed_hammer defensive";
+				end
+			end
+			if (v20.ShieldoftheRighteous:IsReady() and v7:IsInMeleeRange(1646 - (1373 + 263)) and v47.ProtectionDefensives.MostDefensive and v6:BuffDown(v20.ShieldoftheRighteousBuff)) then
+				if v15(v20.ShieldoftheRighteous, true) then
+					return "shield_of_the_righteous defensive";
+				end
+			end
+			v38 = v63();
+			if v38 then
+				return v38;
+			end
+			if (v47.Commons.Enabled.Trinkets or v47.Commons.Enabled.Items) then
+				v38 = v66();
+				if v38 then
+					return v38;
+				end
+			end
+			v38 = v65();
+			if v38 then
+				return v38;
+			end
+		end
+		v38 = (v28 > (1000 - (451 + 549))) and not v7:IsInRange(3 + 5) and v48();
+		if v38 then
+			return v38;
+		end
+	end
+end
+local function v68()
+	v47.Protection.Display();
+	v12.ResetToggle();
+	v12.ToggleIconFrame:AddButtonCustom("S", 1 - 0, "Small CDs", "smallcds");
+	v12.ToggleIconFrame:AddButtonCustom("T", 2 - 0, "Tab", "tab");
+	v12.ToggleIconFrame:AddButtonCustom("I", 1387 - (746 + 638), "Interrupt", "interrupt");
+	v12.ToggleIconFrame:AddButtonCustom("D", 2 + 2, "Dispel", "dispel");
+	v12.Print("Protection Paladin rotation has been updated for patch 11.0.0. 30.05.24");
+end
+v12.SetAPL(99 - 33, v67, v68);

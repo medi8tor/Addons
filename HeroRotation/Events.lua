@@ -1,1 +1,93 @@
-local v0={};local v1=string.char;local v2=string.byte;local v3=string.sub;local v4=bit32 or bit ;local v5=v4.bxor;local v6=table.concat;local v7=table.insert;local function v8(v18,v19) local v20={};for v34=1, #v18 do v7(v20,v1(v5(v2(v3(v18,v34,v34 + 1 )),v2(v3(v19,1 + (v34% #v19) ,1 + (v34% #v19) + 1 )))%256 ));end return v6(v20);end v0[23 -11 ]=v8("\67\21\48\27\238\68\88\46\7\255","\158\48\118\66\114");v0[8 + 3 ]=v8("\4\155\104\47\153\20\121\7\135\108\53\149\7\106\29\141\104\34\149\9\104\11\148\97\55\146\1\99\16","\38\84\215\41\118\220\70");v0[1647 -(1523 + 114) ]=v8("\10\195\60\196\240\42\201\106\246\236\38\206\3\225","\156\67\173\74\165");v0[0 + 0 ]=v8("\194\192\201\44\246\175\137\18\196\194","\126\177\163\187\69\134\219\167");local v13=...;local v14={};local v15=require;local function v16(v21,...) local v22=v14[v21];if  not v22 then return v15(v21,v13,...);end return v22(v13,...);end v14[v0[0 -0 ]]=function(...) local v23,v24=...;local v25=v24.CDsON();local v26=HeroLib;local v27=HeroCache;local v28=v26.Unit;local v29=v28.Player;local v30=v28.Target;local v31=v26.Spell;local v32=v26.Item;local v33=1065 -(68 + 997) ;v26:RegisterForEvent(function(v35) if  not v26.PulseInitialized then return;end if (GetTime()>v33) then if (v25.PulseInit()~=v0[1280 -(226 + 1044) ]) then v33=GetTime() + (12 -9) ;end end end,v0[128 -(32 + 85) ]);end;return v14[v0[12 + 0 ]](...);
+--- ============================ HEADER ============================
+--- ======= LOCALIZE =======
+  -- Addon
+  local addonName, addonTable = ...;
+  local HR = addonTable.CDsON()
+  -- HeroLib
+  local HL = HeroLib;
+  local Cache = HeroCache;
+  local Unit = HL.Unit;
+  local Player = Unit.Player;
+  local Target = Unit.Target;
+  local Spell = HL.Spell;
+  local Item = HL.Item;
+  -- Lua
+
+  -- File Locals
+
+
+
+--- ============================ CONTENT ============================
+--- ======= NON-COMBATLOG =======
+  -- OnSpecChange
+  local SpecTimer = 0;
+  HL:RegisterForEvent(
+    function (Event)
+      -- Prevent the first event firing (when login)
+      if not HL.PulseInitialized then return; end
+      -- Timer to prevent bug due to the double/triple event firing.
+      -- Since it takes 5s to change spec, we'll take 3seconds as timer.
+      if GetTime() > SpecTimer then
+        -- Update the timer only on valid scan.
+        if HR.PulseInit() ~= "Invalid SpecID" then
+          SpecTimer = GetTime() + 3;
+        end
+      end
+    end
+    , "PLAYER_SPECIALIZATION_CHANGED"
+  );
+
+--- ======= COMBATLOG =======
+  --- Combat Log Arguments
+    ------- Base -------
+      --     1        2         3           4           5           6              7             8         9        10           11
+      -- TimeStamp, Event, HideCaster, SourceGUID, SourceName, SourceFlags, SourceRaidFlags, DestGUID, DestName, DestFlags, DestRaidFlags
+
+    ------- Prefixes -------
+      --- SWING
+      -- N/A
+
+      --- SPELL & SPELL_PACIODIC
+      --    12        13          14
+      -- SpellID, SpellName, SpellSchool
+
+    ------- Suffixes -------
+      --- _CAST_START & _CAST_SUCCESS & _SUMMON & _RESURRECT
+      -- N/A
+
+      --- _CAST_FAILED
+      --     15
+      -- FailedType
+
+      --- _AURA_APPLIED & _AURA_REMOVED & _AURA_REFRESH
+      --    15
+      -- AuraType
+
+      --- _AURA_APPLIED_DOSE
+      --    15       16
+      -- AuraType, Charges
+
+      --- _INTERRUPT
+      --      15            16             17
+      -- ExtraSpellID, ExtraSpellName, ExtraSchool
+
+      --- _HEAL
+      --   15         16         17        18
+      -- Amount, Overhealing, Absorbed, Critical
+
+      --- _DAMAGE
+      --   15       16       17       18        19       20        21        22        23
+      -- Amount, Overkill, School, Resisted, Blocked, Absorbed, Critical, Glancing, Crushing
+
+      --- _MISSED
+      --    15        16           17
+      -- MissType, IsOffHand, AmountMissed
+
+    ------- Special -------
+      --- UNIT_DIED, UNIT_DESTROYED
+      -- N/A
+
+  --- End Combat Log Arguments
+
+  -- Arguments Variables
+

@@ -1,1 +1,41 @@
-local v0={};local v1=string.char;local v2=string.byte;local v3=string.sub;local v4=bit32 or bit ;local v5=v4.bxor;local v6=table.concat;local v7=table.insert;local function v8(v25,v26) local v27={};for v40=1, #v25 do v7(v27,v1(v5(v2(v3(v25,v40,v40 + 1 )),v2(v3(v26,1 + (v40% #v26) ,1 + (v40% #v26) + 1 )))%256 ));end return v6(v27);end v0[20 + 6 ]=v8("\90\65\18\44\89\86\78\41\92\67","\69\41\34\96");v0[61 -36 ]=v8("\139\87\199\180\41","\161\219\54\169\192\90\48\80");v0[17 + 6 ]=v8("\59\179\208\215\205\120\116\24\177\213\159\157\32\49\24\172\212\159\132\43\58\22\173\212\159\220\121\116\59\179\208\215","\84\121\223\177\191\237\76");v0[87 -65 ]=v8("\152\124\114\60\0","\35\200\29\28\72\115\20\154");v0[972 -(802 + 150) ]=v8("\222\91\166\78\188\4\231\100\240\86\175","\38\156\55\199");v0[50 -31 ]=v8("\118\220\56\232\83","\152\38\189\86\156\32\24\133");v0[27 -12 ]=v8("\155\37\30\34\96","\155\203\68\112\86\19\197");v0[10 + 3 ]=v8("\96\23\44\6\237","\158\48\118\66\114");v0[1008 -(915 + 82) ]=v8("\4\182\71\2\175","\38\84\215\41\118\220\70");v0[14 -9 ]=v8("\19\204\36\209\239","\156\67\173\74\165");v0[0 + 0 ]=v8("\194\192\201\44\246\175\137\18\196\194","\126\177\163\187\69\134\219\167");local v20=...;local v21={};local v22=require;local function v23(v28,...) local v29=v21[v28];if  not v29 then return v22(v28,v20,...);end return v29(v20,...);end v21[v0[0 -0 ]]=function(...) debugstack=debug.traceback;strmatch=string.match;loadfile("../LibStub.lua")();local v32,v33=LibStub:NewLibrary(v0[1192 -(1069 + 118) ],2 -1 );assert(v32);assert( not v33);v32.MyMethod=function(v41) end;local v35=v32.MyMethod;v32.MyTable={};local v37=v32.MyTable;local v38,v39=LibStub:NewLibrary(v0[23 -12 ],1 + 0 );assert( not v38);local v38,v39=LibStub:NewLibrary(v0[22 -9 ],0 + 0 );assert( not v38);local v38,v39=LibStub:NewLibrary(v0[806 -(368 + 423) ],6 -4 );assert(v38);assert(rawequal(v38,v32));assert(v39==(19 -(10 + 8)) );assert(rawequal(v32.MyMethod,v35));assert(rawequal(v32.MyTable,v37));local v38,v39=LibStub:NewLibrary(v0[72 -53 ],v0[462 -(416 + 26) ]);assert(v38);assert(v39==(6 -4) );local v38,v39=LibStub:NewLibrary(v0[10 + 12 ],v0[39 -16 ]);assert(v38);assert(v39==(441 -(145 + 293)) );local v38,v39=LibStub:NewLibrary(v0[455 -(44 + 386) ],1491 -(998 + 488) );assert(v38);assert(v39==(2 + 2) );end;return v21[v0[22 + 4 ]](...);
+debugstack = debug.traceback
+strmatch = string.match
+
+loadfile("../LibStub.lua")()
+
+local lib, oldMinor = LibStub:NewLibrary("Pants", 1) -- make a new thingy
+assert(lib) -- should return the library table
+assert(not oldMinor) -- should not return the old minor, since it didn't exist
+
+-- the following is to create data and then be able to check if the same data exists after the fact
+function lib:MyMethod()
+end
+local MyMethod = lib.MyMethod
+lib.MyTable = {}
+local MyTable = lib.MyTable
+
+local newLib, newOldMinor = LibStub:NewLibrary("Pants", 1) -- try to register a library with the same version, should silently fail
+assert(not newLib) -- should not return since out of date
+
+local newLib, newOldMinor = LibStub:NewLibrary("Pants", 0) -- try to register a library with a previous, should silently fail
+assert(not newLib) -- should not return since out of date
+
+local newLib, newOldMinor = LibStub:NewLibrary("Pants", 2) -- register a new version
+assert(newLib) -- library table
+assert(rawequal(newLib, lib)) -- should be the same reference as the previous
+assert(newOldMinor == 1) -- should return the minor version of the previous version
+
+assert(rawequal(lib.MyMethod, MyMethod)) -- verify that values were saved
+assert(rawequal(lib.MyTable, MyTable)) -- verify that values were saved
+
+local newLib, newOldMinor = LibStub:NewLibrary("Pants", "Blah 3 Blah") -- register a new version with a string minor version (instead of a number)
+assert(newLib) -- library table
+assert(newOldMinor == 2) -- previous version was 2
+
+local newLib, newOldMinor = LibStub:NewLibrary("Pants", "Blah 4 and please ignore 15 Blah") -- register a new version with a string minor version (instead of a number)
+assert(newLib)
+assert(newOldMinor == 3) -- previous version was 3 (even though it gave a string)
+
+local newLib, newOldMinor = LibStub:NewLibrary("Pants", 5) -- register a new library, using a normal number instead of a string
+assert(newLib)
+assert(newOldMinor == 4) -- previous version was 4 (even though it gave a string)

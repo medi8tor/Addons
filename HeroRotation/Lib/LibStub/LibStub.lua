@@ -1,1 +1,947 @@
-local v0={};local v1=string.char;local v2=string.byte;local v3=string.sub;local v4=bit32 or bit ;local v5=v4.bxor;local v6=table.concat;local v7=table.insert;local function v8(v182,v183) local v184={};for v193=1, #v182 do v7(v184,v1(v5(v2(v3(v182,v193,v193 + 1 )),v2(v3(v183,1 + (v193% #v183) ,1 + (v193% #v183) + 1 )))%256 ));end return v6(v184);end v0[627 + 44 ]=v8("\69\172\46\23\3\247\189\90\186\61","\147\54\207\92\126\115\131");v0[462 + 194 ]=v8("\118\84\20\214\86","\190\55\56\100");v0[776 -(55 + 71) ]=v8("\196\205\205\214\84\248\198\213\201","\33\139\163\128\185");v0[853 -205 ]=v8("\33\163\93\235\30\145\11\137\127\243\5","\226\110\205\16\132\107");v0[2436 -(573 + 1217) ]=v8("\11\24\143\237\56\243\220","\183\68\118\204\129\81\144");v0[1783 -1139 ]=v8("\116\14\161\14\36\25\20","\203\59\96\237\107\69\111\113");v0[49 + 593 ]=v8("\25\71\214\30\103\203\36","\174\86\41\147\112\19");v0[1031 -391 ]=v8("\171\38\130\211\217\84\129\144\39\182","\210\228\72\198\161\184\51");v0[1577 -(714 + 225) ]=v8("\240\233\138\202\242\216\212\186\217\225\203","\147\191\135\206\184");v0[1805 -1187 ]=v8("\39\84\94\7\216\82\15\36\64\70\1","\67\65\33\48\100\151\60");v0[860 -243 ]=v8("\212\144\210\32\168\167\113\220\145\217\49","\52\178\229\188\67\231\201");v0[67 + 547 ]=v8("\173\214\69\69","\45\203\163\43\38\35\42\91");v0[886 -273 ]=v8("\43\173\75\17\211\246\11\43\142\67\10\225\236\23\26\164\69\27\203","\110\89\200\44\120\160\130");v0[1418 -(118 + 688) ]=v8("\30\27\38\214\222\171\161\27\21\48\249\211","\194\112\116\82\149\182\206");v0[657 -(25 + 23) ]=v8("\236\26\90\141","\62\133\121\53\227\127\109\79");v0[118 + 490 ]=v8("\150\75\71\75","\62\226\46\63\63\208\169");v0[2472 -(927 + 959) ]=v8("\182\96\239\247\136\170","\237\216\21\130\149");v0[1921 -1351 ]=v8("\220\13\13\2\131\95\43\98\252\19","\22\147\99\73\112\226\56\120");v0[1300 -(16 + 716) ]=v8("\83\249\13\36\50\163\79\227\40\36\39","\196\28\151\73\86\83");v0[1092 -526 ]=v8("\44\200\83\94\2\193\68\88\12\214","\44\99\166\23");v0[661 -(11 + 86) ]=v8("\193\249\134\34\239\240\145\36\239\229\182","\80\142\151\194");v0[1297 -765 ]=v8("\53\187\172\31\27\178\187\25\21\165","\109\122\213\232");v0[815 -(175 + 110) ]=v8("\245\229\83\250\138\192\233\255\118\250\159","\167\186\139\23\136\235");v0[1319 -796 ]=v8("\241\169\225\207\114\246\110\26\209\183","\110\190\199\165\189\19\145\61");v0[2569 -2048 ]=v8("\109\224\125\146\67\233\106\148\67\252\77","\224\34\142\57");v0[2307 -(503 + 1293) ]=v8("\175\242\174\115\49\254\179","\118\224\156\226\22\80\136\214");v0[1421 -912 ]=v8("\105\66\228\173\226\205\84","\168\38\44\161\195\150");v0[361 + 137 ]=v8("\183\216\37\31\135\181\203\40\9\133\174\218","\194\231\148\100\70");v0[1557 -(810 + 251) ]=v8("\195\166\38\210\89\226\188","\60\140\200\99\164");v0[336 + 148 ]=v8("\31\16\165\14\68\62\10","\33\80\126\224\120");v0[148 + 334 ]=v8("\118\179\244\46\65","\78\48\193\149\67\36");v0[433 + 47 ]=v8("\42\22\80\227\142\91\136\9\17\109\238\175\125\133\37\13\87\198\184\119\143","\235\102\127\50\167\204\18");v0[995 -(43 + 490) ]=v8("\33\127\18\119\74","\234\96\19\98\31\43\110");v0[1190 -(711 + 22) ]=v8("\139\23\33\181\80\187\176\5\180","\80\196\121\108\218\37\200\213");v0[1760 -1305 ]=v8("\163\50\105\237\70\17\137\24\75\245\93","\98\236\92\36\130\51");v0[1312 -(240 + 619) ]=v8("\4\28\12\71\138\128\241\63\29\56","\162\75\114\72\53\235\231");v0[109 + 342 ]=v8("\249\143\219\91\222\209\178\235\72\205\194","\191\182\225\159\41");v0[712 -264 ]=v8("\220\225\123\218\44\85\248","\54\147\143\56\182\69");v0[30 + 416 ]=v8("\119\25\11\67\89\1\34","\38\56\119\71");v0[2188 -(1344 + 400) ]=v8("\105\116\113\0\39\67\104","\83\38\26\52\110");v0[834 -(255 + 150) ]=v8("\207\129\130\4\222\136\134","\72\155\206\210");v0[334 + 90 ]=v8("\146\97\254\71\53\15\126","\161\211\51\170\16\122\93\53");v0[226 + 196 ]=v8("\12\41\61\193\29\32\57","\141\88\102\109");v0[1785 -1367 ]=v8("\22\7\35\235\210\6\9\53\238\209","\149\84\70\96\160");v0[1343 -927 ]=v8("\226\143\61\3\230\240\148","\163\182\192\109\79");v0[2151 -(404 + 1335) ]=v8("\113\245\208\215\0\225\103","\160\62\163\149\133\76");v0[815 -(183 + 223) ]=v8("\154\41\173\21\39\7","\204\217\108\227\65\98\85");v0[495 -87 ]=v8("\33\44\137\98\152\214","\201\98\105\199\54\221\132\119");v0[268 + 135 ]=v8("\46\148\25\72\200\218\36","\136\111\198\77\31\135");v0[145 + 256 ]=v8("\208\84\216\56\53\120","\42\147\17\150\108\112");v0[737 -(10 + 327) ]=v8("\56\200\168\101\200\15","\89\123\141\230\49\141\93");v0[276 + 120 ]=v8("\236\95\145\40\162\252\81\135\45\161","\229\174\30\210\99");v0[732 -(118 + 220) ]=v8("\176\110\104\2\161\103\108","\78\228\33\56");v0[131 + 262 ]=v8("\25\225\111\199\99\233\180","\224\77\174\63\139\38\175");v0[838 -(108 + 341) ]=v8("\244\231\11\110\3\118\226","\55\187\177\78\60\79");v0[174 + 212 ]=v8("\168\196\6\173\29\36\220\144\206\14","\168\228\161\96\217\95\81");v0[1623 -1239 ]=v8("\204\233\4\206\10","\122\173\135\125\155");v0[1871 -(711 + 782) ]=v8("\28\36\246\157\205\253","\221\81\97\178\212\152\176");v0[716 -342 ]=v8("\62\41\58\88\158\93\17\47\54\45\236\75","\20\114\64\88\28\220");v0[842 -(270 + 199) ]=v8("\227\7\25\225\13\126","\217\161\114\109\149\98\16");v0[117 + 241 ]=v8("\114\120\70\12\119\170\89\88","\45\61\22\19\124\19\203");v0[2168 -(580 + 1239) ]=v8("\28\92\103\230\253\50\70\87","\153\83\50\50\150");v0[966 -641 ]=v8("\157\209\45\113\166\140","\227\222\148\99\37");v0[310 + 14 ]=v8("\231\238\61\240\120\196","\200\164\171\115\164\61\150");v0[12 + 306 ]=v8("\32\210\0\26\82","\22\114\157\85\84");v0[136 + 175 ]=v8("\192\159\159\247\135\100\119\209\159\251\246\135\98\109\219\128\132\253\143\126\109","\57\148\205\214\180\200\54");v0[809 -499 ]=v8("\130\135\207\243\153\135\200\245\132\248\196\255\130\129\201\253\154\144\192\228","\176\214\213\134");v0[192 + 117 ]=v8("\142\191\129\241\149\191\134\247\136\192\156\253\138\191\129\245\146\185","\178\218\237\200");v0[1475 -(645 + 522) ]=v8("\141\17\130\87\144\141\107\145\139\110\159\91\143\147\96\146\141","\212\217\67\203\20\223\223\37");v0[2097 -(1010 + 780) ]=v8("\125\57\19\95\3\50\24\78\122\63\26","\26\46\112\87");v0[306 + 0 ]=v8("\119\99\234\80\125\112\101\254","\80\36\42\174\21");v0[1452 -1147 ]=v8("\209\11\195\121\54\67\239\197\10\211","\166\130\66\135\60\27\17");v0[890 -586 ]=v8("\32\252\166\222\167\235\54\243\182","\167\115\181\226\155\138");v0[2139 -(1045 + 791) ]=v8("\18\173\78\146\20\176\49\158\30\182\72\147\28\176\85\155\25\182","\220\81\226\28");v0[764 -462 ]=v8("\127\42\242\129\7\234\17\39\239\155\22\247\113\41\229\137\22","\184\60\101\160\207\66");v0[459 -158 ]=v8("\225\174\36\208\28\220\21\246\174\38\204\16\201\112\246","\56\162\225\118\158\89\142");v0[805 -(351 + 154) ]=v8("\22\155\185\220\255\7\249\191\221\234\25\145\173\198","\186\85\212\235\146");v0[1873 -(1281 + 293) ]=v8("\206\252\33\244\124\146","\215\157\173\116\181\46");v0[564 -(28 + 238) ]=v8("\12\16\204\223\26","\145\94\95\153");v0[618 -341 ]=v8("\201\35\122\214\244\208\189\0\199\35\124","\78\136\109\57\158\187\130\226");v0[1811 -(1381 + 178) ]=v8("\224\108\17\254\42\243\125\28\249\43\228","\101\161\34\82\182");v0[227 + 15 ]=v8("\177\157\3","\233\229\210\83\107\40\46");v0[195 + 46 ]=v8("\195\231\6\206\192\29","\34\129\168\82\154\143\80\156");v0[103 + 137 ]=v8("\131\202\73","\171\215\133\25\149\137");v0[823 -584 ]=v8("\7\254\110\110\156\8","\211\69\177\58\58");v0[124 + 114 ]=v8("\30\1\229","\59\74\78\181");v0[705 -(381 + 89) ]=v8("\160\216\106\6","\26\236\157\44\82\114\44");v0[207 + 26 ]=v8("\197\218\27\250\195","\178\151\147\92");v0[157 + 74 ]=v8("\163\130\233\207\114\205","\159\224\199\167\155\55");v0[390 -162 ]=v8("\221\114\250\163\6\44\139\248\115\244\174\46","\231\148\17\149\205\69\77");v0[1383 -(1074 + 82) ]=v8("\231\126\38\112\252\39\201\233\101\43\95\248\33\247\234\99\48\70\244\49\221\223\114\7\92\252\61\207\206\115\27\107\244\48\199\197\85","\168\171\23\68\52\157\83");v0[493 -268 ]=v8("\206\1\245\199\196\3\246\197\229\3\249\194","\169\135\98\154");v0[2008 -(214 + 1570) ]=v8("\27\82\221\13\129\66\95\21\73\208\34\133\68\97\22\79\203\59\137\84\75\35\94\252\33\129\88\89\50\95\224\22\137\85\81\57\124","\62\87\59\191\73\224\54");v0[1677 -(990 + 465) ]=v8("\140\169\44\16\48\5\203\93\167\171\32\21","\49\197\202\67\126\115\100\167");v0[92 + 129 ]=v8("\128\39\169\111\198\67\31\43\190\33\160\78\213\104\63\29\184\60\162\73\210\67\27\42\164\47\165\76\194\83\33\54\165\45\164\69\245","\105\204\78\203\43\167\55\126");v0[96 + 123 ]=v8("\40\49\9\52\126\0\62\10\56\92\2\57","\61\97\82\102\90");v0[212 + 6 ]=v8("\200\120\126\109\218\91\225\198\99\115\66\222\93\223\197\101\104\91\210\77\245\240\116\95\65\218\65\231\225\117\67\118\210\76\239\234\82\115\70\201\75\243","\128\132\17\28\41\187\47");v0[849 -633 ]=v8("\121\185\206\181\115\187\205\183\82\187\194\176","\219\48\218\161");v0[1941 -(1668 + 58) ]=v8("\94\72\117\161\255\159\115\99\101\138\245\142\96\126\86\145\234\153\123\67\98\145\251\168\122\64\121\130\251\143\77\126\126\134\241\133","\235\18\33\23\229\158");v0[832 -(512 + 114) ]=v8("\34\143\63\162\139","\86\75\236\80\204\201\221");v0[518 -319 ]=v8("\71\20\62\166\214","\58\46\119\81\200\145\208\37");v0[396 -204 ]=v8("\179\87\185\78\136","\32\218\52\214");v0[654 -466 ]=v8("\71\132\236\35\109\136\236\63\74\148","\77\46\231\131");v0[86 + 98 ]=v8("\186\43\0\242","\59\211\72\111\156\176");v0[34 + 147 ]=v8("\55\87\142\142\178\33\162\252\4\95\147\191\131\35\189\252\17\66\134","\144\112\54\227\235\230\78\205");v0[157 + 23 ]=v8("\119\39\182\114\111\114\45\187\88\121\84\33\184\66\68\75","\45\59\78\212\54");v0[603 -424 ]=v8("\29\23\249\176\14\25\251\185\46\31\228","\213\90\118\148");v0[2167 -(109 + 1885) ]=v8("\161\44\169\70\222\65\18\137\5\164\68\216\76\20\144\96\244\4\140","\113\226\77\197\42\188\32");v0[1634 -(1269 + 200) ]=v8("\56\149\43\6\109\142\60\18\107\199\2\30\122\163\47\3\121\165\60\24\115\130\60\90\41\201\127\89","\119\24\231\78");v0[313 -149 ]=v8("\243\22\246\56\59\203\30\214\14\53\212\26\230\81\107\145\78","\90\191\127\148\124");v0[978 -(98 + 717) ]=v8("\189\161\85\84\105\214\239\182\67\5\80\214\255\128\68\80\126\145","\191\157\211\48\37\28");v0[988 -(802 + 24) ]=v8("\16\56\11\159\59\194\34\58\50\124\88\245\73","\85\92\81\105\219\121\139\65");v0[277 -116 ]=v8("\6\89\35\217\158\27\228\40\93\52\204\158\26\233\54\24\49\215\203\26\226","\134\66\56\87\184\190\116");v0[198 -40 ]=v8("\190\201\15\199\192","\129\202\168\109\171\165\195\183");v0[24 + 133 ]=v8("\171\54\108\23\42\252","\143\216\66\30\126\68\155");v0[120 + 35 ]=v8("\106\170\196\115\111\204\79\174\75\168\196\50\33\204\89\228\72\164\197\124\43","\196\46\203\176\18\79\163\45");v0[25 + 127 ]=v8("\186\93\49\55\42","\81\206\60\83\91\79");v0[33 + 118 ]=v8("\18\243\90\86\125\6","\19\97\135\40\63");v0[397 -254 ]=v8("\145\208\34\104\188\205\33\110\175\214\43\73\175\230\4\77\169\216\15\78\183\220\35\88\158\203\37\77\169\220\36","\44\221\185\64");v0[450 -315 ]=v8("\98\221\174\77\23\116\79\147\188\77\15\124\68\209\178\0\91\112\94\192\172\12\25\120\11\221\177\64\91\114\89\147\185\12\15\124\73\223\189","\29\43\179\216\44\123");v0[48 + 86 ]=v8("\40\174\131\64\230","\24\92\207\225\44\131\25");v0[54 + 77 ]=v8("\247\130\19\209\184\200\206\249\153\30\254\188\206\240\250\159\5\231\176\222\218\207\142\50\253\184\210\200\222\143\46\202","\175\187\235\113\149\217\188");v0[106 + 22 ]=v8("\117\95\73\217\116\146\134\41\75\89\64\248\103\185\166\31\77\68\66\255\96\146\130\40\81\87\69\250\112\130\184","\107\57\54\43\157\21\230\231");v0[92 + 34 ]=v8("\118\193\231\114\91\230\129\120\218\234\93\95\224\191\123\220\241\68\83\240\149\78\205\198\94\91\252\135\95\204\218","\224\58\168\133\54\58\146");v0[58 + 66 ]=v8("\116\41\113\216\91\84\89\2\97\243\81\69\74\31\82\232\78\82\81\34\102\232\95\99\80\33\125\251\95\68","\32\56\64\19\156\58");v0[1553 -(797 + 636) ]=v8("\218\113\121\4\225\75\104","\106\133\46\16");v0[577 -458 ]=v8("\191\241\194\199\41\221\242\122\187\252\200\199\62","\30\222\146\161\162\90\174\210");v0[1737 -(1427 + 192) ]=v8("\217\250\192\56\242\196\217\60\228\201\200","\93\134\165\173");v0[37 + 69 ]=v8("\142\121\181\140\49\172\123\178\168\50\163\124\181\133\33\224\41\247\208","\83\205\24\217\224");v0[236 -134 ]=v8("\107\197\55\248\5\83\205\23\206\11\76\201\39\145\85\9\157","\100\39\172\85\188");v0[90 + 10 ]=v8("\128\160\19\96\183\255\206\142\187\30\79\179\249\130\253\231\64\4\164\238\222\185\160\3\65\165\171\236\173\165\29\70\183\232\196\132\168\31\64\186\238\221\225\248\95\20","\175\204\201\113\36\214\139");v0[45 + 54 ]=v8("\175\4\83\74\230\64\227\135\45\94\72\224\77\229\158\72\14\8\180","\128\236\101\63\38\132\33");v0[423 -(192 + 134) ]=v8("\248\22\5\247\183\104\135\246\13\8\216\179\110\203\133\81\86\147\164\121\151\193\22\21\214\165\60\170\221\29\52\199\163\126","\230\180\127\103\179\214\28");v0[1366 -(316 + 960) ]=v8("\16\151\190\75\1\210\81","\112\69\228\223\44\100\232\113");v0[49 + 38 ]=v8("\152\206\17\247\125\172\237","\150\205\189\112\144\24");v0[61 + 17 ]=v8("\47\254\185\183\169\231\231","\199\122\141\216\208\204\221");v0[72 + 5 ]=v8("\146\56\223\27\233\134","\135\225\76\173\114");v0[286 -211 ]=v8("\36\35\179\63\75\109\105","\73\113\80\210\88\46\87");v0[617 -(83 + 468) ]=v8("\246\28\131\240\207\153\79","\170\163\111\226\151");v0[1871 -(1202 + 604) ]=v8("\44\6\144\195\171\60","\202\88\110\226\166");v0[298 -234 ]=v8("\193\242\35\187\168\249","\107\178\134\81\210\198\158");v0[104 -41 ]=v8("\172\232\217\200\189","\164\216\137\187");v0[163 -104 ]=v8("\109\77\4\46\34\183\82","\114\56\62\101\73\71\141");v0[383 -(45 + 280) ]=v8("\210\209\224\95\192\205\225\82","\60\180\164\142");v0[54 + 1 ]=v8("\99\59\94\63\32\4\184","\152\54\72\63\88\69\62");v0[47 + 6 ]=v8("\50\253\164\201\2\180\229","\174\103\142\197");v0[19 + 33 ]=v8("\220\47\34\140\177","\156\168\78\64\224\212\121");v0[29 + 22 ]=v8("\212\64\98\29\183\25","\126\167\52\16\116\217");v0[9 + 40 ]=v8("\50\5\184\44\2\76\249","\75\103\118\217");v0[88 -40 ]=v8("\141\229\60\94\236\174\132\254","\199\235\144\82\61\152");v0[1958 -(340 + 1571) ]=v8("\165\253\56\194\22\169","\167\214\137\74\171\120\206\83");v0[18 + 27 ]=v8("\57\221\95\117\123\45\179","\135\108\174\62\18\30\23\147");v0[1816 -(1733 + 39) ]=v8("\168\205\80\84\16\188","\126\219\185\34\61");v0[93 -59 ]=v8("\44\215\41\134\61\210","\232\73\161\76");v0[1067 -(125 + 909) ]=v8("\217\57\36\243\204\185\206","\202\171\92\71\134\190");v0[1980 -(1096 + 852) ]=v8("\55\180\153\50\222\11\169\159\50\203\35\182\135\20\216\14\182\137\54\218\9\169","\185\98\218\235\87");v0[14 + 17 ]=v8("\137\205\197\15\5\34\175\215\210\24\33\42\176\207\213\11\1\32","\75\220\163\183\106\98");v0[42 -12 ]=v8("\123\71\7\44\90\86\5\55\106\67\12\41\75\67\3\46","\69\41\34\96");v0[28 + 0 ]=v8("\132\105\192\174\62\85\40","\161\219\54\169\192\90\48\80");v0[538 -(409 + 103) ]=v8("\58\190\221\211\143\45\55\18\151\208\209\137\32\49\11\242\128\145\221","\84\121\223\177\191\237\76");v0[260 -(46 + 190) ]=v8("\151\66\127\41\31\120","\35\200\29\28\72\115\20\154");v0[105 -(51 + 44) ]=v8("\209\94\169\73\238\23\177\67\238\68\174\73\242\23\170\83\239\67\231\67\245\67\175\67\238\23\165\67\188\86\231\72\233\90\165\67\238\23\168\84\188\84\168\72\232\86\174\72\188\86\231\72\233\90\165\67\238\25","\38\156\55\199");v0[3 + 6 ]=v8("\3\217\125","\152\38\189\86\156\32\24\133");v0[1324 -(1114 + 203) ]=v8("\184\48\2\63\125\162","\155\203\68\112\86\19\197");v0[730 -(228 + 498) ]=v8("\93\31\44\29\236\67","\158\48\118\66\114");v0[1 + 2 ]=v8("\56\190\75\5","\38\84\215\41\118\220\70");v0[1 + 0 ]=v8("\15\196\40\246\232\54\207","\156\67\173\74\165");v0[663 -(174 + 489) ]=v8("\194\192\201\44\246\175\137\18\196\194","\126\177\163\187\69\134\219\167");local v177=...;local v178={};local v179=require;local function v180(v185,...) local v186=v178[v185];if  not v186 then return v179(v185,v177,...);end return v186(v177,...);end v178[v0[0 -0 ]]=function(...) local v187,v188=v0[1906 -(830 + 1075) ],526 -(303 + 221) ;local v189=_G[v187];if ( not v189 or (v189.minor<v188)) then v189=v189 or {[v0[1272 -(231 + 1038) ]]={},[v0[4 + 0 ]]={}} ;_G[v187]=v189;v189.minor=v188;v189.NewLibrary=function(v392,v393,v394) assert(type(v393)==v0[1169 -(171 + 991) ] ,"Bad argument #2 to `NewLibrary' (string expected)");v394=assert(tonumber(strmatch(v394,v0[36 -27 ])),v0[26 -16 ]);local v395=v392.minors[v393];if (v395 and (v395>=v394)) then return nil;end v392.minors[v393],v392.libs[v393]=v394,v392.libs[v393] or {} ;return v392.libs[v393],v395;end;v189.GetLibrary=function(v398,v399,v400) if ( not v398.libs[v399] and  not v400) then error(("Cannot find a library instance of %q."):format(tostring(v399)),4 -2 );end return v398.libs[v399],v398.minors[v399];end;v189.IterateLibraries=function(v401) return pairs(v401.libs);end;setmetatable(v189,{[v0[20 + 4 ]]=v189.GetLibrary});end local function v190() local v194,v195=v0[91 -65 ],22 -14 ;local v196=v189:NewLibrary(v194,v195);if  not v196 then return;end local v197={[v0[44 -16 ]]=function(v267,v268) v267[v268]={};return v267[v268];end};local v198,v199=securecallfunction,error;local v200,v201=setmetatable,rawget;local v202,v203,v204,v205,v206=next,select,pairs,type,tostring;local function v207(v270,...) local v271,v272=v202(v270);if  not v272 then return;end repeat v198(v272,...);v271,v272=v202(v270,v271);until  not v272 end v196.New=function(v273,v274,v275,v276,v277) v275=v275 or v0[92 -62 ] ;v276=v276 or v0[1279 -(111 + 1137) ] ;if (v277==nil) then v277=v0[190 -(91 + 67) ];end local v278=v200({},v197);local v279={[v0[98 -65 ]]=0 + 0 ,[v0[557 -(423 + 100) ]]=v278};v279.Fire=function(v402,v403,...) if ( not v201(v278,v403) or  not v202(v278[v403])) then return;end local v404=v279.recurse;v279.recurse=v404 + 1 + 0 ;v207(v278[v403],v403,...);v279.recurse=v404;if (v279.insertQueue and (v404==(0 -0))) then for v520,v521 in v204(v279.insertQueue) do local v522= not v201(v278,v520) or  not v202(v278[v520]) ;for v533,v534 in v204(v521) do v278[v520][v533]=v534;if (v522 and v279.OnUsed) then v279.OnUsed(v279,v274,v520);v522=nil;end end end v279.insertQueue=nil;end end;v274[v275]=function(v406,v407,v408,...) if (v205(v407)~=v0[23 + 21 ]) then v199(v0[816 -(326 + 445) ]   .. v275   .. "(eventname, method[, arg]): 'eventname' - string expected." ,8 -6 );end v408=v408 or v407 ;local v409= not v201(v278,v407) or  not v202(v278[v407]) ;if ((v205(v408)~=v0[104 -57 ]) and (v205(v408)~=v0[111 -63 ])) then v199(v0[760 -(530 + 181) ]   .. v275   .. '(\"eventname\", \"methodname\"): \'methodname\' - string or function expected.' ,883 -(614 + 267) );end local v410;if (v205(v408)==v0[83 -(19 + 13) ]) then if (v205(v406)~=v0[84 -32 ]) then v199(v0[122 -69 ]   .. v275   .. '(\"eventname\", \"methodname\"): self was not a table?' ,5 -3 );elseif (v406==v274) then v199(v0[15 + 40 ]   .. v275   .. '(\"eventname\", \"methodname\"): do not use Library:'   .. v275   .. "(), use your own 'self'" ,3 -1 );elseif (v205(v406[v408])~=v0[120 -62 ]) then v199(v0[1871 -(1293 + 519) ]   .. v275   .. '(\"eventname\", \"methodname\"): \'methodname\' - method \''   .. v206(v408)   .. "' not found on self." ,3 -1 );end if (v203("#",...)>=(2 -1)) then local v536=v203(1 -0 ,...);function v410(...) v406[v408](v406,v536,...);end else function v410(...) v406[v408](v406,...);end end else if ((v205(v406)~=v0[271 -208 ]) and (v205(v406)~=v0[150 -86 ]) and (v205(v406)~=v0[35 + 30 ])) then v199(v0[14 + 52 ]   .. v275   .. '(self or \"addonId\", eventname, method): \'self or addonId\': table or string or thread expected.' ,4 -2 );end if (v203("#",...)>=(1 + 0)) then local v537=v203(1 + 0 ,...);function v410(...) v408(v537,...);end else v410=v408;end end if (v278[v407][v406] or (v279.recurse<(1 + 0))) then v278[v407][v406]=v410;if (v279.OnUsed and v409) then v279.OnUsed(v279,v274,v407);end else v279.insertQueue=v279.insertQueue or v200({},v197) ;v279.insertQueue[v407][v406]=v410;end end;v274[v276]=function(v411,v412) if ( not v411 or (v411==v274)) then v199(v0[1171 -(709 + 387) ]   .. v276   .. "(eventname): bad 'self'" ,1860 -(673 + 1185) );end if (v205(v412)~=v0[222 -145 ]) then v199(v0[250 -172 ]   .. v276   .. "(eventname): 'eventname' - string expected." ,2 -0 );end if (v201(v278,v412) and v278[v412][v411]) then v278[v412][v411]=nil;if (v279.OnUnused and  not v202(v278[v412])) then v279.OnUnused(v279,v274,v412);end end if (v279.insertQueue and v201(v279.insertQueue,v412) and v279.insertQueue[v412][v411]) then v279.insertQueue[v412][v411]=nil;end end;if v277 then v274[v277]=function(...) if (v203("#",...)<(1 + 0)) then v199(v0[66 + 21 ]   .. v277   .. '([whatFor]): missing \'self\' or \"addonId\" to unregister events for.' ,2 -0 );end if ((v203("#",...)==(1 + 0)) and (...==v274)) then v199(v0[179 -89 ]   .. v277   .. '([whatFor]): supply a meaningful \'self\' or \"addonId\"' ,3 -1 );end for v523=1881 -(446 + 1434) ,v203("#",...) do local v524=v203(v523,...);if v279.insertQueue then for v545,v546 in v204(v279.insertQueue) do if v546[v524] then v546[v524]=nil;end end end for v538,v539 in v204(v278) do if v539[v524] then v539[v524]=nil;if (v279.OnUnused and  not v202(v539)) then v279.OnUnused(v279,v274,v538);end end end end end;end return v279;end;end v190();local function v191() assert(v189,v0[1380 -(1040 + 243) ]);assert(v189:GetLibrary(v0[295 -196 ],true),v0[1947 -(559 + 1288) ]);local v209,v210=v189:NewLibrary(v0[2033 -(609 + 1322) ],458 -(13 + 441) );if  not v209 then return;end v210=v210 or (0 -0) ;v209.callbacks=v209.callbacks or v189:GetLibrary(v0[277 -171 ]):New(v209) ;v209.attributestorage,v209.namestorage,v209.proxystorage=v209.attributestorage or {} ,v209.namestorage or {} ,v209.proxystorage or {} ;local v215,v216,v217=v209.attributestorage,v209.namestorage,v209.callbacks;if (v210<(9 -7)) then v209.domt={[v0[5 + 113 ]]=v0[432 -313 ],[v0[43 + 77 ]]=function(v453,v454) return v215[v453] and v215[v453][v454] ;end};end if (v210<(2 + 1)) then v209.domt.__newindex=function(v455,v456,v457) if  not v215[v455] then v215[v455]={};end if (v215[v455][v456]==v457) then return;end v215[v455][v456]=v457;local v459=v216[v455];if  not v459 then return;end v217:Fire(v0[367 -243 ],v459,v456,v457,v455);v217:Fire(v0[69 + 57 ]   .. v459 ,v459,v456,v457,v455);v217:Fire(v0[235 -107 ]   .. v459   .. "_"   .. v456 ,v459,v456,v457,v455);v217:Fire(v0[87 + 44 ]   .. v456 ,v459,v456,v457,v455);end;end if (v210<(2 + 0)) then v209.NewDataObject=function(v460,v461,v462) if v460.proxystorage[v461] then return;end if v462 then assert(type(v462)==v0[97 + 37 ] ,v0[114 + 21 ]);v460.attributestorage[v462]={};for v540,v541 in pairs(v462) do v460.attributestorage[v462][v540]=v541;v462[v540]=nil;end end v462=setmetatable(v462 or {} ,v460.domt);v460.proxystorage[v461],v460.namestorage[v462]=v462,v461;v460.callbacks:Fire(v0[140 + 3 ],v461,v462);return v462;end;end if (v210<(434 -(153 + 280))) then v209.DataObjectIterator=function(v465) return pairs(v465.proxystorage);end;v209.GetDataObjectByName=function(v466,v467) return v466.proxystorage[v467];end;v209.GetNameByDataObject=function(v468,v469) return v468.namestorage[v469];end;end if (v210<(11 -7)) then local v419=pairs(v215);v209.pairs=function(v470,v471) local v472=type(v471);assert((v472==v0[136 + 15 ]) or (v472==v0[61 + 91 ]) ,"Usage: ldb:pairs('dataobjectname') or ldb:pairs(dataobject)");local v473=v470.proxystorage[v471] or v471 ;assert(v215[v473],v0[82 + 73 ]);return v419,v215[v473],nil;end;local v421=ipairs(v215);v209.ipairs=function(v474,v475) local v476=type(v475);assert((v476==v0[143 + 14 ]) or (v476==v0[115 + 43 ]) ,"Usage: ldb:ipairs('dataobjectname') or ldb:ipairs(dataobject)");local v477=v474.proxystorage[v475] or v475 ;assert(v215[v477],v0[244 -83 ]);return v421,v215[v477],0 + 0 ;end;end end v191();local function v192() local v218=v0[829 -(89 + 578) ];local v219=37 + 14 ;if  not v189 then error(v218   .. v0[338 -175 ] );end local v220=v189(v0[1213 -(572 + 477) ],true);if  not v220 then error(v218   .. v0[23 + 142 ] );end local v221=v189:NewLibrary(v218,v219);if  not v221 then return;end v221.objects=v221.objects or {} ;v221.callbackRegistered=v221.callbackRegistered or nil ;v221.callbacks=v221.callbacks or v189(v0[104 + 69 ]):New(v221) ;v221.radius=v221.radius or (1 + 4) ;local v226,v227,v228,v229=next,Minimap,CreateFrame,AddonCompartmentFrame;v221.tooltip=v221.tooltip or v228(v0[265 -(84 + 2) ],v0[296 -116 ],UIParent,v0[131 + 50 ]) ;local v231=false;v221.IconCallback=function(v283,v284,v285,v286,v287) if v221.objects[v285] then if (v286==v0[1026 -(497 + 345) ]) then v221.objects[v285].icon:SetTexture(v287);elseif (v286==v0[5 + 183 ]) then v221.objects[v285].icon:UpdateCoord();elseif (v286==v0[33 + 159 ]) then local v549,v550,v551=v221.objects[v285].icon:GetVertexColor();v221.objects[v285].icon:SetVertexColor(v287,v550,v551);elseif (v286==v0[1532 -(605 + 728) ]) then local v553,v554,v555=v221.objects[v285].icon:GetVertexColor();v221.objects[v285].icon:SetVertexColor(v553,v287,v555);elseif (v286==v0[147 + 59 ]) then local v556,v557=v221.objects[v285].icon:GetVertexColor();v221.objects[v285].icon:SetVertexColor(v556,v557,v287);end end end;if  not v221.callbackRegistered then v220.RegisterCallback(v221,v0[478 -263 ],v0[10 + 206 ]);v220.RegisterCallback(v221,v0[805 -587 ],v0[198 + 21 ]);v220.RegisterCallback(v221,v0[612 -391 ],v0[168 + 54 ]);v220.RegisterCallback(v221,v0[713 -(457 + 32) ],v0[96 + 129 ]);v220.RegisterCallback(v221,v0[1629 -(832 + 570) ],v0[215 + 13 ]);v221.callbackRegistered=true;end local function v233(v288) local v289,v290=v288:GetCenter();if ( not v289 or  not v290) then return v0[61 + 170 ];end local v291=((v289>((UIParent:GetWidth() * (6 -4))/(2 + 1))) and v0[1029 -(588 + 208) ]) or ((v289<(UIParent:GetWidth()/(8 -5))) and v0[2035 -(884 + 916) ]) or "" ;local v292=((v290>(UIParent:GetHeight()/(3 -1))) and v0[138 + 100 ]) or v0[892 -(232 + 421) ] ;return v292   .. v291 ,v288,(((v292==v0[2129 -(1569 + 320) ]) and v0[60 + 181 ]) or v0[46 + 196 ])   .. v291 ;end local function v234(v293) if v231 then return;end for v424,v425 in v226,v221.objects do if v425.showOnMouseover then v425.fadeOut:Stop();v425:SetAlpha(3 -2 );end end local v294=v293.dataObject;if v294.OnTooltipShow then v221.tooltip:SetOwner(v293,v0[857 -(316 + 289) ]);v221.tooltip:SetPoint(v233(v293));v294.OnTooltipShow(v221.tooltip);v221.tooltip:Show();elseif v294.OnEnter then v294.OnEnter(v293);end end local function v235(v295) v221.tooltip:Hide();if  not v231 then for v505,v506 in v226,v221.objects do if v506.showOnMouseover then v506.fadeOut:Play();end end end local v296=v295.dataObject;if v296.OnLeave then v296.OnLeave(v295);end end local function v236(v297) local v298=v297.value;local v299=v221.objects[v298];if (v299 and v299.dataObject) then if v299.dataObject.OnTooltipShow then v221.tooltip:SetOwner(v297,v0[724 -447 ]);v221.tooltip:SetPoint(v233(v297));v299.dataObject.OnTooltipShow(v221.tooltip);v221.tooltip:Show();elseif v299.dataObject.OnEnter then v299.dataObject.OnEnter(v297);end end end local function v237(v300) v221.tooltip:Hide();local v301=v300.value;local v302=v221.objects[v301];if (v302 and v302.dataObject) then if v302.dataObject.OnLeave then v302.dataObject.OnLeave(v300);end end end local v238,v239;do local v303={[v0[14 + 284 ]]={true,true,true,true},[v0[470 -171 ]]={false,false,false,false},[v0[481 -(92 + 89) ]]={false,false,false,true},[v0[42 + 259 ]]={false,false,true,false},[v0[38 + 264 ]]={false,true,false,false},[v0[1438 -(832 + 303) ]]={true,false,false,false},[v0[1093 -(766 + 23) ]]={false,true,false,true},[v0[1378 -(1036 + 37) ]]={true,false,true,false},[v0[1219 -(910 + 3) ]]={false,false,true,true},[v0[110 + 197 ]]={true,true,false,false},[v0[220 + 88 ]]={false,true,true,true},[v0[1163 -854 ]]={true,false,true,true},[v0[293 + 17 ]]={true,true,false,true},[v0[191 + 120 ]]={true,true,true,false}};local v304,v305,v306,v307,v308,v309=math.rad,math.cos,math.sin,math.sqrt,math.max,math.min;function v239(v426,v427) local v428=v304(v427 or (399 -174) );local v429,v430,v431=v305(v428),v306(v428),1 + 0 ;if (v429<(0 -0)) then v431=v431 + (1027 -(834 + 192)) ;end if (v430>(0 + 0)) then v431=v431 + 1 + 1 ;end local v432=(GetMinimapShape and GetMinimapShape()) or v0[7 + 311 ] ;local v433=v303[v432];local v434=(v227:GetWidth()/(2 -0)) + v221.radius ;local v435=(v227:GetHeight()/(306 -(300 + 4))) + v221.radius ;if v433[v431] then v429,v430=v429 * v434 ,v430 * v435 ;else local v507=v307((1 + 1) * (v434^(5 -3)) ) -(372 -(112 + 250)) ;local v508=v307((1 + 1) * (v435^(4 -2)) ) -(6 + 4) ;v429=v308( -v434,v309(v429 * v507 ,v434));v430=v308( -v435,v309(v430 * v508 ,v435));end v426:SetPoint(v0[168 + 156 ],v227,v0[244 + 81 ],v429,v430);end end local function v240(v310,v311) if v310.dataObject.OnClick then v310.dataObject.OnClick(v310,v311);end end local function v241(v312) v312.isMouseDown=true;v312.icon:UpdateCoord();end local function v242(v314) v314.isMouseDown=false;v314.icon:UpdateCoord();end do local v316,v317=math.deg,math.atan2;local function v318(v436) local v437,v438=v227:GetCenter();local v439,v440=GetCursorPosition();local v441=v227:GetEffectiveScale();v439,v440=v439/v441 ,v440/v441 ;local v442=112 + 113 ;if v436.db then v442=v316(v317(v440-v438 ,v439-v437 ))%(268 + 92) ;v436.db.minimapPos=v442;else v442=v316(v317(v440-v438 ,v439-v437 ))%(1774 -(1001 + 413)) ;v436.minimapPos=v442;end v239(v436,v442);end function v238(v443) v443:LockHighlight();v443.isMouseDown=true;v443.icon:UpdateCoord();v443:SetScript(v0[777 -428 ],v318);v231=true;v221.tooltip:Hide();for v478,v479 in v226,v221.objects do if v479.showOnMouseover then v479.fadeOut:Stop();v479:SetAlpha(883 -(244 + 638) );end end end end local function v243(v319) v319:SetScript(v0[1051 -(627 + 66) ],nil);v319.isMouseDown=false;v319.icon:UpdateCoord();v319:UnlockHighlight();v231=false;for v445,v446 in v226,v221.objects do if v446.showOnMouseover then v446.fadeOut:Play();end end end local v244={602 -(512 + 90) ,718 -(373 + 344) ,0 + 0 ,1 -0 };local function v245(v321) local v322=v321:GetParent().dataObject.iconCoords or v244 ;local v323,v324=1099 -(35 + 1064) ,0 + 0 ;if  not v321:GetParent().isMouseDown then v323=(v322[4 -2 ] -v322[1 + 0 ]) * (1236.05 -(298 + 938)) ;v324=(v322[1263 -(233 + 1026) ] -v322[1669 -(636 + 1030) ]) * (0.05 + 0) ;end v321:SetTexCoord(v322[1 + 0 ] + v323 ,v322[1 + 1 ] -v323 ,v322[1 + 2 ] + v324 ,v322[225 -(55 + 166) ] -v324 );end local function v246(v325,v326,v327,v328) local v329=v228(v0[73 + 300 ],v0[38 + 336 ]   .. v325 ,v227);v329.dataObject=v326;v329.db=v327;v329:SetFrameStrata(v0[1443 -1065 ]);v329:SetFixedFrameStrata(true);v329:SetFrameLevel(305 -(36 + 261) );v329:SetFixedFrameLevel(true);v329:SetSize(53 -22 ,1399 -(34 + 1334) );v329:RegisterForClicks(v0[148 + 236 ]);v329:RegisterForDrag(v0[300 + 86 ]);v329:SetHighlightTexture(137760 -(1035 + 248) );if (WOW_PROJECT_ID==WOW_PROJECT_MAINLINE) then local v480=v329:CreateTexture(nil,v0[410 -(20 + 1) ]);v480:SetSize(27 + 23 ,369 -(134 + 185) );v480:SetTexture(137563 -(549 + 584) );v480:SetPoint(v0[1078 -(314 + 371) ],v329,v0[1352 -958 ],968 -(478 + 490) ,0 + 0 );local v481=v329:CreateTexture(nil,v0[1568 -(786 + 386) ]);v481:SetSize(77 -53 ,1403 -(1055 + 324) );v481:SetTexture(137807 -(1093 + 247) );v481:SetPoint(v0[356 + 44 ],v329,v0[43 + 358 ],0 -0 ,3 -2 );local v482=v329:CreateTexture(nil,v0[1146 -743 ]);v482:SetSize(45 -27 ,7 + 11 );v482:SetTexture(v326.icon);v482:SetPoint(v0[1571 -1163 ],v329,v0[1409 -1000 ],0 + 0 ,2 -1 );v329.icon=v482;else local v484=v329:CreateTexture(nil,v0[1100 -(364 + 324) ]);v484:SetSize(144 -91 ,126 -73 );v484:SetTexture(45218 + 91212 );v484:SetPoint(v0[1740 -1324 ]);local v485=v329:CreateTexture(nil,v0[669 -251 ]);v485:SetSize(60 -40 ,1288 -(1249 + 19) );v485:SetTexture(123181 + 13286 );v485:SetPoint(v0[1642 -1220 ],1093 -(686 + 400) , -(4 + 1));local v486=v329:CreateTexture(nil,v0[653 -(73 + 156) ]);v486:SetSize(1 + 16 ,828 -(721 + 90) );v486:SetTexture(v326.icon);v486:SetPoint(v0[5 + 424 ],22 -15 , -(476 -(224 + 246)));v329.icon=v486;end v329.isMouseDown=false;local v333,v334,v335=v329.icon:GetVertexColor();v329.icon:SetVertexColor(v326.iconR or v333 ,v326.iconG or v334 ,v326.iconB or v335 );v329.icon.UpdateCoord=v245;v329.icon:UpdateCoord();v329:SetScript(v0[718 -274 ],v234);v329:SetScript(v0[821 -375 ],v235);v329:SetScript(v0[82 + 366 ],v240);if ( not v327 or  not v327.lock) then v329:SetScript(v0[11 + 440 ],v238);v329:SetScript(v0[333 + 120 ],v243);end v329:SetScript(v0[904 -449 ],v241);v329:SetScript(v0[1520 -1063 ],v242);v329.fadeOut=v329:CreateAnimationGroup();local v338=v329.fadeOut:CreateAnimation(v0[975 -(203 + 310) ]);v338:SetOrder(1994 -(1238 + 755) );v338:SetDuration(0.2 + 0 );v338:SetFromAlpha(1535 -(709 + 825) );v338:SetToAlpha(0 -0 );v338:SetStartDelay(1 -0 );v329.fadeOut:SetToFinalAlpha(true);v221.objects[v325]=v329;if v221.loggedIn then v239(v329,v327 and v327.minimapPos );if ( not v327 or  not v327.hide) then v329:Show();else v329:Hide();end end if (v327 and v327.showInCompartment) then v221:AddButtonToCompartment(v325,v328);end v221.callbacks:Fire(v0[1344 -(196 + 668) ],v329,v325);end if  not v221.loggedIn then local v447=v228(v0[1902 -1420 ]);v447:SetScript(v0[1002 -518 ],function(v488) for v511,v512 in v226,v221.objects do v239(v512,v512.db and v512.db.minimapPos );if ( not v512.db or  not v512.db.hide) then v512:Show();else v512:Hide();end end v221.loggedIn=true;v488:SetScript(v0[1329 -(171 + 662) ],nil);end);v447:RegisterEvent(v0[591 -(4 + 89) ]);end do local function v340() if v231 then return;end for v490,v491 in v226,v221.objects do if v491.showOnMouseover then v491.fadeOut:Stop();v491:SetAlpha(3 -2 );end end end local function v341() if v231 then return;end for v492,v493 in v226,v221.objects do if v493.showOnMouseover then v493.fadeOut:Play();end end end v227:HookScript(v0[186 + 323 ],v340);v227:HookScript(v0[2244 -1733 ],v341);end v221.Register=function(v342,v343,v344,v345,v346) if  not v344.icon then error("Can't register LDB objects without icons set!");end if v221:GetMinimapButton(v343) then error(v218   .. ": Object '"   .. v343   .. "' is already registered." );end v246(v343,v344,v345,v346);end;v221.Lock=function(v347,v348) local v349=v221:GetMinimapButton(v348);if v349 then v349:SetScript(v0[205 + 316 ],nil);v349:SetScript(v0[2009 -(35 + 1451) ],nil);if v349.db then v349.db.lock=true;end end end;v221.Unlock=function(v350,v351) local v352=v221:GetMinimapButton(v351);if v352 then v352:SetScript(v0[1983 -(28 + 1425) ],v238);v352:SetScript(v0[2525 -(941 + 1052) ],v243);if v352.db then v352.db.lock=nil;end end end;v221.Hide=function(v353,v354) local v355=v221:GetMinimapButton(v354);if v355 then v355:Hide();end end;v221.Show=function(v356,v357) local v358=v221:GetMinimapButton(v357);if v358 then v358:Show();v239(v358,(v358.db and v358.db.minimapPos) or v358.minimapPos );end end;v221.IsRegistered=function(v359,v360) return (v221.objects[v360] and true) or false ;end;v221.Refresh=function(v361,v362,v363) local v364=v221:GetMinimapButton(v362);if v364 then if v363 then v364.db=v363;end v239(v364,(v364.db and v364.db.minimapPos) or v364.minimapPos );if ( not v364.db or  not v364.db.hide) then v364:Show();else v364:Hide();end if ( not v364.db or  not v364.db.lock) then v364:SetScript(v0[541 + 23 ],v238);v364:SetScript(v0[2080 -(822 + 692) ],v243);else v364:SetScript(v0[810 -242 ],nil);v364:SetScript(v0[269 + 301 ],nil);end end end;v221.ShowOnEnter=function(v365,v366,v367) local v368=v221:GetMinimapButton(v366);if v368 then if v367 then v368.showOnMouseover=true;v368.fadeOut:Stop();v368:SetAlpha(297 -(45 + 252) );else v368.showOnMouseover=false;v368.fadeOut:Stop();v368:SetAlpha(1 + 0 );end end end;v221.GetMinimapButton=function(v369,v370) return v221.objects[v370];end;v221.GetButtonList=function(v371) local v372={};for v448 in v226,v221.objects do v372[ #v372 + 1 + 0 ]=v448;end return v372;end;v221.SetButtonRadius=function(v373,v374) if (type(v374)==v0[1425 -839 ]) then v221.radius=v374;for v513,v514 in v226,v221.objects do v239(v514,(v514.db and v514.db.minimapPos) or v514.minimapPos );end end end;v221.SetButtonToPosition=function(v375,v376,v377) v239(v221.objects[v376] or v376 ,v377);end;v221.IsButtonCompartmentAvailable=function(v378) if v229 then return true;end end;v221.IsButtonInCompartment=function(v379,v380) local v381=v221.objects[v380];if (v381 and v381.db and v381.db.showInCompartment) then return true;end return false;end;v221.AddButtonToCompartment=function(v382,v383,v384) local v385=v221.objects[v383];if (v385 and  not v385.compartmentData and v229) then if v385.db then v385.db.showInCompartment=true;end v385.compartmentData={[v0[1041 -(114 + 319) ]]=v383,[v0[873 -264 ]]=v384 or v385.dataObject.icon ,[v0[783 -171 ]]=true,[v0[391 + 222 ]]=true,[v0[914 -300 ]]=function(v515,v516,v516,v516,v517) v385.dataObject.OnClick(v515,v517);end,[v0[1292 -675 ]]=v236,[v0[2581 -(556 + 1407) ]]=v237};v229:RegisterAddon(v385.compartmentData);end end;v221.RemoveButtonFromCompartment=function(v386,v387) local v388=v221.objects[v387];if (v388 and v388.compartmentData) then for v518=1207 -(741 + 465) , #v229.registeredAddons do local v519=v229.registeredAddons[v518];if (v519==v388.compartmentData) then v388.compartmentData=nil;if v388.db then v388.db.showInCompartment=nil;end table.remove(v229.registeredAddons,v518);v229:UpdateDisplay();return;end end end end;for v389,v390 in v226,v221.objects do local v391=v390.db;if ( not v391 or  not v391.lock) then v390:SetScript(v0[1103 -(170 + 295) ],v238);v390:SetScript(v0[338 + 302 ],v243);end v390:SetScript(v0[590 + 52 ],v234);v390:SetScript(v0[1585 -941 ],v235);v390:SetScript(v0[536 + 110 ],v240);v390:SetScript(v0[416 + 232 ],v241);v390:SetScript(v0[369 + 281 ],v242);if  not v390.fadeOut then v390.fadeOut=v390:CreateAnimationGroup();local v497=v390.fadeOut:CreateAnimation(v0[1886 -(957 + 273) ]);v497:SetOrder(1 + 0 );v497:SetDuration(0.2 + 0 );v497:SetFromAlpha(3 -2 );v497:SetToAlpha(0 -0 );v497:SetStartDelay(2 -1 );v390.fadeOut:SetToFinalAlpha(true);end end v221:SetButtonRadius(v221.radius);if v221.notCreated then for v498 in v226,v221.notCreated do v246(v498,v221.notCreated[v498][4 -3 ],v221.notCreated[v498][1782 -(389 + 1391) ]);end v221.notCreated=nil;end end v192();end;return v178[v0[421 + 250 ]](...);
+-- $Id: LibStub.lua 103 2014-10-16 03:02:50Z mikk $
+-- LibStub is a simple versioning stub meant for use in Libraries.  http://www.wowace.com/addons/libstub/ for more info
+-- LibStub is hereby placed in the Public Domain
+-- Credits: Kaelten, Cladhaire, ckknight, Mikk, Ammo, Nevcairiel, joshborke
+local LIBSTUB_MAJOR, LIBSTUB_MINOR = "LibStub", 2  -- NEVER MAKE THIS AN SVN REVISION! IT NEEDS TO BE USABLE IN ALL REPOS!
+local LibStub = _G[LIBSTUB_MAJOR]
+
+-- Check to see is this version of the stub is obsolete
+if not LibStub or LibStub.minor < LIBSTUB_MINOR then
+	LibStub = LibStub or {libs = {}, minors = {} }
+	_G[LIBSTUB_MAJOR] = LibStub
+	LibStub.minor = LIBSTUB_MINOR
+	
+	-- LibStub:NewLibrary(major, minor)
+	-- major (string) - the major version of the library
+	-- minor (string or number ) - the minor version of the library
+	-- 
+	-- returns nil if a newer or same version of the lib is already present
+	-- returns empty library object or old library object if upgrade is needed
+	function LibStub:NewLibrary(major, minor)
+		assert(type(major) == "string", "Bad argument #2 to `NewLibrary' (string expected)")
+		minor = assert(tonumber(strmatch(minor, "%d+")), "Minor version must either be a number or contain a number.")
+		
+		local oldminor = self.minors[major]
+		if oldminor and oldminor >= minor then return nil end
+		self.minors[major], self.libs[major] = minor, self.libs[major] or {}
+		return self.libs[major], oldminor
+	end
+	
+	-- LibStub:GetLibrary(major, [silent])
+	-- major (string) - the major version of the library
+	-- silent (boolean) - if true, library is optional, silently return nil if its not found
+	--
+	-- throws an error if the library can not be found (except silent is set)
+	-- returns the library object if found
+	function LibStub:GetLibrary(major, silent)
+		if not self.libs[major] and not silent then
+			error(("Cannot find a library instance of %q."):format(tostring(major)), 2)
+		end
+		return self.libs[major], self.minors[major]
+	end
+	
+	-- LibStub:IterateLibraries()
+	-- 
+	-- Returns an iterator for the currently registered libraries
+	function LibStub:IterateLibraries() 
+		return pairs(self.libs) 
+	end
+	
+	setmetatable(LibStub, { __call = LibStub.GetLibrary })
+end
+
+local function LeaCallbackHandler()
+
+	-- CallbackStart
+	--[[ $Id: CallbackHandler-1.0.lua 26 2022-12-12 15:09:39Z nevcairiel $ ]]
+	local MAJOR, MINOR = "CallbackHandler-1.0", 8
+	local CallbackHandler = LibStub:NewLibrary(MAJOR, MINOR)
+	
+	if not CallbackHandler then return end -- No upgrade needed
+	
+	local meta = {__index = function(tbl, key) tbl[key] = {} return tbl[key] end}
+	
+	-- Lua APIs
+	local securecallfunction, error = securecallfunction, error
+	local setmetatable, rawget = setmetatable, rawget
+	local next, select, pairs, type, tostring = next, select, pairs, type, tostring
+	
+	
+	local function Dispatch(handlers, ...)
+		local index, method = next(handlers)
+		if not method then return end
+		repeat
+			securecallfunction(method, ...)
+			index, method = next(handlers, index)
+		until not method
+	end
+	
+	--------------------------------------------------------------------------
+	-- CallbackHandler:New
+	--
+	--   target            - target object to embed public APIs in
+	--   RegisterName      - name of the callback registration API, default "RegisterCallback"
+	--   UnregisterName    - name of the callback unregistration API, default "UnregisterCallback"
+	--   UnregisterAllName - name of the API to unregister all callbacks, default "UnregisterAllCallbacks". false == don't publish this API.
+	
+	function CallbackHandler.New(_self, target, RegisterName, UnregisterName, UnregisterAllName)
+	
+		RegisterName = RegisterName or "RegisterCallback"
+		UnregisterName = UnregisterName or "UnregisterCallback"
+		if UnregisterAllName==nil then	-- false is used to indicate "don't want this method"
+			UnregisterAllName = "UnregisterAllCallbacks"
+		end
+	
+		-- we declare all objects and exported APIs inside this closure to quickly gain access
+		-- to e.g. function names, the "target" parameter, etc
+	
+	
+		-- Create the registry object
+		local events = setmetatable({}, meta)
+		local registry = { recurse=0, events=events }
+	
+		-- registry:Fire() - fires the given event/message into the registry
+		function registry:Fire(eventname, ...)
+			if not rawget(events, eventname) or not next(events[eventname]) then return end
+			local oldrecurse = registry.recurse
+			registry.recurse = oldrecurse + 1
+	
+			Dispatch(events[eventname], eventname, ...)
+	
+			registry.recurse = oldrecurse
+	
+			if registry.insertQueue and oldrecurse==0 then
+				-- Something in one of our callbacks wanted to register more callbacks; they got queued
+				for event,callbacks in pairs(registry.insertQueue) do
+					local first = not rawget(events, event) or not next(events[event])	-- test for empty before. not test for one member after. that one member may have been overwritten.
+					for object,func in pairs(callbacks) do
+						events[event][object] = func
+						-- fire OnUsed callback?
+						if first and registry.OnUsed then
+							registry.OnUsed(registry, target, event)
+							first = nil
+						end
+					end
+				end
+				registry.insertQueue = nil
+			end
+		end
+	
+		-- Registration of a callback, handles:
+		--   self["method"], leads to self["method"](self, ...)
+		--   self with function ref, leads to functionref(...)
+		--   "addonId" (instead of self) with function ref, leads to functionref(...)
+		-- all with an optional arg, which, if present, gets passed as first argument (after self if present)
+		target[RegisterName] = function(self, eventname, method, ... --[[actually just a single arg]])
+			if type(eventname) ~= "string" then
+				error("Usage: "..RegisterName.."(eventname, method[, arg]): 'eventname' - string expected.", 2)
+			end
+	
+			method = method or eventname
+	
+			local first = not rawget(events, eventname) or not next(events[eventname])	-- test for empty before. not test for one member after. that one member may have been overwritten.
+	
+			if type(method) ~= "string" and type(method) ~= "function" then
+				error("Usage: "..RegisterName.."(\"eventname\", \"methodname\"): 'methodname' - string or function expected.", 2)
+			end
+	
+			local regfunc
+	
+			if type(method) == "string" then
+				-- self["method"] calling style
+				if type(self) ~= "table" then
+					error("Usage: "..RegisterName.."(\"eventname\", \"methodname\"): self was not a table?", 2)
+				elseif self==target then
+					error("Usage: "..RegisterName.."(\"eventname\", \"methodname\"): do not use Library:"..RegisterName.."(), use your own 'self'", 2)
+				elseif type(self[method]) ~= "function" then
+					error("Usage: "..RegisterName.."(\"eventname\", \"methodname\"): 'methodname' - method '"..tostring(method).."' not found on self.", 2)
+				end
+	
+				if select("#",...)>=1 then	-- this is not the same as testing for arg==nil!
+					local arg=select(1,...)
+					regfunc = function(...) self[method](self,arg,...) end
+				else
+					regfunc = function(...) self[method](self,...) end
+				end
+			else
+				-- function ref with self=object or self="addonId" or self=thread
+				if type(self)~="table" and type(self)~="string" and type(self)~="thread" then
+					error("Usage: "..RegisterName.."(self or \"addonId\", eventname, method): 'self or addonId': table or string or thread expected.", 2)
+				end
+	
+				if select("#",...)>=1 then	-- this is not the same as testing for arg==nil!
+					local arg=select(1,...)
+					regfunc = function(...) method(arg,...) end
+				else
+					regfunc = method
+				end
+			end
+	
+	
+			if events[eventname][self] or registry.recurse<1 then
+			-- if registry.recurse<1 then
+				-- we're overwriting an existing entry, or not currently recursing. just set it.
+				events[eventname][self] = regfunc
+				-- fire OnUsed callback?
+				if registry.OnUsed and first then
+					registry.OnUsed(registry, target, eventname)
+				end
+			else
+				-- we're currently processing a callback in this registry, so delay the registration of this new entry!
+				-- yes, we're a bit wasteful on garbage, but this is a fringe case, so we're picking low implementation overhead over garbage efficiency
+				registry.insertQueue = registry.insertQueue or setmetatable({},meta)
+				registry.insertQueue[eventname][self] = regfunc
+			end
+		end
+	
+		-- Unregister a callback
+		target[UnregisterName] = function(self, eventname)
+			if not self or self==target then
+				error("Usage: "..UnregisterName.."(eventname): bad 'self'", 2)
+			end
+			if type(eventname) ~= "string" then
+				error("Usage: "..UnregisterName.."(eventname): 'eventname' - string expected.", 2)
+			end
+			if rawget(events, eventname) and events[eventname][self] then
+				events[eventname][self] = nil
+				-- Fire OnUnused callback?
+				if registry.OnUnused and not next(events[eventname]) then
+					registry.OnUnused(registry, target, eventname)
+				end
+			end
+			if registry.insertQueue and rawget(registry.insertQueue, eventname) and registry.insertQueue[eventname][self] then
+				registry.insertQueue[eventname][self] = nil
+			end
+		end
+	
+		-- OPTIONAL: Unregister all callbacks for given selfs/addonIds
+		if UnregisterAllName then
+			target[UnregisterAllName] = function(...)
+				if select("#",...)<1 then
+					error("Usage: "..UnregisterAllName.."([whatFor]): missing 'self' or \"addonId\" to unregister events for.", 2)
+				end
+				if select("#",...)==1 and ...==target then
+					error("Usage: "..UnregisterAllName.."([whatFor]): supply a meaningful 'self' or \"addonId\"", 2)
+				end
+	
+	
+				for i=1,select("#",...) do
+					local self = select(i,...)
+					if registry.insertQueue then
+						for eventname, callbacks in pairs(registry.insertQueue) do
+							if callbacks[self] then
+								callbacks[self] = nil
+							end
+						end
+					end
+					for eventname, callbacks in pairs(events) do
+						if callbacks[self] then
+							callbacks[self] = nil
+							-- Fire OnUnused callback?
+							if registry.OnUnused and not next(callbacks) then
+								registry.OnUnused(registry, target, eventname)
+							end
+						end
+					end
+				end
+			end
+		end
+	
+		return registry
+	end
+	
+	
+	-- CallbackHandler purposefully does NOT do explicit embedding. Nor does it
+	-- try to upgrade old implicit embeds since the system is selfcontained and
+	-- relies on closures to work.
+	
+	-- CallbackEnd
+	end
+	
+	LeaCallbackHandler()
+	
+	----------------------------------------------------------------------
+	-- L13: LibDBIcon: LibDataBroker
+	----------------------------------------------------------------------
+	
+	local function LeaDataBroker()
+	
+	-- DataBrokerStart
+	
+	assert(LibStub, "LibDataBroker-1.1 requires LibStub")
+	assert(LibStub:GetLibrary("CallbackHandler-1.0", true), "LibDataBroker-1.1 requires CallbackHandler-1.0")
+	
+	local lib, oldminor = LibStub:NewLibrary("LibDataBroker-1.1", 4)
+	if not lib then return end
+	oldminor = oldminor or 0
+	
+	
+	lib.callbacks = lib.callbacks or LibStub:GetLibrary("CallbackHandler-1.0"):New(lib)
+	lib.attributestorage, lib.namestorage, lib.proxystorage = lib.attributestorage or {}, lib.namestorage or {}, lib.proxystorage or {}
+	local attributestorage, namestorage, callbacks = lib.attributestorage, lib.namestorage, lib.callbacks
+	
+	if oldminor < 2 then
+		lib.domt = {
+			__metatable = "access denied",
+			__index = function(self, key) return attributestorage[self] and attributestorage[self][key] end,
+		}
+	end
+	
+	if oldminor < 3 then
+		lib.domt.__newindex = function(self, key, value)
+			if not attributestorage[self] then attributestorage[self] = {} end
+			if attributestorage[self][key] == value then return end
+			attributestorage[self][key] = value
+			local name = namestorage[self]
+			if not name then return end
+			callbacks:Fire("LibDataBroker_AttributeChanged", name, key, value, self)
+			callbacks:Fire("LibDataBroker_AttributeChanged_"..name, name, key, value, self)
+			callbacks:Fire("LibDataBroker_AttributeChanged_"..name.."_"..key, name, key, value, self)
+			callbacks:Fire("LibDataBroker_AttributeChanged__"..key, name, key, value, self)
+		end
+	end
+	
+	if oldminor < 2 then
+		function lib:NewDataObject(name, dataobj)
+			if self.proxystorage[name] then return end
+	
+			if dataobj then
+				assert(type(dataobj) == "table", "Invalid dataobj, must be nil or a table")
+				self.attributestorage[dataobj] = {}
+				for i,v in pairs(dataobj) do
+					self.attributestorage[dataobj][i] = v
+					dataobj[i] = nil
+				end
+			end
+			dataobj = setmetatable(dataobj or {}, self.domt)
+			self.proxystorage[name], self.namestorage[dataobj] = dataobj, name
+			self.callbacks:Fire("LibDataBroker_DataObjectCreated", name, dataobj)
+			return dataobj
+		end
+	end
+	
+	if oldminor < 1 then
+		function lib:DataObjectIterator()
+			return pairs(self.proxystorage)
+		end
+	
+		function lib:GetDataObjectByName(dataobjectname)
+			return self.proxystorage[dataobjectname]
+		end
+	
+		function lib:GetNameByDataObject(dataobject)
+			return self.namestorage[dataobject]
+		end
+	end
+	
+	if oldminor < 4 then
+		local next = pairs(attributestorage)
+		function lib:pairs(dataobject_or_name)
+			local t = type(dataobject_or_name)
+			assert(t == "string" or t == "table", "Usage: ldb:pairs('dataobjectname') or ldb:pairs(dataobject)")
+	
+			local dataobj = self.proxystorage[dataobject_or_name] or dataobject_or_name
+			assert(attributestorage[dataobj], "Data object not found")
+	
+			return next, attributestorage[dataobj], nil
+		end
+	
+		local ipairs_iter = ipairs(attributestorage)
+		function lib:ipairs(dataobject_or_name)
+			local t = type(dataobject_or_name)
+			assert(t == "string" or t == "table", "Usage: ldb:ipairs('dataobjectname') or ldb:ipairs(dataobject)")
+	
+			local dataobj = self.proxystorage[dataobject_or_name] or dataobject_or_name
+			assert(attributestorage[dataobj], "Data object not found")
+	
+			return ipairs_iter, attributestorage[dataobj], 0
+		end
+	end
+	-- DataBrokerEnd
+	
+	end
+	LeaDataBroker()
+	
+	----------------------------------------------------------------------
+	-- L14: LibDBIcon: LibDBIcon
+	----------------------------------------------------------------------
+	
+	local function LeaLibDBIcon()
+	
+	-- LibDBIconStart
+	--@curseforge-project-slug: libdbicon-1-0@
+	-----------------------------------------------------------------------
+	-- LibDBIcon-1.0
+	--
+	-- Allows addons to easily create a lightweight minimap icon as an alternative to heavier LDB displays.
+	--
+	
+	local DBICON10 = "LibDBIcon-1.0"
+	local DBICON10_MINOR = 51 -- Bump on changes
+	if not LibStub then error(DBICON10 .. " requires LibStub.") end
+	local ldb = LibStub("LibDataBroker-1.1", true)
+	if not ldb then error(DBICON10 .. " requires LibDataBroker-1.1.") end
+	local lib = LibStub:NewLibrary(DBICON10, DBICON10_MINOR)
+	if not lib then return end
+	
+	lib.objects = lib.objects or {}
+	lib.callbackRegistered = lib.callbackRegistered or nil
+	lib.callbacks = lib.callbacks or LibStub("CallbackHandler-1.0"):New(lib)
+	lib.radius = lib.radius or 5
+	local next, Minimap, CreateFrame, AddonCompartmentFrame = next, Minimap, CreateFrame, AddonCompartmentFrame
+	lib.tooltip = lib.tooltip or CreateFrame("GameTooltip", "LibDBIconTooltip", UIParent, "GameTooltipTemplate")
+	local isDraggingButton = false
+	
+	function lib:IconCallback(event, name, key, value)
+		if lib.objects[name] then
+			if key == "icon" then
+				lib.objects[name].icon:SetTexture(value)
+			elseif key == "iconCoords" then
+				lib.objects[name].icon:UpdateCoord()
+			elseif key == "iconR" then
+				local _, g, b = lib.objects[name].icon:GetVertexColor()
+				lib.objects[name].icon:SetVertexColor(value, g, b)
+			elseif key == "iconG" then
+				local r, _, b = lib.objects[name].icon:GetVertexColor()
+				lib.objects[name].icon:SetVertexColor(r, value, b)
+			elseif key == "iconB" then
+				local r, g = lib.objects[name].icon:GetVertexColor()
+				lib.objects[name].icon:SetVertexColor(r, g, value)
+			end
+		end
+	end
+	if not lib.callbackRegistered then
+		ldb.RegisterCallback(lib, "LibDataBroker_AttributeChanged__icon", "IconCallback")
+		ldb.RegisterCallback(lib, "LibDataBroker_AttributeChanged__iconCoords", "IconCallback")
+		ldb.RegisterCallback(lib, "LibDataBroker_AttributeChanged__iconR", "IconCallback")
+		ldb.RegisterCallback(lib, "LibDataBroker_AttributeChanged__iconG", "IconCallback")
+		ldb.RegisterCallback(lib, "LibDataBroker_AttributeChanged__iconB", "IconCallback")
+		lib.callbackRegistered = true
+	end
+	
+	local function getAnchors(frame)
+		local x, y = frame:GetCenter()
+		if not x or not y then return "CENTER" end
+		local hhalf = (x > UIParent:GetWidth()*2/3) and "RIGHT" or (x < UIParent:GetWidth()/3) and "LEFT" or ""
+		local vhalf = (y > UIParent:GetHeight()/2) and "TOP" or "BOTTOM"
+		return vhalf..hhalf, frame, (vhalf == "TOP" and "BOTTOM" or "TOP")..hhalf
+	end
+	
+	local function onEnter(self)
+		if isDraggingButton then return end
+	
+		for _, button in next, lib.objects do
+			if button.showOnMouseover then
+				button.fadeOut:Stop()
+				button:SetAlpha(1)
+			end
+		end
+	
+		local obj = self.dataObject
+		if obj.OnTooltipShow then
+			lib.tooltip:SetOwner(self, "ANCHOR_NONE")
+			lib.tooltip:SetPoint(getAnchors(self))
+			obj.OnTooltipShow(lib.tooltip)
+			lib.tooltip:Show()
+		elseif obj.OnEnter then
+			obj.OnEnter(self)
+		end
+	end
+	
+	local function onLeave(self)
+		lib.tooltip:Hide()
+	
+		if not isDraggingButton then
+			for _, button in next, lib.objects do
+				if button.showOnMouseover then
+					button.fadeOut:Play()
+				end
+			end
+		end
+	
+		local obj = self.dataObject
+		if obj.OnLeave then
+			obj.OnLeave(self)
+		end
+	end
+	
+	local function onEnterCompartment(self)
+		local buttonName = self.value
+		local object = lib.objects[buttonName]
+		if object and object.dataObject then
+			if object.dataObject.OnTooltipShow then
+				lib.tooltip:SetOwner(self, "ANCHOR_NONE")
+				lib.tooltip:SetPoint(getAnchors(self))
+				object.dataObject.OnTooltipShow(lib.tooltip)
+				lib.tooltip:Show()
+			elseif object.dataObject.OnEnter then
+				object.dataObject.OnEnter(self)
+			end
+		end
+	end
+	
+	local function onLeaveCompartment(self)
+		lib.tooltip:Hide()
+	
+		local buttonName = self.value
+		local object = lib.objects[buttonName]
+		if object and object.dataObject then
+			if object.dataObject.OnLeave then
+				object.dataObject.OnLeave(self)
+			end
+		end
+	end
+	
+	--------------------------------------------------------------------------------
+	
+	local onDragStart, updatePosition
+	
+	do
+		local minimapShapes = {
+			["ROUND"] = {true, true, true, true},
+			["SQUARE"] = {false, false, false, false},
+			["CORNER-TOPLEFT"] = {false, false, false, true},
+			["CORNER-TOPRIGHT"] = {false, false, true, false},
+			["CORNER-BOTTOMLEFT"] = {false, true, false, false},
+			["CORNER-BOTTOMRIGHT"] = {true, false, false, false},
+			["SIDE-LEFT"] = {false, true, false, true},
+			["SIDE-RIGHT"] = {true, false, true, false},
+			["SIDE-TOP"] = {false, false, true, true},
+			["SIDE-BOTTOM"] = {true, true, false, false},
+			["TRICORNER-TOPLEFT"] = {false, true, true, true},
+			["TRICORNER-TOPRIGHT"] = {true, false, true, true},
+			["TRICORNER-BOTTOMLEFT"] = {true, true, false, true},
+			["TRICORNER-BOTTOMRIGHT"] = {true, true, true, false},
+		}
+	
+		local rad, cos, sin, sqrt, max, min = math.rad, math.cos, math.sin, math.sqrt, math.max, math.min
+		function updatePosition(button, position)
+			local angle = rad(position or 225)
+			local x, y, q = cos(angle), sin(angle), 1
+			if x < 0 then q = q + 1 end
+			if y > 0 then q = q + 2 end
+			local minimapShape = GetMinimapShape and GetMinimapShape() or "ROUND"
+			local quadTable = minimapShapes[minimapShape]
+			local w = (Minimap:GetWidth() / 2) + lib.radius
+			local h = (Minimap:GetHeight() / 2) + lib.radius
+			if quadTable[q] then
+				x, y = x*w, y*h
+			else
+				local diagRadiusW = sqrt(2*(w)^2)-10
+				local diagRadiusH = sqrt(2*(h)^2)-10
+				x = max(-w, min(x*diagRadiusW, w))
+				y = max(-h, min(y*diagRadiusH, h))
+			end
+			button:SetPoint("CENTER", Minimap, "CENTER", x, y)
+		end
+	end
+	
+	local function onClick(self, b)
+		if self.dataObject.OnClick then
+			self.dataObject.OnClick(self, b)
+		end
+	end
+	
+	local function onMouseDown(self)
+		self.isMouseDown = true
+		self.icon:UpdateCoord()
+	end
+	
+	local function onMouseUp(self)
+		self.isMouseDown = false
+		self.icon:UpdateCoord()
+	end
+	
+	do
+		local deg, atan2 = math.deg, math.atan2
+		local function onUpdate(self)
+			local mx, my = Minimap:GetCenter()
+			local px, py = GetCursorPosition()
+			local scale = Minimap:GetEffectiveScale()
+			px, py = px / scale, py / scale
+			local pos = 225
+			if self.db then
+				pos = deg(atan2(py - my, px - mx)) % 360
+				self.db.minimapPos = pos
+			else
+				pos = deg(atan2(py - my, px - mx)) % 360
+				self.minimapPos = pos
+			end
+			updatePosition(self, pos)
+		end
+	
+		function onDragStart(self)
+			self:LockHighlight()
+			self.isMouseDown = true
+			self.icon:UpdateCoord()
+			self:SetScript("OnUpdate", onUpdate)
+			isDraggingButton = true
+			lib.tooltip:Hide()
+			for _, button in next, lib.objects do
+				if button.showOnMouseover then
+					button.fadeOut:Stop()
+					button:SetAlpha(1)
+				end
+			end
+		end
+	end
+	
+	local function onDragStop(self)
+		self:SetScript("OnUpdate", nil)
+		self.isMouseDown = false
+		self.icon:UpdateCoord()
+		self:UnlockHighlight()
+		isDraggingButton = false
+		for _, button in next, lib.objects do
+			if button.showOnMouseover then
+				button.fadeOut:Play()
+			end
+		end
+	end
+	
+	local defaultCoords = {0, 1, 0, 1}
+	local function updateCoord(self)
+		local coords = self:GetParent().dataObject.iconCoords or defaultCoords
+		local deltaX, deltaY = 0, 0
+		if not self:GetParent().isMouseDown then
+			deltaX = (coords[2] - coords[1]) * 0.05
+			deltaY = (coords[4] - coords[3]) * 0.05
+		end
+		self:SetTexCoord(coords[1] + deltaX, coords[2] - deltaX, coords[3] + deltaY, coords[4] - deltaY)
+	end
+	
+	local function createButton(name, object, db, customCompartmentIcon)
+		local button = CreateFrame("Button", "LibDBIcon10_"..name, Minimap)
+		button.dataObject = object
+		button.db = db
+		button:SetFrameStrata("MEDIUM")
+		button:SetFixedFrameStrata(true)
+		button:SetFrameLevel(8)
+		button:SetFixedFrameLevel(true)
+		button:SetSize(31, 31)
+		button:RegisterForClicks("anyUp")
+		button:RegisterForDrag("LeftButton")
+		button:SetHighlightTexture(136477) --"Interface\\Minimap\\UI-Minimap-ZoomButton-Highlight"
+		if WOW_PROJECT_ID == WOW_PROJECT_MAINLINE then
+			local overlay = button:CreateTexture(nil, "OVERLAY")
+			overlay:SetSize(50, 50)
+			overlay:SetTexture(136430) --"Interface\\Minimap\\MiniMap-TrackingBorder"
+			overlay:SetPoint("TOPLEFT", button, "TOPLEFT", 0, 0)
+			local background = button:CreateTexture(nil, "BACKGROUND")
+			background:SetSize(24, 24)
+			background:SetTexture(136467) --"Interface\\Minimap\\UI-Minimap-Background"
+			background:SetPoint("CENTER", button, "CENTER", 0, 1)
+			local icon = button:CreateTexture(nil, "ARTWORK")
+			icon:SetSize(18, 18)
+			icon:SetTexture(object.icon)
+			icon:SetPoint("CENTER", button, "CENTER", 0, 1)
+			button.icon = icon
+		else
+			local overlay = button:CreateTexture(nil, "OVERLAY")
+			overlay:SetSize(53, 53)
+			overlay:SetTexture(136430) --"Interface\\Minimap\\MiniMap-TrackingBorder"
+			overlay:SetPoint("TOPLEFT")
+			local background = button:CreateTexture(nil, "BACKGROUND")
+			background:SetSize(20, 20)
+			background:SetTexture(136467) --"Interface\\Minimap\\UI-Minimap-Background"
+			background:SetPoint("TOPLEFT", 7, -5)
+			local icon = button:CreateTexture(nil, "ARTWORK")
+			icon:SetSize(17, 17)
+			icon:SetTexture(object.icon)
+			icon:SetPoint("TOPLEFT", 7, -6)
+			button.icon = icon
+		end
+	
+		button.isMouseDown = false
+		local r, g, b = button.icon:GetVertexColor()
+		button.icon:SetVertexColor(object.iconR or r, object.iconG or g, object.iconB or b)
+	
+		button.icon.UpdateCoord = updateCoord
+		button.icon:UpdateCoord()
+	
+		button:SetScript("OnEnter", onEnter)
+		button:SetScript("OnLeave", onLeave)
+		button:SetScript("OnClick", onClick)
+		if not db or not db.lock then
+			button:SetScript("OnDragStart", onDragStart)
+			button:SetScript("OnDragStop", onDragStop)
+		end
+		button:SetScript("OnMouseDown", onMouseDown)
+		button:SetScript("OnMouseUp", onMouseUp)
+	
+		button.fadeOut = button:CreateAnimationGroup()
+		local animOut = button.fadeOut:CreateAnimation("Alpha")
+		animOut:SetOrder(1)
+		animOut:SetDuration(0.2)
+		animOut:SetFromAlpha(1)
+		animOut:SetToAlpha(0)
+		animOut:SetStartDelay(1)
+		button.fadeOut:SetToFinalAlpha(true)
+	
+		lib.objects[name] = button
+	
+		if lib.loggedIn then
+			updatePosition(button, db and db.minimapPos)
+			if not db or not db.hide then
+				button:Show()
+			else
+				button:Hide()
+			end
+		end
+	
+		if db and db.showInCompartment then
+			lib:AddButtonToCompartment(name, customCompartmentIcon)
+		end
+		lib.callbacks:Fire("LibDBIcon_IconCreated", button, name) -- Fire 'Icon Created' callback
+	end
+	
+	-- Wait a bit with the initial positioning to let any GetMinimapShape addons
+	-- load up.
+	if not lib.loggedIn then
+		local frame = CreateFrame("Frame")
+		frame:SetScript("OnEvent", function(self)
+			for _, button in next, lib.objects do
+				updatePosition(button, button.db and button.db.minimapPos)
+				if not button.db or not button.db.hide then
+					button:Show()
+				else
+					button:Hide()
+				end
+			end
+			lib.loggedIn = true
+			self:SetScript("OnEvent", nil)
+		end)
+		frame:RegisterEvent("PLAYER_LOGIN")
+	end
+	
+	do
+		local function OnMinimapEnter()
+			if isDraggingButton then return end
+			for _, button in next, lib.objects do
+				if button.showOnMouseover then
+					button.fadeOut:Stop()
+					button:SetAlpha(1)
+				end
+			end
+		end
+		local function OnMinimapLeave()
+			if isDraggingButton then return end
+			for _, button in next, lib.objects do
+				if button.showOnMouseover then
+					button.fadeOut:Play()
+				end
+			end
+		end
+		Minimap:HookScript("OnEnter", OnMinimapEnter)
+		Minimap:HookScript("OnLeave", OnMinimapLeave)
+	end
+	
+	--------------------------------------------------------------------------------
+	-- Button API
+	--
+	
+	function lib:Register(name, object, db, customCompartmentIcon)
+		if not object.icon then error("Can't register LDB objects without icons set!") end
+		if lib:GetMinimapButton(name) then error(DBICON10.. ": Object '".. name .."' is already registered.") end
+		createButton(name, object, db, customCompartmentIcon)
+	end
+	
+	function lib:Lock(name)
+		local button = lib:GetMinimapButton(name)
+		if button then
+			button:SetScript("OnDragStart", nil)
+			button:SetScript("OnDragStop", nil)
+			if button.db then
+				button.db.lock = true
+			end
+		end
+	end
+	
+	function lib:Unlock(name)
+		local button = lib:GetMinimapButton(name)
+		if button then
+			button:SetScript("OnDragStart", onDragStart)
+			button:SetScript("OnDragStop", onDragStop)
+			if button.db then
+				button.db.lock = nil
+			end
+		end
+	end
+	
+	function lib:Hide(name)
+		local button = lib:GetMinimapButton(name)
+		if button then
+			button:Hide()
+		end
+	end
+	
+	function lib:Show(name)
+		local button = lib:GetMinimapButton(name)
+		if button then
+			button:Show()
+			updatePosition(button, button.db and button.db.minimapPos or button.minimapPos)
+		end
+	end
+	
+	function lib:IsRegistered(name)
+		return lib.objects[name] and true or false
+	end
+	
+	function lib:Refresh(name, db)
+		local button = lib:GetMinimapButton(name)
+		if button then
+			if db then
+				button.db = db
+			end
+			updatePosition(button, button.db and button.db.minimapPos or button.minimapPos)
+			if not button.db or not button.db.hide then
+				button:Show()
+			else
+				button:Hide()
+			end
+			if not button.db or not button.db.lock then
+				button:SetScript("OnDragStart", onDragStart)
+				button:SetScript("OnDragStop", onDragStop)
+			else
+				button:SetScript("OnDragStart", nil)
+				button:SetScript("OnDragStop", nil)
+			end
+		end
+	end
+	
+	function lib:ShowOnEnter(name, value)
+		local button = lib:GetMinimapButton(name)
+		if button then
+			if value then
+				button.showOnMouseover = true
+				button.fadeOut:Stop()
+				button:SetAlpha(0)
+			else
+				button.showOnMouseover = false
+				button.fadeOut:Stop()
+				button:SetAlpha(1)
+			end
+		end
+	end
+	
+	function lib:GetMinimapButton(name)
+		return lib.objects[name]
+	end
+	
+	function lib:GetButtonList()
+		local t = {}
+		for name in next, lib.objects do
+			t[#t+1] = name
+		end
+		return t
+	end
+	
+	function lib:SetButtonRadius(radius)
+		if type(radius) == "number" then
+			lib.radius = radius
+			for _, button in next, lib.objects do
+				updatePosition(button, button.db and button.db.minimapPos or button.minimapPos)
+			end
+		end
+	end
+	
+	function lib:SetButtonToPosition(button, position)
+		updatePosition(lib.objects[button] or button, position)
+	end
+	
+	--------------------------------------------------------------------------------
+	-- Addon Compartment API
+	--
+	
+	function lib:IsButtonCompartmentAvailable()
+		if AddonCompartmentFrame then
+			return true
+		end
+	end
+	
+	function lib:IsButtonInCompartment(buttonName)
+		local object = lib.objects[buttonName]
+		if object and object.db and object.db.showInCompartment then
+			return true
+		end
+		return false
+	end
+	
+	function lib:AddButtonToCompartment(buttonName, customIcon)
+		local object = lib.objects[buttonName]
+		if object and not object.compartmentData and AddonCompartmentFrame then
+			if object.db then
+				object.db.showInCompartment = true
+			end
+			object.compartmentData = {
+				text = buttonName,
+				icon = customIcon or object.dataObject.icon,
+				notCheckable = true,
+				registerForAnyClick = true,
+				func = function(frame, _, _, _, clickType)
+					object.dataObject.OnClick(frame, clickType)
+				end,
+				funcOnEnter = onEnterCompartment,
+				funcOnLeave = onLeaveCompartment,
+			}
+			AddonCompartmentFrame:RegisterAddon(object.compartmentData)
+		end
+	end
+	
+	function lib:RemoveButtonFromCompartment(buttonName)
+		local object = lib.objects[buttonName]
+		if object and object.compartmentData then
+			for i = 1, #AddonCompartmentFrame.registeredAddons do
+				local entry = AddonCompartmentFrame.registeredAddons[i]
+				if entry == object.compartmentData then
+					object.compartmentData = nil
+					if object.db then
+						object.db.showInCompartment = nil
+					end
+					table.remove(AddonCompartmentFrame.registeredAddons, i)
+					AddonCompartmentFrame:UpdateDisplay()
+					return
+				end
+			end
+		end
+	end
+	
+	--------------------------------------------------------------------------------
+	-- Upgrades
+	--
+	
+	for name, button in next, lib.objects do
+		local db = button.db
+		if not db or not db.lock then
+			button:SetScript("OnDragStart", onDragStart)
+			button:SetScript("OnDragStop", onDragStop)
+		end
+		button:SetScript("OnEnter", onEnter)
+		button:SetScript("OnLeave", onLeave)
+		button:SetScript("OnClick", onClick)
+		button:SetScript("OnMouseDown", onMouseDown)
+		button:SetScript("OnMouseUp", onMouseUp)
+	
+		if not button.fadeOut then -- Upgrade to 39
+			button.fadeOut = button:CreateAnimationGroup()
+			local animOut = button.fadeOut:CreateAnimation("Alpha")
+			animOut:SetOrder(1)
+			animOut:SetDuration(0.2)
+			animOut:SetFromAlpha(1)
+			animOut:SetToAlpha(0)
+			animOut:SetStartDelay(1)
+			button.fadeOut:SetToFinalAlpha(true)
+		end
+	end
+	lib:SetButtonRadius(lib.radius) -- Upgrade to 40
+	if lib.notCreated then -- Upgrade to 50
+		for name in next, lib.notCreated do
+			createButton(name, lib.notCreated[name][1], lib.notCreated[name][2])
+		end
+		lib.notCreated = nil
+	end
+	-- LibDBIconEnd
+	
+	end
+	LeaLibDBIcon()
+	

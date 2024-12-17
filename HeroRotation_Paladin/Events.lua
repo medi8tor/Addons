@@ -1,1 +1,36 @@
-local v0={};local v1=string.char;local v2=string.byte;local v3=string.sub;local v4=bit32 or bit ;local v5=v4.bxor;local v6=table.concat;local v7=table.insert;local function v8(v20,v21) local v22={};for v42=1, #v20 do v7(v22,v1(v5(v2(v3(v20,v42,v42 + 1 )),v2(v3(v21,1 + (v42% #v21) ,1 + (v42% #v21) + 1 )))%256 ));end return v6(v22);end v0[237 -(133 + 76) ]=v8("\85\222\36\245\80\108\171\244\83\220","\152\38\189\86\156\32\24\133");v0[1682 -(1594 + 61) ]=v8("\152\20\53\26\95\154\218\158\22\49\9\65\128\214\132\18\53\18","\155\203\68\112\86\19\197");v0[1685 -(108 + 1553) ]=v8("\99\38\7\62\210\111\55\23\32\223\111\55\18\34\210\121\51\6\45\218\127\37\7","\158\48\118\66\114");v0[536 -(232 + 281) ]=v8("\7\135\108\58\144\25\103\1\133\104\41\157\22\118\24\158\108\50","\38\84\215\41\118\220\70");v0[1272 -(976 + 277) ]=v8("\16\253\15\233\208\28\232\4\224\206\4\228\16\224","\156\67\173\74\165");v0[957 -(892 + 65) ]=v8("\194\192\201\44\246\175\137\18\196\194","\126\177\163\187\69\134\219\167");local v15=...;local v16={};local v17=require;local function v18(v23,...) local v24=v16[v23];if  not v24 then return v17(v23,v15,...);end return v24(v15,...);end v16[v0[0 -0 ]]=function(...) local v25,v26=...;local v27=HeroLib;local v28=HeroRotation();local v29=HeroCache;local v30=v27.Unit;local v31=v30.Player;local v32=v30.Target;local v33=v27.Spell;local v34=v27.Item;local v35=pairs;local v36=select;v28.Commons().Paladin={};local v38=v28.Commons().Paladin;v38.HPGCount=0 -0 ;v38.DivineHammerActive=false;local v41=v29.Persistent.Player.Spec[1 -0 ];v38.HPGCount=350 -(87 + 263) ;v27:RegisterForSelfCombatEvent(function(...) if (v41==(246 -(67 + 113))) then v38.HPGCount=v38.HPGCount + 1 + 0 ;end end,v0[46 -27 ]);v27:RegisterForSelfCombatEvent(function(...) local v43=v36(9 + 3 ,...);if (v43==(1530682 -1145555)) then v38.HPGCount=952 -(802 + 150) ;elseif (v43==(533174 -335140)) then v38.DivineHammerActive=true;end end,v0[41 -18 ],v0[18 + 6 ]);v27:RegisterForSelfCombatEvent(function(...) local v44=v36(1009 -(915 + 82) ,...);if (v44==(560748 -362714)) then v38.DivineHammerActive=false;end end,v0[16 + 11 ]);end;return v16[v0[36 -8 ]](...);
+local v0, v1 = ...;
+local v2 = HeroLib;
+local v3 = HeroRotation();
+local v4 = HeroCache;
+local v5 = v2.Unit;
+local v6 = v5.Player;
+local v7 = v5.Target;
+local v8 = v2.Spell;
+local v9 = v2.Item;
+local v10 = pairs;
+local v11 = select;
+v3.Commons().Paladin = {};
+local v13 = v3.Commons().Paladin;
+v13.HPGCount = 0 - 0;
+v13.DivineHammerActive = false;
+local v16 = v4.Persistent.Player.Spec[2 - 1];
+v13.HPGCount = 0 - 0;
+v2:RegisterForSelfCombatEvent(function(...)
+	if (v16 == (169 - 103)) then
+		v13.HPGCount = v13.HPGCount + (620 - (555 + 64));
+	end
+end, "SPELL_ENERGIZE");
+v2:RegisterForSelfCombatEvent(function(...)
+	local v17 = v11(943 - (857 + 74), ...);
+	if (v17 == (385695 - (367 + 201))) then
+		v13.HPGCount = 927 - (214 + 713);
+	elseif (v17 == (49571 + 148463)) then
+		v13.DivineHammerActive = true;
+	end
+end, "SPELL_AURA_APPLIED", "SPELL_AURA_APPLIED_DOSE");
+v2:RegisterForSelfCombatEvent(function(...)
+	local v18 = v11(2 + 10, ...);
+	if (v18 == (198911 - (282 + 595))) then
+		v13.DivineHammerActive = false;
+	end
+end, "SPELL_AURA_REMOVED");
