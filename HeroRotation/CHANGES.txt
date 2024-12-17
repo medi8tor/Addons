@@ -1,0 +1,30 @@
+tag d3d5144d3670ee24cc687c99856c09273ed7007d 10.2.0.20
+Author:	Cilraaz <cilraaz@gmail.com>
+Date:	Sat Nov 18 12:35:45 2023 -0500
+
+commit 9af7df73953b151089fba5be132f7e45a316b372
+Author: Cilraaz <cilraaz@gmail.com>
+Date:   Sat Nov 18 12:35:33 2023 -0500
+
+    build(TOC): 10.2.0.20 release
+
+commit 5470004526302b7cc81c61857a4594efe35d82e1
+Author: Cilraaz <cilraaz@gmail.com>
+Date:   Sat Nov 18 12:21:49 2023 -0500
+
+    fix(Fury): Fix some range checking
+
+commit ca87bd8ceaf05a18c24122fc6a3f914bf6cc49ec
+Author: Cilraaz <cilraaz@gmail.com>
+Date:   Sat Nov 18 01:53:55 2023 -0500
+
+    feat(Vengeance): Try to waste less Soul Fragments
+
+commit 69f5de39262305794250530ebf8c8a15b1ad5ad2
+Author: Cilraaz <cilraaz@gmail.com>
+Date:   Sat Nov 18 01:41:10 2023 -0500
+
+    feat(Multiple): Manually revert earlier GetEnemiesInMeleeRange/GetEnemiesInRange changes
+    
+    - Now using an internal system that does spell range checking based on provided distance, so don't need to provide a backup spell
+

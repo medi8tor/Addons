@@ -1,0 +1,28 @@
+tag 6c538dbc72e90125549079986e7cfe04cdec1e75 11.0.5.02
+Author:	Cilraaz <cilraaz@gmail.com>
+Date:	Tue Oct 22 17:19:24 2024 -0400
+
+commit 1652f1e11d22aa525311ef610d10c0a30db4cc3f
+Author: Cilraaz <cilraaz@gmail.com>
+Date:   Tue Oct 22 17:19:11 2024 -0400
+
+    build(TOC): 11.0.5.02 release
+
+commit 1ef78a9409ed8f069a66e10317c9ad933e558869
+Author: Cilraaz <cilraaz@gmail.com>
+Date:   Tue Oct 22 16:01:15 2024 -0400
+
+    feat(Aura): Add more absorb spells
+
+commit 5bafcbfea1618a1489f95f2de4865c1d0411d760
+Author: Cilraaz <cilraaz@gmail.com>
+Date:   Tue Oct 22 15:37:17 2024 -0400
+
+    feat(Aura): Add TWW S1 M+ Dungeon absorbs to EnemyAbsorbSpells
+
+commit e37a11fd331ecf855fb663ef0c6d31ec724ceab5
+Author: Cilraaz <cilraaz@gmail.com>
+Date:   Tue Oct 22 15:05:36 2024 -0400
+
+    feat(Aura): Add Nerub-ar Palace absorbs to EnemyAbsorbSpells; Rework EnemyAbsorb()
+
