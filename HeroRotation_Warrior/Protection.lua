@@ -1,1 +1,547 @@
-local v0={};local v1=string.char;local v2=string.byte;local v3=string.sub;local v4=bit32 or bit ;local v5=v4.bxor;local v6=table.concat;local v7=table.insert;local function v8(v119,v120) local v121={};for v176=1, #v119 do v7(v121,v1(v5(v2(v3(v119,v176,v176 + 1 )),v2(v3(v120,1 + (v176% #v120) ,1 + (v176% #v120) + 1 )))%256 ));end return v6(v121);end v0[2729 -(1772 + 135) ]=v8("\215\200\1\205\77\226\230\200\222\18","\200\164\171\115\164\61\150");v0[512 + 308 ]=v8("\34\239\58\32\115\17\233\60\59\120\82\202\52\38\100\27\242\39\116\100\29\233\52\32\127\29\243\117\60\119\1\189\55\49\115\28\189\32\36\114\19\233\48\48\54\20\242\39\116\102\19\233\54\60\54\67\172\123\100\56\64\179\117\24\119\1\233\117\1\102\22\252\33\49\54\66\170\123\101\38\92\175\101\102\34","\22\114\157\85\84");v0[1398 -(361 + 219) ]=v8("\253\163\162\209\186\68\76\228\185","\57\148\205\214\180\200\54");v0[1137 -(53 + 267) ]=v8("\159\187\242\213\164\167\243\192\162","\176\214\213\134");v0[184 + 629 ]=v8("\187\152\188\221\169\153\169\220\185\136","\178\218\237\200");v0[1225 -(15 + 398) ]=v8("\152\54\191\123\255\140\81\181\183\32\174","\212\217\67\203\20\223\223\37");v0[1790 -(18 + 964) ]=v8("\93\29\54\118\66\19\51\105","\26\46\112\87");v0[3037 -2230 ]=v8("\87\71\207\121\60\103\110\221","\80\36\42\174\21");v0[465 + 337 ]=v8("\239\35\228\78\116\32","\166\130\66\135\60\27\17");v0[502 + 294 ]=v8("\36\244\171\207","\167\115\181\226\155\138");v0[1643 -(20 + 830) ]=v8("\1\141\115\176\113\132\115\174\113\163\115\185\121\203","\220\81\226\28");v0[619 + 173 ]=v8("\107\36\233\155","\184\60\101\160\207\66");v0[915 -(116 + 10) ]=v8("\209\137\31\251\53\234\103\193\137\23\236\62\235\24\207\128\31\240\121\189\0","\56\162\225\118\158\89\142");v0[58 + 724 ]=v8("\33\188\158\252\222\48\166\132\231\201\10\166\132\243\200\117\185\138\251\212\117\231\217","\186\85\212\235\146");v0[1515 -(542 + 196) ]=v8("\249\200\25\218\66\190\238\197\84\216\79\190\243\141","\215\157\173\116\181\46");v0[1650 -880 ]=v8("\42\55\236\255\58\58\235\206\60\51\248\226\42\127\244\240\55\49\185","\145\94\95\153");v0[223 + 540 ]=v8("\203\5\88\243\203\235\141\32\251\62\73\251\218\240\194\35\233\4\87\190\136\178","\78\136\109\57\158\187\130\226");v0[385 + 371 ]=v8("\197\71\63\217\23\192\78\59\204\12\207\69\13\197\13\206\87\38\150\8\192\75\60\150\87\153","\101\161\34\82\182");v0[270 + 480 ]=v8("\151\179\37\10\79\75\155\197\191\50\2\70\14\219\211","\233\229\210\83\107\40\46");v0[1957 -1214 ]=v8("\194\201\33\238\175\0\243\86\232\199\60","\34\129\168\82\154\143\80\156");v0[1874 -1143 ]=v8("\182\235\122\240\250\223\165\228\117\202\234\202\187\233\57\248\232\194\185\165\40\173","\171\215\133\25\149\137");v0[2278 -(1126 + 425) ]=v8("\36\223\89\95\160\49\195\91\86\140\38\208\86\86\243\40\208\83\84\243\116\135","\211\69\177\58\58");v0[1128 -(118 + 287) ]=v8("\44\39\199\94\40\34\218\84\46\110\216\90\35\32\149\10\126","\59\74\78\181");v0[2817 -2098 ]=v8("\128\244\75\58\6\95\69\134\232\72\53\31\73\116\152\189\65\51\27\66\58\221\175","\26\236\157\44\82\114\44");v0[1836 -(118 + 1003) ]=v8("\246\225\63\211\249\246\3\198\248\225\46\215\249\231\124\223\246\250\50\146\166\163","\178\151\147\92");v0[2080 -1369 ]=v8("\130\162\213\232\82\237\139\174\201\252\23\242\129\174\201\187\15","\159\224\199\167\155\55");v0[1084 -(142 + 235) ]=v8("\246\125\250\162\33\18\129\225\99\236\237\40\44\142\250\49\163","\231\148\17\149\205\69\77");v0[3189 -2486 ]=v8("\202\97\37\64\252\33\136\198\118\45\90\189\97","\168\171\23\68\52\157\83");v0[152 + 543 ]=v8("\207\7\232\198\238\1\186\253\239\16\245\222\167\1\227\202\235\7","\169\135\98\154");v0[1666 -(553 + 424) ]=v8("\0\73\218\42\139\95\80\48\27\235\33\146\89\73\119\104\215\32\133\90\90","\62\87\59\191\73\224\54");v0[1285 -605 ]=v8("\130\175\45\27\1\13\196\17\176\185\38\33\26\16\194\92\182\234\37\17\1\68","\49\197\202\67\126\115\100\167");v0[599 + 80 ]=v8("\187\43\170\91\200\89\94\10\173\61\191","\105\204\78\203\43\167\55\126");v0[641 + 5 ]=v8("\37\55\0\63\83\18\59\16\63\110\21\51\8\57\88\65\34\20\63\94\14\63\4\59\73\65\100","\61\97\82\102\90");v0[375 + 269 ]=v8("\192\116\122\76\213\92\233\242\116\60\122\207\78\238\231\116","\128\132\17\28\41\187\47");v0[271 + 366 ]=v8("\82\187\213\175\92\191\254\168\68\187\207\184\85\250\209\169\85\185\206\182\82\187\213\251\6","\219\48\218\161");v0[363 + 272 ]=v8("\80\64\99\145\242\142\50\114\99\132\240\136\119","\235\18\33\23\229\158");v0[1354 -729 ]=v8("\24\156\53\160\165\253\4\46\138\60\169\170\169\63\36\130","\86\75\236\80\204\201\221");v0[1696 -1087 ]=v8("\125\7\52\164\253\240\119\95\72\27\52\171\229\240\102\91\93\3\107\232","\58\46\119\81\200\145\208\37");v0[1336 -739 ]=v8("\152\85\162\84\182\81\133\72\181\65\162","\32\218\52\214");v0[173 + 420 ]=v8("\77\143\230\46\69\199\244\37\65\139\230\109\73\149\236\56\94","\77\46\231\131");v0[2851 -2261 ]=v8("\188\38\3\229\144\88\187\45\12\247\144\78\160","\59\211\72\111\156\176");v0[1336 -(239 + 514) ]=v8("\19\94\134\136\141\110\186\248\31\90\134\203\129\60\162\229\0","\144\112\54\227\235\230\78\205");v0[179 + 329 ]=v8("\95\43\162\87\94\79\47\160\83\13\92\43\186\83\95\82\45\244\4\27","\45\59\78\212\54");v0[1833 -(797 + 532) ]=v8("\46\30\225\187\62\19\230\138\57\26\245\165\122\17\241\187\63\4\253\182\122\68\160","\213\90\118\148");v0[363 + 136 ]=v8("\150\37\176\68\216\69\3\189\47\169\75\207\84\81\133\40\171\79\206\73\18\194\127\247","\113\226\77\197\42\188\32");v0[166 + 324 ]=v8("\106\130\56\18\118\128\43\87\127\130\32\18\106\142\45\87\42\215","\119\24\231\78");v0[1142 -656 ]=v8("\218\7\241\31\47\203\26\180\27\63\209\26\230\21\57\159\78\172","\90\191\127\148\124");v0[1684 -(373 + 829) ]=v8("\239\182\70\64\114\216\248\243\87\64\114\218\239\186\83\5\45\137","\191\157\211\48\37\28");v0[1185 -(476 + 255) ]=v8("\40\57\28\181\29\238\51\10\63\61\8\171\89\236\36\59\57\35\0\184\89\186\117","\85\92\81\105\219\121\139\65");v0[1575 -(369 + 761) ]=v8("\54\80\34\214\218\17\244\29\91\59\217\206\84\225\39\86\50\202\215\23\166\115\10","\134\66\56\87\184\190\116");v0[253 + 183 ]=v8("\190\192\24\197\193\166\197\222\168\196\12\216\209\227\208\228\164\205\31\194\198\227\134\177","\129\202\168\109\171\165\195\183");v0[782 -351 ]=v8("\171\42\119\27\40\255\208\171\46\127\19\100\252\234\182\39\108\23\39\187\183","\143\216\66\30\126\68\155");v0[809 -382 ]=v8("\75\179\213\113\58\215\72\228\73\174\222\119\61\202\78\228\24","\196\46\203\176\18\79\163\45");v0[648 -(64 + 174) ]=v8("\189\84\58\62\35\53\145\79\63\58\34\113\169\89\61\62\61\56\173\28\103","\81\206\60\83\91\79");v0[57 + 340 ]=v8("\21\239\93\81\119\4\245\119\93\127\0\244\92\31\116\4\233\77\77\122\2\167\26","\19\97\135\40\63");v0[567 -183 ]=v8("\175\220\54\73\179\222\37\12\188\214\37\12\236\141","\44\221\185\64");v0[712 -(144 + 192) ]=v8("\95\219\173\66\31\120\89\236\187\64\26\109\11\210\183\73\91\44\29","\29\43\179\216\44\123");v0[587 -(42 + 174) ]=v8("\40\167\148\66\231\124\106\3\173\141\77\240\109\56\61\160\132\12\178\45","\24\92\207\225\44\131\25");v0[275 + 91 ]=v8("\200\131\24\240\181\216\240\200\135\16\248\249\221\192\222\203\64\167","\175\187\235\113\149\217\188");v0[296 + 61 ]=v8("\75\83\93\248\123\129\130\75\88\89\78\189\36\214","\107\57\54\43\157\21\230\231");v0[149 + 201 ]=v8("\78\192\240\88\94\247\146\101\203\233\87\74\178\129\85\205\165\14","\224\58\168\133\54\58\146");v0[1849 -(363 + 1141) ]=v8("\76\40\102\242\94\69\74\31\113\240\91\83\76\96\114\243\95\0\14","\32\56\64\19\156\58");v0[1914 -(1183 + 397) ]=v8("\241\70\101\4\225\75\98\53\230\66\113\26\165\79\127\15\165\26","\106\133\46\16");v0[995 -668 ]=v8("\170\250\212\204\62\203\160\65\188\254\192\209\46\142\179\113\187\178\147","\30\222\146\161\162\90\174\210");v0[235 + 85 ]=v8("\242\205\216\51\226\192\223\2\229\201\204\45\166\213\223\56\229\202\192\63\231\209","\93\134\165\173");v0[236 + 79 ]=v8("\128\119\182\142\56\164\118\159\143\33\160","\83\205\24\217\224");v0[2279 -(1913 + 62) ]=v8("\101\201\52\206\34\72\222\56","\100\39\172\85\188");v0[186 + 109 ]=v8("\165\174\31\75\164\238\240\188\168\24\74\246\230\206\165\167\81\22\228","\175\204\201\113\36\214\139");v0[542 -337 ]=v8("\191\13\86\67\232\69\194\128\10\92\77","\128\236\101\63\38\132\33");v0[2129 -(565 + 1368) ]=v8("\216\30\20\199\137\111\146\213\17\3\147\187\125\143\218\95\85\135","\230\180\127\103\179\214\28");v0[691 -507 ]=v8("\22\140\182\73\8\140\38\17\41\136","\112\69\228\223\44\100\232\113");v0[1833 -(1477 + 184) ]=v8("\143\212\4\228\125\228\132\208\29\229\118\255\185\196","\150\205\189\112\144\24");v0[221 -58 ]=v8("\51\224\168\181\162\185\174\20\234\142\185\175\169\168\8\244","\199\122\141\216\208\204\221");v0[143 + 10 ]=v8("\183\37\206\6\232\147\53\255\7\244\137","\135\225\76\173\114");v0[998 -(564 + 292) ]=v8("\37\49\188\51\14\21\60\2\36\183\42\20\119","\73\113\80\210\88\46\87");v0[237 -99 ]=v8("\209\10\148\242\196\196\10\194\229\203\196\10\194\244\203\211\31\135\243","\170\163\111\226\151");v0[409 -273 ]=v8("\49\9\140\201\184\61\49\146\199\163\54\78\144\199\173\61\78\129\199\186\40\11\134","\202\88\110\226\166");v0[395 -(244 + 60) ]=v8("\241\231\34\166\230\215\5\198\239\60\187\162\255\31\219\232\54\242\149\246\4\199\242\113\250\143\240\31\215\244\35\167\182\234\66","\107\178\134\81\210\198\158");v0[62 + 18 ]=v8("\183\231\155\230\183\250\200\132\183\251\155\203\182\169\254\202\189\228\194\199\183\252\213\208","\164\216\137\187");v0[555 -(41 + 435) ]=v8("\87\80\69\12\41\232\31\65\93\10\60\41\249","\114\56\62\101\73\71\141");v0[1079 -(938 + 63) ]=v8("\219\202\174\121\218\193\227\69\215\203\251\82\192\132\225\78\148\231\225\83\216\192\225\75\218\215","\60\180\164\142");v0[60 + 17 ]=v8("\65\33\75\48\101\125\247\89\36\91\55\50\80\235\22\39\77\120\4\81\221","\152\54\72\63\88\69\62");v0[1201 -(936 + 189) ]=v8("\8\224\229\239\40\203","\174\103\142\197");v0[25 + 50 ]=v8("\219\35\33\140\184\89\223\236\61","\156\168\78\64\224\212\121");v0[1686 -(1565 + 48) ]=v8("\208\93\100\28\249\60\203\91\127\16\181\11\212\64\48\27\183\18\222","\126\167\52\16\116\217");v0[44 + 27 ]=v8("\8\24\249\9\8\5\170\107\8\4\249\60\14\2\177\107\36\25\182\39\3\25\174\37\20","\75\103\118\217");v0[1208 -(782 + 356) ]=v8("\132\254\114\127\247\180\152\176\61\79\184\168\133\176\23\83\253\170\146\243\61\72\246\179","\199\235\144\82\61\152");v0[336 -(176 + 91) ]=v8("\185\231\106\233\23\189\32\135\185\231\38\210","\167\214\137\74\171\120\206\83");v0[177 -109 ]=v8("\13\194\73\115\103\100","\135\108\174\62\18\30\23\147");v0[97 -30 ]=v8("\180\215\2\127\17\168\202\2\82\12\251\206\75\73\22\251\250\77\82\18\191\214\85\83\13","\126\219\185\34\61");v0[1158 -(975 + 117) ]=v8("\38\207\108\173\39\196\33\145\42\206\57\134\61\129\35\154\105\226\35\135\37\197\35\159\39\210","\232\73\161\76");v0[1940 -(157 + 1718) ]=v8("\220\53\51\238\158\137\196\51\43\226\209\189\197\47\103\233\204\234\234\51\2","\202\171\92\71\134\190");v0[51 + 11 ]=v8("\17\183\138\59\213\66\153\175\36","\185\98\218\235\87");v0[216 -155 ]=v8("\171\202\195\2\66\8\179\204\219\14\13\60\178\208","\75\220\163\183\106\98");v0[205 -145 ]=v8("\103\77\20\101\124\81\5\33","\69\41\34\96");v0[1077 -(697 + 321) ]=v8("\139\122\232\153\31\98\15\228\138\99\224\144\23\117\30\245\132\117\225\129\20\119\21\229","\161\219\54\169\192\90\48\80");v0[149 -94 ]=v8("\41\147\240\230\168\30\11\43\154\246\250\163\19\17\55\158\243\243\168\8","\84\121\223\177\191\237\76");v0[103 -54 ]=v8("\129\115\104\45\1\102\239\83\188","\35\200\29\28\72\115\20\154");v0[103 -58 ]=v8("\204\69\168\82\249\84\179\79\243\89\152\101\216\98\148\99","\38\156\55\199");v0[16 + 25 ]=v8("\118\207\57\232\69\123\241\241\73\211\9\200\116\92","\152\38\189\86\156\32\24\133");v0[67 -31 ]=v8("\155\54\31\34\76\129\254\173\33\30\37\122\179\254\184","\155\203\68\112\86\19\197");v0[85 -53 ]=v8("\96\4\45\6\251\83\2\43\29\240","\158\48\118\66\114");v0[1255 -(322 + 905) ]=v8("\23\184\68\27\179\40\85","\38\84\215\41\118\220\70");v0[637 -(602 + 9) ]=v8("\4\200\36\192\238\34\193","\156\67\173\74\165");v0[1189 -(449 + 740) ]=v8("\194\192\201\44\246\175\137\18\196\194","\126\177\163\187\69\134\219\167");local v114=...;local v115={};local v116=require;local function v117(v122,...) local v123=v115[v122];if  not v123 then return v116(v122,v114,...);end return v123(v114,...);end v115[v0[872 -(826 + 46) ]]=function(...) local v124,v125=...;local v126=HeroDBC.DBC;local v127=HeroLib;local v128=v127.Unit;local v129=v128.Player;local v130=v128.Target;local v131=v127.Spell;local v132=v127.Item;local v133=HeroRotation();local v134=v133.Cast;local v135=v133.AoEON;local v136=v133.CDsON;local v137=v128.MouseOver;local v138=v133.Commons().Everyone.num;local v139=v133.Commons().Everyone.bool;local v140=math.floor;local v141=C_Timer.After;local v142;local v143=v131.Warrior.Protection;local v144=v132.Warrior.Protection;local v145={};local v146;local v147;local v148;local v149=12058 -(245 + 702) ;local v150=35110 -23999 ;local v151=v133.Commons().Everyone;local v152=v133.GUISettingsGet();local v153={[v0[9 + 17 ]]=v152.General,[v0[1926 -(260 + 1638) ]]=v152.APL.Warrior.Commons,[v0[472 -(382 + 58) ]]=v152.APL.Warrior.Protection,[v0[115 -79 ]]=v152.APL.Warrior.Protection.Defensives,[v0[35 + 6 ]]=v152.APL.Warrior.Protection_TTD,[v0[92 -47 ]]=v152.APL.Warrior.Protection_CDUSE,[v0[145 -96 ]]=v152.APL.Warrior.Protection_Interrupt.Interrupt};v127:RegisterForEvent(function() v149=12316 -(902 + 303) ;v150=24395 -13284 ;end,v0[132 -77 ]);local v154=v129:GetEquipment();local v155=(v154[2 + 11 ] and v132(v154[1703 -(1121 + 569) ])) or v132(214 -(22 + 192) ) ;local v156=(v154[697 -(483 + 200) ] and v132(v154[1477 -(1404 + 59) ])) or v132(0 -0 ) ;v127:RegisterForEvent(function() v154=v129:GetEquipment();v155=(v154[16 -3 ] and v132(v154[778 -(468 + 297) ])) or v132(562 -(334 + 228) ) ;v156=(v154[47 -33 ] and v132(v154[32 -18 ])) or v132(0 -0 ) ;end,v0[17 + 42 ]);local v157;local function v158(v177) return (v177~=v0[296 -(141 + 95) ]) and ((((v177==v0[60 + 1 ]) or ((v177==v0[159 -97 ]) and v153.Protection_CDUSE.smallcdswithCooldowns) or (v177==v0[156 -91 ]) or (v177==v0[16 + 50 ]) or (v177==v0[183 -116 ])) and v136()) or (v177==v0[48 + 20 ]) or (((v177==v0[36 + 33 ]) or (v177==v0[98 -28 ]) or (v177==v0[42 + 29 ])) and (v157 or v130:IsDummy())) or ((v177==v0[236 -(92 + 71) ]) and v129:BloodlustUp()) or ((v177==v0[38 + 37 ]) and Smallcds) or (((v177==v0[127 -51 ]) or (v177==v0[842 -(574 + 191) ])) and v135() and (v148>=(2 + 0))) or (((v177==v0[195 -117 ]) or (v177==v0[41 + 38 ]) or (v177==v0[929 -(254 + 595) ])) and (v148>=v153.Protection_CDUSE.Enemycount) and v135())) ;end local function v159(v178) return (v157 and v153.Protection_TTD.IgnoreWhenBoss) or v151.Buggedmobs[v130:NPCID()] or (v151.ISSolo() and v153.Protection_TTD.IgnoreWhenSolo) or (v178==(126 -(55 + 71))) or ((v150>=v178) and (v150<(10245 -2468))) ;end local v160={{v143.IntimidatingShout,v0[146 -55 ],function() return true;end}};local function v161() return v144.ManicGrieftorch:IsEquipped() and (v144.ManicGrieftorch:CooldownUp() or (v144.ManicGrieftorch:CooldownRemains()<=v129:GCDRemains())) ;end local function v162() return v129:IsTankingAoE(46 -30 ) or v129:IsTanking(v130) or v130:IsDummy() ;end local function v163() if v129:BuffUp(v143.IgnorePain) then local v191=C_UnitAuras.GetPlayerAuraBySpellID(v143.IgnorePain:ID());local v192=v191.points[1 -0 ];return v153.Protection.AllowIPOvercap or (v192<(v129:MaxHealth() * (0.1 + 0))) ;else return true;end end local function v164() if v129:BuffUp(v143.IgnorePain) then local v193=C_UnitAuras.GetPlayerAuraBySpellID(v143.IgnorePain:ID());return v193.points[1 -0 ];else return 806 -(118 + 688) ;end end local function v165() return v162() and v143.ShieldBlock:IsReady() and (v129:BuffRemains(v143.ShieldBlockBuff)<=(58 -(25 + 23))) ;end local function v166(v179) return (v179:IsSpellInRange(v143.HeroicThrow));end local function v167(v180) return v180:NPCID()==(39621 + 164939) ;end local function v168(v181) return v181:CastSpellID()==(410691 -(927 + 959)) ;end local function v169(v182) local v183=v153.Protection.RageCapValue;if ((v183<(117 -82)) or (v129:Rage()<(767 -(16 + 716)))) then return false;end local v184=false;local v185=(v129:Rage()>=(67 -32)) and  not v165() ;if (v185 and (((v129:Rage() + v182)>=v183) or v143.DemoralizingShout:IsReady())) then v184=true;end if v184 then if (v162() and v129:AffectingCombat() and (v163() or (v129:BuffRemains(v143.IgnorePain)<=(98 -(11 + 86)))) and v146) then if v134(v143.IgnorePain,true) then return v0[331 -195 ];end elseif v134(v143.Revenge) then return v0[423 -(175 + 110) ];end end end local function v170() local v186=v129:IncomingSpell(v151.TankBustersList2);if (v186 and v133.DebugON()) then print(v0[358 -216 ]   .. v186 );end if (v143.VictoryRush:IsCastable() and v146 and v129:CanAttack(v130) and v129:BuffUp(v143.VictoriousBuff) and (v129:HealthPercentageWeighted()<=v153.Protection.Defensives.VictoryRushHP)) then if v134(v143.VictoryRush) then return v0[754 -601 ];end end if (v143.ImpendingVictory:IsCastable() and v146 and v129:CanAttack(v130) and v129:AffectingCombat() and (v129:HealthPercentageWeighted()<=v153.Protection.Defensives.ImpendingVictoryHP)) then if v134(v143.ImpendingVictory) then return v0[1959 -(503 + 1293) ];end end if (v143.BitterImmunity:IsCastable() and v129:AffectingCombat() and (v129:HealthPercentageWeighted()<=v153.Protection.Defensives.BitterImmunityHP)) then if v134(v143.BitterImmunity) then return v0[480 -308 ];end end if (v143.ShieldWall:IsCastable() and v129:AffectingCombat() and v162() and ((v129:HealthPercentageWeighted()<=v153.Protection.Defensives.ShieldWallHP) or (IsShieldWall and (v127.CombatTime()<(4 + 1)))) and v129:BuffDown(v143.LastStandBuff)) then if v134(v143.ShieldWall) then return v0[1245 -(810 + 251) ];end end if (v143.LastStand:IsCastable() and v129:AffectingCombat() and v162() and ((v129:HealthPercentageWeighted()<=v153.Protection.Defensives.LastStandHP) or (IsLastStand and (v127.CombatTime()<(4 + 1)))) and v129:BuffDown(v143.ShieldWallBuff)) then if v134(v143.LastStand) then return v0[61 + 135 ];end end if (v165() and v129:AffectingCombat() and (v129:BuffRemains(v143.ShieldBlockBuff)<=(10 + 0)) and ((v129:HealthPercentageWeighted()<=v153.Protection.Defensives.ShieldBlockHP) or v186)) then if v134(v143.ShieldBlock,true) then return v0[738 -(43 + 490) ];end end if (v143.IgnorePain:IsReady() and v129:AffectingCombat() and (v163() or (v129:BuffRemains(v143.IgnorePain)<=(734 -(711 + 22)))) and (v129:HealthPercentageWeighted()<=v153.Protection.Defensives.IgnorePainHP) and (((v129:RageDeficit()<=(58 -43)) and v143.ShieldSlam:CooldownUp()) or (v129:BuffRemains(v143.IgnorePain)<=(860 -(240 + 619))) or ((v129:RageDeficit()<=(10 + 30)) and v143.ShieldCharge:CooldownUp() and v143.ChampionsBulwark:IsAvailable()) or ((v129:RageDeficit()<=(31 -11)) and v143.ShieldCharge:CooldownUp()) or ((v129:RageDeficit()<=(2 + 28)) and v143.DemoralizingShout:CooldownUp() and v143.BoomingVoice:IsAvailable()) or ((v129:RageDeficit()<=(1764 -(1344 + 400))) and v143.Avatar:CooldownUp()) or ((v129:RageDeficit()<=(450 -(255 + 150))) and v143.DemoralizingShout:CooldownUp() and v143.BoomingVoice:IsAvailable() and v129:BuffUp(v143.LastStandBuff) and v143.UnnervingFocus:IsAvailable()) or ((v129:RageDeficit()<=(24 + 6)) and v143.Avatar:CooldownUp() and v129:BuffUp(v143.LastStandBuff) and v143.UnnervingFocus:IsAvailable()) or (v129:RageDeficit()<=(11 + 9)) or ((v129:RageDeficit()<=(170 -130)) and v143.ShieldSlam:CooldownUp() and v129:BuffUp(v143.ViolentOutburstBuff) and v143.HeavyRepercussions:IsAvailable() and v143.ImpenetrableWall:IsAvailable()) or ((v129:RageDeficit()<=(177 -122)) and v143.ShieldSlam:CooldownUp() and v129:BuffUp(v143.ViolentOutburstBuff) and v129:BuffUp(v143.LastStandBuff) and v143.UnnervingFocus:IsAvailable() and v143.HeavyRepercussions:IsAvailable() and v143.ImpenetrableWall:IsAvailable()) or ((v129:RageDeficit()<=(1756 -(404 + 1335))) and v143.ShieldSlam:CooldownUp() and v143.HeavyRepercussions:IsAvailable()) or ((v129:RageDeficit()<=(424 -(183 + 223))) and v143.ShieldSlam:CooldownUp() and v143.ImpenetrableWall:IsAvailable()) or (((v129:Rage()>=(85 -15)) or ((v129:BuffStack(v143.SeeingRedBuff)==(5 + 2)) and (v129:Rage()>=(13 + 22)))) and (v143.ShieldSlam:CooldownRemains()<=(338 -(10 + 327))) and (v129:BuffRemains(v143.ShieldBlockBuff)>=(3 + 1)) and v129:HasTier(369 -(118 + 220) ,1 + 1 )))) then if v134(v143.IgnorePain,true) then return v0[744 -(108 + 341) ];end end if AutoStance then if (v143.DefensiveStance:IsCastable() and v129:BuffUp(v143.BattleStance) and (v129:HealthPercentage()<=v153.Prot_Defensives.DefStanceHP)) then if v134(v143.DefensiveStance,true) then return v0[137 + 167 ];end end if (v143.BattleStance:IsCastable() and v129:BuffUp(v143.DefensiveStance) and (v129:HealthPercentage()>v153.Prot_Defensives.BattleStanceHP) and (v153.Prot_Defensives.BattleStanceHP>(0 -0))) then if v134(v143.BattleStance,true) then return v0[1808 -(711 + 782) ];end end end end local function v171() if v130:IsInMeleeRange(22 -10 ) then if v143.ThunderClap:IsCastable() then if v134(v143.ThunderClap) then return v0[789 -(270 + 199) ];end end else end end local function v172() if (v130:DebuffRemains(v143.RendDebuff)<=(1 + 0)) then if (v143.ThunderBlastAbility:IsReady() and v130:IsInMeleeRange(1827 -(580 + 1239) )) then v169(14 -9 );if v134(v143.ThunderBlastAbility) then return v0[313 + 14 ];end end if (v143.ThunderClap:IsCastable() and v130:IsInMeleeRange(1 + 7 ) and (v130:DebuffRemains(v143.RendDebuff)<=(1 + 0))) then v169(13 -8 );if v134(v143.ThunderClap) then return v0[208 + 126 ];end end end if (v129:BuffUp(v143.ViolentOutburstBuff) and v129:BuffUp(v143.AvatarBuff) and v143.UnstoppableForce:IsAvailable()) then if (v143.ThunderBlastAbility:IsReady() and (v148>(1169 -(645 + 522))) and v130:IsInMeleeRange(1798 -(1010 + 780) )) then v169(5 + 0 );if v134(v143.ThunderBlastAbility) then return v0[1643 -1298 ];end end if (v143.ThunderClap:IsCastable() and (v148>(17 -11)) and v130:IsInMeleeRange(1844 -(1045 + 791) )) then v169(12 -7 );if v134(v143.ThunderClap) then return v0[534 -184 ];end end end if (v143.Revenge:IsReady() and v146 and (v129:Rage()>=(575 -(351 + 154))) and v143.SeismicReverberation:IsAvailable() and (v148>=(1577 -(1281 + 293)))) then if v134(v143.Revenge) then return v0[623 -(28 + 238) ];end end if (v143.ShieldSlam:IsCastable() and v146 and ((v129:Rage()<=(134 -74)) or (v129:BuffUp(v143.ViolentOutburstBuff) and (v148<=(1563 -(1381 + 178))) and v143.CrashingThunder:IsAvailable()))) then v169(19 + 1 );if v134(v143.ShieldSlam) then return v0[296 + 70 ];end end if (v143.ThunderBlastAbility:IsReady() and v130:IsInMeleeRange(4 + 4 )) then v169(17 -12 );if v134(v143.ThunderBlastAbility) then return v0[193 + 178 ];end end if (v143.ThunderClap:IsCastable() and v130:IsInMeleeRange(478 -(381 + 89) )) then v169(5 + 0 );if v134(v143.ThunderClap) then return v0[255 + 121 ];end end if (v143.Revenge:IsReady() and v146 and ((v129:Rage()>=(51 -21)) or ((v129:Rage()>=(1196 -(1074 + 82))) and v143.BarbaricTraining:IsAvailable()))) then if v134(v143.Revenge) then return v0[841 -457 ];end end end local function v173() if (v143.ThunderBlastAbility:IsReady() and v130:IsInMeleeRange(1792 -(214 + 1570) ) and (v129:BuffStack(v143.ThunderBlastBuff)==(1457 -(990 + 465))) and (v129:BuffStack(v143.BurstofPowerBuff)<=(1 + 0)) and v129:BuffUp(v143.AvatarBuff) and v143.UnstoppableForce:IsAvailable()) then v169(3 + 2 );if v134(v143.ThunderBlastAbility) then return v0[387 + 10 ];end end if (v143.ShieldSlam:IsCastable() and v146 and (((v129:BuffStack(v143.BurstofPowerBuff)==(7 -5)) and (v129:BuffStack(v143.ThunderBlastBuff)<=(1727 -(1668 + 58)))) or v129:BuffUp(v143.ViolentOutburstBuff) or ((v129:Rage()<=(696 -(512 + 114))) and v143.Demolish:IsAvailable()))) then v169(52 -32 );if v134(v143.ShieldSlam) then return v0[847 -437 ];end end if (v143.Execute:IsReady() and v146 and ((v129:Rage()>=(243 -173)) or ((v129:Rage()>=(19 + 21)) and v143.ShieldSlam:CooldownDown() and v143.Demolish:IsAvailable()) or ((v129:Rage()>=(10 + 40)) and v143.ShieldSlam:CooldownDown()) or (v129:BuffUp(v143.SuddenDeathBuff) and v143.SuddenDeath:IsAvailable()))) then if v134(v143.Executecast) then return v0[372 + 55 ];end end if (v143.ShieldSlam:IsCastable() and v146) then v169(67 -47 );if v134(v143.ShieldSlam) then return v0[2425 -(109 + 1885) ];end end if (v143.ThunderBlastAbility:IsReady() and v130:IsInMeleeRange(1477 -(1269 + 200) )) then v169(9 -4 );if v134(v143.ThunderBlastAbility) then return v0[1251 -(98 + 717) ];end end if (v143.ThunderClap:IsCastable() and v130:IsInMeleeRange(834 -(802 + 24) ) and (v130:DebuffRemains(v143.RendDebuff)<=(2 -0)) and v129:BuffDown(v143.ViolentOutburstBuff)) then v169(6 -1 );if v134(v143.ThunderClap) then return v0[66 + 379 ];end end if (v143.ThunderClap:IsCastable() and v130:IsInMeleeRange(7 + 1 ) and ((v148>(1 + 0)) or (v143.ShieldSlam:CooldownDown() and v129:BuffDown(v143.ViolentOutburstBuff)))) then v169(2 + 3 );if v134(v143.ThunderClap) then return v0[1262 -808 ];end end if (v143.Revenge:IsReady() and v146 and (((v129:Rage()>=(266 -186)) and (v130:HealthPercentage()>(8 + 12))) or (v129:BuffUp(v143.RevengeBuff) and (v130:HealthPercentage()<=(9 + 11)) and (v129:Rage()<=(15 + 3)) and v143.ShieldSlam:CooldownDown()) or (v129:BuffUp(v143.RevengeBuff) and (v130:HealthPercentage()>(15 + 5))) or ((((v129:Rage()>=(38 + 42)) and (v130:HealthPercentage()>(1468 -(797 + 636)))) or (v129:BuffUp(v143.RevengeBuff) and (v130:HealthPercentage()<=(169 -134)) and (v129:Rage()<=(1637 -(1427 + 192))) and v143.ShieldSlam:CooldownDown()) or (v129:BuffUp(v143.RevengeBuff) and (v130:HealthPercentage()>(13 + 22)))) and v143.Massacre:IsAvailable()))) then if v134(v143.Revenge) then return v0[1118 -636 ];end end if (v143.Execute:IsReady() and v146) then if v134(v143.Executecast) then return v0[437 + 49 ];end end if (v143.Revenge:IsReady() and v146) then if v134(v143.Revenge) then return v0[223 + 267 ];end end if ((v148>=(327 -(192 + 134))) or (v143.ShieldSlam:CooldownDown() and v129:BuffUp(v143.ViolentOutburstBuff))) then if (v143.ThunderBlastAbility:IsReady() and v130:IsInMeleeRange(1284 -(316 + 960) )) then v169(3 + 2 );if v134(v143.ThunderBlastAbility) then return v0[386 + 113 ];end end if (v143.ThunderClap:IsCastable() and v130:IsInMeleeRange(8 + 0 )) then v169(18 -13 );if v134(v143.ThunderClap) then return v0[1055 -(83 + 468) ];end end end if (v143.Devastate:IsCastable() and v146) then if v134(v143.Devastate) then return v0[2314 -(1202 + 604) ];end end end local function v174() Enemies30Yard=v129:GetEnemiesInRange(140 -110 );v147=v129:GetEnemiesInMeleeRange(13 -5 );if v135() then v148= #v147;else v148=2 -1 ;end Smallcds=v133.ToggleIconFrame:GetToggle(326 -(45 + 280) );AutoStance=v133.ToggleIconFrame:GetToggle(2 + 0 );InterruptToggle=v133.ToggleIconFrame:GetToggle(3 + 0 );IsAvatar=v159(v153.Protection_TTD.AvatarTTD) and v158(v153.Protection_CDUSE.Avatar) ;IsRacials=v159(v153.Protection_TTD.RacialsTTD) and v158(v153.Protection_CDUSE.Racials) ;IsPotions=v159(v153.Protection_TTD.PotionsTTD) and (v153.Protection_CDUSE.Potionswhensolo or ( not v153.Protection_CDUSE.Potionswhensolo and  not v151.ISSolo())) and v158(v153.Protection_CDUSE.Potions) ;IsTrinket1=v159(v153.Protection_TTD.TrinketsTTD) and v158(v153.Protection_CDUSE.Trinket1) ;IsTrinket2=v159(v153.Protection_TTD.TrinketsTTD) and v158(v153.Protection_CDUSE.Trinket2) ;IsRavager=v159(v153.Protection_TTD.RavagerTTD) and v158(v153.Protection_CDUSE.Ravager) ;IsThunderousRoar=v159(v153.Protection_TTD.ThunderousRoarTTD) and v158(v153.Protection_CDUSE.ThunderousRoar) ;IsChampionsSpear=v159(v153.Protection_TTD.ChampionsSpearTTD) and v158(v153.Protection_CDUSE.ChampionsSpear) ;IsDemolish=v159(v153.Protection_TTD.DemolishTTD) and v158(v153.Protection_CDUSE.Demolish) ;IsDemoralizingShout=v159(v153.Protection_TTD.DemoralizingShoutTTD) and v158(v153.Protection_CDUSE.DemoralizingShout) ;IsLastStand=v158(v153.Protection_CDUSE.LastStand);IsShieldWall=v158(v153.Protection_CDUSE.ShieldWall);local v187=0 + 0 ;if v143.RumblingEarth:IsAvailable() then v187=9 + 7 ;else v187=2 + 8 ;end if (v151.TargetIsValid() or v129:AffectingCombat()) then v149=v127.BossFightRemains();v157=true;v150=v149;if (v150==(20574 -9463)) then v157=false;v150=v127.FightRemains(v147,false);end end if (v151.TargetIsValid() or v129:AffectingCombat()) then v146=v130:IsInMeleeRange(1916 -(340 + 1571) );end if (v143.BattleShout:IsCastable() and  not v129:DebuffUp(v143.Corruption) and ((v151.GroupBuffMissing(v143.BattleShoutBuff,true) and (v153.Commons.BattleShout==v0[230 + 353 ]) and (v129:IsInRaidArea() or v129:IsInDungeonArea())) or (v129:BuffDown(v143.BattleShoutBuff,true) and ((v153.Commons.BattleShout==v0[2362 -(1733 + 39) ]) or (v153.Commons.BattleShout==v0[1629 -1036 ])))) and  not v129:IsMounted()) then if v133.Cast(v143.BattleShout) then return v0[1631 -(125 + 909) ];end end if v153.Commons.CCIncorperal then v142=v151.IncorpCycle(v143.IntimidatingShout,1956 -(1096 + 852) ,false,false);v142=v151.IncorpCycle(v143.StormBolt,9 + 11 ,false,false);if v142 then return v142;end end local v188=v129:IncomingSpell(Warrior.SpellReflectList);local v189=v129:IncomingSpellreflection(Warrior.SpellReflectList);if (v189 and v133.DebugON()) then print(v0[869 -260 ]   .. v189 );end local v190=v129:BuffUp(v143.SpellReflection) or ((v188 or v129:IncomingSpell(v151.TankBustersMagicList)) and v143.SpellReflection:IsReady() and v153.Commons.AutoSpellreflection) ;if (v143.SpellReflection:IsReady() and (v189 or v129:IncomingSpell(v151.TankBustersMagicList)) and v153.Commons.AutoSpellreflection) then if v134(v143.SpellReflection,true) then return v0[607 + 18 ];end end if (v143.BattleStance:IsCastable() and AutoStance and v129:BuffDown(v143.BattleStance,true) and (v129:HealthPercentage()>v153.Prot_Defensives.BattleStanceHP) and (v153.Protection.Stance==v0[1147 -(409 + 103) ])) then if v134(v143.BattleStance,true) then return v0[873 -(46 + 190) ];end end if (v143.DefensiveStance:IsCastable() and AutoStance and v129:BuffDown(v143.DefensiveStance,true) and (v153.Protection.Stance==v0[739 -(51 + 44) ])) then if v134(v143.DefensiveStance,true) then return v0[183 + 463 ];end end v142=v170();if v142 then return v142;end if v151.TargetIsValid() then if ( not v153.Protection.AttackonlyinCombat or (v153.Protection.AttackonlyinCombat and v130:AffectingCombat())) then if  not v167(v128.Target) then if  not v129:AffectingCombat() then v142=v171();if v142 then return v142;end end if (InterruptToggle and  not v190) then v142=v151.InterruptCycle(v143.Pummel,1322 -(1114 + 203) ,true,nil,false);if v142 then return v142;end v142=v153.Interrupt.UseStormbolt and v151.InterruptCycle(v143.StormBolt,746 -(228 + 498) ,false,nil,true) ;if v142 then return v142;end v142=v153.Interrupt.UseShockwave and v151.InterruptCycle(v143.Shockwave,v187,false,nil,true,true) ;if v142 then return v142;end end if (v153.Commons.Enabled.Trinkets or v153.Commons.Enabled.Items) then local v194,v195,v196=v129:GetUseableItems(v145);if v194 then local v198=v153.Commons.DisplayStyle.Trinkets;if ((((v195==(3 + 10)) and IsTrinket1) or ((v195==(8 + 6)) and IsTrinket2)) and v146 and v153.Commons.Enabled.Trinkets) then if (v195==(679 -(174 + 489))) then v133.CastMacro(2 -1 );return v0[2584 -(830 + 1075) ];end if v134(v194,true,v198) then return v0[1204 -(303 + 221) ]   .. v194:Name() ;end end end end if (v143.WreckingThrow:IsCastable() and v146 and (v130:BuffUp(v143.CorruptBuff) or v130:BuffUp(v143.SupernovaBuff))) then if v134(v143.WreckingThrow) then return v0[1958 -(231 + 1038) ];end end if (v143.HeroicThrow:IsCastable() and v129:AffectingCombat()) then if v151.CastCycle(v143.HeroicThrow,Enemies30Yard,v166,26 + 5 ,nil,nil,false) then return v0[1857 -(171 + 991) ];end end if (v143.Avatar:IsCastable() and IsAvatar and v146 and (v129:BuffDown(v143.ThunderBlastBuff) or (v129:BuffStack(v143.ThunderBlastBuff)<=(8 -6)))) then if v134(v143.Avatar,true) then return v0[1887 -1184 ];end end if (v143.BloodFury:IsCastable() and IsRacials and v146) then if v134(v143.BloodFury,true) then return v0[1764 -1057 ];end end if (v143.Berserking:IsCastable() and IsRacials and v146) then if v134(v143.Berserking,true) then return v0[570 + 141 ];end end if (v143.ArcaneTorrent:IsCastable() and IsRacials and v146) then if v134(v143.ArcaneTorrent,true) then return v0[2506 -1791 ];end end if (v143.LightsJudgment:IsCastable() and IsRacials and v146) then if v134(v143.LightsJudgment,true) then return v0[2073 -1354 ];end end if (v143.Fireblood:IsCastable() and IsRacials and v146) then if v134(v143.Fireblood,true) then return v0[1165 -442 ];end end if (v143.AncestralCall:IsCastable() and IsRacials and v146) then if v134(v143.AncestralCall,true) then return v0[2247 -1520 ];end end if (v143.BagofTricks:IsCastable() and IsRacials and v146) then if v134(v143.BagofTricks,true) then return v0[1979 -(111 + 1137) ];end end if (v153.Commons.Enabled.Potions and IsPotions and (v129:BuffUp(v143.AvatarBuff) or (v129:BuffDown(v143.AvatarBuff) and (v130:HealthPercentage()<=(178 -(91 + 67)))) or  not IsAvatar) and v146) then local v197=v151.PotionSelected();if (v197 and v197:IsReady()) then v133.CastMacro(8 -5 ,true,nil,v197);return v0[186 + 557 ];end end if (v143.Ravager:IsCastable() and IsRavager and v146) then v169(533 -(423 + 100) );if v133.CastTarget(v143.Ravager,v133.TName().PLAYER) then return v0[6 + 744 ];end end if (v143.DemoralizingShout:IsCastable() and IsDemoralizingShout and v146 and (v143.BoomingVoice:IsAvailable())) then v169(83 -53 );if v134(v143.DemoralizingShout,false) then return v0[395 + 361 ];end end if (v143.ChampionsSpear:IsCastable() and IsChampionsSpear and v146) then v169(791 -(326 + 445) );if v133.CastTarget(v143.ChampionsSpear,v133.TName().PLAYER) then return v0[3329 -2566 ];end end if (v143.ThunderBlastAbility:IsReady() and v130:IsInMeleeRange(17 -9 ) and (v148>=(4 -2)) and (v129:BuffStack(v143.ThunderBlastBuff)==(713 -(530 + 181)))) then v169(886 -(614 + 267) );if v134(v143.ThunderBlastAbility) then return v0[802 -(19 + 13) ];end end if (v143.Demolish:IsCastable() and IsDemolish and  not v129:IsMoving() and v146 and (v129:BuffStack(v143.ColossalMightBuff)>=(4 -1))) then if v134(v143.Demolish) then return v0[1810 -1033 ];end end if (v143.ThunderousRoar:IsCastable() and IsThunderousRoar and v130:IsInMeleeRange(22 -14 )) then if v134(v143.ThunderousRoar) then return v0[204 + 578 ];end end if (v143.ShieldCharge:IsCastable() and v153.Protection.UseShieldCharge and v130:IsInMeleeRange(8 -3 )) then v169(82 -42 );if v134(v143.ShieldCharge) then return v0[2601 -(1293 + 519) ];end end if (v148>(5 -2)) then v142=v172();if v142 then return v142;end if v133.CastAnnotated(v143.Pool,false,v0[2067 -1275 ]) then return v0[1516 -723 ];end end v142=v173();if v142 then return v142;end if v133.CastAnnotated(v143.Pool,false,v0[3432 -2636 ]) then return "Wait/Pool Resources";end end end end end local function v175() v133.ResetToggle();v153.Protection.Display();v133:UpdateMacro(v0[1889 -1087 ],"/use 16");v133.ToggleIconFrame:AddButtonCustom("S",1 + 0 ,v0[165 + 642 ],v0[1877 -1069 ]);v133.ToggleIconFrame:AddButtonCustom("A",1 + 1 ,v0[270 + 542 ],v0[509 + 304 ]);v133.ToggleIconFrame:AddButtonCustom("I",1099 -(709 + 387) ,v0[2675 -(673 + 1185) ],v0[2372 -1554 ]);v133.Print(v0[2633 -1813 ]);end v133.SetAPL(119 -46 ,v174,v175);end;return v115[v0[588 + 234 ]](...);
+local v0, v1 = ...;
+local v2 = HeroDBC.DBC;
+local v3 = HeroLib;
+local v4 = v3.Unit;
+local v5 = v4.Player;
+local v6 = v4.Target;
+local v7 = v3.Spell;
+local v8 = v3.Item;
+local v9 = HeroRotation();
+local v10 = v9.Cast;
+local v11 = v9.AoEON;
+local v12 = v9.CDsON;
+local v13 = v4.MouseOver;
+local v14 = v9.Commons().Everyone.num;
+local v15 = v9.Commons().Everyone.bool;
+local v16 = math.floor;
+local v17 = C_Timer.After;
+local v18;
+local v19 = v7.Warrior.Protection;
+local v20 = v8.Warrior.Protection;
+local v21 = {};
+local v22;
+local v23;
+local v24;
+local v25 = 34738 - 23627;
+local v26 = 31797 - 20686;
+local v27 = v9.Commons().Everyone;
+local v28 = v9.GUISettingsGet();
+local v29 = {General=v28.General,Commons=v28.APL.Warrior.Commons,Protection=v28.APL.Warrior.Protection,Prot_Defensives=v28.APL.Warrior.Protection.Defensives,Protection_TTD=v28.APL.Warrior.Protection_TTD,Protection_CDUSE=v28.APL.Warrior.Protection_CDUSE,Interrupt=v28.APL.Warrior.Protection_Interrupt.Interrupt};
+v3:RegisterForEvent(function()
+	v25 = 21447 - 10336;
+	v26 = 28620 - 17509;
+end, "PLAYER_REGEN_ENABLED");
+local v30 = v5:GetEquipment();
+local v31 = (v30[632 - (555 + 64)] and v8(v30[944 - (857 + 74)])) or v8(568 - (367 + 201));
+local v32 = (v30[941 - (214 + 713)] and v8(v30[4 + 10])) or v8(0 + 0);
+v3:RegisterForEvent(function()
+	v30 = v5:GetEquipment();
+	v31 = (v30[890 - (282 + 595)] and v8(v30[1650 - (1523 + 114)])) or v8(0 + 0);
+	v32 = (v30[19 - 5] and v8(v30[1079 - (68 + 997)])) or v8(1270 - (226 + 1044));
+end, "PLAYER_EQUIPMENT_CHANGED");
+local v33;
+local function v34(v52)
+	return (v52 ~= "Not Used") and ((((v52 == "with Cooldowns") or ((v52 == "small CDs") and v29.Protection_CDUSE.smallcdswithCooldowns) or (v52 == "with Cooldowns or AoE") or (v52 == "on Enemycount or Cooldowns") or (v52 == "on Boss or with Cooldowns")) and v12()) or (v52 == "always") or (((v52 == "on Boss only") or (v52 == "on Boss or on Enemycount") or (v52 == "on Boss or with Cooldowns")) and (v33 or v6:IsDummy())) or ((v52 == "with Bloodlust only") and v5:BloodlustUp()) or ((v52 == "small CDs") and Smallcds) or (((v52 == "on AOE") or (v52 == "with Cooldowns or AoE")) and v11() and (v24 >= (8 - 6))) or (((v52 == "on Enemycount or Cooldowns") or (v52 == "on Enemycount") or (v52 == "on Boss or on Enemycount")) and (v24 >= v29.Protection_CDUSE.Enemycount) and v11()));
+end
+local function v35(v53)
+	return (v33 and v29.Protection_TTD.IgnoreWhenBoss) or v27.Buggedmobs[v6:NPCID()] or (v27.ISSolo() and v29.Protection_TTD.IgnoreWhenSolo) or (v53 == (117 - (32 + 85))) or ((v26 >= v53) and (v26 < (7622 + 155)));
+end
+local v36 = {{v19.IntimidatingShout,"Cast Intimidating Shout (Interrupt)",function()
+	return true;
+end}};
+local function v37()
+	return v20.ManicGrieftorch:IsEquipped() and (v20.ManicGrieftorch:CooldownUp() or (v20.ManicGrieftorch:CooldownRemains() <= v5:GCDRemains()));
+end
+local function v38()
+	return v5:IsTankingAoE(28 - 12) or v5:IsTanking(v6) or v6:IsDummy();
+end
+local function v39()
+	if v5:BuffUp(v19.IgnorePain) then
+		local v66 = C_UnitAuras.GetPlayerAuraBySpellID(v19.IgnorePain:ID());
+		local v67 = v66.points[351 - (87 + 263)];
+		return v29.Protection.AllowIPOvercap or (v67 < (v5:MaxHealth() * (180.1 - (67 + 113))));
+	else
+		return true;
+	end
+end
+local function v40()
+	if v5:BuffUp(v19.IgnorePain) then
+		local v68 = C_UnitAuras.GetPlayerAuraBySpellID(v19.IgnorePain:ID());
+		return v68.points[1 + 0];
+	else
+		return 0 - 0;
+	end
+end
+local function v41()
+	return v38() and v19.ShieldBlock:IsReady() and (v5:BuffRemains(v19.ShieldBlockBuff) <= (8 + 2));
+end
+local function v42(v54)
+	return (v54:IsSpellInRange(v19.HeroicThrow));
+end
+local function v43(v55)
+	return v55:NPCID() == (813021 - 608461);
+end
+local function v44(v56)
+	return v56:CastSpellID() == (409757 - (802 + 150));
+end
+local function v45(v57)
+	local v58 = v29.Protection.RageCapValue;
+	if ((v58 < (94 - 59)) or (v5:Rage() < (63 - 28))) then
+		return false;
+	end
+	local v59 = false;
+	local v60 = (v5:Rage() >= (26 + 9)) and not v41();
+	if (v60 and (((v5:Rage() + v57) >= v58) or v19.DemoralizingShout:IsReady())) then
+		v59 = true;
+	end
+	if v59 then
+		if (v38() and v5:AffectingCombat() and (v39() or (v5:BuffRemains(v19.IgnorePain) <= (998 - (915 + 82)))) and v22) then
+			if v10(v19.IgnorePain, true) then
+				return "ignore_pain rage capped";
+			end
+		elseif v10(v19.Revenge) then
+			return "revenge rage capped";
+		end
+	end
+end
+local function v46()
+	local v61 = v5:IncomingSpell(v27.TankBustersList2);
+	if (v61 and v9.DebugON()) then
+		print("Tank Buster: " .. v61);
+	end
+	if (v19.VictoryRush:IsCastable() and v22 and v5:CanAttack(v6) and v5:BuffUp(v19.VictoriousBuff) and (v5:HealthPercentageWeighted() <= v29.Protection.Defensives.VictoryRushHP)) then
+		if v10(v19.VictoryRush) then
+			return "VictoryRush";
+		end
+	end
+	if (v19.ImpendingVictory:IsCastable() and v22 and v5:CanAttack(v6) and v5:AffectingCombat() and (v5:HealthPercentageWeighted() <= v29.Protection.Defensives.ImpendingVictoryHP)) then
+		if v10(v19.ImpendingVictory) then
+			return "ImpendingVictory";
+		end
+	end
+	if (v19.BitterImmunity:IsCastable() and v5:AffectingCombat() and (v5:HealthPercentageWeighted() <= v29.Protection.Defensives.BitterImmunityHP)) then
+		if v10(v19.BitterImmunity) then
+			return "BitterImmunity";
+		end
+	end
+	if (v19.ShieldWall:IsCastable() and v5:AffectingCombat() and v38() and ((v5:HealthPercentageWeighted() <= v29.Protection.Defensives.ShieldWallHP) or (IsShieldWall and (v3.CombatTime() < (14 - 9)))) and v5:BuffDown(v19.LastStandBuff)) then
+		if v10(v19.ShieldWall) then
+			return "ShieldWall";
+		end
+	end
+	if (v19.LastStand:IsCastable() and v5:AffectingCombat() and v38() and ((v5:HealthPercentageWeighted() <= v29.Protection.Defensives.LastStandHP) or (IsLastStand and (v3.CombatTime() < (3 + 2)))) and v5:BuffDown(v19.ShieldWallBuff)) then
+		if v10(v19.LastStand) then
+			return "last_stand main 24";
+		end
+	end
+	if (v41() and v5:AffectingCombat() and (v5:BuffRemains(v19.ShieldBlockBuff) <= (13 - 3)) and ((v5:HealthPercentageWeighted() <= v29.Protection.Defensives.ShieldBlockHP) or v61)) then
+		if v10(v19.ShieldBlock, true) then
+			return "ShieldBlock";
+		end
+	end
+	if (v19.IgnorePain:IsReady() and v5:AffectingCombat() and (v39() or (v5:BuffRemains(v19.IgnorePain) <= (1188 - (1069 + 118)))) and (v5:HealthPercentageWeighted() <= v29.Protection.Defensives.IgnorePainHP) and (((v5:RageDeficit() <= (33 - 18)) and v19.ShieldSlam:CooldownUp()) or (v5:BuffRemains(v19.IgnorePain) <= (1 - 0)) or ((v5:RageDeficit() <= (7 + 33)) and v19.ShieldCharge:CooldownUp() and v19.ChampionsBulwark:IsAvailable()) or ((v5:RageDeficit() <= (35 - 15)) and v19.ShieldCharge:CooldownUp()) or ((v5:RageDeficit() <= (30 + 0)) and v19.DemoralizingShout:CooldownUp() and v19.BoomingVoice:IsAvailable()) or ((v5:RageDeficit() <= (811 - (368 + 423))) and v19.Avatar:CooldownUp()) or ((v5:RageDeficit() <= (141 - 96)) and v19.DemoralizingShout:CooldownUp() and v19.BoomingVoice:IsAvailable() and v5:BuffUp(v19.LastStandBuff) and v19.UnnervingFocus:IsAvailable()) or ((v5:RageDeficit() <= (48 - (10 + 8))) and v19.Avatar:CooldownUp() and v5:BuffUp(v19.LastStandBuff) and v19.UnnervingFocus:IsAvailable()) or (v5:RageDeficit() <= (76 - 56)) or ((v5:RageDeficit() <= (482 - (416 + 26))) and v19.ShieldSlam:CooldownUp() and v5:BuffUp(v19.ViolentOutburstBuff) and v19.HeavyRepercussions:IsAvailable() and v19.ImpenetrableWall:IsAvailable()) or ((v5:RageDeficit() <= (175 - 120)) and v19.ShieldSlam:CooldownUp() and v5:BuffUp(v19.ViolentOutburstBuff) and v5:BuffUp(v19.LastStandBuff) and v19.UnnervingFocus:IsAvailable() and v19.HeavyRepercussions:IsAvailable() and v19.ImpenetrableWall:IsAvailable()) or ((v5:RageDeficit() <= (8 + 9)) and v19.ShieldSlam:CooldownUp() and v19.HeavyRepercussions:IsAvailable()) or ((v5:RageDeficit() <= (31 - 13)) and v19.ShieldSlam:CooldownUp() and v19.ImpenetrableWall:IsAvailable()) or (((v5:Rage() >= (508 - (145 + 293))) or ((v5:BuffStack(v19.SeeingRedBuff) == (437 - (44 + 386))) and (v5:Rage() >= (1521 - (998 + 488))))) and (v19.ShieldSlam:CooldownRemains() <= (1 + 0)) and (v5:BuffRemains(v19.ShieldBlockBuff) >= (4 + 0)) and v5:HasTier(803 - (201 + 571), 1140 - (116 + 1022))))) then
+		if v10(v19.IgnorePain, true) then
+			return "ignore_pain main 22";
+		end
+	end
+	if AutoStance then
+		if (v19.DefensiveStance:IsCastable() and v5:BuffUp(v19.BattleStance) and (v5:HealthPercentage() <= v29.Prot_Defensives.DefStanceHP)) then
+			if v10(v19.DefensiveStance, true) then
+				return "BearForm";
+			end
+		end
+		if (v19.BattleStance:IsCastable() and v5:BuffUp(v19.DefensiveStance) and (v5:HealthPercentage() > v29.Prot_Defensives.BattleStanceHP) and (v29.Prot_Defensives.BattleStanceHP > (0 - 0))) then
+			if v10(v19.BattleStance, true) then
+				return "MoonkinForm";
+			end
+		end
+	end
+end
+local function v47()
+	if v6:IsInMeleeRange(8 + 4) then
+		if v19.ThunderClap:IsCastable() then
+			if v10(v19.ThunderClap) then
+				return "thunder_clap precombat";
+			end
+		end
+	else
+	end
+end
+local function v48()
+	if (v6:DebuffRemains(v19.RendDebuff) <= (3 - 2)) then
+		if (v19.ThunderBlastAbility:IsReady() and v6:IsInMeleeRange(28 - 20)) then
+			v45(864 - (814 + 45));
+			if v10(v19.ThunderBlastAbility) then
+				return "thunder_blast aoe 2";
+			end
+		end
+		if (v19.ThunderClap:IsCastable() and v6:IsInMeleeRange(19 - 11) and (v6:DebuffRemains(v19.RendDebuff) <= (1 + 0))) then
+			v45(2 + 3);
+			if v10(v19.ThunderClap) then
+				return "thunder_clap aoe 4";
+			end
+		end
+	end
+	if (v5:BuffUp(v19.ViolentOutburstBuff) and v5:BuffUp(v19.AvatarBuff) and v19.UnstoppableForce:IsAvailable()) then
+		if (v19.ThunderBlastAbility:IsReady() and (v24 > (887 - (261 + 624))) and v6:IsInMeleeRange(13 - 5)) then
+			v45(1085 - (1020 + 60));
+			if v10(v19.ThunderBlastAbility) then
+				return "thunder_blast aoe 6";
+			end
+		end
+		if (v19.ThunderClap:IsCastable() and (v24 > (1429 - (630 + 793))) and v6:IsInMeleeRange(26 - 18)) then
+			v45(23 - 18);
+			if v10(v19.ThunderClap) then
+				return "thunder_clap aoe 8";
+			end
+		end
+	end
+	if (v19.Revenge:IsReady() and v22 and (v5:Rage() >= (28 + 42)) and v19.SeismicReverberation:IsAvailable() and (v24 >= (9 - 6))) then
+		if v10(v19.Revenge) then
+			return "revenge aoe 10";
+		end
+	end
+	if (v19.ShieldSlam:IsCastable() and v22 and ((v5:Rage() <= (1807 - (760 + 987))) or (v5:BuffUp(v19.ViolentOutburstBuff) and (v24 <= (1917 - (1789 + 124))) and v19.CrashingThunder:IsAvailable()))) then
+		v45(786 - (745 + 21));
+		if v10(v19.ShieldSlam) then
+			return "shield_slam aoe 12";
+		end
+	end
+	if (v19.ThunderBlastAbility:IsReady() and v6:IsInMeleeRange(3 + 5)) then
+		v45(13 - 8);
+		if v10(v19.ThunderBlastAbility) then
+			return "thunder_blast aoe 14";
+		end
+	end
+	if (v19.ThunderClap:IsCastable() and v6:IsInMeleeRange(31 - 23)) then
+		v45(1 + 4);
+		if v10(v19.ThunderClap) then
+			return "thunder_clap aoe 16";
+		end
+	end
+	if (v19.Revenge:IsReady() and v22 and ((v5:Rage() >= (24 + 6)) or ((v5:Rage() >= (1095 - (87 + 968))) and v19.BarbaricTraining:IsAvailable()))) then
+		if v10(v19.Revenge) then
+			return "revenge aoe 14";
+		end
+	end
+end
+local function v49()
+	if (v19.ThunderBlastAbility:IsReady() and v6:IsInMeleeRange(35 - 27) and (v5:BuffStack(v19.ThunderBlastBuff) == (2 + 0)) and (v5:BuffStack(v19.BurstofPowerBuff) <= (2 - 1)) and v5:BuffUp(v19.AvatarBuff) and v19.UnstoppableForce:IsAvailable()) then
+		v45(1418 - (447 + 966));
+		if v10(v19.ThunderBlastAbility) then
+			return "thunder_blast generic 2";
+		end
+	end
+	if (v19.ShieldSlam:IsCastable() and v22 and (((v5:BuffStack(v19.BurstofPowerBuff) == (5 - 3)) and (v5:BuffStack(v19.ThunderBlastBuff) <= (1818 - (1703 + 114)))) or v5:BuffUp(v19.ViolentOutburstBuff) or ((v5:Rage() <= (771 - (376 + 325))) and v19.Demolish:IsAvailable()))) then
+		v45(32 - 12);
+		if v10(v19.ShieldSlam) then
+			return "shield_slam generic 4";
+		end
+	end
+	if (v19.Execute:IsReady() and v22 and ((v5:Rage() >= (215 - 145)) or ((v5:Rage() >= (12 + 28)) and v19.ShieldSlam:CooldownDown() and v19.Demolish:IsAvailable()) or ((v5:Rage() >= (110 - 60)) and v19.ShieldSlam:CooldownDown()) or (v5:BuffUp(v19.SuddenDeathBuff) and v19.SuddenDeath:IsAvailable()))) then
+		if v10(v19.Executecast) then
+			return "execute generic 6";
+		end
+	end
+	if (v19.ShieldSlam:IsCastable() and v22) then
+		v45(34 - (9 + 5));
+		if v10(v19.ShieldSlam) then
+			return "shield_slam generic 8";
+		end
+	end
+	if (v19.ThunderBlastAbility:IsReady() and v6:IsInMeleeRange(384 - (85 + 291))) then
+		v45(1270 - (243 + 1022));
+		if v10(v19.ThunderBlastAbility) then
+			return "thunder_blast generic 10";
+		end
+	end
+	if (v19.ThunderClap:IsCastable() and v6:IsInMeleeRange(30 - 22) and (v6:DebuffRemains(v19.RendDebuff) <= (2 + 0)) and v5:BuffDown(v19.ViolentOutburstBuff)) then
+		v45(1185 - (1123 + 57));
+		if v10(v19.ThunderClap) then
+			return "thunder_clap generic 12";
+		end
+	end
+	if (v19.ThunderClap:IsCastable() and v6:IsInMeleeRange(7 + 1) and ((v24 > (255 - (163 + 91))) or (v19.ShieldSlam:CooldownDown() and v5:BuffDown(v19.ViolentOutburstBuff)))) then
+		v45(1935 - (1869 + 61));
+		if v10(v19.ThunderClap) then
+			return "thunder_clap generic 14";
+		end
+	end
+	if (v19.Revenge:IsReady() and v22 and (((v5:Rage() >= (23 + 57)) and (v6:HealthPercentage() > (70 - 50))) or (v5:BuffUp(v19.RevengeBuff) and (v6:HealthPercentage() <= (30 - 10)) and (v5:Rage() <= (3 + 15)) and v19.ShieldSlam:CooldownDown()) or (v5:BuffUp(v19.RevengeBuff) and (v6:HealthPercentage() > (27 - 7))) or ((((v5:Rage() >= (76 + 4)) and (v6:HealthPercentage() > (1509 - (1329 + 145)))) or (v5:BuffUp(v19.RevengeBuff) and (v6:HealthPercentage() <= (1006 - (140 + 831))) and (v5:Rage() <= (1868 - (1409 + 441))) and v19.ShieldSlam:CooldownDown()) or (v5:BuffUp(v19.RevengeBuff) and (v6:HealthPercentage() > (753 - (15 + 703))))) and v19.Massacre:IsAvailable()))) then
+		if v10(v19.Revenge) then
+			return "revenge generic 16";
+		end
+	end
+	if (v19.Execute:IsReady() and v22) then
+		if v10(v19.Executecast) then
+			return "execute generic 18";
+		end
+	end
+	if (v19.Revenge:IsReady() and v22) then
+		if v10(v19.Revenge) then
+			return "revenge generic 20";
+		end
+	end
+	if ((v24 >= (1 + 0)) or (v19.ShieldSlam:CooldownDown() and v5:BuffUp(v19.ViolentOutburstBuff))) then
+		if (v19.ThunderBlastAbility:IsReady() and v6:IsInMeleeRange(446 - (262 + 176))) then
+			v45(1726 - (345 + 1376));
+			if v10(v19.ThunderBlastAbility) then
+				return "thunder_blast generic 22";
+			end
+		end
+		if (v19.ThunderClap:IsCastable() and v6:IsInMeleeRange(696 - (198 + 490))) then
+			v45(22 - 17);
+			if v10(v19.ThunderClap) then
+				return "thunder_clap generic 24";
+			end
+		end
+	end
+	if (v19.Devastate:IsCastable() and v22) then
+		if v10(v19.Devastate) then
+			return "devastate generic 26";
+		end
+	end
+end
+local function v50()
+	Enemies30Yard = v5:GetEnemiesInRange(71 - 41);
+	v23 = v5:GetEnemiesInMeleeRange(1214 - (696 + 510));
+	if v11() then
+		v24 = #v23;
+	else
+		v24 = 1 - 0;
+	end
+	Smallcds = v9.ToggleIconFrame:GetToggle(1263 - (1091 + 171));
+	AutoStance = v9.ToggleIconFrame:GetToggle(1 + 1);
+	InterruptToggle = v9.ToggleIconFrame:GetToggle(9 - 6);
+	IsAvatar = v35(v29.Protection_TTD.AvatarTTD) and v34(v29.Protection_CDUSE.Avatar);
+	IsRacials = v35(v29.Protection_TTD.RacialsTTD) and v34(v29.Protection_CDUSE.Racials);
+	IsPotions = v35(v29.Protection_TTD.PotionsTTD) and (v29.Protection_CDUSE.Potionswhensolo or (not v29.Protection_CDUSE.Potionswhensolo and not v27.ISSolo())) and v34(v29.Protection_CDUSE.Potions);
+	IsTrinket1 = v35(v29.Protection_TTD.TrinketsTTD) and v34(v29.Protection_CDUSE.Trinket1);
+	IsTrinket2 = v35(v29.Protection_TTD.TrinketsTTD) and v34(v29.Protection_CDUSE.Trinket2);
+	IsRavager = v35(v29.Protection_TTD.RavagerTTD) and v34(v29.Protection_CDUSE.Ravager);
+	IsThunderousRoar = v35(v29.Protection_TTD.ThunderousRoarTTD) and v34(v29.Protection_CDUSE.ThunderousRoar);
+	IsChampionsSpear = v35(v29.Protection_TTD.ChampionsSpearTTD) and v34(v29.Protection_CDUSE.ChampionsSpear);
+	IsDemolish = v35(v29.Protection_TTD.DemolishTTD) and v34(v29.Protection_CDUSE.Demolish);
+	IsDemoralizingShout = v35(v29.Protection_TTD.DemoralizingShoutTTD) and v34(v29.Protection_CDUSE.DemoralizingShout);
+	IsLastStand = v34(v29.Protection_CDUSE.LastStand);
+	IsShieldWall = v34(v29.Protection_CDUSE.ShieldWall);
+	local v62 = 0 - 0;
+	if v19.RumblingEarth:IsAvailable() then
+		v62 = 390 - (123 + 251);
+	else
+		v62 = 49 - 39;
+	end
+	if (v27.TargetIsValid() or v5:AffectingCombat()) then
+		v25 = v3.BossFightRemains();
+		v33 = true;
+		v26 = v25;
+		if (v26 == (11809 - (208 + 490))) then
+			v33 = false;
+			v26 = v3.FightRemains(v23, false);
+		end
+	end
+	if (v27.TargetIsValid() or v5:AffectingCombat()) then
+		v22 = v6:IsInMeleeRange(1 + 4);
+	end
+	if (v19.BattleShout:IsCastable() and not v5:DebuffUp(v19.Corruption) and ((v27.GroupBuffMissing(v19.BattleShoutBuff, true) and (v29.Commons.BattleShout == "check whole group") and (v5:IsInRaidArea() or v5:IsInDungeonArea())) or (v5:BuffDown(v19.BattleShoutBuff, true) and ((v29.Commons.BattleShout == "only check us") or (v29.Commons.BattleShout == "check whole group")))) and not v5:IsMounted()) then
+		if v9.Cast(v19.BattleShout) then
+			return "BattleShout";
+		end
+	end
+	if v29.Commons.CCIncorperal then
+		v18 = v27.IncorpCycle(v19.IntimidatingShout, 4 + 4, false, false);
+		v18 = v27.IncorpCycle(v19.StormBolt, 856 - (660 + 176), false, false);
+		if v18 then
+			return v18;
+		end
+	end
+	local v63 = v5:IncomingSpell(Warrior.SpellReflectList);
+	local v64 = v5:IncomingSpellreflection(Warrior.SpellReflectList);
+	if (v64 and v9.DebugON()) then
+		print("Spell Reflect Cast: " .. v64);
+	end
+	local v65 = v5:BuffUp(v19.SpellReflection) or ((v63 or v5:IncomingSpell(v27.TankBustersMagicList)) and v19.SpellReflection:IsReady() and v29.Commons.AutoSpellreflection);
+	if (v19.SpellReflection:IsReady() and (v64 or v5:IncomingSpell(v27.TankBustersMagicList)) and v29.Commons.AutoSpellreflection) then
+		if v10(v19.SpellReflection, true) then
+			return "Spell Reflection";
+		end
+	end
+	if (v19.BattleStance:IsCastable() and AutoStance and v5:BuffDown(v19.BattleStance, true) and (v5:HealthPercentage() > v29.Prot_Defensives.BattleStanceHP) and (v29.Protection.Stance == "Battle Stance")) then
+		if v10(v19.BattleStance, true) then
+			return "battle_stance precombat 6";
+		end
+	end
+	if (v19.DefensiveStance:IsCastable() and AutoStance and v5:BuffDown(v19.DefensiveStance, true) and (v29.Protection.Stance == "Defensive Stance")) then
+		if v10(v19.DefensiveStance, true) then
+			return "DefensiveStance precombat 6";
+		end
+	end
+	v18 = v46();
+	if v18 then
+		return v18;
+	end
+	if v27.TargetIsValid() then
+		if (not v29.Protection.AttackonlyinCombat or (v29.Protection.AttackonlyinCombat and v6:AffectingCombat())) then
+			if not v43(v4.Target) then
+				if not v5:AffectingCombat() then
+					v18 = v47();
+					if v18 then
+						return v18;
+					end
+				end
+				if (InterruptToggle and not v65) then
+					v18 = v27.InterruptCycle(v19.Pummel, 1 + 4, true, nil, false);
+					if v18 then
+						return v18;
+					end
+					v18 = v29.Interrupt.UseStormbolt and v27.InterruptCycle(v19.StormBolt, 222 - (14 + 188), false, nil, true);
+					if v18 then
+						return v18;
+					end
+					v18 = v29.Interrupt.UseShockwave and v27.InterruptCycle(v19.Shockwave, v62, false, nil, true, true);
+					if v18 then
+						return v18;
+					end
+				end
+				if (v29.Commons.Enabled.Trinkets or v29.Commons.Enabled.Items) then
+					local v69, v70, v71 = v5:GetUseableItems(v21);
+					if v69 then
+						local v73 = v29.Commons.DisplayStyle.Trinkets;
+						if ((((v70 == (688 - (534 + 141))) and IsTrinket1) or ((v70 == (6 + 8)) and IsTrinket2)) and v22 and v29.Commons.Enabled.Trinkets) then
+							if (v70 == (15 + 1)) then
+								v9.CastMacro(1 + 0);
+								return "weapon cast";
+							end
+							if v10(v69, true, v73) then
+								return "Generic use_items for " .. v69:Name();
+							end
+						end
+					end
+				end
+				if (v19.WreckingThrow:IsCastable() and v22 and (v6:BuffUp(v19.CorruptBuff) or v6:BuffUp(v19.SupernovaBuff))) then
+					if v10(v19.WreckingThrow) then
+						return "Wrecking Throw Shield";
+					end
+				end
+				if (v19.HeroicThrow:IsCastable() and v5:AffectingCombat()) then
+					if v27.CastCycle(v19.HeroicThrow, Enemies30Yard, v42, 64 - 33, nil, nil, false) then
+						return "Heroic Throw cycle";
+					end
+				end
+				if (v19.Avatar:IsCastable() and IsAvatar and v22 and (v5:BuffDown(v19.ThunderBlastBuff) or (v5:BuffStack(v19.ThunderBlastBuff) <= (2 - 0)))) then
+					if v10(v19.Avatar, true) then
+						return "avatar main 2";
+					end
+				end
+				if (v19.BloodFury:IsCastable() and IsRacials and v22) then
+					if v10(v19.BloodFury, true) then
+						return "blood_fury main 6";
+					end
+				end
+				if (v19.Berserking:IsCastable() and IsRacials and v22) then
+					if v10(v19.Berserking, true) then
+						return "berserking main 8";
+					end
+				end
+				if (v19.ArcaneTorrent:IsCastable() and IsRacials and v22) then
+					if v10(v19.ArcaneTorrent, true) then
+						return "arcane_torrent main 10";
+					end
+				end
+				if (v19.LightsJudgment:IsCastable() and IsRacials and v22) then
+					if v10(v19.LightsJudgment, true) then
+						return "lights_judgment main 12";
+					end
+				end
+				if (v19.Fireblood:IsCastable() and IsRacials and v22) then
+					if v10(v19.Fireblood, true) then
+						return "fireblood main 14";
+					end
+				end
+				if (v19.AncestralCall:IsCastable() and IsRacials and v22) then
+					if v10(v19.AncestralCall, true) then
+						return "ancestral_call main 16";
+					end
+				end
+				if (v19.BagofTricks:IsCastable() and IsRacials and v22) then
+					if v10(v19.BagofTricks, true) then
+						return "ancestral_call main 18";
+					end
+				end
+				if (v29.Commons.Enabled.Potions and IsPotions and (v5:BuffUp(v19.AvatarBuff) or (v5:BuffDown(v19.AvatarBuff) and (v6:HealthPercentage() <= (56 - 36))) or not IsAvatar) and v22) then
+					local v72 = v27.PotionSelected();
+					if (v72 and v72:IsReady()) then
+						v9.CastMacro(2 + 1, true, nil, v72);
+						return "Cast Potion";
+					end
+				end
+				if (v19.Ravager:IsCastable() and IsRavager and v22) then
+					v45(7 + 3);
+					if v9.CastTarget(v19.Ravager, v9.TName().PLAYER) then
+						return "ravager main 26";
+					end
+				end
+				if (v19.DemoralizingShout:IsCastable() and IsDemoralizingShout and v22 and (v19.BoomingVoice:IsAvailable())) then
+					v45(426 - (115 + 281));
+					if v10(v19.DemoralizingShout, false) then
+						return "demoralizing_shout main 28";
+					end
+				end
+				if (v19.ChampionsSpear:IsCastable() and IsChampionsSpear and v22) then
+					v45(46 - 26);
+					if v9.CastTarget(v19.ChampionsSpear, v9.TName().PLAYER) then
+						return "ChampionsSpear main 30";
+					end
+				end
+				if (v19.ThunderBlastAbility:IsReady() and v6:IsInMeleeRange(7 + 1) and (v24 >= (4 - 2)) and (v5:BuffStack(v19.ThunderBlastBuff) == (7 - 5))) then
+					v45(872 - (550 + 317));
+					if v10(v19.ThunderBlastAbility) then
+						return "thunder_blast main ";
+					end
+				end
+				if (v19.Demolish:IsCastable() and IsDemolish and not v5:IsMoving() and v22 and (v5:BuffStack(v19.ColossalMightBuff) >= (3 - 0))) then
+					if v10(v19.Demolish) then
+						return "demolish main ";
+					end
+				end
+				if (v19.ThunderousRoar:IsCastable() and IsThunderousRoar and v6:IsInMeleeRange(10 - 2)) then
+					if v10(v19.ThunderousRoar) then
+						return "thunderous_roar main 32";
+					end
+				end
+				if (v19.ShieldCharge:IsCastable() and v29.Protection.UseShieldCharge and v6:IsInMeleeRange(13 - 8)) then
+					v45(325 - (134 + 151));
+					if v10(v19.ShieldCharge) then
+						return "shield_charge main 38";
+					end
+				end
+				if (v24 > (1668 - (970 + 695))) then
+					v18 = v48();
+					if v18 then
+						return v18;
+					end
+					if v9.CastAnnotated(v19.Pool, false, "WAIT") then
+						return "Pool for Aoe()";
+					end
+				end
+				v18 = v49();
+				if v18 then
+					return v18;
+				end
+				if v9.CastAnnotated(v19.Pool, false, "WAIT") then
+					return "Wait/Pool Resources";
+				end
+			end
+		end
+	end
+end
+local function v51()
+	v9.ResetToggle();
+	v29.Protection.Display();
+	v9:UpdateMacro("macro1", "/use 16");
+	v9.ToggleIconFrame:AddButtonCustom("S", 1 - 0, "smallCDs", "smallcds");
+	v9.ToggleIconFrame:AddButtonCustom("A", 1992 - (582 + 1408), "Auto Stance", "autostance");
+	v9.ToggleIconFrame:AddButtonCustom("I", 10 - 7, "Interrupt", "interrupt");
+	v9.Print("Protection Warrior rotation has been updated for patch 11.0.2. Last Update 07.10.2024");
+end
+v9.SetAPL(91 - 18, v50, v51);

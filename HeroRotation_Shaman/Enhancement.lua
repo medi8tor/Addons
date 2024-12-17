@@ -1,1 +1,947 @@
-local v0={};local v1=string.char;local v2=string.byte;local v3=string.sub;local v4=bit32 or bit ;local v5=v4.bxor;local v6=table.concat;local v7=table.insert;local function v8(v187,v188) local v189={};for v289=1, #v187 do v7(v189,v1(v5(v2(v3(v187,v289,v289 + 1 )),v2(v3(v188,1 + (v289% #v188) ,1 + (v289% #v188) + 1 )))%256 ));end return v6(v189);end v0[179 + 1466 ]=v8("\230\189\24\18\103\236\187\178\31\26","\152\149\222\106\123\23");v0[2378 -735 ]=v8("\163\115\37\22\214\207\215\139\120\35\3\152\255\218\135\112\44\25\152\222\221\146\124\57\30\215\194\146\142\124\62\87\218\201\215\136\61\56\7\220\205\198\131\121\109\17\215\222\146\150\124\57\20\208\140\131\215\51\125\89\138\130\146\170\124\62\3\152\249\194\130\124\57\18\152\157\130\200\44\125\89\138\156\128\210","\178\230\29\77\119\184\172");v0[2447 -(118 + 688) ]=v8("\187\252\184\175\190\234\179\184\171\253","\220\206\143\221");v0[1688 -(25 + 23) ]=v8("\202\98\81\133\38\219\242\251\116\70","\156\159\17\52\214\86\190");v0[317 + 1319 ]=v8("\30\60\52\113\1\125\9\34","\30\109\81\85\29\109");v0[3521 -(927 + 959) ]=v8("\69\162\61\18\31\192\215\69","\147\54\207\92\126\115\131");v0[5497 -3866 ]=v8("\83\81\23\206\82\84","\190\55\56\100");v0[2362 -(16 + 716) ]=v8("\207\202\243\201\68\231","\33\139\163\128\185");v0[3138 -1512 ]=v8("\7\163\100\225\25\144\27\189\100","\226\110\205\16\132\107");v0[1722 -(11 + 86) ]=v8("\13\24\184\228\35\226\194\52\2","\183\68\118\204\129\81\144");v0[3939 -2324 ]=v8("\108\33\164\63","\203\59\96\237\107\69\111\113");v0[1897 -(175 + 110) ]=v8("\55\90\240\21\125\202\55\71\240\21\51\195\55\64\253\80\33\150","\174\86\41\147\112\19");v0[4049 -2445 ]=v8("\151\61\180\198\209\93\181\187\60\169\213\221\94\242\137\41\175\207\152\1\228","\210\228\72\198\161\184\51");v0[7876 -6279 ]=v8("\217\226\188\217\255\224\244\190\209\225\214\243\238\213\242\214\233\238\138\167","\147\191\135\206\184");v0[3385 -(503 + 1293) ]=v8("\49\83\89\9\248\78\39\40\64\92\59\224\93\53\36\1\93\5\254\82\99\115\19","\67\65\33\48\100\151\60");v0[4418 -2836 ]=v8("\211\139\223\38\148\189\70\211\137\227\32\134\165\88\146\151\221\32\142\168\88","\52\178\229\188\67\231\201");v0[1133 + 433 ]=v8("\173\202\89\67\65\70\52\66\175\131\89\71\64\67\58\65","\45\203\163\43\38\35\42\91");v0[2611 -(810 + 251) ]=v8("\59\173\94\11\197\240\5\48\166\75\88\210\227\13\48\169\64","\110\89\200\44\120\160\130");v0[1065 + 469 ]=v8("\18\24\61\250\210\145\164\5\6\43\181\196\175\161\25\21\62","\194\112\116\82\149\182\206");v0[466 + 1052 ]=v8("\241\11\92\141\20\8\59\12\165\20\84\138\17\77\126\6","\62\133\121\53\227\127\109\79");v0[1366 + 149 ]=v8("\150\92\86\81\187\204\74\211\14\82\94\185\199\30\211\24","\62\226\46\63\63\208\169");v0[2045 -(43 + 490) ]=v8("\172\103\235\251\134\189\97\176\181\128\185\124\236\181\220\232","\237\216\21\130\149");v0[2229 -(711 + 22) ]=v8("\231\17\32\30\137\93\12\39\179\14\40\25\140\24\64","\22\147\99\73\112\226\56\120");v0[5713 -4236 ]=v8("\95\246\58\34\115\148\115\227\32\57\61","\196\28\151\73\86\83");v0[2306 -(240 + 619) ]=v8("\48\205\110\106\22\212\110","\44\99\166\23");v0[348 + 1093 ]=v8("\237\255\167\51\229\183\181\56\225\251\167\112\233\229\173\37\254","\80\142\151\194");v0[2287 -849 ]=v8("\21\187\132\20\90\182\128\8\25\190\200\24\9","\109\122\213\232");v0[95 + 1336 ]=v8("\217\227\114\235\128\135\205\227\120\228\142\135\221\249\120\253\155","\167\186\139\23\136\235");v0[3165 -(1344 + 400) ]=v8("\210\174\194\213\103\255\84\0\217\152\214\213\122\244\81\10\158\170\196\212\125\177\14","\110\190\199\165\189\19\145\61");v0[1807 -(255 + 150) ]=v8("\103\239\75\148\74\221\81\137\71\226\93","\224\34\142\57");v0[1080 + 291 ]=v8("\176\243\139\101\63\230","\118\224\156\226\22\80\136\214");v0[731 + 633 ]=v8("\101\89\211\176\243","\168\38\44\161\195\150");v0[5772 -4421 ]=v8("\160\252\11\53\182\199\195\11\42\164","\194\231\148\100\70");v0[4334 -2992 ]=v8("\203\160\12\215\72\172\159\12\200\90","\60\140\200\99\164");v0[3073 -(404 + 1335) ]=v8("\31\16\140\1\1\63\11\148\88\78\54\94\131\23\76\50\31\148","\33\80\126\224\120");v0[1736 -(183 + 223) ]=v8("\127\175\249\58\4\39\94\225\214\44\73\44\81\181","\78\48\193\149\67\36");v0[1614 -287 ]=v8("\7\19\69\198\181\97","\235\102\127\50\167\204\18");v0[843 + 429 ]=v8("\51\99\11\109\66\26\189\1\127\9\63\77\1\152\64\118\12\107\74\0\141\12\122\12\120","\234\96\19\98\31\43\110");v0[456 + 810 ]=v8("\162\21\13\183\64\188\186\62\163\12\9\133\82\173\180\32\171\23\76\191\75\171\189\49\170\13","\80\196\121\108\218\37\200\213");v0[1599 -(10 + 327) ]=v8("\155\53\74\230\85\23\158\37\123\245\86\3\156\51\74\162\86\12\143\52\69\236\71","\98\236\92\36\130\51");v0[829 + 361 ]=v8("\15\29\38\65\203\132\215\63\82\28\90\153\132\202","\162\75\114\72\53\235\231");v0[1524 -(118 + 220) ]=v8("\208\147\240\90\203\233\146\247\70\220\221\193\254\70\218\150\215\167","\191\182\225\159\41");v0[393 + 785 ]=v8("\245\227\89\219\32\105\224\231\87\213\46\22\242\224\93\150\115\0","\54\147\143\56\182\69");v0[1619 -(108 + 341) ]=v8("\91\31\38\79\86\40\43\79\95\31\51\72\81\25\32\6\89\24\34\6\14\67","\38\56\119\71");v0[523 + 641 ]=v8("\67\118\81\3\54\72\110\85\2\12\68\118\85\29\39\6\123\91\11\115\16\40","\83\38\26\52\110");v0[4861 -3711 ]=v8("\253\167\160\45\196\160\189\62\250\238\179\39\254\238\228\120","\72\155\206\210");v0[2637 -(711 + 782) ]=v8("\176\65\203\99\18\2\89\200\180\91\222\126\19\51\82\129\178\92\207\48\79\101","\161\211\51\170\16\122\93\53");v0[2183 -1044 ]=v8("\52\7\27\236\7\10\12\254\48\70\12\226\61\70\88\187","\141\88\102\109");v0[1600 -(270 + 199) ]=v8("\61\37\5\255\230\32\52\9\203\240\116\39\15\197\181\97\114","\149\84\70\96\160");v0[365 + 760 ]=v8("\197\180\2\61\206\197\180\31\38\200\211\224\12\32\198\150\245\95","\163\182\192\109\79");v0[2938 -(580 + 1239) ]=v8("\73\202\251\225\63\212\76\202\254\224\108\193\81\198\181\176\124","\160\62\163\149\133\76");v0[3311 -2197 ]=v8("\186\30\130\50\10\10\160\176\11\139\53\12\60\162\190\76\130\46\7\117\248\225","\204\217\108\227\65\98\85");v0[1057 + 48 ]=v8("\17\29\168\68\176\247\3\187\11\2\162\22\188\235\18\233\86\95","\201\98\105\199\54\221\132\119");v0[40 + 1053 ]=v8("\9\175\63\122\216\230\0\176\44\63\230\231\10\230\121\43","\136\111\198\77\31\135");v0[474 + 613 ]=v8("\245\125\247\1\21\117\224\121\249\15\27\10\242\126\243\76\68\24","\42\147\17\150\108\112");v0[2803 -1729 ]=v8("\29\225\135\92\232\2\42\19\226\133\90\173\60\54\30\173\210\1","\89\123\141\230\49\141\93");v0[662 + 402 ]=v8("\221\107\188\7\128\220\119\188\4\197\207\113\183\67\214\150","\229\174\30\210\99");v0[2226 -(645 + 522) ]=v8("\130\83\87\61\144\126\75\38\139\66\83\110\133\78\93\110\215\23","\78\228\33\56");v0[2839 -(1010 + 780) ]=v8("\36\205\90\212\85\219\146\36\197\90\171\71\192\133\109\157\11","\224\77\174\63\139\38\175");v0[1039 + 0 ]=v8("\215\208\56\93\16\91\218\194\38\28\46\88\222\145\125\14","\55\187\177\78\60\79");v0[4902 -3873 ]=v8("\136\192\22\184\0\61\201\151\201\64\184\48\52\136\215\145","\168\228\161\96\217\95\81");v0[2989 -1969 ]=v8("\203\238\15\254\37\195\232\11\250\90\204\232\24\187\72\149","\122\173\135\125\155");v0[2846 -(1045 + 791) ]=v8("\34\20\220\176\253\194\180\63\6\146\181\247\213\253\99\87","\221\81\97\178\212\152\176");v0[2533 -1532 ]=v8("\17\50\57\111\180\75\30\41\63\116\168\122\27\46\63\60\189\123\23\96\106\40","\20\114\64\88\28\220");v0[1508 -520 ]=v8("\197\29\2\248\61\103\176\207\22\30\181\3\127\188\129\64\95","\217\161\114\109\149\98\16");v0[1488 -(351 + 154) ]=v8("\91\115\97\29\127\148\94\77\127\97\21\103\235\76\82\115\51\78\35","\45\61\22\19\124\19\203");v0[2553 -(1281 + 293) ]=v8("\48\90\83\255\247\12\94\91\241\241\39\92\91\248\254\115\83\93\243\185\98\10","\153\83\50\50\150");v0[1239 -(28 + 238) ]=v8("\187\248\6\72\134\176\224\2\73\188\188\248\2\86\151\254\245\12\64\195\239\162","\227\222\148\99\37");v0[2142 -1183 ]=v8("\199\195\18\205\83\201\164\205\204\27\208\83\255\166\195\139\18\203\88\182\249\144","\200\164\171\115\164\61\150");v0[2510 -(1381 + 178) ]=v8("\2\239\60\57\121\0\249\60\53\122\45\234\52\34\115\82\252\58\49\54\67\175","\22\114\157\85\84");v0[892 + 58 ]=v8("\249\164\184","\57\148\205\214\180\200\54");v0[761 + 182 ]=v8("\186\180\240\209\137\185\231\195\190\245\231\223\179\245\183\128","\176\214\213\134");v0[395 + 530 ]=v8("\182\132\175\218\174\131\161\220\189\178\170\221\182\153\232\211\181\136\232\138","\178\218\237\200");v0[3123 -2217 ]=v8("\186\49\170\103\183\128\73\189\190\43\191\122\182\177\66\244\184\44\174\52\233","\212\217\67\203\20\223\223\37");v0[465 + 432 ]=v8("\89\25\57\126\93\4\37\115\69\21\119\123\65\21\119\46","\26\46\112\87");v0[1359 -(381 + 89) ]=v8("\80\79\195\101\53\87\94\142\116\63\65\10\156","\80\36\42\174\21");v0[780 + 99 ]=v8("\238\43\224\84\111\127\207\236\37\216\94\116\125\210\162\49\238\82\124\125\195\162\115\182\12","\166\130\66\135\60\27\17");v0[590 + 281 ]=v8("\21\217\131\246\239\248\0\221\141\248\225\135\0\220\140\252\230\194\83\132\210\163","\167\115\181\226\155\138");v0[1481 -616 ]=v8("\52\131\110\168\57\189\121\176\52\143\121\178\37\131\112\252\34\139\114\187\61\135\60\237\97\212","\220\81\226\28");v0[2017 -(1074 + 82) ]=v8("\90\12\210\170\29\214\83\19\193\239\49\209\82\2\204\170\98\137\12\81","\184\60\101\160\207\66");v0[1873 -1018 ]=v8("\193\147\23\237\49\209\84\203\134\30\234\55\231\86\197\193\5\247\55\233\84\199\193\71\174\107","\56\162\225\118\158\89\142");v0[2634 -(214 + 1570) ]=v8("\51\166\132\225\206\10\167\131\253\217\62\244\152\251\212\50\184\142\178\139\101\228","\186\85\212\235\146");v0[2299 -(990 + 465) ]=v8("\241\196\19\221\90\185\244\195\19\234\76\184\241\217\84\198\71\185\250\193\17\149\23\239","\215\157\173\116\181\46");v0[344 + 490 ]=v8("\42\58\244\225\59\44\237\177\45\54\247\246\50\58\185\168\104","\145\94\95\153");v0[360 + 467 ]=v8("\251\24\87\250\222\240\139\32\239\77\74\247\213\229\142\43\168\84\13","\78\136\109\57\158\187\130\226");v0[800 + 22 ]=v8("\210\86\61\196\8\210\86\32\223\14\196\2\33\223\11\198\78\55\150\92\147","\101\161\34\82\182");v0[3211 -2395 ]=v8("\146\187\61\15\91\90\155\140\185\54\75\91\71\135\130\190\54\75\17\30","\233\229\210\83\107\40\46");v0[2537 -(1668 + 58) ]=v8("\232\203\55\197\252\36\238\75\234\205\114\233\230\62\251\78\228\136\106\162","\34\129\168\82\154\143\80\156");v0[1431 -(512 + 114) ]=v8("\187\228\111\244\214\199\182\246\113\181\250\194\185\226\117\240\169\147\225","\171\215\133\25\149\137");v0[2082 -1283 ]=v8("\38\195\91\73\187\26\221\83\93\187\49\223\83\84\180\101\194\83\84\180\41\212\26\2\231","\211\69\177\58\58");v0[1637 -845 ]=v8("\44\60\218\72\62\17\198\83\37\45\222\27\57\39\219\92\38\43\149\3\120","\59\74\78\181");v0[2727 -1943 ]=v8("\133\254\73\13\1\88\104\133\246\73\114\1\69\116\139\241\73\114\74\28","\26\236\157\44\82\114\44");v0[362 + 414 ]=v8("\251\242\42\211\200\255\61\193\255\179\47\219\249\244\48\215\183\164\100","\178\151\147\92");v0[144 + 624 ]=v8("\134\171\198\246\82\192\147\175\200\248\92\191\147\174\201\252\91\250\192\240\145","\159\224\199\167\155\55");v0[661 + 99 ]=v8("\242\99\250\190\49\18\148\252\126\246\166\101\62\142\250\118\249\168\101\122\211","\231\148\17\149\205\69\77");v0[2516 -1770 ]=v8("\199\118\50\85\194\63\201\216\127\100\71\244\61\207\199\114\100\3\174","\168\171\23\68\52\157\83");v0[2726 -(109 + 1885) ]=v8("\238\1\255\246\244\22\232\192\236\7\186\218\238\12\253\197\226\66\173\155","\169\135\98\154");v0[2191 -(1269 + 200) ]=v8("\59\90\201\40\191\90\95\36\83\159\58\137\88\89\59\94\159\126\208","\62\87\59\191\73\224\54");v0[1353 -647 ]=v8("\161\165\44\19\44\19\206\95\161\185\99\13\26\10\192\93\160\234\117\70","\49\197\202\67\126\115\100\167");v0[1514 -(98 + 717) ]=v8("\160\47\189\74\248\91\31\26\164\110\184\66\201\80\18\12\236\120\253","\105\204\78\203\43\167\55\126");v0[1515 -(802 + 24) ]=v8("\18\38\9\40\80\18\38\20\51\86\4\114\21\51\83\6\62\3\122\11\85","\61\97\82\102\90");v0[1177 -494 ]=v8("\243\120\114\77\200\91\242\237\122\121\9\200\70\238\227\125\121\9\141\29","\128\132\17\28\41\187\47");v0[833 -173 ]=v8("\86\182\192\182\85\133\210\179\95\185\202\251\67\179\207\188\92\191\129\237\0","\219\48\218\161");v0[96 + 554 ]=v8("\113\83\118\150\246\180\126\72\112\141\234\133\123\79\112\197\237\130\124\70\123\128\190\222\42","\235\18\33\23\229\158");v0[493 + 148 ]=v8("\39\133\55\164\189\179\63\37\139\15\174\166\177\34\107\159\57\162\174\177\51\107\217\102","\86\75\236\80\204\201\221");v0[104 + 527 ]=v8("\75\27\52\165\244\190\81\91\66\40\51\164\240\163\81\26\93\30\63\175\253\181\5\15\26","\58\46\119\81\200\145\208\37");v0[134 + 485 ]=v8("\188\70\185\83\174\107\165\72\181\87\189\0\169\93\184\71\182\81\246\21\232","\32\218\52\214");v0[1677 -1074 ]=v8("\93\147\236\63\67\148\247\63\71\140\230\109\93\142\237\42\66\130\163\120\30","\77\46\231\131");v0[1950 -1365 ]=v8("\191\41\25\253\239\87\178\59\7\188\195\82\189\47\3\249\144\15\235","\59\211\72\111\156\176");v0[203 + 364 ]=v8("\20\89\140\134\185\57\164\254\20\69\195\152\143\32\170\252\21\22\215\221","\144\112\54\227\235\230\78\205");v0[227 + 329 ]=v8("\87\39\179\94\89\85\39\186\81\114\89\33\184\66\13\72\39\186\81\65\94\110\224\2","\45\59\78\212\54");v0[448 + 94 ]=v8("\63\26\241\184\63\24\224\180\54\41\246\185\59\5\224\245\41\31\250\178\54\19\180\225\104","\213\90\118\148");v0[386 + 144 ]=v8("\146\63\172\71\211\82\21\139\44\169\117\203\65\7\135\109\182\67\210\71\29\135\109\241\26","\113\226\77\197\42\188\32");v0[245 + 279 ]=v8("\116\134\56\22\71\133\59\5\107\147\110\4\113\137\41\27\125\199\125\79","\119\24\231\78");v0[1949 -(797 + 636) ]=v8("\218\19\241\17\63\209\11\245\16\5\221\19\245\15\46\159\12\253\18\61\211\26\180\79\108","\90\191\127\148\124");v0[2456 -1950 ]=v8("\241\186\87\77\104\209\244\189\87\122\126\208\241\167\16\86\117\209\250\191\85\5\47\139","\191\157\211\48\37\28");v0[2115 -(1427 + 192) ]=v8("\57\61\12\182\28\229\53\52\48\14\11\183\24\248\53\117\47\56\7\188\21\238\97\102\110","\85\92\81\105\219\121\139\65");v0[168 + 316 ]=v8("\46\89\33\217\225\24\231\49\80\119\203\215\26\225\46\93\119\139\143","\134\66\56\87\184\190\116");v0[1100 -626 ]=v8("\185\220\2\217\200\176\195\243\163\195\8\139\214\170\217\230\166\205\77\152\149","\129\202\168\109\171\165\195\183");v0[412 + 46 ]=v8("\180\43\121\22\48\245\230\182\37\65\28\43\247\251\248\49\119\16\35\247\234\248\112\38","\143\216\66\30\126\68\155");v0[201 + 241 ]=v8("\66\162\215\122\59\205\68\170\73\148\210\125\35\215\13\183\71\165\215\126\42\131\31\242","\196\46\203\176\18\79\163\45");v0[752 -(192 + 134) ]=v8("\171\80\54\54\42\63\186\93\63\4\45\61\175\79\39\123\60\56\160\91\63\62\111\99\250","\81\206\60\83\91\79");v0[1680 -(316 + 960) ]=v8("\21\226\69\79\118\18\243\8\76\122\15\224\68\90\51\83\181","\19\97\135\40\63");v0[221 + 176 ]=v8("\177\208\39\68\169\215\41\66\186\230\34\67\177\205\96\95\180\215\39\64\184\153\114\29","\44\221\185\64");v0[299 + 88 ]=v8("\77\223\185\65\30\66\88\219\183\79\16\61\88\218\182\75\23\120\11\129\232","\29\43\179\216\44\123");v0[349 + 28 ]=v8("\47\186\143\72\230\107\113\50\168\193\95\234\119\127\48\170\193\29\187","\24\92\207\225\44\131\25");v0[1403 -1036 ]=v8("\204\130\31\241\170\200\221\210\128\20\181\170\213\193\220\135\20\181\232\138","\175\187\235\113\149\217\188");v0[910 -(83 + 468) ]=v8("\93\89\68\240\74\145\142\5\93\69\11\238\124\136\128\7\92\22\26\169","\107\57\54\43\157\21\230\231");v0[2158 -(1202 + 604) ]=v8("\95\196\224\91\95\252\148\91\196\218\84\86\243\147\78\136\246\95\84\245\140\95\136\180\4","\224\58\168\133\54\58\146");v0[1587 -1247 ]=v8("\76\37\126\236\95\83\76\96\96\245\84\71\84\37\51\173\10","\32\56\64\19\156\58");v0[545 -217 ]=v8("\227\75\98\11\233\113\99\26\236\92\121\30\165\93\121\4\226\66\117\74\179","\106\133\46\16");v0[896 -572 ]=v8("\174\224\200\207\53\220\182\119\191\254\254\213\59\216\183\62\173\251\207\197\54\203\242\42","\30\222\146\161\162\90\174\210");v0[639 -(45 + 280) ]=v8("\241\204\195\57\245\209\223\52\237\192\141\46\239\203\202\49\227\133\159","\93\134\165\173");v0[294 + 10 ]=v8("\171\116\184\141\54\146\107\177\143\48\166\56\169\146\54\174\119\180\130\50\185\56\225","\83\205\24\217\224");v0[261 + 37 ]=v8("\65\201\39\221\8\120\223\37\213\22\78\216\117\204\22\66\207\58\209\6\70\216\117\138","\100\39\172\85\188");v0[108 + 186 ]=v8("\188\187\24\73\185\249\203\165\168\29\123\161\234\217\169\233\1\86\179\232\192\161\171\16\80\246\191","\175\204\201\113\36\214\139");v0[160 + 128 ]=v8("\169\4\77\82\236\100\236\137\8\90\72\240\64\236","\128\236\101\63\38\132\33");v0[50 + 229 ]=v8("\245\17\4\214\165\104\148\213\19\32\198\191\120\135\218\28\2","\230\180\127\103\179\214\28");v0[483 -222 ]=v8("\13\129\190\64\13\134\22\35\48\150\184\73","\112\69\228\223\44\100\232\113");v0[2163 -(340 + 1571) ]=v8("\133\216\17\252\113\248\170\238\5\226\127\243","\150\205\189\112\144\24");v0[97 + 147 ]=v8("\41\249\183\190\169\159\178\22\230\175\177\190\182\147\21\249\189\189","\199\122\141\216\208\204\221");v0[2007 -(1733 + 39) ]=v8("\169\41\204\30\238\143\43\254\6\245\132\45\192\38\232\149\41\192","\135\225\76\173\114");v0[620 -394 ]=v8("\48\35\166\42\79\59\26\25\57\180\44","\73\113\80\210\88\46\87");v0[1248 -(125 + 909) ]=v8("\204\1\194\213\197\208\28\194\248\216\131\0\140\183\239\205\10\143\238\201\204\26\140\227","\170\163\111\226\151");v0[2161 -(1096 + 852) ]=v8("\55\0\194\227\164\61\3\155\197\165\45\0\150","\202\88\110\226\166");v0[96 + 116 ]=v8("\221\232\113\151\168\251\6\203\229\62\167\168\234\75\221\244\113\145\169\241\7\214\233\38\188\181","\107\178\134\81\210\198\158");v0[301 -90 ]=v8("\175\224\207\204\248\202\212\203\180\237\212\211\182\250\155\203\170\169\250\203\157","\164\216\137\187");v0[204 + 6 ]=v8("\87\80\69\8\8\200","\114\56\62\101\73\71\141");v0[721 -(409 + 103) ]=v8("\199\201\239\80\216\132\205\120\199","\60\180\164\142");v0[443 -(46 + 190) ]=v8("\65\33\75\48\101\124\244\89\39\91\52\48\77\236\22\39\81\52\60","\152\54\72\63\88\69\62");v0[300 -(51 + 44) ]=v8("\8\224\229\236\8\253\182\142\8\252\229\217\14\250\173\142\36\225\170\194\3\225\178\192\20","\174\103\142\197");v0[58 + 146 ]=v8("\199\32\96\162\187\10\239\136\33\50\192\187\23\188\237\32\37\141\173\26\243\221\32\52","\156\168\78\64\224\212\121");v0[1520 -(1114 + 203) ]=v8("\200\90\48\54\182\13\212\20\127\26\181\7","\126\167\52\16\116\217");v0[928 -(228 + 498) ]=v8("\6\26\174\42\30\5","\75\103\118\217");v0[44 + 157 ]=v8("\132\254\114\127\247\180\152\176\61\79\184\176\130\228\58\29\219\168\132\252\54\82\239\169\152","\199\235\144\82\61\152");v0[111 + 89 ]=v8("\185\231\106\238\22\171\62\222\181\230\63\197\12\238\60\213\246\202\37\196\20\170\60\208\184\250","\167\214\137\74\171\120\206\83");v0[862 -(174 + 489) ]=v8("\27\199\74\122\62\84\252\232\0\202\81\101\112\100\179\232\30\142\127\125\91","\135\108\174\62\18\30\23\147");v0[510 -314 ]=v8("\168\212\67\81\18\251\250\102\78","\126\219\185\34\61");v0[2100 -(830 + 1075) ]=v8("\62\200\56\128\105\226\35\135\37\197\35\159\39\210","\232\73\161\76");v0[718 -(303 + 221) ]=v8("\229\51\51\166\235\185\206\56","\202\171\92\71\134\190");v0[1448 -(231 + 1038) ]=v8("\35\175\159\56\153\22\187\137\119\205\13\250\159\54\203\5\191\159","\185\98\218\235\87");v0[105 + 21 ]=v8("\143\243\242\38\46\20\157\246\229\43\61\10\140\243\251\35\39\15","\75\220\163\183\106\98");v0[1283 -(171 + 991) ]=v8("\121\110\33\28\108\112\63\23\108\101\37\11\118\103\46\4\107\110\37\1","\69\41\34\96");v0[486 -368 ]=v8("\139\122\232\153\31\98\15\228\138\99\224\144\23\117\30\245\132\117\225\129\20\119\21\229","\161\219\54\169\192\90\48\80");v0[311 -195 ]=v8("\53\154\240\237\163\9\16\38\140\225\250\161\0\11\48\145\238\235\172\14","\84\121\223\177\191\237\76");v0[286 -171 ]=v8("\155\77\89\4\63\71\197\96\128\92\82\15\54\80","\35\200\29\28\72\115\20\154");v0[46 + 11 ]=v8("\217\89\175\71\242\84\162\75\249\89\179\121\223\115\146\117\217","\38\156\55\199");v0[185 -132 ]=v8("\99\211\62\253\78\123\224\245\67\211\34\195\116\76\193","\152\38\189\86\156\32\24\133");v0[138 -90 ]=v8("\142\42\24\55\125\166\254\166\33\30\34\76\129\254\173\33\30\37\122\179\254\184","\155\203\68\112\86\19\197");v0[70 -26 ]=v8("\117\24\42\19\240\83\19\47\23\240\68","\158\48\118\66\114");v0[123 -83 ]=v8("\23\184\68\27\179\40\85","\38\84\215\41\118\220\70");v0[1286 -(111 + 1137) ]=v8("\4\200\36\192\238\34\193","\156\67\173\74\165");v0[158 -(91 + 67) ]=v8("\194\192\201\44\246\175\137\18\196\194","\126\177\163\187\69\134\219\167");local v182=...;local v183={};local v184=require;local function v185(v190,...) local v191=v183[v190];if  not v191 then return v184(v190,v182,...);end return v191(v182,...);end v183[v0[0 -0 ]]=function(...) local v192,v193=...;local v194=HeroDBC.DBC;local v195=HeroLib;local v196=HeroCache;local v197=v195.Unit;local v198=v197.Player;local v199=v197.Target;local v200=v195.Spell;local v201=v195.MultiSpell;local v202=v195.Item;local v203=HeroRotation();local v204=v203.Cast;local v205=v203.AoEON;local v206=v203.CDsON;local v207=v203.Commons().Everyone.num;local v208=v203.Commons().Everyone.bool;local v209=GetSpellBonusDamage;local v210=GetWeaponEnchantInfo;local v211=math.max;local v212=math.min;local v213=string.match;local v214=GetTime;local v215=C_Timer.After;local v216;local v217=v200.Shaman.Enhancement;local v218=v202.Shaman.Enhancement;local v219;local v220={v218.AlgetharPuzzleBox:ID(),v218.BeacontotheBeyond:ID(),v218.ElementiumPocketAnvil:ID(),v218.ManicGrieftorch:ID()};local v221=v203.GUISettingsGet();local v222=v203.Commons().Everyone;local v223=v203.Commons().Shaman;local v224={[v0[20 + 18 ]]=v221.General,[v0[811 -(326 + 445) ]]=v221.APL.Shaman.Commons,[v0[191 -147 ]]=v221.APL.Shaman.Enhancement,[v0[106 -58 ]]=v221.APL.Shaman.Enhancement.Defensives,[v0[123 -70 ]]=v221.APL.Shaman.Enhancement_TTD,[v0[768 -(530 + 181) ]]=v221.APL.Shaman.Enhancement_CDUSE};local v225,v226;local v227,v228;local v229,v230;local v231,v232;local v233,v234;local v235,v236;local v237,v238;local v239,v240;local v241,v242;local v243,v244;local v245=881 -(614 + 267) ;local v246=(v217.RagingMaelstrom:IsAvailable() and (42 -(19 + 13))) or (7 -2) ;local v247=18 -10 ;local v248=17 -11 ;local v249=1 + 1 ;local v250=1758 -758 ;local v251,v252,v253;local v254,v255,v256;local v257=(v217.LavaBurst:IsAvailable() and (3 -1)) or (1813 -(1293 + 519)) ;local v258=v217.LightningBolt;local v259=22669 -11558 ;local v260=29010 -17899 ;local v261=v223.MoltenWeaponStacks + v223.IcyEdgeStacks + v223.CracklingSurgeStacks ;local v262=v200(842020 -401707 );local v263;local v264=0 -0 ;local function v265() local v290,v291=v198:GetTrinketData(v220);if ((v264<(11 -6)) and ((v290.ID==(0 + 0)) or (v291.ID==(0 + 0)) or ((v290.SpellID>(0 -0)) and  not v290.Usable) or ((v291.SpellID>(0 + 0)) and  not v291.Usable))) then v264=v264 + 1 + 0 ;v215(4 + 1 ,function() v265();end);return;end v225=v290.Object;v226=v291.Object;v227=v290.Spell;v229=v290.Range;v231=v290.CastTime;v228=v291.Spell;v230=v291.Range;v232=v291.CastTime;v233=v290.Cooldown;v234=v291.Cooldown;v235=v290.Blacklisted;v236=v291.Blacklisted;v237=(v290.ID==v218.AlgetharPuzzleBox:ID()) or (v290.ID==v218.ManicGrieftorch:ID()) or (v290.ID==v218.ElementiumPocketAnvil:ID()) or (v290.ID==v218.BeacontotheBeyond:ID()) ;v238=(v291.ID==v218.AlgetharPuzzleBox:ID()) or (v291.ID==v218.ManicGrieftorch:ID()) or (v291.ID==v218.ElementiumPocketAnvil:ID()) or (v291.ID==v218.BeacontotheBeyond:ID()) ;end v265();v195:RegisterForEvent(function() v257=(v217.LavaBurst:IsAvailable() and (1098 -(709 + 387))) or (1859 -(673 + 1185)) ;end,v0[333 -218 ],v0[372 -256 ]);v195:RegisterForEvent(function() v264=0 -0 ;v265();end,v0[85 + 33 ]);v195:RegisterForEvent(function() v258=v217.LightningBolt;v259=8303 + 2808 ;v260=15001 -3890 ;end,v0[30 + 91 ]);v195:RegisterForCombatEvent(function() v261=v223.MoltenWeaponStacks + v223.IcyEdgeStacks + v223.CracklingSurgeStacks ;end,v0[250 -124 ]);local function v266(v305) local v306=v198:GetEnemiesInRange(v305);local v307=1 -0 ;for v321,v322 in pairs(v306) do if ((v322:GUID()~=v199:GUID()) and (v322:AffectingCombat() or v322:IsDummy())) then v307=v307 + (1881 -(446 + 1434)) ;end end return v307;end local function v267(v308) for v323=1284 -(1040 + 243) ,17 -11 ,1848 -(559 + 1288)  do local v324,v325=v198:GetTotemInfo(v323);if (v308:Name()==v325) then return true;end end end local function v268() if ( not v217.AlphaWolf:IsAvailable() or v198:BuffDown(v217.FeralSpiritBuff)) then return 1931 -(609 + 1322) ;end local v309=v212(v217.CrashLightning:TimeSinceLastCast(),v217.ChainLightning:TimeSinceLastCast());if ((v309>(462 -(13 + 441))) or (v309>v217.FeralSpirit:TimeSinceLastCast())) then return 0 -0 ;end return (20 -12) -v309 ;end v217.LightningBolt:RegisterDamageFormula(function() return v209(19 -15 ) * (1.311 + 0) * ((3 -2) + (v198:MasteryPct()/(36 + 64))) * ((v217.AmplificationCore:IsAvailable() and v267(v217.SurgingTotem) and (1.03 + 0)) or (2 -1)) ;end);v217.ChainLightning:RegisterDamageFormula(function() local v310=(v217.CrashingStorms:IsAvailable() and (3 + 2)) or (4 -1) ;return v209(3 + 1 ) * (0.73025 + 0) * (1 + 0 + (v198:MasteryPct()/(84 + 16))) * ((v217.CrashingStorms:IsAvailable() and (1.4 + 0)) or (434 -(153 + 280))) * ((v217.AmplificationCore:IsAvailable() and v267(v217.SurgingTotem) and (2.0300000000000002 -1)) or (1 + 0)) * v212(v255,v310) ;end);local function v269(v311) return v311:DebuffRemains(v217.LightningRodDebuff);end local function v270(v312) return v312:DebuffRemains(v217.FlameShockDebuff);end local function v271(v313) return v198:BuffDown(v217.PrimordialWaveBuff);end local function v272(v314) return v314:DebuffRefreshable(v217.LashingFlamesDebuff) and v314:DebuffUp(v217.FlameShockDebuff) ;end local function v273(v315) return v315:DebuffRefreshable(v217.FlameShockDebuff);end local function v274(v316) return v316:NPCID()==(80769 + 123791) ;end local function v275(v317) return v317:CastSpellID()==(213935 + 194870) ;end local function v276() if (v221.General.AutoTab and v198:AffectingCombat()) then v203.TopPanelAlternative:ChangeIcon(1 + 0 ,3 + 0 );return v0[271 -92 ];end end local function v277() return v218.ManicGrieftorch:IsEquipped() and (v218.ManicGrieftorch:CooldownUp() or (v218.ManicGrieftorch:CooldownRemains()<=v198:GCDRemains())) ;end local v278;local function v279(v318) return (v278 and v224.Enhancement_TTD.IgnoreWhenBoss) or v222.Buggedmobs[v199:NPCID()] or (v222.ISSolo() and v224.Enhancement_TTD.IgnoreWhenSolo) or (v318==(0 + 0)) or ((v260>=v318) and (v260<(8444 -(89 + 578)))) ;end local function v280(v319) return (v319~=v0[139 + 55 ]) and ((((v319==v0[405 -210 ]) or ((v319==v0[1245 -(572 + 477) ]) and v224.Enhancement_CDUSE.smallcdswithCooldowns) or (v319==v0[27 + 172 ]) or (v319==v0[121 + 79 ]) or (v319==v0[24 + 177 ])) and v206()) or (v319==v0[288 -(84 + 2) ]) or (((v319==v0[334 -131 ]) or (v319==v0[147 + 57 ]) or (v319==v0[1047 -(497 + 345) ])) and (v278 or v199:IsDummy())) or ((v319==v0[6 + 201 ]) and v198:BloodlustUp()) or ((v319==v0[36 + 173 ]) and Smallcds) or (((v319==v0[1543 -(605 + 728) ]) or (v319==v0[151 + 60 ])) and (v255>=(3 -1))) or (((v319==v0[10 + 202 ]) or (v319==v0[787 -574 ]) or (v319==v0[193 + 21 ])) and (v255>=v224.Enhancement_CDUSE.Enemycount))) ;end local v281=nil;local function v282() if v198:IsMoving() then if  not v281 then v281=v214();end return v214() -v281 ;else if v281 then v281=nil;end return 0 -0 ;end end local function v283() if (v217.AstralShift:IsCastable() and v198:AffectingCombat() and (v198:HealthPercentage()<=v224.Enhancement.Defensives.AstralShiftHP)) then if v204(v217.AstralShift) then return v0[171 + 55 ];end end if (v217.HealingStreamTotem:IsCastable() and v198:AffectingCombat() and (v198:HealthPercentage()<=v224.Enhancement.Defensives.HealingStreamTotemHP)) then if v204(v217.HealingStreamTotem) then return v0[724 -(457 + 32) ];end end if (v217.StoneBulkwarkTotem:IsCastable() and v198:AffectingCombat() and (v198:HealthPercentage()<=v224.Enhancement.Defensives.StoneBulkwarkTotemHP)) then if v204(v217.StoneBulkwarkTotem) then return v0[104 + 140 ];end end if (v217.HealingSurge:IsReady() and (v245>=(1407 -(832 + 570))) and (v198:HealthPercentage()<=v224.Enhancement.Defensives.InstantHealingSurgeHP)) then if v204(v217.HealingSurge) then return v0[238 + 14 ];end end if (v217.HealingSurge:IsReady() and  not v198:IsMoving() and (v198:HealthPercentage()<=v224.Enhancement.Defensives.HealingSurgeHP)) then if v204(v217.HealingSurge) then return v0[69 + 192 ];end end if (v217.AncestralGuidance:IsCastable() and v198:AffectingCombat() and (v224.Enhancement.Defensives.AncestralGuidanceCount~=(0 -0)) and ( not v224.Enhancement.Defensives.AncestralGuidanceHP~=(0 + 0)) and v222.AoELogicWithCount(v224.Enhancement.Defensives.AncestralGuidanceHP,v224.Enhancement.Defensives.AncestralGuidanceCount,nil,v219)) then if v204(v217.AncestralGuidance) then return v0[1075 -(588 + 208) ];end end if (v217.EarthElemental:IsCastable() and v198:AffectingCombat() and (v198:HealthPercentage()<=v224.Enhancement.Defensives.EarthElemental) and IsEarthElemental) then if v204(v217.EarthElemental) then return v0[776 -488 ];end end end local function v284() if (v217.PrimordialWave:IsReady() and v199:IsSpellInRange(v217.PrimordialWave) and IsPrimordialWave) then if v204(v217.PrimordialWave) then return v0[2094 -(884 + 916) ];end end if (v217.FeralSpirit:IsCastable() and IsFeralSpirit and TargetInMeleeRange) then if v204(v217.FeralSpirit,true) then return v0[623 -325 ];end end if (v217.FlameShock:IsReady() and v199:IsSpellInRange(v217.FlameShock)) then if v204(v217.FlameShock) then return v0[177 + 127 ];end end end local function v285() if (v217.Windstrike:IsCastable() and v199:IsInRange(683 -(232 + 421) ) and v217.ThorimsInvocation:IsAvailable() and (v245>(1889 -(1569 + 320))) and (v258==v217.LightningBolt) and  not v217.ElementalSpirits:IsAvailable()) then if v204(v217.Windstrike) then return v0[78 + 236 ];end end if (v217.PrimordialWave:IsReady() and v199:IsSpellInRange(v217.PrimordialWave) and IsPrimordialWave and v199:DebuffDown(v217.FlameShockDebuff) and v217.MoltenAssault:IsAvailable()) then if v204(v217.PrimordialWave) then return v0[62 + 262 ];end end if (v217.FeralSpirit:IsCastable() and TargetInMeleeRange and IsFeralSpirit) then if v204(v217.FeralSpirit,true) then return v0[1105 -777 ];end end if (v217.TempestAbility:IsReady() and UseSpender and v279(v224.Enhancement_TTD.TempestTTD) and v199:IsInRange(645 -(316 + 289) ) and ((v245==v246) or ((v198:BuffStack(v217.TempestBuff)==v249) and ((v223.TempestMaelstrom>(78 -48)) or (v198:BuffStack(v217.AwakeningStormsBuff)==(1 + 1))) and (v245>=(1458 -(666 + 787)))))) then if v204(v217.LightningBolt) then return v0[765 -(360 + 65) ];end end if (v217.ElementalBlast:IsReady() and UseSpender and v199:IsSpellInRange(v217.ElementalBlast) and (v245==v246) and v217.ElementalSpirits:IsAvailable() and (v261>=(6 + 0)) and ((v217.ElementalBlast:ChargesFractional()>=(255.8 -(79 + 175))) or v198:BuffUp(v217.AscendanceBuff))) then if v204(v217.ElementalBlast) then return v0[554 -202 ];end end if (v217.DoomWinds:IsCastable() and v199:IsInMeleeRange(4 + 1 ) and IsDoomWinds and  not v217.ElementalSpirits:IsAvailable()) then if v204(v217.DoomWinds,true) then return v0[1100 -741 ];end end if (v217.Windstrike:IsCastable() and v199:IsInRange(57 -27 ) and v217.ThorimsInvocation:IsAvailable() and (v245>(899 -(503 + 396))) and (v258==v217.LightningBolt)) then if v204(v217.Windstrike) then return v0[548 -(92 + 89) ];end end if (v217.Sundering:IsReady() and v199:IsInMeleeRange(21 -10 ) and IsSundering and v198:BuffUp(v217.AscendanceBuff) and v267(v217.SurgingTotem) and v217.Earthsurge:IsAvailable()) then if v204(v217.Sundering,true) then return v0[194 + 183 ];end end if (v217.FlameShock:IsReady() and v199:IsSpellInRange(v217.FlameShock) and v199:DebuffDown(v217.FlameShockDebuff) and v217.LashingFlames:IsAvailable()) then if v204(v217.FlameShock) then return v0[230 + 157 ];end end if (v217.LightningBolt:IsCastable() and UseSpender and v199:IsSpellInRange(v217.LightningBolt) and (v245>=v246) and v198:BuffUp(v217.PrimordialWaveBuff) and v217.Tempest:IsAvailable()) then if v204(v217.LightningBolt) then return v0[1554 -1157 ];end end if (v217.TempestAbility:IsReady() and UseSpender and v279(v224.Enhancement_TTD.TempestTTD) and v199:IsInRange(6 + 34 ) and (v245>=(15 -8))) then if v204(v217.LightningBolt) then return v0[353 + 51 ];end end if (v217.ElementalBlast:IsReady() and UseSpender and v199:IsSpellInRange(v217.ElementalBlast) and (((v245>=(3 + 2)) and v217.ElementalSpirits:IsAvailable() and (v261>=(12 -8)) and  not v217.Tempest:IsAvailable()) or ((v245>=(1 + 6)) and (v261>=(7 -2)) and (v198:BuffUp(v217.IcyEdgeBuff) or v198:BuffUp(v217.MoltenWeaponBuff)) and (v217.FeralSpirit:CooldownRemains()>=(1247 -(485 + 759)))) or ((v245>=(16 -9)) and (v261>=(1190 -(442 + 747))) and ((v223.IcyEdgeStacks + v223.MoltenWeaponStacks)>=(1136 -(832 + 303))) and (v217.ElementalBlast:ChargesFractional()>=(947.8 -(88 + 858))) and (v217.FeralSpirit:CooldownRemains()>=(1 + 2))))) then if v204(v217.ElementalBlast) then return v0[353 + 73 ];end end if (v217.LightningBolt:IsCastable() and UseSpender and v199:IsSpellInRange(v217.LightningBolt) and (v245>=(1 + 4)) and v217.Tempest:IsAvailable() and (v245>=(v246-(v207(v217.ElementalSpirits:IsAvailable()) * (v207(v217.Supercharge:IsAvailable()) + v207(v217.StaticAccumulation:IsAvailable()))))) and v198:BuffDown(v217.PrimordialWaveBuff)) then if v204(v217.LightningBolt) then return v0[1231 -(766 + 23) ];end end if (v217.LightningBolt:IsCastable() and UseSpender and v199:IsSpellInRange(v217.LightningBolt) and (v245>=(24 -19)) and v198:BuffUp(v217.AscendanceBuff) and (v258==v217.ChainLightning) and (v198:BuffRemains(v217.AscendanceBuff)>(v217.Windstrike:CooldownRemains() + v198:GCD())) and v198:BuffDown(v217.PrimordialWaveBuff)) then if v204(v217.LightningBolt) then return v0[625 -167 ];end end if (v217.Stormstrike:IsReady() and v199:IsSpellInRange(v217.Stormstrike) and  not v217.ElementalSpirits:IsAvailable() and (v198:BuffUp(v217.DoomWindsBuff) or v217.DeeplyRootedElements:IsAvailable() or (v217.Stormblast:IsAvailable() and v198:BuffUp(v217.StormbringerBuff)))) then if v204(v217.Stormstrike) then return v0[1248 -774 ];end end if (v217.LavaLash:IsCastable() and v199:IsSpellInRange(v217.LavaLash) and v198:BuffUp(v217.HotHandBuff) and  not v217.Tempest:IsAvailable()) then if v204(v217.LavaLash) then return v0[1642 -1158 ];end end if (v217.ElementalBlast:IsReady() and UseSpender and v199:IsSpellInRange(v217.ElementalBlast) and (v245>=(1078 -(1036 + 37))) and (v217.ElementalBlast:Charges()==v217.ElementalBlast:MaxCharges()) and  not v217.Tempest:IsAvailable()) then if v204(v217.ElementalBlast) then return v0[352 + 144 ];end end if (v217.LightningBolt:IsCastable() and UseSpender and v199:IsSpellInRange(v217.LightningBolt) and (v245>=(15 -7)) and v198:BuffUp(v217.PrimordialWaveBuff) and (v198:BuffDown(v217.SplinteredElementsBuff) or (v260<=(10 + 2)))) then if v204(v217.LightningBolt) then return v0[1986 -(641 + 839) ];end end if (v217.ElementalBlast:IsReady() and UseSpender and v199:IsSpellInRange(v217.ElementalBlast) and (v245>=(921 -(910 + 3))) and ((v261>=(4 -2)) or  not v217.ElementalSpirits:IsAvailable()) and  not v217.Tempest:IsAvailable()) then if v204(v217.ElementalBlast) then return v0[2200 -(1466 + 218) ];end end if (v217.LavaBurst:IsReady() and v199:IsSpellInRange(v217.LavaBurst) and  not v217.ThorimsInvocation:IsAvailable() and (v245>=(3 + 2))) then if v204(v217.LavaBurst) then return v0[1672 -(556 + 592) ];end end if (v217.PrimordialWave:IsReady() and v199:IsSpellInRange(v217.PrimordialWave) and IsPrimordialWave) then if v204(v217.PrimordialWave) then return v0[189 + 341 ];end end if (v217.ElementalBlast:IsReady() and UseSpender and v199:IsSpellInRange(v217.ElementalBlast) and (v245>=(813 -(329 + 479))) and (v261>=(858 -(174 + 680))) and v217.Ascendance:IsAvailable() and ((v217.ElementalBlast:ChargesFractional()>=(3.8 -2)) or ((v223.IcyEdgeStacks + v223.MoltenWeaponStacks)>=(8 -4)))) then if v204(v217.ElementalBlast) then return v0[387 + 155 ];end end if (v217.LightningBolt:IsCastable() and UseSpender and v199:IsSpellInRange(v217.LightningBolt) and ((v245>=(747 -(396 + 343))) or (v217.StaticAccumulation:IsAvailable() and (v245>=(1 + 4)))) and v198:BuffDown(v217.PrimordialWaveBuff) and v217.Ascendance:IsAvailable() and v217.Tempest:IsAvailable()) then if v204(v217.LightningBolt) then return v0[2033 -(29 + 1448) ];end end if (v217.DoomWinds:IsCastable() and v199:IsInMeleeRange(1394 -(135 + 1254) ) and IsDoomWinds and v217.ElementalSpirits:IsAvailable() and v217.Ascendance:IsAvailable() and v217.Tempest:IsAvailable()) then if v204(v217.DoomWinds,true) then return v0[2135 -1568 ];end end if (v217.LavaLash:IsCastable() and v199:IsSpellInRange(v217.LavaLash) and v217.Tempest:IsAvailable() and (v198:BuffUp(v217.HotHandBuff) or (v217.MoltenAssault:IsAvailable() and v217.ElementalSpirits:IsAvailable() and  not v217.DeeplyRootedElements:IsAvailable() and (v199:DebuffRemains(v217.FlameShockDebuff)<=(13 -10))))) then if v204(v217.LavaLash) then return v0[390 + 195 ];end end if (v217.Stormstrike:IsReady() and v199:IsSpellInRange(v217.Stormstrike) and v217.ElementalSpirits:IsAvailable() and (v198:BuffUp(v217.DoomWindsBuff) or v217.DeeplyRootedElements:IsAvailable() or v217.Ascendance:IsAvailable() or (v217.Stormblast:IsAvailable() and v198:BuffUp(v217.StormbringerBuff)))) then if v204(v217.Stormstrike) then return v0[2130 -(389 + 1138) ];end end if (v217.FrostShock:IsCastable() and v199:IsSpellInRange(v217.FrostShock) and v198:BuffUp(v217.HailstormBuff) and v198:BuffUp(v217.IceStrikeBuff) and v217.SwirlingMaelstrom:IsAvailable() and v217.Tempest:IsAvailable() and v217.Ascendance:IsAvailable()) then if v204(v217.FrostShock) then return v0[1193 -(102 + 472) ];end end if (v217.ElementalBlast:IsReady() and UseSpender and v199:IsSpellInRange(v217.ElementalBlast) and (v245>=(5 + 0)) and (v261>=(3 + 1)) and v217.DeeplyRootedElements:IsAvailable() and ((v217.ElementalBlast:ChargesFractional()>=(1.8 + 0)) or ((v223.IcyEdgeStacks + v223.MoltenWeaponStacks)>=(1549 -(320 + 1225))))) then if v204(v217.ElementalBlast) then return v0[1122 -491 ];end end if (v217.LightningBolt:IsCastable() and UseSpender and v199:IsSpellInRange(v217.LightningBolt) and ((v245>=(5 + 3)) or (v217.StaticAccumulation:IsAvailable() and (v245>=(1469 -(157 + 1307))))) and v198:BuffDown(v217.PrimordialWaveBuff)) then if v204(v217.LightningBolt) then return v0[2500 -(821 + 1038) ];end end if (v217.CrashLightning:IsReady() and v199:IsInMeleeRange(19 -11 ) and v217.AlphaWolf:IsAvailable() and v198:BuffUp(v217.FeralSpiritBuff) and (v268()==(0 + 0))) then if v204(v217.CrashLightning,true) then return v0[1154 -504 ];end end if (v217.FlameShock:IsReady() and v199:IsSpellInRange(v217.FlameShock) and v199:DebuffDown(v217.FlameShockDebuff) and  not v217.Tempest:IsAvailable()) then if v204(v217.FlameShock) then return v0[246 + 414 ];end end if ((v217.TotemicRebound:IsAvailable() and (v212(v217.Stormstrike:TimeSinceLastCast(),v217.Windstrike:TimeSinceLastCast())>=(7.5 -4))) or (v217.AwakeningStorms:IsAvailable() and (v212(v217.Stormstrike:TimeSinceLastCast(),v217.Windstrike:TimeSinceLastCast(),v217.LightningBolt:TimeSinceLastCast(),v217.TempestAbility:TimeSinceLastCast(),v217.ChainLightning:TimeSinceLastCast())>=(1029.5 -(834 + 192))))) then if (v217.Windstrike:IsCastable() and v199:IsInRange(2 + 28 )) then if v204(v217.Windstrike) then return v0[176 + 507 ];end end if (v217.Stormstrike:IsReady() and v199:IsSpellInRange(v217.Stormstrike)) then if v204(v217.Stormstrike) then return v0[15 + 674 ];end end end if (v217.LavaLash:IsCastable() and v199:IsSpellInRange(v217.LavaLash) and v217.LivelyTotems:IsAvailable() and (v217.LavaLash:TimeSinceLastCast()>=(4.5 -1))) then if v204(v217.LavaLash) then return v0[1003 -(300 + 4) ];end end if (v217.DoomWinds:IsReady() and v199:IsInMeleeRange(2 + 3 ) and IsDoomWinds and (v217.ElementalSpirits:IsAvailable())) then if v204(v217.DoomWinds,true) then return v0[1848 -1142 ];end end if (v217.LavaLash:IsCastable() and v199:IsSpellInRange(v217.LavaLash) and v217.ElementalAssault:IsAvailable() and v217.Tempest:IsAvailable() and v217.MoltenAssault:IsAvailable() and v217.DeeplyRootedElements:IsAvailable() and v199:DebuffUp(v217.FlameShockDebuff)) then if v204(v217.LavaLash) then return v0[1084 -(112 + 250) ];end end if (v217.IceStrike:IsReady() and v199:IsSpellInRange(v217.IceStrike) and IsIceStrike and v217.ElementalAssault:IsAvailable() and v217.SwirlingMaelstrom:IsAvailable()) then if v204(v217.IceStrike) then return v0[292 + 440 ];end end if (v217.LavaLash:IsCastable() and v199:IsSpellInRange(v217.LavaLash) and v217.ElementalAssault:IsAvailable() and v217.Tempest:IsAvailable() and v217.MoltenAssault:IsAvailable() and v199:DebuffUp(v217.FlameShockDebuff)) then if v204(v217.LavaLash) then return v0[1868 -1122 ];end end if (v217.FrostShock:IsCastable() and v199:IsSpellInRange(v217.FrostShock) and v198:BuffUp(v217.HailstormBuff) and v198:BuffUp(v217.IceStrikeBuff) and v217.SwirlingMaelstrom:IsAvailable() and v217.Tempest:IsAvailable()) then if v204(v217.FrostShock) then return v0[436 + 324 ];end end if (v217.FlameShock:IsReady() and v199:IsSpellInRange(v217.FlameShock) and (v199:DebuffDown(v217.FlameShockDebuff))) then if v204(v217.FlameShock) then return v0[398 + 370 ];end end if (v217.LavaLash:IsCastable() and v199:IsSpellInRange(v217.LavaLash) and (v217.LashingFlames:IsAvailable())) then if v204(v217.LavaLash) then return v0[581 + 195 ];end end if (v217.IceStrike:IsReady() and v199:IsSpellInRange(v217.IceStrike) and IsIceStrike and (v198:BuffDown(v217.IceStrikeBuff))) then if v204(v217.IceStrike) then return v0[389 + 395 ];end end if (v217.FrostShock:IsReady() and v199:IsSpellInRange(v217.FrostShock) and (v198:BuffUp(v217.HailstormBuff))) then if v204(v217.FrostShock) then return v0[589 + 203 ];end end if (v217.CrashLightning:IsReady() and v199:IsInMeleeRange(1422 -(1001 + 413) ) and (v217.ConvergingStorms:IsAvailable())) then if v204(v217.CrashLightning,true) then return v0[1781 -982 ];end end if (v217.LavaLash:IsReady() and v199:IsSpellInRange(v217.LavaLash)) then if v204(v217.LavaLash) then return v0[1687 -(244 + 638) ];end end if (v217.IceStrike:IsReady() and v199:IsSpellInRange(v217.IceStrike) and IsIceStrike) then if v204(v217.IceStrike) then return v0[1504 -(627 + 66) ];end end if (v217.Windstrike:IsCastable() and v199:IsInRange(89 -59 )) then if v204(v217.Windstrike) then return v0[1418 -(512 + 90) ];end end if (v217.Stormstrike:IsReady() and v199:IsSpellInRange(v217.Stormstrike)) then if v204(v217.Stormstrike) then return v0[2728 -(1665 + 241) ];end end if (v217.Sundering:IsReady() and v199:IsInMeleeRange(728 -(373 + 344) ) and IsSundering) then if v204(v217.Sundering,true) then return v0[373 + 454 ];end end if (v217.TempestAbility:IsReady() and UseSpender and v279(v224.Enhancement_TTD.TempestTTD) and v199:IsInRange(11 + 29 ) and (v245>=(13 -8))) then if v204(v217.LightningBolt) then return v0[1411 -577 ];end end if (v217.LightningBolt:IsCastable() and UseSpender and v199:IsSpellInRange(v217.LightningBolt) and v217.Hailstorm:IsAvailable() and (v245>=(1104 -(35 + 1064))) and v198:BuffDown(v217.PrimordialWaveBuff)) then if v204(v217.LightningBolt) then return v0[615 + 229 ];end end if (v217.FrostShock:IsReady() and v199:IsSpellInRange(v217.FrostShock)) then if v204(v217.FrostShock) then return v0[1818 -968 ];end end if (v217.CrashLightning:IsReady() and v199:IsInMeleeRange(1 + 7 )) then if v204(v217.CrashLightning,true) then return v0[2091 -(298 + 938) ];end end if (v217.FireNova:IsReady() and IsFireNova and (v199:DebuffUp(v217.FlameShockDebuff))) then if v204(v217.FireNova) then return v0[2120 -(233 + 1026) ];end end if (v217.EarthElemental:IsCastable() and TargetInMeleeRange and IsEarthElemental) then if v204(v217.EarthElemental,true) then return v0[2531 -(636 + 1030) ];end end if (v217.FlameShock:IsReady() and v199:IsSpellInRange(v217.FlameShock)) then if v204(v217.FlameShock) then return v0[446 + 425 ];end end if (v217.LightningBolt:IsCastable() and UseSpender and v199:IsSpellInRange(v217.LightningBolt) and (v245>=(5 + 0)) and v198:BuffDown(v217.PrimordialWaveBuff)) then if v204(v217.LightningBolt) then return v0[262 + 617 ];end end end local function v286() if (v217.TempestAbility:IsReady() and UseSpender and v279(v224.Enhancement_TTD.TempestTTD) and v199:IsInRange(3 + 37 ) and ((v245==v246) or ((v245>=(226 -(55 + 166))) and ((v223.TempestMaelstrom>(6 + 24)) or (v198:BuffStack(v217.AwakeningStormsBuff)==(1 + 1)))))) then if v204(v217.LightningBolt) then return v0[3394 -2505 ];end end if (v217.Windstrike:IsCastable() and v199:IsInRange(327 -(36 + 261) ) and v217.ThorimsInvocation:IsAvailable() and (v245>(0 -0)) and (v258==v217.ChainLightning)) then if v204(v217.Windstrike) then return v0[2265 -(34 + 1334) ];end end if (v217.CrashLightning:IsReady() and v199:IsInMeleeRange(4 + 4 ) and v217.CrashingStorms:IsAvailable() and ((v217.UnrulyWinds:IsAvailable() and (v255>=(8 + 2))) or (v255>=(1298 -(1035 + 248))))) then if v204(v217.CrashLightning,true) then return v0[927 -(20 + 1) ];end end if (v217.LightningBolt:IsCastable() and UseSpender and v199:IsSpellInRange(v217.LightningBolt) and ( not v217.Tempest:IsAvailable() or ((v223.TempestMaelstrom<=(6 + 4)) and (v198:BuffStack(v217.AwakeningStormsBuff)<=(320 -(134 + 185))))) and ((v217.FlameShockDebuff:AuraActiveCount()==v255) or (v217.FlameShockDebuff:AuraActiveCount()>=(1139 -(549 + 584)))) and v198:BuffUp(v217.PrimordialWaveBuff) and (v245==v246) and (v198:BuffDown(v217.SplinteredElementsBuff) or (v259<=(697 -(314 + 371))))) then if v204(v217.LightningBolt) then return v0[3175 -2250 ];end end if (v217.LavaLash:IsReady() and v199:IsSpellInRange(v217.LavaLash) and v217.MoltenAssault:IsAvailable() and (v217.PrimordialWave:IsAvailable() or v217.FireNova:IsAvailable()) and v199:DebuffUp(v217.FlameShockDebuff) and (v217.FlameShockDebuff:AuraActiveCount()<v255) and (v217.FlameShockDebuff:AuraActiveCount()<(974 -(478 + 490)))) then if v204(v217.LavaLash) then return v0[500 + 443 ];end end if (v217.PrimordialWave:IsReady() and IsPrimordialWave and (v198:BuffDown(v217.PrimordialWaveBuff))) then if v222.CastTargetIf(v217.PrimordialWave,v254,v0[2122 -(786 + 386) ],v270,v271,129 -89 ) then return v0[2330 -(1055 + 324) ];end end if (v217.ChainLightning:IsReady() and UseSpender and v199:IsSpellInRange(v217.ChainLightning) and v198:BuffUp(v217.ArcDischargeBuff) and (v245>=(1345 -(1093 + 247)))) then if v204(v217.ChainLightning) then return v0[853 + 106 ];end end if (v217.ElementalBlast:IsReady() and UseSpender and v199:IsSpellInRange(v217.ElementalBlast) and ( not v217.ElementalSpirits:IsAvailable() or (v217.ElementalSpirits:IsAvailable() and ((v217.ElementalBlast:Charges()==v257) or (v261>=(1 + 1))))) and (v245==v246) and ( not v217.CrashingStorms:IsAvailable() or (v255<=(11 -8)))) then if v204(v217.ElementalBlast) then return v0[3301 -2328 ];end end if (v217.ChainLightning:IsReady() and UseSpender and v199:IsSpellInRange(v217.ChainLightning) and (v245==v246)) then if v204(v217.ChainLightning) then return v0[2785 -1806 ];end end if (v217.FeralSpirit:IsCastable() and TargetInMeleeRange and IsFeralSpirit) then if v204(v217.FeralSpirit,true) then return v0[2470 -1487 ];end end if (v217.DoomWinds:IsCastable() and v199:IsInMeleeRange(2 + 3 ) and IsDoomWinds) then if v204(v217.DoomWinds,true) then return v0[3806 -2818 ];end end if (v217.CrashLightning:IsReady() and v199:IsInMeleeRange(27 -19 ) and (v198:BuffUp(v217.DoomWindsBuff) or v198:BuffDown(v217.CrashLightningBuff) or (v217.AlphaWolf:IsAvailable() and v198:BuffUp(v217.FeralSpiritBuff) and (v268()==(0 + 0))))) then if v204(v217.CrashLightning,true) then return v0[2559 -1558 ];end end if (v217.Sundering:IsReady() and v199:IsInMeleeRange(699 -(364 + 324) ) and IsSundering and (v198:BuffUp(v217.DoomWindsBuff) or v217.Earthsurge:IsAvailable())) then if v204(v217.Sundering,true) then return v0[2768 -1758 ];end end if (v217.FireNova:IsReady() and IsFireNova and ((v217.FlameShockDebuff:AuraActiveCount()==(14 -8)) or ((v217.FlameShockDebuff:AuraActiveCount()>=(2 + 2)) and (v217.FlameShockDebuff:AuraActiveCount()>=v255)))) then if v204(v217.FireNova) then return v0[4268 -3248 ];end end if (v217.LavaLash:IsReady() and (v217.LashingFlames:IsAvailable())) then if v222.CastCycle(v217.LavaLash,v254,v272,8 -3 ,nil,nil,v224.Enhancement.AutoTabDot,false) then return v0[3124 -2095 ];end end if (v217.LavaLash:IsReady() and v199:IsSpellInRange(v217.LavaLash) and v217.MoltenAssault:IsAvailable() and v199:DebuffUp(v217.FlameShockDebuff)) then if v204(v217.LavaLash) then return v0[2307 -(1249 + 19) ];end end if (v217.IceStrike:IsReady() and v199:IsSpellInRange(v217.IceStrike) and IsIceStrike and v217.Hailstorm:IsAvailable() and v198:BuffDown(v217.IceStrikeBuff)) then if v204(v217.IceStrike) then return v0[947 + 102 ];end end if (v217.FrostShock:IsReady() and v199:IsSpellInRange(v217.FrostShock) and v217.Hailstorm:IsAvailable() and v198:BuffUp(v217.HailstormBuff)) then if v204(v217.FrostShock) then return v0[4121 -3062 ];end end if (v217.Sundering:IsReady() and v199:IsInMeleeRange(1097 -(686 + 400) ) and IsSundering) then if v204(v217.Sundering,true) then return v0[835 + 229 ];end end if (v217.FlameShock:IsReady() and v199:IsSpellInRange(v217.FlameShock) and v217.MoltenAssault:IsAvailable() and v199:DebuffDown(v217.FlameShockDebuff)) then if v204(v217.FlameShock) then return v0[1303 -(73 + 156) ];end end if (v217.FlameShock:IsReady() and (v217.FireNova:IsAvailable() or v217.PrimordialWave:IsAvailable()) and (v217.FlameShockDebuff:AuraActiveCount()<v255) and (v217.FlameShockDebuff:AuraActiveCount()<(1 + 5))) then if v222.CastCycle(v217.FlameShock,v254,v273,851 -(721 + 90) ) then return v0[13 + 1074 ];end end if (v217.FireNova:IsReady() and IsFireNova and (v217.FlameShockDebuff:AuraActiveCount()>=(9 -6))) then if v204(v217.FireNova) then return v0[1563 -(224 + 246) ];end end if (v217.Stormstrike:IsReady() and v199:IsSpellInRange(v217.Stormstrike) and v198:BuffUp(v217.CrashLightningBuff) and (v217.DeeplyRootedElements:IsAvailable() or (v198:BuffStack(v217.ConvergingStormsBuff)==v248))) then if v204(v217.Stormstrike) then return v0[1790 -685 ];end end if (v217.CrashLightning:IsReady() and v199:IsInMeleeRange(14 -6 ) and v217.CrashingStorms:IsAvailable() and v198:BuffUp(v217.CLCrashLightningBuff) and (v255>=(1 + 3))) then if v204(v217.CrashLightning,true) then return v0[27 + 1087 ];end end if (v217.Windstrike:IsReady() and v199:IsInRange(23 + 7 )) then if v204(v217.Windstrike) then return v0[2224 -1105 ];end end if (v217.Stormstrike:IsReady() and v199:IsSpellInRange(v217.Stormstrike)) then if v204(v217.Stormstrike) then return v0[3743 -2618 ];end end if (v217.IceStrike:IsReady() and v199:IsSpellInRange(v217.IceStrike) and IsIceStrike) then if v204(v217.IceStrike) then return v0[1644 -(203 + 310) ];end end if (v217.LavaLash:IsReady() and v199:DebuffUp(v217.FlameShockDebuff) and v199:IsSpellInRange(v217.LavaLash)) then if v204(v217.LavaLash) then return v0[3132 -(1238 + 755) ];end end if (v217.CrashLightning:IsReady() and v199:IsInMeleeRange(1 + 7 )) then if v204(v217.CrashLightning,true) then return v0[2678 -(709 + 825) ];end end if (v217.FireNova:IsReady() and IsFireNova and (v217.FlameShockDebuff:AuraActiveCount()>=(3 -1))) then if v204(v217.FireNova) then return v0[1675 -525 ];end end if (v217.ElementalBlast:IsReady() and UseSpender and v199:IsSpellInRange(v217.ElementalBlast) and ( not v217.ElementalSpirits:IsAvailable() or (v217.ElementalSpirits:IsAvailable() and ((v217.ElementalBlast:Charges()==v257) or (v261>=(866 -(196 + 668)))))) and (v245>=(19 -14)) and ( not v217.CrashingStorms:IsAvailable() or (v255<=(5 -2)))) then if v204(v217.ElementalBlast) then return v0[1997 -(171 + 662) ];end end if (v217.ChainLightning:IsReady() and UseSpender and v199:IsSpellInRange(v217.ChainLightning) and (v245>=(98 -(4 + 89)))) then if v204(v217.ChainLightning) then return v0[4100 -2930 ];end end if (v217.FlameShock:IsReady() and v199:IsSpellInRange(v217.FlameShock) and (v199:DebuffDown(v217.FlameShockDebuff))) then if v204(v217.FlameShock) then return v0[429 + 749 ];end end if (v217.FrostShock:IsReady() and v199:IsSpellInRange(v217.FrostShock) and  not v217.Hailstorm:IsAvailable()) then if v204(v217.FrostShock) then return v0[5209 -4023 ];end end end local function v287() if v198:IsChanneling(v218.ManicGrieftorch.ItemUseSpell) then return v0[467 + 723 ];end InterruptToggle=v203.ToggleIconFrame:GetToggle(1487 -(35 + 1451) );DispelToggle=v203.ToggleIconFrame:GetToggle(1455 -(28 + 1425) );Smallcds=v203.ToggleIconFrame:GetToggle(1996 -(941 + 1052) );UseSpender=v203.ToggleIconFrame:GetToggle(4 + 0 );v282();v219=v222.UnitsinRange(v217.HealingSurge);v254=v198:GetEnemiesInMeleeRange(1524 -(822 + 692) );if v205() then v255= #v254;v256=v266(57 -17 );else v255=1 + 0 ;v256=298 -(45 + 252) ;end if (v217.PoisonCleansingTotem:IsAvailable() and v217.PoisonCleansingTotem:IsReady()) then v263=v222.DebuffCount(v219,v262);else v263=0 + 0 ;end IsRacials=v279(v224.Enhancement_TTD.RacialsTTD) and v280(v224.Enhancement_CDUSE.Racials) ;IsPotions=v279(v224.Enhancement_TTD.PotionsTTD) and (v224.Enhancement_CDUSE.Potionswhensolo or ( not v224.Enhancement_CDUSE.Potionswhensolo and  not v222.ISSolo())) and v280(v224.Enhancement_CDUSE.Potions) ;IsTrinket1=v279(v224.Enhancement_TTD.TrinketsTTD) and v280(v224.Enhancement_CDUSE.Trinket1) ;IsTrinket2=v279(v224.Enhancement_TTD.TrinketsTTD) and v280(v224.Enhancement_CDUSE.Trinket2) ;IsAscendance=v279(v224.Enhancement_TTD.AscendanceTTD) and v280(v224.Enhancement_CDUSE.Ascendance) ;IsFireNova=v280(v224.Enhancement_CDUSE.FireNova);IsEarthElemental=v280(v224.Enhancement_CDUSE.EarthElemental);IsDoomWinds=v279(v224.Enhancement_TTD.DoomWindsTTD) and v280(v224.Enhancement_CDUSE.DoomWinds) ;IsFeralSpirit=v279(v224.Enhancement_TTD.FeralSpiritTTD) and v280(v224.Enhancement_CDUSE.FeralSpirit) ;IsSundering=v279(v224.Enhancement_TTD.SunderingTTD) and v280(v224.Enhancement_CDUSE.Sundering) ;IsIceStrike=v280(v224.Enhancement_CDUSE.IceStrike);IsPrimordialWave=v279(v224.Enhancement_TTD.PrimordialWaveTTD) and v280(v224.Enhancement_CDUSE.PrimordialWave) ;IsSurgingTotem=v279(v224.Enhancement_TTD.SurgingTotemTTD) and v280(v224.Enhancement_CDUSE.SurgingTotem) ;TargetInMeleeRange=v199:IsInRange(2 + 3 );v239,v241,_,_,v240,v242=v210();if (( not v239 or (v241<(1460254 -860254))) and v217.WindfuryWeapon:IsCastable()) then if v204(v217.WindfuryWeapon) then return v0[1695 -(114 + 319) ];end end if (( not v240 or (v242<(861479 -261479))) and v217.FlametongueWeapon:IsCastable()) then if v204(v217.FlametongueWeapon) then return v0[1622 -356 ];end end if (v217.SpiritWalk:IsCastable() and v198:DebuffUp(v217.EntangledDebuff)) then if v204(v217.SpiritWalk) then return v0[811 + 461 ];end end if (v222.TargetIsValid() or v198:AffectingCombat()) then v259=v195.BossFightRemains();v278=true;v260=v259;if (v260==(16553 -5442)) then v278=false;v260=v195.FightRemains(v254,false);end v245=v198:BuffStack(v217.MaelstromWeaponBuff);v250=v212((v217.FeralSpirit:CooldownRemains()/((8 -4) * v207(v217.WitchDoctorsAncestry:IsAvailable()))) + ((2963 -(556 + 1407)) * v207( not v217.FeralSpirit:IsAvailable())) ,v217.DoomWinds:CooldownRemains() + ((2206 -(741 + 465)) * v207( not v217.DoomWinds:IsAvailable())) ,v217.Ascendance:CooldownRemains() + ((1465 -(170 + 295)) * v207( not v217.Ascendance:IsAvailable())) );v251=(1 + 0 + (v207(v199:DebuffUp(v217.ChaosBrandDebuff)) * (0.05 + 0))) * ((2 -1) + (v207(v199:DebuffUp(v217.HuntersMarkDebuff) and (v199:HealthPercentage()>=(67 + 13)) ) * (0.05 + 0))) ;local v326=(1.75 + 0) * v217.LightningBolt:Damage() ;local v327=(1230.2 -(957 + 273)) * v217.LightningBolt:Damage() * ((v199:DebuffUp(v217.LightningRodDebuff) and (1.75 + 0)) or (1 + 0)) ;v252=v217.LightningBolt:Damage() * ((3 -2) + (v207(v199:DebuffUp(v217.LightningRodDebuff)) * v251 * ((2 -1) + (v207(v198:BuffUp(v217.PrimordialWaveBuff)) * v217.FlameShockDebuff:AuraActiveCount() * v326)) * v327)) ;v253=v217.ChainLightning:Damage() * ((2 -1) + (v207(v199:DebuffUp(v217.LightningRodDebuff)) * v251 * v212(v255,(14 -11) + ((1782 -(389 + 1391)) * v207(v217.CrashingStorms:IsAvailable())) ) * v327)) ;end if v198:AffectingCombat() then if v198:PrevGCD(1 + 0 ,v217.ChainLightning) then v258=v217.ChainLightning;elseif v198:PrevGCD(1 + 0 ,v217.LightningBolt) then v258=v217.LightningBolt;end end if ((v224.Commons.AutoWolf==v0[3020 -1693 ]) or ((v224.Commons.AutoWolf==v0[2281 -(783 + 168) ]) and v198:AffectingCombat()) or ((v224.Commons.AutoWolf==v0[4477 -3143 ]) and  not v198:AffectingCombat())) then if (v198:IsMoving() and  not v198:IsMounted() and v198:BuffDown(v217.GhostWolf) and  not v198:AffectingCombat()) then v204(v217.GhostWolf);return v0[1321 + 21 ];end if (v198:IsMoving() and  not v198:IsMounted() and v198:BuffDown(v217.GhostWolf) and v198:AffectingCombat() and (v282()>(312 -(309 + 2))) and ( not v199:IsInMeleeRange(24 -16 ) or  not v222.TargetIsValid())) then v204(v217.GhostWolf);return v0[2563 -(1090 + 122) ];end end v216=v222.IncorpCycle(v217.Hex,10 + 20 ,false,false);if v216 then return v216;end if DispelToggle then v216=v222.PurgeCycle(v217.Purge,134 -94 ,false,v224.Commons.TabForPurge);if v216 then return v216;end if (v217.CleanseSpirit:IsCastable() and v198:IsInDungeonArea() and v198:IsInParty()) then v216=v222.DispelCycle(v217.CleanseSpirit,v0[934 + 430 ],nil,v219);if v216 then return v216;end end if (v217.PoisonCleansingTotem:IsAvailable() and v217.PoisonCleansingTotem:IsReady()) then if v222.DispelCycle(v217.PoisonCleansingTotem,v0[2489 -(628 + 490) ],nil,v219) then return v203.CastTarget(v217.PoisonCleansingTotem);end if ((v263>(1 + 0)) or (v217.CleanseSpirit:CooldownDown() and (v263>(0 -0)))) then return v203.CastTarget(v217.PoisonCleansingTotem);end end end local v320=((v217.ElementalOrbit:IsAvailable()) and v217.EarthShieldSelfBuff) or v217.EarthShieldOtherBuff ;if (((v224.Enhancement.Defensives.Earthshieldooc and  not v198:AffectingCombat()) or  not v224.Enhancement.Defensives.Earthshieldooc) and (v217.ElementalOrbit:IsAvailable() or v224.Enhancement.PreferEarthShield) and v217.EarthShield:IsReady() and (v198:BuffDown(v320) or ( not v198:AffectingCombat() and (v198:BuffStack(v320)<(22 -17))))) then if v203.CastTarget(v217.EarthShield,v203.TName().PLAYER) then return v0[2176 -(431 + 343) ];end elseif (((v224.Enhancement.Defensives.Earthshieldooc and  not v198:AffectingCombat()) or  not v224.Enhancement.Defensives.Earthshieldooc) and (v217.ElementalOrbit:IsAvailable() or  not v224.Enhancement.PreferEarthShield or  not v217.EarthShield:IsAvailable()) and v217.LightningShield:IsReady() and v198:BuffDown(v217.LightningShield)) then if v204(v217.LightningShield) then return v0[2869 -1448 ];end end if (v217.SkyFury:IsReady() and (v198:Level()>=(46 -30)) and  not v198:DebuffUp(v217.Corruption) and ((v222.GroupBuffMissing(v217.SkyFuryBuff) and (v224.Commons.SkyFury==v0[1131 + 300 ]) and (v198:IsInRaidArea() or v198:IsInDungeonArea())) or (v198:BuffDown(v217.SkyFuryBuff,true) and ((v224.Commons.SkyFury==v0[184 + 1254 ]) or (v224.Commons.SkyFury==v0[3136 -(556 + 1139) ])))) and  not v198:IsMounted()) then if v203.CastTarget(v217.SkyFury,v203.TName().PLAYER) then return v0[1462 -(6 + 9) ];end end v216=v283();if v216 then return v216;end if v222.TargetIsValid() then if ( not v224.Enhancement.AttackonlyinCombat or (v224.Enhancement.AttackonlyinCombat and v199:AffectingCombat())) then if  not v274(v197.Target) then if  not v198:AffectingCombat() then v216=v284();if v216 then return v216;end end if InterruptToggle then v216=v222.InterruptCycle(v217.WindShear,6 + 24 ,true,nil,false);v216=v222.InterruptCycle(v217.Thunderstorm,6 + 4 ,false,nil,true,true);end v216=(v255>(169 -(28 + 141))) and  not v199:IsInRange(2 + 3 ) and v276() ;if v216 then return v216;end if (v224.Commons.Enabled.Potions and (v198:BuffUp(v217.AscendanceBuff) or v198:BuffUp(v217.FeralSpiritBuff) or ((v260%(370 -70))<=(22 + 8)) or ( not v217.Ascendance:IsAvailable() and  not v217.FeralSpirit:IsAvailable() and  not v217.DoomWinds:IsAvailable()))) then local v330=v222.PotionSelected();if (v330 and v330:IsReady() and IsPotions) then v203.CastMacro(1320 -(486 + 831) ,nil,nil,v330);return v0[3843 -2366 ];end end if v216 then return v216;end if v224.Commons.Enabled.Trinkets then if (v225:IsReady() and TargetInMeleeRange and IsTrinket1 and  not v235 and  not v237 and v225:HasUseBuff() and (v198:BuffUp(v217.AscendanceBuff) or v198:BuffUp(v217.FeralSpiritBuff) or v198:BuffUp(v217.DoomWindsBuff) or ((v260%v233)<=v225:BuffDuration()) or (v250>=v233) or ( not v217.Ascendance:IsAvailable() and  not v217.FeralSpirit:IsAvailable() and  not v217.DoomWinds:IsAvailable()))) then if v204(v225,true) then return v0[5266 -3770 ];end end if (v226:IsReady() and TargetInMeleeRange and IsTrinket2 and  not v236 and  not v238 and v226:HasUseBuff() and (v198:BuffUp(v217.AscendanceBuff) or v198:BuffUp(v217.FeralSpiritBuff) or v198:BuffUp(v217.DoomWindsBuff) or ((v260%v234)<=v226:BuffDuration()) or (v250>=v234) or ( not v217.Ascendance:IsAvailable() and  not v217.FeralSpirit:IsAvailable() and  not v217.DoomWinds:IsAvailable()))) then if v204(v226,true) then return v0[286 + 1226 ];end end if (v225:IsReady() and TargetInMeleeRange and IsTrinket1 and  not v235 and  not v237 and  not v225:HasUseBuff()) then if v204(v225,true) then return v0[4790 -3275 ];end end if (v226:IsReady() and TargetInMeleeRange and IsTrinket2 and  not v236 and  not v238 and  not v226:HasUseBuff()) then if v204(v226,true) then return v0[2781 -(668 + 595) ];end end end if (v217.BloodFury:IsCastable() and IsRacials and TargetInMeleeRange and (v198:BuffUp(v217.AscendanceBuff) or v198:BuffUp(v217.FeralSpiritBuff) or v198:BuffUp(v217.DoomWindsBuff) or ((v260%(108 + 12))<=(4 + 11)) or (v250>=(327 -207)) or ( not v217.Ascendance:IsAvailable() and  not v217.FeralSpirit:IsAvailable() and  not v217.DoomWinds:IsAvailable()))) then if v204(v217.BloodFury,true) then return v0[1824 -(23 + 267) ];end end if (v217.Berserking:IsCastable() and IsRacials and TargetInMeleeRange and (v198:BuffUp(v217.AscendanceBuff) or v198:BuffUp(v217.FeralSpiritBuff) or v198:BuffUp(v217.DoomWindsBuff) or ((v260%(2124 -(1129 + 815)))<=(399 -(371 + 16))) or (v250>=(1930 -(1326 + 424))) or ( not v217.Ascendance:IsAvailable() and  not v217.FeralSpirit:IsAvailable() and  not v217.DoomWinds:IsAvailable()))) then if v204(v217.Berserking,true) then return v0[2935 -1385 ];end end if (v217.Fireblood:IsCastable() and IsRacials and TargetInMeleeRange and (v198:BuffUp(v217.AscendanceBuff) or v198:BuffUp(v217.FeralSpiritBuff) or v198:BuffUp(v217.DoomWindsBuff) or ((v260%(438 -318))<=(126 -(88 + 30))) or (v250>=(891 -(720 + 51))) or ( not v217.Ascendance:IsAvailable() and  not v217.FeralSpirit:IsAvailable() and  not v217.DoomWinds:IsAvailable()))) then if v204(v217.Fireblood,true) then return v0[3483 -1917 ];end end if (v217.AncestralCall:IsCastable() and IsRacials and TargetInMeleeRange and (v198:BuffUp(v217.AscendanceBuff) or v198:BuffUp(v217.FeralSpiritBuff) or v198:BuffUp(v217.DoomWindsBuff) or ((v260%(1896 -(421 + 1355)))<=(24 -9)) or (v250>=(59 + 61)) or ( not v217.Ascendance:IsAvailable() and  not v217.FeralSpirit:IsAvailable() and  not v217.DoomWinds:IsAvailable()))) then if v204(v217.AncestralCall,true) then return v0[2665 -(286 + 797) ];end end if (v217.PrimordialWave:IsReady() and IsPrimordialWave and v199:IsSpellInRange(v217.PrimordialWave) and (v198:HasTier(113 -82 ,2 -0 ))) then if v204(v217.PrimordialWave) then return v0[2028 -(397 + 42) ];end end if (v217.FeralSpirit:IsCastable() and TargetInMeleeRange and IsFeralSpirit and (v217.ElementalSpirits:IsAvailable() or (v217.AlphaWolf:IsAvailable() and (v255>(1 + 0))))) then if v204(v217.FeralSpirit,true) then return v0[2397 -(24 + 776) ];end end if (v217.SurgingTotem:IsReady() and IsSurgingTotem and TargetInMeleeRange) then if v203.CastTarget(v217.SurgingTotem,v203.TName().PLAYER) then return v0[2470 -866 ];end end if (v217.Ascendance:IsCastable() and IsAscendance and TargetInMeleeRange and v199:DebuffUp(v217.FlameShockDebuff) and (((v258==v217.LightningBolt) and (v255==(786 -(222 + 563)))) or ((v258==v217.ChainLightning) and (v255>(1 -0))))) then if v204(v217.Ascendance) then return v0[1161 + 451 ];end end if (v205() and (v255>(191 -(23 + 167)))) then v216=v286();if v216 then return v216;end end if ( not v205() or (v255<(1800 -(690 + 1108)))) then v216=v285();if v216 then return v216;end end if v203.CastAnnotated(v217.Pool,false,v0[583 + 1032 ]) then return "Wait/Pool Resources";end end end end end local function v288() v203.ResetToggle();v224.Enhancement.Display();v217.FlameShockDebuff:RegisterAuraTracking();v203.ToggleIconFrame:AddButtonCustom("I",1 + 0 ,v0[2473 -(40 + 808) ],v0[268 + 1358 ]);v203.ToggleIconFrame:AddButtonCustom("D",7 -5 ,v0[1558 + 72 ],v0[863 + 768 ]);v203.ToggleIconFrame:AddButtonCustom("S",2 + 1 ,v0[2206 -(47 + 524) ],v0[1062 + 574 ]);v203.ToggleIconFrame:AddButtonCustom("P",10 -6 ,v0[2452 -812 ],v0[3742 -2101 ]);v203.Print(v0[3369 -(1165 + 561) ]);end v203.SetAPL(8 + 255 ,v287,v288);end;return v183[v0[5094 -3449 ]](...);
+local v0, v1 = ...;
+local v2 = HeroDBC.DBC;
+local v3 = HeroLib;
+local v4 = HeroCache;
+local v5 = v3.Unit;
+local v6 = v5.Player;
+local v7 = v5.Target;
+local v8 = v3.Spell;
+local v9 = v3.MultiSpell;
+local v10 = v3.Item;
+local v11 = HeroRotation();
+local v12 = v11.Cast;
+local v13 = v11.AoEON;
+local v14 = v11.CDsON;
+local v15 = v11.Commons().Everyone.num;
+local v16 = v11.Commons().Everyone.bool;
+local v17 = GetSpellBonusDamage;
+local v18 = GetWeaponEnchantInfo;
+local v19 = math.max;
+local v20 = math.min;
+local v21 = string.match;
+local v22 = GetTime;
+local v23 = C_Timer.After;
+local v24;
+local v25 = v8.Shaman.Enhancement;
+local v26 = v10.Shaman.Enhancement;
+local v27;
+local v28 = {v26.AlgetharPuzzleBox:ID(),v26.BeacontotheBeyond:ID(),v26.ElementiumPocketAnvil:ID(),v26.ManicGrieftorch:ID()};
+local v29 = v11.GUISettingsGet();
+local v30 = v11.Commons().Everyone;
+local v31 = v11.Commons().Shaman;
+local v32 = {General=v29.General,Commons=v29.APL.Shaman.Commons,Enhancement=v29.APL.Shaman.Enhancement,Enhancement_Defensives=v29.APL.Shaman.Enhancement.Defensives,Enhancement_TTD=v29.APL.Shaman.Enhancement_TTD,Enhancement_CDUSE=v29.APL.Shaman.Enhancement_CDUSE};
+local v33, v34;
+local v35, v36;
+local v37, v38;
+local v39, v40;
+local v41, v42;
+local v43, v44;
+local v45, v46;
+local v47, v48;
+local v49, v50;
+local v51, v52;
+local v53 = 619 - (555 + 64);
+local v54 = (v25.RagingMaelstrom:IsAvailable() and (941 - (857 + 74))) or (573 - (367 + 201));
+local v55 = 935 - (214 + 713);
+local v56 = 2 + 4;
+local v57 = 1 + 1;
+local v58 = 1877 - (282 + 595);
+local v59, v60, v61;
+local v62, v63, v64;
+local v65 = (v25.LavaBurst:IsAvailable() and (1639 - (1523 + 114))) or (1 + 0);
+local v66 = v25.LightningBolt;
+local v67 = 15839 - 4728;
+local v68 = 12176 - (68 + 997);
+local v69 = v31.MoltenWeaponStacks + v31.IcyEdgeStacks + v31.CracklingSurgeStacks;
+local v70 = v8(441583 - (226 + 1044));
+local v71;
+local v72 = 0 - 0;
+local function v73()
+	local v97, v98 = v6:GetTrinketData(v28);
+	if ((v72 < (122 - (32 + 85))) and ((v97.ID == (0 + 0)) or (v98.ID == (0 + 0)) or ((v97.SpellID > (957 - (892 + 65))) and not v97.Usable) or ((v98.SpellID > (0 - 0)) and not v98.Usable))) then
+		v72 = v72 + (1 - 0);
+		v23(8 - 3, function()
+			v73();
+		end);
+		return;
+	end
+	v33 = v97.Object;
+	v34 = v98.Object;
+	v35 = v97.Spell;
+	v37 = v97.Range;
+	v39 = v97.CastTime;
+	v36 = v98.Spell;
+	v38 = v98.Range;
+	v40 = v98.CastTime;
+	v41 = v97.Cooldown;
+	v42 = v98.Cooldown;
+	v43 = v97.Blacklisted;
+	v44 = v98.Blacklisted;
+	v45 = (v97.ID == v26.AlgetharPuzzleBox:ID()) or (v97.ID == v26.ManicGrieftorch:ID()) or (v97.ID == v26.ElementiumPocketAnvil:ID()) or (v97.ID == v26.BeacontotheBeyond:ID());
+	v46 = (v98.ID == v26.AlgetharPuzzleBox:ID()) or (v98.ID == v26.ManicGrieftorch:ID()) or (v98.ID == v26.ElementiumPocketAnvil:ID()) or (v98.ID == v26.BeacontotheBeyond:ID());
+end
+v73();
+v3:RegisterForEvent(function()
+	v65 = (v25.LavaBurst:IsAvailable() and (352 - (87 + 263))) or (181 - (67 + 113));
+end, "SPELLS_CHANGED", "LEARNED_SPELL_IN_TAB");
+v3:RegisterForEvent(function()
+	v72 = 0 + 0;
+	v73();
+end, "PLAYER_EQUIPMENT_CHANGED");
+v3:RegisterForEvent(function()
+	v66 = v25.LightningBolt;
+	v67 = 27279 - 16168;
+	v68 = 8172 + 2939;
+end, "PLAYER_REGEN_ENABLED");
+v3:RegisterForCombatEvent(function()
+	v69 = v31.MoltenWeaponStacks + v31.IcyEdgeStacks + v31.CracklingSurgeStacks;
+end, "SPELL_AURA_APPLIED");
+local function v74(v112)
+	local v113 = v6:GetEnemiesInRange(v112);
+	local v114 = 3 - 2;
+	for v128, v129 in pairs(v113) do
+		if ((v129:GUID() ~= v7:GUID()) and (v129:AffectingCombat() or v129:IsDummy())) then
+			v114 = v114 + (953 - (802 + 150));
+		end
+	end
+	return v114;
+end
+local function v75(v115)
+	for v130 = 2 - 1, 10 - 4, 1 + 0 do
+		local v131, v132 = v6:GetTotemInfo(v130);
+		if (v115:Name() == v132) then
+			return true;
+		end
+	end
+end
+local function v76()
+	if (not v25.AlphaWolf:IsAvailable() or v6:BuffDown(v25.FeralSpiritBuff)) then
+		return 997 - (915 + 82);
+	end
+	local v116 = v20(v25.CrashLightning:TimeSinceLastCast(), v25.ChainLightning:TimeSinceLastCast());
+	if ((v116 > (22 - 14)) or (v116 > v25.FeralSpirit:TimeSinceLastCast())) then
+		return 0 + 0;
+	end
+	return (9 - 1) - v116;
+end
+v25.LightningBolt:RegisterDamageFormula(function()
+	return v17(1191 - (1069 + 118)) * (2.311 - 1) * ((1 - 0) + (v6:MasteryPct() / (18 + 82))) * ((v25.AmplificationCore:IsAvailable() and v75(v25.SurgingTotem) and (1.03 - 0)) or (1 + 0));
+end);
+v25.ChainLightning:RegisterDamageFormula(function()
+	local v117 = (v25.CrashingStorms:IsAvailable() and (796 - (368 + 423))) or (9 - 6);
+	return v17(22 - (10 + 8)) * (0.73025 - 0) * ((443 - (416 + 26)) + (v6:MasteryPct() / (319 - 219))) * ((v25.CrashingStorms:IsAvailable() and (1.4 + 0)) or (1 - 0)) * ((v25.AmplificationCore:IsAvailable() and v75(v25.SurgingTotem) and (439.03 - (145 + 293))) or (431 - (44 + 386))) * v20(v63, v117);
+end);
+local function v77(v118)
+	return v118:DebuffRemains(v25.LightningRodDebuff);
+end
+local function v78(v119)
+	return v119:DebuffRemains(v25.FlameShockDebuff);
+end
+local function v79(v120)
+	return v6:BuffDown(v25.PrimordialWaveBuff);
+end
+local function v80(v121)
+	return v121:DebuffRefreshable(v25.LashingFlamesDebuff) and v121:DebuffUp(v25.FlameShockDebuff);
+end
+local function v81(v122)
+	return v122:DebuffRefreshable(v25.FlameShockDebuff);
+end
+local function v82(v123)
+	return v123:NPCID() == (206046 - (998 + 488));
+end
+local function v83(v124)
+	return v124:CastSpellID() == (129875 + 278930);
+end
+local function v84()
+	if (v29.General.AutoTab and v6:AffectingCombat()) then
+		v11.TopPanelAlternative:ChangeIcon(1 + 0, 775 - (201 + 571));
+		return "Auto tab to target";
+	end
+end
+local function v85()
+	return v26.ManicGrieftorch:IsEquipped() and (v26.ManicGrieftorch:CooldownUp() or (v26.ManicGrieftorch:CooldownRemains() <= v6:GCDRemains()));
+end
+local v86;
+local function v87(v125)
+	return (v86 and v32.Enhancement_TTD.IgnoreWhenBoss) or v30.Buggedmobs[v7:NPCID()] or (v30.ISSolo() and v32.Enhancement_TTD.IgnoreWhenSolo) or (v125 == (1138 - (116 + 1022))) or ((v68 >= v125) and (v68 < (32377 - 24600)));
+end
+local function v88(v126)
+	return (v126 ~= "Not Used") and ((((v126 == "with Cooldowns") or ((v126 == "small CDs") and v32.Enhancement_CDUSE.smallcdswithCooldowns) or (v126 == "with Cooldowns or AoE") or (v126 == "on Enemycount or Cooldowns") or (v126 == "on Boss or with Cooldowns")) and v14()) or (v126 == "always") or (((v126 == "on Boss only") or (v126 == "on Boss or on Enemycount") or (v126 == "on Boss or with Cooldowns")) and (v86 or v7:IsDummy())) or ((v126 == "with Bloodlust only") and v6:BloodlustUp()) or ((v126 == "small CDs") and Smallcds) or (((v126 == "on AOE") or (v126 == "with Cooldowns or AoE")) and (v63 >= (2 + 0))) or (((v126 == "on Enemycount or Cooldowns") or (v126 == "on Enemycount") or (v126 == "on Boss or on Enemycount")) and (v63 >= v32.Enhancement_CDUSE.Enemycount)));
+end
+local v89 = nil;
+local function v90()
+	if v6:IsMoving() then
+		if not v89 then
+			v89 = v22();
+		end
+		return v22() - v89;
+	else
+		if v89 then
+			v89 = nil;
+		end
+		return 0 - 0;
+	end
+end
+local function v91()
+	if (v25.AstralShift:IsCastable() and v6:AffectingCombat() and (v6:HealthPercentage() <= v32.Enhancement.Defensives.AstralShiftHP)) then
+		if v12(v25.AstralShift) then
+			return "AstralShift";
+		end
+	end
+	if (v25.HealingStreamTotem:IsCastable() and v6:AffectingCombat() and (v6:HealthPercentage() <= v32.Enhancement.Defensives.HealingStreamTotemHP)) then
+		if v12(v25.HealingStreamTotem) then
+			return "HealingStreamTotem";
+		end
+	end
+	if (v25.StoneBulkwarkTotem:IsCastable() and v6:AffectingCombat() and (v6:HealthPercentage() <= v32.Enhancement.Defensives.StoneBulkwarkTotemHP)) then
+		if v12(v25.StoneBulkwarkTotem) then
+			return "StoneBulkwarkTotem";
+		end
+	end
+	if (v25.HealingSurge:IsReady() and (v53 >= (17 - 12)) and (v6:HealthPercentage() <= v32.Enhancement.Defensives.InstantHealingSurgeHP)) then
+		if v12(v25.HealingSurge) then
+			return "HealingSurge";
+		end
+	end
+	if (v25.HealingSurge:IsReady() and not v6:IsMoving() and (v6:HealthPercentage() <= v32.Enhancement.Defensives.HealingSurgeHP)) then
+		if v12(v25.HealingSurge) then
+			return "HealingSurge";
+		end
+	end
+	if (v25.AncestralGuidance:IsCastable() and v6:AffectingCombat() and (v32.Enhancement.Defensives.AncestralGuidanceCount ~= (859 - (814 + 45))) and (not v32.Enhancement.Defensives.AncestralGuidanceHP ~= (0 - 0)) and v30.AoELogicWithCount(v32.Enhancement.Defensives.AncestralGuidanceHP, v32.Enhancement.Defensives.AncestralGuidanceCount, nil, v27)) then
+		if v12(v25.AncestralGuidance) then
+			return "AncestralGuidance";
+		end
+	end
+	if (v25.EarthElemental:IsCastable() and v6:AffectingCombat() and (v6:HealthPercentage() <= v32.Enhancement.Defensives.EarthElemental) and IsEarthElemental) then
+		if v12(v25.EarthElemental) then
+			return "EarthElemental";
+		end
+	end
+end
+local function v92()
+	if (v25.PrimordialWave:IsReady() and v7:IsSpellInRange(v25.PrimordialWave) and IsPrimordialWave) then
+		if v12(v25.PrimordialWave) then
+			return "primordial_wave precombat 4";
+		end
+	end
+	if (v25.FeralSpirit:IsCastable() and IsFeralSpirit and TargetInMeleeRange) then
+		if v12(v25.FeralSpirit, true) then
+			return "feral_spirit precombat 6";
+		end
+	end
+	if (v25.FlameShock:IsReady() and v7:IsSpellInRange(v25.FlameShock)) then
+		if v12(v25.FlameShock) then
+			return "flame_shock precombat 8";
+		end
+	end
+end
+local function v93()
+	if (v25.Windstrike:IsCastable() and v7:IsInRange(2 + 28) and v25.ThorimsInvocation:IsAvailable() and (v53 > (0 + 0)) and (v66 == v25.LightningBolt) and not v25.ElementalSpirits:IsAvailable()) then
+		if v12(v25.Windstrike) then
+			return "windstrike single 2";
+		end
+	end
+	if (v25.PrimordialWave:IsReady() and v7:IsSpellInRange(v25.PrimordialWave) and IsPrimordialWave and v7:DebuffDown(v25.FlameShockDebuff) and v25.MoltenAssault:IsAvailable()) then
+		if v12(v25.PrimordialWave) then
+			return "primordial_wave single 4";
+		end
+	end
+	if (v25.FeralSpirit:IsCastable() and TargetInMeleeRange and IsFeralSpirit) then
+		if v12(v25.FeralSpirit, true) then
+			return "feral_spirit single 6";
+		end
+	end
+	if (v25.TempestAbility:IsReady() and UseSpender and v87(v32.Enhancement_TTD.TempestTTD) and v7:IsInRange(925 - (261 + 624)) and ((v53 == v54) or ((v6:BuffStack(v25.TempestBuff) == v57) and ((v31.TempestMaelstrom > (53 - 23)) or (v6:BuffStack(v25.AwakeningStormsBuff) == (1082 - (1020 + 60)))) and (v53 >= (1428 - (630 + 793)))))) then
+		if v12(v25.LightningBolt) then
+			return "tempest single 10";
+		end
+	end
+	if (v25.ElementalBlast:IsReady() and UseSpender and v7:IsSpellInRange(v25.ElementalBlast) and (v53 == v54) and v25.ElementalSpirits:IsAvailable() and (v69 >= (19 - 13)) and ((v25.ElementalBlast:ChargesFractional() >= (4.8 - 3)) or v6:BuffUp(v25.AscendanceBuff))) then
+		if v12(v25.ElementalBlast) then
+			return "elemental_blast single 12";
+		end
+	end
+	if (v25.DoomWinds:IsCastable() and v7:IsInMeleeRange(2 + 3) and IsDoomWinds and not v25.ElementalSpirits:IsAvailable()) then
+		if v12(v25.DoomWinds, true) then
+			return "doom_winds single 14";
+		end
+	end
+	if (v25.Windstrike:IsCastable() and v7:IsInRange(103 - 73) and v25.ThorimsInvocation:IsAvailable() and (v53 > (1747 - (760 + 987))) and (v66 == v25.LightningBolt)) then
+		if v12(v25.Windstrike) then
+			return "windstrike single 16";
+		end
+	end
+	if (v25.Sundering:IsReady() and v7:IsInMeleeRange(1924 - (1789 + 124)) and IsSundering and v6:BuffUp(v25.AscendanceBuff) and v75(v25.SurgingTotem) and v25.Earthsurge:IsAvailable()) then
+		if v12(v25.Sundering, true) then
+			return "sundering single 18";
+		end
+	end
+	if (v25.FlameShock:IsReady() and v7:IsSpellInRange(v25.FlameShock) and v7:DebuffDown(v25.FlameShockDebuff) and v25.LashingFlames:IsAvailable()) then
+		if v12(v25.FlameShock) then
+			return "flame_shock single 20";
+		end
+	end
+	if (v25.LightningBolt:IsCastable() and UseSpender and v7:IsSpellInRange(v25.LightningBolt) and (v53 >= v54) and v6:BuffUp(v25.PrimordialWaveBuff) and v25.Tempest:IsAvailable()) then
+		if v12(v25.LightningBolt) then
+			return "lightning_bolt single 21";
+		end
+	end
+	if (v25.TempestAbility:IsReady() and UseSpender and v87(v32.Enhancement_TTD.TempestTTD) and v7:IsInRange(806 - (745 + 21)) and (v53 >= (3 + 4))) then
+		if v12(v25.LightningBolt) then
+			return "tempest single 22";
+		end
+	end
+	if (v25.ElementalBlast:IsReady() and UseSpender and v7:IsSpellInRange(v25.ElementalBlast) and (((v53 >= (13 - 8)) and v25.ElementalSpirits:IsAvailable() and (v69 >= (15 - 11)) and not v25.Tempest:IsAvailable()) or ((v53 >= (1 + 6)) and (v69 >= (4 + 1)) and (v6:BuffUp(v25.IcyEdgeBuff) or v6:BuffUp(v25.MoltenWeaponBuff)) and (v25.FeralSpirit:CooldownRemains() >= (1058 - (87 + 968)))) or ((v53 >= (30 - 23)) and (v69 >= (1 + 0)) and ((v31.IcyEdgeStacks + v31.MoltenWeaponStacks) >= (2 - 1)) and (v25.ElementalBlast:ChargesFractional() >= (1414.8 - (447 + 966))) and (v25.FeralSpirit:CooldownRemains() >= (8 - 5))))) then
+		if v12(v25.ElementalBlast) then
+			return "elemental_blast single 24";
+		end
+	end
+	if (v25.LightningBolt:IsCastable() and UseSpender and v7:IsSpellInRange(v25.LightningBolt) and (v53 >= (1822 - (1703 + 114))) and v25.Tempest:IsAvailable() and (v53 >= (v54 - (v15(v25.ElementalSpirits:IsAvailable()) * (v15(v25.Supercharge:IsAvailable()) + v15(v25.StaticAccumulation:IsAvailable()))))) and v6:BuffDown(v25.PrimordialWaveBuff)) then
+		if v12(v25.LightningBolt) then
+			return "lightning_bolt single 26";
+		end
+	end
+	if (v25.LightningBolt:IsCastable() and UseSpender and v7:IsSpellInRange(v25.LightningBolt) and (v53 >= (706 - (376 + 325))) and v6:BuffUp(v25.AscendanceBuff) and (v66 == v25.ChainLightning) and (v6:BuffRemains(v25.AscendanceBuff) > (v25.Windstrike:CooldownRemains() + v6:GCD())) and v6:BuffDown(v25.PrimordialWaveBuff)) then
+		if v12(v25.LightningBolt) then
+			return "lightning_bolt single 28";
+		end
+	end
+	if (v25.Stormstrike:IsReady() and v7:IsSpellInRange(v25.Stormstrike) and not v25.ElementalSpirits:IsAvailable() and (v6:BuffUp(v25.DoomWindsBuff) or v25.DeeplyRootedElements:IsAvailable() or (v25.Stormblast:IsAvailable() and v6:BuffUp(v25.StormbringerBuff)))) then
+		if v12(v25.Stormstrike) then
+			return "stormstrike single 30";
+		end
+	end
+	if (v25.LavaLash:IsCastable() and v7:IsSpellInRange(v25.LavaLash) and v6:BuffUp(v25.HotHandBuff) and not v25.Tempest:IsAvailable()) then
+		if v12(v25.LavaLash) then
+			return "lava_lash single 31";
+		end
+	end
+	if (v25.ElementalBlast:IsReady() and UseSpender and v7:IsSpellInRange(v25.ElementalBlast) and (v53 >= (8 - 3)) and (v25.ElementalBlast:Charges() == v25.ElementalBlast:MaxCharges()) and not v25.Tempest:IsAvailable()) then
+		if v12(v25.ElementalBlast) then
+			return "elemental_blast single 32";
+		end
+	end
+	if (v25.LightningBolt:IsCastable() and UseSpender and v7:IsSpellInRange(v25.LightningBolt) and (v53 >= (24 - 16)) and v6:BuffUp(v25.PrimordialWaveBuff) and (v6:BuffDown(v25.SplinteredElementsBuff) or (v68 <= (4 + 8)))) then
+		if v12(v25.LightningBolt) then
+			return "lightning_bolt single 34";
+		end
+	end
+	if (v25.ElementalBlast:IsReady() and UseSpender and v7:IsSpellInRange(v25.ElementalBlast) and (v53 >= (17 - 9)) and ((v69 >= (16 - (9 + 5))) or not v25.ElementalSpirits:IsAvailable()) and not v25.Tempest:IsAvailable()) then
+		if v12(v25.ElementalBlast) then
+			return "elemental_blast single 36";
+		end
+	end
+	if (v25.LavaBurst:IsReady() and v7:IsSpellInRange(v25.LavaBurst) and not v25.ThorimsInvocation:IsAvailable() and (v53 >= (381 - (85 + 291)))) then
+		if v12(v25.LavaBurst) then
+			return "lava_burst single 38";
+		end
+	end
+	if (v25.PrimordialWave:IsReady() and v7:IsSpellInRange(v25.PrimordialWave) and IsPrimordialWave) then
+		if v12(v25.PrimordialWave) then
+			return "primordial_wave single 40";
+		end
+	end
+	if (v25.ElementalBlast:IsReady() and UseSpender and v7:IsSpellInRange(v25.ElementalBlast) and (v53 >= (1270 - (243 + 1022))) and (v69 >= (14 - 10)) and v25.Ascendance:IsAvailable() and ((v25.ElementalBlast:ChargesFractional() >= (1.8 + 0)) or ((v31.IcyEdgeStacks + v31.MoltenWeaponStacks) >= (1184 - (1123 + 57))))) then
+		if v12(v25.ElementalBlast) then
+			return "elemental_blast single 42";
+		end
+	end
+	if (v25.LightningBolt:IsCastable() and UseSpender and v7:IsSpellInRange(v25.LightningBolt) and ((v53 >= (7 + 1)) or (v25.StaticAccumulation:IsAvailable() and (v53 >= (259 - (163 + 91))))) and v6:BuffDown(v25.PrimordialWaveBuff) and v25.Ascendance:IsAvailable() and v25.Tempest:IsAvailable()) then
+		if v12(v25.LightningBolt) then
+			return "lightning_bolt single 44";
+		end
+	end
+	if (v25.DoomWinds:IsCastable() and v7:IsInMeleeRange(1935 - (1869 + 61)) and IsDoomWinds and v25.ElementalSpirits:IsAvailable() and v25.Ascendance:IsAvailable() and v25.Tempest:IsAvailable()) then
+		if v12(v25.DoomWinds, true) then
+			return "doom_winds single 46";
+		end
+	end
+	if (v25.LavaLash:IsCastable() and v7:IsSpellInRange(v25.LavaLash) and v25.Tempest:IsAvailable() and (v6:BuffUp(v25.HotHandBuff) or (v25.MoltenAssault:IsAvailable() and v25.ElementalSpirits:IsAvailable() and not v25.DeeplyRootedElements:IsAvailable() and (v7:DebuffRemains(v25.FlameShockDebuff) <= (1 + 2))))) then
+		if v12(v25.LavaLash) then
+			return "lava_lash single 48";
+		end
+	end
+	if (v25.Stormstrike:IsReady() and v7:IsSpellInRange(v25.Stormstrike) and v25.ElementalSpirits:IsAvailable() and (v6:BuffUp(v25.DoomWindsBuff) or v25.DeeplyRootedElements:IsAvailable() or v25.Ascendance:IsAvailable() or (v25.Stormblast:IsAvailable() and v6:BuffUp(v25.StormbringerBuff)))) then
+		if v12(v25.Stormstrike) then
+			return "stormstrike single 50";
+		end
+	end
+	if (v25.FrostShock:IsCastable() and v7:IsSpellInRange(v25.FrostShock) and v6:BuffUp(v25.HailstormBuff) and v6:BuffUp(v25.IceStrikeBuff) and v25.SwirlingMaelstrom:IsAvailable() and v25.Tempest:IsAvailable() and v25.Ascendance:IsAvailable()) then
+		if v12(v25.FrostShock) then
+			return "frost_shock single 52";
+		end
+	end
+	if (v25.ElementalBlast:IsReady() and UseSpender and v7:IsSpellInRange(v25.ElementalBlast) and (v53 >= (17 - 12)) and (v69 >= (5 - 1)) and v25.DeeplyRootedElements:IsAvailable() and ((v25.ElementalBlast:ChargesFractional() >= (1.8 + 0)) or ((v31.IcyEdgeStacks + v31.MoltenWeaponStacks) >= (5 - 1)))) then
+		if v12(v25.ElementalBlast) then
+			return "elemental_blast single 54";
+		end
+	end
+	if (v25.LightningBolt:IsCastable() and UseSpender and v7:IsSpellInRange(v25.LightningBolt) and ((v53 >= (8 + 0)) or (v25.StaticAccumulation:IsAvailable() and (v53 >= (1479 - (1329 + 145))))) and v6:BuffDown(v25.PrimordialWaveBuff)) then
+		if v12(v25.LightningBolt) then
+			return "lightning_bolt single 56";
+		end
+	end
+	if (v25.CrashLightning:IsReady() and v7:IsInMeleeRange(979 - (140 + 831)) and v25.AlphaWolf:IsAvailable() and v6:BuffUp(v25.FeralSpiritBuff) and (v76() == (1850 - (1409 + 441)))) then
+		if v12(v25.CrashLightning, true) then
+			return "crash_lightning single 58";
+		end
+	end
+	if (v25.FlameShock:IsReady() and v7:IsSpellInRange(v25.FlameShock) and v7:DebuffDown(v25.FlameShockDebuff) and not v25.Tempest:IsAvailable()) then
+		if v12(v25.FlameShock) then
+			return "flame_shock single 60";
+		end
+	end
+	if ((v25.TotemicRebound:IsAvailable() and (v20(v25.Stormstrike:TimeSinceLastCast(), v25.Windstrike:TimeSinceLastCast()) >= (721.5 - (15 + 703)))) or (v25.AwakeningStorms:IsAvailable() and (v20(v25.Stormstrike:TimeSinceLastCast(), v25.Windstrike:TimeSinceLastCast(), v25.LightningBolt:TimeSinceLastCast(), v25.TempestAbility:TimeSinceLastCast(), v25.ChainLightning:TimeSinceLastCast()) >= (2.5 + 1)))) then
+		if (v25.Windstrike:IsCastable() and v7:IsInRange(468 - (262 + 176))) then
+			if v12(v25.Windstrike) then
+				return "windstrike single 62";
+			end
+		end
+		if (v25.Stormstrike:IsReady() and v7:IsSpellInRange(v25.Stormstrike)) then
+			if v12(v25.Stormstrike) then
+				return "stormstrike single 64";
+			end
+		end
+	end
+	if (v25.LavaLash:IsCastable() and v7:IsSpellInRange(v25.LavaLash) and v25.LivelyTotems:IsAvailable() and (v25.LavaLash:TimeSinceLastCast() >= (1724.5 - (345 + 1376)))) then
+		if v12(v25.LavaLash) then
+			return "lava_lash single 66";
+		end
+	end
+	if (v25.DoomWinds:IsReady() and v7:IsInMeleeRange(693 - (198 + 490)) and IsDoomWinds and (v25.ElementalSpirits:IsAvailable())) then
+		if v12(v25.DoomWinds, true) then
+			return "doom_winds single 68";
+		end
+	end
+	if (v25.LavaLash:IsCastable() and v7:IsSpellInRange(v25.LavaLash) and v25.ElementalAssault:IsAvailable() and v25.Tempest:IsAvailable() and v25.MoltenAssault:IsAvailable() and v25.DeeplyRootedElements:IsAvailable() and v7:DebuffUp(v25.FlameShockDebuff)) then
+		if v12(v25.LavaLash) then
+			return "lava_lash single 70";
+		end
+	end
+	if (v25.IceStrike:IsReady() and v7:IsSpellInRange(v25.IceStrike) and IsIceStrike and v25.ElementalAssault:IsAvailable() and v25.SwirlingMaelstrom:IsAvailable()) then
+		if v12(v25.IceStrike) then
+			return "ice_strike single 72";
+		end
+	end
+	if (v25.LavaLash:IsCastable() and v7:IsSpellInRange(v25.LavaLash) and v25.ElementalAssault:IsAvailable() and v25.Tempest:IsAvailable() and v25.MoltenAssault:IsAvailable() and v7:DebuffUp(v25.FlameShockDebuff)) then
+		if v12(v25.LavaLash) then
+			return "lava_lash single 73";
+		end
+	end
+	if (v25.FrostShock:IsCastable() and v7:IsSpellInRange(v25.FrostShock) and v6:BuffUp(v25.HailstormBuff) and v6:BuffUp(v25.IceStrikeBuff) and v25.SwirlingMaelstrom:IsAvailable() and v25.Tempest:IsAvailable()) then
+		if v12(v25.FrostShock) then
+			return "frost_shock single 74";
+		end
+	end
+	if (v25.FlameShock:IsReady() and v7:IsSpellInRange(v25.FlameShock) and (v7:DebuffDown(v25.FlameShockDebuff))) then
+		if v12(v25.FlameShock) then
+			return "flame_shock single 76";
+		end
+	end
+	if (v25.LavaLash:IsCastable() and v7:IsSpellInRange(v25.LavaLash) and (v25.LashingFlames:IsAvailable())) then
+		if v12(v25.LavaLash) then
+			return "lava_lash single 78";
+		end
+	end
+	if (v25.IceStrike:IsReady() and v7:IsSpellInRange(v25.IceStrike) and IsIceStrike and (v6:BuffDown(v25.IceStrikeBuff))) then
+		if v12(v25.IceStrike) then
+			return "ice_strike single 80";
+		end
+	end
+	if (v25.FrostShock:IsReady() and v7:IsSpellInRange(v25.FrostShock) and (v6:BuffUp(v25.HailstormBuff))) then
+		if v12(v25.FrostShock) then
+			return "frost_shock single 82";
+		end
+	end
+	if (v25.CrashLightning:IsReady() and v7:IsInMeleeRange(35 - 27) and (v25.ConvergingStorms:IsAvailable())) then
+		if v12(v25.CrashLightning, true) then
+			return "crash_lightning single 84";
+		end
+	end
+	if (v25.LavaLash:IsReady() and v7:IsSpellInRange(v25.LavaLash)) then
+		if v12(v25.LavaLash) then
+			return "lava_lash single 86";
+		end
+	end
+	if (v25.IceStrike:IsReady() and v7:IsSpellInRange(v25.IceStrike) and IsIceStrike) then
+		if v12(v25.IceStrike) then
+			return "ice_strike single 88";
+		end
+	end
+	if (v25.Windstrike:IsCastable() and v7:IsInRange(71 - 41)) then
+		if v12(v25.Windstrike) then
+			return "windstrike single 90";
+		end
+	end
+	if (v25.Stormstrike:IsReady() and v7:IsSpellInRange(v25.Stormstrike)) then
+		if v12(v25.Stormstrike) then
+			return "stormstrike single 92";
+		end
+	end
+	if (v25.Sundering:IsReady() and v7:IsInMeleeRange(1217 - (696 + 510)) and IsSundering) then
+		if v12(v25.Sundering, true) then
+			return "sundering single 94";
+		end
+	end
+	if (v25.TempestAbility:IsReady() and UseSpender and v87(v32.Enhancement_TTD.TempestTTD) and v7:IsInRange(83 - 43) and (v53 >= (1267 - (1091 + 171)))) then
+		if v12(v25.LightningBolt) then
+			return "tempest single 96";
+		end
+	end
+	if (v25.LightningBolt:IsCastable() and UseSpender and v7:IsSpellInRange(v25.LightningBolt) and v25.Hailstorm:IsAvailable() and (v53 >= (1 + 4)) and v6:BuffDown(v25.PrimordialWaveBuff)) then
+		if v12(v25.LightningBolt) then
+			return "lightning_bolt single 98";
+		end
+	end
+	if (v25.FrostShock:IsReady() and v7:IsSpellInRange(v25.FrostShock)) then
+		if v12(v25.FrostShock) then
+			return "frost_shock single 100";
+		end
+	end
+	if (v25.CrashLightning:IsReady() and v7:IsInMeleeRange(25 - 17)) then
+		if v12(v25.CrashLightning, true) then
+			return "crash_lightning single 102";
+		end
+	end
+	if (v25.FireNova:IsReady() and IsFireNova and (v7:DebuffUp(v25.FlameShockDebuff))) then
+		if v12(v25.FireNova) then
+			return "fire_nova single 104";
+		end
+	end
+	if (v25.EarthElemental:IsCastable() and TargetInMeleeRange and IsEarthElemental) then
+		if v12(v25.EarthElemental, true) then
+			return "earth_elemental single 106";
+		end
+	end
+	if (v25.FlameShock:IsReady() and v7:IsSpellInRange(v25.FlameShock)) then
+		if v12(v25.FlameShock) then
+			return "flame_shock single 108";
+		end
+	end
+	if (v25.LightningBolt:IsCastable() and UseSpender and v7:IsSpellInRange(v25.LightningBolt) and (v53 >= (16 - 11)) and v6:BuffDown(v25.PrimordialWaveBuff)) then
+		if v12(v25.LightningBolt) then
+			return "lightning_bolt single 110";
+		end
+	end
+end
+local function v94()
+	if (v25.TempestAbility:IsReady() and UseSpender and v87(v32.Enhancement_TTD.TempestTTD) and v7:IsInRange(414 - (123 + 251)) and ((v53 == v54) or ((v53 >= (24 - 19)) and ((v31.TempestMaelstrom > (728 - (208 + 490))) or (v6:BuffStack(v25.AwakeningStormsBuff) == (1 + 1)))))) then
+		if v12(v25.LightningBolt) then
+			return "tempest aoe 2";
+		end
+	end
+	if (v25.Windstrike:IsCastable() and v7:IsInRange(14 + 16) and v25.ThorimsInvocation:IsAvailable() and (v53 > (836 - (660 + 176))) and (v66 == v25.ChainLightning)) then
+		if v12(v25.Windstrike) then
+			return "windstrike aoe 4";
+		end
+	end
+	if (v25.CrashLightning:IsReady() and v7:IsInMeleeRange(1 + 7) and v25.CrashingStorms:IsAvailable() and ((v25.UnrulyWinds:IsAvailable() and (v63 >= (212 - (14 + 188)))) or (v63 >= (690 - (534 + 141))))) then
+		if v12(v25.CrashLightning, true) then
+			return "crash_lightning aoe 6";
+		end
+	end
+	if (v25.LightningBolt:IsCastable() and UseSpender and v7:IsSpellInRange(v25.LightningBolt) and (not v25.Tempest:IsAvailable() or ((v31.TempestMaelstrom <= (5 + 5)) and (v6:BuffStack(v25.AwakeningStormsBuff) <= (1 + 0)))) and ((v25.FlameShockDebuff:AuraActiveCount() == v63) or (v25.FlameShockDebuff:AuraActiveCount() >= (6 + 0))) and v6:BuffUp(v25.PrimordialWaveBuff) and (v53 == v54) and (v6:BuffDown(v25.SplinteredElementsBuff) or (v67 <= (24 - 12)))) then
+		if v12(v25.LightningBolt) then
+			return "lightning_bolt aoe 8";
+		end
+	end
+	if (v25.LavaLash:IsReady() and v7:IsSpellInRange(v25.LavaLash) and v25.MoltenAssault:IsAvailable() and (v25.PrimordialWave:IsAvailable() or v25.FireNova:IsAvailable()) and v7:DebuffUp(v25.FlameShockDebuff) and (v25.FlameShockDebuff:AuraActiveCount() < v63) and (v25.FlameShockDebuff:AuraActiveCount() < (9 - 3))) then
+		if v12(v25.LavaLash) then
+			return "lava_lash aoe 10";
+		end
+	end
+	if (v25.PrimordialWave:IsReady() and IsPrimordialWave and (v6:BuffDown(v25.PrimordialWaveBuff))) then
+		if v30.CastTargetIf(v25.PrimordialWave, v62, "min", v78, v79, 112 - 72) then
+			return "primordial_wave aoe 12";
+		end
+	end
+	if (v25.ChainLightning:IsReady() and UseSpender and v7:IsSpellInRange(v25.ChainLightning) and v6:BuffUp(v25.ArcDischargeBuff) and (v53 >= (3 + 2))) then
+		if v12(v25.ChainLightning) then
+			return "chain_lightning aoe 14";
+		end
+	end
+	if (v25.ElementalBlast:IsReady() and UseSpender and v7:IsSpellInRange(v25.ElementalBlast) and (not v25.ElementalSpirits:IsAvailable() or (v25.ElementalSpirits:IsAvailable() and ((v25.ElementalBlast:Charges() == v65) or (v69 >= (2 + 0))))) and (v53 == v54) and (not v25.CrashingStorms:IsAvailable() or (v63 <= (399 - (115 + 281))))) then
+		if v12(v25.ElementalBlast) then
+			return "elemental_blast aoe 16";
+		end
+	end
+	if (v25.ChainLightning:IsReady() and UseSpender and v7:IsSpellInRange(v25.ChainLightning) and (v53 == v54)) then
+		if v12(v25.ChainLightning) then
+			return "chain_lightning aoe 18";
+		end
+	end
+	if (v25.FeralSpirit:IsCastable() and TargetInMeleeRange and IsFeralSpirit) then
+		if v12(v25.FeralSpirit, true) then
+			return "feral_spirit aoe 20";
+		end
+	end
+	if (v25.DoomWinds:IsCastable() and v7:IsInMeleeRange(11 - 6) and IsDoomWinds) then
+		if v12(v25.DoomWinds, true) then
+			return "doom_winds aoe 22";
+		end
+	end
+	if (v25.CrashLightning:IsReady() and v7:IsInMeleeRange(7 + 1) and (v6:BuffUp(v25.DoomWindsBuff) or v6:BuffDown(v25.CrashLightningBuff) or (v25.AlphaWolf:IsAvailable() and v6:BuffUp(v25.FeralSpiritBuff) and (v76() == (0 - 0))))) then
+		if v12(v25.CrashLightning, true) then
+			return "crash_lightning aoe 24";
+		end
+	end
+	if (v25.Sundering:IsReady() and v7:IsInMeleeRange(40 - 29) and IsSundering and (v6:BuffUp(v25.DoomWindsBuff) or v25.Earthsurge:IsAvailable())) then
+		if v12(v25.Sundering, true) then
+			return "sundering aoe 26";
+		end
+	end
+	if (v25.FireNova:IsReady() and IsFireNova and ((v25.FlameShockDebuff:AuraActiveCount() == (873 - (550 + 317))) or ((v25.FlameShockDebuff:AuraActiveCount() >= (5 - 1)) and (v25.FlameShockDebuff:AuraActiveCount() >= v63)))) then
+		if v12(v25.FireNova) then
+			return "fire_nova aoe 28";
+		end
+	end
+	if (v25.LavaLash:IsReady() and (v25.LashingFlames:IsAvailable())) then
+		if v30.CastCycle(v25.LavaLash, v62, v80, 7 - 2, nil, nil, v32.Enhancement.AutoTabDot, false) then
+			return "lava_lash aoe 30";
+		end
+	end
+	if (v25.LavaLash:IsReady() and v7:IsSpellInRange(v25.LavaLash) and v25.MoltenAssault:IsAvailable() and v7:DebuffUp(v25.FlameShockDebuff)) then
+		if v12(v25.LavaLash) then
+			return "lava_lash aoe 32";
+		end
+	end
+	if (v25.IceStrike:IsReady() and v7:IsSpellInRange(v25.IceStrike) and IsIceStrike and v25.Hailstorm:IsAvailable() and v6:BuffDown(v25.IceStrikeBuff)) then
+		if v12(v25.IceStrike) then
+			return "ice_strike aoe 34";
+		end
+	end
+	if (v25.FrostShock:IsReady() and v7:IsSpellInRange(v25.FrostShock) and v25.Hailstorm:IsAvailable() and v6:BuffUp(v25.HailstormBuff)) then
+		if v12(v25.FrostShock) then
+			return "frost_shock aoe 36";
+		end
+	end
+	if (v25.Sundering:IsReady() and v7:IsInMeleeRange(30 - 19) and IsSundering) then
+		if v12(v25.Sundering, true) then
+			return "sundering aoe 38";
+		end
+	end
+	if (v25.FlameShock:IsReady() and v7:IsSpellInRange(v25.FlameShock) and v25.MoltenAssault:IsAvailable() and v7:DebuffDown(v25.FlameShockDebuff)) then
+		if v12(v25.FlameShock) then
+			return "flame_shock aoe 40";
+		end
+	end
+	if (v25.FlameShock:IsReady() and (v25.FireNova:IsAvailable() or v25.PrimordialWave:IsAvailable()) and (v25.FlameShockDebuff:AuraActiveCount() < v63) and (v25.FlameShockDebuff:AuraActiveCount() < (291 - (134 + 151)))) then
+		if v30.CastCycle(v25.FlameShock, v62, v81, 1705 - (970 + 695)) then
+			return "flame_shock aoe 42";
+		end
+	end
+	if (v25.FireNova:IsReady() and IsFireNova and (v25.FlameShockDebuff:AuraActiveCount() >= (5 - 2))) then
+		if v12(v25.FireNova) then
+			return "fire_nova aoe 44";
+		end
+	end
+	if (v25.Stormstrike:IsReady() and v7:IsSpellInRange(v25.Stormstrike) and v6:BuffUp(v25.CrashLightningBuff) and (v25.DeeplyRootedElements:IsAvailable() or (v6:BuffStack(v25.ConvergingStormsBuff) == v56))) then
+		if v12(v25.Stormstrike) then
+			return "stormstrike aoe 46";
+		end
+	end
+	if (v25.CrashLightning:IsReady() and v7:IsInMeleeRange(1998 - (582 + 1408)) and v25.CrashingStorms:IsAvailable() and v6:BuffUp(v25.CLCrashLightningBuff) and (v63 >= (13 - 9))) then
+		if v12(v25.CrashLightning, true) then
+			return "crash_lightning aoe 48";
+		end
+	end
+	if (v25.Windstrike:IsReady() and v7:IsInRange(37 - 7)) then
+		if v12(v25.Windstrike) then
+			return "windstrike aoe 50";
+		end
+	end
+	if (v25.Stormstrike:IsReady() and v7:IsSpellInRange(v25.Stormstrike)) then
+		if v12(v25.Stormstrike) then
+			return "stormstrike aoe 52";
+		end
+	end
+	if (v25.IceStrike:IsReady() and v7:IsSpellInRange(v25.IceStrike) and IsIceStrike) then
+		if v12(v25.IceStrike) then
+			return "ice_strike aoe 54";
+		end
+	end
+	if (v25.LavaLash:IsReady() and v7:DebuffUp(v25.FlameShockDebuff) and v7:IsSpellInRange(v25.LavaLash)) then
+		if v12(v25.LavaLash) then
+			return "lava_lash aoe 56";
+		end
+	end
+	if (v25.CrashLightning:IsReady() and v7:IsInMeleeRange(30 - 22)) then
+		if v12(v25.CrashLightning, true) then
+			return "crash_lightning aoe 58";
+		end
+	end
+	if (v25.FireNova:IsReady() and IsFireNova and (v25.FlameShockDebuff:AuraActiveCount() >= (1826 - (1195 + 629)))) then
+		if v12(v25.FireNova) then
+			return "fire_nova aoe 60";
+		end
+	end
+	if (v25.ElementalBlast:IsReady() and UseSpender and v7:IsSpellInRange(v25.ElementalBlast) and (not v25.ElementalSpirits:IsAvailable() or (v25.ElementalSpirits:IsAvailable() and ((v25.ElementalBlast:Charges() == v65) or (v69 >= (2 - 0))))) and (v53 >= (246 - (187 + 54))) and (not v25.CrashingStorms:IsAvailable() or (v63 <= (783 - (162 + 618))))) then
+		if v12(v25.ElementalBlast) then
+			return "elemental_blast aoe 62";
+		end
+	end
+	if (v25.ChainLightning:IsReady() and UseSpender and v7:IsSpellInRange(v25.ChainLightning) and (v53 >= (4 + 1))) then
+		if v12(v25.ChainLightning) then
+			return "chain_lightning aoe 64";
+		end
+	end
+	if (v25.FlameShock:IsReady() and v7:IsSpellInRange(v25.FlameShock) and (v7:DebuffDown(v25.FlameShockDebuff))) then
+		if v12(v25.FlameShock) then
+			return "flame_shock aoe 66";
+		end
+	end
+	if (v25.FrostShock:IsReady() and v7:IsSpellInRange(v25.FrostShock) and not v25.Hailstorm:IsAvailable()) then
+		if v12(v25.FrostShock) then
+			return "frost_shock aoe 68";
+		end
+	end
+end
+local function v95()
+	if v6:IsChanneling(v26.ManicGrieftorch.ItemUseSpell) then
+		return "Dont cut Torch";
+	end
+	InterruptToggle = v11.ToggleIconFrame:GetToggle(1 + 0);
+	DispelToggle = v11.ToggleIconFrame:GetToggle(3 - 1);
+	Smallcds = v11.ToggleIconFrame:GetToggle(4 - 1);
+	UseSpender = v11.ToggleIconFrame:GetToggle(1 + 3);
+	v90();
+	v27 = v30.UnitsinRange(v25.HealingSurge);
+	v62 = v6:GetEnemiesInMeleeRange(1646 - (1373 + 263));
+	if v13() then
+		v63 = #v62;
+		v64 = v74(1040 - (451 + 549));
+	else
+		v63 = 1 + 0;
+		v64 = 1 - 0;
+	end
+	if (v25.PoisonCleansingTotem:IsAvailable() and v25.PoisonCleansingTotem:IsReady()) then
+		v71 = v30.DebuffCount(v27, v70);
+	else
+		v71 = 0 - 0;
+	end
+	IsRacials = v87(v32.Enhancement_TTD.RacialsTTD) and v88(v32.Enhancement_CDUSE.Racials);
+	IsPotions = v87(v32.Enhancement_TTD.PotionsTTD) and (v32.Enhancement_CDUSE.Potionswhensolo or (not v32.Enhancement_CDUSE.Potionswhensolo and not v30.ISSolo())) and v88(v32.Enhancement_CDUSE.Potions);
+	IsTrinket1 = v87(v32.Enhancement_TTD.TrinketsTTD) and v88(v32.Enhancement_CDUSE.Trinket1);
+	IsTrinket2 = v87(v32.Enhancement_TTD.TrinketsTTD) and v88(v32.Enhancement_CDUSE.Trinket2);
+	IsAscendance = v87(v32.Enhancement_TTD.AscendanceTTD) and v88(v32.Enhancement_CDUSE.Ascendance);
+	IsFireNova = v88(v32.Enhancement_CDUSE.FireNova);
+	IsEarthElemental = v88(v32.Enhancement_CDUSE.EarthElemental);
+	IsDoomWinds = v87(v32.Enhancement_TTD.DoomWindsTTD) and v88(v32.Enhancement_CDUSE.DoomWinds);
+	IsFeralSpirit = v87(v32.Enhancement_TTD.FeralSpiritTTD) and v88(v32.Enhancement_CDUSE.FeralSpirit);
+	IsSundering = v87(v32.Enhancement_TTD.SunderingTTD) and v88(v32.Enhancement_CDUSE.Sundering);
+	IsIceStrike = v88(v32.Enhancement_CDUSE.IceStrike);
+	IsPrimordialWave = v87(v32.Enhancement_TTD.PrimordialWaveTTD) and v88(v32.Enhancement_CDUSE.PrimordialWave);
+	IsSurgingTotem = v87(v32.Enhancement_TTD.SurgingTotemTTD) and v88(v32.Enhancement_CDUSE.SurgingTotem);
+	TargetInMeleeRange = v7:IsInRange(1389 - (746 + 638));
+	v47, v49, _, _, v48, v50 = v18();
+	if ((not v47 or (v49 < (225803 + 374197))) and v25.WindfuryWeapon:IsCastable()) then
+		if v12(v25.WindfuryWeapon) then
+			return "windfury_weapon enchant";
+		end
+	end
+	if ((not v48 or (v50 < (910970 - 310970))) and v25.FlametongueWeapon:IsCastable()) then
+		if v12(v25.FlametongueWeapon) then
+			return "flametongue_weapon enchant";
+		end
+	end
+	if (v25.SpiritWalk:IsCastable() and v6:DebuffUp(v25.EntangledDebuff)) then
+		if v12(v25.SpiritWalk) then
+			return "SpiritWalk for entangling";
+		end
+	end
+	if (v30.TargetIsValid() or v6:AffectingCombat()) then
+		v67 = v3.BossFightRemains();
+		v86 = true;
+		v68 = v67;
+		if (v68 == (11452 - (218 + 123))) then
+			v86 = false;
+			v68 = v3.FightRemains(v62, false);
+		end
+		v53 = v6:BuffStack(v25.MaelstromWeaponBuff);
+		v58 = v20((v25.FeralSpirit:CooldownRemains() / ((1585 - (1535 + 46)) * v15(v25.WitchDoctorsAncestry:IsAvailable()))) + ((994 + 6) * v15(not v25.FeralSpirit:IsAvailable())), v25.DoomWinds:CooldownRemains() + ((145 + 855) * v15(not v25.DoomWinds:IsAvailable())), v25.Ascendance:CooldownRemains() + ((1560 - (306 + 254)) * v15(not v25.Ascendance:IsAvailable())));
+		v59 = (1 + 0 + (v15(v7:DebuffUp(v25.ChaosBrandDebuff)) * (0.05 - 0))) * ((1468 - (899 + 568)) + (v15(v7:DebuffUp(v25.HuntersMarkDebuff) and (v7:HealthPercentage() >= (53 + 27))) * (0.05 - 0)));
+		local v133 = (604.75 - (268 + 335)) * v25.LightningBolt:Damage();
+		local v134 = (290.2 - (60 + 230)) * v25.LightningBolt:Damage() * ((v7:DebuffUp(v25.LightningRodDebuff) and (573.75 - (426 + 146))) or (1 + 0));
+		v60 = v25.LightningBolt:Damage() * ((1457 - (282 + 1174)) + (v15(v7:DebuffUp(v25.LightningRodDebuff)) * v59 * ((812 - (569 + 242)) + (v15(v6:BuffUp(v25.PrimordialWaveBuff)) * v25.FlameShockDebuff:AuraActiveCount() * v133)) * v134));
+		v61 = v25.ChainLightning:Damage() * ((2 - 1) + (v15(v7:DebuffUp(v25.LightningRodDebuff)) * v59 * v20(v63, 1 + 2 + ((1026 - (706 + 318)) * v15(v25.CrashingStorms:IsAvailable()))) * v134));
+	end
+	if v6:AffectingCombat() then
+		if v6:PrevGCD(1252 - (721 + 530), v25.ChainLightning) then
+			v66 = v25.ChainLightning;
+		elseif v6:PrevGCD(1272 - (945 + 326), v25.LightningBolt) then
+			v66 = v25.LightningBolt;
+		end
+	end
+	if ((v32.Commons.AutoWolf == "always") or ((v32.Commons.AutoWolf == "Only in Combat") and v6:AffectingCombat()) or ((v32.Commons.AutoWolf == "Only out of combat") and not v6:AffectingCombat())) then
+		if (v6:IsMoving() and not v6:IsMounted() and v6:BuffDown(v25.GhostWolf) and not v6:AffectingCombat()) then
+			v12(v25.GhostWolf);
+			return "Ghost Wolf";
+		end
+		if (v6:IsMoving() and not v6:IsMounted() and v6:BuffDown(v25.GhostWolf) and v6:AffectingCombat() and (v90() > (2 - 1)) and (not v7:IsInMeleeRange(8 + 0) or not v30.TargetIsValid())) then
+			v12(v25.GhostWolf);
+			return "Ghost Wolf";
+		end
+	end
+	v24 = v30.IncorpCycle(v25.Hex, 730 - (271 + 429), false, false);
+	if v24 then
+		return v24;
+	end
+	if DispelToggle then
+		v24 = v30.PurgeCycle(v25.Purge, 37 + 3, false, v32.Commons.TabForPurge);
+		if v24 then
+			return v24;
+		end
+		if (v25.CleanseSpirit:IsCastable() and v6:IsInDungeonArea() and v6:IsInParty()) then
+			v24 = v30.DispelCycle(v25.CleanseSpirit, "Curse", nil, v27);
+			if v24 then
+				return v24;
+			end
+		end
+		if (v25.PoisonCleansingTotem:IsAvailable() and v25.PoisonCleansingTotem:IsReady()) then
+			if v30.DispelCycle(v25.PoisonCleansingTotem, "Poison", nil, v27) then
+				return v11.CastTarget(v25.PoisonCleansingTotem);
+			end
+			if ((v71 > (1501 - (1408 + 92))) or (v25.CleanseSpirit:CooldownDown() and (v71 > (1086 - (461 + 625))))) then
+				return v11.CastTarget(v25.PoisonCleansingTotem);
+			end
+		end
+	end
+	local v127 = ((v25.ElementalOrbit:IsAvailable()) and v25.EarthShieldSelfBuff) or v25.EarthShieldOtherBuff;
+	if (((v32.Enhancement.Defensives.Earthshieldooc and not v6:AffectingCombat()) or not v32.Enhancement.Defensives.Earthshieldooc) and (v25.ElementalOrbit:IsAvailable() or v32.Enhancement.PreferEarthShield) and v25.EarthShield:IsReady() and (v6:BuffDown(v127) or (not v6:AffectingCombat() and (v6:BuffStack(v127) < (1293 - (993 + 295)))))) then
+		if v11.CastTarget(v25.EarthShield, v11.TName().PLAYER) then
+			return "EarthShield";
+		end
+	elseif (((v32.Enhancement.Defensives.Earthshieldooc and not v6:AffectingCombat()) or not v32.Enhancement.Defensives.Earthshieldooc) and (v25.ElementalOrbit:IsAvailable() or not v32.Enhancement.PreferEarthShield or not v25.EarthShield:IsAvailable()) and v25.LightningShield:IsReady() and v6:BuffDown(v25.LightningShield)) then
+		if v12(v25.LightningShield) then
+			return "lightning_shield main 3";
+		end
+	end
+	if (v25.SkyFury:IsReady() and (v6:Level() >= (1 + 15)) and not v6:DebuffUp(v25.Corruption) and ((v30.GroupBuffMissing(v25.SkyFuryBuff) and (v32.Commons.SkyFury == "check whole group") and (v6:IsInRaidArea() or v6:IsInDungeonArea())) or (v6:BuffDown(v25.SkyFuryBuff, true) and ((v32.Commons.SkyFury == "only check us") or (v32.Commons.SkyFury == "check whole group")))) and not v6:IsMounted()) then
+		if v11.CastTarget(v25.SkyFury, v11.TName().PLAYER) then
+			return "SkyFury";
+		end
+	end
+	v24 = v91();
+	if v24 then
+		return v24;
+	end
+	if v30.TargetIsValid() then
+		if (not v32.Enhancement.AttackonlyinCombat or (v32.Enhancement.AttackonlyinCombat and v7:AffectingCombat())) then
+			if not v82(v5.Target) then
+				if not v6:AffectingCombat() then
+					v24 = v92();
+					if v24 then
+						return v24;
+					end
+				end
+				if InterruptToggle then
+					v24 = v30.InterruptCycle(v25.WindShear, 1201 - (418 + 753), true, nil, false);
+					v24 = v30.InterruptCycle(v25.Thunderstorm, 4 + 6, false, nil, true, true);
+				end
+				v24 = (v63 > (0 + 0)) and not v7:IsInRange(2 + 3) and v84();
+				if v24 then
+					return v24;
+				end
+				if (v32.Commons.Enabled.Potions and (v6:BuffUp(v25.AscendanceBuff) or v6:BuffUp(v25.FeralSpiritBuff) or ((v68 % (76 + 224)) <= (559 - (406 + 123))) or (not v25.Ascendance:IsAvailable() and not v25.FeralSpirit:IsAvailable() and not v25.DoomWinds:IsAvailable()))) then
+					local v137 = v30.PotionSelected();
+					if (v137 and v137:IsReady() and IsPotions) then
+						v11.CastMacro(1772 - (1749 + 20), nil, nil, v137);
+						return "Cast Potion";
+					end
+				end
+				if v24 then
+					return v24;
+				end
+				if v32.Commons.Enabled.Trinkets then
+					if (v33:IsReady() and TargetInMeleeRange and IsTrinket1 and not v43 and not v45 and v33:HasUseBuff() and (v6:BuffUp(v25.AscendanceBuff) or v6:BuffUp(v25.FeralSpiritBuff) or v6:BuffUp(v25.DoomWindsBuff) or ((v68 % v41) <= v33:BuffDuration()) or (v58 >= v41) or (not v25.Ascendance:IsAvailable() and not v25.FeralSpirit:IsAvailable() and not v25.DoomWinds:IsAvailable()))) then
+						if v12(v33, true) then
+							return "trinket1 main 8";
+						end
+					end
+					if (v34:IsReady() and TargetInMeleeRange and IsTrinket2 and not v44 and not v46 and v34:HasUseBuff() and (v6:BuffUp(v25.AscendanceBuff) or v6:BuffUp(v25.FeralSpiritBuff) or v6:BuffUp(v25.DoomWindsBuff) or ((v68 % v42) <= v34:BuffDuration()) or (v58 >= v42) or (not v25.Ascendance:IsAvailable() and not v25.FeralSpirit:IsAvailable() and not v25.DoomWinds:IsAvailable()))) then
+						if v12(v34, true) then
+							return "trinket2 main 10";
+						end
+					end
+					if (v33:IsReady() and TargetInMeleeRange and IsTrinket1 and not v43 and not v45 and not v33:HasUseBuff()) then
+						if v12(v33, true) then
+							return "trinket1 main 16";
+						end
+					end
+					if (v34:IsReady() and TargetInMeleeRange and IsTrinket2 and not v44 and not v46 and not v34:HasUseBuff()) then
+						if v12(v34, true) then
+							return "trinket2 main 18";
+						end
+					end
+				end
+				if (v25.BloodFury:IsCastable() and IsRacials and TargetInMeleeRange and (v6:BuffUp(v25.AscendanceBuff) or v6:BuffUp(v25.FeralSpiritBuff) or v6:BuffUp(v25.DoomWindsBuff) or ((v68 % (29 + 91)) <= (1337 - (1249 + 73))) or (v58 >= (43 + 77)) or (not v25.Ascendance:IsAvailable() and not v25.FeralSpirit:IsAvailable() and not v25.DoomWinds:IsAvailable()))) then
+					if v12(v25.BloodFury, true) then
+						return "blood_fury racial";
+					end
+				end
+				if (v25.Berserking:IsCastable() and IsRacials and TargetInMeleeRange and (v6:BuffUp(v25.AscendanceBuff) or v6:BuffUp(v25.FeralSpiritBuff) or v6:BuffUp(v25.DoomWindsBuff) or ((v68 % (1325 - (466 + 679))) <= (28 - 16)) or (v58 >= (514 - 334)) or (not v25.Ascendance:IsAvailable() and not v25.FeralSpirit:IsAvailable() and not v25.DoomWinds:IsAvailable()))) then
+					if v12(v25.Berserking, true) then
+						return "berserking racial";
+					end
+				end
+				if (v25.Fireblood:IsCastable() and IsRacials and TargetInMeleeRange and (v6:BuffUp(v25.AscendanceBuff) or v6:BuffUp(v25.FeralSpiritBuff) or v6:BuffUp(v25.DoomWindsBuff) or ((v68 % (2020 - (106 + 1794))) <= (3 + 5)) or (v58 >= (31 + 89)) or (not v25.Ascendance:IsAvailable() and not v25.FeralSpirit:IsAvailable() and not v25.DoomWinds:IsAvailable()))) then
+					if v12(v25.Fireblood, true) then
+						return "fireblood racial";
+					end
+				end
+				if (v25.AncestralCall:IsCastable() and IsRacials and TargetInMeleeRange and (v6:BuffUp(v25.AscendanceBuff) or v6:BuffUp(v25.FeralSpiritBuff) or v6:BuffUp(v25.DoomWindsBuff) or ((v68 % (354 - 234)) <= (40 - 25)) or (v58 >= (234 - (4 + 110))) or (not v25.Ascendance:IsAvailable() and not v25.FeralSpirit:IsAvailable() and not v25.DoomWinds:IsAvailable()))) then
+					if v12(v25.AncestralCall, true) then
+						return "ancestral_call racial";
+					end
+				end
+				if (v25.PrimordialWave:IsReady() and IsPrimordialWave and v7:IsSpellInRange(v25.PrimordialWave) and (v6:HasTier(615 - (57 + 527), 1429 - (41 + 1386)))) then
+					if v12(v25.PrimordialWave) then
+						return "primordial_wave main 22";
+					end
+				end
+				if (v25.FeralSpirit:IsCastable() and TargetInMeleeRange and IsFeralSpirit and (v25.ElementalSpirits:IsAvailable() or (v25.AlphaWolf:IsAvailable() and (v63 > (104 - (17 + 86)))))) then
+					if v12(v25.FeralSpirit, true) then
+						return "feral_spirit main 24";
+					end
+				end
+				if (v25.SurgingTotem:IsReady() and IsSurgingTotem and TargetInMeleeRange) then
+					if v11.CastTarget(v25.SurgingTotem, v11.TName().PLAYER) then
+						return "surging_totem main 26";
+					end
+				end
+				if (v25.Ascendance:IsCastable() and IsAscendance and TargetInMeleeRange and v7:DebuffUp(v25.FlameShockDebuff) and (((v66 == v25.LightningBolt) and (v63 == (1 + 0))) or ((v66 == v25.ChainLightning) and (v63 > (1 - 0))))) then
+					if v12(v25.Ascendance) then
+						return "ascendance main 28";
+					end
+				end
+				if (v13() and (v63 > (2 - 1))) then
+					v24 = v94();
+					if v24 then
+						return v24;
+					end
+				end
+				if (not v13() or (v63 < (168 - (122 + 44)))) then
+					v24 = v93();
+					if v24 then
+						return v24;
+					end
+				end
+				if v11.CastAnnotated(v25.Pool, false, "WAIT") then
+					return "Wait/Pool Resources";
+				end
+			end
+		end
+	end
+end
+local function v96()
+	v11.ResetToggle();
+	v32.Enhancement.Display();
+	v25.FlameShockDebuff:RegisterAuraTracking();
+	v11.ToggleIconFrame:AddButtonCustom("I", 1 - 0, "Interrupt", "interrupt");
+	v11.ToggleIconFrame:AddButtonCustom("D", 6 - 4, "Dispel", "dispel");
+	v11.ToggleIconFrame:AddButtonCustom("S", 3 + 0, "smallCDs", "smallcds");
+	v11.ToggleIconFrame:AddButtonCustom("P", 1 + 3, "UseSpender", "usespender");
+	v11.Print("Enhancement Shaman rotation has been updated for patch 11.0.2. Last Update 10.10.2024");
+end
+v11.SetAPL(532 - 269, v95, v96);

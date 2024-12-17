@@ -1,1 +1,559 @@
-local v0={};local v1=string.char;local v2=string.byte;local v3=string.sub;local v4=bit32 or bit ;local v5=v4.bxor;local v6=table.concat;local v7=table.insert;local function v8(v126,v127) local v128={};for v208=1, #v126 do v7(v128,v1(v5(v2(v3(v126,v208,v208 + 1 )),v2(v3(v127,1 + (v208% #v127) ,1 + (v208% #v127) + 1 )))%256 ));end return v6(v128);end v0[295 + 648 ]=v8("\222\228\15\242\10\217\169\17\238\27","\122\173\135\125\155");v0[3520 -2581 ]=v8("\53\17\193\187\246\220\164","\221\81\97\178\212\152\176");v0[660 + 278 ]=v8("\54\16\11\60\147\122\30\57","\20\114\64\88\28\220");v0[771 + 166 ]=v8("\229\34","\217\161\114\109\149\98\16");v0[1825 -891 ]=v8("\85\115\114\16\122\165\74\79\119\122\18","\45\61\22\19\124\19\203");v0[2358 -(1336 + 89) ]=v8("\27\87\83\250\240\61\85\18\196\248\58\92","\153\83\50\50\150");v0[2363 -(308 + 1126) ]=v8("\181\253\0\78","\227\222\148\99\37");v0[834 + 94 ]=v8("\239\194\16\207","\200\164\171\115\164\61\150");v0[2703 -1779 ]=v8("\22\244\38\36\115\30","\22\114\157\85\84");v0[1300 -(142 + 235) ]=v8("\208\164\165\196\173\90","\57\148\205\214\180\200\54");v0[4168 -3249 ]=v8("\185\186\229","\176\214\213\134");v0[200 + 718 ]=v8("\149\162\139","\178\218\237\200");v0[1890 -(553 + 424) ]=v8("\180\34\168\102\176\233","\212\217\67\203\20\223\223\37");v0[1720 -810 ]=v8("\67\17\52\104\65\66","\26\46\112\87");v0[799 + 108 ]=v8("\73\75\205\103\63\21","\80\36\42\174\21");v0[887 + 7 ]=v8("\208\35\238\88","\166\130\66\135\60\27\17");v0[512 + 366 ]=v8("\35\218\139\232\229\201","\167\115\181\226\155\138");v0[371 + 500 ]=v8("\18\151\110\175\52","\220\81\226\28");v0[494 + 370 ]=v8("\113\4\199\166\33","\184\60\101\160\207\66");v0[1814 -977 ]=v8("\241\138\15\216\44\252\65","\56\162\225\118\158\89\142");v0[2315 -1484 ]=v8("\54\188\142\241\209\117\163\131\253\214\48\244\140\224\213\32\164","\186\85\212\235\146");v0[1853 -1025 ]=v8("\242\195\24\204\14\180\245\200\23\222\14\162\238","\215\157\173\116\181\46");v0[239 + 582 ]=v8("\61\55\252\242\53\127\238\249\49\51\252\177\57\45\246\228\46","\145\94\95\153");v0[3919 -3108 ]=v8("\219\25\86\238\155\193\131\61\252\77\127\241\201\162\177\39\228\8\87\253\222","\78\136\109\57\158\187\130\226");v0[1561 -(239 + 514) ]=v8("\237\75\53\222\17\200\76\53\150\39\206\78\38","\101\161\34\82\182");v0[282 + 520 ]=v8("\166\186\50\2\70\14\165\140\181\59\31\65\64\142","\233\229\210\83\107\40\46");v0[2124 -(797 + 532) ]=v8("\205\201\36\251\175\18\233\80\242\220\114\217\238\35\232","\34\129\168\82\154\143\80\156");v0[575 + 216 ]=v8("\145\233\120\248\236\139\132\237\118\246\226","\171\215\133\25\149\137");v0[264 + 517 ]=v8("\6\217\91\83\189\101\253\83\93\187\49\216\84\93\243\4\222\127\26\128\53\208\87","\211\69\177\58\58");v0[1819 -1045 ]=v8("\6\39\210\83\62\39\219\92\106\12\218\87\62","\59\74\78\181");v0[1970 -(373 + 829) ]=v8("\175\245\77\59\28\12\86\133\250\68\38\27\66\125","\26\236\157\44\82\114\44");v0[1489 -(476 + 255) ]=v8("\196\231\51\192\250\179\23\215\242\227\57\192","\178\151\147\92");v0[1885 -(369 + 761) ]=v8("\183\174\211\243\23\220\143\168\203\255\88\232\142\180","\159\224\199\167\155\55");v0[436 + 316 ]=v8("\195\120\225\165\101\14\136\251\125\241\162\50\35\148\180\112\251\169\101\1\136\243\120\246","\231\148\17\149\205\69\77");v0[1359 -610 ]=v8("\252\126\48\92\189\31\199\204\126\39","\168\171\23\68\52\157\83");v0[1402 -662 ]=v8("\207\7\251\197\238\12\253\137\212\23\232\206\226\66\237\193\226\12\186\218\232\15\255\198\233\7\186\221\232\66\246\198\240","\169\135\98\154");v0[969 -(64 + 174) ]=v8("\31\94\222\37\137\88\89\119\104\202\59\135\83\30\32\83\218\39\192\69\81\58\94\208\39\133\22\74\56\27\211\38\151","\62\87\59\191\73\224\54");v0[103 + 619 ]=v8("\141\175\34\18\26\10\192\17\150\191\49\25\22\68\208\89\160\164\99\13\28\9\194\94\171\175\99\10\28\68\203\94\178","\49\197\202\67\126\115\100\167");v0[1054 -342 ]=v8("\132\43\170\71\206\89\25\73\159\59\185\76\194\23\9\1\169\32\235\88\200\90\27\6\162\43\235\95\200\23\18\6\187","\105\204\78\203\43\167\55\126");v0[1038 -(144 + 192) ]=v8("\52\60\2\54\92\21\59\9\52\29\50\34\3\54\81\65\17\7\41\73","\61\97\82\102\90");v0[911 -(42 + 174) ]=v8("\199\121\125\64\213\15\200\225\112\112","\128\132\17\28\41\187\47");v0[519 + 171 ]=v8("\103\179\213\179\16\150\206\188\89\185","\219\48\218\161");v0[565 + 117 ]=v8("\87\64\101\145\246\142\124\118\118\137\242\191\125\85\114\136\190\168\115\82\99\128\250\203\102\78\55\135\251\203\66\77\118\134\251\143","\235\18\33\23\229\158");v0[289 + 390 ]=v8("\28\133\36\164\233\145\57\44\133\51","\86\75\236\80\204\201\221");v0[2174 -(363 + 1141) ]=v8("\102\18\48\164\248\190\66\26\125\3\35\173\240\189\5\110\65\3\52\165","\58\46\119\81\200\145\208\37");v0[2247 -(1183 + 397) ]=v8("\141\93\162\72\250\120\185\71\179\87","\32\218\52\214");v0[1984 -1332 ]=v8("\102\130\226\33\71\137\228\109\124\134\234\35\14\164\226\62\90\130\231\109\90\136\163\47\75\199\211\33\79\132\230\41","\77\46\231\131");v0[474 + 172 ]=v8("\132\33\27\244\144\119\188\47\6\255","\59\211\72\111\156\176");v0[476 + 160 ]=v8("\35\67\145\140\143\32\170\176\36\89\151\142\139\110\142\241\3\66\134\143\198\58\162\176\18\83\195\187\138\47\174\245\20","\144\112\54\227\235\230\78\205");v0[2605 -(1913 + 62) ]=v8("\108\39\160\94\13\119\33\179\95\78","\45\59\78\212\54");v0[390 + 229 ]=v8("\15\24\248\176\59\5\252\245\22\31\242\176","\213\90\118\148");v0[1614 -1004 ]=v8("\175\44\171\75\156\116\24\134\40\229\126\211\84\20\143","\113\226\77\197\42\188\32");v0[2535 -(565 + 1368) ]=v8("\91\143\47\30\118\199\6\18\121\139","\119\24\231\78");v0[2245 -1648 ]=v8("\232\22\224\20\122\243\16\243\21\57","\90\191\127\148\124");v0[2246 -(1477 + 184) ]=v8("\222\191\95\80\120\159\223\166\66\86\104\159\201\188\68\64\113\159\207\182\83\68\111\203","\191\157\211\48\37\28");v0[787 -209 ]=v8("\11\56\29\179\89\199\46\50\53\50","\85\92\81\105\219\121\139\65");v0[531 + 38 ]=v8("\1\84\56\205\218\84\196\55\74\36\204\158\32\233\54\93\58","\134\66\56\87\184\190\116");v0[1420 -(564 + 292) ]=v8("\157\193\25\195\133\143\216\230\163\203","\129\202\168\109\171\165\195\183");v0[915 -384 ]=v8("\144\39\127\18\45\245\232\248\21\127\8\33\187\235\173\39\62\10\43\187\223\143\98\127\16\32\187\221\140\98\92\11\34\253\252","\143\216\66\30\126\68\155");v0[1507 -1007 ]=v8("\107\170\194\102\39\131\126\172\71\174\220\118\111\224\76\183\90\174\212","\196\46\203\176\18\79\163\45");v0[795 -(244 + 60) ]=v8("\134\89\50\55\38\63\169\28\0\46\61\54\171\28\36\51\42\63\238\79\60\54\42\62\160\89\115\47\32\113\162\83\36","\81\206\60\83\91\79");v0[371 + 111 ]=v8("\41\226\73\83\122\15\224\8\108\102\19\224\77\31\100\9\226\70\31\96\14\234\77\80\125\4\167\92\80\51\13\232\95","\19\97\135\40\63");v0[945 -(41 + 435) ]=v8("\138\220\44\64\253\234\48\94\180\215\39\12\158\216\51\88","\44\221\185\64");v0[1467 -(938 + 63) ]=v8("\124\218\172\68\91\81\68\212\177\79","\29\43\179\216\44\123");v0[353 + 105 ]=v8("\9\161\141\73\226\106\112\124\131\136\74\230","\24\92\207\225\44\131\25");v0[1576 -(936 + 189) ]=v8("\155\168\25\244\176\210\143\243\142\16\249\249\203\198\207\131\81\221\176\219\199\155\191\24\241\188","\175\187\235\113\149\217\188");v0[148 + 300 ]=v8("\110\95\95\245\53\170\136\12\80\85","\107\57\54\43\157\21\230\231");v0[2051 -(1565 + 48) ]=v8("\114\205\228\90\83\252\135\26\255\228\64\95\178\143\84\136\192\90\95","\224\58\168\133\54\58\146");v0[267 + 165 ]=v8("\106\41\99\232\83\68\93\96\124\242\26\101\84\37","\32\56\64\19\156\58");v0[1561 -(782 + 356) ]=v8("\214\90\127\4\224\14\82\31\233\69\103\11\247\69\48\62\234\90\117\7","\106\133\46\16");v0[686 -(176 + 91) ]=v8("\150\247\192\206\51\192\181\62\138\251\197\199\122\250\189\106\187\255","\30\222\146\161\162\90\174\210");v0[1083 -667 ]=v8("\209\204\217\53\166\233\194\58\239\198","\93\134\165\173");v0[601 -193 ]=v8("\158\104\176\146\58\185\84\176\142\56\153\119\173\133\62\237\91\184\147\39\168\124\249\148\60\237\122\188\192\3\161\121\186\133\55","\83\205\24\217\224");v0[1497 -(975 + 117) ]=v8("\112\197\33\212\68\107\195\50\213\7","\100\39\172\85\188");v0[2271 -(157 + 1718) ]=v8("\137\168\3\80\190\171\234\160\172\28\65\184\255\206\160","\175\204\201\113\36\214\139");v0[318 + 73 ]=v8("\187\12\75\78\164\98\239\131\9\91\73\243\79\243","\128\236\101\63\38\132\33");v0[1373 -986 ]=v8("\227\22\19\219\246\95\137\219\19\3\220\161\114\149\148\30\9\215\246\80\137\211\22\4","\230\180\127\103\179\214\28");v0[1312 -928 ]=v8("\18\141\171\68\68\164\30\23\44\135","\112\69\228\223\44\100\232\113");v0[1396 -(697 + 321) ]=v8("\140\211\19\245\107\226\191\220\28\176\95\227\164\217\17\254\123\243","\150\205\189\112\144\24");v0[994 -629 ]=v8("\59\222\248\145\175\169\178\27\225\248\147\173\174\179","\199\122\141\216\208\204\221");v0[751 -396 ]=v8("\175\31\141\51\228\149\57\204\30\167\162\45\222\6","\135\225\76\173\114");v0[795 -450 ]=v8("\63\3\242\26\91\49\47\81\3\162\61\66\59\105\50\49\161\44","\73\113\80\210\88\46\87");v0[133 + 207 ]=v8("\226\28\129\242\196\199\14\140\244\207\131\44\131\228\222","\170\163\111\226\151");v0[608 -283 ]=v8("\28\1\149\200\186\55\27\144","\202\88\110\226\166");v0[857 -537 ]=v8("\230\233\37\183\171\190\57\215\229\48\190\170","\107\178\134\81\210\198\158");v0[1528 -(322 + 905) ]=v8("\153\250\207\214\185\229\155\247\176\224\221\208\248\217\222\214\248\218\222\208\172\224\213\195\171","\164\216\137\187");v0[902 -(602 + 9) ]=v8("\125\95\23\61\47\173\1\80\87\0\37\35\173\29\86\30\22\44\43\235\82\94\81\23\105\8\255\16\81\74","\114\56\62\101\73\71\141");v0[1470 -(449 + 740) ]=v8("\227\197\250\89\198\132\221\84\221\193\226\88","\60\180\164\142");v0[1146 -(826 + 46) ]=v8("\113\32\80\43\49\30\207\89\36\89","\152\54\72\63\88\69\62");v0[1214 -(245 + 702) ]=v8("\32\230\170\221\19\174\146\193\11\232","\174\103\142\197");v0[818 -559 ]=v8("\231\32\44\153\244\22\233\220\110\47\134\244\26\243\197\44\33\148","\156\168\78\64\224\212\121");v0[82 + 173 ]=v8("\232\90\124\13\249\23\201\20\83\27\180\28\198\64","\126\167\52\16\116\217");v0[2150 -(260 + 1638) ]=v8("\6\26\174\42\30\5","\75\103\118\217");v0[689 -(382 + 58) ]=v8("\184\199\21","\199\235\144\82\61\152");v0[699 -481 ]=v8("\158\236\43\199\17\160\52\135\133\252\56\204\29","\167\214\137\74\171\120\206\83");v0[127 + 25 ]=v8("\43\198\81\97\106\55\196\232\0\200","\135\108\174\62\18\30\23\147");v0[299 -154 ]=v8("\148\215\78\68\94\180\204\86\29\17\189\153\65\82\19\185\216\86","\126\219\185\34\61");v0[418 -277 ]=v8("\6\207\32\145\105\200\34\200\10\206\33\138\40\213","\232\73\161\76");v0[1343 -(902 + 303) ]=v8("\202\48\48\231\199\185","\202\171\92\71\134\190");v0[296 -161 ]=v8("\39\187\153\35\209\14\179\157\62\215\5\250\188\50\216\18\181\133\119\220\12\185\131\54\215\22","\185\98\218\235\87");v0[310 -181 ]=v8("\153\194\197\30\10\107\175\203\222\15\14\47\252\204\217\74\17\46\176\197\151\12\13\57\252\236\197\8\11\63","\75\220\163\183\106\98");v0[11 + 109 ]=v8("\126\67\20\32\91\2\51\45\64\71\12\33","\69\41\34\96");v0[1803 -(1121 + 569) ]=v8("\175\68\192\174\49\85\36\147\251\66\219\169\52\91\53\213\168\22\157","\161\219\54\169\192\90\48\80");v0[324 -(22 + 192) ]=v8("\13\173\216\209\134\41\32\72\255\197\205\132\34\63\28\171\194\159\223","\84\121\223\177\191\237\76");v0[754 -(483 + 200) ]=v8("\132\88\93\26\61\81\222\124\155\77\89\4\63\75\211\109\151\73\93\10","\35\200\29\28\72\115\20\154");v0[1521 -(1404 + 59) ]=v8("\212\82\166\74\245\89\160","\38\156\55\199");v0[131 -83 ]=v8("\103\210\19","\152\38\189\86\156\32\24\133");v0[57 -14 ]=v8("\136\43\31\58\119\170\236\165\55","\155\203\68\112\86\19\197");v0[804 -(468 + 297) ]=v8("\98\19\49\6\241","\158\48\118\66\114");v0[597 -(334 + 228) ]=v8("\23\184\68\27\179\40\85","\38\84\215\41\118\220\70");v0[111 -78 ]=v8("\4\200\36\192\238\34\193","\156\67\173\74\165");v0[0 -0 ]=v8("\194\192\201\44\246\175\137\18\196\194","\126\177\163\187\69\134\219\167");local v121=...;local v122={};local v123=require;local function v124(v129,...) local v130=v122[v129];if  not v130 then return v123(v129,v121,...);end return v130(v121,...);end v122[v0[0 -0 ]]=function(...) local v131,v132=...;local v133=HeroDBC.DBC;local v134=HeroLib;local v135=HeroCache;local v136=v134.Unit;local v137=v136.Player;local v138=v136.Pet;local v139=v136.Target;local v140=v134.Spell;local v141=v134.MultiSpell;local v142=v134.Item;local v143=HeroRotation();local v144=v143.Cast;local v145=v143.AoEON;local v146=v143.CDsON;local v147=v143.Commons().Everyone.num;local v148=v143.Commons().Everyone.bool;local v149=math.min;local v150=GetWeaponEnchantInfo;local v151=math.floor;local v152=GetTotemInfo;local v153=GetTime;local v154=v140.Shaman.Restoration;local v155=v142.Shaman.Restoration;local v156={v155.ScreamingBlackDragonScale:ID(),v155.BroodkeepersPromise:ID()};local v157=v143.GUISettingsGet();local v158=v143.Commons().Everyone;local v159=v143.Commons().Shaman;local v160={[v0[33 + 0 ]]=v157.General,[v0[90 -55 ]]=v157.APL.Shaman.Commons,[v0[93 -54 ]]=v157.APL.Shaman.Restoration,[v0[11 + 32 ]]=v157.APL.Shaman.Restoration.Cooldowns,[v0[131 -83 ]]=( not v137:IsInRaid() and v157.APL.Shaman.Restoration.AoE) or v157.APL.Shaman.Restoration.RaidAoE ,[v0[41 + 17 ]]=( not v137:IsInRaid() and v157.APL.Shaman.Restoration.Healing) or v157.APL.Shaman.Restoration.RaidHealing };local v161;local v162;v134:RegisterForEvent(function() v154.LavaBurst:RegisterInFlight();end,v0[37 + 34 ]);v154.LavaBurst:RegisterInFlight();local function v163(v209) return (v209:NPCID()==(287913 -83464)) or (v209:NPCID()==(122962 + 85497)) or (v209:NPCID()==(208624 -(92 + 71))) or (v209:NPCID()==(102642 + 105158)) or (v209:NPCID()==(327257 -132611)) or (v209:NPCID()==(213355 -(574 + 191))) ;end local function v164() return v163(v139) and  not v137:CanAttack(v139) ;end local v165;local v166;local v167;local v168;local v169;local v170;local v171;local v172;local function v173(v210) return v210:NPCID()==(168910 + 35863) ;end local function v174(v211) return v211:NPCID()==(512485 -307925) ;end local function v175(v212) for v235=1 + 0 ,853 -(254 + 595)  do local v236,v237,v238,v239=v152(v235);if (v237==v212:Name()) then return (v151(((v238 + v239) -v153()) + (126.5 -(55 + 71)) )) or (0 -0) ;end end return 1790 -(573 + 1217) ;end local function v176(v213) if (v213==nil) then return nil;end local v214=v213:IsCastable() and v213:IsReady() ;local v215=v137:BuffUp(v154.SpiritwalkersGraceBuff) or  not v137:IsMoving() ;if ((v213==v154.LightningBolt) or (v213==v154.ChainLightning) or (v213==v154.HealingRain) or (v213==v154.HealingWave) or (v213==v154.HealingSurge) or (v213==v154.Wellspring)) then return v214 and v215 ;elseif (v213==v154.LavaBurst) then local v244=v137:BuffUp(v154.LavaSurge);local v245= not v137:IsCasting(v154.LavaBurst) and (v154.LavaBurst:Charges()>=(2 -1)) ;local v246=v137:IsCasting(v154.LavaBurst) and (v154.LavaBurst:Charges()==(1 + 1)) ;return v214 and (v215 or v137:BuffUp(v154.LavaSurge)) and (v244 or v245 or v246) ;else return v214;end end local function v177(v216,v217,v218,v219,v220) local v221,v222,v223=v137:GetUseableItems(v156,20 -7 );if (v221 and v158.AoELogic(v216,v217,v220)) then if v144(v221) then return v0[1049 -(714 + 225) ];end end local v224,v222,v225=v137:GetUseableItems(v156,40 -26 );if (v224 and v158.AoELogic(v218,v219,v220)) then if v144(v224) then return v0[156 -43 ];end end end local function v178() local v226,v227,v228,v228,v229,v230=v150();if (v154.WaterShield:IsCastable() and v137:BuffDown(v154.WaterShield)) then v143.Cast(v154.WaterShield);return v0[13 + 107 ];end if (v154.ElementalOrbit:IsAvailable() and v154.EarthShield:IsCastable() and v137:BuffDown(v154.EarthShieldT)) then v137:Cast(v154.EarthShield);return v0[186 -57 ];end if v160.Resto.EarthlivingWeapon then if (( not v226 or (v227<(600806 -(118 + 688)))) and v154.EarthlivingWeapon:IsCastable()) then if v144(v154.EarthlivingWeapon) then return v0[183 -(25 + 23) ];end end end if ((v160.Commons.AutoWolf==v0[27 + 111 ]) or ((v160.Commons.AutoWolf==v0[2027 -(927 + 959) ]) and v137:AffectingCombat()) or ((v160.Commons.AutoWolf==v0[488 -343 ]) and  not v137:AffectingCombat())) then if (v137:IsMoving() and  not v137:IsMounted() and v137:BuffDown(v154.GhostWolf)) then v144(v154.GhostWolf);return v0[884 -(16 + 716) ];end end end local v179=v158.converArrayToList({438570 -(11 + 86) ,439164 -(175 + 110) ,2213825 -1764978 ,718660 -461334 ,273772 -(810 + 251) ,134843 + 304522 ,439410 -(43 + 490) ,1745419 -1294197 ,105272 + 330974 ,29151 + 411317 ,325314 -(255 + 150) ,171649 + 148965 ,880676 -608014 ,270996 -(183 + 223) ,178413 + 90853 ,449781 -(10 + 327) ,438833 -(118 + 220) });local v180=v158.converArrayToList({440917 -(108 + 341) ,1888632 -1441915 ,845825 -404609 ,141843 + 295690 ,1306067 -866726 ,16206 + 434896 ,1128244 -696127 ,435419 -(645 + 522) ,426615 + 211 ,1315447 -866559 ,1098813 -664720 ,457256 -(351 + 154) ,452205 -(28 + 238) ,453430 -(1381 + 178) ,364438 + 87527 ,1586129 -1126037 ,327867 -(381 + 89) ,216816 + 103780 ,455595 -(1074 + 82) ,430319 -(214 + 1570) ,175605 + 250369 ,417063 + 11816 ,466738 -(1668 + 58) ,1107721 -682842 ,1529577 -1090000 ,83019 + 360475 ,1427857 -1004533 ,428798 -(1269 + 200) ,323964 -(98 + 717) ,554728 -233059 ,47644 + 274970 ,52861 + 268960 ,897887 -575131 ,119870 + 215271 ,275079 + 58406 ,155769 + 177864 ,1562232 -1240478 ,160489 + 302693 ,411379 + 46285 ,450421 -(192 + 134) ,250467 + 199610 ,415426 + 34018 ,444058 -(83 + 468) ,2106391 -1655169 ,1181515 -754781 ,419527 + 15128 ,160586 + 279206 ,75065 + 351706 ,431338 -(340 + 1571) });local function v181() local v231=v137:GetEnemiesInRange(16 + 24 );for v240,v241 in pairs(v231) do if v179[v241:CastSpellID() or v241:ChannelSpellID() ] then return true;end end end local function v182() local v232=v137:GetEnemiesInRange(1812 -(1733 + 39) );for v242,v243 in pairs(v232) do if v180[v243:CastSpellID() or v243:ChannelSpellID() ] then return true;end end end local v183=nil;local function v184() if v137:IsMoving() then if  not v183 then v183=v153();end return v153() -v183 ;else if v183 then v183=nil;end return 0 -0 ;end end local v185=v140(441347 -(125 + 909) );local v186,v187,v188,v189,v190,v191;local v192,v193,v194,v195,v196;local v197,v198,v199,v200,v201,v202,v203;local function v204() v160.AoE=( not v137:IsInRaid() and v157.APL.Shaman.Restoration.AoE) or v157.APL.Shaman.Restoration.RaidAoE ;v160.Healing=( not v137:IsInRaid() and v157.APL.Shaman.Restoration.Healing) or v157.APL.Shaman.Restoration.RaidHealing ;v192=v143.ToggleIconFrame:GetToggle(1949 -(1096 + 852) );v193=v143.ToggleIconFrame:GetToggle(1 + 1 );v194=v143.ToggleIconFrame:GetToggle(3 -0 );v195=v143.ToggleIconFrame:GetToggle(4 + 0 );v203=v143.ToggleIconFrame:GetToggle(517 -(409 + 103) );v161=v158.UnitsinRange(v154.HealingSurge);if v145() then v162=(v139:IsDummy() and  #(v137:GetEnemiesInRange(276 -(46 + 190) ))) or ((v139:GetEnemiesInSplashRangeCount(103 -(51 + 44) )>(1 + 0)) and v139:GetEnemiesInSplashRangeCount(1325 -(1114 + 203) )) or  #(v137:GetEnemiesInRange(766 -(228 + 498) )) ;else v162=1 + 0 ;end if (v154.PoisonCleansingTotem:IsAvailable() and v154.PoisonCleansingTotem:IsReady()) then v196=v158.DebuffCount(v161,v185);else v196=0 + 0 ;end v186,v187=v158.GetLowestHealthUnit(v161);if v187 then v198=v187:HealthPercentage();v199=math.min(v198 + v187:IncomingHeals() ,763 -(174 + 489) );else v198=260 -160 ;v199=2005 -(830 + 1075) ;end if v186 then v188=v186:HealthPercentageWeighted();v200=v186:HealthPercentage();v201=math.min(v188 + v186:IncomingHeals() ,624 -(303 + 221) );v202=math.min(v200 + v186:IncomingHeals() ,1369 -(231 + 1038) );else v188=84 + 16 ;v200=1262 -(171 + 991) ;v201=412 -312 ;v202=268 -168 ;end v189=v158.GetLowestHealthUnitWithoutBuff(v161,v154.Riptide);v190=((v160.Healing.WhichUndulation==v0[543 -325 ]) and v154.HealingSurge) or v154.HealingWave ;v191= not v137:IsMoving() or v137:BuffUp(v154.SpiritwalkersGrace) ;end local function v205() if ((v188>=(37 + 8)) and v173(v139) and (v154.PurifySpirit:CooldownDown() or  not v154.ImprovedPurifySpirit:IsAvailable()) and v139:IsSpellInRange(v154.Riptide)) then if (v154.HealingSurge:IsReady() and v191) then v144(v154.HealingSurge);return;end end if ((v188>=(122 -87)) and v164() and (v139:HealthPercentage()>(0 -0)) and (v139:HealthPercentage()<(161 -61))) then if (v139:BuffDown(v154.Riptide) and v154.Riptide:IsReady()) then v144(v154.Riptide);return;end if (v154.HealingSurge:IsReady() and v191) then v144(v154.HealingSurge);return;end end if (v137:IsMoving() and v154.SpiritwalkersGrace:IsReady() and v160.Resto.SpiritwalkersGrace and (v184()>(3 -2))) then v144(v154.SpiritwalkersGrace);return v0[1497 -(111 + 1137) ];end if ((v160.Commons.AutoWolf==v0[410 -(91 + 67) ]) or ((v160.Commons.AutoWolf==v0[758 -503 ]) and v137:AffectingCombat()) or ((v160.Commons.AutoWolf==v0[65 + 194 ]) and  not v137:AffectingCombat())) then if (v137:IsMoving() and  not v137:IsMounted() and v137:BuffDown(v154.GhostWolf) and  not v137:AffectingCombat()) then v144(v154.GhostWolf);return v0[790 -(423 + 100) ];end if (v137:IsMoving() and  not v137:IsMounted() and v137:BuffDown(v154.GhostWolf) and v137:AffectingCombat() and (v184()>(1 + 1))) then v144(v154.GhostWolf);return v0[758 -484 ];end end if (v154.WaterShield:IsReady() and v137:BuffDown(v154.WaterShield)) then v143.Cast(v154.WaterShield);return v0[147 + 134 ];end if ((v188>=(801 -(326 + 445))) and (v137:HealthPercentage()>=(305 -235))) then if (v154.ElementalOrbit:IsAvailable() and v154.EarthShield:IsCastable() and v137:BuffDown(v154.EarthShieldT)) then v137:Cast(v154.EarthShield);return v0[648 -357 ];end end if (v154.AstralShift:IsReady() and (v160.Resto.AstralShiftHP>(0 -0)) and ((v137:HealthPercentage()<=v160.Resto.AstralShiftHP) or v182() or v181())) then v143.Cast(v154.AstralShift);return v0[1012 -(530 + 181) ];end if v160.Resto.TotemRecall then if (v154.TotemicRecall:IsReady() and ((v154.CloudburstTotem:IsAvailable() and v154.CloudburstTotem:CooldownDown()) or (v154.EarthenWallTotem:IsAvailable() and v154.EarthenWallTotem:CooldownDown()) or (v154.HealingStreamTotem:IsAvailable() and v154.HealingStreamTotem:CooldownDown()))) then v143.Cast(v154.TotemicRecall);return v0[1201 -(614 + 267) ];end end if v154.Downpour:IsReady() then v143.Cast(v154.Downpour);return v0[357 -(19 + 13) ];end if (v203 and (v137:IsInParty() or v137:IsInRaid())) then if (v188<=(48 -18)) then v143.CastMacro(4 -2 ,true);end end if (v154.Ascendance:IsReady() and v158.AoELogicWithCount(v160.AoE.AscendanceHP,v160.AoE.AscendanceCount,v160.Cooldowns.UseAscendance,v161)) then v143.Cast(v154.Ascendance);return v0[971 -631 ];end if (v137:BuffUp(v154.NaturesSwiftness) and v190:IsReady()) then v186:Cast(v190);return v0[90 + 255 ];end if (v154.NaturesSwiftness:IsReady() and v137:AffectingCombat() and (v188<=v160.Healing.NSHP)) then v143.CastTarget(v154.NaturesSwiftness,v143.TName().PLAYER,true);return v0[623 -268 ];end if (v154.AncestralSwiftness:IsReady() and v137:AffectingCombat() and (v188<=v160.Healing.NSHP)) then v143.CastTarget(v154.AncestralSwiftness,v143.TName().PLAYER,true);return v0[756 -391 ];end if (v154.AncestralGuidance:IsReady() and v137:AffectingCombat() and v158.AoELogicWithCount(v160.AoE.AGHP,v160.AoE.AGCount,v160.Cooldowns.UseAG,v161)) then v143.Cast(v154.AncestralGuidance);return v0[2190 -(1293 + 519) ];end if (v154.EarthElemental:IsReady() and v137:AffectingCombat() and ((((v160.Cooldowns.EarthEle==v0[783 -399 ]) or ((v160.Cooldowns.EarthEle==v0[1010 -623 ]) and v146)) and (v137:HealthPercentage()<=(47 -22))) or (v146 and (v160.Cooldowns.EarthEle==v0[1685 -1294 ])))) then v143.CastTarget(v154.EarthElemental,v143.TName().PLAYER);return v0[932 -536 ];end if (v154.SpiritLinkTotem:IsReady() and v137:AffectingCombat() and v158.AoELogicWithCount(v160.AoE.SpiritLinkHP,v160.AoE.SpiritLinkCount,v0[215 + 190 ],v161)) then v143.Cast(v154.SpiritLinkTotem);return v0[84 + 324 ];end if (v154.HealingTideTotem:IsReady() and v158.AoELogicWithCount(v160.AoE.HealingTideHP,v160.AoE.HealingTideCount,v0[966 -550 ],v161)) then v143.Cast(v154.HealingTideTotem);return v0[97 + 322 ];end if v154.StoneBulkwarkTotem:IsReady() then if (v182() or v181()) then v144(v154.StoneBulkwarkTotem);return v0[141 + 282 ];end end if ((v139:NPCID()==(59412 + 35660)) and  not v139:IsDeadOrGhost()) then if (v154.Riptide:IsReady() and v139:BuffDown(v154.Riptide)) then v143.Cast(v154.Riptide);return v0[1528 -(709 + 387) ];end if (v154.HealingWave:IsReady() and (v139:HealthPercentage()<=(1948 -(673 + 1185))) and v191) then v143.Cast(v154.HealingWave);return v0[1270 -832 ];end end if  not v203 then if (v154.ChainHeal:IsReady() and v137:BuffUp(v154.Hightide) and v158.AoELogicWithCount(v160.AoE.ChainHealHighTideHP,v160.AoE.ChainHealHighTideCount,v0[1438 -990 ],v161) and v191) then v186:Cast(v154.ChainHeal);return v0[741 -290 ];end if (v154.UnleashLife:IsReady() and (v188<=v160.Healing.UnleashLifeHP)) then v186:Cast(v154.UnleashLife);return v0[328 + 130 ];end if (v154.Wellspring:IsReady() and v191 and v158.AoELogicWithCount(v160.AoE.WellspringHP,v160.AoE.WellspringCount,v0[349 + 117 ],v161)) then v143.Cast(v154.Wellspring);return v0[632 -163 ];end if ((v201<=(5 + 15)) and (v158.GetAverageGroupHealthPercent(v161)>=(69 -34)) and v154.NaturesSwiftness:CooldownUp() and  not v137:IsInRaid()) then if (v154.HealingSurge:IsReady() and v137:BuffDown(v154.PrimordialWave) and (v201<=v160.Healing.HealingSurgeHP) and v191) then v186:Cast(v154.HealingSurge);return v0[945 -463 ];end if (v154.HealingWave:IsReady() and v137:BuffDown(v154.PrimordialWave) and (v201<=v160.Healing.HealingWaveHP) and v191) then v186:Cast(v154.HealingWave);return v0[2371 -(446 + 1434) ];end end if (v201>=(1313 -(1040 + 243))) then if (v187~=nil) then if (v154.EarthShield:IsReady() and v187:BuffDown(v154.EarthShield) and (v158.BuffCount(v161,v154.EarthShield)<(2 -1))) then v187:Cast(v154.EarthShield);return v0[2347 -(559 + 1288) ];end end end if (v189~=nil) then if (v154.PrimordialWave:IsReady() and (v189:HealthPercentage()<=v160.Healing.PrimordiaWaveHP) and (v158.BuffCount(v161,v154.Riptide)>=(1933 -(609 + 1322)))) then v189:Cast(v154.PrimordialWave);return " PrimordialWave on Unit w/o Riptide";end elseif (v154.PrimordialWave:IsReady() and (v186:HealthPercentage()<=v160.Healing.PrimordiaWaveHP) and (v158.BuffCount(v161,v154.Riptide)>=(456 -(13 + 441)))) then v186:Cast(v154.PrimordialWave);return " PrimordialWave on Unit w/o Riptide";end if (v137:BuffUp(v154.PrimordialWaveBuff) and v154.HealingWave:IsReady() and v191 and (v188<=(261 -191)) and ((v158.BuffCount(v161,v154.Riptide)>=(7 -4)) or (v137:BuffRemains(v154.PrimordialWaveBuff)<=(9 -7)))) then v186:Cast(v154.HealingWave);return v0[20 + 511 ];end if (v187~=nil) then if (v154.Riptide:IsReady() and (v154.Riptide:Charges()>(0 -0)) and v187:BuffDown(v154.Riptide) and (v187:HealthPercentage()<=v160.Healing.RiptideHP)) then v187:Cast(v154.Riptide);return "Riptide on Lowest Tank W/O Riptide";end end if (v189~=nil) then if (v154.Riptide:IsReady() and (v154.Riptide:Charges()>(0 + 0)) and (v189:HealthPercentage()<=v160.Healing.RiptideHP)) then v189:Cast(v154.Riptide);return "Riptide on Lowest Tank W/O Riptide";end end if (v154.CloudburstTotem:IsReady() and v154.CloudburstTotem:IsAvailable() and (v175(v154.CloudburstTotem)<=(0 + 0)) and v158.AoELogicWithCount(v160.AoE.CloudBurstHP,v160.AoE.CloudBurstCount,v0[1673 -1109 ],v161)) then v143.CastTarget(v154.CloudburstTotem,v143.TName().PLAYER);return v0[312 + 257 ];end if (v154.CloudburstTotem:IsAvailable() and (v175(v154.CloudburstTotem)>(0 -0)) and ((v158.AoELogicWithCount(v160.AoE.CloudBurstRecastHP,v160.AoE.CloudBurstRecastCount,v0[383 + 195 ],v161) and (v175(v154.CloudburstTotem)<(6 + 4))) or (v175(v154.CloudburstTotem)<(3 + 0)))) then v143.CastTarget(v154.CloudburstTotem,v143.TName().PLAYER);return v0[492 + 93 ];end if (v154.ChainHeal:IsReady() and (v137:BuffUp(v154.Tidebringer) or v137:BuffUp(v154.TidalWaves)) and (v158.AoELogicWithCount(v160.AoE.ChainHealHP,v160.AoE.ChainHealCount,v0[585 + 12 ],v161) or v137:BuffUp(v154.UnleashLife)) and v191) then v186:Cast(v154.ChainHeal);return v0[1035 -(153 + 280) ];end if (v154.ManaTideTotem:IsReady() and (v137:ManaPercentage()<=v160.Healing.ManaTideMP)) then v143.Cast(v154.ManaTideTotem);return v0[1761 -1151 ];end if (v154.UnleashLife:IsReady() and v137:BuffUp(v154.Hightide) and (v188<=v160.Healing.UnleashLifeHP)) then v186:Cast(v154.UnleashLife);return v0[556 + 63 ];end if (v195 and v137:AffectingCombat()) then if (v154.SurgingTotem:IsReady() and  not v137:PrevGCD(1 + 0 ,v154.SurgingTotem) and (v158.AoELogicWithCount(v160.AoE.HealingRainHP,v160.AoE.HealingRainCount,v0[330 + 300 ],v161) or (v154.AcidRain:IsAvailable() and v158.TargetIsValid()))) then v143.Cast(v154.SurgingTotem);return v0[578 + 58 ];end if (v154.HealingRain:IsReady() and  not v137:PrevGCD(1 + 0 ,v154.HealingRain) and (v158.AoELogicWithCount(v160.AoE.HealingRainHP,v160.AoE.HealingRainCount,v0[983 -337 ],v161) or (v154.AcidRain:IsAvailable() and v158.TargetIsValid())) and v191) then v143.Cast(v154.HealingRain);return v0[403 + 249 ];end end if (v154.HealingStreamTotem:IsReady() and v154.HealingStreamTotem:IsAvailable() and ((v175(v154.HealingStreamTotem)<=(667 -(89 + 578))) or ((v175(v154.HealingStreamTotem)<(4 + 1)) and (v154.HealingStreamTotem:Charges()>=(1 -0)) and (v158.GetAverageGroupHealthPercent(v161)<=(1094 -(572 + 477))))) and v158.AoELogicWithCount(v160.AoE.CloudBurstHP,v160.AoE.CloudBurstCount,v0[90 + 577 ],v161)) then v143.Cast(v154.HealingStreamTotem);return v0[403 + 267 ];end if (v154.EarthenWallTotem:IsReady() and v137:AffectingCombat() and v158.AoELogicWithCount(v160.AoE.EarthenWallHP,v160.AoE.EarthenWallCount,v0[82 + 597 ],v161)) then v143.Cast(v154.EarthenWallTotem);return v0[768 -(84 + 2) ];end if (v154.ChainHeal:IsReady() and (v158.AoELogicWithCount(v160.AoE.ChainHealHP,v160.AoE.ChainHealCount,v0[1137 -447 ],v161) or v137:BuffUp(v154.UnleashLife)) and v191) then v186:Cast(v154.ChainHeal);return v0[501 + 194 ];end if (v190:IsReady() and v137:BuffUp(v154.Undulation) and (v201<=v160.Healing.NSHP) and v191) then v186:Cast(v190);return v0[1544 -(497 + 345) ];end if (v187~=nil) then if (v154.HealingSurge:IsReady() and v137:BuffDown(v154.PrimordialWave) and (v187:HealthPercentage()<=v160.Healing.HealingSurgeTankHP) and v191) then v187:Cast(v154.HealingSurge);return v0[19 + 693 ];end if (v154.HealingWave:IsReady() and v137:BuffDown(v154.PrimordialWave) and (v187:HealthPercentage()<=v160.Healing.HealingWaveTankHP) and v191) then v187:Cast(v154.HealingWave);return v0[123 + 599 ];end end if (v154.HealingSurge:IsReady() and v137:BuffDown(v154.PrimordialWave) and (v201<=v160.Healing.HealingSurgeHP) and v191) then v186:Cast(v154.HealingSurge);return v0[2064 -(605 + 728) ];end if (v154.HealingWave:IsReady() and v137:BuffDown(v154.PrimordialWave) and (v201<=v160.Healing.HealingWaveHP) and v191) then v186:Cast(v154.HealingWave);return v0[528 + 212 ];end end if (v158.TargetIsValid() and (v137:AffectingCombat() or (v160.Resto.AttackOOC and v192)) and ((v188>=(77 -42)) or v203) and  not v174(v139)) then if (v154.StormKeeper:IsReady() and ((v160.Cooldowns.Stormkeeper==v0[35 + 714 ]) or ((v160.Cooldowns.Stormkeeper==v0[2780 -2028 ]) and v146) or ((v160.Cooldowns.Stormkeeper==v0[681 + 74 ]) and v146)) and v191) then v143.Cast(v154.StormKeeper);return v0[2099 -1341 ];end if (v139:AffectingCombat() and v137:BuffUp(v154.StormKeeper)) then if (v145 and (v162>=(2 + 0))) then if (v154.ChainLightning:IsReady() and v191 and v139:IsSpellInRange(v154.ChainLightning)) then v143.Cast(v154.ChainLightning);return v0[1257 -(457 + 32) ];end elseif (v154.LightningBolt and v191 and v139:IsSpellInRange(v154.LightningBolt)) then v143.Cast(v154.LightningBolt);return v0[329 + 445 ];end end if (v145 and (v162>=(1404 -(832 + 570)))) then if (v154.ChainLightning:IsReady() and v191 and v139:IsSpellInRange(v154.ChainLightning)) then v143.Cast(v154.ChainLightning);return v0[736 + 45 ];end end if (v154.FlameShock:IsReady() and v139:AffectingCombat() and v139:IsSpellInRange(v154.FlameShock) and v139:DebuffRefreshable(v154.FlameShock)) then v143.Cast(v154.FlameShock);return v0[207 + 584 ];end if v176(v154.LavaBurst) then v143.Cast(v154.LavaBurst);return v0[2813 -2018 ];end if (v145 and (v162>=(1 + 1))) then if (v154.ChainLightning:IsReady() and v191 and v139:IsSpellInRange(v154.ChainLightning)) then v143.Cast(v154.ChainLightning);return v0[1598 -(588 + 208) ];end elseif (v154.LightningBolt and v191 and v139:IsSpellInRange(v154.LightningBolt)) then v143.Cast(v154.LightningBolt);return v0[2177 -1369 ];end end end local function v206() if v158.ShouldStopCastUpdate() then v143.CastMacro(1806 -(884 + 916) ,true);return v0[1697 -886 ];end v184();if (v154.SkyFury:IsReady() and (v137:Level()>=(10 + 6)) and  not v137:DebuffUp(v154.Corruption) and ((v158.GroupBuffMissing(v154.SkyFuryBuff) and (v160.Commons.SkyFury==v0[1474 -(232 + 421) ]) and (v137:IsInRaidArea() or v137:IsInDungeonArea())) or (v137:BuffDown(v154.SkyFuryBuff,true) and ((v160.Commons.SkyFury==v0[2717 -(1569 + 320) ]) or (v160.Commons.SkyFury==v0[204 + 627 ])))) and  not v137:IsMounted()) then if v143.CastTarget(v154.SkyFury,v143.TName().PLAYER) then return v0[160 + 677 ];end end if ( not v137:IsMounted() and  not v137:IsChanneling() and (v158.TargetIsValid() or v137:AffectingCombat() or v192)) then if ( not v137:AffectingCombat() or v192) then v197=v178();if v197 then return v197;end end if v137:AffectingCombat() then if (v194 and v154.WindShear:IsReady()) then v197=v158.InterruptCycle(v154.WindShear,101 -71 ,true,nil,false);if v197 then return v197;end end if v154.Purge:IsReady() then v197=v158.PurgeCycle(v154.Purge,645 -(316 + 289) ,false,v160.Commons.TabForPurge);if v197 then return v197;end end if (v154.Hex:IsReady() and v137:AffectingCombat()) then v197=v158.IncorpCycle(v154.Hex,104 -64 ,false,false);if v197 then return v197;end end if (v193 and  not v137:IsInRaid() and v154.PurifySpirit:IsReady()) then v197=v158.DispelCycle(v154.PurifySpirit,v0[40 + 824 ],nil,v161);if v197 then return v197;end if v154.ImprovedPurifySpirit:IsAvailable() then v197=v158.AfflictedLogic(v154.PurifySpirit);if v197 then return v197;end v197=v158.DispelCycle(v154.PurifySpirit,v0[2324 -(666 + 787) ],nil,v161);if v197 then return v197;end end if (v154.PoisonCleansingTotem:IsAvailable() and v154.PoisonCleansingTotem:IsReady()) then if v158.DispelCycle(v154.PoisonCleansingTotem,v0[1303 -(360 + 65) ],nil,v161) then return v143.CastTarget(v154.PoisonCleansingTotem,v143.TName().PLAYER);end if ((v196>(1 + 0)) or (v154.PurifySpirit:CooldownDown() and (v196>(254 -(79 + 175))))) then return v143.CastTarget(v154.PoisonCleansingTotem,v143.TName().PLAYER);end end end if (v193 and v137:IsInRaid() and v154.PurifySpirit:IsReady()) then v197=v158.DispelCycle(v154.PurifySpirit,v0[1408 -514 ],nil,v161);if v197 then return v197;end end end v197=v177(v160.Cooldowns.Trinket1HP,v160.Cooldowns.Trinket1Use,v160.Cooldowns.Trinket2HP,v160.Cooldowns.Trinket2Use,v161);if v197 then return v197;end v197=v205();if v197 then return v197;end end end local function v207() v143.ResetToggle();v160.Resto.Display();v143:UpdateMacro(v0[708 + 199 ],"/use 16");v143:UpdateMacro(v0[2789 -1879 ],"/hr dpsonly");v143:UpdateMacro(v0[1758 -845 ],"/stopcasting");v143.ToggleIconFrame:AddButtonCustom("O",900 -(503 + 396) ,v0[1099 -(92 + 89) ],v0[1782 -863 ]);v143.ToggleIconFrame:AddButtonCustom("D",2 + 0 ,v0[547 + 376 ],v0[3618 -2694 ]);v143.ToggleIconFrame:AddButtonCustom("K",1 + 2 ,v0[2115 -1187 ],v0[811 + 118 ]);v143.ToggleIconFrame:AddButtonCustom("H",2 + 2 ,v0[2841 -1908 ],v0[117 + 817 ]);v143.ToggleIconFrame:AddButtonCustom(v0[1428 -491 ],1249 -(485 + 759) ,v0[2170 -1232 ],v0[2128 -(442 + 747) ]);v143.Print("Restoration Shaman rotation has been updated for 10.2. Last Update 04/5/24");end v143.SetAPL(1399 -(832 + 303) ,v206,v207,v204);end;return v122[v0[1889 -(88 + 858) ]](...);
+local v0, v1 = ...;
+local v2 = HeroDBC.DBC;
+local v3 = HeroLib;
+local v4 = HeroCache;
+local v5 = v3.Unit;
+local v6 = v5.Player;
+local v7 = v5.Pet;
+local v8 = v5.Target;
+local v9 = v3.Spell;
+local v10 = v3.MultiSpell;
+local v11 = v3.Item;
+local v12 = HeroRotation();
+local v13 = v12.Cast;
+local v14 = v12.AoEON;
+local v15 = v12.CDsON;
+local v16 = v12.Commons().Everyone.num;
+local v17 = v12.Commons().Everyone.bool;
+local v18 = math.min;
+local v19 = GetWeaponEnchantInfo;
+local v20 = math.floor;
+local v21 = GetTotemInfo;
+local v22 = GetTime;
+local v23 = v9.Shaman.Restoration;
+local v24 = v11.Shaman.Restoration;
+local v25 = {v24.ScreamingBlackDragonScale:ID(),v24.BroodkeepersPromise:ID()};
+local v26 = v12.GUISettingsGet();
+local v27 = v12.Commons().Everyone;
+local v28 = v12.Commons().Shaman;
+local v29 = {General=v26.General,Commons=v26.APL.Shaman.Commons,Resto=v26.APL.Shaman.Restoration,Cooldowns=v26.APL.Shaman.Restoration.Cooldowns,AoE=((not v6:IsInRaid() and v26.APL.Shaman.Restoration.AoE) or v26.APL.Shaman.Restoration.RaidAoE),Healing=((not v6:IsInRaid() and v26.APL.Shaman.Restoration.Healing) or v26.APL.Shaman.Restoration.RaidHealing)};
+local v30;
+local v31;
+v3:RegisterForEvent(function()
+	v23.LavaBurst:RegisterInFlight();
+end, "LEARNED_SPELL_IN_TAB");
+v23.LavaBurst:RegisterInFlight();
+local function v32(v77)
+	return (v77:NPCID() == (394654 - 190205)) or (v77:NPCID() == (536968 - 328509)) or (v77:NPCID() == (209080 - (555 + 64))) or (v77:NPCID() == (208731 - (857 + 74))) or (v77:NPCID() == (195214 - (367 + 201))) or (v77:NPCID() == (213517 - (214 + 713)));
+end
+local function v33()
+	return v32(v8) and not v6:CanAttack(v8);
+end
+local v34;
+local v35;
+local v36;
+local v37;
+local v38;
+local v39;
+local v40;
+local v41;
+local function v42(v78)
+	return v78:NPCID() == (51258 + 153515);
+end
+local function v43(v79)
+	return v79:NPCID() == (32172 + 172388);
+end
+local function v44(v80)
+	for v103 = 878 - (282 + 595), 1641 - (1523 + 114) do
+		local v104, v105, v106, v107 = v21(v103);
+		if (v105 == v80:Name()) then
+			return (v20(((v106 + v107) - v22()) + 0.5 + 0)) or (0 - 0);
+		end
+	end
+	return 1065 - (68 + 997);
+end
+local function v45(v81)
+	if (v81 == nil) then
+		return nil;
+	end
+	local v82 = v81:IsCastable() and v81:IsReady();
+	local v83 = v6:BuffUp(v23.SpiritwalkersGraceBuff) or not v6:IsMoving();
+	if ((v81 == v23.LightningBolt) or (v81 == v23.ChainLightning) or (v81 == v23.HealingRain) or (v81 == v23.HealingWave) or (v81 == v23.HealingSurge) or (v81 == v23.Wellspring)) then
+		return v82 and v83;
+	elseif (v81 == v23.LavaBurst) then
+		local v112 = v6:BuffUp(v23.LavaSurge);
+		local v113 = not v6:IsCasting(v23.LavaBurst) and (v23.LavaBurst:Charges() >= (1271 - (226 + 1044)));
+		local v114 = v6:IsCasting(v23.LavaBurst) and (v23.LavaBurst:Charges() == (8 - 6));
+		return v82 and (v83 or v6:BuffUp(v23.LavaSurge)) and (v112 or v113 or v114);
+	else
+		return v82;
+	end
+end
+local function v46(v84, v85, v86, v87, v88)
+	local v89, v90, v91 = v6:GetUseableItems(v25, 130 - (32 + 85));
+	if (v89 and v27.AoELogic(v84, v85, v88)) then
+		if v13(v89) then
+			return "trinket1 trinkets 2";
+		end
+	end
+	local v92, v90, v93 = v6:GetUseableItems(v25, 14 + 0);
+	if (v92 and v27.AoELogic(v86, v87, v88)) then
+		if v13(v92) then
+			return "trinket2 trinkets 4";
+		end
+	end
+end
+local function v47()
+	local v94, v95, v96, v96, v97, v98 = v19();
+	if (v23.WaterShield:IsCastable() and v6:BuffDown(v23.WaterShield)) then
+		v12.Cast(v23.WaterShield);
+		return "Water Shield";
+	end
+	if (v23.ElementalOrbit:IsAvailable() and v23.EarthShield:IsCastable() and v6:BuffDown(v23.EarthShieldT)) then
+		v6:Cast(v23.EarthShield);
+		return "Earth shield on self for Orbit";
+	end
+	if v29.Resto.EarthlivingWeapon then
+		if ((not v94 or (v95 < (133054 + 466946))) and v23.EarthlivingWeapon:IsCastable()) then
+			if v13(v23.EarthlivingWeapon) then
+				return "Earthliving Weapon enchant";
+			end
+		end
+	end
+	if ((v29.Commons.AutoWolf == "always") or ((v29.Commons.AutoWolf == "Only in Combat") and v6:AffectingCombat()) or ((v29.Commons.AutoWolf == "Only out of combat") and not v6:AffectingCombat())) then
+		if (v6:IsMoving() and not v6:IsMounted() and v6:BuffDown(v23.GhostWolf)) then
+			v13(v23.GhostWolf);
+			return "Ghost Wolf";
+		end
+	end
+end
+local v48 = v27.converArrayToList({(1045990 - 607517),(805706 - 366827),(449027 - (67 + 113)),(631777 - 374451),(1083886 - 811175),(1182919 - 743554),(319454 + 119423),(1277669 - 826447),(573725 - 137479),(999294 - 558826),(56485 + 268424),(318050 + 2564),(856889 - 584227),(1040887 - 770297),(859744 - 590478),(795261 - 345817),(438925 - (44 + 386))});
+local v49 = v27.converArrayToList({(139934 + 300534),(447489 - (201 + 571)),(1836900 - 1395684),(1597297 - 1159764),(440200 - (814 + 45)),(24308 + 426794),(433002 - (261 + 624)),(435332 - (1020 + 60)),(1446370 - 1019544),(176788 + 272100),(435840 - (760 + 987)),(457517 - (745 + 21)),(1243575 - 791636),(3695 + 448176),(453020 - (87 + 968)),(417426 + 42666),(328810 - (447 + 966)),(322413 - (1703 + 114)),(744731 - 290292),(122466 + 306069),(425988 - (9 + 5)),(430144 - (243 + 1022)),(383619 + 81393),(345701 + 79178),(441507 - (1869 + 61)),(1561991 - 1118497),(57927 + 365397),(401378 + 25951),(324120 - (140 + 831)),(322387 - (15 + 703)),(323052 - (262 + 176)),(322509 - (198 + 490)),(774192 - 451436),(702886 - 367745),(53665 + 279820),(1106438 - 772805),(1598779 - 1277025),(39086 + 424096),(458500 - (660 + 176)),(450297 - (14 + 188)),(180939 + 269138),(432116 + 17328),(704120 - 260613),(242295 + 208927),(427130 - (115 + 281)),(359870 + 74785),(1612629 - 1172837),(616590 - 189819),(1200025 - 770598)});
+local function v50()
+	local v99 = v6:GetEnemiesInRange(325 - (134 + 151));
+	for v108, v109 in pairs(v99) do
+		if v48[v109:CastSpellID() or v109:ChannelSpellID()] then
+			return true;
+		end
+	end
+end
+local function v51()
+	local v100 = v6:GetEnemiesInRange(1705 - (970 + 695));
+	for v110, v111 in pairs(v100) do
+		if v49[v111:CastSpellID() or v111:ChannelSpellID()] then
+			return true;
+		end
+	end
+end
+local v52 = nil;
+local function v53()
+	if v6:IsMoving() then
+		if not v52 then
+			v52 = v22();
+		end
+		return v22() - v52;
+	else
+		if v52 then
+			v52 = nil;
+		end
+		return 0 - 0;
+	end
+end
+local v54 = v9(442303 - (582 + 1408));
+local v55, v56, v57, v58, v59, v60;
+local v61, v62, v63, v64, v65;
+local v66, v67, v68, v69, v70, v71, v72;
+local function v73()
+	v29.AoE = (not v6:IsInRaid() and v26.APL.Shaman.Restoration.AoE) or v26.APL.Shaman.Restoration.RaidAoE;
+	v29.Healing = (not v6:IsInRaid() and v26.APL.Shaman.Restoration.Healing) or v26.APL.Shaman.Restoration.RaidHealing;
+	v61 = v12.ToggleIconFrame:GetToggle(3 - 2);
+	v62 = v12.ToggleIconFrame:GetToggle(2 - 0);
+	v63 = v12.ToggleIconFrame:GetToggle(11 - 8);
+	v64 = v12.ToggleIconFrame:GetToggle(1828 - (1195 + 629));
+	v72 = v12.ToggleIconFrame:GetToggle(6 - 1);
+	v30 = v27.UnitsinRange(v23.HealingSurge);
+	if v14() then
+		v31 = (v8:IsDummy() and #(v6:GetEnemiesInRange(281 - (187 + 54)))) or ((v8:GetEnemiesInSplashRangeCount(788 - (162 + 618)) > (1 + 0)) and v8:GetEnemiesInSplashRangeCount(6 + 2)) or #(v6:GetEnemiesInRange(85 - 45));
+	else
+		v31 = 1 - 0;
+	end
+	if (v23.PoisonCleansingTotem:IsAvailable() and v23.PoisonCleansingTotem:IsReady()) then
+		v65 = v27.DebuffCount(v30, v54);
+	else
+		v65 = 0 + 0;
+	end
+	v55, v56 = v27.GetLowestHealthUnit(v30);
+	if v56 then
+		v67 = v56:HealthPercentage();
+		v68 = math.min(v67 + v56:IncomingHeals(), 1736 - (1373 + 263));
+	else
+		v67 = 1100 - (451 + 549);
+		v68 = 32 + 68;
+	end
+	if v55 then
+		v57 = v55:HealthPercentageWeighted();
+		v69 = v55:HealthPercentage();
+		v70 = math.min(v57 + v55:IncomingHeals(), 155 - 55);
+		v71 = math.min(v69 + v55:IncomingHeals(), 168 - 68);
+	else
+		v57 = 1484 - (746 + 638);
+		v69 = 38 + 62;
+		v70 = 151 - 51;
+		v71 = 441 - (218 + 123);
+	end
+	v58 = v27.GetLowestHealthUnitWithoutBuff(v30, v23.Riptide);
+	v59 = ((v29.Healing.WhichUndulation == "Healing Surge") and v23.HealingSurge) or v23.HealingWave;
+	v60 = not v6:IsMoving() or v6:BuffUp(v23.SpiritwalkersGrace);
+end
+local function v74()
+	if ((v57 >= (1626 - (1535 + 46))) and v42(v8) and (v23.PurifySpirit:CooldownDown() or not v23.ImprovedPurifySpirit:IsAvailable()) and v8:IsSpellInRange(v23.Riptide)) then
+		if (v23.HealingSurge:IsReady() and v60) then
+			v13(v23.HealingSurge);
+			return;
+		end
+	end
+	if ((v57 >= (35 + 0)) and v33() and (v8:HealthPercentage() > (0 + 0)) and (v8:HealthPercentage() < (660 - (306 + 254)))) then
+		if (v8:BuffDown(v23.Riptide) and v23.Riptide:IsReady()) then
+			v13(v23.Riptide);
+			return;
+		end
+		if (v23.HealingSurge:IsReady() and v60) then
+			v13(v23.HealingSurge);
+			return;
+		end
+	end
+	if (v6:IsMoving() and v23.SpiritwalkersGrace:IsReady() and v29.Resto.SpiritwalkersGrace and (v53() > (1 + 0))) then
+		v13(v23.SpiritwalkersGrace);
+		return "SWG";
+	end
+	if ((v29.Commons.AutoWolf == "always") or ((v29.Commons.AutoWolf == "Only in Combat") and v6:AffectingCombat()) or ((v29.Commons.AutoWolf == "Only out of combat") and not v6:AffectingCombat())) then
+		if (v6:IsMoving() and not v6:IsMounted() and v6:BuffDown(v23.GhostWolf) and not v6:AffectingCombat()) then
+			v13(v23.GhostWolf);
+			return "Ghost Wolf";
+		end
+		if (v6:IsMoving() and not v6:IsMounted() and v6:BuffDown(v23.GhostWolf) and v6:AffectingCombat() and (v53() > (3 - 1))) then
+			v13(v23.GhostWolf);
+			return "Ghost Wolf";
+		end
+	end
+	if (v23.WaterShield:IsReady() and v6:BuffDown(v23.WaterShield)) then
+		v12.Cast(v23.WaterShield);
+		return "Water Shield";
+	end
+	if ((v57 >= (1497 - (899 + 568))) and (v6:HealthPercentage() >= (47 + 23))) then
+		if (v23.ElementalOrbit:IsAvailable() and v23.EarthShield:IsCastable() and v6:BuffDown(v23.EarthShieldT)) then
+			v6:Cast(v23.EarthShield);
+			return "Earth shield on self for Orbit";
+		end
+	end
+	if (v23.AstralShift:IsReady() and (v29.Resto.AstralShiftHP > (0 - 0)) and ((v6:HealthPercentage() <= v29.Resto.AstralShiftHP) or v51() or v50())) then
+		v12.Cast(v23.AstralShift);
+		return "Astral Shift Per Settings";
+	end
+	if v29.Resto.TotemRecall then
+		if (v23.TotemicRecall:IsReady() and ((v23.CloudburstTotem:IsAvailable() and v23.CloudburstTotem:CooldownDown()) or (v23.EarthenWallTotem:IsAvailable() and v23.EarthenWallTotem:CooldownDown()) or (v23.HealingStreamTotem:IsAvailable() and v23.HealingStreamTotem:CooldownDown()))) then
+			v12.Cast(v23.TotemicRecall);
+			return "Totem Recall";
+		end
+	end
+	if v23.Downpour:IsReady() then
+		v12.Cast(v23.Downpour);
+		return "Downpour";
+	end
+	if (v72 and (v6:IsInParty() or v6:IsInRaid())) then
+		if (v57 <= (633 - (268 + 335))) then
+			v12.CastMacro(292 - (60 + 230), true);
+		end
+	end
+	if (v23.Ascendance:IsReady() and v27.AoELogicWithCount(v29.AoE.AscendanceHP, v29.AoE.AscendanceCount, v29.Cooldowns.UseAscendance, v30)) then
+		v12.Cast(v23.Ascendance);
+		return "Ascendance Cast";
+	end
+	if (v6:BuffUp(v23.NaturesSwiftness) and v59:IsReady()) then
+		v55:Cast(v59);
+		return "NS Buff Spell Cast";
+	end
+	if (v23.NaturesSwiftness:IsReady() and v6:AffectingCombat() and (v57 <= v29.Healing.NSHP)) then
+		v12.CastTarget(v23.NaturesSwiftness, v12.TName().PLAYER, true);
+		return "NS Actual Cast";
+	end
+	if (v23.AncestralSwiftness:IsReady() and v6:AffectingCombat() and (v57 <= v29.Healing.NSHP)) then
+		v12.CastTarget(v23.AncestralSwiftness, v12.TName().PLAYER, true);
+		return "AS Actual Cast";
+	end
+	if (v23.AncestralGuidance:IsReady() and v6:AffectingCombat() and v27.AoELogicWithCount(v29.AoE.AGHP, v29.AoE.AGCount, v29.Cooldowns.UseAG, v30)) then
+		v12.Cast(v23.AncestralGuidance);
+		return "Ancestral Guidance";
+	end
+	if (v23.EarthElemental:IsReady() and v6:AffectingCombat() and ((((v29.Cooldowns.EarthEle == "With Logic") or ((v29.Cooldowns.EarthEle == "With Cooldowns and Logic") and v15)) and (v6:HealthPercentage() <= (597 - (426 + 146)))) or (v15 and (v29.Cooldowns.EarthEle == "With Cooldowns")))) then
+		v12.CastTarget(v23.EarthElemental, v12.TName().PLAYER);
+		return "Earth Elemental";
+	end
+	if (v23.SpiritLinkTotem:IsReady() and v6:AffectingCombat() and v27.AoELogicWithCount(v29.AoE.SpiritLinkHP, v29.AoE.SpiritLinkCount, "With Logic", v30)) then
+		v12.Cast(v23.SpiritLinkTotem);
+		return "SpiritLinkTotem Casted to be Placed";
+	end
+	if (v23.HealingTideTotem:IsReady() and v27.AoELogicWithCount(v29.AoE.HealingTideHP, v29.AoE.HealingTideCount, "With Logic", v30)) then
+		v12.Cast(v23.HealingTideTotem);
+		return "Healing Tide Totem";
+	end
+	if v23.StoneBulkwarkTotem:IsReady() then
+		if (v51() or v50()) then
+			v13(v23.StoneBulkwarkTotem);
+			return "Stone Bulkwark Totem";
+		end
+	end
+	if ((v8:NPCID() == (11389 + 83683)) and not v8:IsDeadOrGhost()) then
+		if (v23.Riptide:IsReady() and v8:BuffDown(v23.Riptide)) then
+			v12.Cast(v23.Riptide);
+			return "Riptide on Ele";
+		end
+		if (v23.HealingWave:IsReady() and (v8:HealthPercentage() <= (1546 - (282 + 1174))) and v60) then
+			v12.Cast(v23.HealingWave);
+			return "Healing Wave on Ele";
+		end
+	end
+	if not v72 then
+		if (v23.ChainHeal:IsReady() and v6:BuffUp(v23.Hightide) and v27.AoELogicWithCount(v29.AoE.ChainHealHighTideHP, v29.AoE.ChainHealHighTideCount, "With Logic", v30) and v60) then
+			v55:Cast(v23.ChainHeal);
+			return " Chain Heal with High Tide";
+		end
+		if (v23.UnleashLife:IsReady() and (v57 <= v29.Healing.UnleashLifeHP)) then
+			v55:Cast(v23.UnleashLife);
+			return "Unleash Life";
+		end
+		if (v23.Wellspring:IsReady() and v60 and v27.AoELogicWithCount(v29.AoE.WellspringHP, v29.AoE.WellspringCount, "With Logic", v30)) then
+			v12.Cast(v23.Wellspring);
+			return "Well Spring Cast";
+		end
+		if ((v70 <= (831 - (569 + 242))) and (v27.GetAverageGroupHealthPercent(v30) >= (100 - 65)) and v23.NaturesSwiftness:CooldownUp() and not v6:IsInRaid()) then
+			if (v23.HealingSurge:IsReady() and v6:BuffDown(v23.PrimordialWave) and (v70 <= v29.Healing.HealingSurgeHP) and v60) then
+				v55:Cast(v23.HealingSurge);
+				return "Healing Surge when someone to low";
+			end
+			if (v23.HealingWave:IsReady() and v6:BuffDown(v23.PrimordialWave) and (v70 <= v29.Healing.HealingWaveHP) and v60) then
+				v55:Cast(v23.HealingWave);
+				return "Healing Surge when someone to low";
+			end
+		end
+		if (v70 >= (2 + 28)) then
+			if (v56 ~= nil) then
+				if (v23.EarthShield:IsReady() and v56:BuffDown(v23.EarthShield) and (v27.BuffCount(v30, v23.EarthShield) < (1025 - (706 + 318)))) then
+					v56:Cast(v23.EarthShield);
+					return "Earth Shield Casted";
+				end
+			end
+		end
+		if (v58 ~= nil) then
+			if (v23.PrimordialWave:IsReady() and (v58:HealthPercentage() <= v29.Healing.PrimordiaWaveHP) and (v27.BuffCount(v30, v23.Riptide) >= (1253 - (721 + 530)))) then
+				v58:Cast(v23.PrimordialWave);
+				return " PrimordialWave on Unit w/o Riptide";
+			end
+		elseif (v23.PrimordialWave:IsReady() and (v55:HealthPercentage() <= v29.Healing.PrimordiaWaveHP) and (v27.BuffCount(v30, v23.Riptide) >= (1273 - (945 + 326)))) then
+			v55:Cast(v23.PrimordialWave);
+			return " PrimordialWave on Unit w/o Riptide";
+		end
+		if (v6:BuffUp(v23.PrimordialWaveBuff) and v23.HealingWave:IsReady() and v60 and (v57 <= (174 - 104)) and ((v27.BuffCount(v30, v23.Riptide) >= (3 + 0)) or (v6:BuffRemains(v23.PrimordialWaveBuff) <= (702 - (271 + 429))))) then
+			v55:Cast(v23.HealingWave);
+			return "Healing Wave due to PW and RT Buffs";
+		end
+		if (v56 ~= nil) then
+			if (v23.Riptide:IsReady() and (v23.Riptide:Charges() > (0 + 0)) and v56:BuffDown(v23.Riptide) and (v56:HealthPercentage() <= v29.Healing.RiptideHP)) then
+				v56:Cast(v23.Riptide);
+				return "Riptide on Lowest Tank W/O Riptide";
+			end
+		end
+		if (v58 ~= nil) then
+			if (v23.Riptide:IsReady() and (v23.Riptide:Charges() > (1500 - (1408 + 92))) and (v58:HealthPercentage() <= v29.Healing.RiptideHP)) then
+				v58:Cast(v23.Riptide);
+				return "Riptide on Lowest Tank W/O Riptide";
+			end
+		end
+		if (v23.CloudburstTotem:IsReady() and v23.CloudburstTotem:IsAvailable() and (v44(v23.CloudburstTotem) <= (1086 - (461 + 625))) and v27.AoELogicWithCount(v29.AoE.CloudBurstHP, v29.AoE.CloudBurstCount, "With Logic", v30)) then
+			v12.CastTarget(v23.CloudburstTotem, v12.TName().PLAYER);
+			return "Cloud Burst Totem";
+		end
+		if (v23.CloudburstTotem:IsAvailable() and (v44(v23.CloudburstTotem) > (1288 - (993 + 295))) and ((v27.AoELogicWithCount(v29.AoE.CloudBurstRecastHP, v29.AoE.CloudBurstRecastCount, "With Logic", v30) and (v44(v23.CloudburstTotem) < (1 + 9))) or (v44(v23.CloudburstTotem) < (1174 - (418 + 753))))) then
+			v12.CastTarget(v23.CloudburstTotem, v12.TName().PLAYER);
+			return "Cloud Burst Totem Recast";
+		end
+		if (v23.ChainHeal:IsReady() and (v6:BuffUp(v23.Tidebringer) or v6:BuffUp(v23.TidalWaves)) and (v27.AoELogicWithCount(v29.AoE.ChainHealHP, v29.AoE.ChainHealCount, "With Logic", v30) or v6:BuffUp(v23.UnleashLife)) and v60) then
+			v55:Cast(v23.ChainHeal);
+			return "Chain Heal";
+		end
+		if (v23.ManaTideTotem:IsReady() and (v6:ManaPercentage() <= v29.Healing.ManaTideMP)) then
+			v12.Cast(v23.ManaTideTotem);
+			return "Mana Tide Totem";
+		end
+		if (v23.UnleashLife:IsReady() and v6:BuffUp(v23.Hightide) and (v57 <= v29.Healing.UnleashLifeHP)) then
+			v55:Cast(v23.UnleashLife);
+			return "Unleash Life";
+		end
+		if (v64 and v6:AffectingCombat()) then
+			if (v23.SurgingTotem:IsReady() and not v6:PrevGCD(1 + 0, v23.SurgingTotem) and (v27.AoELogicWithCount(v29.AoE.HealingRainHP, v29.AoE.HealingRainCount, "With Logic", v30) or (v23.AcidRain:IsAvailable() and v27.TargetIsValid()))) then
+				v12.Cast(v23.SurgingTotem);
+				return "Surging Totem Casted to be Placed";
+			end
+			if (v23.HealingRain:IsReady() and not v6:PrevGCD(1 + 0, v23.HealingRain) and (v27.AoELogicWithCount(v29.AoE.HealingRainHP, v29.AoE.HealingRainCount, "With Logic", v30) or (v23.AcidRain:IsAvailable() and v27.TargetIsValid())) and v60) then
+				v12.Cast(v23.HealingRain);
+				return "Healing Rain Casted to be Placed";
+			end
+		end
+		if (v23.HealingStreamTotem:IsReady() and v23.HealingStreamTotem:IsAvailable() and ((v44(v23.HealingStreamTotem) <= (0 + 0)) or ((v44(v23.HealingStreamTotem) < (2 + 3)) and (v23.HealingStreamTotem:Charges() >= (530 - (406 + 123))) and (v27.GetAverageGroupHealthPercent(v30) <= (1814 - (1749 + 20))))) and v27.AoELogicWithCount(v29.AoE.CloudBurstHP, v29.AoE.CloudBurstCount, "With Logic", v30)) then
+			v12.Cast(v23.HealingStreamTotem);
+			return "Healing Stream Totem";
+		end
+		if (v23.EarthenWallTotem:IsReady() and v6:AffectingCombat() and v27.AoELogicWithCount(v29.AoE.EarthenWallHP, v29.AoE.EarthenWallCount, "With Logic", v30)) then
+			v12.Cast(v23.EarthenWallTotem);
+			return "EarthenWallTotem Casted to be Placed";
+		end
+		if (v23.ChainHeal:IsReady() and (v27.AoELogicWithCount(v29.AoE.ChainHealHP, v29.AoE.ChainHealCount, "With Logic", v30) or v6:BuffUp(v23.UnleashLife)) and v60) then
+			v55:Cast(v23.ChainHeal);
+			return "Chain Heal";
+		end
+		if (v59:IsReady() and v6:BuffUp(v23.Undulation) and (v70 <= v29.Healing.NSHP) and v60) then
+			v55:Cast(v59);
+			return "Undlation Spell Cast";
+		end
+		if (v56 ~= nil) then
+			if (v23.HealingSurge:IsReady() and v6:BuffDown(v23.PrimordialWave) and (v56:HealthPercentage() <= v29.Healing.HealingSurgeTankHP) and v60) then
+				v56:Cast(v23.HealingSurge);
+				return "Healing Surge when someone to low";
+			end
+			if (v23.HealingWave:IsReady() and v6:BuffDown(v23.PrimordialWave) and (v56:HealthPercentage() <= v29.Healing.HealingWaveTankHP) and v60) then
+				v56:Cast(v23.HealingWave);
+				return "Healing Surge when someone to low";
+			end
+		end
+		if (v23.HealingSurge:IsReady() and v6:BuffDown(v23.PrimordialWave) and (v70 <= v29.Healing.HealingSurgeHP) and v60) then
+			v55:Cast(v23.HealingSurge);
+			return "Healing Surge when someone to low";
+		end
+		if (v23.HealingWave:IsReady() and v6:BuffDown(v23.PrimordialWave) and (v70 <= v29.Healing.HealingWaveHP) and v60) then
+			v55:Cast(v23.HealingWave);
+			return "Healing Surge when someone to low";
+		end
+	end
+	if (v27.TargetIsValid() and (v6:AffectingCombat() or (v29.Resto.AttackOOC and v61)) and ((v57 >= (9 + 26)) or v72) and not v43(v8)) then
+		if (v23.StormKeeper:IsReady() and ((v29.Cooldowns.Stormkeeper == "With Logic") or ((v29.Cooldowns.Stormkeeper == "With Cooldowns and Logic") and v15) or ((v29.Cooldowns.Stormkeeper == "With Cooldowns") and v15)) and v60) then
+			v12.Cast(v23.StormKeeper);
+			return "Storm Keeper";
+		end
+		if (v8:AffectingCombat() and v6:BuffUp(v23.StormKeeper)) then
+			if (v14 and (v31 >= (1324 - (1249 + 73)))) then
+				if (v23.ChainLightning:IsReady() and v60 and v8:IsSpellInRange(v23.ChainLightning)) then
+					v12.Cast(v23.ChainLightning);
+					return "Chain Lighting";
+				end
+			elseif (v23.LightningBolt and v60 and v8:IsSpellInRange(v23.LightningBolt)) then
+				v12.Cast(v23.LightningBolt);
+				return "Lighting Bolt";
+			end
+		end
+		if (v14 and (v31 >= (1 + 1))) then
+			if (v23.ChainLightning:IsReady() and v60 and v8:IsSpellInRange(v23.ChainLightning)) then
+				v12.Cast(v23.ChainLightning);
+				return "Chain Lighting AoE Spam";
+			end
+		end
+		if (v23.FlameShock:IsReady() and v8:AffectingCombat() and v8:IsSpellInRange(v23.FlameShock) and v8:DebuffRefreshable(v23.FlameShock)) then
+			v12.Cast(v23.FlameShock);
+			return "Flame Shock";
+		end
+		if v45(v23.LavaBurst) then
+			v12.Cast(v23.LavaBurst);
+			return "Lava Burst Cast";
+		end
+		if (v14 and (v31 >= (1147 - (466 + 679)))) then
+			if (v23.ChainLightning:IsReady() and v60 and v8:IsSpellInRange(v23.ChainLightning)) then
+				v12.Cast(v23.ChainLightning);
+				return "Chain Lighting";
+			end
+		elseif (v23.LightningBolt and v60 and v8:IsSpellInRange(v23.LightningBolt)) then
+			v12.Cast(v23.LightningBolt);
+			return "Lighting Bolt";
+		end
+	end
+end
+local function v75()
+	if v27.ShouldStopCastUpdate() then
+		v12.CastMacro(14 - 8, true);
+		return "Stop Cast For Silence";
+	end
+	v53();
+	if (v23.SkyFury:IsReady() and (v6:Level() >= (45 - 29)) and not v6:DebuffUp(v23.Corruption) and ((v27.GroupBuffMissing(v23.SkyFuryBuff) and (v29.Commons.SkyFury == "check whole group") and (v6:IsInRaidArea() or v6:IsInDungeonArea())) or (v6:BuffDown(v23.SkyFuryBuff, true) and ((v29.Commons.SkyFury == "only check us") or (v29.Commons.SkyFury == "check whole group")))) and not v6:IsMounted()) then
+		if v12.CastTarget(v23.SkyFury, v12.TName().PLAYER) then
+			return "SkyFury";
+		end
+	end
+	if (not v6:IsMounted() and not v6:IsChanneling() and (v27.TargetIsValid() or v6:AffectingCombat() or v61)) then
+		if (not v6:AffectingCombat() or v61) then
+			v66 = v47();
+			if v66 then
+				return v66;
+			end
+		end
+		if v6:AffectingCombat() then
+			if (v63 and v23.WindShear:IsReady()) then
+				v66 = v27.InterruptCycle(v23.WindShear, 1930 - (106 + 1794), true, nil, false);
+				if v66 then
+					return v66;
+				end
+			end
+			if v23.Purge:IsReady() then
+				v66 = v27.PurgeCycle(v23.Purge, 13 + 27, false, v29.Commons.TabForPurge);
+				if v66 then
+					return v66;
+				end
+			end
+			if (v23.Hex:IsReady() and v6:AffectingCombat()) then
+				v66 = v27.IncorpCycle(v23.Hex, 11 + 29, false, false);
+				if v66 then
+					return v66;
+				end
+			end
+			if (v62 and not v6:IsInRaid() and v23.PurifySpirit:IsReady()) then
+				v66 = v27.DispelCycle(v23.PurifySpirit, "Magic", nil, v30);
+				if v66 then
+					return v66;
+				end
+				if v23.ImprovedPurifySpirit:IsAvailable() then
+					v66 = v27.AfflictedLogic(v23.PurifySpirit);
+					if v66 then
+						return v66;
+					end
+					v66 = v27.DispelCycle(v23.PurifySpirit, "Curse", nil, v30);
+					if v66 then
+						return v66;
+					end
+				end
+				if (v23.PoisonCleansingTotem:IsAvailable() and v23.PoisonCleansingTotem:IsReady()) then
+					if v27.DispelCycle(v23.PoisonCleansingTotem, "Poison", nil, v30) then
+						return v12.CastTarget(v23.PoisonCleansingTotem, v12.TName().PLAYER);
+					end
+					if ((v65 > (2 - 1)) or (v23.PurifySpirit:CooldownDown() and (v65 > (0 - 0)))) then
+						return v12.CastTarget(v23.PoisonCleansingTotem, v12.TName().PLAYER);
+					end
+				end
+			end
+			if (v62 and v6:IsInRaid() and v23.PurifySpirit:IsReady()) then
+				v66 = v27.DispelCycle(v23.PurifySpirit, "Raid", nil, v30);
+				if v66 then
+					return v66;
+				end
+			end
+		end
+		v66 = v46(v29.Cooldowns.Trinket1HP, v29.Cooldowns.Trinket1Use, v29.Cooldowns.Trinket2HP, v29.Cooldowns.Trinket2Use, v30);
+		if v66 then
+			return v66;
+		end
+		v66 = v74();
+		if v66 then
+			return v66;
+		end
+	end
+end
+local function v76()
+	v12.ResetToggle();
+	v29.Resto.Display();
+	v12:UpdateMacro("macro1", "/use 16");
+	v12:UpdateMacro("macro2", "/hr dpsonly");
+	v12:UpdateMacro("macro6", "/stopcasting");
+	v12.ToggleIconFrame:AddButtonCustom("O", 115 - (4 + 110), "OOC", "ooc");
+	v12.ToggleIconFrame:AddButtonCustom("D", 586 - (57 + 527), "Dispel", "dispel");
+	v12.ToggleIconFrame:AddButtonCustom("K", 1430 - (41 + 1386), "Kick", "kick");
+	v12.ToggleIconFrame:AddButtonCustom("H", 107 - (17 + 86), "Healing Rain", "healingrain");
+	v12.ToggleIconFrame:AddButtonCustom("DP", 4 + 1, "DPS Only", "dpsonly");
+	v12.Print("Restoration Shaman rotation has been updated for 10.2. Last Update 04/5/24");
+end
+v12.SetAPL(588 - 324, v75, v76, v73);

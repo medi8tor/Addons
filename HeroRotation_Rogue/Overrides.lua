@@ -1,1 +1,12 @@
-local v0={};local v1=string.char;local v2=string.byte;local v3=string.sub;local v4=bit32 or bit ;local v5=v4.bxor;local v6=table.concat;local v7=table.insert;local function v8(v16,v17) local v18={};for v33=1, #v16 do v7(v18,v1(v5(v2(v3(v16,v33,v33 + 1 )),v2(v3(v17,1 + (v33% #v17) ,1 + (v33% #v17) + 1 )))%256 ));end return v6(v18);end v0[36 -23 ]=v8("\48\206\56\204\236\55\131\38\208\253","\156\67\173\74\165");v0[931 -(857 + 74) ]=v8("\194\192\201\44\246\175\137\18\196\194","\126\177\163\187\69\134\219\167");local v11=...;local v12={};local v13=require;local function v14(v19,...) local v20=v12[v19];if  not v20 then return v13(v19,v11,...);end return v20(v11,...);end v12[v0[568 -(367 + 201) ]]=function(...) local v21=HeroLib;local v22=HeroCache;local v23=v21.Unit;local v24=v23.Player;local v25=v23.Pet;local v26=v23.Target;local v27=v21.Spell;local v28=v21.Item;local v29=HeroRotation();local v30=v27.Rogue.Assassination;local v31=v27.Rogue.Outlaw;local v32=v27.Rogue.Subtlety;end;return v12[v0[940 -(214 + 713) ]](...);
+local v0 = HeroLib;
+local v1 = HeroCache;
+local v2 = v0.Unit;
+local v3 = v2.Player;
+local v4 = v2.Pet;
+local v5 = v2.Target;
+local v6 = v0.Spell;
+local v7 = v0.Item;
+local v8 = HeroRotation();
+local v9 = v6.Rogue.Assassination;
+local v10 = v6.Rogue.Outlaw;
+local v11 = v6.Rogue.Subtlety;

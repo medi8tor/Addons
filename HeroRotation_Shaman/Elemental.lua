@@ -1,1 +1,899 @@
-local v0={};local v1=string.char;local v2=string.byte;local v3=string.sub;local v4=bit32 or bit ;local v5=v4.bxor;local v6=table.concat;local v7=table.insert;local function v8(v186,v187) local v188={};for v277=1, #v186 do v7(v188,v1(v5(v2(v3(v186,v277,v277 + 1 )),v2(v3(v187,1 + (v277% #v187) ,1 + (v277% #v187) + 1 )))%256 ));end return v6(v188);end v0[571 + 919 ]=v8("\149\126\63\30\200\216\156\138\104\44","\178\230\29\77\119\184\172");v0[107 + 1381 ]=v8("\139\227\184\177\171\225\169\189\162\175\142\180\175\226\188\178\238\253\178\168\175\251\180\179\160\175\181\189\189\175\191\185\171\225\253\169\190\235\188\168\171\235\253\186\161\253\253\172\175\251\190\180\238\190\236\242\254\161\239\242\238\195\188\175\186\175\136\172\170\238\169\185\238\190\237\242\255\191\243\238\254\189\233","\220\206\143\221");v0[767 + 719 ]=v8("\234\98\81\162\51\211\236\250\98\64","\156\159\17\52\214\86\190");v0[2179 -(619 + 75) ]=v8("\56\34\48\73\8\115\29\52\38\105","\30\109\81\85\29\109");v0[2144 -663 ]=v8("\67\188\57\13\3\230\253\82\170\46","\147\54\207\92\126\115\131");v0[2286 -(118 + 688) ]=v8("\98\75\1\237\71\93\10\218\82\74","\190\55\56\100");v0[1524 -(25 + 23) ]=v8("\248\206\225\213\77\232\199\243","\33\139\163\128\185");v0[286 + 1189 ]=v8("\29\160\113\232\7\161\42\190","\226\110\205\16\132\107");v0[3357 -(927 + 959) ]=v8("\32\31\191\241\52\252","\183\68\118\204\129\81\144");v0[4955 -3485 ]=v8("\127\9\158\27\32\3","\203\59\96\237\107\69\111\113");v0[2198 -(16 + 716) ]=v8("\63\71\231\21\97\220\35\89\231","\174\86\41\147\112\19");v0[2828 -1363 ]=v8("\173\38\178\196\202\65\167\148\60","\210\228\72\198\161\184\51");v0[1557 -(11 + 86) ]=v8("\210\230\173\202\252\137","\147\191\135\206\184");v0[3553 -2096 ]=v8("\44\64\83\22\248\13","\67\65\33\48\100\151\60");v0[1733 -(175 + 110) ]=v8("\226\138\211\47\199\175\91\192\197\239\42\137\174\88\215\177\221\49\128\172\64\154\204","\52\178\229\188\67\231\201");v0[3653 -2206 ]=v8("\155\236\100\106","\45\203\163\43\38\35\42\91");v0[7122 -5678 ]=v8("\9\167\67\20\128\228\1\43\232\109\23\197\170\71","\110\89\200\44\120\160\130");v0[3239 -(503 + 1293) ]=v8("\32\59\29\217","\194\112\116\82\149\182\206");v0[4018 -2579 ]=v8("\198\24\70\151\95\61\32\74\236\22\91","\62\133\121\53\227\127\109\79");v0[1036 + 396 ]=v8("\131\64\92\90\163\221\76\131\66\96\76\167\192\88\150\64\90\76\163\137\83\131\71\81\31\225\157","\62\226\46\63\63\208\169");v0[2487 -(810 + 251) ]=v8("\182\116\246\224\159\189\102\221\230\154\177\115\246\251\136\171\102\162\248\140\177\123\162\164\223","\237\216\21\130\149");v0[986 + 434 ]=v8("\228\6\40\0\141\86\88\117\242\16\61","\22\147\99\73\112\226\56\120");v0[434 + 979 ]=v8("\53\183\36\55\58\170\60\166\123","\196\28\151\73\86\83");v0[1272 + 139 ]=v8("\22\213\114\115\10\210\114\65\67\210\101\69\13\205\114\88\81\134\63","\44\99\166\23");v0[1936 -(43 + 490) ]=v8("\167\183\175\49\231\249\226\97\190","\80\142\151\194");v0[2134 -(711 + 22) ]=v8("\15\166\141\50\19\161\141\0\90\161\154\4\20\190\141\25\75\245\192","\109\122\213\232");v0[5376 -3986 ]=v8("\219\229\116\237\152\211\200\234\123\215\136\198\214\231\55\229\138\206\212\171\47","\167\186\139\23\136\235");v0[2239 -(240 + 619) ]=v8("\216\174\215\216\113\253\82\1\218\231\200\220\122\255\29\88","\110\190\199\165\189\19\145\61");v0[331 + 1039 ]=v8("\64\235\75\147\71\252\82\137\76\233\25\141\67\231\87\192\22","\224\34\142\57");v0[2165 -803 ]=v8("\130\240\141\121\52\215\176\3\146\229\194\123\49\225\184\86\210","\118\224\156\226\22\80\136\214");v0[89 + 1253 ]=v8("\106\69\198\171\226\198\79\66\198\227\197\192\79\73\205\167\182\250\67\74\211\166\229\192","\168\38\44\161\195\150");v0[3067 -(1344 + 400) ]=v8("\162\245\22\50\170\180\252\13\35\174\131","\194\231\148\100\70");v0[1697 -(255 + 150) ]=v8("\220\167\10\215\83\226","\60\140\200\99\164");v0[1013 + 272 ]=v8("\19\11\146\11\68","\33\80\126\224\120");v0[681 + 591 ]=v8("\99\170\236\5\81\60\73","\78\48\193\149\67\36");v0[5409 -4143 ]=v8("\5\23\87\196\167\50\156\14\16\94\194\236\117\153\9\10\66","\235\102\127\50\167\204\18");v0[4079 -2816 ]=v8("\15\125\14\102\11\13\130\5\112\9\63\94\29","\234\96\19\98\31\43\110");v0[2995 -(404 + 1335) ]=v8("\167\17\9\185\78\232\162\56\171\21\9\250\66\186\186\37\180","\80\196\121\108\218\37\200\213");v0[1652 -(183 + 223) ]=v8("\152\52\81\236\87\7\158\47\80\240\90\9\137\3\83\227\65\6","\98\236\92\36\130\51");v0[1510 -268 ]=v8("\45\30\41\88\142\147\205\37\21\61\80\180\144\199\42\2\39\91\203\130\204\40\26\41\91\159","\162\75\114\72\53\235\231");v0[819 + 417 ]=v8("\241\137\240\90\203\150\182\240\69\217","\191\182\225\159\41");v0[442 + 785 ]=v8("\212\231\87\197\49\22\196\224\84\208","\54\147\143\56\182\69");v0[1556 -(10 + 327) ]=v8("\119\25\43\95\24\24\50\82\24\24\33\6\91\24\42\68\89\3","\38\56\119\71");v0[847 + 368 ]=v8("\105\116\88\23\115\79\116\20\45\60\75\120\85\26","\83\38\26\52\110");v0[1550 -(118 + 220) ]=v8("\250\162\165\41\226\189","\72\155\206\210");v0[374 + 747 ]=v8("\128\71\197\96\90\30\84\210\167\19\236\127\8\125\102\200\191\86\196\115\31","\161\211\51\170\16\122\93\53");v0[1567 -(108 + 341) ]=v8("\62\20\2\254\44\57\30\229\55\5\6\173\43\15\3\234\52\3\50\249\57\20\10\232\44\70\85\185","\141\88\102\109");v0[501 + 613 ]=v8("\50\42\1\205\240\11\53\8\207\246\63\102\19\201\251\51\42\5\255\225\53\52\7\197\225\116\126\82","\149\84\70\96\160");v0[4692 -3582 ]=v8("\208\172\12\34\198\233\179\5\32\192\221\224\30\38\205\209\172\8\16\215\215\178\10\42\215\150\248\93","\163\182\192\109\79");v0[2597 -(711 + 782) ]=v8("\82\202\242\237\56\206\87\205\242\218\46\207\82\215\181\246\37\206\89\207\240\218\56\193\76\196\240\241\108\151\6","\160\62\163\149\133\76");v0[2108 -1008 ]=v8("\186\4\130\40\12\10\160\176\11\139\53\12\60\162\190\76\144\40\12\50\160\188\51\151\32\16\50\169\173\76\212\119","\204\217\108\227\65\98\85");v0[1563 -(270 + 199) ]=v8("\14\8\177\87\130\230\2\187\17\29\231\69\180\234\16\165\7\54\179\87\175\227\18\189\66\94\243","\201\98\105\199\54\221\132\119");v0[353 + 734 ]=v8("\3\175\42\119\243\230\6\168\42\64\229\231\3\178\109\108\238\230\8\170\40\64\243\233\29\161\40\107\167\191\93","\136\111\198\77\31\135");v0[2900 -(580 + 1239) ]=v8("\240\121\247\5\30\117\255\120\241\4\4\68\250\127\241\76\3\67\253\118\250\9\47\94\242\99\241\9\4\10\164\33","\42\147\17\150\108\112");v0[3192 -2118 ]=v8("\29\255\137\66\249\2\42\19\226\133\90\173\46\48\21\234\138\84\210\41\56\9\234\131\69\173\107\97","\89\123\141\230\49\141\93");v0[1019 + 46 ]=v8("\199\125\183\5\144\220\103\242\16\140\192\121\190\6\186\218\127\160\4\128\218\62\228\85","\229\174\30\210\99");v0[38 + 1019 ]=v8("\136\72\95\38\144\79\81\32\131\126\90\33\136\85\24\61\141\79\95\34\129\126\76\47\150\70\93\58\196\23\12","\78\228\33\56");v0[458 + 593 ]=v8("\40\207\77\255\78\240\147\37\193\92\224\6\220\137\35\201\83\238\121\219\129\63\201\90\255\6\153\210","\224\77\174\63\139\38\175");v0[2733 -1686 ]=v8("\222\221\43\81\42\89\207\208\34\99\45\91\218\194\58\28\60\94\213\214\34\89\16\67\218\195\41\89\59\23\141\129","\55\187\177\78\60\79");v0[648 + 395 ]=v8("\129\192\18\173\55\32\221\133\202\5\249\44\56\198\131\205\5\134\43\48\218\131\196\20\249\106\105","\168\228\161\96\217\95\81");v0[2199 -(645 + 522) ]=v8("\193\230\11\250\37\207\242\15\232\14\141\244\20\245\29\193\226\34\239\27\223\224\24\239\90\152\177","\122\173\135\125\155");v0[2811 -(1010 + 780) ]=v8("\61\0\196\181\199\210\168\35\18\198\244\235\217\179\54\13\215\139\236\209\175\54\4\198\244\173\132","\221\81\97\178\212\152\176");v0[1011 + 0 ]=v8("\30\33\46\125\131\118\7\50\43\104\252\103\27\46\63\112\185\75\6\33\42\123\185\96\82\117\106","\20\114\64\88\28\220");v0[4782 -3778 ]=v8("\200\17\8\243\23\98\160\129\1\4\251\5\124\188\254\6\12\231\5\117\173\129\71\93","\217\161\114\109\149\98\16");v0[2901 -1911 ]=v8("\88\119\97\8\123\148\94\85\121\112\23\51\184\68\83\113\127\25\76\191\76\79\113\118\8\51\255\20","\45\61\22\19\124\19\203");v0[2807 -(1045 + 791) ]=v8("\54\83\64\226\241\12\65\90\249\250\56\18\65\255\247\52\94\87\201\237\50\64\85\243\237\115\6\10","\153\83\50\50\150");v0[2419 -1463 ]=v8("\187\248\6\72\134\176\224\2\73\188\188\248\2\86\151\254\231\10\75\132\178\241\60\81\130\172\243\6\81\195\234\162","\227\222\148\99\37");v0[1448 -499 ]=v8("\193\202\1\208\85\231\189\197\192\22\132\78\255\166\195\199\22\251\73\247\186\195\206\7\132\9\162","\200\164\171\115\164\61\150");v0[1432 -(351 + 154) ]=v8("\23\252\39\32\126\45\238\61\59\117\25\189\38\61\120\21\241\48\11\98\19\239\50\49\98\82\169\103","\22\114\157\85\84");v0[2488 -(1281 + 293) ]=v8("\241\161\179\217\173\88\77\245\161\137\214\164\87\74\224\237\165\221\166\81\85\241\146\162\213\186\81\92\224\237\226\132","\57\148\205\214\180\200\54");v0[1165 -(28 + 238) ]=v8("\179\180\244\196\190\164\243\209\189\176\166\195\191\187\225\220\179\138\242\209\164\178\227\196\246\230\190","\176\214\213\134");v0[1961 -1083 ]=v8("\182\140\190\211\133\143\189\192\169\153\232\193\179\131\175\222\191\178\188\211\168\138\173\198\250\222\254","\178\218\237\200");v0[2430 -(1381 + 178) ]=v8("\181\34\189\117\128\189\80\166\170\55\235\103\182\177\66\184\188\28\191\117\173\184\64\160\249\112\255","\212\217\67\203\20\223\223\37");v0[809 + 53 ]=v8("\79\3\52\127\64\20\54\116\77\21\119\105\71\30\48\118\75\47\35\123\92\23\50\110\14\67\101","\26\46\112\87");v0[691 + 165 ]=v8("\72\67\201\125\36\74\67\192\114\15\70\69\194\97\112\87\67\192\114\60\65\117\218\116\34\67\79\218\53\99\20","\80\36\42\174\21");v0[361 + 485 ]=v8("\238\43\224\84\111\127\207\236\37\216\94\116\125\210\162\49\238\82\124\125\195\221\54\230\78\124\116\210\162\112\191","\166\130\66\135\60\27\17");v0[2882 -2046 ]=v8("\31\212\148\250\213\197\6\199\145\239\170\212\26\219\133\247\239\248\7\212\144\252\239\211\83\135\212","\167\115\181\226\155\138");v0[428 + 397 ]=v8("\61\139\123\180\37\140\117\178\54\189\126\179\61\150\60\175\56\140\123\176\52\189\104\189\35\133\121\168\113\208\40","\220\81\226\28");v0[1288 -(381 + 89) ]=v8("\72\0\205\191\39\203\72\69\211\166\44\223\80\0\255\187\35\202\91\0\212\239\112\138","\184\60\101\160\207\66");v0[716 + 91 ]=v8("\196\141\23\243\60\209\75\202\142\21\245\121\253\81\204\134\26\251\6\250\89\208\134\19\234\121\188\8","\56\162\225\118\158\89\142");v0[546 + 260 ]=v8("\56\189\133","\186\85\212\235\146");v0[1341 -558 ]=v8("\251\193\21\216\75\136\238\197\27\214\69\247\238\196\26\210\66\178\194\217\21\199\73\178\233\141\69\141","\215\157\173\116\181\46");v0[1938 -(1074 + 82) ]=v8("\51\54\247","\145\94\95\153");v0[1647 -895 ]=v8("\238\1\88\243\222\221\145\38\231\14\82\190\200\235\140\41\228\8\102\234\218\240\133\43\252\77\8\168","\78\136\109\57\158\187\130\226");v0[2511 -(214 + 1570) ]=v8("\192\76\49\211\22\213\80\51\218\58\210\85\59\208\17\207\71\33\197\69\210\75\60\209\9\196\125\38\215\23\198\71\38\150\84\149","\101\161\34\82\182");v0[2171 -(990 + 465) ]=v8("\149\160\58\6\71\92\141\140\179\63\52\95\79\159\128\242\32\2\70\73\133\128\141\39\10\90\73\140\145\242\98\89","\233\229\210\83\107\40\46");v0[295 + 420 ]=v8("\236\193\60","\34\129\168\82\154\143\80\156");v0[306 + 395 ]=v8("\187\236\104\224\224\207\136\232\120\242\228\202\136\241\118\225\236\198\247\246\112\251\238\199\178\218\109\244\251\204\178\241\57\164\185","\171\215\133\25\149\137");v0[672 + 19 ]=v8("\49\222\78\95\190\44\210\101\72\182\38\208\86\86\243\54\216\84\93\191\32\238\78\91\161\34\212\78\26\235","\211\69\177\58\58");v0[2683 -2001 ]=v8("\57\58\218\73\39\37\208\94\58\43\199\27\57\39\219\92\38\43\234\79\43\60\210\94\62\110\131","\59\74\78\181");v0[2401 -(1668 + 58) ]=v8("\159\233\67\32\31\115\127\128\248\65\55\28\88\123\128\189\95\59\28\75\118\137\194\88\51\0\75\127\152\189\24","\26\236\157\44\82\114\44");v0[1295 -(512 + 114) ]=v8("\241\250\46\215\200\246\48\215\250\246\50\198\246\255\124\193\254\253\59\222\242\204\40\211\229\244\57\198\183\161","\178\151\147\92");v0[1728 -1065 ]=v8("\134\181\200\232\67\192\147\175\200\248\92\191\141\168\209\242\89\248\192\166\200\254\23\168\216","\159\224\199\167\155\55");v0[1360 -702 ]=v8("\242\125\244\160\32\18\148\252\126\246\166\101\32\136\226\120\251\170\101\44\136\241\49\162\251","\231\148\17\149\205\69\77");v0[2268 -1616 ]=v8("\200\127\37\93\243\12\196\194\112\44\64\243\58\198\204\55\37\91\248\115\159\159","\168\171\23\68\52\157\83");v0[302 + 346 ]=v8("\235\3\236\200\216\0\255\200\234\66\251\198\226\66\173\155","\169\135\98\154");v0[120 + 520 ]=v8("\59\90\201\40\191\84\75\37\72\203\105\129\89\91\119\12\143","\62\87\59\191\73\224\54");v0[551 + 82 ]=v8("\169\171\53\31\44\6\194\80\168\234\34\17\22\68\145\9","\49\197\202\67\126\115\100\167");v0[2094 -1473 ]=v8("\175\38\170\66\201\104\18\0\171\38\191\69\206\89\25\73\173\33\174\11\145\1","\105\204\78\203\43\167\55\126");v0[2609 -(109 + 1885) ]=v8("\13\51\16\59\98\3\55\7\55\29\0\61\3\122\11\85","\61\97\82\102\90");v0[2074 -(1269 + 200) ]=v8("\231\121\125\64\213\112\236\237\118\116\93\213\70\238\227\49\125\70\222\15\182\182","\128\132\17\28\41\187\47");v0[1144 -547 ]=v8("\92\187\215\186\111\184\196\186\93\250\192\180\85\250\151\235","\219\48\218\161");v0[1404 -(98 + 717) ]=v8("\126\64\97\132\193\137\103\83\100\145\190\138\125\68\55\208\166","\235\18\33\23\229\158");v0[1403 -(802 + 24) ]=v8("\34\143\53\170\188\175\47\107\141\63\169\233\232\96","\86\75\236\80\204\201\221");v0[977 -410 ]=v8("\75\22\35\188\249\143\86\82\65\20\58\232\240\191\64\26\27\67","\58\46\119\81\200\145\208\37");v0[703 -146 ]=v8("\191\88\179\77\191\90\162\65\182\107\180\76\187\71\162\0\187\91\179\0\239\6","\32\218\52\214");v0[81 + 466 ]=v8("\75\134\241\57\70\150\246\44\69\130\163\44\65\130\163\120\30","\77\46\231\131");v0[406 + 122 ]=v8("\182\41\29\232\216\74\166\41\4\249\144\90\188\45\79\168\136","\59\211\72\111\156\176");v0[85 + 430 ]=v8("\21\87\145\159\142\63\184\241\27\83\195\138\137\43\237\164\70","\144\112\54\227\235\230\78\205");v0[109 + 393 ]=v8("\94\47\166\66\69\74\59\181\93\72\27\47\187\83\13\15\122","\45\59\78\212\54");v0[1357 -869 ]=v8("\54\23\226\180\5\20\225\167\41\2\180\180\53\19\180\225\104","\213\90\118\148");v0[1587 -1111 ]=v8("\142\44\179\75\227\66\4\144\62\177\10\221\79\20\194\121\245","\113\226\77\197\42\188\32");v0[167 + 298 ]=v8("\116\134\56\22\71\133\59\5\107\147\110\22\119\130\110\68\32","\119\24\231\78");v0[184 + 268 ]=v8("\220\23\245\21\52\224\19\253\27\50\203\17\253\18\61\159\30\251\25\122\140\73","\90\191\127\148\124");v0[368 + 77 ]=v8("\241\178\70\68\67\221\248\178\93\5\125\208\248\243\3\17","\191\157\211\48\37\28");v0[316 + 118 ]=v8("\61\34\10\190\23\239\32\59\63\52\73\186\22\238\97\102\110","\85\92\81\105\219\121\139\65");v0[201 + 229 ]=v8("\22\93\58\200\219\7\242\3\90\62\212\215\0\255\98\89\56\221\158\70\180","\134\66\56\87\184\190\116");v0[1850 -(797 + 636) ]=v8("\172\196\12\198\192\156\196\233\165\203\6\139\196\172\210\161\165\206\11\134\209\162\197\230\175\220\77\153\149","\129\202\168\109\171\165\195\183");v0[2014 -1599 ]=v8("\158\46\127\19\33\200\231\183\33\117\94\41\244\250\171\39\113\8\33\233","\143\216\66\30\126\68\155");v0[2025 -(1427 + 192) ]=v8("\72\167\209\127\42\252\94\172\65\168\219\50\46\204\72\228\67\170\217\124\98\215\76\182\73\174\196\50\125\147","\196\46\203\176\18\79\163\45");v0[135 + 254 ]=v8("\168\80\50\54\42\14\189\84\60\56\36\113\175\83\54\123\32\55\168\17\39\58\61\54\171\72\115\106\119","\81\206\60\83\91\79");v0[898 -511 ]=v8("\39\235\73\82\118\50\239\71\92\120\65\234\71\74\96\4\232\94\90\97","\19\97\135\40\63");v0[340 + 38 ]=v8("\187\213\33\65\184\230\51\68\178\218\43\12\188\214\37\12\176\216\41\66\240\205\33\94\186\220\52\12\236\129","\44\221\185\64");v0[165 + 197 ]=v8("\77\223\185\65\30\66\88\219\183\79\16\61\74\220\189\12\20\123\77\158\172\77\9\122\78\199\248\29\77","\29\43\179\216\44\123");v0[686 -(192 + 134) ]=v8("\26\163\128\65\230\74\112\51\172\138\12\238\118\109\47\170\142\90\230\107","\24\92\207\225\44\131\25");v0[1627 -(316 + 960) ]=v8("\221\135\16\248\188\227\220\211\132\18\254\249\221\192\222\203\28\244\176\210\130\207\138\3\242\188\200\143\138\221","\175\187\235\113\149\217\188");v0[186 + 147 ]=v8("\88\88\72\248\102\146\149\10\85\105\88\234\124\128\147\5\92\69\88\189\116\137\130\75\8\2","\107\57\54\43\157\21\230\231");v0[253 + 74 ]=v8("\74\218\236\91\85\224\132\83\201\233\105\77\243\150\95\136\228\89\95\178\209\8","\224\58\168\133\54\58\146");v0[302 + 24 ]=v8("\85\41\125","\32\56\64\19\156\58");v0[1204 -889 ]=v8("\233\71\97\31\236\74\79\7\228\73\125\11\218\90\127\30\224\67\48\11\234\75\48\91\181","\106\133\46\16");v0[862 -(83 + 468) ]=v8("\170\253\213\199\55\199\177\65\172\247\194\195\54\194\242\127\177\247\129\154","\30\222\146\161\162\90\174\210");v0[2106 -(1202 + 604) ]=v8("\245\209\194\47\235\206\200\56\246\192\223\125\231\202\200\125\176","\93\134\165\173");v0[1377 -1082 ]=v8("\190\108\182\146\62\146\125\181\133\62\168\118\173\129\63\237\121\182\133\115\249","\83\205\24\217\224");v0[480 -191 ]=v8("\65\197\39\217\59\66\192\48\209\1\73\216\52\208\68\70\195\48\156\86","\100\39\172\85\188");v0[783 -500 ]=v8("\160\168\7\69\180\254\221\191\189\81\84\164\238\204\163\164\19\69\162\171\158\254","\175\204\201\113\36\214\139");v0[604 -(45 + 280) ]=v8("\141\11\92\67\247\85\242\141\9\96\85\243\72\230\152\11\90\85\247\1\240\158\0\92\73\233\67\225\152\69\14\20","\128\236\101\63\38\132\33");v0[264 + 9 ]=v8("\196\13\14\222\185\110\130\221\30\11\236\161\125\144\209\95\23\193\179\127\137\217\29\6\199\246\45\214","\230\180\127\103\179\214\28");v0[236 + 33 ]=v8("\54\144\176\94\9\131\20\21\53\129\173\12\20\154\20\19\42\137\189\77\16\200\73","\112\69\228\223\44\100\232\113");v0[97 + 167 ]=v8("\190\201\31\226\117\201\168\209\21\253\125\248\185\220\28\176\104\228\168\222\31\253\122\247\185\157\70","\150\205\189\112\144\24");v0[143 + 115 ]=v8("\9\249\183\162\161\182\162\31\253\189\162\236\173\181\31\238\183\189\174\188\179\90\191","\199\122\141\216\208\204\221");v0[45 + 209 ]=v8("\160\34\206\23\244\149\62\204\30\192\148\37\201\19\233\130\41","\135\225\76\173\114");v0[436 -200 ]=v8("\52\49\160\44\70\18\37\20\61\183\54\90\54\37","\73\113\80\210\88\46\87");v0[2138 -(340 + 1571) ]=v8("\235\10\131\251\195\205\8\177\226\216\196\10","\170\163\111\226\151");v0[86 + 130 ]=v8("\11\26\141\200\175\26\27\142\205\189\57\28\137\242\165\44\11\143","\202\88\110\226\166");v0[1979 -(1733 + 39) ]=v8("\250\227\48\190\175\240\12\225\242\35\183\167\243\63\221\242\52\191","\107\178\134\81\210\198\158");v0[544 -346 ]=v8("\153\250\207\214\185\229\232\204\177\239\207","\164\216\137\187");v0[1219 -(125 + 909) ]=v8("\87\80\69\11\40\254\1\24\81\23\105\40\227\82\125\80\0\36\62\238\29\77\80\17","\114\56\62\101\73\71\141");v0[2132 -(1096 + 852) ]=v8("\219\202\174\121\218\193\227\69\215\203\251\82\192","\60\180\164\142");v0[83 + 100 ]=v8("\89\38\31\29\43\91\245\79\43\80\45\43\74\184\89\58\31\27\42\81\244\82\39\72\54\54","\152\54\72\63\88\69\62");v0[258 -77 ]=v8("\16\231\177\198\71\205\170\193\11\234\170\217\9\253\229\193\21\174\132\193\34","\174\103\142\197");v0[175 + 5 ]=v8("\199\32\96\161\155\60","\156\168\78\64\224\212\121");v0[691 -(409 + 103) ]=v8("\212\89\113\24\181\94\228\112\99","\126\167\52\16\116\217");v0[413 -(46 + 190) ]=v8("\16\31\173\35\71\52\181\36\8\18\181\62\20\2\249\36\9\26\160","\75\103\118\217");v0[270 -(51 + 44) ]=v8("\132\254\114\127\247\180\152\176\61\79\184\176\130\228\58\29\219\168\132\252\54\82\239\169\152","\199\235\144\82\61\152");v0[50 + 124 ]=v8("\185\231\106\233\23\189\32\135\185\251\106\196\22\238\22\201\179\228\51\200\23\187\61\211","\167\214\137\74\171\120\206\83");v0[1490 -(1114 + 203) ]=v8("\3\192\30\80\113\100\224\167\3\192\82\107","\135\108\174\62\18\30\23\147");v0[898 -(228 + 498) ]=v8("\186\213\85\92\7\168","\126\219\185\34\61");v0[38 + 133 ]=v8("\38\207\108\170\38\210\63\200\38\211\108\159\32\213\36\200\10\206\35\132\45\206\59\134\58","\232\73\161\76");v0[94 + 76 ]=v8("\196\50\103\195\208\175\198\37\36\233\203\164\223\124\40\244\158\137\196\51\43\226\209\189\197\47","\202\171\92\71\134\190");v0[832 -(174 + 489) ]=v8("\21\179\159\63\153\33\181\132\59\221\13\173\133\36\153\13\168\203\22\214\39","\185\98\218\235\87");v0[432 -266 ]=v8("\175\206\214\6\14\107\159\231\196","\75\220\163\183\106\98");v0[2070 -(830 + 1075) ]=v8("\94\75\20\45\9\97\15\42\69\70\15\50\71\81","\69\41\34\96");v0[688 -(303 + 221) ]=v8("\149\89\221\224\15\67\53\197","\161\219\54\169\192\90\48\80");v0[1366 -(231 + 1038) ]=v8("\53\154\240\237\163\9\16\38\140\225\250\161\0\11\48\145\238\235\172\14","\84\121\223\177\191\237\76");v0[71 + 14 ]=v8("\152\81\93\17\54\70\197\102\153\72\85\24\62\81\212\119\151\94\84\9\61\83\223\103","\35\200\29\28\72\115\20\154");v0[1212 -(171 + 991) ]=v8("\217\91\162\75\249\89\179\71\240\104\132\98\201\100\130","\38\156\55\199");v0[189 -143 ]=v8("\99\209\51\241\69\118\241\249\74\226\2\200\100","\152\38\189\86\156\32\24\133");v0[109 -68 ]=v8("\142\40\21\59\118\171\239\170\40\47\18\118\163\254\165\55\25\32\118\182","\155\203\68\112\86\19\197");v0[92 -55 ]=v8("\117\26\39\31\251\94\2\35\30","\158\48\118\66\114");v0[27 + 6 ]=v8("\23\184\68\27\179\40\85","\38\84\215\41\118\220\70");v0[108 -77 ]=v8("\4\200\36\192\238\34\193","\156\67\173\74\165");v0[0 -0 ]=v8("\194\192\201\44\246\175\137\18\196\194","\126\177\163\187\69\134\219\167");local v181=...;local v182={};local v183=require;local function v184(v189,...) local v190=v182[v189];if  not v190 then return v183(v189,v181,...);end return v190(v181,...);end v182[v0[0 -0 ]]=function(...) local v191,v192=...;local v193=HeroDBC.DBC;local v194=HeroLib;local v195=HeroCache;local v196=v194.Unit;local v197=v196.Player;local v198=v196.Pet;local v199=v196.Target;local v200=v194.Spell;local v201=v194.MultiSpell;local v202=v194.Item;local v203=v196.MouseOver;local v204=HeroRotation();local v205=v204.Cast;local v206=v204.CastLeftNameplate;local v207=v204.AoEON;local v208=v204.CDsON;local v209=v204.Commons().Everyone.num;local v210=v204.Commons().Everyone.bool;local v211=GetTime;local v212=math.min;local v213=C_Timer.After;local v214=GetWeaponEnchantInfo;local v215;local v216=v200.Shaman.Elemental;local v217=v202.Shaman.Elemental;local v218=v204.GUISettingsGet();local v219={};local v220=v204.Commons().Everyone;local v221=v204.Commons().Shaman;local v222={[v0[95 -64 ]]=v218.General,[v0[1281 -(111 + 1137) ]]=v218.APL.Shaman.Commons,[v0[195 -(91 + 67) ]]=v218.APL.Shaman.Elemental,[v0[122 -81 ]]=v218.APL.Shaman.Elemental.Defensives,[v0[12 + 34 ]]=v218.APL.Shaman.Elemental_TTD,[v0[573 -(423 + 100) ]]=v218.APL.Shaman.Elemental_CDUSE};local v223,v224;local v225,v226;local v227,v228;local v229,v230;local v231,v232;local v233,v234;local v235,v236;local v237;local v238=1 + 99 + ((138 -88) * v209(v216.SwellingMaelstrom:IsAvailable())) + ((14 + 11) * v209(v216.PrimordialCapacity:IsAvailable())) ;local v239=11882 -(326 + 445) ;local v240=48488 -37377 ;local v241,v242;local v243,v244;local v245=v200(980938 -540625 );local v246;v221.ClusterTargets=0 -0 ;local v248=711 -(530 + 181) ;local function v249() local v278,v279=v197:GetTrinketData(v219);if ((v248<(886 -(614 + 267))) and ((v278.ID==(32 -(19 + 13))) or (v279.ID==(0 -0)) or ((v278.SpellID>(0 -0)) and  not v278.Usable) or ((v279.SpellID>(0 -0)) and  not v279.Usable))) then v248=v248 + 1 + 0 ;v213(8 -3 ,function() v249();end);return;end v223=v278.Object;v224=v279.Object;v225=v278.Spell;v227=v278.Range;v229=v278.CastTime;v226=v279.Spell;v228=v279.Range;v230=v279.CastTime;v231=v278.Cooldown;v232=v279.Cooldown;v233=v278.Blacklisted;v234=v279.Blacklisted;v235=v278.ID==v217.SpymastersWeb:ID() ;v236=v279.ID==v217.SpymastersWeb:ID() ;end v249();v194:RegisterForEvent(function() v248=0 -0 ;v249();end,v0[1897 -(1293 + 519) ]);v194:RegisterForEvent(function() v238=(204 -104) + ((130 -80) * v209(v216.SwellingMaelstrom:IsAvailable())) + ((47 -22) * v209(v216.PrimordialCapacity:IsAvailable())) ;v216.PrimordialWave:RegisterInFlightEffect(1410757 -1083595 );v216.PrimordialWave:RegisterInFlight();v216.LavaBurst:RegisterInFlight();end,v0[228 -131 ]);v216.PrimordialWave:RegisterInFlightEffect(173279 + 153883 );v216.PrimordialWave:RegisterInFlight();v216.LavaBurst:RegisterInFlight();local function v250() return (11 + 39) -(v211() -v221.LastRollingThunderTick) ;end local function v251(v292) local v293,v294;for v311,v312 in pairs(v292) do local v313=v312:DebuffRemains(v216.FlameShockDebuff);if ( not v293 or (v313<v293)) then v293=v313;v294=v312;end end return v293,v294;end local function v252(v295) return v295:DebuffRemains(v216.FlameShockDebuff);end local function v253(v296) return v296:DebuffRemains(v216.LightningRodDebuff);end local function v254(v297) return (v297:DebuffDown(v216.LightningRodDebuff) and v216.LightningRod:IsAvailable()) or (v237>(v238-(69 -39))) ;end local function v255(v298) return ((v298:DebuffRemains(v216.FlameShockDebuff)<(1 + 1)) or (v216.FlameShockDebuff:AuraActiveCount()==(0 + 0))) and ((v298:DebuffRemains(v216.FlameShockDebuff)<v216.PrimordialWave:CooldownRemains()) or  not v216.PrimordialWave:IsAvailable()) and ((v298:DebuffRemains(v216.FlameShockDebuff)<v216.LiquidMagmaTotem:CooldownRemains()) or  not v216.LiquidMagmaTotem:IsAvailable()) ;end local function v256(v299) return v299:DebuffRemains(v216.FlameShockDebuff)<(4 + 2) ;end local function v257(v300) return (v237>(v238-(1111 -(709 + 387)))) or (v300:DebuffRemains(v216.LightningRodDebuff)<v197:GCD()) or (v239<(1863 -(673 + 1185))) ;end local function v258(v301) return v301:DebuffRefreshable(v216.FlameShockDebuff);end local function v259(v302) return v302:DebuffUp(v216.FlameShockDebuff);end local function v260(v303) return v303:DebuffRemains(v216.FlameShockDebuff)>(5 -3) ;end local function v261(v304) return v304:NPCID()==(656881 -452321) ;end local function v262(v305) return v305:CastSpellID()==(672623 -263818) ;end local function v263() return (v203:Exists() or  not v222.Elemental.CursorCheck) and  not v197:IsCameraBusy() ;end local function v264() if v220.TargetIsValid() then local v314=v199:MinDistance() or (4 + 1) ;local v315=v199:MaxDistance() or (30 + 10) ;v314=math.max(v314-(10 -2) ,2 + 3 );v315=math.min(v315 + (15 -7) ,78 -38 );local v316=v197:GetEnemiesInRange(v314);local v317=v197:GetEnemiesInRange(v315);local v318= #v317;if ((v315-v314)>(1896 -(446 + 1434))) then v318=v318-#v316 ;end v318=math.max(v318,1284 -(1040 + 243) );return v318;else return  #(v197:GetEnemiesInRange(119 -79 ));end end local v265;local v266;local function v267(v306) return (v266 and v222.Elemental_TTD.IgnoreWhenBoss) or v220.Buggedmobs[v199:NPCID()] or (v220.ISSolo() and v222.Elemental_TTD.IgnoreWhenSolo) or (v306==(1847 -(559 + 1288))) or ((v240>=v306) and (v240<(9708 -(609 + 1322)))) ;end local function v268(v307) return (v307~=v0[618 -(13 + 441) ]) and ((((v307==v0[616 -451 ]) or ((v307==v0[434 -268 ]) and v222.Elemental_CDUSE.smallcdswithCooldowns) or (v307==v0[841 -672 ]) or (v307==v0[7 + 163 ]) or (v307==v0[620 -449 ])) and v208()) or (v307==v0[62 + 110 ]) or (((v307==v0[76 + 97 ]) or (v307==v0[516 -342 ]) or (v307==v0[96 + 79 ])) and (v266 or v199:IsDummy())) or ((v307==v0[325 -148 ]) and v197:BloodlustUp()) or ((v307==v0[119 + 60 ]) and Smallcds) or (((v307==v0[101 + 79 ]) or (v307==v0[131 + 50 ])) and (v221.ClusterTargets>=(2 + 0))) or (((v307==v0[180 + 3 ]) or (v307==v0[617 -(153 + 280) ]) or (v307==v0[534 -349 ])) and (v221.ClusterTargets>=v222.Elemental_CDUSE.Enemycount))) ;end local v269=nil;local function v270() if v197:IsMoving() then if  not v269 then v269=v211();end return v211() -v269 ;else if v269 then v269=nil;end return 0 + 0 ;end end local function v271() if (v216.AstralShift:IsCastable() and v197:AffectingCombat() and (v197:HealthPercentage()<=v222.Elemental.Defensives.AstralShiftHP)) then if v205(v216.AstralShift) then return v0[79 + 119 ];end end if (v216.HealingStreamTotem:IsCastable() and v197:AffectingCombat() and (v197:HealthPercentage()<=v222.Elemental.Defensives.HealingStreamTotemHP)) then if v205(v216.HealingStreamTotem) then return v0[109 + 98 ];end end if (v216.StoneBulkwarkTotem:IsCastable() and v197:AffectingCombat() and (v197:HealthPercentage()<=v222.Elemental.Defensives.StoneBulkwarkTotemHP)) then if v205(v216.StoneBulkwarkTotem) then return v0[197 + 19 ];end end if (v216.HealingSurge:IsReady() and (v197:BuffUp(v216.SpiritwalkersGraceBuff) or  not v197:IsMoving()) and (v197:HealthPercentage()<=v222.Elemental.Defensives.HealingSurgeHP)) then if v205(v216.HealingSurge) then return v0[165 + 62 ];end end if (v216.EarthElemental:IsCastable() and v197:AffectingCombat() and (v197:HealthPercentage()<=v222.Elemental.Defensives.EarthElemental) and IsEarthElemental) then if v205(v216.EarthElemental) then return v0[358 -122 ];end end if (v216.AncestralGuidance:IsCastable() and v197:AffectingCombat() and (v222.Elemental.Defensives.AncestralGuidanceCount~=(0 + 0)) and ( not v222.Elemental.Defensives.AncestralGuidanceHP~=(667 -(89 + 578))) and v220.AoELogicWithCount(v222.Elemental.Defensives.AncestralGuidanceHP,v222.Elemental.Defensives.AncestralGuidanceCount,nil,v265)) then if v205(v216.AncestralGuidance) then return v0[182 + 72 ];end end end local function v272() if (v216.Stormkeeper:IsViable() and IsStormkeeper) then if v205(v216.Stormkeeper,true) then return v0[536 -278 ];end end if (v216.StormElemental:IsReady() and IsStormElemental and  not v221.StormElemental.GreaterActive) then if v205(v216.StormElemental,true) then return v0[1313 -(572 + 477) ];end end if (v216.Stormkeeper:IsViable() and IsStormkeeper and  not v197:StormkeeperUp()) then if v205(v216.Stormkeeper,true) then return v0[37 + 232 ];end end if (v216.PrimordialWave:IsViable() and IsPrimordialWave) then if v205(v216.PrimordialWave) then return v0[164 + 109 ];end end if (v216.AncestralSwiftness:IsReady() and v197:BuffDown(v216.AncestralSwiftness)) then if v205(v216.AncestralSwiftness,true) then return v0[34 + 245 ];end end if v216.LavaBurst:IsViable() then if v205(v216.LavaBurst) then return v0[369 -(84 + 2) ];end end end local function v273() if (v216.FireElemental:IsReady() and IsFireElemental and  not v221.FireElemental.GreaterActive) then if v205(v216.FireElemental,true) then return v0[475 -186 ];end end if (v216.StormElemental:IsReady() and IsStormElemental and  not v221.StormElemental.GreaterActive) then if v205(v216.StormElemental,true) then return v0[213 + 82 ];end end if (v216.Stormkeeper:IsViable() and IsStormkeeper and  not v197:StormkeeperUp()) then if v205(v216.Stormkeeper,true) then return v0[1142 -(497 + 345) ];end end if (v216.TotemicRecall:IsCastable() and (v216.LiquidMagmaTotem:CooldownRemains()>(1 + 14)) and ((v216.FlameShockDebuff:AuraActiveCount()<(v212(v221.ClusterTargets,2 + 4 ) -(1335 -(605 + 728)))) or v216.FireElemental:IsAvailable())) then if v205(v216.TotemicRecall,true) then return v0[222 + 89 ];end end if (v216.LiquidMagmaTotem:IsReady() and IsLiquidMagmaTotem) then if v205(v216.LiquidMagmaTotem,true) then return v0[700 -385 ];end end if (v216.PrimordialWave:IsViable() and IsPrimordialWave and (v197:BuffUp(v216.SurgeofPowerBuff) or  not v216.SurgeofPower:IsAvailable() or (v237<((3 + 57) -((18 -13) * v209(v216.EyeoftheStorm:IsAvailable())))))) then if v220.CastTargetIf(v216.PrimordialWave,v244,v0[294 + 32 ],v252,nil,110 -70 ) then return v0[247 + 80 ];end end if (v216.AncestralSwiftness:IsReady() and v197:BuffDown(v216.AncestralSwiftness)) then if v205(v216.AncestralSwiftness,true) then return v0[822 -(457 + 32) ];end end if v216.FlameShock:IsCastable() then local v319,v320=v251(v244);if v320:DebuffRefreshable(v216.FlameShockDebuff) then if (v197:BuffUp(v216.SurgeofPowerBuff) and v216.LightningRod:IsAvailable() and (v319<(v320:TimeToDie() -(7 + 9))) and (v216.FlameShockDebuff:AuraActiveCount()<v212(v221.ClusterTargets,1408 -(832 + 570) )) and  not v216.LiquidMagmaTotem:IsAvailable()) then if (v199:GUID()==v320:GUID()) then if v205(v216.FlameShock) then return v0[331 + 20 ];end else if ((v203:GUID()==v320:GUID()) and v203:IsSpellInRange(v216.FlameShock)) then if v204.CastTarget(v216.FlameShock,v204.TName().MOUSEOVER) then return v0[94 + 266 ];end end if v206(v320,v216.FlameShock) then return v0[1280 -918 ];end end end if (v197:BuffUp(v216.PrimordialWaveBuff) and v197:StormkeeperUp() and (v237<(((29 + 31) -((801 -(588 + 208)) * v209(v216.EyeoftheStorm:IsAvailable()))) -(((21 -13) + ((1802 -(884 + 916)) * v209(v216.FlowofPower:IsAvailable()))) * v216.FlameShockDebuff:AuraActiveCount()))) and (v221.ClusterTargets>=(12 -6)) and (v216.FlameShockDebuff:AuraActiveCount()<(4 + 2))) then if (v199:GUID()==v320:GUID()) then if v205(v216.FlameShock) then return v0[1031 -(232 + 421) ];end else if ((v203:GUID()==v320:GUID()) and v203:IsSpellInRange(v216.FlameShock)) then if v204.CastTarget(v216.FlameShock,v204.TName().MOUSEOVER) then return v0[2276 -(1569 + 320) ];end end if v206(v320,v216.FlameShock) then return v0[96 + 293 ];end end end if (v216.FireElemental:IsAvailable() and (v197:BuffUp(v216.SurgeofPowerBuff) or  not v216.SurgeofPower:IsAvailable()) and (v320:DebuffRemains(v216.FlameShockDebuff)<(v320:TimeToDie() -(1 + 4))) and ((v216.FlameShockDebuff:AuraActiveCount()<(20 -14)) or (v320:DebuffRemains(v216.FlameShockDebuff)>(605 -(316 + 289))))) then if (v199:GUID()==v320:GUID()) then if v205(v216.FlameShock) then return v0[1062 -656 ];end else if ((v203:GUID()==v320:GUID()) and v203:IsSpellInRange(v216.FlameShock)) then if v204.CastTarget(v216.FlameShock,v204.TName().MOUSEOVER) then return v0[20 + 395 ];end end if v206(v320,v216.FlameShock) then return v0[1870 -(666 + 787) ];end end end end end if (v216.TempestAbility:IsReady() and UseTempest and v267(v222.Elemental_TTD.TempestTTD) and (v197:BuffUp(v216.SpiritwalkersGraceBuff) or  not v197:IsMoving()) and  not v197:IsCasting(v216.TempestAbility) and (v197:BuffDown(v216.ArcDischargeBuff))) then if v205(v216.LightningBolt) then return v0[855 -(360 + 65) ];end end if (v216.Ascendance:IsCastable() and IsAscendance) then if v205(v216.Ascendance,true) then return v0[406 + 28 ];end end if (v216.LavaBeam:IsViable() and (v221.ClusterTargets>=(260 -(79 + 175))) and v197:BuffUp(v216.SurgeofPowerBuff) and (v197:BuffRemains(v216.AscendanceBuff)>v216.LavaBeam:CastTime())) then if v205(v216.LavaBeam) then return v0[701 -256 ];end end if (v216.ChainLightning:IsViable() and (v221.ClusterTargets>=(5 + 1)) and v197:BuffUp(v216.SurgeofPowerBuff)) then if v205(v216.ChainLightning) then return v0[1385 -933 ];end end if (v216.LavaBurst:IsViable() and v197:BuffUp(v216.PrimordialWaveBuff) and v197:StormkeeperUp() and (v237<((115 -55) -((904 -(503 + 396)) * v209(v216.EyeoftheStorm:IsAvailable())))) and (v221.ClusterTargets>=(187 -(92 + 89))) and v216.SurgeofPower:IsAvailable()) then if v220.CastCycle(v216.LavaBurst,v244,v260,77 -37 ) then return v0[239 + 226 ];end end if (v216.LavaBurst:IsViable() and v197:BuffUp(v216.PrimordialWaveBuff) and ((v197:BuffRemains(v216.PrimordialWaveBuff)<(3 + 1)) or v197:BuffUp(v216.LavaSurgeBuff))) then if v220.CastCycle(v216.LavaBurst,v244,v260,156 -116 ) then return v0[66 + 410 ];end end if (v216.LavaBurst:IsViable() and v197:BuffUp(v216.LavaSurgeBuff) and  not v197:MotEUp() and v216.MasteroftheElements:IsAvailable() and v216.FireElemental:IsAvailable()) then if v220.CastCycle(v216.LavaBurst,v244,v259,91 -51 ) then return v0[426 + 62 ];end end if (v216.Earthquake:IsReady() and UseSpender and v199:IsInRange(20 + 20 ) and Cursorcheck and (v216.PrimordialWave:CooldownRemains()<v197:GCD()) and v216.SurgeofPower:IsAvailable() and (v197:BuffUp(v216.EchoesofGreatSunderingBuff) or  not v216.EchoesofGreatSundering:IsAvailable())) then if v205(v216.Earthquakecast) then return v0[1528 -1026 ];end end if (v216.Earthquake:IsReady() and UseSpender and v199:IsInRange(5 + 35 ) and Cursorcheck and (((v216.LightningRodDebuff:AuraActiveCount()==(0 -0)) and v216.LightningRod:IsAvailable()) or (v237>(v238-(1274 -(485 + 759))))) and (v197:BuffUp(v216.EchoesofGreatSunderingBuff) or  not v216.EchoesofGreatSundering:IsAvailable())) then if v205(v216.Earthquakecast) then return v0[1191 -676 ];end end if (v216.Earthquake:IsReady() and UseSpender and v199:IsInRange(1229 -(442 + 747) ) and Cursorcheck and v197:StormkeeperUp() and (v221.ClusterTargets>=(1141 -(832 + 303))) and v216.SurgeofPower:IsAvailable() and (v197:BuffUp(v216.EchoesofGreatSunderingBuff) or  not v216.EchoesofGreatSundering:IsAvailable())) then if v205(v216.Earthquakecast) then return v0[1474 -(88 + 858) ];end end if (v216.Earthquake:IsReady() and UseSpender and v199:IsInRange(13 + 27 ) and Cursorcheck and (v197:MotEUp() or (v221.ClusterTargets>=(5 + 0))) and (v197:BuffUp(v216.FusionofElementsNature) or (v197:BuffRemains(v216.AscendanceBuff)>(1 + 8)) or v197:BuffDown(v216.AscendanceBuff)) and (v197:BuffUp(v216.EchoesofGreatSunderingBuff) or  not v216.EchoesofGreatSundering:IsAvailable()) and v216.FireElemental:IsAvailable()) then if v205(v216.Earthquakecast) then return v0[1336 -(766 + 23) ];end end if (v216.ElementalBlast:IsViable() and UseSpender and v216.EchoesofGreatSundering:IsAvailable() and v197:BuffDown(v216.EchoesofGreatSunderingBuff) and ((v216.LightningRodDebuff:AuraActiveCount()==(0 -0)) or (v237>(v238-(41 -11))))) then if v205(v216.ElementalBlast) then return v0[1467 -910 ];end end if (v216.EarthShock:IsReady() and UseSpender and v216.EchoesofGreatSundering:IsAvailable() and v197:BuffDown(v216.EchoesofGreatSunderingBuff) and ((v216.LightningRodDebuff:AuraActiveCount()==(0 -0)) or (v237>(v238-(1103 -(1036 + 37)))))) then if v205(v216.EarthShock) then return v0[402 + 165 ];end end if (v216.Icefury:IsViable() and v216.FusionofElements:IsAvailable() and  not (v197:BuffUp(v216.FusionofElementsNature) or v197:BuffUp(v216.FusionofElementsFire))) then if v205(v216.Icefury) then return v0[1123 -546 ];end end if (v216.LavaBurst:IsViable() and v216.MasteroftheElements:IsAvailable() and  not v197:MotEUp() and v197:BuffDown(v216.AscendanceBuff) and v216.FireElemental:IsAvailable()) then if v220.CastCycle(v216.LavaBurst,v244,v260,32 + 8 ) then return v0[2069 -(641 + 839) ];end end if (v216.LavaBeam:IsViable() and v197:StormkeeperUp() and (v197:BuffUp(v216.SurgeofPowerBuff) or (v221.ClusterTargets<(919 -(910 + 3))))) then if v205(v216.LavaBeam) then return v0[1521 -924 ];end end if (v216.ChainLightning:IsViable() and v197:StormkeeperUp() and (v197:BuffUp(v216.SurgeofPowerBuff) or (v221.ClusterTargets<(1690 -(1466 + 218))))) then if v205(v216.ChainLightning) then return v0[279 + 326 ];end end if (v216.LavaBeam:IsViable() and v197:PotMUp() and (v197:BuffRemains(v216.AscendanceBuff)>v216.LavaBeam:CastTime()) and  not v197:StormkeeperUp()) then if v205(v216.LavaBeam) then return v0[1763 -(556 + 592) ];end end if (v216.ChainLightning:IsViable() and v197:PotMUp() and  not v197:StormkeeperUp()) then if v205(v216.ChainLightning) then return v0[221 + 400 ];end end if (v216.LavaBeam:IsViable() and ((v197:MotEUp() and (v221.ClusterTargets>=(812 -(329 + 479)))) or (v221.ClusterTargets>=(859 -(174 + 680)))) and (v197:BuffRemains(v216.AscendanceBuff)>v216.LavaBeam:CastTime()) and  not v197:StormkeeperUp()) then if v205(v216.LavaBeam) then return v0[2174 -1541 ];end end if (v216.LavaBurst:IsViable() and (v216.DeeplyRootedElements:IsAvailable())) then if v220.CastCycle(v216.LavaBurst,v244,v260,82 -42 ) then return v0[457 + 183 ];end end if (v216.LavaBeam:IsViable() and (v197:BuffRemains(v216.AscendanceBuff)>v216.LavaBeam:CastTime())) then if v205(v216.LavaBeam) then return v0[1387 -(396 + 343) ];end end if v216.ChainLightning:IsViable() then if v205(v216.ChainLightning) then return v0[58 + 594 ];end end if (v216.FlameShock:IsCastable() and v197:IsMoving()) then if v220.CastCycle(v216.FlameShock,v244,v258,1517 -(29 + 1448) ) then return v0[2047 -(135 + 1254) ];end end if (v216.FrostShock:IsCastable() and v197:IsMoving()) then if v205(v216.FrostShock) then return v0[2497 -1834 ];end end end local function v274() if (v216.FireElemental:IsCastable() and IsFireElemental and  not v221.FireElemental.GreaterActive) then if v205(v216.FireElemental,true) then return v0[3123 -2454 ];end end if (v216.StormElemental:IsCastable() and IsStormElemental and  not v221.StormElemental.GreaterActive) then if v205(v216.StormElemental,true) then return v0[450 + 225 ];end end if (v216.Stormkeeper:IsViable() and IsStormkeeper and v197:BuffDown(v216.AscendanceBuff) and  not v197:StormkeeperUp()) then if v205(v216.Stormkeeper,true) then return v0[2209 -(389 + 1138) ];end end if (v216.TotemicRecall:IsCastable() and (v216.LiquidMagmaTotem:CooldownRemains()>(589 -(102 + 472))) and (v221.ClusterTargets>(1 + 0)) and v216.FireElemental:IsAvailable()) then if v205(v216.TotemicRecall,true) then return v0[384 + 307 ];end end if (v216.LiquidMagmaTotem:IsCastable() and v199:IsInRange(38 + 2 ) and IsLiquidMagmaTotem and v197:BuffDown(v216.AscendanceBuff) and (v216.FireElemental:IsAvailable() or (v221.ClusterTargets>(1546 -(320 + 1225))))) then if v205(v216.LiquidMagmaTotem,true) then return v0[1247 -546 ];end end if (v216.PrimordialWave:IsViable() and IsPrimordialWave and ((v221.ClusterTargets==(1 + 0)) or v197:BuffUp(v216.SurgeofPowerBuff) or  not v216.SurgeofPower:IsAvailable() or (v237<((1524 -(157 + 1307)) -((1864 -(821 + 1038)) * v209(v216.EyeoftheStorm:IsAvailable())))) or v216.LiquidMagmaTotem:IsAvailable())) then if v220.CastTargetIf(v216.PrimordialWave,v244,v0[1783 -1068 ],v252,nil,5 + 35 ) then return v0[1271 -555 ];end end if (v216.AncestralSwiftness:IsReady() and v197:BuffDown(v216.AncestralSwiftness) and (v197:BuffDown(v216.PrimordialWaveBuff) or  not v197:StormkeeperUp() or  not v216.ElementalBlast:IsAvailable())) then if v205(v216.AncestralSwiftness,true) then return v0[271 + 456 ];end end if (v216.FlameShock:IsCastable() and (v221.ClusterTargets==(2 -1)) and ((v199:DebuffRemains(v216.FlameShockDebuff)<(1028 -(834 + 192))) or (v216.FlameShockDebuff:AuraActiveCount()==(0 + 0))) and ((v199:DebuffRemains(v216.FlameShockDebuff)<v216.PrimordialWave:CooldownRemains()) or  not v216.PrimordialWave:IsAvailable()) and ((v199:DebuffRemains(v216.FlameShockDebuff)<v216.LiquidMagmaTotem:CooldownRemains()) or  not v216.LiquidMagmaTotem:IsAvailable()) and v197:BuffDown(v216.SurgeofPowerBuff) and v216.FireElemental:IsAvailable()) then if v205(v216.FlameShock) then return v0[194 + 558 ];end end if (v216.FlameShock:IsCastable() and (v216.FlameShockDebuff:AuraActiveCount()<v221.ClusterTargets) and (v221.ClusterTargets>(1 + 0)) and (v216.DeeplyRootedElements:IsAvailable() or v216.Ascendance:IsAvailable() or v216.PrimordialWave:IsAvailable() or v216.SearingFlames:IsAvailable() or v216.MagmaChamber:IsAvailable()) and ((v197:BuffDown(v216.SurgeofPowerBuff) and v197:StormkeeperUp()) or  not v216.SurgeofPower:IsAvailable() or (v216.Ascendance:CooldownUp() and v216.Ascendance:IsAvailable())) and  not v216.LiquidMagmaTotem:IsAvailable()) then if v220.CastTargetIf(v216.FlameShock,v244,v0[1210 -428 ],v252,nil,344 -(300 + 4) ) then return v0[210 + 573 ];end end if (v216.FlameShock:IsCastable() and (v221.ClusterTargets>(2 -1)) and (v216.DeeplyRootedElements:IsAvailable() or v216.Ascendance:IsAvailable() or v216.PrimordialWave:IsAvailable() or v216.SearingFlames:IsAvailable() or v216.MagmaChamber:IsAvailable()) and ((v197:BuffUp(v216.SurgeofPowerBuff) and  not v197:StormkeeperUp()) or  not v216.SurgeofPower:IsAvailable()) and v216.FireElemental:IsAvailable()) then if v220.CastTargetIf(v216.FlameShock,v244,v0[1168 -(112 + 250) ],v252,v256,16 + 24 ) then return v0[2021 -1214 ];end end if (v216.TempestAbility:IsReady() and UseTempest and v267(v222.Elemental_TTD.TempestTTD) and (v197:BuffUp(v216.SpiritwalkersGraceBuff) or  not v197:IsMoving()) and  not v197:IsCasting(v216.TempestAbility)) then if v205(v216.LightningBolt) then return v0[469 + 349 ];end end if (v216.LightningBolt:IsViable() and v197:StormkeeperUp() and v197:BuffUp(v216.SurgeofPowerBuff)) then if v205(v216.LightningBolt) then return v0[427 + 398 ];end end if (v216.LavaBurst:IsViable() and v197:StormkeeperUp() and  not v197:MotEUp() and  not v216.SurgeofPower:IsAvailable() and v216.MasteroftheElements:IsAvailable()) then if v220.CastCycle(v216.LavaBurst,v244,v260,30 + 10 ) then return v0[415 + 421 ];end end if (v216.LightningBolt:IsViable() and v197:StormkeeperUp() and  not v216.SurgeofPower:IsAvailable() and (v197:MotEUp() or  not v216.MasteroftheElements:IsAvailable())) then if v205(v216.LightningBolt) then return v0[629 + 217 ];end end if (v216.LightningBolt:IsViable() and v197:BuffUp(v216.SurgeofPowerBuff) and v197:BuffDown(v216.AscendanceBuff) and v216.EchoChamber:IsAvailable()) then if v205(v216.LightningBolt) then return v0[2270 -(1001 + 413) ];end end if (v216.Ascendance:IsCastable() and IsAscendance and (v216.LavaBurst:ChargesFractional()<(2 -1))) then if v205(v216.Ascendance,true) then return v0[1744 -(244 + 638) ];end end if (v216.LavaBurst:IsViable() and v197:BuffUp(v216.LavaSurgeBuff) and v216.FireElemental:IsAvailable()) then if v220.CastCycle(v216.LavaBurst,v244,v259,733 -(627 + 66) ) then return v0[2595 -1724 ];end end if (v216.LavaBurst:IsViable() and (v197:BuffUp(v216.PrimordialWaveBuff))) then if v220.CastCycle(v216.LavaBurst,v244,v260,642 -(512 + 90) ) then return v0[2784 -(1665 + 241) ];end end if (v216.Earthquake:IsReady() and UseSpender and v199:IsInRange(757 -(373 + 344) ) and Cursorcheck and v197:MotEUp() and (v197:BuffUp(v216.EchoesofGreatSunderingBuff) or ((v221.ClusterTargets>(1 + 0)) and  not v216.EchoesofGreatSundering:IsAvailable() and  not v216.ElementalBlast:IsAvailable())) and (v197:BuffUp(v216.FusionofElementsNature) or (v237>(v238-(4 + 11))) or (v197:BuffRemains(v216.AscendanceBuff)>(23 -14)) or v197:BuffDown(v216.AscendanceBuff)) and v216.FireElemental:IsAvailable()) then if v205(v216.Earthquakecast) then return v0[1520 -621 ];end end if (v216.ElementalBlast:IsViable() and UseSpender and v197:MotEUp() and (v197:BuffUp(v216.FusionofElementsNature) or v197:BuffUp(v216.FusionofElementsFire) or (v237>(v238-(1114 -(35 + 1064)))) or (v197:BuffRemains(v216.AscendanceBuff)>(5 + 1)) or v197:BuffDown(v216.AscendanceBuff)) and v216.FireElemental:IsAvailable()) then if v205(v216.ElementalBlast) then return v0[1955 -1041 ];end end if (v216.EarthShock:IsReady() and UseSpender and v197:MotEUp() and (v197:BuffUp(v216.FusionofElementsNature) or (v237>(v238-(1 + 14))) or (v197:BuffRemains(v216.AscendanceBuff)>(1245 -(298 + 938))) or v197:BuffDown(v216.AscendanceBuff)) and v216.FireElemental:IsAvailable()) then if v205(v216.EarthShock) then return v0[2186 -(233 + 1026) ];end end if (v216.Earthquake:IsReady() and UseSpender and v199:IsInRange(1706 -(636 + 1030) ) and Cursorcheck and (v197:BuffUp(v216.EchoesofGreatSunderingBuff) or ((v221.ClusterTargets>(1 + 0)) and  not v216.EchoesofGreatSundering:IsAvailable() and  not v216.ElementalBlast:IsAvailable())) and (v197:StormkeeperUp() or ((v216.PrimordialWave:CooldownRemains()<v197:GCD()) and v216.SurgeofPower:IsAvailable() and  not v216.LiquidMagmaTotem:IsAvailable())) and v216.StormElemental:IsAvailable()) then if v205(v216.Earthquakecast) then return v0[927 + 22 ];end end if (v216.ElementalBlast:IsViable() and UseSpender and v197:StormkeeperUp() and v216.StormElemental:IsAvailable()) then if v205(v216.ElementalBlast) then return v0[284 + 672 ];end end if (v216.EarthShock:IsReady() and UseSpender and (((v197:MotEUp() or (v216.LightningRodDebuff:AuraActiveCount()==(0 + 0))) and (v216.Stormkeeper:CooldownRemains()>(231 -(55 + 166))) and ((v250()>(1 + 4)) or  not v216.RollingThunder:IsAvailable())) or v197:StormkeeperUp()) and v216.StormElemental:IsAvailable() and (v221.ClusterTargets==(1 + 0))) then if v205(v216.EarthShock) then return v0[3708 -2737 ];end end if (v216.EarthShock:IsReady() and UseSpender and (((v216.PrimordialWave:CooldownRemains()<v197:GCD()) and v216.SurgeofPower:IsAvailable() and  not v216.LiquidMagmaTotem:IsAvailable()) or v197:StormkeeperUp()) and v216.StormElemental:IsAvailable() and (v221.ClusterTargets>(298 -(36 + 261))) and v216.EchoesofGreatSundering:IsAvailable() and v197:BuffDown(v216.EchoesofGreatSunderingBuff)) then if v205(v216.EarthShock) then return v0[1731 -741 ];end end if (v216.Icefury:IsViable() and  not (v197:BuffUp(v216.FusionofElementsNature) or v197:BuffUp(v216.FusionofElementsFire)) and (v197:BuffStack(v216.IcefuryBuff)==(1370 -(34 + 1334))) and (v216.FusionofElements:IsAvailable() or v197:BuffDown(v216.AscendanceBuff))) then if v205(v216.Icefury) then return v0[386 + 618 ];end end if (v216.LavaBurst:IsViable() and (v197:BuffUp(v216.AscendanceBuff))) then if v220.CastCycle(v216.LavaBurst,v244,v260,32 + 8 ) then return v0[2294 -(1035 + 248) ];end end if (v216.LavaBurst:IsViable() and v216.MasteroftheElements:IsAvailable() and  not v197:MotEUp() and v216.FireElemental:IsAvailable()) then if v220.CastCycle(v216.LavaBurst,v244,v260,61 -(20 + 1) ) then return v0[532 + 489 ];end end if (v216.LavaBurst:IsViable() and v197:StormkeeperUp() and v216.ElementalReverb:IsAvailable() and v216.EarthShock:IsAvailable() and (v194.CombatTime()<(329 -(134 + 185)))) then if v220.CastCycle(v216.LavaBurst,v244,v260,1173 -(549 + 584) ) then return v0[1717 -(314 + 371) ];end end if (v216.Earthquake:IsReady() and UseSpender and Cursorcheck and (v197:BuffUp(v216.EchoesofGreatSunderingBuff) or ((v221.ClusterTargets>(3 -2)) and  not v216.EchoesofGreatSundering:IsAvailable() and  not v216.ElementalBlast:IsAvailable())) and ((v237>(v238-(1003 -(478 + 490)))) or (v239<(3 + 2)))) then if v205(v216.Earthquakecast) then return v0[2215 -(786 + 386) ];end end if (v216.ElementalBlast:IsViable() and UseSpender and ((v237>(v238-(48 -33))) or (v239<(1384 -(1055 + 324))))) then if v205(v216.ElementalBlast) then return v0[2387 -(1093 + 247) ];end end if (v216.EarthShock:IsReady() and UseSpender and ((v237>(v238-(14 + 1))) or (v239<(1 + 4)))) then if v205(v216.EarthShock) then return v0[4172 -3121 ];end end if (v216.LightningBolt:IsViable() and (v197:BuffUp(v216.SurgeofPowerBuff))) then if v205(v216.LightningBolt) then return v0[3587 -2530 ];end end if (v216.Icefury:IsViable() and  not (v197:BuffUp(v216.FusionofElementsNature) or v197:BuffUp(v216.FusionofElementsFire))) then if v205(v216.Icefury) then return v0[3030 -1965 ];end end if (v216.FrostShock:IsCastable() and v197:IcefuryUp() and ((v221.ClusterTargets==(2 -1)) or (v197:StormkeeperUp() and v216.SurgeofPower:IsAvailable()))) then if v205(v216.FrostShock) then return v0[383 + 691 ];end end if (v216.ChainLightning:IsViable() and v197:PotMUp() and (v221.ClusterTargets>(3 -2)) and  not v197:StormkeeperUp()) then if v205(v216.ChainLightning) then return v0[3725 -2644 ];end end if (v216.LightningBolt:IsViable() and v197:PotMUp() and  not v197:StormkeeperUp()) then if v205(v216.LightningBolt) then return v0[820 + 267 ];end end if (v216.LavaBurst:IsViable() and (v216.DeeplyRootedElements:IsAvailable())) then if v220.CastCycle(v216.LavaBurst,v244,v260,102 -62 ) then return v0[1782 -(364 + 324) ];end end if (v216.ChainLightning:IsViable() and (v221.ClusterTargets>(2 -1)) and  not v197:StormkeeperUp()) then if v205(v216.ChainLightning) then return v0[2639 -1539 ];end end if v216.LightningBolt:IsViable() then if v205(v216.LightningBolt) then return v0[366 + 738 ];end end if (v216.FlameShock:IsCastable() and (v197:IsMoving())) then if v220.CastCycle(v216.FlameShock,v244,v258,167 -127 ) then return v0[1777 -667 ];end end if v216.FlameShock:IsCastable() then if v205(v216.FlameShock) then return v0[3383 -2269 ];end end if v216.FrostShock:IsCastable() then if v205(v216.FrostShock) then return v0[2386 -(1249 + 19) ];end end end local function v275() if v220.ShouldStopCastUpdate() then v204.CastMacro(6 + 0 ,true);return v0[4363 -3242 ];end InterruptToggle=v204.ToggleIconFrame:GetToggle(1087 -(686 + 400) );DispelToggle=v204.ToggleIconFrame:GetToggle(2 + 0 );Smallcds=v204.ToggleIconFrame:GetToggle(232 -(73 + 156) );UseSpender=v204.ToggleIconFrame:GetToggle(1 + 3 );UseTempest=v204.ToggleIconFrame:GetToggle(816 -(721 + 90) );v270();local v308= not v197:AffectingCombat() or  not v199:AffectingCombat() or v199:IsDummy() ;v243=v197:GetEnemiesInRange(1 + 39 );EnemiesRangeOOCCount=v264() or  #v243 ;v265=v220.UnitsinRange(v216.HealingSurge);v244=v199:GetEnemiesInSplashRange(32 -22 );if v207() then v221.ClusterTargets=EnemiesRangeOOCCount;else v221.ClusterTargets=471 -(224 + 246) ;end if (v222.Elemental.ForceAOE and v207()) then v221.ClusterTargets=159 -60 ;end if (v216.PoisonCleansingTotem:IsAvailable() and v216.PoisonCleansingTotem:IsReady()) then v246=v220.DebuffCount(v265,v245);else v246=0 -0 ;end Cursorcheck=(v263() and v216.Earthquake1:IsAvailable()) or v216.Earthquake2:IsAvailable() ;IsRacials=v267(v222.Elemental_TTD.RacialsTTD) and v268(v222.Elemental_CDUSE.Racials) ;IsPotions=v267(v222.Elemental_TTD.PotionsTTD) and (v222.Elemental_CDUSE.Potionswhensolo or ( not v222.Elemental_CDUSE.Potionswhensolo and  not v220.ISSolo())) and v268(v222.Elemental_CDUSE.Potions) ;IsTrinket1=v267(v222.Elemental_TTD.TrinketsTTD) and v268(v222.Elemental_CDUSE.Trinket1) ;IsTrinket2=v267(v222.Elemental_TTD.TrinketsTTD) and v268(v222.Elemental_CDUSE.Trinket2) ;IsAscendance=v267(v222.Elemental_TTD.AscendanceTTD) and v268(v222.Elemental_CDUSE.Ascendance) ;IsNaturesSwiftness=v268(v222.Elemental_CDUSE.NaturesSwiftness);IsEarthElemental=v268(v222.Elemental_CDUSE.EarthElemental);IsFireElemental=v267(v222.Elemental_TTD.FireElementalTTD) and v268(v222.Elemental_CDUSE.FireElemental) ;IsStormElemental=v267(v222.Elemental_TTD.FireElementalTTD) and v268(v222.Elemental_CDUSE.StormElemental) ;IsStormkeeper=v267(v222.Elemental_TTD.StormkeeperTTD) and v268(v222.Elemental_CDUSE.Stormkeeper) ;IsLiquidMagmaTotem=v263() and v267(v222.Elemental_TTD.LiquidMagmaTotemTTD) and v268(v222.Elemental_CDUSE.LiquidMagmaTotem) ;IsPrimordialWave=v267(v222.Elemental_TTD.PrimordialWaveTTD) and v268(v222.Elemental_CDUSE.PrimordialWave) ;if (v220.TargetIsValid() or v197:AffectingCombat()) then TargetinRange=v199:IsInRange(8 + 32 );TargetinkickRange=v199:IsSpellInRange(v216.WindShear);v239=v194.BossFightRemains();v266=true;v240=v239;if (v240==(265 + 10846)) then v266=false;v240=v194.FightRemains(v244,false);end v237=v197:MaelstromP();end if ((v222.Commons.AutoWolf==v0[891 + 321 ]) or ((v222.Commons.AutoWolf==v0[2415 -1200 ]) and v197:AffectingCombat()) or ((v222.Commons.AutoWolf==v0[4056 -2837 ]) and  not v197:AffectingCombat())) then if (v197:IsMoving() and  not v197:IsMounted() and v197:BuffDown(v216.GhostWolf) and  not v197:AffectingCombat()) then v205(v216.GhostWolf);return v0[1740 -(203 + 310) ];end if (v197:IsMoving() and  not v197:IsMounted() and v197:BuffDown(v216.GhostWolf) and v197:AffectingCombat() and (v270()>(1994 -(1238 + 755))) and ( not v199:IsInRange(3 + 37 ) or  not v220.TargetIsValid())) then v205(v216.GhostWolf);return v0[2770 -(709 + 825) ];end end v241,v242=v214();if (v216.ImprovedFlametongueWeapon:IsAvailable() and ( not v241 or (v242<(1105662 -505662))) and v216.FlametongueWeapon:IsCastable()) then if v205(v216.FlametongueWeapon) then return v0[1808 -566 ];end end local v309=select(872 -(196 + 668) ,v214());if (v216.ThunderstrikeWard:IsReady() and ( not v309 or (v309~=(29955 -22368)))) then if v205(v216.ThunderstrikeWard) then return v0[2580 -1334 ];end end if (v216.SkyFury:IsReady() and (v197:Level()>=(849 -(171 + 662))) and  not v197:DebuffUp(v216.Corruption) and ((v220.GroupBuffMissing(v216.SkyFuryBuff) and (v222.Commons.SkyFury==v0[1349 -(4 + 89) ]) and (v197:IsInRaidArea() or v197:IsInDungeonArea())) or (v197:BuffDown(v216.SkyFuryBuff,true) and ((v222.Commons.SkyFury==v0[4426 -3163 ]) or (v222.Commons.SkyFury==v0[461 + 805 ])))) and  not v197:IsMounted()) then if v204.CastTarget(v216.SkyFury,v204.TName().PLAYER) then return v0[5586 -4314 ];end end v215=v220.IncorpCycle(v216.Hex,12 + 18 ,false,false);if v215 then return v215;end if DispelToggle then v215=v220.PurgeCycle(v216.Purge,1526 -(35 + 1451) ,false,v222.Commons.TabForPurge);if v215 then return v215;end if (v216.CleanseSpirit:IsCastable() and v197:IsInDungeonArea() and v197:IsInParty()) then v215=v220.DispelCycle(v216.CleanseSpirit,v0[2738 -(28 + 1425) ],nil,v265);if v215 then return v215;end end if (v216.PoisonCleansingTotem:IsAvailable() and v216.PoisonCleansingTotem:IsReady()) then if v220.DispelCycle(v216.PoisonCleansingTotem,v0[3285 -(941 + 1052) ],nil,v265) then return v204.CastTarget(v216.PoisonCleansingTotem);end if ((v246>(1 + 0)) or (v216.CleanseSpirit:CooldownDown() and (v246>(1514 -(822 + 692))))) then return v204.CastTarget(v216.PoisonCleansingTotem);end end end local v310=((v216.ElementalOrbit:IsAvailable()) and v216.EarthShieldSelfBuff) or v216.EarthShieldOtherBuff ;if (((v222.Elemental.Defensives.Earthshieldooc and  not v197:AffectingCombat()) or  not v222.Elemental.Defensives.Earthshieldooc) and (v216.ElementalOrbit:IsAvailable() or v222.Elemental.PreferEarthShield) and v216.EarthShield:IsReady() and (v197:BuffDown(v310) or ( not v197:AffectingCombat() and (v197:BuffStack(v310)<(6 -1))))) then if v204.CastTarget(v216.EarthShield,v204.TName().PLAYER) then return v0[624 + 699 ];end elseif (((v222.Elemental.Defensives.Earthshieldooc and  not v197:AffectingCombat()) or  not v222.Elemental.Defensives.Earthshieldooc) and (v216.ElementalOrbit:IsAvailable() or  not v222.Elemental.PreferEarthShield or  not v216.EarthShield:IsAvailable()) and v216.LightningShield:IsReady() and v197:BuffDown(v216.LightningShield)) then if v205(v216.LightningShield) then return v0[1639 -(45 + 252) ];end end v215=v271();if v215 then return v215;end if v220.TargetIsValid() then if ( not v222.Elemental.AttackonlyinCombat or (v222.Elemental.AttackonlyinCombat and v199:AffectingCombat())) then if  not v261(v196.Target) then if InterruptToggle then v215=v220.InterruptCycle(v216.WindShear,30 + 0 ,true,nil,false);if v215 then return v215;end end if TargetinRange then if  not v197:AffectingCombat() then v215=v272();if v215 then return v215;end end if (v216.BloodFury:IsCastable() and IsRacials and ( not v216.Ascendance:IsAvailable() or v197:BuffUp(v216.AscendanceBuff) or (v216.Ascendance:CooldownRemains()>(18 + 32)))) then if v205(v216.BloodFury,true) then return v0[3314 -1952 ];end end if (v216.Berserking:IsCastable() and IsRacials and ( not v216.Ascendance:IsAvailable() or v197:BuffUp(v216.AscendanceBuff))) then if v205(v216.Berserking,true) then return v0[1803 -(114 + 319) ];end end if (v216.Fireblood:IsCastable() and IsRacials and ( not v216.Ascendance:IsAvailable() or v197:BuffUp(v216.AscendanceBuff) or (v216.Ascendance:CooldownRemains()>(71 -21)))) then if v205(v216.Fireblood,true) then return v0[1768 -388 ];end end if (v216.AncestralCall:IsCastable() and IsRacials and ( not v216.Ascendance:IsAvailable() or v197:BuffUp(v216.AscendanceBuff) or (v216.Ascendance:CooldownRemains()>(32 + 18)))) then if v205(v216.AncestralCall,true) then return v0[2070 -680 ];end end if v222.Commons.Enabled.Trinkets then if (v223:IsReady() and v199:IsInRange(v227) and IsTrinket1 and  not v233 and ( not v235 or (((v239<(94 -49)) or ((v194.CombatTime()<v240) and (v197:BuffStack(v216.SpymastersWebBuff)==(2003 -(556 + 1407))))) and (v216.Stormkeeper:CooldownRemains()<(1211 -(741 + 465)))) or (v239<(487 -(170 + 295))))) then if v205(v223,true) then return v0[739 + 662 ]   .. v223:Name()   .. v0[1289 + 114 ] ;end end if (v224:IsReady() and v199:IsInRange(v228) and IsTrinket2 and  not v234 and ( not v236 or (((v239<(110 -65)) or ((v194.CombatTime()<v240) and (v197:BuffStack(v216.SpymastersWebBuff)==(34 + 6)))) and (v216.Stormkeeper:CooldownRemains()<(4 + 1))) or (v239<(13 + 9)))) then if v205(v224,true) then return v0[2641 -(957 + 273) ]   .. v224:Name()   .. v0[378 + 1035 ] ;end end end if v222.Commons.Enabled.Items then local v324,v325,v326=v197:GetUseableItems(v219,7 + 9 );if (v324 and v199:IsInRange(v326)) then v204.CastMacro(3 -2 ,true,nil,v324);return v0[3742 -2322 ];end end if (v216.NaturesSwiftness:IsCastable() and v197:BuffDown(v216.NaturesSwiftness) and IsNaturesSwiftness) then if v205(v216.NaturesSwiftness,true) then return v0[4355 -2929 ];end end if (v216.AncestralSwiftness:IsReady() and v197:BuffDown(v216.AncestralSwiftness)) then if v205(v216.AncestralSwiftness,true) then return v0[7090 -5658 ];end end if v222.Commons.Enabled.Potions then local v327=v220.PotionSelected();if (v327 and v327:IsReady() and IsPotions) then v204.CastMacro(1783 -(389 + 1391) ,nil,nil,v327);return v0[903 + 536 ];end end if (v207() and (v221.ClusterTargets>(1 + 1))) then v215=v273();if v215 then return v215;end if v204.CastAnnotated(v216.Pool,false,v0[3285 -1842 ]) then return v0[2395 -(783 + 168) ];end end v215=v274();if v215 then return v215;end if v204.CastAnnotated(v216.Pool,false,v0[4856 -3409 ]) then return v0[1425 + 23 ];end end end end end end local function v276() v204.ResetToggle();v222.Elemental.Display();v216.FlameShockDebuff:RegisterAuraTracking();v216.LightningRodDebuff:RegisterAuraTracking();v204:UpdateMacro(v0[1768 -(309 + 2) ],"/use 16");v204:UpdateMacro(v0[4483 -3023 ],"/stopcasting");v204.ToggleIconFrame:AddButtonCustom("I",1213 -(1090 + 122) ,v0[475 + 990 ],v0[4923 -3457 ]);v204.ToggleIconFrame:AddButtonCustom("D",2 + 0 ,v0[2588 -(628 + 490) ],v0[264 + 1207 ]);v204.ToggleIconFrame:AddButtonCustom("S",7 -4 ,v0[6740 -5265 ],v0[2250 -(431 + 343) ]);v204.ToggleIconFrame:AddButtonCustom("P",7 -3 ,v0[4281 -2801 ],v0[1170 + 311 ]);v204.ToggleIconFrame:AddButtonCustom("T",1 + 4 ,v0[3180 -(556 + 1139) ],v0[1501 -(6 + 9) ]);v204.Print(v0[273 + 1215 ]);end v204.SetAPL(135 + 127 ,v275,v276);end;return v182[v0[1659 -(28 + 141) ]](...);
+local v0, v1 = ...;
+local v2 = HeroDBC.DBC;
+local v3 = HeroLib;
+local v4 = HeroCache;
+local v5 = v3.Unit;
+local v6 = v5.Player;
+local v7 = v5.Pet;
+local v8 = v5.Target;
+local v9 = v3.Spell;
+local v10 = v3.MultiSpell;
+local v11 = v3.Item;
+local v12 = v5.MouseOver;
+local v13 = HeroRotation();
+local v14 = v13.Cast;
+local v15 = v13.CastLeftNameplate;
+local v16 = v13.AoEON;
+local v17 = v13.CDsON;
+local v18 = v13.Commons().Everyone.num;
+local v19 = v13.Commons().Everyone.bool;
+local v20 = GetTime;
+local v21 = math.min;
+local v22 = C_Timer.After;
+local v23 = GetWeaponEnchantInfo;
+local v24;
+local v25 = v9.Shaman.Elemental;
+local v26 = v11.Shaman.Elemental;
+local v27 = v13.GUISettingsGet();
+local v28 = {};
+local v29 = v13.Commons().Everyone;
+local v30 = v13.Commons().Shaman;
+local v31 = {General=v27.General,Commons=v27.APL.Shaman.Commons,Elemental=v27.APL.Shaman.Elemental,Elemental_Defensives=v27.APL.Shaman.Elemental.Defensives,Elemental_TTD=v27.APL.Shaman.Elemental_TTD,Elemental_CDUSE=v27.APL.Shaman.Elemental_CDUSE};
+local v32, v33;
+local v34, v35;
+local v36, v37;
+local v38, v39;
+local v40, v41;
+local v42, v43;
+local v44, v45;
+local v46;
+local v47 = (312 - 212) + ((143 - 93) * v18(v25.SwellingMaelstrom:IsAvailable())) + ((47 - 22) * v18(v25.PrimordialCapacity:IsAvailable()));
+local v48 = 28620 - 17509;
+local v49 = 11730 - (555 + 64);
+local v50, v51;
+local v52, v53;
+local v54 = v9(441244 - (857 + 74));
+local v55;
+v30.ClusterTargets = 568 - (367 + 201);
+local v57 = 927 - (214 + 713);
+local function v58()
+	local v86, v87 = v6:GetTrinketData(v28);
+	if ((v57 < (2 + 3)) and ((v86.ID == (0 + 0)) or (v87.ID == (877 - (282 + 595))) or ((v86.SpellID > (1637 - (1523 + 114))) and not v86.Usable) or ((v87.SpellID > (0 + 0)) and not v87.Usable))) then
+		v57 = v57 + (1 - 0);
+		v22(1070 - (68 + 997), function()
+			v58();
+		end);
+		return;
+	end
+	v32 = v86.Object;
+	v33 = v87.Object;
+	v34 = v86.Spell;
+	v36 = v86.Range;
+	v38 = v86.CastTime;
+	v35 = v87.Spell;
+	v37 = v87.Range;
+	v39 = v87.CastTime;
+	v40 = v86.Cooldown;
+	v41 = v87.Cooldown;
+	v42 = v86.Blacklisted;
+	v43 = v87.Blacklisted;
+	v44 = v86.ID == v26.SpymastersWeb:ID();
+	v45 = v87.ID == v26.SpymastersWeb:ID();
+end
+v58();
+v3:RegisterForEvent(function()
+	v57 = 1270 - (226 + 1044);
+	v58();
+end, "PLAYER_EQUIPMENT_CHANGED");
+v3:RegisterForEvent(function()
+	v47 = (435 - 335) + ((167 - (32 + 85)) * v18(v25.SwellingMaelstrom:IsAvailable())) + ((25 + 0) * v18(v25.PrimordialCapacity:IsAvailable()));
+	v25.PrimordialWave:RegisterInFlightEffect(72550 + 254612);
+	v25.PrimordialWave:RegisterInFlight();
+	v25.LavaBurst:RegisterInFlight();
+end, "LEARNED_SPELL_IN_TAB");
+v25.PrimordialWave:RegisterInFlightEffect(328119 - (892 + 65));
+v25.PrimordialWave:RegisterInFlight();
+v25.LavaBurst:RegisterInFlight();
+local function v59()
+	return (119 - 69) - (v20() - v30.LastRollingThunderTick);
+end
+local function v60(v100)
+	local v101, v102;
+	for v119, v120 in pairs(v100) do
+		local v121 = v120:DebuffRemains(v25.FlameShockDebuff);
+		if (not v101 or (v121 < v101)) then
+			v101 = v121;
+			v102 = v120;
+		end
+	end
+	return v101, v102;
+end
+local function v61(v103)
+	return v103:DebuffRemains(v25.FlameShockDebuff);
+end
+local function v62(v104)
+	return v104:DebuffRemains(v25.LightningRodDebuff);
+end
+local function v63(v105)
+	return (v105:DebuffDown(v25.LightningRodDebuff) and v25.LightningRod:IsAvailable()) or (v46 > (v47 - (55 - 25)));
+end
+local function v64(v106)
+	return ((v106:DebuffRemains(v25.FlameShockDebuff) < (3 - 1)) or (v25.FlameShockDebuff:AuraActiveCount() == (350 - (87 + 263)))) and ((v106:DebuffRemains(v25.FlameShockDebuff) < v25.PrimordialWave:CooldownRemains()) or not v25.PrimordialWave:IsAvailable()) and ((v106:DebuffRemains(v25.FlameShockDebuff) < v25.LiquidMagmaTotem:CooldownRemains()) or not v25.LiquidMagmaTotem:IsAvailable());
+end
+local function v65(v107)
+	return v107:DebuffRemains(v25.FlameShockDebuff) < (186 - (67 + 113));
+end
+local function v66(v108)
+	return (v46 > (v47 - (11 + 4))) or (v108:DebuffRemains(v25.LightningRodDebuff) < v6:GCD()) or (v48 < (12 - 7));
+end
+local function v67(v109)
+	return v109:DebuffRefreshable(v25.FlameShockDebuff);
+end
+local function v68(v110)
+	return v110:DebuffUp(v25.FlameShockDebuff);
+end
+local function v69(v111)
+	return v111:DebuffRemains(v25.FlameShockDebuff) > (2 + 0);
+end
+local function v70(v112)
+	return v112:NPCID() == (813021 - 608461);
+end
+local function v71(v113)
+	return v113:CastSpellID() == (409757 - (802 + 150));
+end
+local function v72()
+	return (v12:Exists() or not v31.Elemental.CursorCheck) and not v6:IsCameraBusy();
+end
+local function v73()
+	if v29.TargetIsValid() then
+		local v122 = v8:MinDistance() or (13 - 8);
+		local v123 = v8:MaxDistance() or (72 - 32);
+		v122 = math.max(v122 - (6 + 2), 1002 - (915 + 82));
+		v123 = math.min(v123 + (22 - 14), 24 + 16);
+		local v124 = v6:GetEnemiesInRange(v122);
+		local v125 = v6:GetEnemiesInRange(v123);
+		local v126 = #v125;
+		if ((v123 - v122) > (20 - 4)) then
+			v126 = v126 - #v124;
+		end
+		v126 = math.max(v126, 1188 - (1069 + 118));
+		return v126;
+	else
+		return #(v6:GetEnemiesInRange(90 - 50));
+	end
+end
+local v74;
+local v75;
+local function v76(v114)
+	return (v75 and v31.Elemental_TTD.IgnoreWhenBoss) or v29.Buggedmobs[v8:NPCID()] or (v29.ISSolo() and v31.Elemental_TTD.IgnoreWhenSolo) or (v114 == (0 - 0)) or ((v49 >= v114) and (v49 < (1353 + 6424)));
+end
+local function v77(v115)
+	return (v115 ~= "Not Used") and ((((v115 == "with Cooldowns") or ((v115 == "small CDs") and v31.Elemental_CDUSE.smallcdswithCooldowns) or (v115 == "with Cooldowns or AoE") or (v115 == "on Enemycount or Cooldowns") or (v115 == "on Boss or with Cooldowns")) and v17()) or (v115 == "always") or (((v115 == "on Boss only") or (v115 == "on Boss or on Enemycount") or (v115 == "on Boss or with Cooldowns")) and (v75 or v8:IsDummy())) or ((v115 == "with Bloodlust only") and v6:BloodlustUp()) or ((v115 == "small CDs") and Smallcds) or (((v115 == "on AOE") or (v115 == "with Cooldowns or AoE")) and (v30.ClusterTargets >= (3 - 1))) or (((v115 == "on Enemycount or Cooldowns") or (v115 == "on Enemycount") or (v115 == "on Boss or on Enemycount")) and (v30.ClusterTargets >= v31.Elemental_CDUSE.Enemycount)));
+end
+local v78 = nil;
+local function v79()
+	if v6:IsMoving() then
+		if not v78 then
+			v78 = v20();
+		end
+		return v20() - v78;
+	else
+		if v78 then
+			v78 = nil;
+		end
+		return 0 + 0;
+	end
+end
+local function v80()
+	if (v25.AstralShift:IsCastable() and v6:AffectingCombat() and (v6:HealthPercentage() <= v31.Elemental.Defensives.AstralShiftHP)) then
+		if v14(v25.AstralShift) then
+			return "AstralShift";
+		end
+	end
+	if (v25.HealingStreamTotem:IsCastable() and v6:AffectingCombat() and (v6:HealthPercentage() <= v31.Elemental.Defensives.HealingStreamTotemHP)) then
+		if v14(v25.HealingStreamTotem) then
+			return "HealingStreamTotem";
+		end
+	end
+	if (v25.StoneBulkwarkTotem:IsCastable() and v6:AffectingCombat() and (v6:HealthPercentage() <= v31.Elemental.Defensives.StoneBulkwarkTotemHP)) then
+		if v14(v25.StoneBulkwarkTotem) then
+			return "StoneBulkwarkTotem";
+		end
+	end
+	if (v25.HealingSurge:IsReady() and (v6:BuffUp(v25.SpiritwalkersGraceBuff) or not v6:IsMoving()) and (v6:HealthPercentage() <= v31.Elemental.Defensives.HealingSurgeHP)) then
+		if v14(v25.HealingSurge) then
+			return "HealingSurge";
+		end
+	end
+	if (v25.EarthElemental:IsCastable() and v6:AffectingCombat() and (v6:HealthPercentage() <= v31.Elemental.Defensives.EarthElemental) and IsEarthElemental) then
+		if v14(v25.EarthElemental) then
+			return "EarthElemental";
+		end
+	end
+	if (v25.AncestralGuidance:IsCastable() and v6:AffectingCombat() and (v31.Elemental.Defensives.AncestralGuidanceCount ~= (791 - (368 + 423))) and (not v31.Elemental.Defensives.AncestralGuidanceHP ~= (0 - 0)) and v29.AoELogicWithCount(v31.Elemental.Defensives.AncestralGuidanceHP, v31.Elemental.Defensives.AncestralGuidanceCount, nil, v74)) then
+		if v14(v25.AncestralGuidance) then
+			return "AncestralGuidance";
+		end
+	end
+end
+local function v81()
+	if (v25.Stormkeeper:IsViable() and IsStormkeeper) then
+		if v14(v25.Stormkeeper, true) then
+			return "stormkeeper precombat 2";
+		end
+	end
+	if (v25.StormElemental:IsReady() and IsStormElemental and not v30.StormElemental.GreaterActive) then
+		if v14(v25.StormElemental, true) then
+			return "storm_elemental precombat 6";
+		end
+	end
+	if (v25.Stormkeeper:IsViable() and IsStormkeeper and not v6:StormkeeperUp()) then
+		if v14(v25.Stormkeeper, true) then
+			return "stormkeeper precombat 8";
+		end
+	end
+	if (v25.PrimordialWave:IsViable() and IsPrimordialWave) then
+		if v14(v25.PrimordialWave) then
+			return "primordial_wave precombat 10";
+		end
+	end
+	if (v25.AncestralSwiftness:IsReady() and v6:BuffDown(v25.AncestralSwiftness)) then
+		if v14(v25.AncestralSwiftness, true) then
+			return "ancestral_swiftness precombat 12";
+		end
+	end
+	if v25.LavaBurst:IsViable() then
+		if v14(v25.LavaBurst) then
+			return "lavaburst precombat 12";
+		end
+	end
+end
+local function v82()
+	if (v25.FireElemental:IsReady() and IsFireElemental and not v30.FireElemental.GreaterActive) then
+		if v14(v25.FireElemental, true) then
+			return "fire_elemental aoe 2";
+		end
+	end
+	if (v25.StormElemental:IsReady() and IsStormElemental and not v30.StormElemental.GreaterActive) then
+		if v14(v25.StormElemental, true) then
+			return "storm_elemental aoe 4";
+		end
+	end
+	if (v25.Stormkeeper:IsViable() and IsStormkeeper and not v6:StormkeeperUp()) then
+		if v14(v25.Stormkeeper, true) then
+			return "stormkeeper aoe 6";
+		end
+	end
+	if (v25.TotemicRecall:IsCastable() and (v25.LiquidMagmaTotem:CooldownRemains() > (33 - (10 + 8))) and ((v25.FlameShockDebuff:AuraActiveCount() < (v21(v30.ClusterTargets, 22 - 16) - (444 - (416 + 26)))) or v25.FireElemental:IsAvailable())) then
+		if v14(v25.TotemicRecall, true) then
+			return "totemic_recall aoe 8";
+		end
+	end
+	if (v25.LiquidMagmaTotem:IsReady() and IsLiquidMagmaTotem) then
+		if v14(v25.LiquidMagmaTotem, true) then
+			return "liquid_magma_totem aoe 10";
+		end
+	end
+	if (v25.PrimordialWave:IsViable() and IsPrimordialWave and (v6:BuffUp(v25.SurgeofPowerBuff) or not v25.SurgeofPower:IsAvailable() or (v46 < ((191 - 131) - ((3 + 2) * v18(v25.EyeoftheStorm:IsAvailable())))))) then
+		if v29.CastTargetIf(v25.PrimordialWave, v53, "min", v61, nil, 70 - 30) then
+			return "primordial_wave aoe 12";
+		end
+	end
+	if (v25.AncestralSwiftness:IsReady() and v6:BuffDown(v25.AncestralSwiftness)) then
+		if v14(v25.AncestralSwiftness, true) then
+			return "ancestral_swiftness aoe 14";
+		end
+	end
+	if v25.FlameShock:IsCastable() then
+		local v127, v128 = v60(v53);
+		if v128:DebuffRefreshable(v25.FlameShockDebuff) then
+			if (v6:BuffUp(v25.SurgeofPowerBuff) and v25.LightningRod:IsAvailable() and (v127 < (v128:TimeToDie() - (454 - (145 + 293)))) and (v25.FlameShockDebuff:AuraActiveCount() < v21(v30.ClusterTargets, 436 - (44 + 386))) and not v25.LiquidMagmaTotem:IsAvailable()) then
+				if (v8:GUID() == v128:GUID()) then
+					if v14(v25.FlameShock) then
+						return "flame_shock aoe main-target 16";
+					end
+				else
+					if ((v12:GUID() == v128:GUID()) and v12:IsSpellInRange(v25.FlameShock)) then
+						if v13.CastTarget(v25.FlameShock, v13.TName().MOUSEOVER) then
+							return "FlameShock mouseover";
+						end
+					end
+					if v15(v128, v25.FlameShock) then
+						return "flame_shock aoe off-target 16";
+					end
+				end
+			end
+			if (v6:BuffUp(v25.PrimordialWaveBuff) and v6:StormkeeperUp() and (v46 < (((1546 - (998 + 488)) - ((2 + 3) * v18(v25.EyeoftheStorm:IsAvailable()))) - ((7 + 1 + ((774 - (201 + 571)) * v18(v25.FlowofPower:IsAvailable()))) * v25.FlameShockDebuff:AuraActiveCount()))) and (v30.ClusterTargets >= (1144 - (116 + 1022))) and (v25.FlameShockDebuff:AuraActiveCount() < (24 - 18))) then
+				if (v8:GUID() == v128:GUID()) then
+					if v14(v25.FlameShock) then
+						return "flame_shock aoe main-target 18";
+					end
+				else
+					if ((v12:GUID() == v128:GUID()) and v12:IsSpellInRange(v25.FlameShock)) then
+						if v13.CastTarget(v25.FlameShock, v13.TName().MOUSEOVER) then
+							return "FlameShock mouseover";
+						end
+					end
+					if v15(v128, v25.FlameShock) then
+						return "flame_shock aoe off-target 18";
+					end
+				end
+			end
+			if (v25.FireElemental:IsAvailable() and (v6:BuffUp(v25.SurgeofPowerBuff) or not v25.SurgeofPower:IsAvailable()) and (v128:DebuffRemains(v25.FlameShockDebuff) < (v128:TimeToDie() - (3 + 2))) and ((v25.FlameShockDebuff:AuraActiveCount() < (21 - 15)) or (v128:DebuffRemains(v25.FlameShockDebuff) > (0 - 0)))) then
+				if (v8:GUID() == v128:GUID()) then
+					if v14(v25.FlameShock) then
+						return "flame_shock aoe main-target 20";
+					end
+				else
+					if ((v12:GUID() == v128:GUID()) and v12:IsSpellInRange(v25.FlameShock)) then
+						if v13.CastTarget(v25.FlameShock, v13.TName().MOUSEOVER) then
+							return "FlameShock mouseover";
+						end
+					end
+					if v15(v128, v25.FlameShock) then
+						return "flame_shock aoe off-target 20";
+					end
+				end
+			end
+		end
+	end
+	if (v25.TempestAbility:IsReady() and UseTempest and v76(v31.Elemental_TTD.TempestTTD) and (v6:BuffUp(v25.SpiritwalkersGraceBuff) or not v6:IsMoving()) and not v6:IsCasting(v25.TempestAbility) and (v6:BuffDown(v25.ArcDischargeBuff))) then
+		if v14(v25.LightningBolt) then
+			return "TempestAbility aoe 22";
+		end
+	end
+	if (v25.Ascendance:IsCastable() and IsAscendance) then
+		if v14(v25.Ascendance, true) then
+			return "ascendance aoe 32";
+		end
+	end
+	if (v25.LavaBeam:IsViable() and (v30.ClusterTargets >= (865 - (814 + 45))) and v6:BuffUp(v25.SurgeofPowerBuff) and (v6:BuffRemains(v25.AscendanceBuff) > v25.LavaBeam:CastTime())) then
+		if v14(v25.LavaBeam) then
+			return "lava_beam aoe 34";
+		end
+	end
+	if (v25.ChainLightning:IsViable() and (v30.ClusterTargets >= (14 - 8)) and v6:BuffUp(v25.SurgeofPowerBuff)) then
+		if v14(v25.ChainLightning) then
+			return "chain_lightning aoe 36";
+		end
+	end
+	if (v25.LavaBurst:IsViable() and v6:BuffUp(v25.PrimordialWaveBuff) and v6:StormkeeperUp() and (v46 < ((4 + 56) - ((2 + 3) * v18(v25.EyeoftheStorm:IsAvailable())))) and (v30.ClusterTargets >= (891 - (261 + 624))) and v25.SurgeofPower:IsAvailable()) then
+		if v29.CastCycle(v25.LavaBurst, v53, v69, 71 - 31) then
+			return "lava_burst aoe 38";
+		end
+	end
+	if (v25.LavaBurst:IsViable() and v6:BuffUp(v25.PrimordialWaveBuff) and ((v6:BuffRemains(v25.PrimordialWaveBuff) < (1084 - (1020 + 60))) or v6:BuffUp(v25.LavaSurgeBuff))) then
+		if v29.CastCycle(v25.LavaBurst, v53, v69, 1463 - (630 + 793)) then
+			return "lava_burst aoe 40";
+		end
+	end
+	if (v25.LavaBurst:IsViable() and v6:BuffUp(v25.LavaSurgeBuff) and not v6:MotEUp() and v25.MasteroftheElements:IsAvailable() and v25.FireElemental:IsAvailable()) then
+		if v29.CastCycle(v25.LavaBurst, v53, v68, 135 - 95) then
+			return "lava_burst aoe 42";
+		end
+	end
+	if (v25.Earthquake:IsReady() and UseSpender and v8:IsInRange(189 - 149) and Cursorcheck and (v25.PrimordialWave:CooldownRemains() < v6:GCD()) and v25.SurgeofPower:IsAvailable() and (v6:BuffUp(v25.EchoesofGreatSunderingBuff) or not v25.EchoesofGreatSundering:IsAvailable())) then
+		if v14(v25.Earthquakecast) then
+			return "earthquake aoe 44";
+		end
+	end
+	if (v25.Earthquake:IsReady() and UseSpender and v8:IsInRange(16 + 24) and Cursorcheck and (((v25.LightningRodDebuff:AuraActiveCount() == (0 - 0)) and v25.LightningRod:IsAvailable()) or (v46 > (v47 - (1777 - (760 + 987))))) and (v6:BuffUp(v25.EchoesofGreatSunderingBuff) or not v25.EchoesofGreatSundering:IsAvailable())) then
+		if v14(v25.Earthquakecast) then
+			return "earthquake aoe 46";
+		end
+	end
+	if (v25.Earthquake:IsReady() and UseSpender and v8:IsInRange(1953 - (1789 + 124)) and Cursorcheck and v6:StormkeeperUp() and (v30.ClusterTargets >= (772 - (745 + 21))) and v25.SurgeofPower:IsAvailable() and (v6:BuffUp(v25.EchoesofGreatSunderingBuff) or not v25.EchoesofGreatSundering:IsAvailable())) then
+		if v14(v25.Earthquakecast) then
+			return "earthquake aoe 48";
+		end
+	end
+	if (v25.Earthquake:IsReady() and UseSpender and v8:IsInRange(14 + 26) and Cursorcheck and (v6:MotEUp() or (v30.ClusterTargets >= (13 - 8))) and (v6:BuffUp(v25.FusionofElementsNature) or (v6:BuffRemains(v25.AscendanceBuff) > (35 - 26)) or v6:BuffDown(v25.AscendanceBuff)) and (v6:BuffUp(v25.EchoesofGreatSunderingBuff) or not v25.EchoesofGreatSundering:IsAvailable()) and v25.FireElemental:IsAvailable()) then
+		if v14(v25.Earthquakecast) then
+			return "earthquake aoe 50";
+		end
+	end
+	if (v25.ElementalBlast:IsViable() and UseSpender and v25.EchoesofGreatSundering:IsAvailable() and v6:BuffDown(v25.EchoesofGreatSunderingBuff) and ((v25.LightningRodDebuff:AuraActiveCount() == (0 + 0)) or (v46 > (v47 - (24 + 6))))) then
+		if v14(v25.ElementalBlast) then
+			return "elemental_blast aoe 52";
+		end
+	end
+	if (v25.EarthShock:IsReady() and UseSpender and v25.EchoesofGreatSundering:IsAvailable() and v6:BuffDown(v25.EchoesofGreatSunderingBuff) and ((v25.LightningRodDebuff:AuraActiveCount() == (1055 - (87 + 968))) or (v46 > (v47 - (132 - 102))))) then
+		if v14(v25.EarthShock) then
+			return "earth_shock aoe 54";
+		end
+	end
+	if (v25.Icefury:IsViable() and v25.FusionofElements:IsAvailable() and not (v6:BuffUp(v25.FusionofElementsNature) or v6:BuffUp(v25.FusionofElementsFire))) then
+		if v14(v25.Icefury) then
+			return "icefury aoe 56";
+		end
+	end
+	if (v25.LavaBurst:IsViable() and v25.MasteroftheElements:IsAvailable() and not v6:MotEUp() and v6:BuffDown(v25.AscendanceBuff) and v25.FireElemental:IsAvailable()) then
+		if v29.CastCycle(v25.LavaBurst, v53, v69, 37 + 3) then
+			return "lava_burst aoe 58";
+		end
+	end
+	if (v25.LavaBeam:IsViable() and v6:StormkeeperUp() and (v6:BuffUp(v25.SurgeofPowerBuff) or (v30.ClusterTargets < (13 - 7)))) then
+		if v14(v25.LavaBeam) then
+			return "lava_beam aoe 60";
+		end
+	end
+	if (v25.ChainLightning:IsViable() and v6:StormkeeperUp() and (v6:BuffUp(v25.SurgeofPowerBuff) or (v30.ClusterTargets < (1419 - (447 + 966))))) then
+		if v14(v25.ChainLightning) then
+			return "chain_lightning aoe 62";
+		end
+	end
+	if (v25.LavaBeam:IsViable() and v6:PotMUp() and (v6:BuffRemains(v25.AscendanceBuff) > v25.LavaBeam:CastTime()) and not v6:StormkeeperUp()) then
+		if v14(v25.LavaBeam) then
+			return "lava_beam aoe 64";
+		end
+	end
+	if (v25.ChainLightning:IsViable() and v6:PotMUp() and not v6:StormkeeperUp()) then
+		if v14(v25.ChainLightning) then
+			return "chain_lightning aoe 66";
+		end
+	end
+	if (v25.LavaBeam:IsViable() and ((v6:MotEUp() and (v30.ClusterTargets >= (10 - 6))) or (v30.ClusterTargets >= (1822 - (1703 + 114)))) and (v6:BuffRemains(v25.AscendanceBuff) > v25.LavaBeam:CastTime()) and not v6:StormkeeperUp()) then
+		if v14(v25.LavaBeam) then
+			return "lava_beam aoe 68";
+		end
+	end
+	if (v25.LavaBurst:IsViable() and (v25.DeeplyRootedElements:IsAvailable())) then
+		if v29.CastCycle(v25.LavaBurst, v53, v69, 741 - (376 + 325)) then
+			return "lava_burst aoe 70";
+		end
+	end
+	if (v25.LavaBeam:IsViable() and (v6:BuffRemains(v25.AscendanceBuff) > v25.LavaBeam:CastTime())) then
+		if v14(v25.LavaBeam) then
+			return "lava_beam aoe 72";
+		end
+	end
+	if v25.ChainLightning:IsViable() then
+		if v14(v25.ChainLightning) then
+			return "chain_lightning aoe 74";
+		end
+	end
+	if (v25.FlameShock:IsCastable() and v6:IsMoving()) then
+		if v29.CastCycle(v25.FlameShock, v53, v67, 65 - 25) then
+			return "flame_shock moving aoe 76";
+		end
+	end
+	if (v25.FrostShock:IsCastable() and v6:IsMoving()) then
+		if v14(v25.FrostShock) then
+			return "frost_shock moving aoe 78";
+		end
+	end
+end
+local function v83()
+	if (v25.FireElemental:IsCastable() and IsFireElemental and not v30.FireElemental.GreaterActive) then
+		if v14(v25.FireElemental, true) then
+			return "fire_elemental single_target 2";
+		end
+	end
+	if (v25.StormElemental:IsCastable() and IsStormElemental and not v30.StormElemental.GreaterActive) then
+		if v14(v25.StormElemental, true) then
+			return "storm_elemental single_target 4";
+		end
+	end
+	if (v25.Stormkeeper:IsViable() and IsStormkeeper and v6:BuffDown(v25.AscendanceBuff) and not v6:StormkeeperUp()) then
+		if v14(v25.Stormkeeper, true) then
+			return "stormkeeper single_target 6";
+		end
+	end
+	if (v25.TotemicRecall:IsCastable() and (v25.LiquidMagmaTotem:CooldownRemains() > (45 - 30)) and (v30.ClusterTargets > (1 + 0)) and v25.FireElemental:IsAvailable()) then
+		if v14(v25.TotemicRecall, true) then
+			return "totemic_recall single_target 8";
+		end
+	end
+	if (v25.LiquidMagmaTotem:IsCastable() and v8:IsInRange(88 - 48) and IsLiquidMagmaTotem and v6:BuffDown(v25.AscendanceBuff) and (v25.FireElemental:IsAvailable() or (v30.ClusterTargets > (15 - (9 + 5))))) then
+		if v14(v25.LiquidMagmaTotem, true) then
+			return "liquid_magma_totem single_target 10";
+		end
+	end
+	if (v25.PrimordialWave:IsViable() and IsPrimordialWave and ((v30.ClusterTargets == (377 - (85 + 291))) or v6:BuffUp(v25.SurgeofPowerBuff) or not v25.SurgeofPower:IsAvailable() or (v46 < ((1325 - (243 + 1022)) - ((19 - 14) * v18(v25.EyeoftheStorm:IsAvailable())))) or v25.LiquidMagmaTotem:IsAvailable())) then
+		if v29.CastTargetIf(v25.PrimordialWave, v53, "min", v61, nil, 33 + 7) then
+			return "primordial_wave single_target 12";
+		end
+	end
+	if (v25.AncestralSwiftness:IsReady() and v6:BuffDown(v25.AncestralSwiftness) and (v6:BuffDown(v25.PrimordialWaveBuff) or not v6:StormkeeperUp() or not v25.ElementalBlast:IsAvailable())) then
+		if v14(v25.AncestralSwiftness, true) then
+			return "ancestral_swiftness single_target 14";
+		end
+	end
+	if (v25.FlameShock:IsCastable() and (v30.ClusterTargets == (1181 - (1123 + 57))) and ((v8:DebuffRemains(v25.FlameShockDebuff) < (2 + 0)) or (v25.FlameShockDebuff:AuraActiveCount() == (254 - (163 + 91)))) and ((v8:DebuffRemains(v25.FlameShockDebuff) < v25.PrimordialWave:CooldownRemains()) or not v25.PrimordialWave:IsAvailable()) and ((v8:DebuffRemains(v25.FlameShockDebuff) < v25.LiquidMagmaTotem:CooldownRemains()) or not v25.LiquidMagmaTotem:IsAvailable()) and v6:BuffDown(v25.SurgeofPowerBuff) and v25.FireElemental:IsAvailable()) then
+		if v14(v25.FlameShock) then
+			return "flame_shock single_target 16";
+		end
+	end
+	if (v25.FlameShock:IsCastable() and (v25.FlameShockDebuff:AuraActiveCount() < v30.ClusterTargets) and (v30.ClusterTargets > (1931 - (1869 + 61))) and (v25.DeeplyRootedElements:IsAvailable() or v25.Ascendance:IsAvailable() or v25.PrimordialWave:IsAvailable() or v25.SearingFlames:IsAvailable() or v25.MagmaChamber:IsAvailable()) and ((v6:BuffDown(v25.SurgeofPowerBuff) and v6:StormkeeperUp()) or not v25.SurgeofPower:IsAvailable() or (v25.Ascendance:CooldownUp() and v25.Ascendance:IsAvailable())) and not v25.LiquidMagmaTotem:IsAvailable()) then
+		if v29.CastTargetIf(v25.FlameShock, v53, "min", v61, nil, 12 + 28) then
+			return "flame_shock single_target 18";
+		end
+	end
+	if (v25.FlameShock:IsCastable() and (v30.ClusterTargets > (3 - 2)) and (v25.DeeplyRootedElements:IsAvailable() or v25.Ascendance:IsAvailable() or v25.PrimordialWave:IsAvailable() or v25.SearingFlames:IsAvailable() or v25.MagmaChamber:IsAvailable()) and ((v6:BuffUp(v25.SurgeofPowerBuff) and not v6:StormkeeperUp()) or not v25.SurgeofPower:IsAvailable()) and v25.FireElemental:IsAvailable()) then
+		if v29.CastTargetIf(v25.FlameShock, v53, "min", v61, v65, 61 - 21) then
+			return "flame_shock single_target 20";
+		end
+	end
+	if (v25.TempestAbility:IsReady() and UseTempest and v76(v31.Elemental_TTD.TempestTTD) and (v6:BuffUp(v25.SpiritwalkersGraceBuff) or not v6:IsMoving()) and not v6:IsCasting(v25.TempestAbility)) then
+		if v14(v25.LightningBolt) then
+			return "tempest single_target 22";
+		end
+	end
+	if (v25.LightningBolt:IsViable() and v6:StormkeeperUp() and v6:BuffUp(v25.SurgeofPowerBuff)) then
+		if v14(v25.LightningBolt) then
+			return "lightning_bolt single_target 24";
+		end
+	end
+	if (v25.LavaBurst:IsViable() and v6:StormkeeperUp() and not v6:MotEUp() and not v25.SurgeofPower:IsAvailable() and v25.MasteroftheElements:IsAvailable()) then
+		if v29.CastCycle(v25.LavaBurst, v53, v69, 6 + 34) then
+			return "lava_burst single_target 26";
+		end
+	end
+	if (v25.LightningBolt:IsViable() and v6:StormkeeperUp() and not v25.SurgeofPower:IsAvailable() and (v6:MotEUp() or not v25.MasteroftheElements:IsAvailable())) then
+		if v14(v25.LightningBolt) then
+			return "lightning_bolt single_target 28";
+		end
+	end
+	if (v25.LightningBolt:IsViable() and v6:BuffUp(v25.SurgeofPowerBuff) and v6:BuffDown(v25.AscendanceBuff) and v25.EchoChamber:IsAvailable()) then
+		if v14(v25.LightningBolt) then
+			return "lightning_bolt single_target 30";
+		end
+	end
+	if (v25.Ascendance:IsCastable() and IsAscendance and (v25.LavaBurst:ChargesFractional() < (1 - 0))) then
+		if v14(v25.Ascendance, true) then
+			return "ascendance single_target 32";
+		end
+	end
+	if (v25.LavaBurst:IsViable() and v6:BuffUp(v25.LavaSurgeBuff) and v25.FireElemental:IsAvailable()) then
+		if v29.CastCycle(v25.LavaBurst, v53, v68, 38 + 2) then
+			return "lava_burst single_target 34";
+		end
+	end
+	if (v25.LavaBurst:IsViable() and (v6:BuffUp(v25.PrimordialWaveBuff))) then
+		if v29.CastCycle(v25.LavaBurst, v53, v69, 1514 - (1329 + 145)) then
+			return "lava_burst single_target 36";
+		end
+	end
+	if (v25.Earthquake:IsReady() and UseSpender and v8:IsInRange(1011 - (140 + 831)) and Cursorcheck and v6:MotEUp() and (v6:BuffUp(v25.EchoesofGreatSunderingBuff) or ((v30.ClusterTargets > (1851 - (1409 + 441))) and not v25.EchoesofGreatSundering:IsAvailable() and not v25.ElementalBlast:IsAvailable())) and (v6:BuffUp(v25.FusionofElementsNature) or (v46 > (v47 - (733 - (15 + 703)))) or (v6:BuffRemains(v25.AscendanceBuff) > (5 + 4)) or v6:BuffDown(v25.AscendanceBuff)) and v25.FireElemental:IsAvailable()) then
+		if v14(v25.Earthquakecast) then
+			return "earthquake single_target 38";
+		end
+	end
+	if (v25.ElementalBlast:IsViable() and UseSpender and v6:MotEUp() and (v6:BuffUp(v25.FusionofElementsNature) or v6:BuffUp(v25.FusionofElementsFire) or (v46 > (v47 - (453 - (262 + 176)))) or (v6:BuffRemains(v25.AscendanceBuff) > (1727 - (345 + 1376))) or v6:BuffDown(v25.AscendanceBuff)) and v25.FireElemental:IsAvailable()) then
+		if v14(v25.ElementalBlast) then
+			return "elemental_blast single_target 40";
+		end
+	end
+	if (v25.EarthShock:IsReady() and UseSpender and v6:MotEUp() and (v6:BuffUp(v25.FusionofElementsNature) or (v46 > (v47 - (703 - (198 + 490)))) or (v6:BuffRemains(v25.AscendanceBuff) > (39 - 30)) or v6:BuffDown(v25.AscendanceBuff)) and v25.FireElemental:IsAvailable()) then
+		if v14(v25.EarthShock) then
+			return "earth_shock single_target 42";
+		end
+	end
+	if (v25.Earthquake:IsReady() and UseSpender and v8:IsInRange(95 - 55) and Cursorcheck and (v6:BuffUp(v25.EchoesofGreatSunderingBuff) or ((v30.ClusterTargets > (1207 - (696 + 510))) and not v25.EchoesofGreatSundering:IsAvailable() and not v25.ElementalBlast:IsAvailable())) and (v6:StormkeeperUp() or ((v25.PrimordialWave:CooldownRemains() < v6:GCD()) and v25.SurgeofPower:IsAvailable() and not v25.LiquidMagmaTotem:IsAvailable())) and v25.StormElemental:IsAvailable()) then
+		if v14(v25.Earthquakecast) then
+			return "earthquake single_target 44";
+		end
+	end
+	if (v25.ElementalBlast:IsViable() and UseSpender and v6:StormkeeperUp() and v25.StormElemental:IsAvailable()) then
+		if v14(v25.ElementalBlast) then
+			return "elemental_blast single_target 46";
+		end
+	end
+	if (v25.EarthShock:IsReady() and UseSpender and (((v6:MotEUp() or (v25.LightningRodDebuff:AuraActiveCount() == (0 - 0))) and (v25.Stormkeeper:CooldownRemains() > (1272 - (1091 + 171))) and ((v59() > (1 + 4)) or not v25.RollingThunder:IsAvailable())) or v6:StormkeeperUp()) and v25.StormElemental:IsAvailable() and (v30.ClusterTargets == (3 - 2))) then
+		if v14(v25.EarthShock) then
+			return "earth_shock single_target 48";
+		end
+	end
+	if (v25.EarthShock:IsReady() and UseSpender and (((v25.PrimordialWave:CooldownRemains() < v6:GCD()) and v25.SurgeofPower:IsAvailable() and not v25.LiquidMagmaTotem:IsAvailable()) or v6:StormkeeperUp()) and v25.StormElemental:IsAvailable() and (v30.ClusterTargets > (3 - 2)) and v25.EchoesofGreatSundering:IsAvailable() and v6:BuffDown(v25.EchoesofGreatSunderingBuff)) then
+		if v14(v25.EarthShock) then
+			return "earth_shock single_target 49";
+		end
+	end
+	if (v25.Icefury:IsViable() and not (v6:BuffUp(v25.FusionofElementsNature) or v6:BuffUp(v25.FusionofElementsFire)) and (v6:BuffStack(v25.IcefuryBuff) == (376 - (123 + 251))) and (v25.FusionofElements:IsAvailable() or v6:BuffDown(v25.AscendanceBuff))) then
+		if v14(v25.Icefury) then
+			return "icefury single_target 50";
+		end
+	end
+	if (v25.LavaBurst:IsViable() and (v6:BuffUp(v25.AscendanceBuff))) then
+		if v29.CastCycle(v25.LavaBurst, v53, v69, 198 - 158) then
+			return "lava_burst single_target 52";
+		end
+	end
+	if (v25.LavaBurst:IsViable() and v25.MasteroftheElements:IsAvailable() and not v6:MotEUp() and v25.FireElemental:IsAvailable()) then
+		if v29.CastCycle(v25.LavaBurst, v53, v69, 738 - (208 + 490)) then
+			return "lava_burst single_target 54";
+		end
+	end
+	if (v25.LavaBurst:IsViable() and v6:StormkeeperUp() and v25.ElementalReverb:IsAvailable() and v25.EarthShock:IsAvailable() and (v3.CombatTime() < (1 + 9))) then
+		if v29.CastCycle(v25.LavaBurst, v53, v69, 18 + 22) then
+			return "lava_burst single_target 56";
+		end
+	end
+	if (v25.Earthquake:IsReady() and UseSpender and Cursorcheck and (v6:BuffUp(v25.EchoesofGreatSunderingBuff) or ((v30.ClusterTargets > (837 - (660 + 176))) and not v25.EchoesofGreatSundering:IsAvailable() and not v25.ElementalBlast:IsAvailable())) and ((v46 > (v47 - (5 + 30))) or (v48 < (207 - (14 + 188))))) then
+		if v14(v25.Earthquakecast) then
+			return "earthquake single_target 58";
+		end
+	end
+	if (v25.ElementalBlast:IsViable() and UseSpender and ((v46 > (v47 - (690 - (534 + 141)))) or (v48 < (3 + 2)))) then
+		if v14(v25.ElementalBlast) then
+			return "elemental_blast single_target 60";
+		end
+	end
+	if (v25.EarthShock:IsReady() and UseSpender and ((v46 > (v47 - (14 + 1))) or (v48 < (5 + 0)))) then
+		if v14(v25.EarthShock) then
+			return "earth_shock single_target 62";
+		end
+	end
+	if (v25.LightningBolt:IsViable() and (v6:BuffUp(v25.SurgeofPowerBuff))) then
+		if v14(v25.LightningBolt) then
+			return "lightning_bolt single_target 64";
+		end
+	end
+	if (v25.Icefury:IsViable() and not (v6:BuffUp(v25.FusionofElementsNature) or v6:BuffUp(v25.FusionofElementsFire))) then
+		if v14(v25.Icefury) then
+			return "icefury single_target 66";
+		end
+	end
+	if (v25.FrostShock:IsCastable() and v6:IcefuryUp() and ((v30.ClusterTargets == (1 - 0)) or (v6:StormkeeperUp() and v25.SurgeofPower:IsAvailable()))) then
+		if v14(v25.FrostShock) then
+			return "frost_shock single_target 68";
+		end
+	end
+	if (v25.ChainLightning:IsViable() and v6:PotMUp() and (v30.ClusterTargets > (1 - 0)) and not v6:StormkeeperUp()) then
+		if v14(v25.ChainLightning) then
+			return "chain_lightning single_target 70";
+		end
+	end
+	if (v25.LightningBolt:IsViable() and v6:PotMUp() and not v6:StormkeeperUp()) then
+		if v14(v25.LightningBolt) then
+			return "lightning_bolt single_target 72";
+		end
+	end
+	if (v25.LavaBurst:IsViable() and (v25.DeeplyRootedElements:IsAvailable())) then
+		if v29.CastCycle(v25.LavaBurst, v53, v69, 112 - 72) then
+			return "lava_burst single_target 74";
+		end
+	end
+	if (v25.ChainLightning:IsViable() and (v30.ClusterTargets > (1 + 0)) and not v6:StormkeeperUp()) then
+		if v14(v25.ChainLightning) then
+			return "chain_lightning single_target 76";
+		end
+	end
+	if v25.LightningBolt:IsViable() then
+		if v14(v25.LightningBolt) then
+			return "lightning_bolt single_target 78";
+		end
+	end
+	if (v25.FlameShock:IsCastable() and (v6:IsMoving())) then
+		if v29.CastCycle(v25.FlameShock, v53, v67, 26 + 14) then
+			return "flame_shock single_target 80";
+		end
+	end
+	if v25.FlameShock:IsCastable() then
+		if v14(v25.FlameShock) then
+			return "flame_shock single_target 82";
+		end
+	end
+	if v25.FrostShock:IsCastable() then
+		if v14(v25.FrostShock) then
+			return "frost_shock single_target 84";
+		end
+	end
+end
+local function v84()
+	if v29.ShouldStopCastUpdate() then
+		v13.CastMacro(402 - (115 + 281), true);
+		return "Stop Cast For Silence";
+	end
+	InterruptToggle = v13.ToggleIconFrame:GetToggle(2 - 1);
+	DispelToggle = v13.ToggleIconFrame:GetToggle(2 + 0);
+	Smallcds = v13.ToggleIconFrame:GetToggle(7 - 4);
+	UseSpender = v13.ToggleIconFrame:GetToggle(14 - 10);
+	UseTempest = v13.ToggleIconFrame:GetToggle(872 - (550 + 317));
+	v79();
+	local v116 = not v6:AffectingCombat() or not v8:AffectingCombat() or v8:IsDummy();
+	v52 = v6:GetEnemiesInRange(57 - 17);
+	EnemiesRangeOOCCount = v73() or #v52;
+	v74 = v29.UnitsinRange(v25.HealingSurge);
+	v53 = v8:GetEnemiesInSplashRange(14 - 4);
+	if v16() then
+		v30.ClusterTargets = EnemiesRangeOOCCount;
+	else
+		v30.ClusterTargets = 2 - 1;
+	end
+	if (v31.Elemental.ForceAOE and v16()) then
+		v30.ClusterTargets = 384 - (134 + 151);
+	end
+	if (v25.PoisonCleansingTotem:IsAvailable() and v25.PoisonCleansingTotem:IsReady()) then
+		v55 = v29.DebuffCount(v74, v54);
+	else
+		v55 = 1665 - (970 + 695);
+	end
+	Cursorcheck = (v72() and v25.Earthquake1:IsAvailable()) or v25.Earthquake2:IsAvailable();
+	IsRacials = v76(v31.Elemental_TTD.RacialsTTD) and v77(v31.Elemental_CDUSE.Racials);
+	IsPotions = v76(v31.Elemental_TTD.PotionsTTD) and (v31.Elemental_CDUSE.Potionswhensolo or (not v31.Elemental_CDUSE.Potionswhensolo and not v29.ISSolo())) and v77(v31.Elemental_CDUSE.Potions);
+	IsTrinket1 = v76(v31.Elemental_TTD.TrinketsTTD) and v77(v31.Elemental_CDUSE.Trinket1);
+	IsTrinket2 = v76(v31.Elemental_TTD.TrinketsTTD) and v77(v31.Elemental_CDUSE.Trinket2);
+	IsAscendance = v76(v31.Elemental_TTD.AscendanceTTD) and v77(v31.Elemental_CDUSE.Ascendance);
+	IsNaturesSwiftness = v77(v31.Elemental_CDUSE.NaturesSwiftness);
+	IsEarthElemental = v77(v31.Elemental_CDUSE.EarthElemental);
+	IsFireElemental = v76(v31.Elemental_TTD.FireElementalTTD) and v77(v31.Elemental_CDUSE.FireElemental);
+	IsStormElemental = v76(v31.Elemental_TTD.FireElementalTTD) and v77(v31.Elemental_CDUSE.StormElemental);
+	IsStormkeeper = v76(v31.Elemental_TTD.StormkeeperTTD) and v77(v31.Elemental_CDUSE.Stormkeeper);
+	IsLiquidMagmaTotem = v72() and v76(v31.Elemental_TTD.LiquidMagmaTotemTTD) and v77(v31.Elemental_CDUSE.LiquidMagmaTotem);
+	IsPrimordialWave = v76(v31.Elemental_TTD.PrimordialWaveTTD) and v77(v31.Elemental_CDUSE.PrimordialWave);
+	if (v29.TargetIsValid() or v6:AffectingCombat()) then
+		TargetinRange = v8:IsInRange(76 - 36);
+		TargetinkickRange = v8:IsSpellInRange(v25.WindShear);
+		v48 = v3.BossFightRemains();
+		v75 = true;
+		v49 = v48;
+		if (v49 == (13101 - (582 + 1408))) then
+			v75 = false;
+			v49 = v3.FightRemains(v53, false);
+		end
+		v46 = v6:MaelstromP();
+	end
+	if ((v31.Commons.AutoWolf == "always") or ((v31.Commons.AutoWolf == "Only in Combat") and v6:AffectingCombat()) or ((v31.Commons.AutoWolf == "Only out of combat") and not v6:AffectingCombat())) then
+		if (v6:IsMoving() and not v6:IsMounted() and v6:BuffDown(v25.GhostWolf) and not v6:AffectingCombat()) then
+			v14(v25.GhostWolf);
+			return "Ghost Wolf";
+		end
+		if (v6:IsMoving() and not v6:IsMounted() and v6:BuffDown(v25.GhostWolf) and v6:AffectingCombat() and (v79() > (3 - 2)) and (not v8:IsInRange(50 - 10) or not v29.TargetIsValid())) then
+			v14(v25.GhostWolf);
+			return "Ghost Wolf";
+		end
+	end
+	v50, v51 = v23();
+	if (v25.ImprovedFlametongueWeapon:IsAvailable() and (not v50 or (v51 < (2261014 - 1661014))) and v25.FlametongueWeapon:IsCastable()) then
+		if v14(v25.FlametongueWeapon) then
+			return "flametongue_weapon enchant";
+		end
+	end
+	local v117 = select(1832 - (1195 + 629), v23());
+	if (v25.ThunderstrikeWard:IsReady() and (not v117 or (v117 ~= (10033 - 2446)))) then
+		if v14(v25.ThunderstrikeWard) then
+			return "thunderstrike_ward";
+		end
+	end
+	if (v25.SkyFury:IsReady() and (v6:Level() >= (257 - (187 + 54))) and not v6:DebuffUp(v25.Corruption) and ((v29.GroupBuffMissing(v25.SkyFuryBuff) and (v31.Commons.SkyFury == "check whole group") and (v6:IsInRaidArea() or v6:IsInDungeonArea())) or (v6:BuffDown(v25.SkyFuryBuff, true) and ((v31.Commons.SkyFury == "only check us") or (v31.Commons.SkyFury == "check whole group")))) and not v6:IsMounted()) then
+		if v13.CastTarget(v25.SkyFury, v13.TName().PLAYER) then
+			return "SkyFury";
+		end
+	end
+	v24 = v29.IncorpCycle(v25.Hex, 810 - (162 + 618), false, false);
+	if v24 then
+		return v24;
+	end
+	if DispelToggle then
+		v24 = v29.PurgeCycle(v25.Purge, 29 + 11, false, v31.Commons.TabForPurge);
+		if v24 then
+			return v24;
+		end
+		if (v25.CleanseSpirit:IsCastable() and v6:IsInDungeonArea() and v6:IsInParty()) then
+			v24 = v29.DispelCycle(v25.CleanseSpirit, "Curse", nil, v74);
+			if v24 then
+				return v24;
+			end
+		end
+		if (v25.PoisonCleansingTotem:IsAvailable() and v25.PoisonCleansingTotem:IsReady()) then
+			if v29.DispelCycle(v25.PoisonCleansingTotem, "Poison", nil, v74) then
+				return v13.CastTarget(v25.PoisonCleansingTotem);
+			end
+			if ((v55 > (1 + 0)) or (v25.CleanseSpirit:CooldownDown() and (v55 > (0 - 0)))) then
+				return v13.CastTarget(v25.PoisonCleansingTotem);
+			end
+		end
+	end
+	local v118 = ((v25.ElementalOrbit:IsAvailable()) and v25.EarthShieldSelfBuff) or v25.EarthShieldOtherBuff;
+	if (((v31.Elemental.Defensives.Earthshieldooc and not v6:AffectingCombat()) or not v31.Elemental.Defensives.Earthshieldooc) and (v25.ElementalOrbit:IsAvailable() or v31.Elemental.PreferEarthShield) and v25.EarthShield:IsReady() and (v6:BuffDown(v118) or (not v6:AffectingCombat() and (v6:BuffStack(v118) < (8 - 3))))) then
+		if v13.CastTarget(v25.EarthShield, v13.TName().PLAYER) then
+			return "EarthShield";
+		end
+	elseif (((v31.Elemental.Defensives.Earthshieldooc and not v6:AffectingCombat()) or not v31.Elemental.Defensives.Earthshieldooc) and (v25.ElementalOrbit:IsAvailable() or not v31.Elemental.PreferEarthShield or not v25.EarthShield:IsAvailable()) and v25.LightningShield:IsReady() and v6:BuffDown(v25.LightningShield)) then
+		if v14(v25.LightningShield) then
+			return "Lightning Shield Refresh";
+		end
+	end
+	v24 = v80();
+	if v24 then
+		return v24;
+	end
+	if v29.TargetIsValid() then
+		if (not v31.Elemental.AttackonlyinCombat or (v31.Elemental.AttackonlyinCombat and v8:AffectingCombat())) then
+			if not v70(v5.Target) then
+				if InterruptToggle then
+					v24 = v29.InterruptCycle(v25.WindShear, 3 + 27, true, nil, false);
+					if v24 then
+						return v24;
+					end
+				end
+				if TargetinRange then
+					if not v6:AffectingCombat() then
+						v24 = v81();
+						if v24 then
+							return v24;
+						end
+					end
+					if (v25.BloodFury:IsCastable() and IsRacials and (not v25.Ascendance:IsAvailable() or v6:BuffUp(v25.AscendanceBuff) or (v25.Ascendance:CooldownRemains() > (1686 - (1373 + 263))))) then
+						if v14(v25.BloodFury, true) then
+							return "blood_fury main 2";
+						end
+					end
+					if (v25.Berserking:IsCastable() and IsRacials and (not v25.Ascendance:IsAvailable() or v6:BuffUp(v25.AscendanceBuff))) then
+						if v14(v25.Berserking, true) then
+							return "berserking main 4";
+						end
+					end
+					if (v25.Fireblood:IsCastable() and IsRacials and (not v25.Ascendance:IsAvailable() or v6:BuffUp(v25.AscendanceBuff) or (v25.Ascendance:CooldownRemains() > (1050 - (451 + 549))))) then
+						if v14(v25.Fireblood, true) then
+							return "fireblood main 6";
+						end
+					end
+					if (v25.AncestralCall:IsCastable() and IsRacials and (not v25.Ascendance:IsAvailable() or v6:BuffUp(v25.AscendanceBuff) or (v25.Ascendance:CooldownRemains() > (16 + 34)))) then
+						if v14(v25.AncestralCall, true) then
+							return "ancestral_call main 8";
+						end
+					end
+					if v31.Commons.Enabled.Trinkets then
+						if (v32:IsReady() and v8:IsInRange(v36) and IsTrinket1 and not v42 and (not v44 or (((v48 < (70 - 25)) or ((v3.CombatTime() < v49) and (v6:BuffStack(v25.SpymastersWebBuff) == (67 - 27)))) and (v25.Stormkeeper:CooldownRemains() < (1389 - (746 + 638)))) or (v48 < (9 + 13)))) then
+							if v14(v32, true) then
+								return "use_item trinket1 (" .. v32:Name() .. ") main 10";
+							end
+						end
+						if (v33:IsReady() and v8:IsInRange(v37) and IsTrinket2 and not v43 and (not v45 or (((v48 < (68 - 23)) or ((v3.CombatTime() < v49) and (v6:BuffStack(v25.SpymastersWebBuff) == (381 - (218 + 123))))) and (v25.Stormkeeper:CooldownRemains() < (1586 - (1535 + 46)))) or (v48 < (22 + 0)))) then
+							if v14(v33, true) then
+								return "use_item trinket2 (" .. v33:Name() .. ") main 12";
+							end
+						end
+					end
+					if v31.Commons.Enabled.Items then
+						local v132, v133, v134 = v6:GetUseableItems(v28, 3 + 13);
+						if (v132 and v8:IsInRange(v134)) then
+							v13.CastMacro(561 - (306 + 254), true, nil, v132);
+							return "weapon cast";
+						end
+					end
+					if (v25.NaturesSwiftness:IsCastable() and v6:BuffDown(v25.NaturesSwiftness) and IsNaturesSwiftness) then
+						if v14(v25.NaturesSwiftness, true) then
+							return "natures_swiftness main 12";
+						end
+					end
+					if (v25.AncestralSwiftness:IsReady() and v6:BuffDown(v25.AncestralSwiftness)) then
+						if v14(v25.AncestralSwiftness, true) then
+							return "ancestral_swiftness main 14";
+						end
+					end
+					if v31.Commons.Enabled.Potions then
+						local v135 = v29.PotionSelected();
+						if (v135 and v135:IsReady() and IsPotions) then
+							v13.CastMacro(1 + 2, nil, nil, v135);
+							return "Cast Potion";
+						end
+					end
+					if (v16() and (v30.ClusterTargets > (3 - 1))) then
+						v24 = v82();
+						if v24 then
+							return v24;
+						end
+						if v13.CastAnnotated(v25.Pool, false, "POOL") then
+							return "Pool for Aoe()";
+						end
+					end
+					v24 = v83();
+					if v24 then
+						return v24;
+					end
+					if v13.CastAnnotated(v25.Pool, false, "POOL") then
+						return "Pool for SingleTarget()";
+					end
+				end
+			end
+		end
+	end
+end
+local function v85()
+	v13.ResetToggle();
+	v31.Elemental.Display();
+	v25.FlameShockDebuff:RegisterAuraTracking();
+	v25.LightningRodDebuff:RegisterAuraTracking();
+	v13:UpdateMacro("macro1", "/use 16");
+	v13:UpdateMacro("macro6", "/stopcasting");
+	v13.ToggleIconFrame:AddButtonCustom("I", 1468 - (899 + 568), "Interrupt", "interrupt");
+	v13.ToggleIconFrame:AddButtonCustom("D", 2 + 0, "Dispel", "dispel");
+	v13.ToggleIconFrame:AddButtonCustom("S", 7 - 4, "smallCDs", "smallcds");
+	v13.ToggleIconFrame:AddButtonCustom("P", 607 - (268 + 335), "UseSpender", "usespender");
+	v13.ToggleIconFrame:AddButtonCustom("T", 295 - (60 + 230), "UseTempest", "usetempest");
+	v13.Print("Elemental Shaman rotation has been updated for patch 11.0.2. Last Update 10.10.2024");
+end
+v13.SetAPL(834 - (426 + 146), v84, v85);

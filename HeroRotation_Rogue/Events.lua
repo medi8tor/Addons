@@ -1,1 +1,240 @@
-local v0={};local v1=string.char;local v2=string.byte;local v3=string.sub;local v4=bit32 or bit ;local v5=v4.bxor;local v6=table.concat;local v7=table.insert;local function v8(v40,v41) local v42={};for v73=1, #v40 do v7(v42,v1(v5(v2(v3(v40,v73,v73 + 1 )),v2(v3(v41,1 + (v73% #v41) ,1 + (v73% #v41) + 1 )))%256 ));end return v6(v42);end v0[1462 -(1213 + 131) ]=v8("\75\93\23\32\55\249\92\84\75\4","\114\56\62\101\73\71\141");v0[27 + 89 ]=v8("\228\232\207\101\241\246\209\121\229\241\199\108\249\225\192\104\235\231\198\125\250\227\203\120","\60\180\164\142");v0[66 + 46 ]=v8("\116\41\76\61\101\125\234\95\60\31\11\32\74\184\66\39\5\120","\152\54\72\63\88\69\62");v0[390 -283 ]=v8("\52\217\140\224\32\209\136\231\52\221\128\234","\174\103\142\197");v0[365 -262 ]=v8("\251\25\9\174\147\38\216\233\3\1\167\145","\156\168\78\64\224\212\121");v0[956 -(814 + 45) ]=v8("\244\100\85\56\149\33\226\122\85\38\158\55\253\113","\126\167\52\16\116\217");v0[231 -137 ]=v8("\55\58\152\18\34\36\134\14\41\34\156\25\46\56\158\20\48\57\139\7\35","\75\103\118\217");v0[5 + 80 ]=v8("\155\252\51\68\253\181","\199\235\144\82\61\152");v0[29 + 53 ]=v8("\154\232\57\223\55\134","\167\214\137\74\171\120\206\83");v0[966 -(261 + 624) ]=v8("\32\207\77\102\83\95","\135\108\174\62\18\30\23\147");v0[142 -62 ]=v8("\152\214\87\83\10\190\203","\126\219\185\34\61");v0[1159 -(1020 + 60) ]=v8("\26\241\9\164\5\254\15\169\26\245\19\187\28\226\15\173\26\242","\232\73\161\76");v0[1497 -(630 + 793) ]=v8("\248\12\2\202\242\149\238\18\2\212\249\131\241\25","\202\171\92\71\134\190");v0[226 -159 ]=v8("\55\148\162\3\230\38\159\184\3\235\45\131\174\19","\185\98\218\235\87");v0[312 -246 ]=v8("\137\237\254\62\61\15\149\230\243","\75\220\163\183\106\98");v0[23 + 35 ]=v8("\122\114\37\9\101\125\33\16\123\99\63\23\108\111\47\19\108\102","\69\41\34\96");v0[172 -122 ]=v8("\136\102\236\140\22\111\17\244\137\119\246\146\31\118\2\228\136\126","\161\219\54\169\192\90\48\80");v0[1796 -(760 + 987) ]=v8("\42\143\244\243\161\19\21\44\141\240\224\172\28\4\53\150\244\251","\84\121\223\177\191\237\76");v0[1957 -(1789 + 124) ]=v8("\155\77\89\4\63\75\217\98\155\73\67\27\38\87\217\102\155\78","\35\200\29\28\72\115\20\154");v0[798 -(745 + 21) ]=v8("\206\66\183\82\233\69\162","\38\156\55\199");v0[11 + 20 ]=v8("\97\220\36\238\79\108\224","\152\38\189\86\156\32\24\133");v0[82 -52 ]=v8("\136\54\25\59\96\170\245\159\33\29\38\118\182\239","\155\203\68\112\86\19\197");v0[113 -84 ]=v8("\99\38\7\62\210\111\55\23\32\223\111\36\7\63\209\102\51\6","\158\48\118\66\114");v0[1 + 26 ]=v8("\7\135\108\58\144\25\103\1\133\104\41\142\3\96\6\146\122\62","\38\84\215\41\118\220\70");v0[19 + 5 ]=v8("\16\253\15\233\208\28\236\31\247\221\28\236\26\245\208\10\232\14","\156\67\173\74\165");v0[1055 -(87 + 968) ]=v8("\194\192\201\44\246\175\137\18\196\194","\126\177\163\187\69\134\219\167");local v35=...;local v36={};local v37=require;local function v38(v43,...) local v44=v36[v43];if  not v44 then return v37(v43,v35,...);end return v44(v35,...);end v36[v0[0 -0 ]]=function(...) local v45,v46=...;local v47=HeroLib;local v48,v49=HeroCache,v47.Utils;local v50=v47.Unit;local v51,v52,v53=v50.Player,v50.Pet,v50.Target;local v54,v55=v50.Focus,v50.MouseOver;local v56,v57,v58=v50.Arena,v50.Boss,v50.Nameplate;local v59,v60=v50.Party,v50.Raid;local v61=v47.Spell;local v62=v47.Item;local v63=HeroRotation();local v64=v63.Commons().Rogue;local v65=C_Timer;local v66=math.max;local v67=math.min;local v68=math.abs;local v69=pairs;local v70=table.insert;local v71=UnitAttackSpeed;local v72=GetTime;do local v74=v72();v64.RtBRemains=function(v94) local v95=(v74-v72()) -v47.RecoveryOffset(v94) ;return ((v95>=(0 + 0)) and v95) or (0 -0) ;end;v47:RegisterForSelfCombatEvent(function(v96,v96,v96,v96,v96,v96,v96,v96,v96,v96,v96,v97) if (v97==(316921 -(447 + 966))) then v74=v72() + (82 -52) ;end end,v0[1841 -(1703 + 114) ]);v47:RegisterForSelfCombatEvent(function(v98,v98,v98,v98,v98,v98,v98,v98,v98,v98,v98,v99) if (v99==(316209 -(376 + 325))) then v74=v72() + v67(65 -25 ,(92 -62) + v64.RtBRemains(true) ) ;end end,v0[8 + 19 ]);v47:RegisterForSelfCombatEvent(function(v100,v100,v100,v100,v100,v100,v100,v100,v100,v100,v100,v101) if (v101==(694901 -379393)) then v74=v72();end end,v0[43 -(9 + 5) ]);end do local v76={[v0[406 -(85 + 291) ]]={},[v0[1296 -(243 + 1022) ]]={},[v0[121 -89 ]]={}};v64.Exsanguinated=function(v102,v103) local v104=v102:GUID();if  not v104 then return false;end local v105=v103:ID();if (v105==(100160 + 21251)) then return v76.CrimsonTempest[v104] or false ;elseif (v105==(1883 -(1123 + 57))) then return v76.Garrote[v104] or false ;elseif (v105==(1581 + 362)) then return v76.Rupture[v104] or false ;end return false;end;v64.WillLoseExsanguinate=function(v106,v107) if v64.Exsanguinated(v106,v107) then return true;end return false;end;v64.ExsanguinatedRate=function(v108,v109) if v64.Exsanguinated(v108,v109) then return 256 -(163 + 91) ;end return 1931 -(1869 + 61) ;end;v47:RegisterForSelfCombatEvent(function(v110,v110,v110,v110,v110,v110,v110,v111,v110,v110,v110,v112) if (v112==(56100 + 144706)) then for v155,v156 in v69(v76) do for v157,v158 in v69(v156) do if (v157==v111) then v156[v157]=true;end end end end end,v0[154 -110 ]);v47:RegisterForSelfCombatEvent(function(v113,v113,v113,v113,v113,v113,v113,v114,v113,v113,v113,v115) if (v115==(186481 -65070)) then v76.CrimsonTempest[v114]=false;elseif (v115==(97 + 606)) then v76.Garrote[v114]=false;elseif (v115==(2669 -726)) then v76.Rupture[v114]=false;end end,v0[47 + 2 ],v0[1524 -(1329 + 145) ]);v47:RegisterForSelfCombatEvent(function(v116,v116,v116,v116,v116,v116,v116,v117,v116,v116,v116,v118) if (v118==(122382 -(140 + 831))) then if (v76.CrimsonTempest[v117]~=nil) then v76.CrimsonTempest[v117]=nil;end elseif (v118==(2553 -(1409 + 441))) then if (v76.Garrote[v117]~=nil) then v76.Garrote[v117]=nil;end elseif (v118==(2661 -(15 + 703))) then if (v76.Rupture[v117]~=nil) then v76.Rupture[v117]=nil;end end end,v0[27 + 31 ]);v47:RegisterForCombatEvent(function(v119,v119,v119,v119,v119,v119,v119,v120) if (v76.CrimsonTempest[v120]~=nil) then v76.CrimsonTempest[v120]=nil;end if (v76.Garrote[v120]~=nil) then v76.Garrote[v120]=nil;end if (v76.Rupture[v120]~=nil) then v76.Rupture[v120]=nil;end end,v0[504 -(262 + 176) ],v0[1788 -(345 + 1376) ]);end do local v80=v61(196315 -(198 + 490) );local v81=0 -0 ;local v82=v72();v64.FanTheHammerCP=function() if (((v72() -v82)<(0.5 -0)) and (v81>(1206 -(696 + 510)))) then if (v81>v51:ComboPoints()) then return v81;else v81=0 -0 ;end end return 1262 -(1091 + 171) ;end;v47:RegisterForSelfCombatEvent(function(v121,v121,v121,v121,v121,v121,v121,v121,v121,v121,v121,v122,v121,v121,v123,v124) if (v122==(29894 + 155869)) then if ((v72() -v82)>(0.5 -0)) then v81=v67(v64.CPMaxSpend(),v51:ComboPoints() + v123 + (v66(0 -0 ,v123-(375 -(123 + 251)) ) * v67(9 -7 ,v51:BuffStack(v80) -(699 -(208 + 490)) )) );v82=v72();end end end,v0[7 + 67 ]);end do local v84,v85=0 + 0 ,836 -(660 + 176) ;local v86=v61(33392 + 244533 );v64.TimeToNextTornado=function() if  not v51:BuffUp(v86,nil,true) then return 202 -(14 + 188) ;end local v125=v51:BuffRemains(v86,nil,true)%(676 -(534 + 141)) ;if (v72()==v84) then return 0 + 0 ;elseif (((v72() -v84)<(0.1 + 0)) and (v125<(0.25 + 0))) then return 1 -0 ;elseif (((v125>(0.9 -0)) or (v125==(0 -0))) and ((v72() -v84)>(0.75 + 0))) then return 0.1 + 0 ;end return v125;end;v47:RegisterForSelfCombatEvent(function(v126,v126,v126,v126,v126,v126,v126,v126,v126,v126,v126,v127) if (v127==(213139 -(115 + 281))) then v84=v72();elseif (v127==(460171 -262336)) then v85=v72();end if (v85==v84) then v84=0 + 0 ;end end,v0[190 -111 ]);end do local v88={[v0[293 -213 ]]=867 -(550 + 317) ,[v0[116 -35 ]]=0 -0 ,[v0[229 -147 ]]=285 -(134 + 151) };v64.TimeToSht=function(v128) if (v88.Counter>=v128) then return 1665 -(970 + 695) ;end local v129,v130=v71(v0[162 -77 ]);local v131=v66(v88.LastMH + v129 ,v72());local v132=v66(v88.LastOH + v130 ,v72());local v133={};for v145=1990 -(582 + 1408) ,6 -4  do v70(v133,v131 + (v145 * v129) );v70(v133,v132 + (v145 * v130) );end table.sort(v133);local v134=v67(6 -1 ,v66(3 -2 ,v128-v88.Counter ));return v133[v134] -v72() ;end;v47:RegisterForSelfCombatEvent(function() v88.Counter=1824 -(1195 + 629) ;v88.LastMH=v72();v88.LastOH=v72();end,v0[124 -30 ]);v47:RegisterForSelfCombatEvent(function(v138,v138,v138,v138,v138,v138,v138,v138,v138,v138,v138,v139) if (v139==(197152 -(187 + 54))) then v88.Counter=780 -(162 + 618) ;end end,v0[68 + 29 ]);v47:RegisterForSelfCombatEvent(function(v140,v140,v140,v140,v140,v140,v140,v140,v140,v140,v140,v140,v140,v140,v140,v140,v140,v140,v140,v140,v140,v140,v140,v141) v88.Counter=v88.Counter + 1 + 0 ;if v141 then v88.LastOH=v72();else v88.LastMH=v72();end end,v0[219 -116 ]);v47:RegisterForSelfCombatEvent(function(v143,v143,v143,v143,v143,v143,v143,v143,v143,v143,v143,v143,v143,v143,v143,v144) if v144 then v88.LastOH=v72();else v88.LastMH=v72();end end,v0[179 -72 ]);end do local v90=v51:CritChancePct();local v91=0 + 0 ;local function v92() if  not v51:AffectingCombat() then v90=v51:CritChancePct();v47.Debug(v0[1748 -(1373 + 263) ]   .. v90 );end if ((v91==nil) or (v91<(1000 -(451 + 549)))) then v91=0 + 0 ;else v91=v91-(1 -0) ;end if (v91>(0 -0)) then v65.After(1387 -(746 + 638) ,v92);end end v47:RegisterForEvent(function() if (v91==(0 + 0)) then v65.After(4 -1 ,v92);v91=343 -(218 + 123) ;end end,v0[1697 -(1535 + 46) ]);v64.BaseAttackCrit=function() return v90;end;end end;return v36[v0[118 + 0 ]](...);
+local v0, v1 = ...;
+local v2 = HeroLib;
+local v3, v4 = HeroCache, v2.Utils;
+local v5 = v2.Unit;
+local v6, v7, v8 = v5.Player, v5.Pet, v5.Target;
+local v9, v10 = v5.Focus, v5.MouseOver;
+local v11, v12, v13 = v5.Arena, v5.Boss, v5.Nameplate;
+local v14, v15 = v5.Party, v5.Raid;
+local v16 = v2.Spell;
+local v17 = v2.Item;
+local v18 = HeroRotation();
+local v19 = v18.Commons().Rogue;
+local v20 = C_Timer;
+local v21 = math.max;
+local v22 = math.min;
+local v23 = math.abs;
+local v24 = pairs;
+local v25 = table.insert;
+local v26 = UnitAttackSpeed;
+local v27 = GetTime;
+do
+	local v28 = v27();
+	v19.RtBRemains = function(v48)
+		local v49 = (v28 - v27()) - v2.RecoveryOffset(v48);
+		return ((v49 >= (0 - 0)) and v49) or (0 - 0);
+	end;
+	v2:RegisterForSelfCombatEvent(function(v50, v50, v50, v50, v50, v50, v50, v50, v50, v50, v50, v51)
+		if (v51 == (609035 - 293527)) then
+			v28 = v27() + (77 - 47);
+		end
+	end, "SPELL_AURA_APPLIED");
+	v2:RegisterForSelfCombatEvent(function(v52, v52, v52, v52, v52, v52, v52, v52, v52, v52, v52, v53)
+		if (v53 == (316127 - (555 + 64))) then
+			v28 = v27() + v22(971 - (857 + 74), (598 - (367 + 201)) + v19.RtBRemains(true));
+		end
+	end, "SPELL_AURA_REFRESH");
+	v2:RegisterForSelfCombatEvent(function(v54, v54, v54, v54, v54, v54, v54, v54, v54, v54, v54, v55)
+		if (v55 == (316435 - (214 + 713))) then
+			v28 = v27();
+		end
+	end, "SPELL_AURA_REMOVED");
+end
+do
+	local v30 = {CrimsonTempest={},Garrote={},Rupture={}};
+	v19.Exsanguinated = function(v56, v57)
+		local v58 = v56:GUID();
+		if not v58 then
+			return false;
+		end
+		local v59 = v57:ID();
+		if (v59 == (30391 + 91020)) then
+			return v30.CrimsonTempest[v58] or false;
+		elseif (v59 == (111 + 592)) then
+			return v30.Garrote[v58] or false;
+		elseif (v59 == (2820 - (282 + 595))) then
+			return v30.Rupture[v58] or false;
+		end
+		return false;
+	end;
+	v19.WillLoseExsanguinate = function(v60, v61)
+		if v19.Exsanguinated(v60, v61) then
+			return true;
+		end
+		return false;
+	end;
+	v19.ExsanguinatedRate = function(v62, v63)
+		if v19.Exsanguinated(v62, v63) then
+			return 1639 - (1523 + 114);
+		end
+		return 1 + 0;
+	end;
+	v2:RegisterForSelfCombatEvent(function(v64, v64, v64, v64, v64, v64, v64, v65, v64, v64, v64, v66)
+		if (v66 == (286266 - 85460)) then
+			for v109, v110 in v24(v30) do
+				for v111, v112 in v24(v110) do
+					if (v111 == v65) then
+						v110[v111] = true;
+					end
+				end
+			end
+		end
+	end, "SPELL_CAST_SUCCESS");
+	v2:RegisterForSelfCombatEvent(function(v67, v67, v67, v67, v67, v67, v67, v68, v67, v67, v67, v69)
+		if (v69 == (122476 - (68 + 997))) then
+			v30.CrimsonTempest[v68] = false;
+		elseif (v69 == (1973 - (226 + 1044))) then
+			v30.Garrote[v68] = false;
+		elseif (v69 == (8460 - 6517)) then
+			v30.Rupture[v68] = false;
+		end
+	end, "SPELL_AURA_APPLIED", "SPELL_AURA_REFRESH");
+	v2:RegisterForSelfCombatEvent(function(v70, v70, v70, v70, v70, v70, v70, v71, v70, v70, v70, v72)
+		if (v72 == (121528 - (32 + 85))) then
+			if (v30.CrimsonTempest[v71] ~= nil) then
+				v30.CrimsonTempest[v71] = nil;
+			end
+		elseif (v72 == (689 + 14)) then
+			if (v30.Garrote[v71] ~= nil) then
+				v30.Garrote[v71] = nil;
+			end
+		elseif (v72 == (431 + 1512)) then
+			if (v30.Rupture[v71] ~= nil) then
+				v30.Rupture[v71] = nil;
+			end
+		end
+	end, "SPELL_AURA_REMOVED");
+	v2:RegisterForCombatEvent(function(v73, v73, v73, v73, v73, v73, v73, v74)
+		if (v30.CrimsonTempest[v74] ~= nil) then
+			v30.CrimsonTempest[v74] = nil;
+		end
+		if (v30.Garrote[v74] ~= nil) then
+			v30.Garrote[v74] = nil;
+		end
+		if (v30.Rupture[v74] ~= nil) then
+			v30.Rupture[v74] = nil;
+		end
+	end, "UNIT_DIED", "UNIT_DESTROYED");
+end
+do
+	local v34 = v16(196584 - (892 + 65));
+	local v35 = 0 - 0;
+	local v36 = v27();
+	v19.FanTheHammerCP = function()
+		if (((v27() - v36) < (0.5 - 0)) and (v35 > (0 - 0))) then
+			if (v35 > v6:ComboPoints()) then
+				return v35;
+			else
+				v35 = 350 - (87 + 263);
+			end
+		end
+		return 180 - (67 + 113);
+	end;
+	v2:RegisterForSelfCombatEvent(function(v75, v75, v75, v75, v75, v75, v75, v75, v75, v75, v75, v76, v75, v75, v77, v78)
+		if (v76 == (136215 + 49548)) then
+			if ((v27() - v36) > (0.5 - 0)) then
+				v35 = v22(v19.CPMaxSpend(), v6:ComboPoints() + v77 + (v21(0 + 0, v77 - (3 - 2)) * v22(954 - (802 + 150), v6:BuffStack(v34) - (2 - 1))));
+				v36 = v27();
+			end
+		end
+	end, "SPELL_ENERGIZE");
+end
+do
+	local v38, v39 = 0 - 0, 0 + 0;
+	local v40 = v16(278922 - (915 + 82));
+	v19.TimeToNextTornado = function()
+		if not v6:BuffUp(v40, nil, true) then
+			return 0 - 0;
+		end
+		local v79 = v6:BuffRemains(v40, nil, true) % (1 + 0);
+		if (v27() == v38) then
+			return 0 - 0;
+		elseif (((v27() - v38) < (1187.1 - (1069 + 118))) and (v79 < (0.25 - 0))) then
+			return 1 - 0;
+		elseif (((v79 > (0.9 + 0)) or (v79 == (0 - 0))) and ((v27() - v38) > (0.75 + 0))) then
+			return 791.1 - (368 + 423);
+		end
+		return v79;
+	end;
+	v2:RegisterForSelfCombatEvent(function(v80, v80, v80, v80, v80, v80, v80, v80, v80, v80, v80, v81)
+		if (v81 == (668582 - 455839)) then
+			v38 = v27();
+		elseif (v81 == (197853 - (10 + 8))) then
+			v39 = v27();
+		end
+		if (v39 == v38) then
+			v38 = 0 - 0;
+		end
+	end, "SPELL_CAST_SUCCESS");
+end
+do
+	local v42 = {Counter=(442 - (416 + 26)),LastMH=(0 - 0),LastOH=(0 + 0)};
+	v19.TimeToSht = function(v82)
+		if (v42.Counter >= v82) then
+			return 0 - 0;
+		end
+		local v83, v84 = v26("player");
+		local v85 = v21(v42.LastMH + v83, v27());
+		local v86 = v21(v42.LastOH + v84, v27());
+		local v87 = {};
+		for v99 = 438 - (145 + 293), 432 - (44 + 386) do
+			v25(v87, v85 + (v99 * v83));
+			v25(v87, v86 + (v99 * v84));
+		end
+		table.sort(v87);
+		local v88 = v22(1491 - (998 + 488), v21(1 + 0, v82 - v42.Counter));
+		return v87[v88] - v27();
+	end;
+	v2:RegisterForSelfCombatEvent(function()
+		v42.Counter = 0 + 0;
+		v42.LastMH = v27();
+		v42.LastOH = v27();
+	end, "PLAYER_ENTERING_WORLD");
+	v2:RegisterForSelfCombatEvent(function(v92, v92, v92, v92, v92, v92, v92, v92, v92, v92, v92, v93)
+		if (v93 == (197683 - (201 + 571))) then
+			v42.Counter = 1138 - (116 + 1022);
+		end
+	end, "SPELL_ENERGIZE");
+	v2:RegisterForSelfCombatEvent(function(v94, v94, v94, v94, v94, v94, v94, v94, v94, v94, v94, v94, v94, v94, v94, v94, v94, v94, v94, v94, v94, v94, v94, v95)
+		v42.Counter = v42.Counter + (4 - 3);
+		if v95 then
+			v42.LastOH = v27();
+		else
+			v42.LastMH = v27();
+		end
+	end, "SWING_DAMAGE");
+	v2:RegisterForSelfCombatEvent(function(v97, v97, v97, v97, v97, v97, v97, v97, v97, v97, v97, v97, v97, v97, v97, v98)
+		if v98 then
+			v42.LastOH = v27();
+		else
+			v42.LastMH = v27();
+		end
+	end, "SWING_MISSED");
+end
+do
+	local v44 = v6:CritChancePct();
+	local v45 = 0 + 0;
+	local function v46()
+		if not v6:AffectingCombat() then
+			v44 = v6:CritChancePct();
+			v2.Debug("Base Crit Set to: " .. v44);
+		end
+		if ((v45 == nil) or (v45 < (0 - 0))) then
+			v45 = 0 - 0;
+		else
+			v45 = v45 - (860 - (814 + 45));
+		end
+		if (v45 > (0 - 0)) then
+			v20.After(1 + 2, v46);
+		end
+	end
+	v2:RegisterForEvent(function()
+		if (v45 == (0 + 0)) then
+			v20.After(888 - (261 + 624), v46);
+			v45 = 3 - 1;
+		end
+	end, "PLAYER_EQUIPMENT_CHANGED");
+	v19.BaseAttackCrit = function()
+		return v44;
+	end;
+end

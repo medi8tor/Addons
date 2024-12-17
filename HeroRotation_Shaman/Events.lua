@@ -1,1 +1,107 @@
-local v0={};local v1=string.char;local v2=string.byte;local v3=string.sub;local v4=bit32 or bit ;local v5=v4.bxor;local v6=table.concat;local v7=table.insert;local function v8(v29,v30) local v31={};for v59=1, #v29 do v7(v31,v1(v5(v2(v3(v29,v59,v59 + 1 )),v2(v3(v30,1 + (v59% #v30) ,1 + (v59% #v30) + 1 )))%256 ));end return v6(v31);end v0[1090 -(915 + 82) ]=v8("\58\194\62\129\57\213\98\132\60\192","\232\73\161\76");v0[260 -168 ]=v8("\248\12\2\202\242\149\234\9\21\199\225\139\251\12\11\207\251\142\244\24\8\213\251","\202\171\92\71\134\190");v0[54 + 37 ]=v8("\49\138\174\27\245\61\155\190\5\248\61\155\187\7\245\43\159\175","\185\98\218\235\87");v0[109 -25 ]=v8("\143\243\242\38\46\20\143\246\250\39\45\5","\75\220\163\183\106\98");v0[1249 -(1069 + 118) ]=v8("\101\71\19\54\76\80\33\38\93\75\22\32","\69\41\34\96");v0[138 -77 ]=v8("\156\68\204\161\46\85\34\224\184\66\192\182\63","\161\219\54\169\192\90\48\80");v0[128 -69 ]=v8("\53\186\194\204\136\62\21\26\171\216\201\136","\84\121\223\177\191\237\76");v0[11 + 47 ]=v8("\143\111\121\41\7\113\232\98\171\105\117\62\22","\35\200\29\28\72\115\20\154");v0[99 -43 ]=v8("\207\103\130\106\208\104\134\115\206\118\152\116\217\122\136\112\217\115","\38\156\55\199");v0[47 + 0 ]=v8("\117\237\19\208\108\71\196\205\116\252\9\221\112\72\201\209\99\249","\152\38\189\86\156\32\24\133");v0[829 -(368 + 423) ]=v8("\152\20\53\26\95\154\200\158\9\61\25\93","\155\203\68\112\86\19\197");v0[97 -66 ]=v8("\99\38\7\62\210\111\55\23\32\223\111\55\18\34\210\121\51\6\45\218\127\37\7","\158\48\118\66\114");v0[48 -(10 + 8) ]=v8("\7\135\108\58\144\25\103\1\133\104\41\157\22\118\24\158\108\50","\38\84\215\41\118\220\70");v0[80 -59 ]=v8("\16\253\15\233\208\28\238\11\246\200\28\254\31\230\223\6\254\25","\156\67\173\74\165");v0[442 -(416 + 26) ]=v8("\194\192\201\44\246\175\137\18\196\194","\126\177\163\187\69\134\219\167");local v24=...;local v25={};local v26=require;local function v27(v32,...) local v33=v25[v32];if  not v33 then return v26(v32,v24,...);end return v33(v24,...);end v25[v0[0 -0 ]]=function(...) local v34,v35=...;local v36=HeroLib;local v37=HeroRotation();local v38=HeroCache;local v39=v36.Unit;local v40=v39.Player;local v41=v39.Target;local v42=v36.Spell;local v43=v36.Item;local v44=GetTime;local v45=C_Timer;local v46=select;v37.Commons().Shaman={};local v48=v37.Commons().Shaman;v48.LastSKCast=0 + 0 ;v48.LastSKBuff=0 -0 ;v48.LastRollingThunderTick=438 -(145 + 293) ;v48.FeralSpiritCount=430 -(44 + 386) ;v48.CracklingSurgeStacks=1486 -(998 + 488) ;v48.IcyEdgeStacks=0 + 0 ;v48.MoltenWeaponStacks=0 + 0 ;v48.TempestMaelstrom=772 -(201 + 571) ;v36:RegisterForSelfCombatEvent(function(...) local v60,v61,v61,v61,v61,v61,v61,v61,v62=v46(1142 -(116 + 1022) ,...);if ((v60==v40:GUID()) and (v62==(797823 -606189))) then v48.LastSKCast=v44();end end,v0[13 + 8 ]);v36:RegisterForSelfCombatEvent(function(...) local v63,v64,v64,v64,v65=v46(29 -21 ,...);if ((v63==v40:GUID()) and (v65==(680509 -488875))) then v48.LastSKBuff=v44();v45.After(859.1 -(814 + 45) ,function() if (v48.LastSKBuff~=v48.LastSKCast) then v48.LastRollingThunderTick=v48.LastSKBuff;end end);end end,v0[73 -43 ],v0[2 + 29 ]);v36:RegisterForSelfCombatEvent(function(...) local v66=v46(5 + 7 ,...);if (v66==(263512 -(261 + 624))) then v48.FeralSpiritCount=v48.FeralSpiritCount + (1 -0) ;v45.After(1095 -(1020 + 60) ,function() v48.FeralSpiritCount=v48.FeralSpiritCount-(1424 -(630 + 793)) ;end);end end,v0[128 -90 ]);v36:RegisterForCombatEvent(function(...) local v67,v68,v68,v68,v69=v46(37 -29 ,...);if (v67==v40:GUID()) then if (v69==(88269 + 135856)) then v48.MoltenWeaponStacks=v48.MoltenWeaponStacks + (3 -2) ;elseif (v69==(225873 -(760 + 987))) then v48.IcyEdgeStacks=v48.IcyEdgeStacks + (1914 -(1789 + 124)) ;elseif (v69==(224893 -(745 + 21))) then v48.CracklingSurgeStacks=v48.CracklingSurgeStacks + 1 + 0 ;end end end,v0[129 -82 ]);v36:RegisterForCombatEvent(function(...) local v70,v71,v71,v71,v72=v46(31 -23 ,...);if (v70==v40:GUID()) then if (v72==(1833 + 222292)) then v48.MoltenWeaponStacks=v48.MoltenWeaponStacks-(1 + 0) ;elseif (v72==(225181 -(87 + 968))) then v48.IcyEdgeStacks=v48.IcyEdgeStacks-(4 -3) ;elseif (v72==(203343 + 20784)) then v48.CracklingSurgeStacks=v48.CracklingSurgeStacks-(2 -1) ;end end end,v0[1469 -(447 + 966) ]);v48.FireElemental={[v0[158 -100 ]]=false,[v0[1876 -(1703 + 114) ]]=false};v48.StormElemental={[v0[762 -(376 + 325) ]]=false,[v0[100 -38 ]]=false};v36:RegisterForSelfCombatEvent(function(...) local v73,v74,v74,v74,v75=v46(24 -16 ,...);if ((v75==(53896 + 134696)) or (v75==(260533 -142242))) then v48.FireElemental.GreaterActive=true;v45.After(44 -(9 + 5) ,function() v48.FireElemental.GreaterActive=false;end);elseif ((v75==(463368 -(85 + 291))) or (v75==(464256 -(243 + 1022)))) then v48.FireElemental.LesserActive=true;v45.After(57 -42 ,function() v48.FireElemental.LesserActive=false;end);elseif ((v75==(129767 + 27532)) or (v75==(158499 -(1123 + 57)))) then v48.StormElemental.GreaterActive=true;v45.After(25 + 5 ,function() v48.StormElemental.GreaterActive=false;end);elseif ((v75==(463247 -(163 + 91))) or (v75==(464920 -(1869 + 61)))) then v48.StormElemental.LesserActive=true;v45.After(5 + 10 ,function() v48.StormElemental.LesserActive=false;end);end end,v0[295 -211 ]);v36:RegisterForSelfCombatEvent(function(...) local v76=v46(17 -5 ,...);if (v76==(47097 + 297082)) then v48.TempestMaelstrom=v48.TempestMaelstrom + (1 -0) ;if (v48.TempestMaelstrom>=(38 + 2)) then v48.TempestMaelstrom=v48.TempestMaelstrom-(1514 -(1329 + 145)) ;end end end,v0[1062 -(140 + 831) ],v0[1942 -(1409 + 441) ]);end;return v25[v0[811 -(15 + 703) ]](...);
+local v0, v1 = ...;
+local v2 = HeroLib;
+local v3 = HeroRotation();
+local v4 = HeroCache;
+local v5 = v2.Unit;
+local v6 = v5.Player;
+local v7 = v5.Target;
+local v8 = v2.Spell;
+local v9 = v2.Item;
+local v10 = GetTime;
+local v11 = C_Timer;
+local v12 = select;
+v3.Commons().Shaman = {};
+local v14 = v3.Commons().Shaman;
+v14.LastSKCast = 0 - 0;
+v14.LastSKBuff = 0 - 0;
+v14.LastRollingThunderTick = 0 - 0;
+v14.FeralSpiritCount = 0 - 0;
+v14.CracklingSurgeStacks = 619 - (555 + 64);
+v14.IcyEdgeStacks = 931 - (857 + 74);
+v14.MoltenWeaponStacks = 568 - (367 + 201);
+v14.TempestMaelstrom = 927 - (214 + 713);
+v2:RegisterForSelfCombatEvent(function(...)
+	local v25, v26, v26, v26, v26, v26, v26, v26, v27 = v12(2 + 2, ...);
+	if ((v25 == v6:GUID()) and (v27 == (30139 + 161495))) then
+		v14.LastSKCast = v10();
+	end
+end, "SPELL_CAST_SUCCESS");
+v2:RegisterForSelfCombatEvent(function(...)
+	local v28, v29, v29, v29, v30 = v12(885 - (282 + 595), ...);
+	if ((v28 == v6:GUID()) and (v30 == (193271 - (1523 + 114)))) then
+		v14.LastSKBuff = v10();
+		v11.After(0.1 + 0, function()
+			if (v14.LastSKBuff ~= v14.LastSKCast) then
+				v14.LastRollingThunderTick = v14.LastSKBuff;
+			end
+		end);
+	end
+end, "SPELL_AURA_APPLIED", "SPELL_AURA_APPLIED_DOSE");
+v2:RegisterForSelfCombatEvent(function(...)
+	local v31 = v12(16 - 4, ...);
+	if (v31 == (263692 - (68 + 997))) then
+		v14.FeralSpiritCount = v14.FeralSpiritCount + (1271 - (226 + 1044));
+		v11.After(65 - 50, function()
+			v14.FeralSpiritCount = v14.FeralSpiritCount - (118 - (32 + 85));
+		end);
+	end
+end, "SPELL_SUMMON");
+v2:RegisterForCombatEvent(function(...)
+	local v32, v33, v33, v33, v34 = v12(8 + 0, ...);
+	if (v32 == v6:GUID()) then
+		if (v34 == (49701 + 174424)) then
+			v14.MoltenWeaponStacks = v14.MoltenWeaponStacks + (958 - (892 + 65));
+		elseif (v34 == (534659 - 310533)) then
+			v14.IcyEdgeStacks = v14.IcyEdgeStacks + (1 - 0);
+		elseif (v34 == (411458 - 187331)) then
+			v14.CracklingSurgeStacks = v14.CracklingSurgeStacks + (351 - (87 + 263));
+		end
+	end
+end, "SPELL_AURA_APPLIED");
+v2:RegisterForCombatEvent(function(...)
+	local v35, v36, v36, v36, v37 = v12(188 - (67 + 113), ...);
+	if (v35 == v6:GUID()) then
+		if (v37 == (164345 + 59780)) then
+			v14.MoltenWeaponStacks = v14.MoltenWeaponStacks - (2 - 1);
+		elseif (v37 == (164834 + 59292)) then
+			v14.IcyEdgeStacks = v14.IcyEdgeStacks - (3 - 2);
+		elseif (v37 == (225079 - (802 + 150))) then
+			v14.CracklingSurgeStacks = v14.CracklingSurgeStacks - (2 - 1);
+		end
+	end
+end, "SPELL_AURA_REMOVED");
+v14.FireElemental = {GreaterActive=false,LesserActive=false};
+v14.StormElemental = {GreaterActive=false,LesserActive=false};
+v2:RegisterForSelfCombatEvent(function(...)
+	local v38, v39, v39, v39, v40 = v12(14 - 6, ...);
+	if ((v40 == (137275 + 51317)) or (v40 == (119288 - (915 + 82)))) then
+		v14.FireElemental.GreaterActive = true;
+		v11.After(84 - 54, function()
+			v14.FireElemental.GreaterActive = false;
+		end);
+	elseif ((v40 == (269715 + 193277)) or (v40 == (608898 - 145907))) then
+		v14.FireElemental.LesserActive = true;
+		v11.After(1202 - (1069 + 118), function()
+			v14.FireElemental.LesserActive = false;
+		end);
+	elseif ((v40 == (356865 - 199566)) or (v40 == (344130 - 186811))) then
+		v14.StormElemental.GreaterActive = true;
+		v11.After(6 + 24, function()
+			v14.StormElemental.GreaterActive = false;
+		end);
+	elseif ((v40 == (822645 - 359652)) or (v40 == (459286 + 3704))) then
+		v14.StormElemental.LesserActive = true;
+		v11.After(806 - (368 + 423), function()
+			v14.StormElemental.LesserActive = false;
+		end);
+	end
+end, "SPELL_SUMMON");
+v2:RegisterForSelfCombatEvent(function(...)
+	local v41 = v12(37 - 25, ...);
+	if (v41 == (344197 - (10 + 8))) then
+		v14.TempestMaelstrom = v14.TempestMaelstrom + (3 - 2);
+		if (v14.TempestMaelstrom >= (482 - (416 + 26))) then
+			v14.TempestMaelstrom = v14.TempestMaelstrom - (127 - 87);
+		end
+	end
+end, "SPELL_AURA_APPLIED", "SPELL_AURA_APPLIED_DOSE");

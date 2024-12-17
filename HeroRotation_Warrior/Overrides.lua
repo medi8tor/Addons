@@ -1,1 +1,73 @@
-local v0={};local v1=string.char;local v2=string.byte;local v3=string.sub;local v4=bit32 or bit ;local v5=v4.bxor;local v6=table.concat;local v7=table.insert;local function v8(v21,v22) local v23={};for v45=1, #v21 do v7(v23,v1(v5(v2(v3(v21,v45,v45 + 1 )),v2(v3(v22,1 + (v45% #v22) ,1 + (v45% #v22) + 1 )))%256 ));end return v6(v23);end v0[86 -28 ]=v8("\239\84\181\79\236\67\233\74\233\86","\38\156\55\199");v0[558 -(232 + 281) ]=v8("\117\205\51\240\76\54\204\235\101\220\37\232\65\122\233\253","\152\38\189\86\156\32\24\133");v0[1290 -(976 + 277) ]=v8("\152\52\21\58\127\235\210\184\22\21\55\119\188","\155\203\68\112\86\19\197");v0[988 -(892 + 65) ]=v8("\99\6\39\30\242\30\63\49\49\255\67\2\35\16\242\85","\158\48\118\66\114");v0[51 -29 ]=v8("\1\185\64\2\242\2\67\54\162\79\16\137\54","\38\84\215\41\118\220\70");v0[29 -13 ]=v8("\16\221\47\201\240\109\228\57\230\253\48\217\43\199\240\38","\156\67\173\74\165");v0[0 -0 ]=v8("\194\192\201\44\246\175\137\18\196\194","\126\177\163\187\69\134\219\167");local v16=...;local v17={};local v18=require;local function v19(v24,...) local v25=v17[v24];if  not v25 then return v18(v24,v16,...);end return v25(v16,...);end v17[v0[350 -(87 + 263) ]]=function(...) local v26=HeroLib;local v27=HeroCache;local v28=v26.Unit;local v29=v28.Player;local v30=v28.Pet;local v31=v28.Target;local v32=v26.Spell;local v33=v26.Item;local v34=HeroRotation();local v35=v34.Commons().Warrior;local v36=v32.Warrior.Fury;local v37=v32.Warrior.Arms;local v38=v32.Warrior.Protection;local v39=GetTime;local v40;v40=v26.AddCoreOverride(v0[196 -(67 + 113) ],function(v46,v47,v48,v49,v50,v51) local v52=v40(v46,v47,v48,v49,v50,v51);if (v46==v37.Charge) then return v52 and (v46:Charges()>=(1 + 0)) and  not v31:IsInRange(19 -11 ) and v31:IsInRange(19 + 6 ) ;else return v52;end end,282 -211 );local v41;v41=v26.AddCoreOverride(v0[974 -(802 + 150) ],function(v53,v54,v55,v56) local v57=v41(v53,v54,v55,v56);if (v54==v37.RavagerDebuff) then if v35.Ravager[v53:GUID()] then return (v35.Ravager[v53:GUID()] -v39())<(v37.Ravager:TickTime() + (0.2 -0)) ;else return false;end else return v57;end end,128 -57 );local v42;v42=v26.AddCoreOverride(v0[23 + 8 ],function(v58,v59,v60,v61,v62,v63) local v64=v42(v58,v59,v60,v61,v62,v63);if (v58==v36.Charge) then return v64 and (v58:Charges()>=(998 -(915 + 82))) and  not v31:IsInRange(22 -14 ) and v31:IsInRange(15 + 10 ) ;else return v64;end end,94 -22 );local v43;v43=v26.AddCoreOverride(v0[1224 -(1069 + 118) ],function(v65,v66,v67,v68,v69,v70) local v71=v43(v65,v66,v67,v68,v69,v70);if (v65==v36.Rampage) then if v29:PrevGCDP(2 -1 ,v36.Bladestorm) then return v65:IsCastable() and (v29:Rage()>=v65:Cost()) ;else return v71;end else return v71;end end,156 -84 );local v44;v44=v26.AddCoreOverride(v0[8 + 37 ],function(v72,v73,v74,v75,v76,v77) local v78=v44(v72,v73,v74,v75,v76,v77);if (v72==v38.Charge) then return v78 and (v72:Charges()>=(1 -0)) and  not v31:IsInRange(8 + 0 ) ;elseif ((v72==v38.HeroicThrow) or (v72==v38.TitanicThrow)) then return v78 and  not v31:IsInRange(799 -(368 + 423) ) ;elseif (v72==v38.Avatar) then return v78 and (v29:BuffDown(v38.AvatarBuff)) ;elseif (v72==v38.Intervene) then return v78 and (v29:IsInParty() or v29:IsInRaid()) ;else return v78;end end,229 -156 );end;return v17[v0[76 -(10 + 8) ]](...);
+local v0 = HeroLib;
+local v1 = HeroCache;
+local v2 = v0.Unit;
+local v3 = v2.Player;
+local v4 = v2.Pet;
+local v5 = v2.Target;
+local v6 = v0.Spell;
+local v7 = v0.Item;
+local v8 = HeroRotation();
+local v9 = v8.Commons().Warrior;
+local v10 = v6.Warrior.Fury;
+local v11 = v6.Warrior.Arms;
+local v12 = v6.Warrior.Protection;
+local v13 = GetTime;
+local v14;
+v14 = v0.AddCoreOverride("Spell.IsCastable", function(v19, v20, v21, v22, v23, v24)
+	local v25 = v14(v19, v20, v21, v22, v23, v24);
+	if (v19 == v11.Charge) then
+		return v25 and (v19:Charges() >= (2 - 1)) and not v5:IsInRange(22 - 14) and v5:IsInRange(47 - 22);
+	else
+		return v25;
+	end
+end, 182 - 111);
+local v15;
+v15 = v0.AddCoreOverride("Unit.DebuffUp", function(v26, v27, v28, v29)
+	local v30 = v15(v26, v27, v28, v29);
+	if (v27 == v11.RavagerDebuff) then
+		if v9.Ravager[v26:GUID()] then
+			return (v9.Ravager[v26:GUID()] - v13()) < (v11.Ravager:TickTime() + (619.2 - (555 + 64)));
+		else
+			return false;
+		end
+	else
+		return v30;
+	end
+end, 1002 - (857 + 74));
+local v16;
+v16 = v0.AddCoreOverride("Spell.IsCastable", function(v31, v32, v33, v34, v35, v36)
+	local v37 = v16(v31, v32, v33, v34, v35, v36);
+	if (v31 == v10.Charge) then
+		return v37 and (v31:Charges() >= (569 - (367 + 201))) and not v5:IsInRange(935 - (214 + 713)) and v5:IsInRange(7 + 18);
+	else
+		return v37;
+	end
+end, 12 + 60);
+local v17;
+v17 = v0.AddCoreOverride("Spell.IsReady", function(v38, v39, v40, v41, v42, v43)
+	local v44 = v17(v38, v39, v40, v41, v42, v43);
+	if (v38 == v10.Rampage) then
+		if v3:PrevGCDP(878 - (282 + 595), v10.Bladestorm) then
+			return v38:IsCastable() and (v3:Rage() >= v38:Cost());
+		else
+			return v44;
+		end
+	else
+		return v44;
+	end
+end, 1709 - (1523 + 114));
+local v18;
+v18 = v0.AddCoreOverride("Spell.IsCastable", function(v45, v46, v47, v48, v49, v50)
+	local v51 = v18(v45, v46, v47, v48, v49, v50);
+	if (v45 == v12.Charge) then
+		return v51 and (v45:Charges() >= (1 + 0)) and not v5:IsInRange(11 - 3);
+	elseif ((v45 == v12.HeroicThrow) or (v45 == v12.TitanicThrow)) then
+		return v51 and not v5:IsInRange(1073 - (68 + 997));
+	elseif (v45 == v12.Avatar) then
+		return v51 and (v3:BuffDown(v12.AvatarBuff));
+	elseif (v45 == v12.Intervene) then
+		return v51 and (v3:IsInParty() or v3:IsInRaid());
+	else
+		return v51;
+	end
+end, 1343 - (226 + 1044));
