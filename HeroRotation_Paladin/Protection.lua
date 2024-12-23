@@ -200,7 +200,7 @@ local function v61()
 			return "word_of_glory defensive 8";
 		end
 	end
-	if ((v6:HealthPercentageWeighted() <= v47.ProtectionDefensives.BubbleHP) and v20.DivineShield:IsCastable() and v6:DebuffDown(v20.ForbearanceDebuff)) then
+	if ((v6:HealthPercentageWeighted() <= v47.ProtectionDefensives.BubbleHP) and v20.DivineShield:IsCastable() and v6:DebuffDown(v20.ForbearanceDebuff) and v6:IncomingSpell(v45.TankBustersList2) and not v51()) then
 		if v15(v20.DivineShield, nil) then
 			return "Divine Shield defensive";
 		end
