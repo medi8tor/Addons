@@ -811,7 +811,7 @@ local function v116()
 			return v35;
 		end
 	end
-	if (not v6:IsMounted() and (v18.TargetIsValid() or v6:AffectingCombat() or v89)) then
+	if (not v6:IsMounted() and not v6:IsChanneling() and (v18.TargetIsValid() or v6:AffectingCombat() or v89)) then
 		if v90 then
 			v35 = v18.InterruptCycle(v24.Rebuke, 1744 - (404 + 1335), true, nil, false, false);
 			if v35 then
@@ -915,8 +915,9 @@ local function v116()
 		if v35 then
 			return v35;
 		end
-		if (v18.TargetIsValid() or v6:AffectingCombat()) then
-			v35 = v115();
+		v35 = v115();
+		if v35 then
+			return v35;
 		end
 		if v35 then
 			return v35;
