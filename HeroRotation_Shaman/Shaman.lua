@@ -30,6 +30,14 @@ v9.Shaman.Restoration = v12(v9.Shaman.Restoration, v9.Shaman.Totemic);
 if not v11.Shaman then
 	v11.Shaman = {};
 end
+
+
+
+
+
+
+
+
 v11.Shaman.Commons = {SpymastersWeb=v11(637692 - 417490, {(22 - 9),(12 + 2)}),AlgetharPuzzleBox=v11(28014 + 165687, {(78 - (30 + 35)),(1271 - (1043 + 214))}),BeacontotheBeyond=v11(771113 - 567150, {(34 - 21),(334 - (53 + 267))}),ElementiumPocketAnvil=v11(45776 + 156841, {(995 - (18 + 964)),(9 + 5)}),ManicGrieftorch=v11(122422 + 71886, {(11 + 2),(2 + 12)}),ScreamingBlackDragonScale=v11(203350 - (542 + 196), {(4 + 9),(6 + 8)}),BroodkeepersPromise=v11(512016 - 317709, {(1564 - (1126 + 425)),(54 - 40)})};
 v11.Shaman.Enhancement = v12(v11.Shaman.Commons, {});
 v11.Shaman.Elemental = v12(v11.Shaman.Commons, {});
