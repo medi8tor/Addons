@@ -31,7 +31,8 @@ jobs:
       - name: Get Tag
         id: vars
         run: |
-          echo ::set-output name=tag::${GITHUB_REF#refs/*/}
+          TAG_NAME=${GITHUB_REF#refs/tags/}
+          echo ::set-output name=tag::$TAG_NAME
           echo ::set-output name=oldtag::$(git describe --abbrev=0 --tags $(git rev-list --tags --skip=1 --max-count=1))
       # Make a zip file for GitHub
       - name: Archive Release
@@ -44,7 +45,7 @@ jobs:
         id: create_release
         uses: actions/create-release@v1
         with:
-          tag_name: ${{ github.ref }}
+          tag_name: ${{ steps.vars.outputs.tag }}
           release_name: AscendedRotationsAddons
           body: |
             Changes: https://github.com/herotc/hero-rotation/compare/${{ steps.vars.outputs.oldtag }}...${{ steps.vars.outputs.tag }}
