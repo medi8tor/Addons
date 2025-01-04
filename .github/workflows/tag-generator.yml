@@ -1,0 +1,33 @@
+name: Auto Tag
+
+on:
+  push:
+    branches:
+      - '*'
+
+jobs:
+  auto_tag:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Get latest tag
+        id: get_latest_tag
+        run: |
+          git fetch --tags
+          LATEST_TAG=$(git describe --tags `git rev-list --tags --max-count=1`)
+          if [ -z "$LATEST_TAG" ]; then
+            echo "::set-output name=tag::1"
+          else
+            NEW_TAG=$((LATEST_TAG + 1))
+            echo "::set-output name=tag::$NEW_TAG"
+          fi
+
+      - name: Create new tag
+        id: create_tag
+        run: |
+          git tag ${{ steps.get_latest_tag.outputs.tag }}
+          git push origin ${{ steps.get_latest_tag.outputs.tag }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
