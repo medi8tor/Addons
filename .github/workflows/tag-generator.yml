@@ -27,7 +27,7 @@ jobs:
       - name: Create new tag
         id: create_tag
         run: |
+          git config --global user.email "actions@github.com"
+          git config --global user.name "GitHub Actions"
           git tag ${{ steps.get_latest_tag.outputs.tag }}
-          git push origin ${{ steps.get_latest_tag.outputs.tag }}
-        env:
-          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
+          git push https://x-access-token:${{ secrets.GH_PAT }}@github.com/medi8tor/Addons.git ${{ steps.get_latest_tag.outputs.tag }}
