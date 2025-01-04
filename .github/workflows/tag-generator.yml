@@ -30,4 +30,4 @@ jobs:
           git tag ${{ steps.get_latest_tag.outputs.tag }}
           git push origin ${{ steps.get_latest_tag.outputs.tag }}
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
