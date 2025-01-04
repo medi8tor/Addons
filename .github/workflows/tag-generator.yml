@@ -16,8 +16,8 @@ jobs:
         id: get_latest_tag
         run: |
           git fetch --tags
-          LATEST_TAG=$(git describe --tags `git rev-list --tags --max-count=1`)
-          if [ -z "$LATEST_TAG" ]; then
+          LATEST_TAG=$(git describe --tags `git rev-list --tags --max-count=1` 2>/dev/null || echo "0")
+          if [ "$LATEST_TAG" = "0" ]; then
             echo "::set-output name=tag::1"
           else
             NEW_TAG=$((LATEST_TAG + 1))
