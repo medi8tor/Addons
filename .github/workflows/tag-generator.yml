@@ -1,33 +1,57 @@
-name: Auto Tag
+name: Create Release
 
 on:
   push:
-    branches:
+    tags:
       - '*'
 
 jobs:
-  auto_tag:
+  release:
     runs-on: ubuntu-latest
+    env:
+      GITHUB_TOKEN: ${{ secrets.GH_PAT }}
+      WAGO_API_TOKEN: ${{ secrets.WAGO_API_TOKEN }}
     steps:
-      - name: Checkout repository
+      # Do the release checkout
+      - name: Clone Project
         uses: actions/checkout@v2
 
-      - name: Get latest tag
-        id: get_latest_tag
+      - name: Get Tag
+        id: vars
         run: |
-          git fetch --tags
-          LATEST_TAG=$(git describe --tags `git rev-list --tags --max-count=1` 2>/dev/null || echo "0")
-          if [ "$LATEST_TAG" = "0" ]; then
-            echo "::set-output name=tag::1"
-          else
-            NEW_TAG=$((LATEST_TAG + 1))
-            echo "::set-output name=tag::$NEW_TAG"
-          fi
+          TAG_NAME=${GITHUB_REF#refs/tags/}
+          echo "::set-output name=tag::$TAG_NAME"
+          echo "::set-output name=oldtag::$(git describe --abbrev=0 --tags $(git rev-list --tags --skip=1 --max-count=1))"
 
-      - name: Create new tag
-        id: create_tag
-        run: |
-          git config --global user.email "actions@github.com"
-          git config --global user.name "GitHub Actions"
-          git tag ${{ steps.get_latest_tag.outputs.tag }}
-          git push https://x-access-token:${{ secrets.GH_PAT }}@github.com/medi8tor/Addons.git ${{ steps.get_latest_tag.outputs.tag }}
+      # Make a zip file for GitHub
+      - name: Archive Release
+        uses: thedoctor0/zip-release@master
+        with:
+          filename: HeroRotation-${{ steps.vars.outputs.tag }}.zip
+          exclusions: '*.git* *.pkgmeta *.svn* .editorconfig LICENSE README.md symlink.bat symlink.sh HeroRotation_ClassTemplate HeroRotation_ClassTemplate/*'
+
+      # Create a release on GitHub
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        with:
+          tag_name: ${{ steps.vars.outputs.tag }}
+          release_name: HeroRotation
+          body: |
+            Changes: https://github.com/medi8tor/Addons/compare/${{ steps.vars.outputs.oldtag }}...${{ steps.vars.outputs.tag }}
+          draft: false
+          prerelease: false
+
+      # Upload the zip to the GitHub release
+      - name: Upload Zip
+        id: upload-zip
+        uses: actions/upload-release-asset@v1
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./HeroRotation-${{ steps.vars.outputs.tag }}.zip
+          asset_name: HeroRotation-${{ steps.vars.outputs.tag }}.zip
+          asset_content_type: application/zip
+
+      # Use the BigWigs packager for Wago output
+      - name: Package and Release
+        uses: BigWigsMods/packager@v1
