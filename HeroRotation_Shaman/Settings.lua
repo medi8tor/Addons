@@ -27,7 +27,6 @@ local v23 = v5(v20, "TTD");
 local v24 = v5(v20, "Cooldown settings");
 local v25 = v5(v14, "Restoration");
 local v26 = v5(v25, "Interrupt");
-local v1= nil
 v8(v26, "APL.Shaman.Restoration_Interrupt");
 local v27 = v5(v25, "Healing");
 local v28 = v5(v25, "Cooldowns");
