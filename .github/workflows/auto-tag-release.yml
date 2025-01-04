@@ -34,14 +34,20 @@ jobs:
         env:
           GH_PAT: ${{ secrets.GH_PAT }}
 
+      - name: Archive Release
+        uses: thedoctor0/zip-release@master
+        with:
+          filename: HeroRotation-${{ steps.get_latest_tag.outputs.tag }}.zip
+          exclusions: '*.git* *.pkgmeta *.svn* .editorconfig LICENSE README.md symlink.bat symlink.sh HeroRotation_ClassTemplate HeroRotation_ClassTemplate/*'
+
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
         with:
           tag_name: ${{ steps.get_latest_tag.outputs.tag }}
-          release_name: Release ${{ steps.get_latest_tag.outputs.tag }}
+          release_name: HeroRotation ${{ steps.get_latest_tag.outputs.tag }}
           body: |
-            Changes in this release: https://github.com/medi8tor/Addons/compare/${{ steps.get_latest_tag.outputs.tag }}...${{ steps.get_latest_tag.outputs.tag }}
+            Changes: https://github.com/medi8tor/Addons/compare/${{ steps.get_latest_tag.outputs.oldtag }}...${{ steps.get_latest_tag.outputs.tag }}
           draft: false
           prerelease: false
         env:
@@ -51,8 +57,11 @@ jobs:
         uses: actions/upload-release-asset@v1
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./path/to/your/asset.zip
-          asset_name: asset.zip
+          asset_path: ./HeroRotation-${{ steps.get_latest_tag.outputs.tag }}.zip
+          asset_name: HeroRotation-${{ steps.get_latest_tag.outputs.tag }}.zip
           asset_content_type: application/zip
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Package and Release
+        uses: BigWigsMods/packager@v1
