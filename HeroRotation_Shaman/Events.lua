@@ -22,6 +22,7 @@ v14.MoltenWeaponStacks = 568 - (367 + 201);
 v14.TempestMaelstrom = 927 - (214 + 713);
 v2:RegisterForSelfCombatEvent(function(...)
 	local v25, v26, v26, v26, v26, v26, v26, v26, v27 = v12(2 + 2, ...);
+	
 	if ((v25 == v6:GUID()) and (v27 == (30139 + 161495))) then
 		v14.LastSKCast = v10();
 	end

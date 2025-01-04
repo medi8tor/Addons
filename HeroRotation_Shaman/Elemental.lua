@@ -21,6 +21,7 @@ local v20 = GetTime;
 local v21 = math.min;
 local v22 = C_Timer.After;
 local v23 = GetWeaponEnchantInfo;
+
 local v24;
 local v25 = v9.Shaman.Elemental;
 local v26 = v11.Shaman.Elemental;
