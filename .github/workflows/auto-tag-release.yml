@@ -45,7 +45,7 @@ jobs:
         uses: actions/create-release@v1
         with:
           tag_name: ${{ steps.get_latest_tag.outputs.tag }}
-          release_name: HeroRotation ${{ steps.get_latest_tag.outputs.tag }}
+          release_name: AscendedRotation ${{ steps.get_latest_tag.outputs.tag }}
           body: |
             Changes: https://github.com/medi8tor/Addons/compare/${{ steps.get_latest_tag.outputs.oldtag }}...${{ steps.get_latest_tag.outputs.tag }}
           draft: false
