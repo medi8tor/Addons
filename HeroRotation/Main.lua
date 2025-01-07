@@ -42,8 +42,8 @@ local function v27(v57, v58, v59, v60, v61, v62, v63, v64)
 		local v141 = v21[v58];
 		if v141 then
 			if (type(v141.Icon) == "table") then
-				for v164, v165 in v16(v141.Icon) do
-					v26(v165, v64);
+				for v163, v164 in v16(v141.Icon) do
+					v26(v164, v64);
 				end
 			else
 				v26(v141, v64);
@@ -251,11 +251,11 @@ v24.MainFrame:SetScript("OnEvent", function(v98, v99, v100)
 			end
 			local v155 = v9.GetPanelByName("Scaling");
 			if v155 then
-				v10("Slider", v155, "Scaling.ScaleUI", {(0.5 - 0),(6 - 1),(780.1 - (162 + 618))}, "UI Scale", "Scale of the Icons.", function(v166)
-					v24.MainFrame:ResizeUI(v166);
+				v10("Slider", v155, "Scaling.ScaleUI", {(0.5 - 0),(6 - 1),(780.1 - (162 + 618))}, "UI Scale", "Scale of the Icons.", function(v165)
+					v24.MainFrame:ResizeUI(v165);
 				end);
-				v10("Slider", v155, "Scaling.ScaleButtons", {(0.5 + 0),(8 - 3),(1636.1 - (1373 + 263))}, "Buttons Scale", "Scale of the Buttons.", function(v167)
-					v24.MainFrame:ResizeButtons(v167);
+				v10("Slider", v155, "Scaling.ScaleButtons", {(0.5 + 0),(8 - 3),(1636.1 - (1373 + 263))}, "Buttons Scale", "Scale of the Buttons.", function(v166)
+					v24.MainFrame:ResizeButtons(v166);
 				end);
 				v10("Slider", v155, "Scaling.ScaleHotkey", {(0.5 + 0),(8 - 3),(0.1 + 0)}, "Hotkey Scale", "Scale of the Hotkeys.");
 				v10("Slider", v155, "Scaling.ScaleNameplateIcon", {(341.5 - (218 + 123)),(3 + 0),(560.1 - (306 + 254))}, "Nameplate Icon Scale", "Scale of the nameplate icon.");
@@ -378,30 +378,33 @@ v2:RegisterForEvent(function()
 	end
 end, "PLAYER_REGEN_ENABLED");
 local function v48()
-	if ((v5:HealthPercentage() < v28.General.HealthstoneLifePercent) and v5:AffectingCombat() and (v8.Common.HealthStone:IsReady() or v8.Common.HealthStone2:IsReady())) then
+	if ((v5:HealthPercentage() < v28.General.HealthstoneLifePercent) and v5:AffectingCombat() and (v8.Common.HealthStone:IsReady())) then
 		v24.CastMacro(1584 - (1183 + 397), nil, nil, v8.Common.HealthStone);
 		return "Use Healthstone";
+	elseif ((v5:HealthPercentage() < v28.General.HealthstoneLifePercent) and v5:AffectingCombat() and (v8.Common.HealthStone2:IsReady())) then
+		v24.CastMacro(30 - 20, nil, nil, v8.Common.HealthStone2);
+		return "Use Healthstone";
 	elseif ((v5:HealthPercentage() < v28.General.HealingPotionLifePercent) and v5:AffectingCombat() and (v8.Common.HealingPotion:IsReady() or v8.Common.HealingPotion2:IsReady() or v8.Common.HealingPotion3:IsReady())) then
-		v24.CastMacro(15 - 10, nil, nil, v8.Common.HealingPotion);
+		v24.CastMacro(4 + 1, nil, nil, v8.Common.HealingPotion);
 		return "Use Heal Potion";
 	elseif (v28.General.AutoTargetFocusTarget and (not v6:Exists() or v6:IsDeadOrGhost()) and v4.Focus:Exists() and v4.Focus:UnitIsFriend() and v4.Focus:AffectingCombat()) then
-		local v160 = v4("focustarget");
-		if (v160:Exists() and v160:AffectingCombat() and v5:CanAttack(v160) and not v160:IsDeadOrGhost()) then
+		local v175 = v4("focustarget");
+		if (v175:Exists() and v175:AffectingCombat() and v5:CanAttack(v175) and not v175:IsDeadOrGhost()) then
 			v24.CastMacro(6 + 1, true);
 			return "Auto asssist focus";
 		end
-	elseif (v28.General.AutoTab and v5:AffectingCombat() and (not v6:Exists() or v6:IsDeadOrGhost()) and (v6:NPCID() ~= (155322 + 52478))) then
-		v24.TopPanelAlternative:ChangeIcon(1976 - (1913 + 62), 2 + 1);
+	elseif (v28.General.AutoTab and v5:AffectingCombat() and (not v6:Exists() or v6:IsDeadOrGhost()) and (v6:NPCID() ~= (209775 - (1913 + 62)))) then
+		v24.TopPanelAlternative:ChangeIcon(1 + 0, 7 - 4);
 		return "Auto tab to target";
 	end
 end
 v24.Timer.Pause = function(v114)
 	v24.ResetIcons();
-	v24.Timer.Pulse = GetTime() + (v114 / (2647 - 1647));
+	v24.Timer.Pulse = GetTime() + (v114 / (2933 - (565 + 1368)));
 end;
 v24.CastFunction = function(v116, v117, v118)
 	local v119 = v7(v116);
-	local v120 = v118 or (2733 - (565 + 1368));
+	local v120 = v118 or (3008 - 2208);
 	if v119:IsCastable() then
 		v2.CacheHasBeenReset = false;
 		v3.Reset();
@@ -420,7 +423,7 @@ v24.Pulse = function()
 			v24.ResetIcons();
 			return;
 		end
-		local v147 = v3.Persistent.Player.Spec[3 - 2];
+		local v147 = v3.Persistent.Player.Spec[1662 - (1477 + 184)];
 		if v147 then
 			if (v24.ON() and v24.Ready()) then
 				if (UnitInBattleground("player") or v4.Arena.arena1:Exists()) then
@@ -443,10 +446,10 @@ v24.Pulse = function()
 				v24.ResetIcons();
 				v51 = true;
 				v24.Timer.Pulse = GetTime() + v2.Timer.PulseOffset;
-				local v162 = v48();
+				local v161 = v48();
 				if v24.DebugON() then
-					if v162 then
-						v23 = v162;
+					if v161 then
+						v23 = v161;
 					else
 						v23 = v24.APLs[v147]();
 					end
@@ -463,9 +466,9 @@ v24.Pulse = function()
 				v24.Timer.Pulse = GetTime() + v2.Timer.PulseOffset;
 			end
 			if v19 then
-				for v168, v169 in v16(v19) do
-					if v169 then
-						v169:ReSkin();
+				for v167, v168 in v16(v19) do
+					if v168 then
+						v168:ReSkin();
 					end
 				end
 			end

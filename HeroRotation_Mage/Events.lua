@@ -1,0 +1,13 @@
+local v0, v1 = ...;
+local v2 = HeroLib;
+local v3 = HeroCache;
+local v4 = HeroRotation();
+local v5 = v2.Unit;
+local v6 = v5.Player;
+local v7 = v5.Target;
+local v8 = v2.Spell;
+local v9 = v2.Item;
+local v10 = v4.Commons().Mage;
+local v11 = select;
+local v12 = GetTime;
+local v13 = C_Timer;
