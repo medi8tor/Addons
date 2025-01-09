@@ -203,7 +203,7 @@ local function v76(v102, v103)
 			if v102 then
 				return v32.SecretTechnique;
 			end
-			if v14.CastMacro(4 + 6, nil, nil, v32.SecretTechnique) then
+			if v14.CastMacro(4 + 7, nil, nil, v32.SecretTechnique) then
 				return "Cast Secret Technique";
 			end
 		end
@@ -693,7 +693,7 @@ local function v83()
 						end
 					end
 					if (v44:ID() == v32.SecretTechnique:ID()) then
-						if v14.CastMacro(21 - 11, nil, nil, v32.SecretTechnique) then
+						if v14.CastMacro(23 - 12, nil, nil, v32.SecretTechnique) then
 							return "Cast Secret Technique";
 						end
 					end
@@ -762,7 +762,7 @@ local function v83()
 			v44 = v77(true);
 			if v44 then
 				if (v44:ID() == v32.SecretTechnique:ID()) then
-					if v14.CastMacro(15 - 5, nil, nil, v32.SecretTechnique) then
+					if v14.CastMacro(16 - 5, nil, nil, v32.SecretTechnique) then
 						return "Cast Secret Technique";
 					end
 				end
