@@ -476,7 +476,7 @@ local function v115()
 				if (v65:DebuffDown(v24.ForbearanceDebuff) and (v65:HealthPercentage() <= v38.SpecialHealing.LoHHP) and (v65:HealthPercentage() > (0 + 0))) then
 					if (v66 == nil) then
 						v66 = v23();
-						v67 = math.random(410 - 260, 563 + 237) / (521 + 479);
+						v67 = math.random(410 - 260, 211 + 89) / (521 + 479);
 					elseif (v23() >= (v66 + v67)) then
 						if (v65:HealthPercentage() <= v38.SpecialHealing.LoHHP) then
 							v65:Cast(v24.LoH);
