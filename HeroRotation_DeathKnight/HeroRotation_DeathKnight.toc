@@ -13,5 +13,5 @@ DeathKnight.lua
 Events.lua
 Blood.lua
 #Frost.lua
-#Unholy.lua
+Unholy.lua
 Overrides.lua
