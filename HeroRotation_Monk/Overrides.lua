@@ -1,50 +1,31 @@
---- ============================ HEADER ============================
-  -- HeroLib
-  local HL      = HeroLib
-  local Cache   = HeroCache
-  local Unit    = HL.Unit
-  local Player  = Unit.Player
-  local Pet     = Unit.Pet
-  local Target  = Unit.Target
-  local Spell   = HL.Spell
-  local Item    = HL.Item
--- HeroRotation
-  local HR      = HeroRotation()
-  local Everyone = HR.Commons().Everyone
-
--- Spells
-  local SpellBM = Spell.Monk.Brewmaster
-  local SpellWW = Spell.Monk.Windwalker
--- Lua
-
---- ============================ CONTENT ============================
--- Brewmaster, ID: 268
-local BMOldSpellIsCastable
-BMOldSpellIsCastable = HL.AddCoreOverride ("Spell.IsCastable",
-  function (self, BypassRecovery, Range, AoESpell, ThisUnit, Offset)
-    local BaseCheck = BMOldSpellIsCastable(self, BypassRecovery, Range, AoESpell, ThisUnit, Offset)
-    if self == SpellBM.TouchofDeath then
-      return BaseCheck and self:IsUsable()
-    else
-      return BaseCheck
-    end
-  end
-, 268)
-
--- Windwalker, ID: 269
-
--- Mistweaver, ID: 270
-local MWIsReady
-MWIsReady = HL.AddCoreOverride("Spell.IsReady",
-  function (self, BypassRecovery, Range, AoESpell, ThisUnit, Offset)
-    local RangeOK = true
-    if Range then
-      local RangeUnit = ThisUnit or Target
-      RangeOK = RangeUnit:IsInRange(Range, AoESpell)
-    end
-    -- BaseCheck includes the range check and a global casting stop condition
-    local BaseCheck = MWIsReady(self, BypassRecovery, Range, AoESpell, ThisUnit, Offset) and Everyone.ShouldStopCast(self)
-    return BaseCheck  -- Simplified to just return the BaseCheck result
-  end,
-  270
-)
+local v0 = HeroLib;
+local v1 = HeroCache;
+local v2 = v0.Unit;
+local v3 = v2.Player;
+local v4 = v2.Pet;
+local v5 = v2.Target;
+local v6 = v0.Spell;
+local v7 = v0.Item;
+local v8 = HeroRotation();
+local v9 = v8.Commons().Everyone;
+local v10 = v6.Monk.Brewmaster;
+local v11 = v6.Monk.Windwalker;
+local v12;
+v12 = v0.AddCoreOverride("Spell.IsCastable", function(v14, v15, v16, v17, v18, v19)
+	local v20 = v12(v14, v15, v16, v17, v18, v19);
+	if (v14 == v10.TouchofDeath) then
+		return v20 and v14:IsUsable();
+	else
+		return v20;
+	end
+end, 837 - 569);
+local v13;
+v13 = v0.AddCoreOverride("Spell.IsReady", function(v21, v22, v23, v24, v25, v26)
+	local v27 = true;
+	if v23 then
+		local v29 = v25 or v5;
+		v27 = v29:IsInRange(v23, v24);
+	end
+	local v28 = v13(v21, v22, v23, v24, v25, v26) and v9.ShouldStopCast(v21);
+	return v28;
+end, 772 - 502);
