@@ -690,7 +690,7 @@ local function v98()
 		end
 	end
 	if v33.FanofKnives:IsCastable() then
-		if ((v15.AoEON() and not v56 and (v42 >= ((4 - 1) - v12(v33.MomentumOfDespair and v33.ThrownPrecision)))) or (v6:BuffUp(v33.ClearTheWitnessesBuff) and not v33.ViciousVenoms:IsAvailable())) then
+		if ((v15.AoEON() and v136 and not v56 and (v42 >= ((4 - 1) - v12(v33.MomentumOfDespair and v33.ThrownPrecision)))) or (v6:BuffUp(v33.ClearTheWitnessesBuff) and not v33.ViciousVenoms:IsAvailable())) then
 			if v19(v33.FanofKnives) then
 				return "Cast Fan of Knives";
 			end
@@ -725,7 +725,7 @@ local function v98()
 	end
 	if (v33.Mutilate:IsCastable() and v136) then
 		if v19(v33.Mutilate) then
-			return "Cast Mutilate";
+			return "Cast Mutilate Filler";
 		end
 	end
 	return false;
@@ -919,6 +919,7 @@ local function v100()
 	v33.Sepsis:RegisterAuraTracking();
 	v33.Garrote:RegisterAuraTracking();
 	v32.Assassination.Display();
+	v33.CrimsonTempest:RegisterAuraTracking();
 	v29.PostInitialMessage(176 + 83);
 end
 v15.SetAPL(577 - 318, v99, v100);
