@@ -56,9 +56,9 @@ local function v70()
 	end
 	TrinketItem1 = v101.Object;
 	TrinketItem2 = v102.Object;
-	if ((TrinketItem1:HasStatAnyDps() and (not TrinketItem2:HasStatAnyDps() or (v101.Cooldown >= v102.Cooldown)) and (v102.ID ~= v34.WitherbarksBranch:ID())) or (v101.ID == v34.WitherbarksBranch:ID())) then
+	if ((TrinketItem1:HasStatAnyDps() and (not TrinketItem2:HasStatAnyDps() or (v101.Cooldown >= v102.Cooldown)) and (v102.ID ~= v34.TreacherousTransmitter:ID())) or (v101.ID == v34.TreacherousTransmitter:ID())) then
 		v65 = 1271 - (226 + 1044);
-	elseif ((TrinketItem2:HasStatAnyDps() and (not TrinketItem1:HasStatAnyDps() or (v102.Cooldown > v101.Cooldown)) and (v101.ID ~= v34.WitherbarksBranch:ID())) or (v102.ID == v34.WitherbarksBranch:ID())) then
+	elseif ((TrinketItem2:HasStatAnyDps() and (not TrinketItem1:HasStatAnyDps() or (v102.Cooldown > v101.Cooldown)) and (v101.ID ~= v34.TreacherousTransmitter:ID())) or (v102.ID == v34.TreacherousTransmitter:ID())) then
 		v65 = 8 - 6;
 	else
 		v65 = 117 - (32 + 85);
@@ -74,6 +74,13 @@ v3:RegisterForEvent(function()
 	v69 = 0 + 0;
 	v70();
 end, "PLAYER_EQUIPMENT_CHANGED");
+v3:RegisterForEvent(function()
+	if v33.FateboundInevitability:IsAvailable() then
+		v33.ColdBlood = v9(101194 + 355136);
+	else
+		v33.ColdBlood = v9(383202 - (892 + 65));
+	end
+end, "SPELLS_CHANGED", "LEARNED_SPELL_IN_TAB", "PLAYER_LOGIN", "PLAYER_TALENT_UPDATE", "PLAYER_SPECIALIZATION_CHANGED");
 local v72 = {{v33.Blind,"Cast Blind (Interrupt)",function()
 	return true;
 end},{v33.KidneyShot,"Cast Kidney Shot (Interrupt)",function()
@@ -83,45 +90,45 @@ local function v73()
 	return v6:IsInRaidArea() or v6:IsInDungeonArea() or v7:IsDummy() or (not v6:IsTanking(v7) and v32.Commons.UseSoloVanish);
 end
 local function v74()
-	return ((v15.ToggleIconFrame:GetToggle(3 + 1) or v15.CDsON()) and v30.TTDCheck(v32.Assassination.TimeToDie.Cooldowns, v32.Commons.Enabled.IgnoreTtdOnBoss and v68, v7:TimeToDie())) or v7:DebuffUp(v33.Kingsbane);
+	return ((v15.ToggleIconFrame:GetToggle(956 - (802 + 150)) or v15.CDsON()) and v30.TTDCheck(v32.Assassination.TimeToDie.Cooldowns, v32.Commons.Enabled.IgnoreTtdOnBoss and v68, v7:TimeToDie())) or v7:DebuffUp(v33.Kingsbane);
 end
 v33.Envenom:RegisterDamageFormula(function()
-	return v6:AttackPowerDamageMod() * v47 * (0.22 - 0) * (953 - (802 + 150)) * ((v7:DebuffUp(v33.ShivDebuff) and (2.3 - 1)) or (1 - 0)) * ((v33.DeeperStratagem:IsAvailable() and (1.05 + 0)) or (998 - (915 + 82))) * ((2 - 1) + (v6:MasteryPct() / (59 + 41))) * ((1 - 0) + (v6:VersatilityDmgPct() / (1287 - (1069 + 118))));
+	return v6:AttackPowerDamageMod() * v47 * (0.22 - 0) * (1 - 0) * ((v7:DebuffUp(v33.ShivDebuff) and (1.3 + 0)) or (998 - (915 + 82))) * ((v33.DeeperStratagem:IsAvailable() and (2.05 - 1)) or (1 + 0)) * ((1 - 0) + (v6:MasteryPct() / (1287 - (1069 + 118)))) * ((2 - 1) + (v6:VersatilityDmgPct() / (218 - 118)));
 end);
 v33.Mutilate:RegisterDamageFormula(function()
-	return (v6:AttackPowerDamageMod() + v6:AttackPowerDamageMod(true)) * (0.485 - 0) * (1 - 0) * (1 + 0 + (v6:VersatilityDmgPct() / (177 - 77)));
+	return (v6:AttackPowerDamageMod() + v6:AttackPowerDamageMod(true)) * (0.485 + 0) * (1 - 0) * (1 + 0 + (v6:VersatilityDmgPct() / (891 - (368 + 423))));
 end);
 local function v75()
-	return v6:BuffRemains(v33.MasterAssassinBuff) == (9920 + 79);
+	return v6:BuffRemains(v33.MasterAssassinBuff) == (31423 - 21424);
 end
 local function v76()
 	if v75() then
-		return v6:GCDRemains() + (794 - (368 + 423));
+		return v6:GCDRemains() + (21 - (10 + 8));
 	end
 	return v6:BuffRemains(v33.MasterAssassinBuff);
 end
 local function v77()
 	if v6:BuffUp(v33.ImprovedGarroteAura) then
-		return v6:GCDRemains() + (9 - 6);
+		return v6:GCDRemains() + (11 - 8);
 	end
 	return v6:BuffRemains(v33.ImprovedGarroteBuff);
 end
 local function v78()
 	if v6:BuffUp(v33.IndiscriminateCarnageAura) then
-		return v6:GCDRemains() + (28 - (10 + 8));
+		return v6:GCDRemains() + (452 - (416 + 26));
 	end
 	return v6:BuffRemains(v33.IndiscriminateCarnageBuff);
 end
 local function v79()
-	if (v42 < (7 - 5)) then
+	if (v42 < (6 - 4)) then
 		return false;
 	elseif ((v32.Assassination.UsePriorityRotation == "On Bosses") and v7:IsInBossList()) then
 		return true;
 	end
-	return v15.ToggleIconFrame:GetToggle(444 - (416 + 26));
+	return v15.ToggleIconFrame:GetToggle(1 + 1);
 end
 local function v80()
-	if (v7:DebuffUp(v33.Deathmark) or v7:DebuffUp(v33.Kingsbane) or v7:DebuffUp(v33.ShivDebuff) or (v6:BuffUp(v33.Envenom) and (v6:BuffRemains(v33.Envenom) <= (3 - 2))) or (v6:EnergyPercentage() >= ((18 + 22 + ((53 - 23) * v22(v33.HandOfFate:IsAvailable()))) - ((453 - (145 + 293)) * v22(v33.ViciousVenoms:IsAvailable())))) or v3.BossFilteredFightRemains("<=", 450 - (44 + 386))) then
+	if (v7:DebuffUp(v33.Deathmark) or v7:DebuffUp(v33.Kingsbane) or v7:DebuffUp(v33.ShivDebuff) or (v6:BuffUp(v33.Envenom) and (v6:BuffRemains(v33.Envenom) <= (1 - 0))) or (v6:EnergyPercentage() >= (((478 - (145 + 293)) + ((460 - (44 + 386)) * v22(v33.HandOfFate:IsAvailable()))) - ((1501 - (998 + 488)) * v22(v33.ViciousVenoms:IsAvailable())))) or v3.BossFilteredFightRemains("<=", 7 + 13)) then
 		return true;
 	end
 	return false;
@@ -130,7 +137,7 @@ local function v81()
 	if not v33.ScentOfBlood:IsAvailable() then
 		return true;
 	end
-	return v6:BuffStack(v33.ScentOfBloodBuff) >= v27(1506 - (998 + 488), v33.ScentOfBlood:TalentRank() * (1 + 1) * v42);
+	return v6:BuffStack(v33.ScentOfBloodBuff) >= v27(17 + 3, v33.ScentOfBlood:TalentRank() * (774 - (201 + 571)) * v42);
 end
 local function v82(v106, v107, v108)
 	local v108 = v108 or v107:PandemicThreshold();
@@ -140,16 +147,16 @@ local function v83(v109, v110, v111, v112)
 	local v113, v114 = nil, v111;
 	local v115 = v7:GUID();
 	local v116 = v8:Exists() and v8:GUID();
-	for v136, v137 in v24(v112) do
-		if ((v137:GUID() ~= v115) and v110(v137)) then
-			if ((v137:GUID() == v116) and v137:IsInMeleeRange(v36) and ((v137:TimeToDie() > v111) or (v32.Commons.Enabled.IgnoreTtdOnBoss and v68) or v29.Buggedmobs[v7:NPCID()])) then
-				if (v137:GUID() == v116) then
+	for v138, v139 in v24(v112) do
+		if ((v139:GUID() ~= v115) and v110(v139)) then
+			if ((v139:GUID() == v116) and v139:IsInMeleeRange(v36) and ((v139:TimeToDie() > v111) or (v32.Commons.Enabled.IgnoreTtdOnBoss and v68) or v29.Buggedmobs[v7:NPCID()])) then
+				if (v139:GUID() == v116) then
 				end
 				v15.CastTarget(v109, v15.TName().MOUSEOVER);
 				return "Cast Mouseover " .. v109:Name();
 			end
-			if v29.UnitIsCycleValid(v137, v114, -v137:DebuffRemains(v109)) then
-				v113, v114 = v137, v137:TimeToDie();
+			if v29.UnitIsCycleValid(v139, v114, -v139:DebuffRemains(v109)) then
+				v113, v114 = v139, v139:TimeToDie();
 			end
 		end
 	end
@@ -157,9 +164,9 @@ local function v83(v109, v110, v111, v112)
 		v21(v113, v109);
 	elseif v32.Commons.RangedMultiDoT then
 		v113, v114 = nil, v111;
-		for v163, v164 in v24(v41) do
-			if ((v164:GUID() ~= v115) and v29.UnitIsCycleValid(v164, v114, -v164:DebuffRemains(v109)) and v110(v164)) then
-				v113, v114 = v164, v164:TimeToDie();
+		for v167, v168 in v24(v41) do
+			if ((v168:GUID() ~= v115) and v29.UnitIsCycleValid(v168, v114, -v168:DebuffRemains(v109)) and v110(v168)) then
+				v113, v114 = v168, v168:TimeToDie();
 			end
 		end
 		if v113 then
@@ -169,32 +176,32 @@ local function v83(v109, v110, v111, v112)
 end
 local function v84(v117, v118, v119)
 	local v120 = v118(v7);
-	if ((v117 == "first") and (v120 ~= (0 + 0))) then
+	if ((v117 == "first") and (v120 ~= (1138 - (116 + 1022)))) then
 		return v7;
 	end
 	local v121 = v118(v8);
-	if ((v117 == "first") and (v121 ~= (772 - (201 + 571)))) then
+	if ((v117 == "first") and (v121 ~= (0 - 0))) then
 		return v8;
 	end
-	local v122, v123 = nil, 1138 - (116 + 1022);
-	local function v124(v138)
-		for v139, v140 in v24(v138) do
-			local v141 = v118(v140);
+	local v122, v123 = nil, 0 + 0;
+	local function v124(v140)
+		for v143, v144 in v24(v140) do
+			local v145 = v118(v144);
 			if (not v122 and (v117 == "first")) then
-				if (v141 ~= (0 - 0)) then
-					v122, v123 = v140, v141;
+				if (v145 ~= (0 - 0)) then
+					v122, v123 = v144, v145;
 				end
 			elseif (v117 == "min") then
-				if (not v122 or (v141 < v123)) then
-					v122, v123 = v140, v141;
+				if (not v122 or (v145 < v123)) then
+					v122, v123 = v144, v145;
 				end
 			elseif (v117 == "max") then
-				if (not v122 or (v141 > v123)) then
-					v122, v123 = v140, v141;
+				if (not v122 or (v145 > v123)) then
+					v122, v123 = v144, v145;
 				end
 			end
-			if (v122 and (v141 == v123) and (v140:TimeToDie() > v122:TimeToDie())) then
-				v122, v123 = v140, v141;
+			if (v122 and (v145 == v123) and (v144:TimeToDie() > v122:TimeToDie())) then
+				v122, v123 = v144, v145;
 			end
 		end
 	end
@@ -228,7 +235,7 @@ local function v85()
 			end
 		end
 		if v33.AncestralCall:IsCastable() then
-			if ((not v33.Kingsbane:IsAvailable() and v7:DebuffUp(v33.ShivDebuff)) or (v7:DebuffUp(v33.Kingsbane) and (v7:DebuffRemains(v33.Kingsbane) < (5 + 3)))) then
+			if ((not v33.Kingsbane:IsAvailable() and v7:DebuffUp(v33.ShivDebuff)) or (v7:DebuffUp(v33.Kingsbane) and (v7:DebuffRemains(v33.Kingsbane) < (28 - 20)))) then
 				if v18(v33.AncestralCall, true) then
 					return "Cast Ancestral Call";
 				end
@@ -238,15 +245,15 @@ local function v85()
 	return false;
 end
 local function v86(v125, v126)
-	if (((v33.Ambush:IsCastable() and v6:StealthUp(true, false)) or v126) and v7:DebuffDown(v33.DeathStalkersMarkDebuff) and v33.DeathStalkersMark:IsAvailable()) then
+	if ((v33.Ambush:IsReady() or (v126 and v6:BuffDown(v33.DarkestNightBuff))) and v7:DebuffDown(v33.DeathStalkersMarkDebuff) and v33.DeathStalkersMark:IsAvailable() and (v47 < v66) and (v7:DebuffUp(v33.Rupture) or v63 or not v33.Subterfuge:IsAvailable())) then
 		if v125 then
 			return v33.Ambush;
 		elseif v18(v33.Ambush) then
 			return "Cast Ambush Stealthed";
 		end
 	end
-	if (v74() and v33.Kingsbane:IsAvailable() and v6:BuffUp(v33.Envenom)) then
-		if (v33.Shiv:IsReady() and (v7:DebuffUp(v33.Kingsbane) or v33.Kingsbane:CooldownUp()) and v7:DebuffDown(v33.ShivDebuff)) then
+	if (v74 and v33.Kingsbane:IsAvailable() and not v126 and v6:BuffUp(v33.Envenom)) then
+		if (v33.Shiv:IsReady() and v7:DebuffUp(v33.Kingsbane) and (v7:DebuffRemains(v33.Kingsbane) < (867 - (814 + 45))) and v7:DebuffDown(v33.ShivDebuff) and (v7:DebuffRemains(v33.ShivDebuff) < (2 - 1))) then
 			if v125 then
 				return v33.Shiv;
 			elseif v18(v33.Shiv, true) then
@@ -254,8 +261,8 @@ local function v86(v125, v126)
 			end
 		end
 	end
-	if ((v47 >= v66) and (v7:DebuffUp(v33.DeathStalkersMarkDebuff) or v6:BuffUp(v33.EdgeCase) or v6:BuffUp(v33.ColdBlood))) then
-		if (v7:DebuffUp(v33.Kingsbane) and (v6:BuffRemains(v33.Envenom) <= (10 - 7))) then
+	if ((v47 >= v66) and (v7:DebuffUp(v33.DeathStalkersMarkDebuff) or v6:BuffUp(v33.ColdBlood) or (v6:BuffUp(v33.DarkestNightBuff) and (v47 == (1 + 6))))) then
+		if (v7:DebuffUp(v33.Kingsbane) and (v6:BuffRemains(v33.Envenom) <= (2 + 1))) then
 			if v125 then
 				return v33.Envenom;
 			elseif v18(v33.Envenom) then
@@ -271,24 +278,24 @@ local function v86(v125, v126)
 		end
 	end
 	if (v33.Rupture:IsCastable() or v126) then
-		local function v142(v149)
-			return v149:DebuffRemains(v33.Rupture);
+		local function v146(v153)
+			return v153:DebuffRemains(v33.Rupture);
 		end
-		local function v143(v150)
-			return (v47 >= v66) and v6:BuffUp(v33.IndiscriminateCarnageBuff) and v150:DebuffRefreshable(v33.Rupture) and (not v62 or not v64 or v150:DebuffDown(v33.Rupture)) and ((v7:TimeToDie() > (53 - 38)) or (v32.Commons.Enabled.IgnoreTtdOnBoss and v68) or v29.Buggedmobs[v7:NPCID()]);
+		local function v147(v154)
+			return (v47 >= v66) and (v6:BuffUp(v33.IndiscriminateCarnageBuff) or v126) and v154:DebuffRefreshable(v33.Rupture) and (not v62 or not v64 or v154:DebuffDown(v33.Rupture)) and ((v7:TimeToDie() > (900 - (261 + 624))) or (v32.Commons.Enabled.IgnoreTtdOnBoss and v68) or v29.Buggedmobs[v7:NPCID()]);
 		end
 		if v15.AoEON() then
-			local v159 = v84("min", v142, v143);
-			if (v159 and (v159:GUID() ~= v7:GUID())) then
-				if (v159:GUID() == v8:GUID()) then
+			local v163 = v84("min", v146, v147);
+			if (v163 and (v163:GUID() ~= v7:GUID())) then
+				if (v163:GUID() == v8:GUID()) then
 					v15.CastTarget(v33.Rupture, v15.TName().MOUSEOVER);
 					return "Cast Mouseover Rupture";
 				else
-					v21(v159, v33.Rupture);
+					v21(v163, v33.Rupture);
 				end
 			end
 		end
-		if v143(v7) then
+		if v147(v7) then
 			if v125 then
 				return v33.Rupture;
 			elseif v18(v33.Rupture) then
@@ -296,32 +303,32 @@ local function v86(v125, v126)
 			end
 		end
 	end
-	if ((v33.Garrote:IsCastable() and (v77() > (859 - (814 + 45)))) or v126) then
-		local function v144(v151)
-			return v151:DebuffRemains(v33.Garrote);
+	if ((v33.Garrote:IsCastable() and (v77() > (0 - 0))) or v126) then
+		local function v148(v155)
+			return v155:DebuffRemains(v33.Garrote);
 		end
-		local function v145(v152)
-			return ((v152:PMultiplier(v33.Garrote) <= (2 - 1)) or (v152:DebuffRemains(v33.Garrote) < (1 + 11)) or ((v78() > (0 + 0)) and (v33.Garrote:AuraActiveCount() < v42))) and not v63 and (v152:FilteredTimeToDie(">", 887 - (261 + 624), -v152:DebuffRemains(v33.Garrote)) or v152:TimeToDieIsNotValid()) and v30.CanDoTUnit(v152, v52);
+		local function v149(v156)
+			return ((v156:PMultiplier(v33.Garrote) <= (1081 - (1020 + 60))) or (v156:DebuffRemains(v33.Garrote) < (1435 - (630 + 793))) or (((v78() > (0 - 0)) or v126) and (v33.Garrote:AuraActiveCount() < v42))) and not v63 and (v156:FilteredTimeToDie(">", 9 - 7, -v156:DebuffRemains(v33.Garrote)) or v156:TimeToDieIsNotValid()) and (v48 > ((1 + 1) - (v22(v6:BuffUp(v33.DarkestNightBuff)) * (6 - 4)))) and v30.CanDoTUnit(v156, v52);
 		end
 		if v15.AoEON() then
-			local v160 = v84("min", v144, v145);
-			if (v160 and (v160:GUID() ~= v7:GUID())) then
-				if (v160:GUID() == v8:GUID()) then
+			local v164 = v84("min", v148, v149);
+			if (v164 and (v164:GUID() ~= v7:GUID())) then
+				if (v164:GUID() == v8:GUID()) then
 					v15.CastTarget(v33.Garrote, v15.TName().MOUSEOVER);
 					return "Cast Mouseover Garrote";
 				else
-					v21(v160, v33.Garrote);
+					v21(v164, v33.Garrote);
 				end
 			end
 		end
-		if v145(v7) then
+		if v149(v7) then
 			if v125 then
 				return v33.Garrote;
 			elseif v18(v33.Garrote) then
 				return "Cast Garrote (Improved Garrote)";
 			end
 		end
-		if ((v48 >= ((1 - 0) + ((1082 - (1020 + 60)) * v22(v33.ShroudedSuffocation:IsAvailable())))) and ((v7:PMultiplier(v33.Garrote) <= (1424 - (630 + 793))) or (v7:DebuffRemains(v33.Garrote) < (40 - 28)) or (not v63 and (v76() < (14 - 11))))) then
+		if ((v48 >= ((1748 - (760 + 987)) + ((1915 - (1789 + 124)) * v22(v33.ShroudedSuffocation:IsAvailable())))) and ((v7:PMultiplier(v33.Garrote) <= (767 - (745 + 21))) or (v7:DebuffRemains(v33.Garrote) < (5 + 7)) or (not v63 and (v76() < (7 - 4))))) then
 			if v125 then
 				return v33.Garrote;
 			elseif v18(v33.Garrote) then
@@ -331,7 +338,7 @@ local function v86(v125, v126)
 	end
 end
 local function v87(v127)
-	if not v15.ToggleIconFrame:GetToggle(1 + 0) then
+	if not v15.ToggleIconFrame:GetToggle(3 - 2) then
 		return;
 	end
 	if (v127:ID() == v33.Vanish:ID()) then
@@ -349,17 +356,17 @@ local function v87(v127)
 	local v129 = {v127,v128};
 	v44 = v20(unpack(v129));
 	if v44 then
-		return "| " .. v129[1915 - (1789 + 124)]:Name();
+		return "| " .. v129[1057 - (87 + 968)]:Name();
 	end
 	return false;
 end
 local function v88()
-	if (v32.Commons.ShowPooling and (v6:EnergyPredicted() < (811 - (745 + 21)))) then
+	if (v32.Commons.ShowPooling and (v6:EnergyPredicted() < (198 - 153))) then
 		if v18(v33.PoolEnergy) then
 			return "Pool for Vanish";
 		end
 	end
-	if (v33.Vanish:IsCastable() and v6:BuffDown(v33.FateboundLuckyCoin) and ((v6:BuffStack(v33.FateboundCoinTails) >= (2 + 3)) or (v6:BuffStack(v33.FateboundCoinHeads) >= (13 - 8)))) then
+	if (v33.Vanish:IsCastable() and v6:BuffDown(v33.FateboundLuckyCoin) and (v47 >= v66) and ((v6:BuffStack(v33.FateboundCoinTails) >= (5 + 0)) or (v6:BuffStack(v33.FateboundCoinHeads) >= (11 - 6)))) then
 		if v73() then
 			v44 = v87(v33.Vanish);
 			if v44 then
@@ -367,7 +374,7 @@ local function v88()
 			end
 		end
 	end
-	if (v33.Vanish:IsCastable() and not v33.MasterAssassin:IsAvailable() and not v33.IndiscriminateCarnage:IsAvailable() and v33.ImprovedGarrote:IsAvailable() and v33.Garrote:CooldownUp() and ((v7:PMultiplier(v33.Garrote) <= (3 - 2)) or v82(v7, v33.Garrote)) and (v7:DebuffUp(v33.Deathmark) or (v33.Deathmark:CooldownRemains() < (1 + 3))) and (v48 >= v27(v42, 4 + 0))) then
+	if (v33.Vanish:IsCastable() and not v33.MasterAssassin:IsAvailable() and not v33.IndiscriminateCarnage:IsAvailable() and v33.ImprovedGarrote:IsAvailable() and v33.Garrote:CooldownUp() and ((v7:PMultiplier(v33.Garrote) <= (1414 - (447 + 966))) or v82(v7, v33.Garrote)) and (v7:DebuffUp(v33.Deathmark) or (v33.Deathmark:CooldownRemains() < (10 - 6))) and (v48 >= v27(v42, 1821 - (1703 + 114)))) then
 		if v73() then
 			v44 = v87(v33.Vanish);
 			if v44 then
@@ -375,12 +382,12 @@ local function v88()
 			end
 		end
 	end
-	if (v32.Commons.ShowPooling and (v6:EnergyPredicted() < (1100 - (87 + 968))) and v73()) then
+	if (v32.Commons.ShowPooling and (v6:EnergyPredicted() < (746 - (376 + 325))) and v73()) then
 		if v18(v33.PoolEnergy) then
 			return "Pool for Vanish";
 		end
 	end
-	if (v33.Vanish:IsCastable() and not v33.MasterAssassin:IsAvailable() and v33.IndiscriminateCarnage:IsAvailable() and v33.ImprovedGarrote:IsAvailable() and v33.Garrote:CooldownUp() and ((v7:PMultiplier(v33.Garrote) <= (4 - 3)) or v82(v7, v33.Garrote)) and (v42 > (2 + 0))) then
+	if (v33.Vanish:IsCastable() and v33.IndiscriminateCarnage:IsAvailable() and v33.ImprovedGarrote:IsAvailable() and v33.Garrote:CooldownUp() and ((v7:PMultiplier(v33.Garrote) <= (1 - 0)) or v82(v7, v33.Garrote)) and (v42 > (5 - 3))) then
 		if v73() then
 			v44 = v87(v33.Vanish);
 			if v44 then
@@ -388,7 +395,7 @@ local function v88()
 			end
 		end
 	end
-	if (v33.Vanish:IsCastable() and not v33.ImprovedGarrote:IsAvailable() and v33.MasterAssassin:IsAvailable() and not v82(v7, v33.Rupture) and (v7:DebuffRemains(v33.Garrote) > (6 - 3)) and v7.DebuffUp(v33.Deathmark) and (v7.DebuffUp(v33.ShivDebuff) or (v7.DebuffRemains(v33.Deathmark) < (1417 - (447 + 966))))) then
+	if (v33.Vanish:IsCastable() and v33.MasterAssassin:IsAvailable() and not v82(v7, v33.Rupture) and (v7:DebuffRemains(v33.Garrote) > (1 + 2)) and v7:DebuffUp(v33.Deathmark) and (v7:DebuffRemains(v33.Kingsbane) <= ((12 - 6) + ((17 - (9 + 5)) * v33.Subterfuge:TalentRank())))) then
 		if v73() then
 			v44 = v87(v33.Vanish);
 			if v44 then
@@ -396,7 +403,7 @@ local function v88()
 			end
 		end
 	end
-	if (v33.Vanish:IsCastable() and v33.ImprovedGarrote:IsAvailable() and v33.Garrote:CooldownUp() and ((v7:PMultiplier(v33.Garrote) <= (2 - 1)) or v82(v7, v33.Garrote)) and (v7:DebuffUp(v33.Deathmark) or (v33.Deathmark:CooldownRemains() < (1821 - (1703 + 114))))) then
+	if (v33.Vanish:IsCastable() and v33.ImprovedGarrote:IsAvailable() and v33.Garrote:CooldownUp() and ((v7:PMultiplier(v33.Garrote) <= (377 - (85 + 291))) or v82(v7, v33.Garrote)) and (v7:DebuffUp(v33.Deathmark) or (v33.Deathmark:CooldownRemains() < (1269 - (243 + 1022))))) then
 		if v73() then
 			v44 = v87(v33.Vanish);
 			if v44 then
@@ -410,49 +417,49 @@ local function v89()
 		return;
 	end
 	if v71(v34.AshesoftheEmbersoul) then
-		if ((v7:DebuffUp(v33.Kingsbane) and (v7:DebuffRemains(v33.Kingsbane) <= (712 - (376 + 325)))) or v3.BossFilteredFightRemains("<", 35 - 13)) then
+		if ((v7:DebuffUp(v33.Kingsbane) and (v7:DebuffRemains(v33.Kingsbane) <= (41 - 30))) or v3.BossFilteredFightRemains("<", 19 + 3)) then
 			if v18(v34.AshesoftheEmbersoul) then
 				return "Ashes of the Embersoul";
 			end
 		end
 	end
 	if v71(v34.AlgetharPuzzleBox) then
-		if ((v7:DebuffUp(v33.Rupture) and (v33.Deathmark:CooldownRemains() <= (5 - 3))) or v3.BossFilteredFightRemains("<", 7 + 15)) then
+		if ((v7:DebuffUp(v33.Rupture) and (v33.Deathmark:CooldownRemains() <= (1182 - (1123 + 57)))) or v3.BossFilteredFightRemains("<", 18 + 4)) then
 			if v18(v34.AlgetharPuzzleBox) then
 				return "Algethar Puzzle Box";
 			end
 		end
 	end
 	if v71(v34.TreacherousTransmitter) then
-		if ((v7:DebuffUp(v33.Rupture) and (v33.Deathmark:CooldownRemains() <= (4 - 2))) or v7:DebuffUp(v33.Deathmark) or v3.BossFilteredFightRemains("<", 36 - (9 + 5))) then
+		if ((v7:DebuffUp(v33.Rupture) and (v33.Deathmark:CooldownRemains() <= (256 - (163 + 91)))) or v7:DebuffUp(v33.Deathmark) or v3.BossFilteredFightRemains("<", 1952 - (1869 + 61))) then
 			if v18(v34.TreacherousTransmitter) then
 				return "Treacherous Transmitter";
 			end
 		end
 	end
 	if v71(v34.MadQueensMandate) then
-		if (((v33.Deathmark:CooldownRemains() >= (406 - (85 + 291))) and v7:DebuffDown(v33.Deathmark)) or v3.BossFilteredFightRemains("<=", 1268 - (243 + 1022))) then
+		if (((v33.Deathmark:CooldownRemains() >= (9 + 21)) and v7:DebuffDown(v33.Deathmark)) or v3.BossFilteredFightRemains("<=", 10 - 7)) then
 			if v18(v34.MadQueensMandate) then
 				return "Mad Queen's Mandate";
 			end
 		end
 	end
 	if v71(v34.ImperfectAscendancySerum) then
-		if ((v7:DebuffUp(v33.Rupture) and (v33.Deathmark:CooldownRemains() <= (7 - 5))) or v7:DebuffUp(v33.Deathmark) or v3.BossFilteredFightRemains("<", 19 + 3)) then
+		if ((v7:DebuffUp(v33.Rupture) and (v33.Deathmark:CooldownRemains() <= (2 - 0))) or v7:DebuffUp(v33.Deathmark) or v3.BossFilteredFightRemains("<", 4 + 18)) then
 			if v18(v34.ImperfectAscendancySerum) then
 				return "Imperfect Ascendancy Serum";
 			end
 		end
 	end
-	if (TrinketItem1:IsReady() and v32.Commons.Enabled.Trinket1 and not v6:IsItemBlacklisted(TrinketItem1) and not v14(v35, TrinketItem1:ID())) then
-		if (((v65 == (1181 - (1123 + 57))) and (v33.Deathmark:AnyDebuffUp() or not v33.Deathmark:IsAvailable() or v3.BossFilteredFightRemains("<", 17 + 3))) or ((v65 == (256 - (163 + 91))) and (not TrinketItem2:IsReady() or (not v33.Deathmark:AnyDebuffUp() and (v33.Deathmark:CooldownRemains() > (1950 - (1869 + 61)))))) or (v65 == (0 + 0))) then
+	if (TrinketItem1:IsReady() and v32.Commons.Enabled.Trinket1) then
+		if (not v6:IsItemBlacklisted(TrinketItem1) and not v14(v35, TrinketItem1:ID()) and (((v65 == (1 - 0)) and (v33.Deathmark:AnyDebuffUp() or v3.BossFilteredFightRemains("<", 19 + 1))) or ((v65 == (1476 - (1329 + 145))) and ((not TrinketItem2:IsReady() and v7:DebuffUp(v33.Kingsbane)) or (not v33.Deathmark:AnyDebuffUp() and (v33.Deathmark:CooldownRemains() > (991 - (140 + 831))) and v7:DebuffUp(v33.Kingsbane)))) or (v65 == (1850 - (1409 + 441))))) then
 			if v18(TrinketItem1) then
 				return "Trinket 1";
 			end
 		end
 	end
 	if (TrinketItem2:IsReady() and v32.Commons.Enabled.Trinket2) then
-		if (not v6:IsItemBlacklisted(TrinketItem2) and not v14(v35, TrinketItem2:ID()) and (((v65 == (6 - 4)) and (v33.Deathmark:AnyDebuffUp() or not v33.Deathmark:IsAvailable() or v3.BossFilteredFightRemains("<", 30 - 10))) or ((v65 == (1 + 0)) and (not TrinketItem1:IsReady() or (not v33.Deathmark:AnyDebuffUp() and (v33.Deathmark:CooldownRemains() > (27 - 7))))) or (v65 == (0 + 0)))) then
+		if (not v6:IsItemBlacklisted(TrinketItem2) and not v14(v35, TrinketItem2:ID()) and (((v65 == (720 - (15 + 703))) and (v33.Deathmark:AnyDebuffUp() or not v33.Deathmark:IsAvailable() or v3.BossFilteredFightRemains("<", 10 + 10))) or ((v65 == (439 - (262 + 176))) and (not TrinketItem1:IsReady() or (not v33.Deathmark:AnyDebuffUp() and (v33.Deathmark:CooldownRemains() > (1741 - (345 + 1376)))))) or (v65 == (688 - (198 + 490))))) then
 			if v18(TrinketItem2) then
 				return "Trinket 2";
 			end
@@ -460,25 +467,34 @@ local function v89()
 	end
 end
 local function v90()
-	local v130 = v7:DebuffDown(v33.ShivDebuff) and v7:DebuffUp(v33.Garrote) and v7:DebuffUp(v33.Rupture);
+	local v130 = v7:DebuffDown(v33.ShivDebuff) and v7:DebuffUp(v33.Garrote) and v7:DebuffUp(v33.Rupture) and (v42 <= (22 - 17));
 	local v131 = v33.Kingsbane:IsAvailable() and v6:BuffUp(v33.Envenom) and v130;
 	if v33.Shiv:IsReady() then
-		if (v33.ArterialPrecision:IsAvailable() and v130 and (v42 >= (1478 - (1329 + 145)))) then
+		if (v33.ArterialPrecision:IsAvailable() and v130 and (v42 >= (9 - 5)) and v33.CrimsonTempest:AnyDebuffUp()) then
 			if v18(v33.Shiv, true) then
 				return "Cast Shiv (Arterial Precision)";
 			end
 		end
-		if (not v33.LightweightShiv:IsAvailable() and v131 and ((v7:DebuffUp(v33.Kingsbane) and (v7:DebuffRemains(v33.Kingsbane) < (979 - (140 + 831)))) or (not v7:DebuffUp(v33.Kingsbane) and (v33.Kingsbane:CooldownRemains() >= (1874 - (1409 + 441))))) and (not v33.CrimsonTempest:IsAvailable() or v63 or v7:DebuffUp(v33.CrimsonTempest))) then
-			if v18(v33.Shiv, true) then
-				return "Cast Shiv (Kingsbane)";
+		if not v33.LightweightShiv:IsAvailable() then
+			if (v131 and ((v7:DebuffUp(v33.Kingsbane) and (v7:DebuffRemains(v33.Kingsbane) < (1214 - (696 + 510)))) or (not v7:DebuffUp(v33.Kingsbane) and (v33.Kingsbane:CooldownRemains() >= (41 - 21)))) and (not v33.CrimsonTempest:IsAvailable() or v63 or v7:DebuffUp(v33.CrimsonTempest))) then
+				if v18(v33.Shiv, true) then
+					return "Cast Shiv (Kingsbane)";
+				end
 			end
 		end
-		if (v33.LightweightShiv:IsAvailable() and v131 and (v7:DebuffUp(v33.Kingsbane) or (v33.Kingsbane:CooldownRemains() <= (719 - (15 + 703))))) then
+		if (v6:BuffUp(v33.DarkestNightBuff) and (v47 >= v66) and v6:BuffUp(v33.LingeringDarknessBuff)) then
 			if v18(v33.Shiv, true) then
-				return "Cast Shiv (Kingsbane Lightweight)";
+				return "Cast Shiv Darkest Night, Lingering Darkness";
 			end
 		end
-		if (v33.ArterialPrecision:IsAvailable() and v130 and v33.Deathmark:AnyDebuffUp()) then
+		if v33.LightweightShiv:IsAvailable() then
+			if (v131 and (v7:DebuffUp(v33.Kingsbane) or (v33.Kingsbane:CooldownRemains() <= (1263 - (1091 + 171))))) then
+				if v18(v33.Shiv, true) then
+					return "Cast Shiv (Kingsbane Lightweight)";
+				end
+			end
+		end
+		if (v33.ArterialPrecision:IsAvailable() and v7:DebuffDown(v33.ShivDebuff) and v7:DebuffUp(v33.Rupture) and v33.Deathmark:AnyDebuffUp()) then
 			if v18(v33.Shiv, true) then
 				return "Cast Shiv (Arterial Precision Deathmark)";
 			end
@@ -488,7 +504,7 @@ local function v90()
 				return "Cast Shiv no KB";
 			end
 		end
-		if v3.BossFilteredFightRemains("<=", v33.Shiv:Charges() * (4 + 4)) then
+		if v3.BossFilteredFightRemains("<=", v33.Shiv:Charges() * (2 + 6)) then
 			if v18(v33.Shiv, true) then
 				return "Cast Shiv (End Fight)";
 			end
@@ -497,9 +513,9 @@ local function v90()
 end
 local function v91()
 	if v32.Commons.Enabled.Potions then
-		local v146 = v29.PotionSelected();
-		if (v146 and v146:IsReady() and (v6:BloodlustUp() or v3.BossFilteredFightRemains("<", 468 - (262 + 176)) or v33.Deathmark:AnyDebuffUp())) then
-			v15.CastMacro(1724 - (345 + 1376), nil, nil, v146);
+		local v150 = v29.PotionSelected();
+		if (v150 and v150:IsReady() and (v6:BloodlustUp() or v3.BossFilteredFightRemains("<", 94 - 64) or v33.Deathmark:AnyDebuffUp())) then
+			v15.CastMacro(9 - 6, nil, nil, v150);
 			return "Cast Potion";
 		end
 	end
@@ -517,7 +533,7 @@ local function v93()
 	if not v39 then
 		return;
 	end
-	local v132 = not v6:StealthUp(true, false) and (v6:BuffRemains(v33.SliceandDice) > (693 - (198 + 490))) and v7:DebuffUp(v33.Rupture) and v6:BuffUp(v33.Envenom) and not v33.Deathmark:AnyDebuffUp() and (not v33.MasterAssassin:IsAvailable() or v7:DebuffUp(v33.Garrote)) and (not v33.Kingsbane:IsAvailable() or (v33.Kingsbane:CooldownRemains() <= (8 - 6)));
+	local v132 = not v6:StealthUp(true, false) and (v6:BuffRemains(v33.SliceandDice) > (379 - (123 + 251))) and v7:DebuffUp(v33.Rupture) and (v6:BuffUp(v33.Envenom) or (v42 > (4 - 3))) and not v33.Deathmark:AnyDebuffUp() and (not v33.MasterAssassin:IsAvailable() or v7:DebuffUp(v33.Garrote)) and (not v33.Kingsbane:IsAvailable() or (v33.Kingsbane:CooldownRemains() <= (700 - (208 + 490))));
 	if (v92() and (v32.Commons.Enabled.Trinket1 or v32.Commons.Enabled.Trinket2)) then
 		v44 = v89();
 		if v44 then
@@ -525,7 +541,7 @@ local function v93()
 		end
 	end
 	if (v92() and v33.Deathmark:IsCastable()) then
-		if (v132 or v3.BossFilteredFightRemains("<=", 47 - 27)) then
+		if ((v132 and (v7:TimeToDie() >= (1 + 9))) or v3.BossFilteredFightRemains("<=", 9 + 11)) then
 			if v18(v33.Deathmark, true) then
 				return "Cast Deathmark";
 			end
@@ -536,10 +552,15 @@ local function v93()
 		return v44;
 	end
 	if (v74() and v33.Kingsbane:IsCastable()) then
-		if (((v7:DebuffUp(v33.ShivDebuff) or (v33.Shiv:CooldownRemains() < (1212 - (696 + 510)))) and v6:BuffUp(v33.Envenom) and ((v33.Deathmark:CooldownRemains() >= (104 - 54)) or v7:DebuffUp(v33.Deathmark) or not v17())) or v3.BossFilteredFightRemains("<=", 1277 - (1091 + 171))) then
+		if (((v7:DebuffUp(v33.ShivDebuff) or (v33.Shiv:CooldownRemains() < (842 - (660 + 176)))) and (v6:BuffUp(v33.Envenom) or (v42 > (1 + 0))) and ((v33.Deathmark:CooldownRemains() >= (252 - (14 + 188))) or v7:DebuffUp(v33.Deathmark) or (v132 and v33.Deathmark:IsReady()))) or v3.BossFilteredFightRemains("<=", 690 - (534 + 141))) then
 			if v18(v33.Kingsbane, true) then
 				return "Cast Kingsbane";
 			end
+		end
+	end
+	if ((v33.ThistleTea:IsCastable() and v6:BuffDown(v33.ThistleTea) and v7:DebuffUp(v33.Kingsbane) and (v7:DebuffRemains(v33.Kingsbane) < (4 + 4))) or (v6:BuffDown(v33.ThistleTea) and (v33.ThistleTea:Charges() >= (2 + 0)) and (v7:DebuffRemains(v33.ShivDebuff) > (6 + 0))) or (v6:BuffDown(v33.ThistleTea) and v3.BossFilteredFightRemains("<", v33.ThistleTea:Charges() * (12 - 6)))) then
+		if v18(v33.ThistleTea, true) then
+			return "Cast Thistle Tea";
 		end
 	end
 	if v92() then
@@ -552,7 +573,7 @@ local function v93()
 			end
 		end
 	end
-	if (v92() and not v6:StealthUp(true, true) and (v76() <= (0 + 0))) then
+	if (v92() and not v6:StealthUp(true, true) and (v76() <= (0 - 0))) then
 		if v44 then
 			v88();
 		else
@@ -563,7 +584,7 @@ local function v93()
 		end
 	end
 	if (v74() and v33.ColdBlood:IsReady() and v6:DebuffDown(v33.ColdBlood)) then
-		if (v6:BuffDown(v33.EdgeCase) and (v33.Deathmark:CooldownRemains() > (31 - 21)) and v6:BuffDown(v33.DarkestNightBuff) and (v47 >= v66) and (v57 or (v7:DebuffStack(v33.AmplifyingPoisonDebuff) >= (66 - 46)) or not v63) and v6:BuffDown(v30.VanishBuffSpell()) and (not v33.Kingsbane:CooldownUp() or not v63) and (not v33.Deathmark:CooldownUp() or not v17())) then
+		if (v6:BuffDown(v33.EdgeCase) and (v33.Deathmark:CooldownRemains() > (28 - 18)) and v6:BuffDown(v33.DarkestNightBuff) and (v47 >= v66) and (v57 or (v7:DebuffStack(v33.AmplifyingPoisonDebuff) >= (11 + 9)) or not v63) and v6:BuffDown(v30.VanishBuffSpell()) and (not v33.Kingsbane:CooldownUp() or not v63) and (not v33.Deathmark:CooldownUp() or not v17())) then
 			if v18(v33.ColdBlood, true) then
 				return "Cast Cold Blood";
 			end
@@ -572,28 +593,28 @@ local function v93()
 	end
 end
 local function v94(v133)
-	return v82(v133, v33.Garrote) and (v133:PMultiplier(v33.Garrote) <= (375 - (123 + 251)));
+	return v82(v133, v33.Garrote) and (v133:PMultiplier(v33.Garrote) <= (1 + 0));
 end
 local function v95(v134)
-	v53 = (19 - 15) + (v12(v33.DashingScoundrel:IsAvailable()) * (703 - (208 + 490))) + (v12(v62) * (1 + 5));
-	return v82(v134, v33.Rupture, v49) and (v134:PMultiplier(v33.Rupture) <= (1 + 0)) and (v134:FilteredTimeToDie(">", v53, -v134:DebuffRemains(v33.Rupture)) or v134:TimeToDieIsNotValid());
+	v53 = (400 - (115 + 281)) + (v12(v33.DashingScoundrel:IsAvailable()) * (11 - 6)) + (v12(v62) * (5 + 1));
+	return v82(v134, v33.Rupture, v49) and (v134:PMultiplier(v33.Rupture) <= (2 - 1)) and (v134:FilteredTimeToDie(">", v53, -v134:DebuffRemains(v33.Rupture)) or v134:TimeToDieIsNotValid());
 end
 local function v96()
-	if (v33.Garrote:IsCastable() and (v48 >= (837 - (660 + 176)))) then
-		if (v94(v7) and v30.CanDoTUnit(v7, v52) and (v7:FilteredTimeToDie(">", 2 + 10, -v7:DebuffRemains(v33.Garrote)) or v7:TimeToDieIsNotValid())) then
+	if (v33.Garrote:IsCastable() and (v48 >= (3 - 2))) then
+		if (v94(v7) and v30.CanDoTUnit(v7, v52) and (v7:FilteredTimeToDie(">", 879 - (550 + 317), -v7:DebuffRemains(v33.Garrote)) or v7:TimeToDieIsNotValid())) then
 			if v19(v33.Garrote) then
 				return "Pool for Garrote (ST)";
 			end
 		end
 	end
-	if (v33.Rupture:IsReady() and (v47 >= v66) and v6:BuffDown(v33.DarkestNightBuff)) then
+	if (v33.Rupture:IsReady() and (v47 >= v66) and (v6:BuffDown(v33.DarkestNightBuff) or (v33.CausticSpatter:IsAvailable() and not v7:DebuffUp(v33.CausticSpatterDebuff)))) then
 		if (v95(v7) and v30.CanDoTUnit(v7, v51)) then
 			if v19(v33.Rupture) then
 				return "Cast Rupture";
 			end
 		end
 	end
-	if (v33.CrimsonTempest:IsReady() and (v47 >= v66) and v82(v7, v33.CrimsonTempest) and (v6:BuffRemains(v33.MomentumOfDespair) > (208 - (14 + 188))) and v63) then
+	if (v33.CrimsonTempest:IsReady() and (v47 >= v66) and v82(v7, v33.CrimsonTempest) and (v7:TimeToDie() > (11 - 3)) and (v6:BuffRemains(v33.MomentumOfDespair) > (8 - 2)) and v63) then
 		if v18(v33.CrimsonTempest) then
 			return "Crimson Tempest with Momentum of Despair";
 		end
@@ -601,39 +622,39 @@ local function v96()
 end
 local function v97()
 	local v135 = v47 >= v66;
-	if (v15.AoEON() and v33.CrimsonTempest:IsCastable() and (v42 >= (677 - (534 + 141))) and v135) then
-		for v153, v154 in v24(v41) do
-			if (v82(v154, v33.CrimsonTempest, v50) and v154:FilteredTimeToDie(">", 3 + 3, -v154:DebuffRemains(v33.CrimsonTempest))) then
+	if (v15.AoEON() and v33.CrimsonTempest:IsCastable() and (v42 >= (5 - 3)) and v135) then
+		for v157, v158 in v24(v41) do
+			if (v82(v158, v33.CrimsonTempest, v50) and v158:FilteredTimeToDie(">", 291 - (134 + 151), -v158:DebuffRemains(v33.CrimsonTempest))) then
 				if v18(v33.CrimsonTempest) then
 					return "Cast Crimson Tempest (AoE High Energy)";
 				end
 			end
 		end
 	end
-	if (v33.Garrote:IsCastable() and (v48 >= (1 + 0))) then
-		if (v94(v7) and not v62 and (v7:FilteredTimeToDie(">", 12 + 0, -v7:DebuffRemains(v33.Garrote)) or v7:TimeToDieIsNotValid())) then
-			local v161 = v83(v33.Garrote, v94, 24 - 12, v41);
-			if v161 then
-				return v161;
+	if (v33.Garrote:IsCastable() and (v48 >= (1666 - (970 + 695)))) then
+		if (v94(v7) and not v62 and (v7:FilteredTimeToDie(">", 22 - 10, -v7:DebuffRemains(v33.Garrote)) or v7:TimeToDieIsNotValid())) then
+			local v165 = v83(v33.Garrote, v94, 2002 - (582 + 1408), v41);
+			if v165 then
+				return v165;
 			end
 		end
 	end
-	if (v33.Rupture:IsReady() and v15.AoEON() and v135 and (v7:DebuffDown(v33.Kingsbane) or v6:BuffUp(v33.ColdBlood)) and not v62 and ((v33.ScentOfBlood:TalentRank() == (2 - 0)) or ((v33.ScentOfBlood:TalentRank() <= (2 - 1)) and (v6:BuffUp(v33.IndiscriminateCarnageBuff or (v7:TimeToDie() > (9 + 6)) or (v32.Commons.Enabled.IgnoreTtdOnBoss and v68) or v29.Buggedmobs[v7:NPCID()])))) and ((v7:TimeToDie() > (5 + 2 + (v12(v33.DashingScoundrel:IsAvailable()) * (401 - (115 + 281))) + (v12(v62) * (13 - 7)))) or (v32.Commons.Enabled.IgnoreTtdOnBoss and v68) or v29.Buggedmobs[v7:NPCID()]) and v6:BuffDown(v33.DarkestNightBuff)) then
-		local v147 = v83(v33.Rupture, v95, v53, v41);
-		if v147 then
-			return v147;
+	if (v33.Rupture:IsReady() and v15.AoEON() and v135 and (v7:DebuffDown(v33.Kingsbane) or v6:BuffUp(v33.ColdBlood)) and not v62 and ((v33.ScentOfBlood:TalentRank() == (6 - 4)) or ((v33.ScentOfBlood:TalentRank() <= (1 - 0)) and (v6:BuffUp(v33.IndiscriminateCarnageBuff or (v7:TimeToDie() > (56 - 41)) or (v32.Commons.Enabled.IgnoreTtdOnBoss and v68) or v29.Buggedmobs[v7:NPCID()])))) and ((v7:TimeToDie() > ((1831 - (1195 + 629)) + (v12(v33.DashingScoundrel:IsAvailable()) * (6 - 1)) + (v12(v62) * (247 - (187 + 54))))) or (v32.Commons.Enabled.IgnoreTtdOnBoss and v68) or v29.Buggedmobs[v7:NPCID()]) and v6:BuffDown(v33.DarkestNightBuff)) then
+		local v151 = v83(v33.Rupture, v95, v53, v41);
+		if v151 then
+			return v151;
 		end
 	end
 	if (v33.Rupture:IsReady() and v135 and v6:BuffDown(v33.DarkestNightBuff) and v15.AoEON()) then
-		v53 = 6 + 1 + (v12(v33.DashingScoundrel:IsAvailable()) * (12 - 7)) + (v12(v62) * (21 - 15));
+		v53 = (787 - (162 + 618)) + (v12(v33.DashingScoundrel:IsAvailable()) * (4 + 1)) + (v12(v62) * (4 + 2));
 		if ((not v7:DebuffUp(v33.Kingsbane or v6:BuffUp(v33.ColdBlood)) and v62) or not v64) then
-			local v162 = v83(v33.Rupture, v95, v53, v43);
-			if v162 then
-				return v162;
+			local v166 = v83(v33.Rupture, v95, v53, v43);
+			if v166 then
+				return v166;
 			end
 		end
 	end
-	if (v33.Garrote:IsReady() and (v48 >= (868 - (550 + 317))) and (v76() <= (0 - 0)) and ((v7:PMultiplier(v33.Garrote) <= (1 - 0)) or ((v7:DebuffRemains(v33.Garrote) < v45) and (v42 >= (8 - 5)))) and (v7:DebuffRemains(v33.Garrote) < (v45 * (287 - (134 + 151)))) and (v42 >= (1668 - (970 + 695))) and (v7:FilteredTimeToDie(">", 7 - 3, -v7:DebuffRemains(v33.Garrote)) or v7:TimeToDieIsNotValid())) then
+	if (v33.Garrote:IsReady() and (v48 >= (1 - 0)) and (v76() <= (0 - 0)) and ((v7:PMultiplier(v33.Garrote) <= (1 + 0)) or ((v7:DebuffRemains(v33.Garrote) < v45) and (v42 >= (1639 - (1373 + 263))))) and (v7:DebuffRemains(v33.Garrote) < (v45 * (1002 - (451 + 549)))) and (v42 >= (1 + 2)) and (v7:FilteredTimeToDie(">", 5 - 1, -v7:DebuffRemains(v33.Garrote)) or v7:TimeToDieIsNotValid())) then
 		if v18(v33.Garrote) then
 			return "Garrote (Fallback)";
 		end
@@ -641,76 +662,68 @@ local function v97()
 	return false;
 end
 local function v98()
-	if (v33.Envenom:IsReady() and v6:BuffDown(v33.DarkestNightBuff) and (v47 > v66) and (v57 or (v7:DebuffStack(v33.AmplifyingPoisonDebuff) >= (2010 - (582 + 1408))) or (v47 > v30.CPMaxSpend()) or not v63) and v6:BuffDown(v30.VanishBuffSpell())) then
+	local v136 = ((v47 < v66) and not CDSoon) or v57 or not v63;
+	local v137 = v33.CausticSpatter:IsAvailable() and v7:DebuffUp(v33.Rupture) and (not v7:DebuffUp(v33.CausticSpatterDebuff) or (v7:DebuffRemains(v33.CausticSpatterDebuff) <= (2 - 0))) and (v48 >= (1385 - (746 + 638))) and not v63;
+	if (v33.Mutilate:IsCastable() and v137) then
+		if v19(v33.Mutilate) then
+			return "Cast Mutilate (Caustic)";
+		end
+	end
+	if ((v33.Ambush:IsCastable() or v33.AmbushOverride:IsReady()) and v6:StealthUp(true, true) and v137) then
+		if v19(v33.Ambush) then
+			return "Cast Ambush (Caustic)";
+		end
+	end
+	if (v33.Envenom:IsCastable() and v6:BuffDown(v33.DarkestNightBuff) and (v47 >= v66) and (v57 or (v7:DebuffStack(v33.AmplifyingPoisonDebuff) >= (8 + 12)) or not v63) and v6:BuffDown(v30.VanishBuffSpell())) then
 		if v18(v33.Envenom) then
 			return "Cast Envenom 1";
 		end
 	end
-	if (v33.Envenom:IsReady() and v6:BuffUp(v33.DarkestNightBuff) and (v47 >= v30.CPMaxSpend())) then
+	if (v33.Envenom:IsCastable() and v6:BuffUp(v33.DarkestNightBuff) and (v47 >= v30.CPMaxSpend())) then
 		if v18(v33.Envenom) then
 			return "Cast Envenom 2";
 		end
 	end
-	if not ((v48 > (3 - 2)) or v57 or not v63) then
-		return false;
-	end
-	if (not v63 and v33.CausticSpatter:IsAvailable() and v7:DebuffUp(v33.Rupture) and (v7:DebuffRemains(v33.CausticSpatterDebuff) <= (2 - 0))) then
-		if v33.Mutilate:IsCastable() then
-			if v19(v33.Mutilate) then
-				return "Cast Mutilate (Casutic)";
-			end
-		end
-		if ((v33.Ambush:IsReady() or v33.AmbushOverride:IsReady()) and (v6:StealthUp(true, true) or v6:BuffUp(v33.BlindsideBuff))) then
-			if v18(v33.Ambush) then
-				return "Cast Ambush (Caustic)";
-			end
+	if ((v33.Ambush:IsCastable() or v33.AmbushOverride:IsReady()) and v136 and (v6:BuffUp(v33.BlindsideBuff) or v6:StealthUp(true, false)) and (v7:DebuffDown(v33.Kingsbane) or v7:DebuffDown(v33.Deathmark) or v6:BuffUp(v33.BlindsideBuff))) then
+		if v19(v33.Ambush, nil, not v38) then
+			return "Cast Ambush";
 		end
 	end
-	if (v74() and v33.EchoingReprimand:IsReady()) then
-		if v18(v33.EchoingReprimand, true) then
-			return "Cast Echoing Reprimand";
-		end
-	end
-	if v33.FanofKnives:IsReady() then
-		if ((v15.AoEON() and not v56 and (v42 >= ((11 - 8) - v12(v33.MomentumOfDespair and v33.ThrownPrecision)))) or (v6:BuffUp(v33.ClearTheWitnessesBuff) and not v33.ViciousVenoms:IsAvailable())) then
+	if v33.FanofKnives:IsCastable() then
+		if ((v15.AoEON() and not v56 and (v42 >= ((4 - 1) - v12(v33.MomentumOfDespair and v33.ThrownPrecision)))) or (v6:BuffUp(v33.ClearTheWitnessesBuff) and not v33.ViciousVenoms:IsAvailable())) then
 			if v19(v33.FanofKnives) then
 				return "Cast Fan of Knives";
 			end
 		end
 	end
-	if (v15.AoEON() and v6:BuffUp(v33.DeadlyPoison) and (v42 >= ((1827 - (1195 + 629)) - v12(v33.MomentumOfDespair:IsAvailable() and v33.ThrownPrecision:IsAvailable())))) then
-		for v155, v156 in v24(v41) do
-			if (not v156:DebuffUp(v33.DeadlyPoisonDebuff, true) and (not v56 or v156:DebuffUp(v33.Garrote) or v156:DebuffUp(v33.Rupture))) then
+	if (v15.AoEON() and v6:BuffUp(v33.DeadlyPoison) and v136 and (v42 >= ((344 - (218 + 123)) - v12(v33.MomentumOfDespair:IsAvailable() and v33.ThrownPrecision:IsAvailable())))) then
+		for v159, v160 in v24(v41) do
+			if (not v160:DebuffUp(v33.DeadlyPoisonDebuff, true) and (not v56 or v160:DebuffUp(v33.Garrote) or v160:DebuffUp(v33.Rupture))) then
 				if v19(v33.FanofKnives) then
 					return "Cast Fan of Knives (DP Refresh)";
 				end
 			end
 		end
 	end
-	if ((v33.Ambush:IsReady() or v33.AmbushOverride:IsReady()) and (v6:BuffUp(v33.BlindsideBuff) or v6:StealthUp(true, false)) and (v7:DebuffDown(v33.Kingsbane) or v7:DebuffDown(v33.Deathmark) or v6:BuffUp(v33.BlindsideBuff))) then
-		if v19(v33.Ambush) then
-			return "Cast Ambush";
-		end
-	end
-	if (v33.Mutilate:IsCastable() and (v42 == (2 - 0)) and v7:DebuffDown(v33.DeadlyPoisonDebuff, true) and v7:DebuffDown(v33.AmplifyingPoisonDebuff, true)) then
-		local v148 = v7:GUID();
+	if (v33.Mutilate:IsCastable() and v136 and (v42 == (1583 - (1535 + 46))) and v7:DebuffDown(v33.DeadlyPoisonDebuff, true) and v7:DebuffDown(v33.AmplifyingPoisonDebuff, true)) then
+		local v152 = v7:GUID();
 		if ((v7:DebuffUp(v33.Garrote) or v7:DebuffUp(v33.Rupture)) and not v7:DebuffUp(v33.DeadlyPoisonDebuff, true) and not v7:DebuffUp(v33.AmplifyingPoisonDebuff, true)) then
 			v18(v33.Mutilate);
 			return "Cast ReapplyDebuff Mutilate";
 		end
-		for v157, v158 in v24(v41) do
-			if ((v158:GUID() ~= v148) and (v158:DebuffUp(v33.Garrote) or v158:DebuffUp(v33.Rupture)) and not v158:DebuffUp(v33.DeadlyPoisonDebuff, true) and not v158:DebuffUp(v33.AmplifyingPoisonDebuff, true)) then
-				if ((v158:GUID() == v8:GUID()) and v158:IsInMeleeRange(v36)) then
+		for v161, v162 in v24(v41) do
+			if ((v162:GUID() ~= v152) and (v162:DebuffUp(v33.Garrote) or v162:DebuffUp(v33.Rupture)) and not v162:DebuffUp(v33.DeadlyPoisonDebuff, true) and not v162:DebuffUp(v33.AmplifyingPoisonDebuff, true)) then
+				if ((v162:GUID() == v8:GUID()) and v162:IsInMeleeRange(v36)) then
 					v15.CastTarget(v33.Mutilate, v15.TName().MOUSEOVER);
 					return "Cast Mouseover Mutilate";
 				else
-					v21(v158, v33.Mutilate);
+					v21(v162, v33.Mutilate);
 				end
 				break;
 			end
 		end
 	end
-	if v33.Mutilate:IsCastable() then
+	if (v33.Mutilate:IsCastable() and v136) then
 		if v19(v33.Mutilate) then
 			return "Cast Mutilate";
 		end
@@ -718,18 +731,19 @@ local function v98()
 	return false;
 end
 local function v99()
-	v36 = 246 - (187 + 54);
-	v37 = 790 - (162 + 618);
+	v29.HealthPotions();
+	v36 = 5 + 0;
+	v37 = 2 + 8;
 	v38 = v7:IsInMeleeRange(v36);
 	v39 = v7:IsInMeleeRange(v37);
 	v67 = v3.BossFightRemains();
 	v68 = true;
-	if (v67 == (7786 + 3325)) then
+	if (v67 == (11671 - (306 + 254))) then
 		v68 = false;
 		v67 = v3.FightRemains(v40, false);
 	end
 	if v16() then
-		v40 = v6:GetEnemiesInRange(20 + 10);
+		v40 = v6:GetEnemiesInRange(2 + 28);
 		v41 = v6:GetEnemiesInMeleeRange(v37);
 		v42 = #v41;
 		v43 = v6:GetEnemiesInMeleeRange(v36);
@@ -739,15 +753,15 @@ local function v99()
 		v42 = 1 - 0;
 		v43 = {};
 	end
-	v45, v46 = (2 - 0) * v6:SpellHaste(), (1 + 0) * v6:SpellHaste();
+	v45, v46 = (1469 - (899 + 568)) * v6:SpellHaste(), (1 + 0) * v6:SpellHaste();
 	v47 = v30.EffectiveComboPoints(v6:ComboPoints());
 	v48 = v6:ComboPointsMax() - v47;
-	v49 = ((1640 - (1373 + 263)) + (v47 * (1004 - (451 + 549)))) * (0.3 + 0);
-	v50 = ((5 - 1) + (v47 * (2 - 0))) * (1384.3 - (746 + 638));
+	v49 = ((9 - 5) + (v47 * (607 - (268 + 335)))) * (290.3 - (60 + 230));
+	v50 = ((576 - (426 + 146)) + (v47 * (1 + 1))) * (1456.3 - (282 + 1174));
 	v51 = v33.Envenom:Damage() * v32.Assassination.EnvenomDMGOffset;
 	v52 = v33.Mutilate:Damage() * v32.Assassination.MutilateDMGOffset;
 	v56 = v79();
-	v66 = v26(v6:ComboPointsMax() - (1 + 1), (7 - 2) * v22(v33.HandOfFate:IsAvailable()));
+	v66 = v26(v6:ComboPointsMax() - (813 - (569 + 242)), (14 - 9) * v22(v33.HandOfFate:IsAvailable()));
 	v44 = v30.Defense();
 	if v44 then
 		return v44;
@@ -756,7 +770,7 @@ local function v99()
 	if v44 then
 		return v44;
 	end
-	v66 = v26(v6:ComboPointsMax() - (343 - (218 + 123)), (1586 - (1535 + 46)) * v22(v33.HandOfFate:IsAvailable()));
+	v66 = v26(v6:ComboPointsMax() - (1 + 1), (1029 - (706 + 318)) * v22(v33.HandOfFate:IsAvailable()));
 	if not v6:AffectingCombat() then
 		if not v6:BuffUp(v30.VanishBuffSpell()) then
 			v44 = v30.Stealth(v30.StealthSpell());
@@ -766,7 +780,7 @@ local function v99()
 		end
 		if v30.CombatCheck() then
 			if not v6:BuffUp(v33.SliceandDice) then
-				if (v33.SliceandDice:IsReady() and (v47 >= (2 + 0))) then
+				if (v33.SliceandDice:IsReady() and (v47 >= (1253 - (721 + 530)))) then
 					if v18(v33.SliceandDice) then
 						return "Cast Slice and Dice";
 					end
@@ -775,21 +789,21 @@ local function v99()
 		end
 	end
 	if v30.CombatCheck() then
-		if v15.ToggleIconFrame:GetToggle(1 + 2) then
+		if v15.ToggleIconFrame:GetToggle(1274 - (945 + 326)) then
 			v44 = v29.InterruptCycle(v33.Kick, v36, true, nil, false);
 			if v44 then
 				return v44;
 			end
-			v44 = v32.Interrupt.UseBlind and v29.IncorpCycle(v33.Blind, 575 - (306 + 254), true, nil, false);
+			v44 = v32.Interrupt.UseBlind and v29.IncorpCycle(v33.Blind, 37 - 22, true, nil, false);
 			if v44 then
 				return v44;
 			end
-			v44 = v32.Interrupt.UseBlind and v29.InterruptCycle(v33.Blind, 1 + 14, true, nil, true);
+			v44 = v32.Interrupt.UseBlind and v29.InterruptCycle(v33.Blind, 14 + 1, true, nil, true);
 			if v44 then
 				return v44;
 			end
 			if (v7:DebuffDown(v33.Deathmark) or v7:DebuffDown(v33.Kingsbane)) then
-				v44 = v32.Interrupt.UseKidneyShot and (v47 > (0 - 0)) and v29.InterruptCycle(v33.KidneyShot, v36, true, nil, true);
+				v44 = v32.Interrupt.UseKidneyShot and (v47 > (700 - (271 + 429))) and v29.InterruptCycle(v33.KidneyShot, v36, true, nil, true);
 				if v44 then
 					return v44;
 				end
@@ -799,32 +813,38 @@ local function v99()
 				end
 			end
 		end
-		v44 = v32.Commons.Enabled.Shiv and v29.SootheCycle(v33.Shiv, 1476 - (899 + 568), false, v32.Commons.Enabled["Shiv Auto Target"]);
+		v44 = v32.Commons.Enabled.Shiv and v29.SootheCycle(v33.Shiv, 9 + 0, false, v32.Commons.Enabled["Shiv Auto Target"]);
 		if v44 then
 			return v44;
 		end
 		v59 = v30.PoisonedBleeds();
-		v60 = v6:EnergyRegen() + ((v59 * (4 + 2)) / ((4 - 2) * v6:SpellHaste()));
+		v60 = v6:EnergyRegen() + ((v59 * (1506 - (1408 + 92))) / ((1088 - (461 + 625)) * v6:SpellHaste()));
 		v61 = v6:EnergyDeficit() / v60;
-		v62 = v60 > (638 - (268 + 335));
+		v62 = v60 > (1318 - (993 + 295));
 		v57 = v80();
+		InCooldowns = v7:DebuffUp(v33.Deathmark) or v7:DebuffUp(v33.Kingsbane) or v7:DebuffUp(v33.Shiv);
+		ClipEnvenom = v6:BuffUp(v33.Envenom);
+		UpperLimitEnergy = v6:EnergyPercentage() >= ((3 + 47) - ((1181 - (418 + 753)) * v33.ViciousVenoms:TalentRank()));
+		AvoidTea = v6:Energy() > (16 + 24 + 6 + 44 + ((2 + 3) * v33.ViciousVenoms:TalentRank()));
+		CDSoon = (v33.Kingsbane:CooldownRemains() < (1 + 2)) and not v33.Kingsbane:IsReady();
+		v57 = InCooldowns or (not CDSoon and AvoidTea and v6:BuffUp(v33.DarkestNightBuff)) or (not CDSoon and AvoidTea and ClipEnvenom) or UpperLimitEnergy or v3.BossFilteredFightRemains("<=", 549 - (406 + 123));
 		v64 = v81();
-		v63 = v42 < (292 - (60 + 230));
+		v63 = v42 < (1771 - (1749 + 20));
 		if v63 then
-			if not v7:IsInRange(597 - (426 + 146)) then
+			if not v7:IsInRange(6 + 19) then
 				return;
 			end
-		elseif (v42 == (1 + 0)) then
+		elseif (v42 == (1323 - (1249 + 73))) then
 			return;
 		end
 		if (v74() and v33.ThistleTea:IsCastable() and not v6:BuffUp(v33.ThistleTea)) then
-			if ((((v6:EnergyDeficit() >= ((1556 - (282 + 1174)) + v60)) or (v33.ThistleTea:Charges() >= (814 - (569 + 242)))) and (v7:DebuffRemains(v33.ShivDebuff) >= (11 - 7))) or ((v42 >= (1 + 3)) and (v7:DebuffRemains(v33.Shiv) >= (1030 - (706 + 318)))) or v3.BossFilteredFightRemains("<", v33.ThistleTea:Charges() * (1257 - (721 + 530)))) then
+			if ((v7:DebuffUp(v33.Kingsbane) and (v7:DebuffRemains(v33.Kingsbane) < (3 + 5))) or (v6:BuffDown(v33.ThistleTea) and (v33.ThistleTea:Charges() >= (1147 - (466 + 679))) and (v7:DebuffRemains(v33.ShivDebuff) > (14 - 8))) or (v6:BuffDown(v33.ThistleTea) and v3.BossFilteredFightRemains("<", v33.ThistleTea:Charges() * (17 - 11)))) then
 				if v15.Cast(v33.ThistleTea, true) then
 					return "Cast Thistle Tea";
 				end
 			end
 		end
-		if (v6:StealthUp(true, false) or (v77() > (1271 - (945 + 326))) or (v76() > (0 - 0))) then
+		if (v6:StealthUp(true, false) or (v77() > (1900 - (106 + 1794))) or (v76() > (0 + 0))) then
 			v44 = v86();
 			if v44 then
 				return v44 .. " (Stealthed)";
@@ -837,12 +857,12 @@ local function v99()
 				end
 			end
 		elseif v39 then
-			if (v33.Envenom:IsReady() and (v6:BuffRemains(v33.SliceandDice) < (705 - (271 + 429))) and (v6:ComboPoints() >= (5 + 0))) then
+			if (v33.Envenom:IsReady() and (v6:BuffRemains(v33.SliceandDice) < (14 - 9)) and (v6:ComboPoints() >= (13 - 8))) then
 				if v18(v33.Envenom) then
 					return "Cast Envenom (CttC)";
 				end
 			end
-		elseif (v33.PoisonedKnife:IsCastable() and v7:IsInRange(1530 - (1408 + 92)) and not v6:StealthUp(true, true) and (v42 == (1086 - (461 + 625))) and (v6:EnergyTimeToMax() <= (v6:GCD() * (1289.5 - (993 + 295))))) then
+		elseif (v33.PoisonedKnife:IsCastable() and v7:IsInRange(144 - (4 + 110)) and not v6:StealthUp(true, true) and (v42 == (584 - (57 + 527))) and (v6:EnergyTimeToMax() <= (v6:GCD() * (1428.5 - (41 + 1386))))) then
 			if v18(v33.PoisonedKnife) then
 				return "Cast Poisoned Knife";
 			end
@@ -866,7 +886,7 @@ local function v99()
 			return v44;
 		end
 		if (v92() and v32.Commons.Enabled.Racials) then
-			if (v33.ArcaneTorrent:IsCastable() and v38 and (v6:EnergyDeficit() >= (1 + 14 + v60))) then
+			if (v33.ArcaneTorrent:IsCastable() and v38 and (v6:EnergyDeficit() >= ((118 - (17 + 86)) + v60))) then
 				if v18(v33.ArcaneTorrent, true) then
 					return "Cast Arcane Torrent";
 				end
@@ -899,6 +919,6 @@ local function v100()
 	v33.Sepsis:RegisterAuraTracking();
 	v33.Garrote:RegisterAuraTracking();
 	v32.Assassination.Display();
-	v15.Print("Assassination Rogue rotation has been updated for patch 11.0.0.");
+	v29.PostInitialMessage(176 + 83);
 end
-v15.SetAPL(1430 - (418 + 753), v99, v100);
+v15.SetAPL(577 - 318, v99, v100);
