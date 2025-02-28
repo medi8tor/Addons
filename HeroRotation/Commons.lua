@@ -1087,5 +1087,7 @@ end
 v21.PostInitialMessage = function(v388)
 	if (v388 == (15 + 244)) then
 		v2.Print("Assassination Rogue rotation has been updated for patch 11.1.0. Please report any issues on the discord. Thank you! - 27.02.2025");
+	elseif (v388 == (948 - 696)) then
+		v2.Print("Unholy DK rotation has been updated for patch 11.1.0. Please report any issues on the discord. Thank you! - 28.02.2025");
 	end
 end;
