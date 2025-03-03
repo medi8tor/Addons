@@ -182,7 +182,7 @@ local function v48()
 			end
 		end
 	end
-	if (v5:BuffUp(v19.ViolentOutburstBuff) and (v24 > (891 - (261 + 624))) and v5:BuffUp(v19.AvatarBuff) and v19.UnstoppableForce:IsAvailable()) then
+	if (v5:BuffUp(v19.ViolentOutburstBuff) and (v24 > (891 - (261 + 624))) and v5:BuffUp(v19.Avatar) and v19.UnstoppableForce:IsAvailable()) then
 		if (v19.ThunderBlastAbility:IsReady() and (v24 > (3 - 1)) and v6:IsInMeleeRange(1088 - (1020 + 60))) then
 			v45(1428 - (630 + 793));
 			if v10(v19.ThunderBlastAbility) then
@@ -226,7 +226,7 @@ local function v48()
 	end
 end
 local function v49()
-	if (v19.ThunderBlastAbility:IsReady() and v6:IsInMeleeRange(8 + 0) and (v5:BuffStack(v19.ThunderBlastBuff) == (4 - 2)) and (v5:BuffStack(v19.BurstofPowerBuff) <= (1414 - (447 + 966))) and v5:BuffUp(v19.AvatarBuff) and v19.UnstoppableForce:IsAvailable()) then
+	if (v19.ThunderBlastAbility:IsReady() and v6:IsInMeleeRange(8 + 0) and (v5:BuffStack(v19.ThunderBlastBuff) == (4 - 2)) and (v5:BuffStack(v19.BurstofPowerBuff) <= (1414 - (447 + 966))) and v5:BuffUp(v19.Avatar) and v19.UnstoppableForce:IsAvailable()) then
 		v45(13 - 8);
 		if v10(v19.ThunderBlastAbility) then
 			return "thunder_blast generic 2";
@@ -469,7 +469,7 @@ local function v50()
 						return "ancestral_call main 18";
 					end
 				end
-				if (v29.Commons.Enabled.Potions and IsPotions and (v5:BuffUp(v19.AvatarBuff) or (v5:BuffDown(v19.AvatarBuff) and (v6:HealthPercentage() <= (11 + 9))) or not IsAvatar) and v22) then
+				if (v29.Commons.Enabled.Potions and IsPotions and (v5:BuffUp(v19.Avatar) or (v5:BuffDown(v19.Avatar) and (v6:HealthPercentage() <= (11 + 9))) or not IsAvatar) and v22) then
 					local v72 = v27.PotionSelected();
 					if (v72 and v72:IsReady()) then
 						v9.CastMacro(2 + 1, true, nil, v72);
