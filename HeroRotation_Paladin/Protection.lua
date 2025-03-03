@@ -68,7 +68,7 @@ local function v50(v70, v71)
 	return ((v70 ~= "Not Used") and v49(v47.ProtTTD.TrinketsTTD) and (((v70 == "With Cooldowns") and v12.CDsON()) or ((v70 == "With Small or Cooldowns") and (SmallCDToggle or v12.CDsON())) or ((v70 == "With Small CDs") and SmallCDToggle) or ((v70 == "On Mobcount") and (v28 >= v47.Protection.Mobcount)) or ((v70 == "On Mobcount or Cooldowns") and ((v28 >= v47.Protection.Mobcount) or v14())) or (v70 == "Always") or ((v70 == "On Bosses") and v31) or ((v70 == "Mobcount or Boss") and (v31 or (v28 >= v47.Protection.Mobcount))))) or ((v70 == "On HealthPercent") and (v71 ~= nil) and (v6:HealthPercentageWeighted() < v71));
 end
 local function v51()
-	return v6:BuffUp(v20.ArdentDefender) or v6:BuffUp(v20.GuardianofAncientKings) or v6:BuffUp(v20.DivineShield) or v6:BuffUp(v20.BlessingOfSpellwarding) or v6:BuffUp(v20.EyeofTyr);
+	return v6:BuffUp(v20.ArdentDefender) or v6:BuffUp(v20.GuardianofAncientKings) or v6:BuffUp(v20.DivineShield);
 end
 local function v52()
 	return v47.Protection.Consecration or not v6:IsMoving();
@@ -185,11 +185,6 @@ local function v61()
 			return "blessing_of_spellwarding defensive 8";
 		end
 	end
-	if (v20.EyeofTyr:IsCastable() and v6:IncomingSpell(v45.TankBustersList2) and not v51()) then
-		if v15(v20.EyeofTyr, nil) then
-			return "eye_of_tyr defensive 10";
-		end
-	end
 	if (v20.WordofGlory:IsReady() and v6:BuffUp(v20.ShiningLightFreeBuff) and v20.FaithintheLight:IsAvailable() and not v6:BuffUp(v20.FaithintheLightBuff) and v47.ProtectionDefensives.WordofGloryFaithintheLight) then
 		if v15(v20.WordofGlory) then
 			return "word_of_glory FaithintheLightBuff";
@@ -200,7 +195,7 @@ local function v61()
 			return "word_of_glory defensive 8";
 		end
 	end
-	if ((v6:HealthPercentageWeighted() <= v47.ProtectionDefensives.BubbleHP) and v20.DivineShield:IsCastable() and v6:DebuffDown(v20.ForbearanceDebuff) and v6:IncomingSpell(v45.TankBustersList2) and not v51()) then
+	if ((v6:HealthPercentageWeighted() <= v47.ProtectionDefensives.BubbleHP) and v20.DivineShield:IsCastable() and v6:DebuffDown(v20.ForbearanceDebuff)) then
 		if v15(v20.DivineShield, nil) then
 			return "Divine Shield defensive";
 		end
@@ -545,7 +540,7 @@ local function v67()
 		end
 	end
 	if v20.RiteofSanctification:IsCastable() then
-		if v12.CastLeft(v20.RiteofSanctification) then
+		if v12.Cast(v20.RiteofSanctification) then
 			return "rite_of_sanctification precombat 2";
 		end
 	end
@@ -672,6 +667,6 @@ local function v68()
 	v12.ToggleIconFrame:AddButtonCustom("T", 2 - 0, "Tab", "tab");
 	v12.ToggleIconFrame:AddButtonCustom("I", 1387 - (746 + 638), "Interrupt", "interrupt");
 	v12.ToggleIconFrame:AddButtonCustom("D", 2 + 2, "Dispel", "dispel");
-	v12.Print("Protection Paladin rotation has been updated for patch 11.0.7. 23.12.24");
+	v45.PostInitialMessage(99 - 33);
 end
-v12.SetAPL(99 - 33, v67, v68);
+v12.SetAPL(407 - (218 + 123), v67, v68);

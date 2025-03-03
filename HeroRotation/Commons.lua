@@ -26,8 +26,8 @@ local v27 = {[781 - 531]="Blood",[718 - 467]="Frost",[485 - 233]="Unholy",[1486 
 local v28 = {"Warrior","Paladin","Hunter","Rogue","Priest","DeathKnight","Shaman","Mage","Warlock","Monk","Druid","DemonHunter","Evoker"};
 v21.converArrayToList = function(v133)
 	local v134 = {};
-	for v389, v390 in v17(v133) do
-		v134[v390] = true;
+	for v388, v389 in v17(v133) do
+		v134[v389] = true;
 	end
 	return v134;
 end;
@@ -48,34 +48,34 @@ do
 	local v136, v137;
 	local v138, v139, v140, v141, v142;
 	local v143, v144, v145;
-	v9.AuraInfo = function(v392, v393, v394, v395)
-		v136 = v392:GUID();
+	v9.AuraInfo = function(v391, v392, v393, v394)
+		v136 = v391:GUID();
 		if not v136 then
 			return;
 		end
-		local v396 = v7.UnitInfo[v136];
-		if not v396 then
-			v396 = {};
-			v7.UnitInfo[v136] = v396;
+		local v395 = v7.UnitInfo[v136];
+		if not v395 then
+			v395 = {};
+			v7.UnitInfo[v136] = v395;
 		end
-		local v397 = v396[v394];
-		if not v397 then
-			if (v394 == "HELPFUL") then
-				v143 = v394;
+		local v396 = v395[v393];
+		if not v396 then
+			if (v393 == "HELPFUL") then
+				v143 = v393;
 				v144 = "HELPFUL|PLAYER";
-			elseif (v394 == "HARMFUL") then
-				v143 = v394;
+			elseif (v393 == "HARMFUL") then
+				v143 = v393;
 				v144 = "HARMFUL|PLAYER";
-			elseif (v394 == "HELPFUL|PLAYER") then
+			elseif (v393 == "HELPFUL|PLAYER") then
 				v143 = "HELPFUL";
-				v144 = v394;
-			elseif (v394 == "HARMFUL|PLAYER") then
+				v144 = v393;
+			elseif (v393 == "HARMFUL|PLAYER") then
 				v143 = "HARMFUL";
-				v144 = v394;
+				v144 = v393;
 			end
 			UnitFilterInfoAll = {};
 			UnitFilterInfoPlayer = {};
-			v137 = v392:ID();
+			v137 = v391:ID();
 			v142 = 4 - 3;
 			while true do
 				AuraData = v135(v137, v142, v143);
@@ -96,13 +96,13 @@ do
 				end
 				v142 = v142 + 1 + 0;
 			end
-			v396[v143] = UnitFilterInfoAll;
-			v396[v144] = UnitFilterInfoPlayer;
-			v397 = v396[v394];
+			v395[v143] = UnitFilterInfoAll;
+			v395[v144] = UnitFilterInfoPlayer;
+			v396 = v395[v393];
 		end
-		local v398 = v397[v393:ID()];
-		if v398 then
-			return unpack(v398);
+		local v397 = v396[v392:ID()];
+		if v397 then
+			return unpack(v397);
 		end
 	end;
 end
@@ -144,8 +144,8 @@ v9.CanBeStunned = function(v152)
 end;
 v9.IsBoss = function(v153)
 	if v9.Boss then
-		for v495, v496 in v17(v9.Boss) do
-			if (v496:Exists() and (v496:GUID() == v153:GUID())) then
+		for v494, v495 in v17(v9.Boss) do
+			if (v495:Exists() and (v495:GUID() == v153:GUID())) then
 				return true;
 			end
 		end
@@ -243,8 +243,8 @@ end;
 local v72 = v15(414831 - 186513);
 local function v73(v192, v193)
 	if ((v10:IsInRaidArea() and v25.InterruptEverythingRaid) or (v10:IsInDungeonArea() and v192:BuffDown(v72) and ((v25.InterruptInDungeon == "Everything") or ((v25.InterruptInDungeon == "Whitelist") and v193[v192:CastSpellID() or v192:ChannelSpellID()]))) or (v25.InterruptEverythingSolo and v21.ISSolo())) then
-		local v467 = v192:ID();
-		if ((v467 ~= "target") and (v467 ~= "mouseover")) then
+		local v466 = v192:ID();
+		if ((v466 ~= "target") and (v466 ~= "mouseover")) then
 			return true;
 		end
 		if (v192:IsChanneling() and (v192:CastPercentage() <= v25.InterruptPercentChannel)) then
@@ -257,18 +257,18 @@ local function v73(v192, v193)
 end
 do
 	local v194 = v15(62392 - (830 + 258));
-	v10.GCDDuration = function(v399)
-		local v400, v400, v400, v401 = v194:CooldownInfo();
-		return v401;
+	v10.GCDDuration = function(v398)
+		local v399, v399, v399, v400 = v194:CooldownInfo();
+		return v400;
 	end;
-	v15.CooldownWithoutGCD = function(v402)
-		local v403, v404, v403, v405 = v402:CooldownInfo();
-		if (v404 == (0 - 0)) then
+	v15.CooldownWithoutGCD = function(v401)
+		local v402, v403, v402, v404 = v401:CooldownInfo();
+		if (v403 == (0 - 0)) then
 			return 0 + 0;
 		end
-		local v406 = ((v404 + v405) - GetTime()) - v10:GCDDuration();
-		v406 = ((v406 > (0 + 0)) and v406) or (1441 - (860 + 581));
-		return v406 == (0 - 0);
+		local v405 = ((v403 + v404) - GetTime()) - v10:GCDDuration();
+		v405 = ((v405 > (0 + 0)) and v405) or (1441 - (860 + 581));
+		return v405 == (0 - 0);
 	end;
 end
 local function v74(v197)
@@ -294,8 +294,8 @@ v21.InterruptCycle = function(v199, v200, v201, v202, v203, v204)
 	end
 end;
 local function v77(v209)
-	for v407, v408 in v17(v21.PurgeList) do
-		if v209:BuffUp(v15(v408), true) then
+	for v406, v407 in v17(v21.PurgeList) do
+		if v209:BuffUp(v15(v407), true) then
 			return true;
 		end
 	end
@@ -312,8 +312,8 @@ v21.PurgeCycle = function(v210, v211, v212, v213)
 	end
 end;
 local function v79(v216)
-	for v409, v410 in v17(v21.SootheList) do
-		if v216:BuffUp(v15(v410), true) then
+	for v408, v409 in v17(v21.SootheList) do
+		if v216:BuffUp(v15(v409), true) then
 			return true;
 		end
 	end
@@ -370,17 +370,17 @@ v21.CastCycle = function(v232, v233, v234, v235, v236, v237, v238, v239, v240)
 		end
 	end
 	if (v3() or not v240) then
-		local v468 = v12:GUID();
-		for v497, v498 in v17(v233) do
-			if ((v498:GUID() ~= v468) and not v498:IsFacingBlacklisted() and not v498:IsUserCycleBlacklisted() and v234(v498)) then
+		local v467 = v12:GUID();
+		for v496, v497 in v17(v233) do
+			if ((v497:GUID() ~= v467) and not v497:IsFacingBlacklisted() and not v497:IsUserCycleBlacklisted() and v234(v497)) then
 				if v239 then
 					if v4(v232, v236, v237, false) then
 						return "CastCycle AOESpell Cast " .. v232:Name();
 					end
 				end
-				v5(v498, v232, v238);
+				v5(v497, v232, v238);
 				if v238 then
-					return "CastCycle Tab to " .. v498:Name() .. " to Cast " .. v232:Name();
+					return "CastCycle Tab to " .. v497:Name() .. " to Cast " .. v232:Name();
 				end
 			end
 		end
@@ -398,24 +398,24 @@ v21.CastTargetIf = function(v243, v244, v245, v246, v247, v248, v249, v250, v251
 		return "CastTargetIf Mouseover Cast " .. v243:Name();
 	end
 	if v3() then
-		local v469, v470 = nil, nil;
-		for v499, v500 in v17(v244) do
-			if (not v500:IsFacingBlacklisted() and not v500:IsUserCycleBlacklisted() and (v500:AffectingCombat() or v500:IsDummy()) and (not v470 or v8.CompareThis(v245, v246(v500), v470))) then
-				v469, v470 = v500, v246(v500);
+		local v468, v469 = nil, nil;
+		for v498, v499 in v17(v244) do
+			if (not v499:IsFacingBlacklisted() and not v499:IsUserCycleBlacklisted() and (v499:AffectingCombat() or v499:IsDummy()) and (not v469 or v8.CompareThis(v245, v246(v499), v469))) then
+				v468, v469 = v499, v246(v499);
 			end
 		end
-		if v469 then
-			if (v253 and ((v469:GUID() == v12:GUID()) or (v470 == v246(v12)))) then
+		if v468 then
+			if (v253 and ((v468:GUID() == v12:GUID()) or (v469 == v246(v12)))) then
 				v4(v243, v249, v250, false);
 				return "CastTargetIf to Target is best Cast" .. v243:Name();
-			elseif ((v247 and v247(v469)) or not v247) then
-				if ((v469:GUID() == v14:GUID()) or ((v470 == v246(v14)) and v14:Exists() and v10:CanAttack(v14) and not v14:IsDeadOrGhost())) then
+			elseif ((v247 and v247(v468)) or not v247) then
+				if ((v468:GUID() == v14:GUID()) or ((v469 == v246(v14)) and v14:Exists() and v10:CanAttack(v14) and not v14:IsDeadOrGhost())) then
 					v2.CastTarget(v243, v2.TName().MOUSEOVER, v249, v250, false);
 					return "CastTargetIf to Mouseover is best Cast" .. v243:Name();
 				end
-				v5(v469, v243, v251);
+				v5(v468, v243, v251);
 				if v251 then
-					return "CastTargetIf Tab to " .. v469:Name() .. " to Cast " .. v243:Name();
+					return "CastTargetIf Tab to " .. v468:Name() .. " to Cast " .. v243:Name();
 				end
 			end
 		end
@@ -438,20 +438,20 @@ v21.unitHasBuffFromList = function(v255, v256)
 		v257 = v7.UnitInfo[v256:GUID()];
 	end
 	if v257 then
-		local v472 = v257['HELPFUL'];
-		if not v472 then
+		local v471 = v257['HELPFUL'];
+		if not v471 then
 			v256:BuffInfo(v86, "HELPFUL");
-			v472 = v257['HELPFUL'];
+			v471 = v257['HELPFUL'];
 		end
-		if v472 then
-			for v535, v536 in v17(v472) do
-				if v255[v535] then
+		if v471 then
+			for v534, v535 in v17(v471) do
+				if v255[v534] then
 					if (v258 == (0 + 0)) then
 						v258 = math.random(0.4 - 0, 0.9 + 0);
 					end
-					if (v256:BuffRemains(v15(v535), true) >= v258) then
+					if (v256:BuffRemains(v15(v534), true) >= v258) then
 						if v2.DebugON() then
-							print("unitHasBuffFromList " .. v535 .. " on unit " .. v256:Name());
+							print("unitHasBuffFromList " .. v534 .. " on unit " .. v256:Name());
 						end
 						return true;
 					end
@@ -468,17 +468,17 @@ v21.unitHasBuffFromListRemainingTime = function(v259, v260, v261)
 		v262 = v7.UnitInfo[v260:GUID()];
 	end
 	if v262 then
-		local v474 = v262['HELPFUL'];
-		if not v474 then
+		local v473 = v262['HELPFUL'];
+		if not v473 then
 			v260:BuffInfo(v86, "HELPFUL");
-			v474 = v262['HELPFUL'];
+			v473 = v262['HELPFUL'];
 		end
-		if v474 then
-			for v537, v538 in v17(v474) do
-				if v259[v537] then
-					if (v260:BuffRemains(v15(v537), true) >= v261) then
+		if v473 then
+			for v536, v537 in v17(v473) do
+				if v259[v536] then
+					if (v260:BuffRemains(v15(v536), true) >= v261) then
 						if v2.DebugON() then
-							print("unitHasBuffFromList " .. v537 .. " on unit " .. v260:Name());
+							print("unitHasBuffFromList " .. v536 .. " on unit " .. v260:Name());
 						end
 						return true;
 					end
@@ -496,20 +496,20 @@ v21.unitHasDebuffFromList = function(v263, v264)
 		v265 = v7.UnitInfo[v264:GUID()];
 	end
 	if v265 then
-		local v476 = v265['HARMFUL'];
-		if not v476 then
+		local v475 = v265['HARMFUL'];
+		if not v475 then
 			v264:DebuffInfo(v72, "HARMFUL");
-			v476 = v265['HARMFUL'];
+			v475 = v265['HARMFUL'];
 		end
-		if v476 then
-			for v539, v540 in v17(v476) do
-				if v263[v539] then
+		if v475 then
+			for v538, v539 in v17(v475) do
+				if v263[v538] then
 					if (v266 == (1426 - (85 + 1341))) then
 						v266 = math.random(0.4 - 0, 0.9 - 0);
 					end
-					if (v264:DebuffElapsed(v15(v539), true) >= v266) then
+					if (v264:DebuffElapsed(v15(v538), true) >= v266) then
 						if v2.DebugON() then
-							print("unitHasDebuffFromList " .. v539 .. " on unit " .. v264:Name());
+							print("unitHasDebuffFromList " .. v538 .. " on unit " .. v264:Name());
 						end
 						return true;
 					end
@@ -526,40 +526,36 @@ local v93 = v15(192696 + 250741);
 local v94 = v15(74403 + 358045);
 local v95 = v15(225609 + 235878);
 local v96 = v15(1231325 - 806436);
-local v97 = v15(237724 - (64 + 1668));
 v21.DispelCycle = function(v267, v268, v269, v270)
 	local v271 = v21.DebuffList[v268];
-	local function v272(v411)
+	local function v272(v410)
 		if (v268 == "Magic") then
-			if (v411:DebuffUp(v90, true) and (v411:DebuffElapsed(v90, true) >= (1976.25 - (1227 + 746)))) then
+			if (v410:DebuffUp(v90, true) and (v410:DebuffElapsed(v90, true) >= (1735.25 - (64 + 1668)))) then
 				return true;
 			end
-			if (v411:DebuffUp(v91, true) and (v411:DebuffElapsed(v91, true) >= (9 - 6))) then
+			if (v410:DebuffUp(v91, true) and (v410:DebuffElapsed(v91, true) >= (1976 - (1227 + 746)))) then
 				return true;
 			end
-			if (v411:DebuffUp(v92, true) and (v411:DebuffElapsed(v92, true) >= (5 - 2))) then
+			if (v410:DebuffUp(v92, true) and (v410:DebuffElapsed(v92, true) >= (9 - 6))) then
 				return true;
 			end
-			if (v411:DebuffUp(v93, true) and (v411:DebuffElapsed(v93, true) >= (497 - (415 + 79)))) then
+			if (v410:DebuffUp(v93, true) and (v410:DebuffElapsed(v93, true) >= (5 - 2))) then
 				return true;
 			end
-			if (v411:DebuffUp(v94, true) and (v411:DebuffElapsed(v94, true) >= (1 + 2))) then
+			if (v410:DebuffUp(v94, true) and (v410:DebuffElapsed(v94, true) >= (497 - (415 + 79)))) then
 				return true;
 			end
-			if (v411:DebuffUp(v96, true) and (v411:DebuffRemains(v96, true) <= (499 - (142 + 349)))) then
-				return true;
-			end
-			if v411:DebuffUp(v97, true) then
+			if (v410:DebuffUp(v96, true) and (v410:DebuffRemains(v96, true) <= (1 + 7))) then
 				return true;
 			end
 		elseif (v268 == "Disease") then
-			if (v411:DebuffUp(v90, true) and (v411:DebuffElapsed(v90, true) >= (2.25 + 1))) then
+			if (v410:DebuffUp(v90, true) and (v410:DebuffElapsed(v90, true) >= (494.25 - (142 + 349)))) then
 				return true;
 			end
 		elseif (v268 == "Poison") then
 		elseif (v268 == "Raid") then
 		end
-		if v21.unitHasDebuffFromList(v271, v411) then
+		if v21.unitHasDebuffFromList(v271, v410) then
 			return true;
 		end
 		return false;
@@ -577,29 +573,29 @@ v21.CycleFriendly = function(v273, v274, v275, v276, v277)
 		v277 = v9.Party;
 	end
 	if v277 then
-		for v501, v502 in v17(v277) do
-			if (v502:Exists() and not v502:IsDeadOrGhost() and v502:UnitIsFriend() and (v278 or v502:IsSpellInRange(v276 or v273)) and v274(v502)) then
-				return v502:Cast(v273, v275);
+		for v500, v501 in v17(v277) do
+			if (v501:Exists() and not v501:IsDeadOrGhost() and v501:UnitIsFriend() and (v278 or v501:IsSpellInRange(v276 or v273)) and v274(v501)) then
+				return v501:Cast(v273, v275);
 			end
 		end
 	end
 end;
-local v100 = v15(609957 - 166345);
-local function v101(v279)
-	return (v10:DebuffUp(v100, true) and v279:DebuffUp(v100, true)) or (v10:DebuffDown(v100, true) and v279:DebuffDown(v100, true));
+local v99 = v15(190036 + 253576);
+local function v100(v279)
+	return (v10:DebuffUp(v99, true) and v279:DebuffUp(v99, true)) or (v10:DebuffDown(v99, true) and v279:DebuffDown(v99, true));
 end
 v21.UnitsinRange = function(v280)
 	local v281 = {};
 	if v19("player") then
-		for v503, v504 in v17(v9.Raid) do
-			if (v504:Exists() and not v504:IsDeadOrGhost() and v101(v504) and v504:IsSpellInRange(v280) and v504:UnitIsFriend()) then
-				table.insert(v281, v504);
+		for v502, v503 in v17(v9.Raid) do
+			if (v503:Exists() and not v503:IsDeadOrGhost() and v100(v503) and v503:IsSpellInRange(v280) and v503:UnitIsFriend()) then
+				table.insert(v281, v503);
 			end
 		end
 	elseif v18("player") then
-		for v541, v542 in v17(v9.Party) do
-			if (v542:Exists() and not v542:IsDeadOrGhost() and v542:IsSpellInRange(v280) and v542:UnitIsFriend()) then
-				table.insert(v281, v542);
+		for v540, v541 in v17(v9.Party) do
+			if (v541:Exists() and not v541:IsDeadOrGhost() and v541:IsSpellInRange(v280) and v541:UnitIsFriend()) then
+				table.insert(v281, v541);
 			end
 		end
 		if (v10:Exists() and not v10:IsDeadOrGhost()) then
@@ -610,38 +606,38 @@ v21.UnitsinRange = function(v280)
 	end
 	return v281;
 end;
-local v103 = {[219794 + 222491]=(0.3 + 0),[1228848 - 777624]=(1864.3 - (1710 + 154)),[320780 - (200 + 118)]=(0.4 + 0),[775090 - 331785]=(0.3 - 0),[404639 + 50765]=(0.3 + 0),[229013 + 197723]=(0.3 + 0),[975154 - 525059]=(1250.3 - (363 + 887)),[772587 - 330150]=(0.3 - 0),[68428 + 374846]=(0.3 - 0),[302474 + 140186]=(1664.3 - (674 + 990)),[92458 + 230028]=(0.8 + 0),[675756 - 249448]=(1055.8 - (507 + 548)),[449991 - (289 + 548)]=(1818.8 - (821 + 997)),[431564 - (195 + 60)]=(0.8 + 0),[433949 - (251 + 1250)]=(0.8 - 0),[296387 + 134963]=(1032.8 - (809 + 223)),[647097 - 203667]=(0.8 - 0),[1466206 - 1022773]=(0.8 + 0),[232203 + 211234]=(617.8 - (14 + 603)),[448690 - (118 + 11)]=(0.8 + 0),[366570 + 73537]=(0.8 - 0),[434689 - (551 + 398)]=(0.8 + 0),[119121 + 215627]=(0.8 + 0),[1190836 - 870636]=(0.8 - 0),[88343 + 184228]=(0.8 - 0),[75503 + 197967]=(89.8 - (40 + 49)),[1047292 - 772278]=(490.8 - (99 + 391)),[364200 + 76113]=(0.6 - 0)};
-local v104 = v15(253437 - 151095);
-local v105 = v15(32346 + 860);
-local v106 = v15(125745 - 77957);
-local v107 = v15(8544 - (1032 + 572));
+local v102 = {[608132 - 165847]=(0.3 + 0),[317909 + 133315]=(0.3 - 0),[322326 - (1710 + 154)]=(318.4 - (200 + 118)),[175654 + 267651]=(0.3 - 0),[675465 - 220061]=(0.3 + 0),[422109 + 4627]=(0.3 + 0),[71876 + 378219]=(0.3 - 0),[443687 - (363 + 887)]=(0.3 - 0),[2109916 - 1666642]=(0.3 + 0),[1035787 - 593127]=(0.3 + 0),[324150 - (674 + 990)]=(0.8 + 0),[174470 + 251838]=(0.8 - 0),[450209 - (507 + 548)]=(837.8 - (289 + 548)),[433127 - (821 + 997)]=(255.8 - (195 + 60)),[116281 + 316167]=(1501.8 - (251 + 1250)),[1263681 - 832331]=(0.8 + 0),[444462 - (809 + 223)]=(0.8 - 0),[1331688 - 888255]=(0.8 - 0),[326558 + 116879]=(0.8 + 0),[449178 - (14 + 603)]=(129.8 - (118 + 11)),[71207 + 368900]=(0.8 + 0),[1264047 - 830307]=(949.8 - (551 + 398)),[211552 + 123196]=(0.8 + 0),[260221 + 59979]=(0.8 - 0),[628050 - 355479]=(0.8 + 0),[1085623 - 812153]=(0.8 + 0),[275103 - (40 + 49)]=(0.8 - 0),[440803 - (99 + 391)]=(0.6 + 0)};
+local v103 = v15(449890 - 347548);
+local v104 = v15(82230 - 49024);
+local v105 = v15(46550 + 1238);
+local v106 = v15(18261 - 11321);
 v21.CalculateWeight = function(v282)
-	local v283 = 418 - (203 + 214);
+	local v283 = 1605 - (1032 + 572);
 	local v284 = v7.UnitInfo[v282:GUID()];
 	if not v284 then
 		v282:DebuffInfo(v72, "HARMFUL");
 		v284 = v7.UnitInfo[v282:GUID()];
 	end
 	if v284 then
-		local v479 = v284['HARMFUL'];
-		if not v479 then
+		local v478 = v284['HARMFUL'];
+		if not v478 then
 			v282:DebuffUp(v72, true);
-			v479 = v284['HARMFUL'];
+			v478 = v284['HARMFUL'];
 		end
-		if v479 then
-			for v543, v544 in v17(v479) do
-				if v103[v543] then
+		if v478 then
+			for v542, v543 in v17(v478) do
+				if v102[v542] then
 					if v2.DebugON() then
 					end
-					v283 = v283 * v103[v543];
+					v283 = v283 * v102[v542];
 				end
 			end
 		end
 	end
-	if (v283 > (1817.3 - (568 + 1249))) then
-		local v480 = (1 + 0) * (((v282:BuffUp(v104, true) or v282:BuffUp(v107, true) or v282:BuffUp(v105, true)) and (2.1 - 1)) or (3 - 2));
-		v480 = v480 * ((v282:BuffUp(v106, true) and (1307.3 - (913 + 393))) or (2 - 1));
-		v283 = v283 * v480;
+	if (v283 > (417.3 - (203 + 214))) then
+		local v479 = (1818 - (568 + 1249)) * (((v282:BuffUp(v103, true) or v282:BuffUp(v106, true) or v282:BuffUp(v104, true)) and (1.1 + 0)) or (2 - 1));
+		v479 = v479 * ((v282:BuffUp(v105, true) and (3.3 - 2)) or (1307 - (913 + 393)));
+		v283 = v283 * v479;
 	end
 	return v282:HealthPercentage() * v283;
 end;
@@ -650,62 +646,62 @@ v21.GetLowestHealthUnit = function(v285)
 	local v287 = v286:HealthPercentageWeighted();
 	local v288 = nil;
 	local v289 = math.huge;
-	for v412, v413 in v17(v285) do
-		local v414 = v413:HealthPercentageWeighted();
-		if (v413:Role() == "TANK") then
-			if ((not v413:ClassID() == (7 - 1)) and (v413:HealthPercentage() >= (475 - (269 + 141)))) then
-				v414 = v414 * (2.9 - 1);
-			elseif (v413:PowerPercentage() > (2001 - (362 + 1619))) then
-				v414 = v414 * (1626.2 - (950 + 675));
+	for v411, v412 in v17(v285) do
+		local v413 = v412:HealthPercentageWeighted();
+		if (v412:Role() == "TANK") then
+			if ((not v412:ClassID() == (16 - 10)) and (v412:HealthPercentage() >= (91 - 26))) then
+				v413 = v413 * (411.9 - (269 + 141));
+			elseif (v412:PowerPercentage() > (44 - 24)) then
+				v413 = v413 * (1982.2 - (362 + 1619));
 			end
 		end
-		if (v414 < v287) then
-			v287 = v414;
-			v286 = v413;
+		if (v413 < v287) then
+			v287 = v413;
+			v286 = v412;
 		end
-		if (v413:Role() == "TANK") then
-			if ((v288 == nil) or (v414 < v289)) then
-				v289 = v414;
-				v288 = v413;
+		if (v412:Role() == "TANK") then
+			if ((v288 == nil) or (v413 < v289)) then
+				v289 = v413;
+				v288 = v412;
 			end
 		end
 	end
 	return v286, v288;
 end;
 v21.GetAverageGroupHealthPercent = function(v290)
-	local v291 = 0 + 0;
+	local v291 = 1625 - (950 + 675);
 	local v292 = #v290;
-	if (v292 == (1179 - (216 + 963))) then
-		return 1387 - (485 + 802);
+	if (v292 == (0 + 0)) then
+		return 1279 - (216 + 963);
 	end
-	for v415, v416 in v17(v290) do
-		v291 = v291 + v416:HealthPercentage();
+	for v414, v415 in v17(v290) do
+		v291 = v291 + v415:HealthPercentage();
 	end
 	return v291 / v292;
 end;
 v21.BuffCount = function(v293, v294)
-	local v295 = 559 - (432 + 127);
-	for v417, v418 in v17(v293) do
-		if v418:BuffUp(v294, nil, true) then
-			v295 = v295 + (1074 - (1065 + 8));
+	local v295 = 1287 - (485 + 802);
+	for v416, v417 in v17(v293) do
+		if v417:BuffUp(v294, nil, true) then
+			v295 = v295 + (560 - (432 + 127));
 		end
 	end
 	return v295;
 end;
 v21.DebuffCount = function(v296, v297)
-	local v298 = 0 + 0;
-	for v419, v420 in v17(v296) do
-		if v420:DebuffUp(v297, true) then
-			v298 = v298 + (1602 - (635 + 966));
+	local v298 = 1073 - (1065 + 8);
+	for v418, v419 in v17(v296) do
+		if v419:DebuffUp(v297, true) then
+			v298 = v298 + 1 + 0;
 		end
 	end
 	return v298;
 end;
 v21.DebuffCountWithStacks = function(v299, v300, v301)
-	local v302 = 0 + 0;
-	for v421, v422 in v17(v299) do
-		if (v422:DebuffUp(v300, true) and (v422:DebuffStack(v300, true) >= v301)) then
-			v302 = v302 + (43 - (5 + 37));
+	local v302 = 1601 - (635 + 966);
+	for v420, v421 in v17(v299) do
+		if (v421:DebuffUp(v300, true) and (v421:DebuffStack(v300, true) >= v301)) then
+			v302 = v302 + 1 + 0;
 		end
 	end
 	return v302;
@@ -713,12 +709,12 @@ end;
 v21.GetLowestHealthUnitWithBuffAndNoBuff = function(v303, v304, v305)
 	local v306 = nil;
 	local v307 = math.huge;
-	for v423, v424 in v17(v303) do
-		if (v424:BuffUp(v304, nil, true) and v424:BuffDown(v305, nil, true)) then
-			local v505 = v424:HealthPercentageWeighted();
-			if (v505 < v307) then
-				v307 = v505;
-				v306 = v424;
+	for v422, v423 in v17(v303) do
+		if (v423:BuffUp(v304, nil, true) and v423:BuffDown(v305, nil, true)) then
+			local v504 = v423:HealthPercentageWeighted();
+			if (v504 < v307) then
+				v307 = v504;
+				v306 = v423;
 			end
 		end
 	end
@@ -731,12 +727,12 @@ end;
 v21.GetLowestHealthUnitWithBuff = function(v308, v309)
 	local v310 = nil;
 	local v311 = math.huge;
-	for v425, v426 in v17(v308) do
-		if v426:BuffUp(v309, nil, true) then
-			local v506 = v426:HealthPercentageWeighted();
-			if (v506 < v311) then
-				v311 = v506;
-				v310 = v426;
+	for v424, v425 in v17(v308) do
+		if v425:BuffUp(v309, nil, true) then
+			local v505 = v425:HealthPercentageWeighted();
+			if (v505 < v311) then
+				v311 = v505;
+				v310 = v425;
 			end
 		end
 	end
@@ -748,9 +744,9 @@ v21.GetLowestHealthUnitWithBuff = function(v308, v309)
 end;
 v21.UnitstWithoutBuff = function(v312, v313)
 	local v314 = {};
-	for v427, v428 in v17(v312) do
-		if not v428:BuffUp(v313, nil, true) then
-			table.insert(v314, v428);
+	for v426, v427 in v17(v312) do
+		if not v427:BuffUp(v313, nil, true) then
+			table.insert(v314, v427);
 		end
 	end
 	return v314;
@@ -758,12 +754,12 @@ end;
 v21.GetLowestHealthUnitWithoutBuff = function(v315, v316)
 	local v317 = nil;
 	local v318 = math.huge;
-	for v429, v430 in v17(v315) do
-		if not v430:BuffUp(v316, nil, true) then
-			local v507 = v430:HealthPercentageWeighted();
-			if (v507 < v318) then
-				v318 = v507;
-				v317 = v430;
+	for v428, v429 in v17(v315) do
+		if not v429:BuffUp(v316, nil, true) then
+			local v506 = v429:HealthPercentageWeighted();
+			if (v506 < v318) then
+				v318 = v506;
+				v317 = v429;
 			end
 		end
 	end
@@ -776,12 +772,12 @@ end;
 v21.GetLowestHealthUnitWithoutDebuff = function(v319, v320)
 	local v321 = nil;
 	local v322 = math.huge;
-	for v431, v432 in v17(v319) do
-		if not v432:DebuffUp(v320, nil, true) then
-			local v508 = v432:HealthPercentageWeighted();
-			if (v508 < v322) then
-				v322 = v508;
-				v321 = v432;
+	for v430, v431 in v17(v319) do
+		if not v431:DebuffUp(v320, nil, true) then
+			local v507 = v431:HealthPercentageWeighted();
+			if (v507 < v322) then
+				v322 = v507;
+				v321 = v431;
 			end
 		end
 	end
@@ -794,12 +790,12 @@ end;
 v21.GetLowestHealthUnitWithoutBuffandDebuff = function(v323, v324, v325)
 	local v326 = nil;
 	local v327 = math.huge;
-	for v433, v434 in v17(v323) do
-		if (not v434:BuffUp(v324, nil, true) and not v434:DebuffUp(v325, nil, true)) then
-			local v509 = v434:HealthPercentageWeighted();
-			if (v509 < v327) then
-				v327 = v509;
-				v326 = v434;
+	for v432, v433 in v17(v323) do
+		if (not v433:BuffUp(v324, nil, true) and not v433:DebuffUp(v325, nil, true)) then
+			local v508 = v433:HealthPercentageWeighted();
+			if (v508 < v327) then
+				v327 = v508;
+				v326 = v433;
 			end
 		end
 	end
@@ -812,12 +808,12 @@ end;
 v21.GetLowestHealthUnitWithout2Buff = function(v328, v329, v330)
 	local v331 = nil;
 	local v332 = math.huge;
-	for v435, v436 in v17(v328) do
-		if (not v436:BuffUp(v329, nil, true) and not v436:BuffUp(v330, nil, true)) then
-			local v510 = v436:HealthPercentageWeighted();
-			if (v510 < v332) then
-				v332 = v510;
-				v331 = v436;
+	for v434, v435 in v17(v328) do
+		if (not v435:BuffUp(v329, nil, true) and not v435:BuffUp(v330, nil, true)) then
+			local v509 = v435:HealthPercentageWeighted();
+			if (v509 < v332) then
+				v332 = v509;
+				v331 = v435;
 			end
 		end
 	end
@@ -828,16 +824,16 @@ v21.GetLowestHealthUnitWithout2Buff = function(v328, v329, v330)
 	end
 end;
 v21.AoELogicWithCount = function(v333, v334, v335, v336)
-	local v337 = 0 - 0;
-	for v437, v438 in v17(v336) do
-		v337 = ((v438:HealthPercentageWeighted() < v333) and (v337 + 1 + 0)) or v337;
+	local v337 = 42 - (5 + 37);
+	for v436, v437 in v17(v336) do
+		v337 = ((v437:HealthPercentageWeighted() < v333) and (v337 + (2 - 1))) or v337;
 	end
 	return (((v337 >= v334) or (v337 >= #v336)) and ((v335 == nil) or (v335 == "With Logic") or ((v335 == "With Cooldowns and Logic") and v2.CDsON()))) or ((v335 == "With Cooldowns") and v2.CDsON());
 end;
 v21.AoELogicWithCountUnweighted = function(v338, v339, v340, v341)
-	local v342 = 0 - 0;
-	for v439, v440 in v17(v341) do
-		v342 = ((v440:HealthPercentage() < v338) and (v342 + 1 + 0)) or v342;
+	local v342 = 0 + 0;
+	for v438, v439 in v17(v341) do
+		v342 = ((v439:HealthPercentage() < v338) and (v342 + (1 - 0))) or v342;
 	end
 	return (((v342 >= v339) or (v342 >= #v341)) and ((v340 == nil) or (v340 == "With Logic") or ((v340 == "With Cooldowns and Logic") and v2.CDsON()))) or ((v340 == "With Cooldowns") and v2.CDsON());
 end;
@@ -846,10 +842,10 @@ v21.AoELogic = function(v343, v344, v345)
 	return ((v346 <= v343) and ((v344 == nil) or (v344 == "With Logic") or ((v344 == "With Cooldowns and Logic") and v2.CDsON()))) or ((v344 == "With Cooldowns") and v2.CDsON());
 end;
 v21.GroupBuffMissing = function(v347, v348)
-	local v349 = 83 - 43;
-	local v350 = {[3 - 2]=(719978 - 338220),[4 - 2]=(274484 + 107268),[532 - (318 + 211)]=(1878393 - 1496644),[1591 - (963 + 624)]=(163170 + 218584),[851 - (518 + 328)]=(889937 - 508184),[8 - 2]=(382049 - (301 + 16)),[20 - 13]=(1072171 - 690415),[20 - 12]=(345785 + 35965),[6 + 3]=(815044 - 433287),[7 + 3]=(36332 + 345419),[34 - 23]=(123211 + 258535),[1031 - (829 + 190)]=(1362011 - 980270),[15 - 2]=(527736 - 145988)};
-	if (v347:ID() == (16576 - 9903)) then
-		v349 = 24 + 76;
+	local v349 = 19 + 21;
+	local v350 = {[1 - 0]=(1447348 - 1065590),[3 - 1]=(912750 - 530998),[3 + 0]=(382278 - (318 + 211)),[19 - 15]=(383341 - (963 + 624)),[3 + 2]=(382599 - (518 + 328)),[13 - 7]=(610161 - 228429),[324 - (301 + 16)]=(1118881 - 737125),[22 - 14]=(996143 - 614393),[9 + 0]=(216758 + 164999),[21 - 11]=(229667 + 152084),[2 + 9]=(1213702 - 831956),[4 + 8]=(382760 - (829 + 190)),[46 - 33]=(483041 - 101293)};
+	if (v347:ID() == (9224 - 2551)) then
+		v349 = 248 - 148;
 	end
 	if v10:BuffDown(v347, true) then
 		return true;
@@ -863,62 +859,62 @@ v21.GroupBuffMissing = function(v347, v348)
 		return false;
 	end
 	local v352 = 0 + 0;
-	local v353 = 0 - 0;
-	for v441, v442 in v17(v351) do
-		if (v442:Exists() and not v442:IsDeadOrGhost() and (v348 or (v442:IsSpellInRange(v347) and not (v10:IsInDelve() and (v442:Name() == "Brann Bronzebeard"))))) then
-			v352 = v352 + 1 + 0;
-			if (v347:ID() == (382361 - (520 + 93))) then
-				local v545, v545, v546 = v442:Class();
-				if v442:BuffUp(v15(v350[v546]), true) then
-					v353 = v353 + (277 - (259 + 17));
+	local v353 = 0 + 0;
+	for v440, v441 in v17(v351) do
+		if (v441:Exists() and not v441:IsDeadOrGhost() and (v348 or (v441:IsSpellInRange(v347) and not (v10:IsInDelve() and (v441:Name() == "Brann Bronzebeard"))))) then
+			v352 = v352 + (2 - 1);
+			if (v347:ID() == (360209 + 21539)) then
+				local v544, v544, v545 = v441:Class();
+				if v441:BuffUp(v15(v350[v545]), true) then
+					v353 = v353 + (614 - (520 + 93));
 				end
-			elseif v442:BuffDown(v347, true) then
+			elseif v441:BuffDown(v347, true) then
 				return true;
 			end
 		end
 	end
-	if ((v347:ID() == (21990 + 359758)) and (v353 < v352)) then
+	if ((v347:ID() == (382024 - (259 + 17))) and (v353 < v352)) then
 		return true;
 	end
 	return false;
 end;
-local v125 = v21.converArrayToList({(1305307 - 919749),(1093814 - 716810),(383345 - (1059 + 770)),(167930 - (424 + 121)),(385712 - (641 + 706))});
+local v124 = v21.converArrayToList({(138741 + 246817),(377595 - (396 + 195)),(383277 - (440 + 1321)),(774009 - 606624),(70060 + 314305)});
 do
-	v21.stopCastRemains = 0 + 0;
+	v21.stopCastRemains = 1347 - (641 + 706);
 	v21.ShouldStopCastUpdate = function()
-		local v443 = v10:GetEnemiesInRange(480 - (249 + 191));
-		for v482, v483 in v17(v443) do
-			if v125[v483:CastSpellID()] then
-				v21.stopCastRemains = v483:CastRemains() - (0.1 - 0);
-				return v483:CastRemains() <= (v10:CastRemains() + 0.1 + 0);
+		local v442 = v10:GetEnemiesInRange(16 + 24);
+		for v481, v482 in v17(v442) do
+			if v124[v482:CastSpellID()] then
+				v21.stopCastRemains = v482:CastRemains() - (440.1 - (249 + 191));
+				return v482:CastRemains() <= (v10:CastRemains() + (0.1 - 0));
 			end
 		end
-		v21.stopCastRemains = 0 - 0;
+		v21.stopCastRemains = 0 + 0;
 		return false;
 	end;
-	v21.ShouldStopCast = function(v445)
-		return (v21.stopCastRemains == (427 - (183 + 244))) or (v445:ExecuteTime() < v21.stopCastRemains);
+	v21.ShouldStopCast = function(v444)
+		return (v21.stopCastRemains == (0 - 0)) or (v444:ExecuteTime() < v21.stopCastRemains);
 	end;
-	v15.IsCastable = function(v446, v447)
-		return v446:IsLearned() and v446:CooldownUp(v447) and ((v21.stopCastRemains == (0 + 0)) or (v446:ExecuteTime() < v21.stopCastRemains));
+	v15.IsCastable = function(v445, v446)
+		return v445:IsLearned() and v445:CooldownUp(v446) and ((v21.stopCastRemains == (427 - (183 + 244))) or (v445:ExecuteTime() < v21.stopCastRemains));
 	end;
-	v15.IsReady2 = function(v448)
-		return v448:IsCastable2() and v448:IsUsableP();
+	v15.IsReady2 = function(v447)
+		return v447:IsCastable2() and v447:IsUsableP();
 	end;
 end
 v21.GetCurrentEmpowerData = function(v359)
-	local v360 = 730 - (434 + 296);
+	local v360 = 0 + 0;
 	local v361 = {};
 	_, _, _, StartTimeMS, EndTimeMS, _, _, _, _, StageTotal = UnitChannelInfo("player");
-	if (StageTotal and (StageTotal > (0 - 0))) then
-		local v484 = 512 - (169 + 343);
-		for v511 = 1 + 0, StageTotal do
-			v361[v511] = {Start=v484,Finish=(v484 + (GetUnitEmpowerStageDuration("player", v511 - (1 - 0)) / (2935 - 1935)))};
-			v2.Print(" Start" .. v511 .. ": " .. v361[v511].Start);
-			v2.Print("Finish" .. v511 .. ": " .. v361[v511].Finish);
-			v484 = v361[v511].Finish;
-			if (((StartTimeMS / (820 + 180)) + v484) <= GetTime()) then
-				v360 = v511;
+	if (StageTotal and (StageTotal > (730 - (434 + 296)))) then
+		local v483 = 0 - 0;
+		for v510 = 513 - (169 + 343), StageTotal do
+			v361[v510] = {Start=v483,Finish=(v483 + (GetUnitEmpowerStageDuration("player", v510 - (1 + 0)) / (1759 - 759)))};
+			v2.Print(" Start" .. v510 .. ": " .. v361[v510].Start);
+			v2.Print("Finish" .. v510 .. ": " .. v361[v510].Finish);
+			v483 = v361[v510].Finish;
+			if (((StartTimeMS / (2935 - 1935)) + v483) <= GetTime()) then
+				v360 = v510;
 			end
 		end
 	end
@@ -928,43 +924,43 @@ v21.GetCurrentEmpowerData = function(v359)
 		return v361;
 	end
 end;
-local v127 = {};
+local v126 = {};
 v6:RegisterForEvent(function(v362, v363)
-	v127[UnitGUID(v363)] = v363;
+	v126[UnitGUID(v363)] = v363;
 end, "NAME_PLATE_UNIT_ADDED");
 v6:RegisterForEvent(function(v365, v366)
-	v127[UnitGUID(v366)] = nil;
+	v126[UnitGUID(v366)] = nil;
 end, "NAME_PLATE_UNIT_REMOVED");
-local v128 = {};
+local v127 = {};
 v6:RegisterForCombatEvent(function(...)
-	local v368, v369, v369, v369, v369, v369, v369, v369, v370 = select(11 - 7, ...);
-	local v371 = v127[v368];
+	local v368, v369, v369, v369, v369, v369, v369, v369, v370 = select(4 + 0, ...);
+	local v371 = v126[v368];
 	if v371 then
 		if (UnitIsUnit(v371 .. "target", v10:ID()) and v370) then
-			if not v128[v10:ID()] then
-				v128[v10:ID()] = {};
+			if not v127[v10:ID()] then
+				v127[v10:ID()] = {};
 			end
-			for v547, v548 in v17(v128[v10:ID()]) do
-				if ((v548 < GetTime()) and v547) then
-					v128[v547] = nil;
+			for v546, v547 in v17(v127[v10:ID()]) do
+				if ((v547 < GetTime()) and v546) then
+					v127[v546] = nil;
 				end
 			end
-			v128[v10:ID()][v370] = v9.Nameplate[v371]:CastEnd();
+			v127[v10:ID()][v370] = v9.Nameplate[v371]:CastEnd();
 			return;
 		end
 		if not v19("player") then
-			for v549, v550 in v17(v9.Party) do
-				if (v550:Exists() and not v550:IsDeadOrGhost() and v550:UnitIsFriend()) then
-					if (UnitIsUnit(v371 .. "target", v550:ID()) and v370) then
-						if not v128[v550:ID()] then
-							v128[v550:ID()] = {};
+			for v548, v549 in v17(v9.Party) do
+				if (v549:Exists() and not v549:IsDeadOrGhost() and v549:UnitIsFriend()) then
+					if (UnitIsUnit(v371 .. "target", v549:ID()) and v370) then
+						if not v127[v549:ID()] then
+							v127[v549:ID()] = {};
 						end
-						for v558, v559 in v17(v128[v550:ID()]) do
-							if ((v559 < GetTime()) and v558) then
-								v128[v558] = nil;
+						for v557, v558 in v17(v127[v549:ID()]) do
+							if ((v558 < GetTime()) and v557) then
+								v127[v557] = nil;
 							end
 						end
-						v128[v550:ID()][v370] = v9.Nameplate[v371]:CastEnd();
+						v127[v549:ID()][v370] = v9.Nameplate[v371]:CastEnd();
 						return;
 					end
 				end
@@ -973,28 +969,28 @@ v6:RegisterForCombatEvent(function(...)
 	end
 end, "SPELL_CAST_START", "SPELL_PERIODIC__CAST_START");
 v9.IncomingSpell = function(v372, v373)
-	if not v128[v372:ID()] then
-		v128[v372:ID()] = {};
+	if not v127[v372:ID()] then
+		v127[v372:ID()] = {};
 	end
-	for v449, v450 in v17(v128[v372:ID()]) do
-		if ((v450 < GetTime()) and v449) then
-			v128[v372:ID()][v449] = nil;
-		elseif v373[v449] then
-			return v449;
+	for v448, v449 in v17(v127[v372:ID()]) do
+		if ((v449 < GetTime()) and v448) then
+			v127[v372:ID()][v448] = nil;
+		elseif v373[v448] then
+			return v448;
 		end
 	end
 end;
 v9.IncomingSpellreflection = function(v374, v375)
-	if not v128[v374:ID()] then
-		v128[v374:ID()] = {};
+	if not v127[v374:ID()] then
+		v127[v374:ID()] = {};
 	end
-	for v451, v452 in v17(v128[v374:ID()]) do
-		if ((v452 < GetTime()) and v451) then
-			v128[v374:ID()][v451] = nil;
-		elseif v375[v451] then
-			for v553, v554 in v17(v127) do
-				if ((v9.Nameplate[v554]:CastRemains() > (1123 - (651 + 472))) and (v9.Nameplate[v554]:CastRemains() < (1 + 0))) then
-					return v451;
+	for v450, v451 in v17(v127[v374:ID()]) do
+		if ((v451 < GetTime()) and v450) then
+			v127[v374:ID()][v450] = nil;
+		elseif v375[v450] then
+			for v552, v553 in v17(v126) do
+				if ((v9.Nameplate[v553]:CastRemains() > (0 - 0)) and (v9.Nameplate[v553]:CastRemains() < (1124 - (651 + 472)))) then
+					return v450;
 				end
 			end
 		end
@@ -1003,14 +999,14 @@ end;
 v21.PotionSelected = function()
 	local v376 = v23.APL[v43][v45].PotionType.Selected;
 	local v377 = v23.APL[v43][v45].PotionRank and v23.APL[v43][v45].PotionRank.Selected;
-	local v378 = {(259062 - 46797),(213140 - (423 + 453)),(27978 + 184285)};
-	local v379 = {(3 + 0),(1192 - (50 + 1140)),(1 + 0)};
+	local v378 = {(91585 + 120680),(212747 - (397 + 86)),(21577 + 190686)};
+	local v379 = {(3 + 0),(2 + 0),(1 + 0)};
 	local v380 = "";
 	if (v376 == "Tempered Potion") then
-		for v516, v517 in ipairs(v378) do
-			local v518 = v379[((v516 - (1 + 0)) % #v379) + (1 - 0)];
-			if ((not v377 or (tostring(v518) == v377) or (v377 == "Any")) and v16(v517):IsUsable()) then
-				return v16(v517);
+		for v515, v516 in ipairs(v378) do
+			local v517 = v379[((v515 - (1 + 0)) % #v379) + 1 + 0];
+			if ((not v377 or (tostring(v517) == v377) or (v377 == "Any")) and v16(v516):IsUsable()) then
+				return v16(v516);
 			end
 		end
 	else
@@ -1018,20 +1014,20 @@ v21.PotionSelected = function()
 	end
 end;
 do
-	local v381 = {Spells={v15(377818 - (157 + 439)),v15(1091300 - 762871),v15(347753 - (782 + 136)),v15(188990 - (1026 + 145)),v15(182063 - (493 + 225)),v15(95535 + 61524),v15(3890 + 200721)},PetMounts={(34007 + 82795),(88677 - (210 + 1385)),(53966 + 33112),(156178 - 69097),(210450 - 123370),(247583 - 160504),(88577 - (277 + 1224))}};
-	v10.IsInWhitelistedVehicle = function(v453)
-		local v454 = v381.Spells;
-		for v487 = 1494 - (663 + 830), #v454 do
-			local v488 = v454[v487];
-			if v453:DebuffUp(v488, true, true) then
+	local v381 = {Spells={v15(272948 + 104274),v15(571099 - 242670),v15(1025942 - 679107),v15(188674 - (112 + 743)),v15(31128 + 150217),v15(577298 - 420239),v15(548585 - 343974)},PetMounts={(333803 - 217001),(145490 - 58408),(88767 - (1201 + 488)),(154877 - 67796),(87665 - (352 + 233)),(47370 + 39709),(87650 - (489 + 85))}};
+	v10.IsInWhitelistedVehicle = function(v452)
+		local v453 = v381.Spells;
+		for v486 = 1502 - (277 + 1224), #v453 do
+			local v487 = v453[v486];
+			if v452:DebuffUp(v487, true, true) then
 				return true;
 			end
 		end
-		local v455 = v381.PetMounts;
+		local v454 = v381.PetMounts;
 		if v11:IsActive() then
-			for v533 = 1 + 0, #v455 do
-				local v534 = v455[v533];
-				if (v11:NPCID() == v534) then
+			for v532 = 1494 - (663 + 830), #v454 do
+				local v533 = v454[v532];
+				if (v11:NPCID() == v533) then
 					return true;
 				end
 			end
@@ -1040,54 +1036,58 @@ do
 	end;
 end
 do
-	local v383 = {v15(3700 - (461 + 414)),v15(12876 + 19306),v15(79215 + 1138),v15(145692 - 55337),v15(231541 - 71089),v15(88401 + 176266),v15(491413 - 101027),v15(19618 + 15857),v15(141218 - 105742),v15(44941 + 101614),v15(178654 - (133 + 314)),v15(231148 - (199 + 14)),v15(258289 - (647 + 902)),v15(309891 - (85 + 148)),v15(1784540 - 1403239),v15(594878 - 150621)};
-	v9.BloodlustRemains = function(v456, v457)
-		local v458 = v456:GUID();
-		if not v458 then
+	local v383 = {v15(6917 - 4092),v15(5395 + 26787),v15(7656 + 72697),v15(90605 - (172 + 78)),v15(59054 + 101398),v15(72175 + 192492),v15(654057 - 263671),v15(8918 + 26557),v15(12627 + 22849),v15(341449 - 194894),v15(101754 + 76453),v15(40144 + 190791),v15(919085 - 662345),v15(931127 - 621469),v15(382590 - (426 + 863)),v15(445911 - (873 + 781))};
+	v9.BloodlustRemains = function(v455, v456)
+		local v457 = v455:GUID();
+		if not v457 then
 			return false;
 		end
-		for v489 = 2 - 1, #v383 do
-			local v490 = v383[v489];
-			if v456:BuffUp(v490, true) then
-				return v456:BuffRemains(v490, true, v457);
+		for v488 = 1 - 0, #v383 do
+			local v489 = v383[v488];
+			if v455:BuffUp(v489, true) then
+				return v455:BuffRemains(v489, true, v456);
 			end
 		end
-		return 0 + 0;
+		return 0 - 0;
 	end;
-	v9.BloodlustUp = function(v459, v460)
-		return v459:BloodlustRemains(v460) > (0 - 0);
+	v9.BloodlustUp = function(v458, v459)
+		return v458:BloodlustRemains(v459) > (0 + 0);
 	end;
-	v9.BloodlustDown = function(v461, v462)
-		return not v461:BloodlustUp(v462);
-	end;
-	v21.HealthPotions = function()
-		if ((v10:HealthPercentage() < v23.General.HealthstoneLifePercent) and v10:AffectingCombat() and (v16.Common.HealthStone:IsReady())) then
-			if v2.CastMacro(5 - 1, nil, nil, v16.Common.HealthStone) then
-				return "Use Healthstone";
-			end
-		elseif ((v10:HealthPercentage() < v23.General.HealthstoneLifePercent) and v10:AffectingCombat() and (v16.Common.HealthStone2:IsReady())) then
-			if v2.CastMacro(29 - 19, nil, nil, v16.Common.HealthStone2) then
-				return "Use Demonic Healthstone";
-			end
-		elseif ((v10:HealthPercentage() < v23.General.HealingPotionLifePercent) and v10:AffectingCombat() and (v16.Common.HealingPotion:IsReady() or v16.Common.HealingPotion2:IsReady() or v16.Common.HealingPotion3:IsReady())) then
-			v2.CastMacro(1952 - (414 + 1533), nil, nil, v16.Common.HealingPotion);
-			return "Use Heal Potion";
-		elseif (v23.General.AutoTargetFocusTarget and (not v12:Exists() or v12:IsDeadOrGhost()) and v9.Focus:Exists() and v9.Focus:UnitIsFriend() and v9.Focus:AffectingCombat()) then
-			local v557 = v9("focustarget");
-			if (v557:Exists() and v557:AffectingCombat() and v10:CanAttack(v557) and not v557:IsDeadOrGhost()) then
-				v2.CastMacro(7 + 0, true);
-				return "Auto asssist focus";
-			end
-		elseif (v23.General.AutoTab and v10:AffectingCombat() and (not v12:Exists() or v12:IsDeadOrGhost()) and (v12:NPCID() ~= (208355 - (443 + 112)))) then
-			v2.TopPanelAlternative:ChangeIcon(1480 - (888 + 591), 7 - 4);
-			return "Auto tab to target";
-		end
+	v9.BloodlustDown = function(v460, v461)
+		return not v460:BloodlustUp(v461);
 	end;
 end
-v21.PostInitialMessage = function(v388)
-	if (v388 == (15 + 244)) then
-		v2.Print("Assassination Rogue rotation has been updated for patch 11.1.0. Please report any issues on the discord. Thank you! - 27.02.2025");
-	elseif (v388 == (948 - 696)) then
-		v2.Print("Unholy DK rotation has been updated for patch 11.1.0. Please report any issues on the discord. Thank you! - 28.02.2025");
+v21.HealthPotions = function()
+	if ((v10:HealthPercentage() < v23.General.HealthstoneLifePercent) and v10:AffectingCombat() and (v16.Common.HealthStone:IsReady())) then
+		if v2.CastMacro(14 - 10, nil, nil, v16.Common.HealthStone) then
+			return "Use Healthstone";
+		end
+	elseif ((v10:HealthPercentage() < v23.General.HealthstoneLifePercent) and v10:AffectingCombat() and (v16.Common.HealthStone2:IsReady())) then
+		if v2.CastMacro(14 - 4, nil, nil, v16.Common.HealthStone2) then
+			return "Use Demonic Healthstone";
+		end
+	elseif ((v10:HealthPercentage() < v23.General.HealingPotionLifePercent) and v10:AffectingCombat() and (v16.Common.HealingPotion:IsReady() or v16.Common.HealingPotion2:IsReady() or v16.Common.HealingPotion3:IsReady())) then
+		v2.CastMacro(14 - 9, nil, nil, v16.Common.HealingPotion);
+		return "Use Heal Potion";
+	elseif (v23.General.AutoTargetFocusTarget and (not v12:Exists() or v12:IsDeadOrGhost()) and v9.Focus:Exists() and v9.Focus:UnitIsFriend() and v9.Focus:AffectingCombat()) then
+		local v555 = v9("focustarget");
+		if (v555:Exists() and v555:AffectingCombat() and v10:CanAttack(v555) and not v555:IsDeadOrGhost()) then
+			v2.CastMacro(1954 - (414 + 1533), true);
+			return "Auto asssist focus";
+		end
+	elseif (v23.General.AutoTab and v10:AffectingCombat() and (not v12:Exists() or v12:IsDeadOrGhost()) and (v12:NPCID() ~= (180168 + 27632))) then
+		v2.TopPanelAlternative:ChangeIcon(556 - (443 + 112), 1482 - (888 + 591));
+		return "Auto tab to target";
+	end
+end;
+v21.PostInitialMessage = function(v387)
+	if (v387 == (669 - 410)) then
+		v2.Print("Assassination Rogue rotation has been updated for patch 11.1.0. Please report any issues on the discord. Thank you!");
+	elseif (v387 == (15 + 237)) then
+		v2.Print("Unholy DK rotation has been updated for patch 11.1.0. Please report any issues on the discord. Thank you!");
+	elseif (v387 == (248 - 182)) then
+		v2.Print("Protection Paladin rotation has been updated for patch 11.1.0. Please report any issues on the discord. Thank you!");
+	elseif (v387 == (29 + 44)) then
+		v2.Print("Protection Warrior rotation has been updated for patch 11.1.0. Please report any issues on the discord. Thank you!");
 	end
 end;
