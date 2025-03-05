@@ -537,8 +537,6 @@ local function v85()
 	local v141 = v23.GetLowestHealthUnit(v140);
 	local v142 = v141:HealthPercentage();
 	if not v141:DebuffUp(v20.ForbearanceDebuff) then
-		v12.Print("LOHCHECKPARTY= " .. v141:Name() .. " " .. v141:HealthPercentage());
-		v12.Print(" LoH Ready=" .. tostring(v20.LayonHands:IsReady()) .. " Unitlowestlife = " .. tostring(v142) .. " < LoH Party HP=" .. tostring(v26.RetHealing.LoHPartyHP));
 		if (v20.LayonHands:IsReady() and (v142 <= v26.RetHealing.LoHPartyHP)) then
 			v141:Cast(v20.LayonHands);
 			return "Lay on Hands Party";
@@ -731,7 +729,7 @@ local function v86()
 			if v35 then
 				return v35;
 			end
-			if (v26.Retribution.XalatathsBargain and (EnemiesWithIDInCCRange(396070 - 166774) >= (16 - 11)) and v20.BlindingLight:IsCastable()) then
+			if (v26.Retribution.XalatathsBargain and (EnemiesWithIDInCCRange(396070 - 166774) >= (12 - 8)) and v20.BlindingLight:IsCastable()) then
 				if v15(v20.BlindingLight) then
 					return "BlindingLight on XalatathsBargain";
 				end
