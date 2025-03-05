@@ -621,5 +621,7 @@ local function v67()
 	v12.ToggleIconFrame:AddButtonCustom("I", 3 + 0, "Interrupt", "interrupt");
 	v12.ToggleIconFrame:AddButtonCustom("D", 3 + 1, "Dispel", "dispel");
 	v45.PostInitialMessage(140 - 74);
+
+	
 end
 v12.SetAPL(110 - 44, v66, v67);
