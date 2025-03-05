@@ -1094,5 +1094,7 @@ v21.PostInitialMessage = function(v387)
 		v2.Print("Convoke Will Be Used for DPS, if the Settings is Enabled and Cooldown Toggle is on");
 	elseif (v387 == (86 - 16)) then
 		v2.Print("Retribution Paladin rotation has been updated for patch 11.1.0. Please report any issues on the discord. Thank you!");
+	elseif (v387 == (2144 - (439 + 1452))) then
+		v2.Print("Beast Mastery Hunter rotation has been updated for patch 11.1.0. Please report any issues on the discord. Thank you!");
 	end
 end;
