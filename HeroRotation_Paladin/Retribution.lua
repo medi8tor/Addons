@@ -140,10 +140,10 @@ end
 local function v70(v113)
 	local v114 = UnitGUID("targettarget");
 	if (v113 ~= nil) then
-		for v160, v161 in pairs(v113) do
-			if ((v161:GUID() == v114) and ((v7:CastSpellID() == (567612 - 246824)) or (v7:CastSpellID() == (324168 - (145 + 293))))) then
-				if (v161 ~= nil) then
-					return v161;
+		for v161, v162 in pairs(v113) do
+			if ((v162:GUID() == v114) and ((v7:CastSpellID() == (567612 - 246824)) or (v7:CastSpellID() == (324168 - (145 + 293))))) then
+				if (v162 ~= nil) then
+					return v162;
 				end
 			end
 		end
@@ -180,9 +180,9 @@ local v73 = {(940744 - 714781),(730802 - 530620),(197213 - (814 + 45)),(12151 + 
 local function v74(v121, v122)
 	local v123 = nil;
 	if (v122 == nil) then
-		for v162, v163 in pairs(v121) do
-			if ((v163:Role() ~= "TANK") and ((v26.RetHealing.BoPDebuff and (v23.unitHasDebuffFromList(v23.DebuffList['Bleed'], v163) or v23.unitHasDebuffFromList(v73, v163))) or (v163:HealthPercentageWeighted() <= v26.RetHealing.BoPHP)) and v163:DebuffDown(v20.ForbearanceDebuff)) then
-				v123 = v163;
+		for v163, v164 in pairs(v121) do
+			if ((v164:Role() ~= "TANK") and ((v26.RetHealing.BoPDebuff and (v23.unitHasDebuffFromList(v23.DebuffList['Bleed'], v164) or v23.unitHasDebuffFromList(v73, v164))) or (v164:HealthPercentageWeighted() <= v26.RetHealing.BoPHP)) and v164:DebuffDown(v20.ForbearanceDebuff)) then
+				v123 = v164;
 			end
 		end
 	end
@@ -228,9 +228,9 @@ end
 local function v77(v131)
 	local v132 = v26.RetHealing.IntercessionUnit;
 	if (v132 == "All") then
-		for v164, v165 in pairs(v131) do
-			if v165:IsDeadOrGhost() then
-				return v165;
+		for v165, v166 in pairs(v131) do
+			if v166:IsDeadOrGhost() then
+				return v166;
 			end
 		end
 		return nil;
@@ -259,7 +259,7 @@ local function v79(v138)
 end
 local function v80()
 	if (v33:IsReady() and (v30 >= (722 - (15 + 703))) and v7:IsSpellInRange(v33)) then
-		if v15(v33, nil, nil, not v7:IsSpellInRange(v33)) then
+		if v15(v33) then
 			return "either verdict precombat 2";
 		end
 	end
@@ -274,7 +274,7 @@ local function v80()
 		end
 	end
 	if (v20.HammerofWrath:IsReady() and v7:IsSpellInRange(v20.HammerofWrath)) then
-		if v15(v20.HammerofWrath, false, nil, not v7:IsSpellInRange(v20.HammerofWrath)) then
+		if v15(v20.HammerofWrath, true) then
 			return "hammer_of_wrath precombat 8";
 		end
 	end
@@ -359,63 +359,68 @@ local function v81()
 			return "Fyralath cast";
 		end
 	end
-	if (v20.ExecutionSentence:IsCastable() and v7:IsInRange(25 + 5) and ExecutionSentenceSetting and (v7:TimeToDie() > (19 - 11)) and ((v6:BuffDown(v20.CrusadeBuff) and (v20.Crusade:CooldownRemains() > (55 - 40))) or (v6:BuffStack(v20.CrusadeBuff) == (877 - (550 + 317))) or (not v20.Crusade:IsAvailable() and (v20.AvengingWrath:CooldownRemains() < (0.75 - 0))) or (v20.AvengingWrath:CooldownRemains() > (21 - 6)) or v20.RadiantGlory:IsAvailable() or (v20.Crusade:IsLearned() and not CrusadeSetting) or (v20.AvengingWrath:IsLearned() and not AvengingWrathSetting)) and (((v30 >= (11 - 7)) and (v3.CombatTime() < (290 - (134 + 151)))) or ((v30 >= (1668 - (970 + 695))) and (v3.CombatTime() > (9 - 4))) or ((v30 >= (1992 - (582 + 1408))) and (v20.DivineAuxiliary:IsAvailable() or v20.RadiantGlory:IsAvailable()))) and (((v7:TimeToDie() > (27 - 19)) and not v20.ExecutionersWill:IsAvailable()) or (v7:TimeToDie() > (14 - 2))) and (v20.WakeofAshes:CooldownRemains() < v6:GCD())) then
+	if (v20.ShieldofVengeance:IsCastable() and (v28 > (13 + 2)) and (not v20.ExecutionSentence:IsAvailable() or v7:DebuffDown(v20.ExecutionSentence))) then
+		if v15(v20.ShieldofVengeance, false) then
+			return "shield_of_vengeance cooldowns 12";
+		end
+	end
+	if (v20.ExecutionSentence:IsCastable() and v7:IsInRange(72 - 42) and ExecutionSentenceSetting and (v7:TimeToDie() > (29 - 21)) and ((v6:BuffDown(v20.CrusadeBuff) and (v20.Crusade:CooldownRemains() > (882 - (550 + 317)))) or (v6:BuffStack(v20.CrusadeBuff) == (14 - 4)) or (not v20.Crusade:IsAvailable() and (v20.AvengingWrath:CooldownRemains() < (0.75 - 0))) or (v20.AvengingWrath:CooldownRemains() > (41 - 26)) or v20.RadiantGlory:IsAvailable() or (v20.Crusade:IsLearned() and not CrusadeSetting) or (v20.AvengingWrath:IsLearned() and not AvengingWrathSetting)) and (((v30 >= (289 - (134 + 151))) and (v3.CombatTime() < (1670 - (970 + 695)))) or ((v30 >= (5 - 2)) and (v3.CombatTime() > (1995 - (582 + 1408)))) or ((v30 >= (6 - 4)) and (v20.DivineAuxiliary:IsAvailable() or v20.RadiantGlory:IsAvailable()))) and (((v7:TimeToDie() > (9 - 1)) and not v20.ExecutionersWill:IsAvailable()) or (v7:TimeToDie() > (45 - 33))) and (v20.WakeofAshes:CooldownRemains() < v6:GCD())) then
 		if v15(v20.ExecutionSentence) then
 			return "execution_sentence cooldowns 14";
 		end
 	end
-	if (v20.AvengingWrath:IsCastable() and v7:IsInRange(18 - 13) and AvengingWrathSetting and (((v30 >= (1828 - (1195 + 629))) and (v3.CombatTime() < (6 - 1))) or ((v30 >= (244 - (187 + 54))) and (v3.CombatTime() > (785 - (162 + 618)))) or ((v30 >= (2 + 0)) and v20.DivineAuxiliary:IsAvailable() and (v20.ExecutionSentence:CooldownUp() or v20.FinalReckoning:CooldownUp()))) and ((v40 <= (1 + 0)) or (v7:TimeToDie() > (21 - 11)))) then
+	if (v20.AvengingWrath:IsCastable() and v7:IsInRange(1829 - (1195 + 629)) and AvengingWrathSetting and (((v30 >= (5 - 1)) and (v3.CombatTime() < (246 - (187 + 54)))) or ((v30 >= (783 - (162 + 618))) and (v3.CombatTime() > (4 + 1))) or ((v30 >= (2 + 0)) and v20.DivineAuxiliary:IsAvailable() and (v20.ExecutionSentence:CooldownUp() or v20.FinalReckoning:CooldownUp()))) and ((v40 <= (1 - 0)) or (v7:TimeToDie() > (16 - 6)))) then
 		if v15(v20.AvengingWrath, false) then
 			return "avenging_wrath cooldowns 16";
 		end
 	end
-	if (v20.Crusade:IsCastable() and v7:IsInRange(8 - 3) and CrusadeSetting and (((v30 >= (1 + 4)) and (v3.CombatTime() < (1641 - (1373 + 263)))) or ((v30 >= (1003 - (451 + 549))) and (v3.CombatTime() >= (2 + 3))))) then
+	if (v20.Crusade:IsCastable() and v7:IsInRange(1 + 4) and CrusadeSetting and (((v30 >= (1641 - (1373 + 263))) and (v3.CombatTime() < (1005 - (451 + 549)))) or ((v30 >= (1 + 2)) and (v3.CombatTime() >= (7 - 2))))) then
 		if v15(v20.Crusade, false) then
 			return "crusade cooldowns 18";
 		end
 	end
-	if (v20.FinalReckoning:IsCastable() and v7:IsInMeleeRange(7 - 2) and FinalReckoningSetting and (((v30 >= (6 - 2)) and (v3.CombatTime() < (1392 - (746 + 638)))) or ((v30 >= (2 + 1)) and (v3.CombatTime() >= (11 - 3))) or ((v30 >= (343 - (218 + 123))) and (v20.DivineAuxiliary:IsAvailable() or v20.RadiantGlory:IsAvailable()))) and (not AvengingWrathSetting or (v20.AvengingWrath:CooldownRemains() > (1591 - (1535 + 46))) or (v20.Crusade:CooldownDown() and (v6:BuffDown(v20.CrusadeBuff) or (v6:BuffStack(v20.CrusadeBuff) >= (10 + 0)))) or (v20.RadiantGlory:IsAvailable() and (v6:BuffUp(v20.AvengingWrathBuff) or (v20.Crusade:IsAvailable() and (v20.WakeofAshes:CooldownRemains() < v6:GCD())))))) then
+	if (v20.FinalReckoning:IsCastable() and v7:IsInMeleeRange(8 - 3) and FinalReckoningSetting and (((v30 >= (1388 - (746 + 638))) and (v3.CombatTime() < (4 + 4))) or ((v30 >= (4 - 1)) and (v3.CombatTime() >= (349 - (218 + 123)))) or ((v30 >= (1583 - (1535 + 46))) and (v20.DivineAuxiliary:IsAvailable() or v20.RadiantGlory:IsAvailable()))) and (not AvengingWrathSetting or (v20.AvengingWrath:CooldownRemains() > (10 + 0)) or (v20.Crusade:CooldownDown() and (v6:BuffDown(v20.CrusadeBuff) or (v6:BuffStack(v20.CrusadeBuff) >= (2 + 8)))) or (v20.RadiantGlory:IsAvailable() and (v6:BuffUp(v20.AvengingWrathBuff) or (v20.Crusade:IsAvailable() and (v20.WakeofAshes:CooldownRemains() < v6:GCD())))))) then
 		if v12.CastTarget(v20.FinalReckoning, v12.TName().PLAYER) then
 			return "final_reckoning cooldowns 20";
 		end
 	end
 end
 local function v82()
-	v32 = ((v40 >= (1 + 1)) or v6:BuffUp(v20.EmpyreanPowerBuff) or (not v20.FinalVerdict:IsAvailable() and v20.TempestoftheLightbringer:IsAvailable())) and v6:BuffDown(v20.EmpyreanLegacyBuff) and not (v6:BuffUp(v20.DivineArbiterBuff) and (v6:BuffStack(v20.DivineArbiterBuff) > (584 - (306 + 254))));
-	if (v20.HammerofLight:IsReady() and v7:IsInRange(1 + 11) and (v20.HammerofLight:IsReady() or not v20.DivineHammer:IsAvailable() or v24.DivineHammerActive or (v20.DivineHammer:CooldownRemains() > (19 - 9)))) then
+	v32 = ((v40 >= (562 - (306 + 254))) or v6:BuffUp(v20.EmpyreanPowerBuff) or (not v20.FinalVerdict:IsAvailable() and v20.TempestoftheLightbringer:IsAvailable())) and v6:BuffDown(v20.EmpyreanLegacyBuff) and not (v6:BuffUp(v20.DivineArbiterBuff) and (v6:BuffStack(v20.DivineArbiterBuff) > (2 + 22)));
+	if (v20.HammerofLight:IsReady() and v7:IsInRange(23 - 11) and (v20.HammerofLight:IsReady() or not v20.DivineHammer:IsAvailable() or v24.DivineHammerActive or (v20.DivineHammer:CooldownRemains() > (1477 - (899 + 568))))) then
 		if v15(v20.HammerofLight, true) then
 			return "hammer_of_light finishers 2";
 		end
 	end
-	if (v20.DivineHammer:IsCastable() and not v24.DivineHammerActive and v7:IsInRange(1475 - (899 + 568))) then
+	if (v20.DivineHammer:IsCastable() and not v24.DivineHammerActive and v7:IsInRange(6 + 2)) then
 		if v15(v20.DivineHammer) then
 			return "divine_hammer finishers 4";
 		end
 	end
-	if (v20.DivineStorm:IsReady() and v32 and not v20.HammerofLight:IsReady() and (v20.DivineHammer:CooldownDown() or v24.DivineHammerActive or not v20.DivineHammer:IsAvailable()) and (not CrusadeSetting or not v20.Crusade:IsAvailable() or (v20.Crusade:CooldownRemains() > (v31 * (2 + 1))) or (v6:BuffUp(v20.CrusadeBuff) and (v6:BuffStack(v20.CrusadeBuff) < (24 - 14))) or v20.RadiantGlory:IsAvailable())) then
+	if (v20.DivineStorm:IsReady() and v32 and not v20.HammerofLight:IsReady() and (v20.DivineHammer:CooldownDown() or v24.DivineHammerActive or not v20.DivineHammer:IsAvailable()) and (not CrusadeSetting or not v20.Crusade:IsAvailable() or (v20.Crusade:CooldownRemains() > (v31 * (7 - 4))) or (v6:BuffUp(v20.CrusadeBuff) and (v6:BuffStack(v20.CrusadeBuff) < (613 - (268 + 335)))) or v20.RadiantGlory:IsAvailable())) then
 		if v15(v20.DivineStorm) then
 			return "divine_storm finishers 6";
 		end
 	end
-	if (v20.JusticarsVengeance:IsReady() and v7:IsInRange(611 - (268 + 335)) and (not v20.Crusade:IsAvailable() or (not AvengingWrathSetting and not CrusadeSetting) or (v20.Crusade:CooldownRemains() > (v31 * (293 - (60 + 230)))) or (v6:BuffUp(v20.CrusadeBuff) and (v6:BuffStack(v20.CrusadeBuff) < (582 - (426 + 146)))) or v20.RadiantGlory:IsAvailable()) and not v20.HammerofLight:IsReady() and (not v6:BuffUp(v20.DivineHammerBuff) or v24.DivineHammerActive or not v20.DivineHammer:IsAvailable())) then
+	if (v20.JusticarsVengeance:IsReady() and v7:IsInRange(298 - (60 + 230)) and (not v20.Crusade:IsAvailable() or (not AvengingWrathSetting and not CrusadeSetting) or (v20.Crusade:CooldownRemains() > (v31 * (575 - (426 + 146)))) or (v6:BuffUp(v20.CrusadeBuff) and (v6:BuffStack(v20.CrusadeBuff) < (2 + 8))) or v20.RadiantGlory:IsAvailable()) and not v20.HammerofLight:IsReady() and (not v6:BuffUp(v20.DivineHammerBuff) or v24.DivineHammerActive or not v20.DivineHammer:IsAvailable())) then
 		if v15(v20.JusticarsVengeance) then
 			return "justicars_vengeance finishers 8";
 		end
 	end
-	if (v33:IsReady() and v7:IsSpellInRange(v33) and (not v20.Crusade:IsAvailable() or (not AvengingWrathSetting and not CrusadeSetting) or (v20.Crusade:CooldownRemains() > (v31 * (1 + 2))) or (v6:BuffUp(v20.CrusadeBuff) and (v6:BuffStack(v20.CrusadeBuff) < (1466 - (282 + 1174)))) or v20.RadiantGlory:IsAvailable()) and not v20.HammerofLight:IsReady() and (not v6:BuffUp(v20.DivineHammerBuff) or not v20.DivineHammer:IsAvailable())) then
+	if (v33:IsReady() and v7:IsSpellInRange(v33) and (not v20.Crusade:IsAvailable() or (not AvengingWrathSetting and not CrusadeSetting) or (v20.Crusade:CooldownRemains() > (v31 * (1459 - (282 + 1174)))) or (v6:BuffUp(v20.CrusadeBuff) and (v6:BuffStack(v20.CrusadeBuff) < (821 - (569 + 242)))) or v20.RadiantGlory:IsAvailable()) and not v20.HammerofLight:IsReady() and (not v6:BuffUp(v20.DivineHammerBuff) or not v20.DivineHammer:IsAvailable())) then
 		if v15(v33) then
 			return "either verdict finishers 6";
 		end
 	end
 end
 local function v83()
-	if (((v30 == (816 - (569 + 242))) or ((v30 == (11 - 7)) and v6:BuffUp(v20.DivineResonanceBuff)) or v6:BuffUp(v20.TWW_S2_4pcBuff)) and v20.WakeofAshes:CooldownDown()) then
-		v35 = v82();
-		if v35 then
-			return v35;
+	if (((v30 == (14 - 9)) or ((v30 == (1 + 3)) and v6:BuffUp(v20.DivineResonanceBuff)) or v6:BuffUp(v20.TWW_S2_4pcBuff)) and v20.WakeofAshes:CooldownDown()) then
+		local v160 = v82();
+		if v160 then
+			return v160;
 		end
 	end
-	if (v20.TemplarSlash:IsReady() and v7:IsInMeleeRange(1 + 4) and (v65() < (v6:GCD() * (1026 - (706 + 318))))) then
+	if (v20.TemplarSlash:IsReady() and v7:IsInMeleeRange(1029 - (706 + 318)) and (v65() < (v6:GCD() * (1253 - (721 + 530))))) then
 		if v15(v20.TemplarSlash) then
 			return "templar_slash generators 2";
 		end
@@ -425,12 +430,12 @@ local function v83()
 			return "blade_of_justice generators 4";
 		end
 	end
-	if (v20.WakeofAshes:IsCastable() and WakeofAshesSetting and v7:IsInRange(1265 - (721 + 530)) and (not v20.LightsGuidance:IsAvailable() or ((v30 >= (1273 - (945 + 326))) and v20.LightsGuidance:IsAvailable())) and ((v20.AvengingWrath:CooldownRemains() > (14 - 8)) or not AvengingWrathSetting or (v20.Crusade:IsAvailable() and ((v20.Crusade:CooldownRemains() > (6 + 0)) or not CrusadeSetting)) or v20.RadiantGlory:IsAvailable()) and ((v20.FinalReckoning:CooldownRemains() > (704 - (271 + 429))) or (v20.FinalReckoning:IsLearned() and not FinalReckoningSetting) or (v20.ExecutionSentence:CooldownRemains() > (4 + 0)) or (v20.ExecutionSentence:IsLearned() and not ExecutionSentenceSetting) or (v27 < (1508 - (1408 + 92))))) then
+	if (v20.WakeofAshes:IsCastable() and WakeofAshesSetting and v7:IsInRange(1285 - (945 + 326)) and (not v20.LightsGuidance:IsAvailable() or ((v30 >= (4 - 2)) and v20.LightsGuidance:IsAvailable())) and ((v20.AvengingWrath:CooldownRemains() > (6 + 0)) or not AvengingWrathSetting or (v20.Crusade:IsAvailable() and ((v20.Crusade:CooldownRemains() > (706 - (271 + 429))) or not CrusadeSetting)) or v20.RadiantGlory:IsAvailable()) and ((v20.FinalReckoning:CooldownRemains() > (4 + 0)) or (v20.FinalReckoning:IsLearned() and not FinalReckoningSetting) or (v20.ExecutionSentence:CooldownRemains() > (1504 - (1408 + 92))) or (v20.ExecutionSentence:IsLearned() and not ExecutionSentenceSetting) or (v27 < (1094 - (461 + 625))))) then
 		if v15(v20.WakeofAshes) then
 			return "wake_of_ashes generators 2";
 		end
 	end
-	if (v20.DivineToll:IsCastable() and DivineTollSetting and v7:IsInRange(1116 - (461 + 625)) and (v30 <= (1290 - (993 + 295))) and ((v20.AvengingWrath:CooldownRemains() > (1 + 14)) or (v20.Crusade:CooldownRemains() > (1186 - (418 + 753))) or v20.RadiantGlory:IsAvailable() or (v27 < (4 + 4)) or not AvengingWrathSetting)) then
+	if (v20.DivineToll:IsCastable() and DivineTollSetting and v7:IsInRange(1318 - (993 + 295)) and (v30 <= (1 + 1)) and ((v20.AvengingWrath:CooldownRemains() > (1186 - (418 + 753))) or (v20.Crusade:CooldownRemains() > (6 + 9)) or v20.RadiantGlory:IsAvailable() or (v27 < (1 + 7)) or not AvengingWrathSetting)) then
 		if v15(v20.DivineToll) then
 			return "divine_toll generators 6";
 		end
@@ -439,7 +444,7 @@ local function v83()
 	if v139 then
 		return v139;
 	end
-	if (v20.TemplarSlash:IsReady() and v7:IsInMeleeRange(1 + 4) and (v20.TemplarStrike:TimeSinceLastCast() > ((2 + 3) - v6:GCD())) and (v40 >= (1 + 1))) then
+	if (v20.TemplarSlash:IsReady() and v7:IsInMeleeRange(2 + 3) and (v65() < v6:GCD()) and (v40 >= (1 + 1))) then
 		if v15(v20.TemplarSlash) then
 			return "templar_slash generators 8";
 		end
@@ -450,7 +455,7 @@ local function v83()
 		end
 	end
 	if (v20.HammerofWrath:IsReady() and v7:IsSpellInRange(v20.HammerofWrath) and ((v40 < (1771 - (1749 + 20))) or not v20.BlessedChampion:IsAvailable()) and v6:BuffUp(v20.BlessingofAnsheRetBuff)) then
-		if v15(v20.HammerofWrath) then
+		if v15(v20.HammerofWrath, true) then
 			return "hammer_of_wrath generators 12";
 		end
 	end
@@ -470,7 +475,7 @@ local function v83()
 		end
 	end
 	if (v20.HammerofWrath:IsReady() and v7:IsSpellInRange(v20.HammerofWrath) and ((v40 < (1 + 1)) or not v20.BlessedChampion:IsAvailable())) then
-		if v15(v20.HammerofWrath, false, nil, not v7:IsSpellInRange(v20.HammerofWrath)) then
+		if v15(v20.HammerofWrath, true) then
 			return "hammer_of_wrath generators 18";
 		end
 	end
@@ -482,6 +487,11 @@ local function v83()
 	if (v20.CrusaderStrike:IsCastable() and v7:IsSpellInRange(v20.CrusaderStrike)) then
 		if v15(v20.CrusaderStrike) then
 			return "crusader_strike generators 26";
+		end
+	end
+	if (v20.HammerofWrath:IsReady() and v7:IsSpellInRange(v20.HammerofWrath)) then
+		if v15(v20.HammerofWrath, true) then
+			return "hammer_of_wrath generators 28";
 		end
 	end
 	if (v20.ArcaneTorrent:IsCastable() and v7:IsInRange(3 + 5)) then
@@ -527,6 +537,8 @@ local function v85()
 	local v141 = v23.GetLowestHealthUnit(v140);
 	local v142 = v141:HealthPercentage();
 	if not v141:DebuffUp(v20.ForbearanceDebuff) then
+		v12.Print("LOHCHECKPARTY= " .. v141:Name() .. " " .. v141:HealthPercentage());
+		v12.Print(" LoH Ready=" .. tostring(v20.LayonHands:IsReady()) .. " Unitlowestlife = " .. tostring(v142) .. " < LoH Party HP=" .. tostring(v26.RetHealing.LoHPartyHP));
 		if (v20.LayonHands:IsReady() and (v142 <= v26.RetHealing.LoHPartyHP)) then
 			v141:Cast(v20.LayonHands);
 			return "Lay on Hands Party";
