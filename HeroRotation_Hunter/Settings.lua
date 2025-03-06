@@ -69,7 +69,7 @@ v6("Slider", v21, "APL.Hunter.BeastMastery_TTD.BloodshedTTD", {(1850 - (1409 + 4
 v6("Slider", v21, "APL.Hunter.BeastMastery_TTD.CallOfTheWildTTD", {(0 - 0),(1266 - (696 + 510)),(1263 - (1091 + 171))}, "Call of the Wild TTD", "TTD to use Call of the Wild on Dungeon Mobs");
 v8(v21, "APL.Hunter.BeastMastery_TTD");
 v6("Slider", v22, "APL.Hunter.BMPet.MendPetHP", {(0 - 0),(474 - (123 + 251)),(699 - (208 + 490))}, "Mend Pet High HP", "Set the Mend Pet HP threshold. Set to 0 to disable.");
-v6("Slider", v22, "APL.Hunter.BMPet.SummonPetSlot", {(0 + 0),(1 + 4),(676 - (534 + 141))}, "Summon Pet Slot", "Which pet stable slot to suggest when summoning a pet. 0 to disable.");
+v6("Slider", v22, "APL.Hunter.BMPet.SummonPetSlot", {(0 + 0),(1 + 2),(676 - (534 + 141))}, "Summon Pet Slot", "Which pet stable slot to suggest when summoning a pet. 0 to disable.");
 v6("Dropdown", v22, "APL.Hunter.BMPet.WhenSummonPet", v16, "When Summon Pet", "When do you want to use Pet?");
 v6("Slider", v22, "APL.Hunter.BMPet.SpiritMend", {(0 + 0),(210 - 110),(2 - 1)}, "Spirit Mend", "Use Spirit Mend below %HP");
 v8(v22, "APL.Hunter.BMPet");
@@ -89,7 +89,7 @@ v6("Slider", v25, "APL.Hunter.Marksmanship_TTD.TrinketsTTD", {(0 - 0),(208 - 148
 v6("Slider", v25, "APL.Hunter.Marksmanship_TTD.TrueshotTTD", {(0 - 0),(840 - (162 + 618)),(1 + 0)}, "Trueshot TTD", "TTD to use Trueshot on Dungeon Mobs");
 v8(v25, "APL.Hunter.Marksmanship_TTD");
 v6("Slider", v26, "APL.Hunter.MMPet.MendPetHP", {(0 - 0),(1736 - (1373 + 263)),(1 + 0)}, "Mend Pet High HP", "Set the Mend Pet HP threshold. Set to 0 to disable.");
-v6("Slider", v26, "APL.Hunter.MMPet.SummonPetSlot", {(0 - 0),(2 + 3),(342 - (218 + 123))}, "Summon Pet Slot", "Which pet stable slot to suggest when summoning a pet. 0 to disable.");
+v6("Slider", v26, "APL.Hunter.MMPet.SummonPetSlot", {(0 - 0),(2 + 1),(342 - (218 + 123))}, "Summon Pet Slot", "Which pet stable slot to suggest when summoning a pet. 0 to disable.");
 v6("CheckButton", v26, "APL.Hunter.MMPet.SoloPet", "Summon Pet when solo", "Summon your Pet when you are doing Solo Content.");
 v6("Dropdown", v26, "APL.Hunter.MMPet.WhenSummonPet", v16, "When Summon Pet", "When do you want to use Pet?");
 v8(v26, "APL.Hunter.MMPet");
@@ -114,7 +114,7 @@ v6("Slider", v29, "APL.Hunter.Survival_TTD.FuryoftheEagleTTD", {(1086 - (461 + 6
 v6("Slider", v29, "APL.Hunter.Survival_TTD.SpearheadTTD", {(0 + 0),(589 - (406 + 123)),(1 + 0)}, "Spearhead TTD", "TTD to use Fury of the Eagle on Dungeon Mobs");
 v8(v29, "APL.Hunter.Survival_TTD");
 v6("Slider", v30, "APL.Hunter.SVPet.MendPetHP", {(0 + 0),(240 - 140),(1901 - (106 + 1794))}, "Mend Pet High HP", "Set the Mend Pet HP threshold. Set to 0 to disable.");
-v6("Slider", v30, "APL.Hunter.SVPet.SummonPetSlot", {(0 + 0),(13 - 8),(585 - (57 + 527))}, "Summon Pet Slot", "Which pet stable slot to suggest when summoning a pet. 0 to disable.");
+v6("Slider", v30, "APL.Hunter.SVPet.SummonPetSlot", {(0 + 0),(7 - 4),(585 - (57 + 527))}, "Summon Pet Slot", "Which pet stable slot to suggest when summoning a pet. 0 to disable.");
 v6("Dropdown", v30, "APL.Hunter.SVPet.WhenSummonPet", v16, "When Summon Pet", "When do you want to use Pet?");
 v8(v30, "APL.Hunter.SVPet");
 v10.APL.Hunter.BeastMastery.Display = function()
