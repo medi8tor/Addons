@@ -34,3 +34,4 @@ v11.Paladin.Commons = {AlgetharPuzzleBox=v11(112146 + 81555, {(863 - (20 + 830))
 v11.Paladin.Protection = v12(v11.Paladin.Commons, {});
 v11.Paladin.Retribution = v12(v11.Paladin.Commons, {ShadowedRazingAnnihilator=v11(206176 - (369 + 761), {(28 - 12)})});
 v11.Paladin.Holy = v12(v11.Paladin.Commons, {});
+
