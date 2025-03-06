@@ -562,21 +562,28 @@ local function v86()
 	if v6:IsChanneling(v21.ManicGrieftorch.ItemUseSpell) then
 		return "Dont cut Torch";
 	end
-	if (((v42:ID() == v21.ConcoctionKissofDeath:ID()) or (v43:ID() == v21.ConcoctionKissofDeath:ID())) and v6:BuffUp(v20.ConcoctionKissofDeathBuff) and (v6:BuffRemains(v20.ConcoctionKissofDeathBuff) < (1 + 1))) then
-		v12.CastSuggested(v21.ConcoctionKissofDeath);
+	if ((v42:ID() == v21.ConcoctionKissofDeath:ID()) and v6:BuffUp(v20.ConcoctionKissofDeathBuff) and (v6:BuffRemains(v20.ConcoctionKissofDeathBuff) < (1 + 1))) then
+		if v12.Cast(v42) then
+			return "Concoction of the Kiss Dead";
+		end
+	end
+	if ((v43:ID() == v21.ConcoctionKissofDeath:ID()) and v6:BuffUp(v20.ConcoctionKissofDeathBuff) and (v6:BuffRemains(v20.ConcoctionKissofDeathBuff) < (1 + 1))) then
+		if v12.Cast(v43) then
+			return "Concoction of the Kiss Dead";
+		end
 	end
 	SmallCDToggle = v12.ToggleIconFrame:GetToggle(1 + 0);
 	TabToggle = v26.Retribution.TabToggle and v12.ToggleIconFrame:GetToggle(1 + 1);
-	InterruptToggle = v12.ToggleIconFrame:GetToggle(1 + 2);
-	DispelToggle = v12.ToggleIconFrame:GetToggle(533 - (406 + 123));
+	InterruptToggle = v12.ToggleIconFrame:GetToggle(532 - (406 + 123));
+	DispelToggle = v12.ToggleIconFrame:GetToggle(1773 - (1749 + 20));
 	v38 = v23.UnitsinRange(v20.FlashofLight);
 	UnitForFreezingBinds = v70(v38);
 	v41 = (v20.EternalFlame:IsAvailable() and v20.EternalFlame) or v20.WordofGlory;
-	v39 = v6:GetEnemiesInRange(1777 - (1749 + 20));
+	v39 = v6:GetEnemiesInRange(2 + 6);
 	if v13() then
 		v40 = #v39;
 	else
-		v40 = 1 + 0;
+		v40 = 1323 - (1249 + 73);
 	end
 	RacialsSetting = v76(v26.RetCooldowns.RacialsSetting) and v79(v26.RetTTD.RacialsTTD);
 	Trinket1Setting = v76(v26.RetCooldowns.Trinket1Setting) and v79(v26.RetTTD.TrinketsTTD);
@@ -588,14 +595,14 @@ local function v86()
 	FinalReckoningSetting = v76(v26.RetCooldowns.FinalReckoningSetting) and v79(v26.RetTTD.FinalReckoningTTD);
 	CrusadeSetting = v76(v26.RetCooldowns.CrusadeSetting) and v79(v26.RetTTD.CrusadeTTD);
 	WakeofAshesSetting = v76(v26.RetCooldowns.WakeofAshesSetting) and v79(v26.RetTTD.WakeofAshesTTD);
-	WeaponSetting = v76(v26.RetCooldowns.WeaponSetting) and v79(1337 - (1249 + 73));
+	WeaponSetting = v76(v26.RetCooldowns.WeaponSetting) and v79(6 + 9);
 	AuraSelected = v26.Retribution.AuraSelect;
 	if (v23.TargetIsValid() or v6:AffectingCombat()) then
 		v29 = v68();
 		v27 = v3.BossFightRemains();
 		v34 = true;
 		v28 = v27;
-		if (v28 == (3965 + 7146)) then
+		if (v28 == (12256 - (466 + 679))) then
 			v34 = false;
 			v28 = v3.FightRemains(v39, false);
 		end
@@ -664,7 +671,7 @@ local function v86()
 						return v35;
 					end
 				else
-					if (v6:DebuffElapsed(v20.EntangledDebuff) > (1147 - (466 + 679))) then
+					if (v6:DebuffElapsed(v20.EntangledDebuff) > (4 - 2)) then
 						if v6:Cast(v20.BlessingofFreedom) then
 							return "Blessing of Freedom entangling";
 						end
@@ -687,7 +694,7 @@ local function v86()
 				v6:Cast(v20.BlessingofFreedom);
 				return "BoF on Player";
 			end
-			if ((v6:DebuffUp(v10(1021109 - 596614), true) or v6:DebuffUp(v10(1214140 - 789643), true)) and v6:IsInRaid()) then
+			if ((v6:DebuffUp(v10(1214134 - 789639), true) or v6:DebuffUp(v10(426397 - (106 + 1794)), true)) and v6:IsInRaid()) then
 				v6:Cast(v20.BlessingofFreedom);
 				return;
 			end
@@ -701,19 +708,19 @@ local function v86()
 			end
 		end
 		if InterruptToggle then
-			v35 = v23.InterruptCycle(v20.Rebuke, 1905 - (106 + 1794), true, nil, false);
+			v35 = v23.InterruptCycle(v20.Rebuke, 2 + 3, true, nil, false);
 			if v35 then
 				return v35;
 			end
-			v35 = not v6:IsMoving() and v23.InterruptCycle(v20.HammerofJustice, 4 + 6, false, nil, true);
+			v35 = not v6:IsMoving() and v23.InterruptCycle(v20.HammerofJustice, 3 + 7, false, nil, true);
 			if v35 then
 				return v35;
 			end
-			v35 = not v6:IsMoving() and not v26.Retribution.XalatathsBargain and v23.InterruptCycle(v20.BlindingLight, 3 + 7, false, nil, true, true);
+			v35 = not v6:IsMoving() and not v26.Retribution.XalatathsBargain and v23.InterruptCycle(v20.BlindingLight, 29 - 19, false, nil, true, true);
 			if v35 then
 				return v35;
 			end
-			if (v26.Retribution.XalatathsBargain and (EnemiesWithIDInCCRange(676973 - 447677) >= (10 - 6)) and v20.BlindingLight:IsCastable()) then
+			if (v26.Retribution.XalatathsBargain and (EnemiesWithIDInCCRange(620919 - 391623) >= (118 - (4 + 110))) and v20.BlindingLight:IsCastable()) then
 				if v15(v20.BlindingLight) then
 					return "BlindingLight on XalatathsBargain";
 				end
@@ -730,7 +737,7 @@ local function v86()
 			end
 		end
 	end
-	v35 = (v40 > (114 - (4 + 110))) and not v7:IsInRange(592 - (57 + 527)) and v75();
+	v35 = (v40 > (584 - (57 + 527))) and not v7:IsInRange(1435 - (41 + 1386)) and v75();
 	if v35 then
 		return v35;
 	end
@@ -738,11 +745,11 @@ end
 local function v87()
 	v26.Retribution.Display();
 	v12.ResetToggle();
-	v12.ToggleIconFrame:AddButtonCustom("S", 1428 - (41 + 1386), "Small CDs", "smallcds");
-	v12.ToggleIconFrame:AddButtonCustom("T", 105 - (17 + 86), "Tab", "tab");
-	v12.ToggleIconFrame:AddButtonCustom("I", 3 + 0, "Interrupt", "interrupt");
-	v12.ToggleIconFrame:AddButtonCustom("D", 8 - 4, "Dispel", "dispel");
+	v12.ToggleIconFrame:AddButtonCustom("S", 104 - (17 + 86), "Small CDs", "smallcds");
+	v12.ToggleIconFrame:AddButtonCustom("T", 2 + 0, "Tab", "tab");
+	v12.ToggleIconFrame:AddButtonCustom("I", 6 - 3, "Interrupt", "interrupt");
+	v12.ToggleIconFrame:AddButtonCustom("D", 11 - 7, "Dispel", "dispel");
 	v20.MarkofFyralathDebuff:RegisterAuraTracking();
-	v23.PostInitialMessage(202 - 132);
+	v23.PostInitialMessage(236 - (122 + 44));
 end
-v12.SetAPL(236 - (122 + 44), v86, v87);
+v12.SetAPL(120 - 50, v86, v87);
