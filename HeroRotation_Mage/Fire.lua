@@ -20,161 +20,179 @@ local v19 = {v18.ForgedGladiatorsBadge:ID(),v18.CrimsonGladiatorsBadge:ID(),v18.
 local v20 = v8.GUISettingsGet();
 local v21 = v8.Commons().Everyone;
 local v22 = {General=v20.General,Commons=v20.APL.Mage.Commons,Fire=v20.APL.Mage.Fire,Defense=v20.APL.Mage.Defense.Defensive};
-local v23 = false;
-local v24 = ((v17.Kindling:IsAvailable()) and (0.4 + 0)) or (878 - (282 + 595));
-local v25 = 1647 - (1523 + 114);
-local v26 = 2 + 0;
-local v27 = false;
-local v28 = 0 - 0;
-local v29 = 1065 - (68 + 997);
-local v30 = 1270 - (226 + 1044);
-local v31 = 0 - 0;
-local v32 = 157 - (32 + 85);
-local v33 = 0 + 0;
-local v34 = 1 + 0;
-local v35 = 957 - (892 + 65);
-local v36 = 14 - 8;
-local v37 = 36 - 16;
+local v23 = ((v17.Kindling:IsAvailable()) and (0.4 + 0)) or (878 - (282 + 595));
+local v24 = 1647 - (1523 + 114);
+local v25 = 2 + 0;
+local v26 = false;
+local v27 = 0 - 0;
+local v28 = 1065 - (68 + 997);
+local v29 = 1270 - (226 + 1044);
+local v30 = 0 - 0;
+local v31 = 157 - (32 + 85);
+local v32 = 0 + 0;
+local v33 = 1 + 0;
+local v34 = 957 - (892 + 65);
+local v35 = 14 - 8;
+local v36 = 36 - 16;
+local v37 = false;
 local v38 = false;
-local v39 = false;
-local v40, v41 = false, false;
-local v42, v43 = 0 - 0, 350 - (87 + 263);
-local v44 = false;
-local v45 = 180 - (67 + 113);
+local v39, v40 = false, false;
+local v41, v42 = 0 - 0, 350 - (87 + 263);
+local v43 = false;
+local v44 = 180 - (67 + 113);
+local v45;
 local v46;
 local v47;
-local v48;
-local v49, v50 = false, false;
-local v51 = 3 + 0;
-local v52, v53, v54;
-local v55, v56;
-local v57, v58, v59;
+local v48, v49 = false, false;
+local v50 = 3 + 0;
+local v51, v52;
+local v53, v54;
+local v55 = 27279 - 16168;
+local v56 = 8172 + 2939;
+local v57 = (v17.FrostfireBolt:IsAvailable() and v17.FrostfireBolt) or v17.Fireball;
+local v58, v59;
 local v60;
-local v61 = 27279 - 16168;
-local v62 = 8172 + 2939;
-local v63;
-local v64 = (v17.FrostfireBolt:IsAvailable() and v17.FrostfireBolt) or v17.Fireball;
-local function v65()
-	return v8.ToggleIconFrame:GetToggle(7 - 5) and v16.TTDCondition(v22.Fire.TimeToDie.SKB, IsBossfight, v62);
-end
-local v66, v67;
-local v68;
-local v69;
-local v70 = 952 - (802 + 150);
-local function v71()
-	local v94, v95 = v4:GetTrinketData(v19);
-	if ((v70 < (13 - 8)) and ((v94.ID == (0 - 0)) or (v95.ID == (0 + 0)) or ((v94.SpellID > (997 - (915 + 82))) and not v94.Usable) or ((v95.SpellID > (0 - 0)) and not v95.Usable))) then
-		v70 = v70 + 1 + 0;
-		v15(6 - 1, function()
-			v71();
+local v61;
+local v62 = 0 - 0;
+local function v63()
+	local v87, v88 = v4:GetTrinketData(v19);
+	if ((v62 < (957 - (802 + 150))) and ((v87.ID == (0 - 0)) or (v88.ID == (0 - 0)) or ((v87.SpellID > (0 + 0)) and not v87.Usable) or ((v88.SpellID > (997 - (915 + 82))) and not v88.Usable))) then
+		v62 = v62 + (2 - 1);
+		v15(3 + 2, function()
+			v63();
 		end);
 		return;
 	end
-	v66 = v94.Object;
-	v67 = v95.Object;
-	v68 = v18.ForgedGladiatorsBadge:IsEquipped() or v18.TreacherousTransmitter:IsEquipped() or v18.CrimsonGladiatorsBadge:IsEquipped() or v18.DraconicGladiatorsBadge:IsEquipped() or v18.ObsidianGladiatorsBadge:IsEquipped() or v18.VerdantGladiatorsBadge:IsEquipped() or v18.MoonlitPrism:IsEquipped() or v18.IrideusFragment:IsEquipped() or v18.SpoilsofNeltharus:IsEquipped() or v18.TimebreachingTalon:IsEquipped() or v18.HornofValor:IsEquipped();
-	v69 = 1199 - (1069 + 118);
+	v58 = v87.Object;
+	v59 = v88.Object;
+	v60 = v18.ForgedGladiatorsBadge:IsEquipped() or v18.TreacherousTransmitter:IsEquipped() or v18.CrimsonGladiatorsBadge:IsEquipped() or v18.DraconicGladiatorsBadge:IsEquipped() or v18.ObsidianGladiatorsBadge:IsEquipped() or v18.VerdantGladiatorsBadge:IsEquipped() or v18.MoonlitPrism:IsEquipped() or v18.IrideusFragment:IsEquipped() or v18.SpoilsofNeltharus:IsEquipped() or v18.TimebreachingTalon:IsEquipped() or v18.HornofValor:IsEquipped();
+	v61 = 15 - 3;
 end
-v71();
-local function v72()
-	v27 = v17.SunKingsBlessing:IsAvailable();
-	v28 = ((8 - 4) * v13(v17.Quickflame:IsAvailable() or v17.FlamePatch:IsAvailable())) + ((2184 - 1185) * v13(not v17.FlamePatch:IsAvailable() and not v17.Quickflame:IsAvailable()));
-	v29 = 174 + 825;
-	VarCombustionFlamestrike = ((6 - 2) * v13(v17.Quickflame:IsAvailable() or v17.FlamePatch:IsAvailable())) + ((992 + 7) * v13(not v17.FlamePatch:IsAvailable() and not v17.Quickflame:IsAvailable()));
-	v30 = ((794 - (368 + 423)) * v13(v17.Quickflame:IsAvailable() or v17.FlamePatch:IsAvailable())) + ((3139 - 2140) * v13(not v17.FlamePatch:IsAvailable() and not v17.Quickflame:IsAvailable()));
-	v31 = 1017 - (10 + 8);
-	v32 = 153 - 113;
-	v33 = 1441 - (416 + 26);
-	v34 = 3 - 2;
-	v35 = 0 + 0;
-	v36 = 9 - 3;
-	v37 = (v68 and (458 - (145 + 293))) or v37;
+v63();
+local function v64()
+	v26 = v17.SunKingsBlessing:IsAvailable();
+	v27 = ((1192 - (1069 + 118)) * v13(v17.Quickflame:IsAvailable() or v17.FlamePatch:IsAvailable())) + ((13 - 7) * v13(v17.Firefall:IsAvailable())) + ((2184 - 1185) * v13(not v17.FlamePatch:IsAvailable() and not v17.Quickflame:IsAvailable() and not v17.Firefall:IsAvailable()));
+	v28 = 174 + 825;
+	VarCombustionFlamestrike = ((8 - 3) * v13(v17.Quickflame:IsAvailable() or v17.FlamePatch:IsAvailable())) + ((6 + 0) * v13(v17.Firefall:IsAvailable())) + ((1790 - (368 + 423)) * v13(not v17.FlamePatch:IsAvailable() and not v17.Quickflame:IsAvailable() and not v17.Firefall:IsAvailable()));
+	v29 = ((9 - 6) * v13(v17.Quickflame:IsAvailable() or v17.FlamePatch:IsAvailable())) + ((1017 - (10 + 8)) * v13(not v17.FlamePatch:IsAvailable() and not v17.Quickflame:IsAvailable()));
+	v30 = 3842 - 2843;
+	v31 = 482 - (416 + 26);
+	v32 = 3189 - 2190;
+	v33 = 1 + 0;
+	v34 = 0 - 0;
+	v35 = 444 - (145 + 293);
+	v36 = (v60 and (450 - (44 + 386))) or v36;
 end
-v72();
+v64();
 v2:RegisterForEvent(function()
-	v71();
+	v63();
 end, "PLAYER_EQUIPMENT_CHANGED");
 v2:RegisterForEvent(function()
 	v17.Pyroblast:RegisterInFlight();
 	v17.Fireball:RegisterInFlight();
+	v17.FrostfireBolt:RegisterInFlightEffect(470141 - (998 + 488));
 	v17.FrostfireBolt:RegisterInFlight();
-	v17.Meteor:RegisterInFlightEffect(351570 - (44 + 386));
+	v17.Meteor:RegisterInFlightEffect(111555 + 239585);
 	v17.Meteor:RegisterInFlight();
 	v17.IceFloes:RegisterInFlight();
-	v17.PhoenixFlames:RegisterInFlightEffect(259028 - (998 + 488));
+	v17.PhoenixFlames:RegisterInFlightEffect(210881 + 46661);
 	v17.PhoenixFlames:RegisterInFlight();
 	v17.Pyroblast:RegisterInFlight(v17.CombustionBuff);
 	v17.Fireball:RegisterInFlight(v17.CombustionBuff);
 	v17.FrostfireBolt:RegisterInFlight(v17.CombustionBuff);
-	v64 = (v17.FrostfireBolt:IsAvailable() and v17.FrostfireBolt) or v17.Fireball;
+	v57 = (v17.FrostfireBolt:IsAvailable() and v17.FrostfireBolt) or v17.Fireball;
+	v64();
 end, "SPELLS_CHANGED", "LEARNED_SPELL_IN_TAB");
 v17.Pyroblast:RegisterInFlight();
 v17.Fireball:RegisterInFlight();
+v17.FrostfireBolt:RegisterInFlightEffect(469427 - (201 + 571));
 v17.FrostfireBolt:RegisterInFlight();
-v17.Meteor:RegisterInFlightEffect(111555 + 239585);
+v17.Meteor:RegisterInFlightEffect(352278 - (116 + 1022));
 v17.Meteor:RegisterInFlight();
 v17.IceFloes:RegisterInFlight();
-v17.PhoenixFlames:RegisterInFlightEffect(210881 + 46661);
+v17.PhoenixFlames:RegisterInFlightEffect(1072216 - 814674);
 v17.PhoenixFlames:RegisterInFlight();
 v17.Pyroblast:RegisterInFlight(v17.CombustionBuff);
 v17.Fireball:RegisterInFlight(v17.CombustionBuff);
 v17.FrostfireBolt:RegisterInFlight(v17.CombustionBuff);
 v2:RegisterForEvent(function()
-	v61 = 11883 - (201 + 571);
-	v62 = 12249 - (116 + 1022);
+	v55 = 6522 + 4589;
+	v56 = 40562 - 29451;
 end, "PLAYER_REGEN_ENABLED");
-local function v73()
-	if not v17.Scorch:IsAvailable() then
+local function v65()
+	if (not v4 or not v5) then
 		return false;
 	end
-	if v4:BuffUp(v17.HeatShimmerBuff) then
+	if (v17.SearingTouch:IsAvailable() and (v5:HealthPercentage() <= (106 - 76))) then
 		return true;
 	end
-	return v5:HealthPercentage() <= ((124 - 94) + ((3 + 2) * v13(v17.SunfuryExecution:IsAvailable())));
+	return false;
 end
-local function v74()
-	return v17.Firestarter:IsAvailable() and (v5:HealthPercentage() > (328 - 238));
+local function v66()
+	return v8.ToggleIconFrame:GetToggle(861 - (814 + 45)) and v16.TTDCondition(v22.Fire.TimeToDie.SKB, IsBossfight, v56);
 end
-local function v75()
-	return (v17.Firestarter:IsAvailable() and (((v5:HealthPercentage() > (319 - 229)) and v5:TimeToX(949 - (814 + 45))) or (0 - 0))) or (0 + 0);
+local function v67()
+	if (not v4 or not v5) then
+		return false;
+	end
+	return v17.Firestarter:IsAvailable() and (v5:HealthPercentage() >= (221 - 131));
 end
-local function v76()
-	return v17.ImprovedScorch:IsAvailable() and (v5:HealthPercentage() < (11 + 19));
+local function v68()
+	return (v17.Firestarter:IsAvailable() and (((v5:HealthPercentage() > (5 + 85)) and v5:TimeToX(32 + 58)) or (885 - (261 + 624)))) or (0 - 0);
 end
-local function v77()
-	return (v51 * v17.ShiftingPower:BaseDuration()) / v17.ShiftingPower:BaseTickTime();
+local function v69()
+	return v17.ImprovedScorch:IsAvailable() and (v5:HealthPercentage() < (1110 - (1020 + 60)));
 end
-local function v78()
-	local v98 = (v74() and (v13(v17.Pyroblast:InFlight()) + v13(v64:InFlight()))) or (885 - (261 + 624));
-	v98 = v98 + v13(v17.PhoenixFlames:InFlight() or v4:PrevGCDP(1 - 0, v17.PhoenixFlames));
-	return v50 or v4:BuffUp(v17.HyperthermiaBuff) or (v49 and ((v76() and v4:IsCasting(v17.Scorch)) or (v74() and (v4:IsCasting(v64) or (v98 > (1080 - (1020 + 60)))))));
+local function v70()
+	return (v50 * v17.ShiftingPower:BaseDuration()) / v17.ShiftingPower:BaseTickTime();
 end
-local function v79(v99)
-	local v100 = 1423 - (630 + 793);
-	for v119, v120 in pairs(v99) do
-		if v120:DebuffUp(v17.IgniteDebuff) then
-			v100 = v100 + (3 - 2);
+local function v71()
+	if not v4 then
+		return false;
+	end
+	local v91 = v4:BuffUp(v17.HotStreakBuff);
+	local v92 = v4:BuffUp(v17.HyperthermiaBuff);
+	local v93 = v4:BuffUp(v17.FuryoftheSunKingBuff);
+	return v91 or v92 or v93;
+end
+local function v72(v94)
+	local v95 = 1423 - (630 + 793);
+	for v114, v115 in pairs(v94) do
+		if v115:DebuffUp(v17.IgniteDebuff) then
+			v95 = v95 + (3 - 2);
 		end
 	end
-	return v100;
+	return v95;
 end
-local function v80()
-	local v101 = 0 - 0;
-	if (v17.Fireball:InFlight() or v17.Pyroblast:InFlight() or v17.PhoenixFlames:InFlight()) then
-		v101 = v101 + 1 + 0;
+local function v73()
+	if not v4 then
+		return 0 - 0;
 	end
-	return v101;
+	local v96 = 0 + 0;
+	if v17.Pyroblast:InFlight() then
+		v96 = v96 + (3 - 2);
+	end
+	if v17.Fireball:InFlight() then
+		v96 = v96 + (1748 - (760 + 987));
+	end
+	if v17.PhoenixFlames:InFlight() then
+		v96 = v96 + (1914 - (1789 + 124));
+	end
+	if (v17.FrostfireBolt:IsAvailable() and v17.FrostfireBolt:InFlight()) then
+		v96 = v96 + (767 - (745 + 21));
+	end
+	return v96;
 end
-local function v81(v102, v103)
-	if (v17.IceFloes:IsCastable() and (v17.IceFloes:TimeSinceLastCast() > (3 - 2)) and ((v4:IsMoving() and (v17.IceFloes:Charges() > (1748 - (760 + 987)))) or v103) and v4:BuffDown(v17.IceFloes)) then
+local function v74(v97, v98)
+	if (v17.IceFloes:IsCastable() and (v17.IceFloes:TimeSinceLastCast() > (1 + 0)) and ((v4:IsMoving() and (v17.IceFloes:Charges() > (2 - 1))) or v98) and v4:BuffDown(v17.IceFloes)) then
 		v9(v17.IceFloes, true);
 		return "ice_floes";
 	elseif (not v4:IsMoving() or v4:BuffUp(v17.IceFloes)) then
-		v9(v102);
-		return v102:Name();
+		v9(v97);
+		return v97:Name();
 	end
 end
-local function v82()
+local function v75()
 	if (v21.TargetIsValid() and not v4:AffectingCombat() and not v5:AffectingCombat()) then
 		if v18.TreacherousTransmitter:IsEquippedAndReady() then
 			if v9(v18.TreacherousTransmitter) then
@@ -186,12 +204,12 @@ local function v82()
 				return "mirror_image precombat";
 			end
 		end
-		if (v17.Flamestrike:IsReady() and v12() and v16.GroundSpellCondition() and not (v4:IsCasting(v17.Pyroblast) or v4:IsCasting(v17.Flamestrike)) and (v52 >= v28)) then
+		if (v17.Flamestrike:IsReady() and v12() and v16.GroundSpellCondition() and not (v4:IsCasting(v17.Pyroblast) or v4:IsCasting(v17.Flamestrike)) and (v51 >= v27)) then
 			if v9(v17.Flamestrike, true) then
 				return "Flamestrike precombat";
 			end
 		end
-		if (v17.Pyroblast:IsReady() and not (v4:IsCasting(v17.Pyroblast) or v4:IsCasting(v17.Flamestrike)) and (v52 < v30)) then
+		if (v17.Pyroblast:IsReady() and not (v4:IsCasting(v17.Pyroblast) or v4:IsCasting(v17.Flamestrike)) and (v51 < v29)) then
 			if v9(v17.Pyroblast) then
 				return "pyroblast precombat";
 			end
@@ -201,32 +219,34 @@ local function v82()
 				return "phoenix_flames precombat 10";
 			end
 		end
-		if v64:IsReady() then
-			if v9(v64) then
+		if v57:IsReady() then
+			if v9(v57) then
 				return "fireball precombat 12";
 			end
 		end
 	end
 end
-local function v83()
-	if (v17.Meteor:IsReady() and v16.GroundSpellCondition() and (v46 or ((v25 - v4:BuffStack(v17.SunKingsBlessingBuff)) > (1917 - (1789 + 124))) or (v45 <= (766 - (745 + 21))) or (v48 > v17.Meteor:TravelTime()) or (not v17.SunKingsBlessing:IsAvailable() and ((16 + 29) < v45) and (v61 < v45)))) then
-		if v9(v17.Meteor) then
-			return "meteor active_talents 2";
+local function v76()
+	if v17.Meteor:IsAvailable() then
+		if ((v17.Meteor:IsReady() and v16.GroundSpellCondition() and (v47 < v17.Meteor:CastTime())) or (v44 <= (0 - 0)) or (v47 > v17.Meteor:TravelTime())) then
+			if v9(v17.Meteor) then
+				return "meteor active_talents 2";
+			end
 		end
 	end
-	if (v17.DragonsBreath:IsReady() and v17.AlexstraszasFury:IsAvailable() and v47 and not v50 and (v4:BuffUp(v17.FeeltheBurnBuff) or (v2.CombatTime() > (40 - 25))) and not v76()) then
-		if v5:IsInRange(31 - 23) then
+	if (v17.DragonsBreath:IsReady() and v17.AlexstraszasFury:IsAvailable() and v46 and not v49 and (v4:BuffUp(v17.FeeltheBurnBuff) or (v2.CombatTime() > (1 + 14))) and not v69()) then
+		if v5:IsInRange(7 + 1) then
 			if v9(v17.DragonsBreath) then
 				return "dragons_breath active_talents 6";
 			end
 		end
 	end
 end
-local function v84()
+local function v77()
 	if (v22.Commons.Enabled.Potions and v11()) then
-		local v121 = v21.PotionSelected();
-		if (v121 and v121:IsReady()) then
-			if v8.CastMacro(1 + 2, nil, nil, v121) then
+		local v116 = v21.PotionSelected();
+		if (v116 and v116:IsReady()) then
+			if v8.CastMacro(1058 - (87 + 968), nil, nil, v116) then
 				return "potion combustion_cooldowns";
 			end
 		end
@@ -236,7 +256,7 @@ local function v84()
 			return "blood_fury combustion_cooldowns 4";
 		end
 	end
-	if (v17.Berserking:IsCastable() and v46) then
+	if (v17.Berserking:IsCastable() and v45) then
 		if v9(v17.Berserking, true) then
 			return "berserking combustion_cooldowns 6";
 		end
@@ -251,7 +271,7 @@ local function v84()
 			return "ancestral_call combustion_cooldowns 10";
 		end
 	end
-	if (v22.Commons.Enabled.Trinkets and v11() and v16.TTDCondition(v22.Fire.TimeToDie.Trinkets, IsBossfight, v62)) then
+	if (v22.Commons.Enabled.Trinkets and v11() and v16.TTDCondition(v22.Fire.TimeToDie.Trinkets, IsBossfight, v56)) then
 		if v18.ForgedGladiatorsBadge:IsEquippedAndReady() then
 			if v9(v18.ForgedGladiatorsBadge, true) then
 				return "gladiators_badge (forged) combustion_cooldowns 12";
@@ -277,77 +297,85 @@ local function v84()
 				return "gladiators_badge (verdant) combustion_cooldowns 20";
 			end
 		end
-		if (v18.KahetiShadowweaversEmblem:IsEquippedAndReady() and (v4:BuffStack(v17.KahetiShadowweaversEmblemBuff) >= (4 + 1))) then
+		if (v18.KahetiShadowweaversEmblem:IsEquippedAndReady() and (v4:BuffStack(v17.KahetiShadowweaversEmblemBuff) >= (22 - 17))) then
 			if v9(v18.KahetiShadowweaversEmblem) then
 				return "Kaheti_Shadowweavers_Emblem items";
 			end
 		end
 	end
 end
-local function v85()
-	if ((v48 > v36) or (v61 < (1075 - (87 + 968)))) then
-		local v122 = v84();
-		if v122 then
-			return v122;
+local function v78()
+	if ((v47 > v35) or (v55 < (19 + 1))) then
+		local v117 = v77();
+		if v117 then
+			return v117;
 		end
 	end
-	local v104 = v83();
-	if v104 then
-		return v104;
+	local v99 = v76();
+	if v99 then
+		return v99;
 	end
-	v44 = (v17.Combustion:CooldownRemains() < (44 - 34)) and v46;
-	if (v17.Combustion:IsReady() and (v80() == (0 + 0)) and v47 and (v45 <= (0 - 0)) and ((v4:IsCasting(v17.Scorch) and (v17.Scorch:ExecuteRemains() < v34)) or (v4:IsCasting(v64) and (v64:ExecuteRemains() < v34)) or (v4:IsCasting(v17.Pyroblast) and (v17.Pyroblast:ExecuteRemains() < v34)) or (v4:IsCasting(v17.Flamestrike) and (v17.Flamestrike:ExecuteRemains() < v34)) or (not v17.IsothermicCore:IsAvailable() and v17.Meteor:InFlight() and (v17.Meteor:InFlightRemains() < v34)) or (v17.IsothermicCore:IsAvailable() and v17.Meteor:InFlight()))) then
+	v43 = (v17.Combustion:CooldownRemains() < (22 - 12)) and v45;
+	if (v17.Combustion:IsReady() and (v73() == (1413 - (447 + 966))) and v46 and (v44 <= (0 - 0)) and ((v4:IsCasting(v17.Scorch) and (v17.Scorch:ExecuteRemains() < v33)) or (v4:IsCasting(v57) and (v57:ExecuteRemains() < v33)) or (v4:IsCasting(v17.Pyroblast) and (v17.Pyroblast:ExecuteRemains() < v33)) or (v4:IsCasting(v17.Flamestrike) and (v17.Flamestrike:ExecuteRemains() < v33)) or (not v17.IsothermicCore:IsAvailable() and v17.Meteor:InFlight() and (v17.Meteor:InFlightRemains() < v33)) or (v17.IsothermicCore:IsAvailable() and v17.Meteor:InFlight()))) then
 		if v9(v17.Combustion, true) then
 			return "combustion combustion_phase 2";
 		end
 	end
-	if (v17.FireBlast:IsReady() and not v78() and (not v44 or v17.SunKingsBlessing:IsAvailable()) and not v40 and (not v76() or v4:IsCasting(v17.Scorch) or (v5:DebuffRemains(v17.ImprovedScorchDebuff) > ((1417 - (447 + 966)) * v4:GCD()))) and (v4:BuffDown(v17.FuryoftheSunKingBuff) or v4:IsCasting(v17.Pyroblast)) and v46 and not v50 and ((v80() + (v13(v49) * v13(v4:GCDRemains() > (0 - 0)))) < (1819 - (1703 + 114)))) then
+	if (v17.FireBlast:IsReady() and not v71() and (not v43 or v17.SunKingsBlessing:IsAvailable()) and not v39 and (not v69() or v4:IsCasting(v17.Scorch) or (v5:DebuffRemains(v17.ImprovedScorchDebuff) > ((1821 - (1703 + 114)) * v4:GCD()))) and (v4:BuffDown(v17.FuryoftheSunKingBuff) or v4:IsCasting(v17.Pyroblast)) and v45 and not v49 and ((v73() + (v13(v48) * v13(v4:GCDRemains() > (701 - (376 + 325))))) < (2 - 0))) then
 		if v9(v17.FireBlast, true) then
 			return "fire_blast combustion_phase 4";
 		end
 	end
-	if (v17.FireBlast:IsReady() and not v78() and v44 and not v40 and (v17.FireBlast:ChargesFractional() > (703.5 - (376 + 325))) and (not v76() or v4:IsCasting(v17.Scorch) or (v5:DebuffRemains(v17.ImprovedScorchDebuff) > ((5 - 1) * v4:GCD()))) and (v4:BuffDown(v17.FuryoftheSunKingBuff) or v4:IsCasting(v17.Pyroblast)) and v46 and not v50 and ((v80() + (v13(v49) * v13(v4:GCDRemains() > (0 - 0)))) < (1 + 1))) then
-		if v9(v17.FireBlast, true) then
+	if (v17.FireBlast:IsReady() and not v71() and v43 and not v39 and (v17.FireBlast:ChargesFractional() > (5.5 - 3)) and (not v69() or v4:IsCasting(v17.Scorch) or (v5:DebuffRemains(v17.ImprovedScorchDebuff) > ((2 + 2) * v4:GCD()))) and (v4:BuffDown(v17.FuryoftheSunKingBuff) or v4:IsCasting(v17.Pyroblast)) and v45 and not v49 and ((v73() + (v13(v48) * v13(v4:GCDRemains() > (0 - 0)))) < (16 - (9 + 5)))) then
+		if v9(v17.FireBlast) then
 			return "fire_blast combustion_phase 6";
 		end
 	end
-	if (v12() and v16.GroundSpellCondition() and v65() and v16.TTDCastTimeCondition(v17.Flamestrike, IsBossfight, v62) and v17.Flamestrike:IsReady() and not v4:IsCasting(v17.Flamestrike) and v47 and v4:BuffUp(v17.FuryoftheSunKingBuff) and (v4:BuffRemains(v17.FuryoftheSunKingBuff) > v17.Flamestrike:CastTime()) and (v17.Combustion:CooldownRemains() < v17.Flamestrike:CastTime()) and (v52 >= v30)) then
-		if v81(v17.Flamestrike) then
+	if (v17.Pyroblast:IsReady() and v45 and v49) then
+		if v9(v17.Pyroblast) then
+			return "pyroblast combustion_phase 7";
+		end
+	end
+	if (v4:BuffUp(v17.HyperthermiaBuff) and v4:BuffUp(v17.FuryoftheSunKingBuff)) then
+		v4:CancelBuff(v17.HyperthermiaBuff);
+	end
+	if (v12() and v16.GroundSpellCondition() and v66() and v16.TTDCastTimeCondition(v17.Flamestrike, IsBossfight, v56) and v17.Flamestrike:IsReady() and not v4:IsCasting(v17.Flamestrike) and v46 and v4:BuffUp(v17.FuryoftheSunKingBuff) and (v4:BuffRemains(v17.FuryoftheSunKingBuff) > v17.Flamestrike:CastTime()) and (v17.Combustion:CooldownRemains() < v17.Flamestrike:CastTime()) and (v51 >= v29)) then
+		if v74(v17.Flamestrike) then
 			return "flamestrike combustion_phase 8";
 		end
 	end
-	if (v17.Pyroblast:IsReady() and v65() and v16.TTDCastTimeCondition(v17.Pyroblast, IsBossfight, v62) and not v4:IsCasting(v17.Pyroblast) and v47 and v4:BuffUp(v17.FuryoftheSunKingBuff) and (v4:BuffRemains(v17.FuryoftheSunKingBuff) > v17.Pyroblast:CastTime()) and v4:BuffUp(v17.FlameAccelerantBuff)) then
-		if v81(v17.Pyroblast, true) then
+	if (v17.Pyroblast:IsReady() and v66() and v16.TTDCastTimeCondition(v17.Pyroblast, IsBossfight, v56) and not v4:IsCasting(v17.Pyroblast) and v46 and v4:BuffUp(v17.FuryoftheSunKingBuff) and (v4:BuffRemains(v17.FuryoftheSunKingBuff) > v17.Pyroblast:CastTime()) and v4:BuffUp(v17.FlameAccelerantBuff)) then
+		if v74(v17.Pyroblast, true) then
 			return "pyroblast combustion_phase 10";
 		end
 	end
-	if (v17.Meteor:IsReady() and v16.GroundSpellCondition() and v17.IsothermicCore:IsAvailable() and v47 and (v17.Combustion:CooldownRemains() < v17.Meteor:CastTime())) then
+	if (v17.Meteor:IsReady() and v16.GroundSpellCondition() and v17.IsothermicCore:IsAvailable() and v46 and (v17.Combustion:CooldownRemains() < v17.Meteor:CastTime())) then
 		if v9(v17.Meteor) then
 			return "meteor combustion_phase 12";
 		end
 	end
-	if (v64:IsReady() and v47 and (v48 < v64:CastTime()) and (v54 < (4 - 2)) and not v76() and not (v17.SunKingsBlessing:IsAvailable() and v17.FlameAccelerant:IsAvailable())) then
-		if v81(v64) then
+	if (v57:IsReady() and v46 and (v47 < v57:CastTime()) and (v52 < (378 - (85 + 291))) and not v69() and not (v17.SunKingsBlessing:IsAvailable() and v17.FlameAccelerant:IsAvailable())) then
+		if v74(v57) then
 			return "fireball combustion_phase 14";
 		end
 	end
-	if (v17.Scorch:IsReady() and v47 and (v17.Combustion:CooldownRemains() < v17.Scorch:CastTime())) then
+	if (v17.Scorch:IsReady() and v46 and (v17.Combustion:CooldownRemains() < v17.Scorch:CastTime())) then
 		if v9(v17.Scorch) then
 			return "scorch combustion_phase 16";
 		end
 	end
-	if (v64:IsReady() and v47 and v4:BuffUp(v17.FrostfireEmpowermentBuff)) then
-		if v81(v64) then
+	if (v57:IsReady() and v46 and v4:BuffUp(v17.FrostfireEmpowermentBuff)) then
+		if v74(v57) then
 			return "fireball combustion_phase 17";
 		end
 	end
-	v44 = (v17.Combustion:CooldownRemains() < (24 - (9 + 5))) and v46;
-	if (v17.PhoenixFlames:IsCastable() and v17.SpellfireSpheres:IsAvailable() and v17.PhoenixReborn:IsAvailable() and v49 and not v50 and v4:BuffUp(v17.FlamesFuryBuff)) then
+	v43 = (v17.Combustion:CooldownRemains() < (1275 - (243 + 1022))) and v45;
+	if (v17.PhoenixFlames:IsCastable() and v17.SpellfireSpheres:IsAvailable() and v17.PhoenixReborn:IsAvailable() and v48 and not v49 and v4:BuffUp(v17.FlamesFuryBuff)) then
 		if v9(v17.PhoenixFlames) then
 			return "phoenix_flames combustion_phase 18";
 		end
 	end
-	if (v12() and v16.GroundSpellCondition() and v17.Flamestrike:IsReady() and ((v50 and (v52 >= VarCombustionFlamestrike)) or (v4:BuffUp(v17.HyperthermiaBuff) and (v52 >= (VarCombustionFlamestrike - v13(v17.Hyperthermia:IsAvailable())))))) then
+	if (v12() and v16.GroundSpellCondition() and v17.Flamestrike:IsReady() and ((v49 and (v51 >= VarCombustionFlamestrike)) or (v4:BuffUp(v17.HyperthermiaBuff) and (v51 >= (VarCombustionFlamestrike - v13(v17.Hyperthermia:IsAvailable())))))) then
 		if v9(v17.Flamestrike, true) then
 			return "flamestrike combustion_phase 19";
 		end
@@ -357,220 +385,231 @@ local function v85()
 			return "pyroblast combustion_phase 20";
 		end
 	end
-	if (v17.Pyroblast:IsReady() and v50 and v46) then
+	if (v17.Pyroblast:IsReady() and v49 and v45) then
 		if v9(v17.Pyroblast, true) then
 			return "pyroblast combustion_phase 22";
 		end
 	end
-	if (v17.Pyroblast:IsReady() and v4:PrevGCDP(377 - (85 + 291), v17.Scorch) and v49 and (v52 < VarCombustionFlamestrike) and v46) then
+	if (v17.Pyroblast:IsReady() and v4:PrevGCDP(3 - 2, v17.Scorch) and v48 and (v51 < VarCombustionFlamestrike) and v45) then
 		if v9(v17.Pyroblast, true) then
 			return "pyroblast combustion_phase 24";
 		end
 	end
-	if (v12() and v65() and v16.TTDCastTimeCondition(v17.Flamestrike, IsBossfight, v62) and v17.Flamestrike:IsReady() and v16.GroundSpellCondition() and not v4:IsCasting(v17.Flamestrike) and v4:BuffUp(v17.FuryoftheSunKingBuff) and (v4:BuffRemains(v17.FuryoftheSunKingBuff) > v17.Flamestrike:CastTime()) and (v52 >= v30)) then
-		if v81(v17.Flamestrike, true) then
+	if (v17.Scorch:IsReady() and v5:IsSpellInRange(v17.Scorch) and v17.SunKingsBlessing:IsAvailable() and v69() and (v5:DebuffRemains(v17.ImprovedScorchDebuff) < ((3 + 0) * v4:GCD()))) then
+		if v9(v17.Scorch) then
+			return "scorch combustion_phase 25";
+		end
+	end
+	if (v12() and v66() and v16.TTDCastTimeCondition(v17.Flamestrike, IsBossfight, v56) and v17.Flamestrike:IsReady() and v16.GroundSpellCondition() and not v4:IsCasting(v17.Flamestrike) and v4:BuffUp(v17.FuryoftheSunKingBuff) and (v4:BuffRemains(v17.FuryoftheSunKingBuff) > v17.Flamestrike:CastTime()) and (v51 >= v29)) then
+		if v74(v17.Flamestrike, true) then
 			return "flamestrike combustion_phase 26";
 		end
 	end
-	if (v17.Pyroblast:IsReady() and not v4:IsCasting(v17.Pyroblast) and v65() and v16.TTDCastTimeCondition(v17.Pyroblast, IsBossfight, v62) and v4:BuffUp(v17.FuryoftheSunKingBuff) and (v4:BuffRemains(v17.FuryoftheSunKingBuff) > v17.Pyroblast:CastTime())) then
-		if v81(v17.Pyroblast, true) then
+	if (v17.Pyroblast:IsReady() and v66() and v16.TTDCastTimeCondition(v17.Pyroblast, IsBossfight, v56) and not v4:IsCasting(v17.Pyroblast) and v4:BuffUp(v17.FuryoftheSunKingBuff) and (v4:BuffRemains(v17.FuryoftheSunKingBuff) > v17.Pyroblast:CastTime()) and ((v47 > (v17.Pyroblast:CastTime() + (1183 - (1123 + 57)))) or (v47 < v17.Pyroblast:CastTime()))) then
+		if v74(v17.Pyroblast, true) then
 			return "pyroblast combustion_phase 28";
 		end
 	end
-	if (v64:IsReady() and v4:BuffUp(v17.FrostfireEmpowermentBuff) and not v50 and v4:BuffDown(v17.ExcessFrostBuff)) then
-		if v81(v64) then
+	if (v57:IsReady() and v4:BuffUp(v17.FrostfireEmpowermentBuff) and not v49 and v4:BuffDown(v17.ExcessFrostBuff)) then
+		if v74(v57) then
 			return "fireball combustion_phase 30";
 		end
 	end
-	if (v17.PhoenixFlames:IsCastable() and v17.PhoenixReborn:IsAvailable() and ((v13(v49) + v80()) < (1267 - (243 + 1022))) and v4:BuffUp(v17.FlamesFuryBuff)) then
+	if (v17.PhoenixFlames:IsCastable() and v17.PhoenixReborn:IsAvailable() and ((v13(v48) + v73()) < (2 + 0)) and v4:BuffUp(v17.FlamesFuryBuff)) then
 		if v9(v17.PhoenixFlames) then
 			return "phoenix_flames combustion_phase 32";
 		end
 	end
-	if (v17.Scorch:IsReady() and v76() and (v5:DebuffRemains(v17.ImprovedScorchDebuff) < ((14 - 10) * v63)) and (v54 < VarCombustionFlamestrike)) then
+	if (v17.Scorch:IsReady() and v69() and (v5:DebuffRemains(v17.ImprovedScorchDebuff) < ((258 - (163 + 91)) * GCDMax)) and (v52 < VarCombustionFlamestrike)) then
 		if v9(v17.Scorch) then
 			return "scorch combustion_phase 34";
 		end
 	end
-	if (v17.Scorch:IsReady() and v4:BuffUp(v17.HeatShimmerBuff) and (v17.Scald:IsAvailable() or v17.ImprovedScorch:IsAvailable()) and (v54 < VarCombustionFlamestrike)) then
+	if (v17.Scorch:IsReady() and v4:BuffUp(v17.HeatShimmerBuff) and (v17.Scald:IsAvailable() or v17.ImprovedScorch:IsAvailable()) and (v52 < VarCombustionFlamestrike)) then
 		if v9(v17.Scorch) then
 			return "scorch combustion_phase 36";
 		end
 	end
-	if (v17.PhoenixFlames:IsCastable() and ((not v17.CalloftheSunKing:IsAvailable() and (v17.PhoenixFlames:TravelTime() < v48)) or (v17.CalloftheSunKing:IsAvailable() and (v48 < (4 + 0))) or (v4:BuffStack(v17.SunKingsBlessingBuff) < (1188 - (1123 + 57)))) and ((v13(v49) + v80()) < (2 + 0))) then
+	if (v17.PhoenixFlames:IsCastable() and ((not v17.CalloftheSunKing:IsAvailable() and (v17.PhoenixFlames:TravelTime() < v47)) or (v17.CalloftheSunKing:IsAvailable() and (v47 < (1934 - (1869 + 61)))) or (v4:BuffStack(v17.SunKingsBlessingBuff) < (3 + 5))) and ((v13(v48) + v73()) < (6 - 4))) then
 		if v9(v17.PhoenixFlames) then
 			return "phoenix_flames combustion_phase 38";
 		end
 	end
-	if (v64:IsReady() and v4:BuffUp(v17.FrostfireEmpowermentBuff) and not v50) then
-		if v81(v64) then
+	if (v57:IsReady() and v4:BuffUp(v17.FrostfireEmpowermentBuff) and not v49) then
+		if v74(v57) then
 			return "fireball combustion_phase 40";
 		end
 	end
-	if (v17.Scorch:IsReady() and (v48 > v17.Scorch:CastTime()) and (v17.Scorch:CastTime() >= v4:GCD())) then
+	if (v17.Scorch:IsReady() and (v47 > v17.Scorch:CastTime()) and (v17.Scorch:CastTime() >= v4:GCD())) then
 		if v9(v17.Scorch) then
 			return "scorch combustion_phase 42";
 		end
 	end
-	if v64:IsReady() then
-		if v81(v64) then
+	if v57:IsReady() then
+		if v74(v57) then
 			return "fireball combustion_phase 44";
 		end
 	end
 end
-local function v86()
-	v42 = v17.Combustion:CooldownRemains() * v24;
-	v43 = ((v64:CastTime() * v13(v52 < VarCombustionFlamestrike)) + (v17.Flamestrike:CastTime() * v13(v52 >= VarCombustionFlamestrike))) - v34;
-	v45 = v42;
-	if (v17.Firestarter:IsAvailable() and not v27) then
-		v45 = v14(v75(), v45);
+local function v79()
+	v41 = v17.Combustion:CooldownRemains() * v23;
+	v42 = ((v57:CastTime() * v13(v51 < VarCombustionFlamestrike)) + (v17.Flamestrike:CastTime() * v13(v51 >= VarCombustionFlamestrike))) - v33;
+	v44 = v41;
+	if (v17.Firestarter:IsAvailable() and not v26) then
+		v44 = v14(v68(), v44);
 	end
-	if (v17.SunKingsBlessing:IsAvailable() and v74() and (v4:BuffDown(v17.FuryoftheSunKingBuff) or not v65())) then
-		v45 = v14((v25 - v4:BuffStack(v17.SunKingsBlessingBuff)) * (257 - (163 + 91)) * v63, v45);
+	if (v17.SunKingsBlessing:IsAvailable() and v67() and v4:BuffDown(v17.FuryoftheSunKingBuff)) then
+		v44 = v14((v24 - v4:BuffStack(v17.SunKingsBlessingBuff)) * (4 - 1) * v4:GCD(), v44);
 	end
-	if (v18.ForgedGladiatorsBadge:IsEquipped() and ((v18.ForgedGladiatorsBadge:CooldownRemains() - (1950 - (1869 + 61))) < v45)) then
-		v45 = v14(v18.ForgedGladiatorsBadge:CooldownRemains(), v45);
+	if (v18.ForgedGladiatorsBadge:IsEquipped() and ((v18.ForgedGladiatorsBadge:CooldownRemains() - (3 + 17)) < v44)) then
+		v44 = v14(v18.ForgedGladiatorsBadge:CooldownRemains(), v44);
 	end
-	if (v18.CrimsonGladiatorsBadge:IsEquipped() and ((v18.CrimsonGladiatorsBadge:CooldownRemains() - (6 + 14)) < v45)) then
-		v45 = v14(v18.CrimsonGladiatorsBadge:CooldownRemains(), v45);
+	if (v18.CrimsonGladiatorsBadge:IsEquipped() and ((v18.CrimsonGladiatorsBadge:CooldownRemains() - (27 - 7)) < v44)) then
+		v44 = v14(v18.CrimsonGladiatorsBadge:CooldownRemains(), v44);
 	end
-	if (v18.DraconicGladiatorsBadge:IsEquipped() and ((v18.DraconicGladiatorsBadge:CooldownRemains() - (70 - 50)) < v45)) then
-		v45 = v14(v18.DraconicGladiatorsBadge:CooldownRemains(), v45);
+	if (v18.DraconicGladiatorsBadge:IsEquipped() and ((v18.DraconicGladiatorsBadge:CooldownRemains() - (19 + 1)) < v44)) then
+		v44 = v14(v18.DraconicGladiatorsBadge:CooldownRemains(), v44);
 	end
-	if (v18.ObsidianGladiatorsBadge:IsEquipped() and ((v18.ObsidianGladiatorsBadge:CooldownRemains() - (30 - 10)) < v45)) then
-		v45 = v14(v18.ObsidianGladiatorsBadge:CooldownRemains(), v45);
+	if (v18.ObsidianGladiatorsBadge:IsEquipped() and ((v18.ObsidianGladiatorsBadge:CooldownRemains() - (1494 - (1329 + 145))) < v44)) then
+		v44 = v14(v18.ObsidianGladiatorsBadge:CooldownRemains(), v44);
 	end
-	if (v18.VerdantGladiatorsBadge:IsEquipped() and ((v18.VerdantGladiatorsBadge:CooldownRemains() - (3 + 17)) < v45)) then
-		v45 = v14(v18.VerdantGladiatorsBadge:CooldownRemains(), v45);
+	if (v18.VerdantGladiatorsBadge:IsEquipped() and ((v18.VerdantGladiatorsBadge:CooldownRemains() - (991 - (140 + 831))) < v44)) then
+		v44 = v14(v18.VerdantGladiatorsBadge:CooldownRemains(), v44);
 	end
-	v45 = v14(v48, v45);
-	if (((v42 + ((164 - 44) * ((1 + 0) - (((1474.4 - (1329 + 145)) + ((971.2 - (140 + 831)) * v13(v17.Firestarter:IsAvailable()))) * v13(v17.Kindling:IsAvailable()))))) <= v45) or (v45 > (v62 - (1870 - (1409 + 441))))) then
-		v45 = v42;
+	v44 = v14(v47, v44);
+	if (((v41 + ((1970 - (1409 + 441)) * ((719 - (15 + 703)) - ((0.4 + 0 + ((438.2 - (262 + 176)) * v13(v17.Firestarter:IsAvailable()))) * v13(v17.Kindling:IsAvailable()))))) <= v44) or (v44 > (v56 - (1741 - (345 + 1376))))) then
+		v44 = v41;
 	end
-	if v23 then
-		v45 = 1717 - (15 + 703);
+	if var_disable_combustion then
+		v44 = 1687 - (198 + 490);
 	end
 end
-local function v87()
-	if (v17.FireBlast:IsReady() and not v78() and not v40 and not v50 and ((v13(v49) + v80()) == (1 + 0)) and (v17.ShiftingPower:CooldownUp() or (v17.FireBlast:Charges() > (439 - (262 + 176))) or (v4:BuffRemains(v17.FeeltheBurnBuff) < ((1723 - (345 + 1376)) * v63)))) then
+local function v80()
+	if (v17.FireBlast:IsReady() and not v71() and not v39 and not v49 and ((v13(v48) + v73()) == (4 - 3)) and (v17.ShiftingPower:CooldownUp() or (v17.FireBlast:Charges() > (2 - 1)) or (v4:BuffRemains(v17.FeeltheBurnBuff) < ((1208 - (696 + 510)) * GCDMax)))) then
 		if v9(v17.FireBlast, true) then
 			return "fire_blast firestarter_fire_blasts 2";
 		end
 	end
-	if (v17.FireBlast:IsReady() and not v78() and not v40 and ((v13(v49) + v80()) == (689 - (198 + 490))) and ((v17.FeeltheBurn:IsAvailable() and (v4:BuffRemains(v17.FeeltheBurnBuff) < v4:GCDRemains())) or v17.ShiftingPower:CooldownUp())) then
+	if (v17.FireBlast:IsReady() and not v71() and not v39 and ((v13(v48) + v73()) == (1 - 0)) and ((v17.FeeltheBurn:IsAvailable() and (v4:BuffRemains(v17.FeeltheBurnBuff) < v4:GCDRemains())) or v17.ShiftingPower:CooldownUp())) then
 		if v10(v17.FireBlast, true) then
 			return "fire_blast firestarter_fire_blasts 4";
 		end
 	end
 end
-local function v88()
-	if (v12() and v16.GroundSpellCondition() and v17.Flamestrike:IsReady() and (v52 >= v28) and (v50 or v4:BuffUp(v17.HyperthermiaBuff))) then
+local function v81()
+	if (v12() and v16.GroundSpellCondition() and v17.Flamestrike:IsReady() and (v51 >= v27) and (v49 or v4:BuffUp(v17.HyperthermiaBuff))) then
 		if v9(v17.Flamestrike, true) then
 			return "flamestrike standard_rotation 2";
 		end
 	end
-	if (v64:IsReady() and v50 and v4:BuffDown(v17.FrostfireEmpowermentBuff) and v4:BuffDown(v17.HyperthermiaBuff) and v17.ShiftingPower:CooldownDown() and (v17.PhoenixFlames:Charges() < (4 - 3)) and not v73() and not v4:PrevGCDP(2 - 1, v64)) then
-		if v81(v64) then
+	if (v57:IsReady() and v49 and v4:BuffDown(v17.FrostfireEmpowermentBuff) and v4:BuffDown(v17.HyperthermiaBuff) and v17.ShiftingPower:CooldownDown() and (v17.PhoenixFlames:Charges() < (1263 - (1091 + 171))) and not v65() and not v4:PrevGCDP(1 + 0, v57)) then
+		if v74(v57) then
 			return "fireball standard_rotation 4";
 		end
 	end
-	if (v17.Pyroblast:IsReady() and v78()) then
+	if (v17.Pyroblast:IsReady() and v71()) then
 		if v9(v17.Pyroblast, true) then
 			return "pyroblast standard_rotation 6";
 		end
 	end
-	if (v17.FireBlast:IsReady() and not v78() and not v74() and (not v40 or v17.SpontaneousCombustion:IsAvailable()) and (v4:BuffDown(v17.FuryoftheSunKingBuff) or not v65()) and (((v4:IsCasting(v64) or v4:IsCasting(v17.Pyroblast)) and v49) or (v73() and (not v76() or (v5:DebuffStack(v17.ImprovedScorchDebuff) == v26) or (v17.FireBlast:FullRechargeTime() < (1209 - (696 + 510)))) and ((v49 and not v4:IsCasting(v17.Scorch)) or (not v50 and not v49 and v4:IsCasting(v17.Scorch) and (v80() == (0 - 0))))))) then
+	if (v17.FireBlast:IsReady() and not v71() and not v67() and (not v39 or v17.SpontaneousCombustion:IsAvailable()) and (v4:BuffDown(v17.FuryoftheSunKingBuff) or not v66()) and (((v4:IsCasting(v57) or v4:IsCasting(v17.Pyroblast)) and v48) or (v65() and (not v69() or (v5:DebuffStack(v17.ImprovedScorchDebuff) == v25) or (v17.FireBlast:FullRechargeTime() < (9 - 6))) and ((v48 and not v4:IsCasting(v17.Scorch)) or (not v49 and not v48 and v4:IsCasting(v17.Scorch) and (v73() == (0 - 0))))))) then
 		if v9(v17.FireBlast, true) then
 			return "fire_blast standard_rotation 8";
 		end
 	end
-	if (v17.FireBlast:IsReady() and not v78() and ((not v74() and (not v40 or v17.SpontaneousCombustion:IsAvailable()) and (v4:BuffDown(v17.FuryoftheSunKingBuff) or not v65()) and v49 and (v80() < (1263 - (1091 + 171))) and (v4:PrevGCDP(1 + 0, v17.PhoenixFlames) or v4:PrevGCDP(3 - 2, v17.Scorch))) or (((v4:BloodlustUp() and (v17.FireBlast:ChargesFractional() > (3.5 - 2))) or (v17.FireBlast:ChargesFractional() > (376.5 - (123 + 251))) or (v4:BuffRemains(v17.FeeltheBurnBuff) < (0.5 - 0)) or (((v17.FireBlast:FullRechargeTime() * (699 - (208 + 490))) - ((0.5 + 0) * v13(v17.ShiftingPower:CooldownUp()))) < (3 + 3))) and v49))) then
+	if (v17.FireBlast:IsReady() and not v71() and ((not v67() and (not v39 or v17.SpontaneousCombustion:IsAvailable()) and (v4:BuffDown(v17.FuryoftheSunKingBuff) or not v66()) and v48 and (v73() < (375 - (123 + 251))) and (v4:PrevGCDP(4 - 3, v17.PhoenixFlames) or v4:PrevGCDP(699 - (208 + 490), v17.Scorch))) or (((v4:BloodlustUp() and (v17.FireBlast:ChargesFractional() > (1.5 + 0))) or (v17.FireBlast:ChargesFractional() > (1.5 + 1)) or (v4:BuffRemains(v17.FeeltheBurnBuff) < (836.5 - (660 + 176))) or (((v17.FireBlast:FullRechargeTime() * (1 + 0)) - ((202.5 - (14 + 188)) * v13(v17.ShiftingPower:CooldownUp()))) < (681 - (534 + 141)))) and v48))) then
 		if v10(v17.FireBlast, true) then
 			return "fire_blast standard_rotation 10";
 		end
 	end
-	if (v12() and v65() and v16.TTDCastTimeCondition(v17.Flamestrike, IsBossfight, v62) and v16.GroundSpellCondition() and v17.Flamestrike:IsReady() and not v4:IsCasting(v17.Flamestrike) and (v52 >= v30) and v4:BuffUp(v17.FuryoftheSunKingBuff)) then
-		if v81(v17.Flamestrike, true) then
+	if (v17.FireBlast:IsReady() and not v71() and v4:BuffUp(v17.HyperthermiaBuff) and (v17.FireBlast:ChargesFractional() > (1.5 + 0)) and v48) then
+		if v10(v17.FireBlast) then
+			return "fire_blast standard_rotation 11";
+		end
+	end
+	if (v12() and v66() and v16.TTDCastTimeCondition(v17.Flamestrike, IsBossfight, v56) and v16.GroundSpellCondition() and v17.Flamestrike:IsReady() and not v4:IsCasting(v17.Flamestrike) and (v51 >= v29) and v4:BuffUp(v17.FuryoftheSunKingBuff)) then
+		if v74(v17.Flamestrike, true) then
 			return "flamestrike standard_rotation 12";
 		end
 	end
-	if (v17.Scorch:IsReady() and v76() and (v5:DebuffRemains(v17.ImprovedScorchDebuff) < (v17.Pyroblast:CastTime() + ((841 - (660 + 176)) * v63))) and v65() and v4:BuffUp(v17.FuryoftheSunKingBuff) and not v4:IsCasting(v17.Scorch)) then
+	if (v17.Scorch:IsReady() and v69() and ((v17.UnleashedInferno:IsAvailable() and (v5:DebuffRemains(v17.ImprovedScorchDebuff) < (v17.Pyroblast:CastTime() + ((5 + 0) * v4:GCD()))) and v66()) or (v17.SunKingsBlessing:IsAvailable() and (v5:DebuffRemains(v17.ImprovedScorchDebuff) < ((4 + 0) * v4:GCD())))) and v4:BuffUp(v17.FuryoftheSunKingBuff) and not v4:IsCasting(v17.Scorch)) then
 		if v9(v17.Scorch) then
 			return "scorch standard_rotation 14";
 		end
 	end
-	if (v17.Pyroblast:IsReady() and v65() and v16.TTDCastTimeCondition(v17.Pyroblast, IsBossfight, v62) and not v4:IsCasting(v17.Pyroblast) and (v4:BuffUp(v17.FuryoftheSunKingBuff))) then
-		if v81(v17.Pyroblast, true) then
+	if (v17.Pyroblast:IsReady() and v66() and v16.TTDCastTimeCondition(v17.Pyroblast, IsBossfight, v56) and not v4:IsCasting(v17.Pyroblast) and (v4:BuffUp(v17.FuryoftheSunKingBuff))) then
+		if v74(v17.Pyroblast, true) then
 			return "pyroblast standard_rotation 16";
 		end
 	end
-	if (v17.Pyroblast:IsReady() and v4:PrevGCDP(1 + 0, v17.Scorch) and v50 and v73() and (v54 < v28)) then
+	if (v17.Pyroblast:IsReady() and v4:PrevGCDP(1 - 0, v17.Scorch) and v49 and v65() and (v52 < v27)) then
 		if v9(v17.Pyroblast, true) then
 			return "pyroblast standard_rotation 18";
 		end
 	end
-	if (v17.Scorch:IsReady() and v76() and (v5:DebuffRemains(v17.ImprovedScorchDebuff) < v63)) then
+	if (v17.Scorch:IsReady() and v69() and (v5:DebuffRemains(v17.ImprovedScorchDebuff) < GCDMax)) then
 		if v9(v17.Scorch) then
 			return "scorch standard_rotation 20";
 		end
 	end
-	if (v64:IsReady() and v4:BuffUp(v17.FrostfireEmpowermentBuff) and not v50 and v4:BuffDown(v17.ExcessFrostBuff)) then
-		if v81(v64) then
+	if (v57:IsReady() and v4:BuffUp(v17.FrostfireEmpowermentBuff) and not v49 and v4:BuffDown(v17.ExcessFrostBuff)) then
+		if v74(v57) then
 			return "fireball standard_rotation 22";
 		end
 	end
-	if (v17.Scorch:IsReady() and v4:BuffUp(v17.HeatShimmerBuff) and (v17.Scald:IsAvailable() or v17.ImprovedScorch:IsAvailable()) and (v54 < VarCombustionFlamestrike)) then
+	if (v17.Scorch:IsReady() and v4:BuffUp(v17.HeatShimmerBuff) and (v17.Scald:IsAvailable() or v17.ImprovedScorch:IsAvailable()) and (v52 < VarCombustionFlamestrike)) then
 		if v9(v17.Scorch) then
 			return "scorch standard_rotation 24";
 		end
 	end
-	if (v17.PhoenixFlames:IsCastable() and ((not v50 and (v80() < (203 - (14 + 188))) and (not v4:PrevGCDP(676 - (534 + 141), v17.Fireball) or (not v49 and not v50))) or ((v80() < (1 + 1)) and v4:BuffUp(v17.FlamesFuryBuff)))) then
+	if (v17.PhoenixFlames:IsCastable() and ((not v49 and (v73() < (1 - 0)) and (not v4:PrevGCDP(2 - 1, v17.Fireball) or (not v48 and not v49))) or ((v73() < (2 + 0)) and v4:BuffUp(v17.FlamesFuryBuff)))) then
 		if v9(v17.PhoenixFlames) then
 			return "phoenix_flames standard_rotation 26";
 		end
 	end
-	local v105 = v83();
-	if v105 then
-		return v105;
+	local v100 = v76();
+	if v100 then
+		return v100;
 	end
-	if (v12() and v17.DragonsBreath:IsReady() and (v54 > (1 + 0)) and v17.AlexstraszasFury:IsAvailable()) then
-		if v5:IsInRange(10 + 0) then
+	if (v12() and v17.DragonsBreath:IsReady() and (v52 > (1 + 0)) and v17.AlexstraszasFury:IsAvailable()) then
+		if v5:IsInRange(406 - (115 + 281)) then
 			if v9(v17.DragonsBreath) then
 				return "dragons_breath standard_rotation 28 ";
 			end
 		end
 	end
-	if (v17.Scorch:IsReady() and (v73() or v4:BuffUp(v17.HeatShimmerBuff))) then
+	if (v17.Scorch:IsReady() and ((v65() and not (v17.UnleashedInferno:IsAvailable() and v17.FrostfireBolt:IsAvailable())) or v4:BuffUp(v17.HeatShimmerBuff))) then
 		if v9(v17.Scorch) then
 			return "scorch standard_rotation 30";
 		end
 	end
-	if (v12() and v17.ArcaneExplosion:IsReady() and (v54 >= v31) and (v4:ManaPercentageP() >= v32)) then
-		if v5:IsInRange(21 - 11) then
+	if (v12() and v17.ArcaneExplosion:IsReady() and (v52 >= v30) and (v4:ManaPercentageP() >= v31)) then
+		if v5:IsInRange(23 - 13) then
 			if v9(v17.ArcaneExplosion) then
 				return "arcane_explosion standard_rotation 32";
 			end
 		end
 	end
-	if (v16.GroundSpellCondition() and v12() and v17.Flamestrike:IsReady() and (v52 >= v29)) then
-		if v81(v17.Flamestrike) then
+	if (v16.GroundSpellCondition() and v12() and v17.Flamestrike:IsReady() and (v51 >= v28)) then
+		if v74(v17.Flamestrike) then
 			return "flamestrike standard_rotation 34";
 		end
 	end
-	if (v64:IsReady() and not v78()) then
-		if v81(v64) then
+	if (v57:IsReady() and not v71()) then
+		if v74(v57) then
 			return "fireball standard_rotation 36";
 		end
 	end
 end
-local function v89(v106)
-	if (v106:Exists() and (v106:GUID() ~= v5:GUID()) and not v106:IsDeadOrGhost() and (v106:HealthPercentage() < (47 - 17)) and v106:IsSpellInRange(v17.Scorch)) then
+local function v82(v101)
+	if (v101:Exists() and (v101:GUID() ~= v5:GUID()) and not v101:IsDeadOrGhost() and (v101:HealthPercentage() < (25 + 5)) and v101:IsSpellInRange(v17.Scorch)) then
 		return true;
 	end
 end
-local function v90()
+local function v83()
+	v21.HealthPotions();
 	if v21.ShouldStopCastUpdate() then
-		v8.CastMacro(16 - 10, true);
+		v8.CastMacro(14 - 8, true);
 		return "Stop Cast For Silence";
 	end
 	if v16.IncorporealBeing() then
@@ -579,55 +618,55 @@ local function v90()
 		end
 		return "Ignore Target Incorp";
 	end
-	local v107 = not v4:AffectingCombat() or not v5:AffectingCombat() or v5:IsDummy();
-	Enemies40Yard = v4:GetEnemiesInRange(22 + 18);
+	local v102 = not v4:AffectingCombat() or not v5:AffectingCombat() or v5:IsDummy();
+	Enemies40Yard = v4:GetEnemiesInRange(146 - 106);
 	EnemiesRangeOOCCount = v16.RangeOOCCount() or #Enemies40Yard;
-	v62 = v2.BossFightRemains();
+	v56 = v2.BossFightRemains();
 	IsBossfight = true;
-	if ((v62 == (7075 + 4036)) or v5:IsDummy()) then
+	if ((v56 == (11978 - (550 + 317))) or v5:IsDummy()) then
 		IsBossfight = false;
-		v62 = v2.FightRemains(Enemies40Yard, false);
+		v56 = v2.FightRemains(Enemies40Yard, false);
 	end
-	v57 = v5:GetEnemiesInSplashRange(404 - (115 + 281));
-	v58 = v4:GetEnemiesInMeleeRange(23 - 13);
+	v53 = v5:GetEnemiesInSplashRange(11 - 3);
+	Enemies10yMelee = v4:GetEnemiesInMeleeRange(14 - 4);
 	if v12() then
-		v52 = (v107 and EnemiesRangeOOCCount) or v5:GetEnemiesInSplashRangeCount(7 + 1);
-		v54 = (v107 and EnemiesRangeOOCCount) or v5:GetEnemiesInSplashRangeCount(38 - 22);
+		v51 = (v102 and EnemiesRangeOOCCount) or v5:GetEnemiesInSplashRangeCount(22 - 14);
+		v52 = (v102 and EnemiesRangeOOCCount) or v5:GetEnemiesInSplashRangeCount(301 - (134 + 151));
 	else
-		v52 = 3 - 2;
-		v54 = 868 - (550 + 317);
+		v51 = 1666 - (970 + 695);
+		v52 = 1 - 0;
 	end
 	if (v22.Commons.ForceAOE and v12()) then
-		v52 = 142 - 43;
+		v51 = 2089 - (582 + 1408);
 	end
-	v23 = not v11() or not v16.TTDCondition(v22.Fire.TimeToDie.Combustion, IsBossfight, v62);
-	if (v16.Precast() and not v4:AffectingCombat() and not v5:AffectingCombat() and v5:IsSpellInRange(v64)) then
-		ShouldReturn = v82();
+	var_disable_combustion = not v11() or not v16.TTDCondition(v22.Fire.TimeToDie.Combustion, IsBossfight, v56);
+	if (v16.Precast() and not v4:AffectingCombat() and not v5:AffectingCombat() and v5:IsSpellInRange(v57)) then
+		ShouldReturn = v75();
 		if ShouldReturn then
 			return ShouldReturn;
 		end
 	end
 	if (v21.TargetIsValid() or v4:AffectingCombat()) then
-		v63 = math.floor(v4:GCD() * (1405 - 405)) / (2794 - 1794);
-		v46 = v4:BuffUp(v17.CombustionBuff);
-		v47 = not v46;
-		v48 = (v46 and v4:BuffRemains(v17.CombustionBuff)) or (285 - (134 + 151));
+		GCDMax = math.floor(v4:GCD() * (3468 - 2468)) / (1258 - 258);
+		v45 = v4:BuffUp(v17.CombustionBuff);
+		v46 = not v45;
+		v47 = (v45 and v4:BuffRemains(v17.CombustionBuff)) or (0 - 0);
 	end
 	if (not v4:AffectingCombat() and not v5:AffectingCombat()) then
-		if (v17.ArcaneIntellect:IsCastable() and v22.Commons.AutoBuff and ((v21.GroupBuffMissing(v17.ArcaneIntellect) and (v4:IsInRaidArea() or v4:IsInDungeonArea()) and (v4:InstanceDifficulty() ~= (1870 - (970 + 695)))) or v4:BuffDown(v17.ArcaneIntellect, true))) then
+		if (v17.ArcaneIntellect:IsCastable() and v22.Commons.AutoBuff and ((v21.GroupBuffMissing(v17.ArcaneIntellect) and (v4:IsInRaidArea() or v4:IsInDungeonArea()) and (v4:InstanceDifficulty() ~= (2029 - (1195 + 629)))) or v4:BuffDown(v17.ArcaneIntellect, true))) then
 			if v8.CastTarget(v17.ArcaneIntellect, "PLAYER") then
 				return "arcane_intellect precombat 2";
 			end
 		end
-		if (v17.BlazingBarrier:IsCastable() and (v4:BuffRemains(v17.BlazingBarrier) < (11 - 5))) then
+		if (v17.BlazingBarrier:IsCastable() and (v4:BuffRemains(v17.BlazingBarrier) < (7 - 1))) then
 			v8.Cast(v17.BlazingBarrier);
 			return "Blazing Barriers precombat";
 		end
 	end
-	v49 = v4:BuffUp(v17.HeatingUpBuff);
-	v50 = v4:BuffUp(v17.HotStreakBuff);
+	v48 = v4:BuffUp(v17.HeatingUpBuff);
+	v49 = v4:BuffUp(v17.HotStreakBuff);
 	if v16.CombatCheck() then
-		if (v17.IceFloes:IsCastable() and v4:BuffUp(v17.IceFloes) and (v4:BuffStack(v17.IceFloes) < (1992 - (582 + 1408))) and v4:IsMoving() and v4:IsCasting() and (v4:CastRemains() < (0.5 - 0)) and (v4:CastSpellID() ~= v17.Scorch:ID())) then
+		if (v17.IceFloes:IsCastable() and v4:BuffUp(v17.IceFloes) and (v4:BuffStack(v17.IceFloes) < (243 - (187 + 54))) and v4:IsMoving() and v4:IsCasting() and (v4:CastRemains() < (780.5 - (162 + 618))) and (v4:CastSpellID() ~= v17.Scorch:ID())) then
 			if v9(v17.IceFloes, true) then
 				return "ice_floes movement 2";
 			end
@@ -636,8 +675,8 @@ local function v90()
 			v8.Cast(v17.IceBlock, true);
 			return "Ice Cold Defensive";
 		end
-		if not v46 then
-			if (v17.EnergizedBarrier:IsAvailable() and (v4:DebuffElapsed(v17.EntangledDebuff) > (1 - 0))) then
+		if not v45 then
+			if (v17.EnergizedBarrier:IsAvailable() and (v4:DebuffElapsed(v17.EntangledDebuff) > (1 + 0))) then
 				if v17.MassBarrier:IsReady() then
 					v9(v17.MassBarrier);
 					return "Cast MassBarrier Entangled";
@@ -660,26 +699,26 @@ local function v90()
 				return "Mass Barrier Defensive";
 			end
 		end
-		if v8.ToggleIconFrame:GetToggle(11 - 8) then
-			ShouldReturn = not v4:IsCasting() and not v4:IsChanneling() and v21.InterruptCycle(v17.Counterspell, 1864 - (1195 + 629), true, nil, false);
+		if v8.ToggleIconFrame:GetToggle(2 + 1) then
+			ShouldReturn = not v4:IsCasting() and not v4:IsChanneling() and v21.InterruptCycle(v17.Counterspell, 85 - 45, true, nil, false);
 			if ShouldReturn then
 				return ShouldReturn;
 			end
-			ShouldReturn = not v4:IsCasting() and not v4:IsChanneling() and v21.InterruptCycle(v17.DragonsBreath, 10 - 2, true, nil, true, true);
+			ShouldReturn = not v4:IsCasting() and not v4:IsChanneling() and v21.InterruptCycle(v17.DragonsBreath, 13 - 5, true, nil, true, true);
 			if ShouldReturn then
 				return ShouldReturn;
 			end
 		end
-		ShouldReturn = not v4:IsCasting(v17.Polymorph) and v21.IncorpCycle(v17.Polymorph, 271 - (187 + 54), true, nil, false);
+		ShouldReturn = not v4:IsCasting(v17.Polymorph) and v21.IncorpCycle(v17.Polymorph, 3 + 27, true, nil, false);
 		if ShouldReturn then
 			return ShouldReturn;
 		end
-		if v8.ToggleIconFrame:GetToggle(784 - (162 + 618)) then
-			ShouldReturn = not v4:IsChanneling() and v17.SpellSteal:IsAvailable() and v16.StealCycle(v17.SpellSteal, 29 + 11, false, v22.AutoTargetSpellSteal);
+		if v8.ToggleIconFrame:GetToggle(1640 - (1373 + 263)) then
+			ShouldReturn = not v4:IsChanneling() and v17.SpellSteal:IsAvailable() and v16.StealCycle(v17.SpellSteal, 1040 - (451 + 549), false, v22.AutoTargetSpellSteal);
 			if ShouldReturn then
 				return ShouldReturn;
 			end
-			ShouldReturn = not v4:IsCasting() and not v46 and not v4:IsChanneling() and v17.RemoveCurse:IsAvailable() and v17.RemoveCurse:IsReady() and v21.DispelCycle(v17.RemoveCurse, "Curse");
+			ShouldReturn = not v4:IsCasting() and not v45 and not v4:IsChanneling() and v17.RemoveCurse:IsAvailable() and v17.RemoveCurse:IsReady() and v21.DispelCycle(v17.RemoveCurse, "Curse");
 			if ShouldReturn then
 				return ShouldReturn;
 			end
@@ -688,100 +727,100 @@ local function v90()
 				return ShouldReturn;
 			end
 		end
-		if not v5:IsSpellInRange(v64) then
+		if not v5:IsSpellInRange(v57) then
 			return "NOT IN RANGE";
 		end
-		if (v17.SearingTouch:IsAvailable() and v22.Fire.UseScorchSniping and v12() and (v5:HealthPercentage() > (20 + 10))) then
-			ShouldReturn = v21.CastCycle(v17.Scorch, Enemies40Yard, v89, 85 - 45, nil, nil, false);
+		if (v17.SearingTouch:IsAvailable() and v22.Fire.UseScorchSniping and v12() and (v5:HealthPercentage() > (10 + 20))) then
+			ShouldReturn = v21.CastCycle(v17.Scorch, Enemies40Yard, v82, 62 - 22, nil, nil, false);
 			if ShouldReturn then
 				return ShouldReturn;
 			end
 		end
-		v86();
+		v79();
 		if (v22.Commons.Enabled.Potions and v11()) then
-			local v123 = v21.PotionSelected();
-			if (v123 and v123:IsReady() and (v123:BuffDuration() > (v45 + (19 - 7)))) then
-				if v8.CastMacro(1 + 2, nil, nil, v123) then
+			local v118 = v21.PotionSelected();
+			if (v118 and v118:IsReady() and (v118:BuffDuration() > (v44 + (19 - 7)))) then
+				if v8.CastMacro(1387 - (746 + 638), nil, nil, v118) then
 					return "potion main 4";
 				end
 			end
 		end
-		v38 = v45 > v17.ShiftingPower:CooldownRemains();
-		if (v22.Commons.Enabled.Trinkets and v11() and v16.TTDCondition(v22.Fire.TimeToDie.Trinkets, IsBossfight, v62)) then
-			v39 = ((v45 < v37) or ((v48 > v36) and (v18.DragonfireBombDispenser:CooldownUp() or not v18.DragonfireBombDispenser:IsEquipped()))) and ((v13((v66:Cooldown() > (1636 - (1373 + 263))) and (v66:CooldownRemains() < v37)) + v13(v67:Cooldown() and (v67:CooldownRemains() < v37))) > (1001 - (451 + 549)));
-			if (v18.SpymastersWeb:IsEquippedAndReady() and (v48 > (4 + 6)) and (v62 < (31 - 11))) then
+		v37 = v44 > v17.ShiftingPower:CooldownRemains();
+		if (v22.Commons.Enabled.Trinkets and v11() and v16.TTDCondition(v22.Fire.TimeToDie.Trinkets, IsBossfight, v56)) then
+			v38 = ((v44 < v36) or ((v47 > v35) and (v18.DragonfireBombDispenser:CooldownUp() or not v18.DragonfireBombDispenser:IsEquipped()))) and ((v13((v58:Cooldown() > (0 + 0)) and (v58:CooldownRemains() < v36)) + v13(v59:Cooldown() and (v59:CooldownRemains() < v36))) > (1 - 0));
+			if (v18.SpymastersWeb:IsEquippedAndReady() and (v47 > (351 - (218 + 123))) and (v56 < (1601 - (1535 + 46)))) then
 				if v9(v18.SpymastersWeb) then
 					return "spymasters_web main 6";
 				end
 			end
-			if (v18.TreacherousTransmitter:IsEquippedAndReady() and ((v45 < (16 - 6)) or (v61 < (1409 - (746 + 638))))) then
+			if (v18.TreacherousTransmitter:IsEquippedAndReady() and ((v44 < (10 + 0)) or (v55 < (4 + 21)))) then
 				if v9(v18.TreacherousTransmitter) then
 					return "treacherous_transmitter main 8";
 				end
 			end
-			if (v18.ImperfectAscendancySerum:IsEquippedAndReady() and (v45 < (2 + 1))) then
+			if (v18.ImperfectAscendancySerum:IsEquippedAndReady() and (v44 < (563 - (306 + 254)))) then
 				if v9(v18.ImperfectAscendancySerum) then
 					return "imperfect_ascendancy_serum main 10";
 				end
 			end
-			if (v18.ForgedGladiatorsBadge:IsEquippedAndReady() and (v45 > (v18.ForgedGladiatorsBadge:Cooldown() - (7 - 2)))) then
+			if (v18.ForgedGladiatorsBadge:IsEquippedAndReady() and (v44 > (v18.ForgedGladiatorsBadge:Cooldown() - (1 + 4)))) then
 				if v9(v18.ForgedGladiatorsBadge) then
 					return "gladiators_badge (forged) main 12";
 				end
 			end
-			if (v18.CrimsonGladiatorsBadge:IsEquippedAndReady() and (v45 > (v18.CrimsonGladiatorsBadge:Cooldown() - (346 - (218 + 123))))) then
+			if (v18.CrimsonGladiatorsBadge:IsEquippedAndReady() and (v44 > (v18.CrimsonGladiatorsBadge:Cooldown() - (9 - 4)))) then
 				if v9(v18.CrimsonGladiatorsBadge) then
 					return "gladiators_badge (crimson) main 12";
 				end
 			end
-			if (v18.DraconicGladiatorsBadge:IsEquippedAndReady() and (v45 > (v18.DraconicGladiatorsBadge:Cooldown() - (1586 - (1535 + 46))))) then
+			if (v18.DraconicGladiatorsBadge:IsEquippedAndReady() and (v44 > (v18.DraconicGladiatorsBadge:Cooldown() - (1472 - (899 + 568))))) then
 				if v9(v18.DraconicGladiatorsBadge) then
 					return "gladiators_badge (draconic) main 12";
 				end
 			end
-			if (v18.ObsidianGladiatorsBadge:IsEquippedAndReady() and (v45 > (v18.ObsidianGladiatorsBadge:Cooldown() - (5 + 0)))) then
+			if (v18.ObsidianGladiatorsBadge:IsEquippedAndReady() and (v44 > (v18.ObsidianGladiatorsBadge:Cooldown() - (4 + 1)))) then
 				if v9(v18.ObsidianGladiatorsBadge) then
 					return "gladiators_badge (obsidian) main 12";
 				end
 			end
-			if (v18.VerdantGladiatorsBadge:IsEquippedAndReady() and (v45 > (v18.VerdantGladiatorsBadge:Cooldown() - (1 + 4)))) then
+			if (v18.VerdantGladiatorsBadge:IsEquippedAndReady() and (v44 > (v18.VerdantGladiatorsBadge:Cooldown() - (12 - 7)))) then
 				if v9(v18.VerdantGladiatorsBadge) then
 					return "gladiators_badge (verdant) main 12";
 				end
 			end
-			if (v18.KahetiShadowweaversEmblem:IsEquippedAndReady() and (v4:BuffStack(v17.KahetiShadowweaversEmblemBuff) >= (565 - (306 + 254)))) then
+			if (v18.KahetiShadowweaversEmblem:IsEquippedAndReady() and (v4:BuffStack(v17.KahetiShadowweaversEmblemBuff) >= (608 - (268 + 335)))) then
 				if v9(v18.KahetiShadowweaversEmblem) then
 					return "Kaheti_Shadowweavers_Emblem items";
 				end
 			end
 		end
-		if (v22.Commons.Enabled.Trinkets and v11() and v16.TTDCondition(v22.Fire.TimeToDie.Trinkets, IsBossfight, v62) and not v39) then
-			local v124, v125, v126 = v4:GetUseableItems(v19);
-			if v124 then
-				if (((v125 == (1 + 12)) or (v125 == (27 - 13))) and v22.Commons.Enabled.Trinkets) then
-					if v9(v124) then
-						return "Generic use_items for " .. v124:Name() .. " main 14";
+		if (v22.Commons.Enabled.Trinkets and v11() and v16.TTDCondition(v22.Fire.TimeToDie.Trinkets, IsBossfight, v56) and not v38) then
+			local v119, v120, v121 = v4:GetUseableItems(v19);
+			if v119 then
+				if (((v120 == (303 - (60 + 230))) or (v120 == (586 - (426 + 146)))) and v22.Commons.Enabled.Trinkets) then
+					if v9(v119) then
+						return "Generic use_items for " .. v119:Name() .. " main 14";
 					end
 				end
 			end
 		end
-		v40 = v47 and (((v17.FireBlast:ChargesFractional() + ((v45 + (v77() * v13(v38))) / v17.FireBlast:Cooldown())) - (1468 - (899 + 568))) < ((v17.FireBlast:MaxCharges() + (v35 / v17.FireBlast:Cooldown())) - (((8 + 4) / v17.FireBlast:Cooldown()) % (2 - 1)))) and (v45 < v62);
-		if ((v45 <= (603 - (268 + 335))) or v46 or ((v45 < v43) and (v17.Combustion:CooldownRemains() < v43))) then
-			local v127 = v85();
-			if v127 then
-				return v127;
+		v39 = v46 and (((v17.FireBlast:ChargesFractional() + ((v44 + (v70() * v13(v37))) / v17.FireBlast:Cooldown())) - (1 + 0)) < ((v17.FireBlast:MaxCharges() + (v34 / v17.FireBlast:Cooldown())) - (((1468 - (282 + 1174)) / v17.FireBlast:Cooldown()) % (812 - (569 + 242))))) and (v44 < v56);
+		if ((v44 <= (0 - 0)) or v45 or ((v44 < v42) and (v17.Combustion:CooldownRemains() < v42))) then
+			local v122 = v78();
+			if v122 then
+				return v122;
 			end
 		end
-		if (not v40 and v17.SunKingsBlessing:IsAvailable()) then
-			v40 = v73() and (v17.FireBlast:FullRechargeTime() > ((293 - (60 + 230)) * v63));
+		if (not v39 and v17.SunKingsBlessing:IsAvailable()) then
+			v39 = v65() and (v17.FireBlast:FullRechargeTime() > ((1 + 2) * v4:GCD()));
 		end
-		if (v17.FireBlast:IsReady() and not v78() and v4:IsChanneling(v17.ShiftingPower) and ((v17.FireBlast:FullRechargeTime() < v51) or (v17.SunKingsBlessing:IsAvailable() and v49))) then
+		if (v17.FireBlast:IsReady() and not v71() and v4:IsChanneling(v17.ShiftingPower) and ((v17.FireBlast:FullRechargeTime() < v50) or (v17.SunKingsBlessing:IsAvailable() and v48))) then
 			if v9(v17.FireBlast, true) then
 				return "fire_blast main 16";
 			end
 		end
-		if (v17.ShiftingPower:IsReady() and v11() and v5:IsInRange(590 - (426 + 146)) and v47 and (not v76() or ((v5:DebuffRemains(v17.ImprovedScorchDebuff) > (v17.ShiftingPower:CastTime() + v17.Scorch:CastTime())) and (v4:BuffDown(v17.FuryoftheSunKingBuff) or not v65()))) and not v50 and v4:BuffDown(v17.HyperthermiaBuff) and ((v17.PhoenixFlames:Charges() <= (1 + 0)) or (v17.Combustion:CooldownRemains() < (1476 - (282 + 1174))))) then
-			if v81(v17.ShiftingPower, true) then
+		if (v17.ShiftingPower:IsReady() and v11() and v5:IsInRange(1042 - (706 + 318)) and v46 and (not v69() or ((v5:DebuffRemains(v17.ImprovedScorchDebuff) > (v17.ShiftingPower:CastTime() + v17.Scorch:CastTime())) and (v4:BuffDown(v17.FuryoftheSunKingBuff) or not v66()))) and not v49 and v4:BuffDown(v17.HyperthermiaBuff) and ((v17.PhoenixFlames:Charges() <= (1252 - (721 + 530))) or (v17.Combustion:CooldownRemains() < (1291 - (945 + 326))))) then
+			if v74(v17.ShiftingPower, true) then
 				return "shifting_power main 18";
 			end
 		end
@@ -791,26 +830,26 @@ local function v90()
 			end
 		end
 		if not v17.SunKingsBlessing:IsAvailable() then
-			v41 = ((((v45 + (816 - (569 + 242))) < ((v17.PhoenixFlames:FullRechargeTime() + v17.PhoenixFlames:Cooldown()) - (v77() * v13(v38)))) and (v45 < v62)) or v17.SunKingsBlessing:IsAvailable()) and not v17.AlexstraszasFury:IsAvailable();
+			v40 = ((((v44 + (12 - 7)) < ((v17.PhoenixFlames:FullRechargeTime() + v17.PhoenixFlames:Cooldown()) - (v70() * v13(v37)))) and (v44 < v56)) or v17.SunKingsBlessing:IsAvailable()) and not v17.AlexstraszasFury:IsAvailable();
 		end
-		if (v17.FireBlast:IsReady() and not v78() and not v40 and (v45 > (0 - 0)) and (v52 >= v29) and not v74() and not v50 and ((v49 and (v17.Flamestrike:ExecuteRemains() < (0.5 + 0))) or (v17.FireBlast:ChargesFractional() >= (1026 - (706 + 318))))) then
+		if (v17.FireBlast:IsReady() and not v71() and not v39 and (v44 > (0 + 0)) and (v51 >= v28) and not v67() and not v49 and ((v48 and (v17.Flamestrike:ExecuteRemains() < (700.5 - (271 + 429)))) or (v17.FireBlast:ChargesFractional() >= (2 + 0)))) then
 			if v9(v17.FireBlast) then
 				return "fire_blast main 20";
 			end
 		end
-		if (v47 and v74() and (v45 > (1251 - (721 + 530)))) then
-			local v128 = v87();
-			if v128 then
-				return v128;
+		if (v46 and v67() and (v44 > (1500 - (1408 + 92)))) then
+			local v123 = v80();
+			if v123 then
+				return v123;
 			end
 		end
-		if ((v45 > (1271 - (945 + 326))) and v47) then
-			local v129 = v88();
-			if v129 then
-				return v129;
+		if ((v44 > (1086 - (461 + 625))) and v46) then
+			local v124 = v81();
+			if v124 then
+				return v124;
 			end
 		end
-		if (v17.IceNova:IsCastable() and not v73() and v5:IsSpellInRange(v17.IceNova)) then
+		if (v17.IceNova:IsCastable() and not v65() and v5:IsSpellInRange(v17.IceNova)) then
 			if v9(v17.IceNova) then
 				return "ice_nova main 22";
 			end
@@ -822,28 +861,28 @@ local function v90()
 		end
 	end
 end
-local function v91(v108, v109)
-	return (v108:gsub("{(.-)}", v109));
+local function v84(v103, v104)
+	return (v103:gsub("{(.-)}", v104));
 end
-local function v92(v110)
-	local v111 = v4:GetEquipment();
-	local v112, v113 = v111[32 - 19], v111[13 + 1];
-	if (v112 and (v110:ID() == v112)) then
-		return 713 - (271 + 429);
-	elseif (v113 and (v110:ID() == v113)) then
-		return 13 + 1;
+local function v85(v105)
+	local v106 = v4:GetEquipment();
+	local v107, v108 = v106[1301 - (993 + 295)], v106[1 + 13];
+	if (v107 and (v105:ID() == v107)) then
+		return 1184 - (418 + 753);
+	elseif (v108 and (v105:ID() == v108)) then
+		return 6 + 8;
 	end
 end
-local function v93()
+local function v86()
 	v22.Fire.Display();
-	v2.Timer.PulseOffset = 1500.01 - (1408 + 92);
+	v2.Timer.PulseOffset = 0.01 + 0;
 	v8:UpdateMacro("macro1", "/use 16");
-	local v115;
-	local v116 = {bloodFuryValue=((v17.BloodFury:IsAvailable() and ("/cast " .. v17.BloodFury:Name() .. "\n")) or (v17.Berserking:IsAvailable() and ("/cast " .. v17.Berserking:Name() .. "\n")) or ""),pyroblastValue=v17.Pyroblast:Name(),flamestrikeValue=v17.Flamestrike:Name(),trinket=((v115 and ("/use " .. v115 .. "\n")) or "")};
-	local v117 = "{trinket}{bloodFuryValue}/cast {pyroblastValue}";
-	local v118 = "{trinket}{bloodFuryValue}/cast [@cursor] {flamestrikeValue}";
-	v8:UpdateMacro("macro2", v91(v117, v116));
+	local v110;
+	local v111 = {bloodFuryValue=((v17.BloodFury:IsAvailable() and ("/cast " .. v17.BloodFury:Name() .. "\n")) or (v17.Berserking:IsAvailable() and ("/cast " .. v17.Berserking:Name() .. "\n")) or ""),pyroblastValue=v17.Pyroblast:Name(),flamestrikeValue=v17.Flamestrike:Name(),trinket=((v110 and ("/use " .. v110 .. "\n")) or "")};
+	local v112 = "{trinket}{bloodFuryValue}/cast {pyroblastValue}";
+	local v113 = "{trinket}{bloodFuryValue}/cast [@cursor] {flamestrikeValue}";
+	v8:UpdateMacro("macro2", v84(v112, v111));
 	v8:UpdateMacro("macro6", "/stopcasting");
-	v8.Print("Fire Mage rotation has been updated for patch 11.0.7.");
+	v21.PostInitialMessage(19 + 44);
 end
-v8.SetAPL(1149 - (461 + 625), v90, v93);
+v8.SetAPL(16 + 47, v83, v86);
