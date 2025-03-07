@@ -1090,7 +1090,7 @@ v21.PostInitialMessage = function(v387)
 	elseif (v387 == (38 + 35)) then
 		v2.Print("Protection Warrior rotation has been updated for patch 11.1.0. Please report any issues on the discord. Thank you!");
 	elseif (v387 == (837 - (628 + 104))) then
-		v2.Print("Restoration Druid rotation has been updated for TWW patch 11.1.0. Please report any issues on the discord. Thank you!");
+		v2.Print("Restoration Druid rotation has been updated for  patch 11.1.0. Please report any issues on the discord. Thank you!");
 		v2.Print("Convoke Will Be Used for DPS, if the Settings is Enabled and Cooldown Toggle is on");
 	elseif (v387 == (86 - 16)) then
 		v2.Print("Retribution Paladin rotation has been updated for patch 11.1.0. Please report any issues on the discord. Thank you!");
@@ -1100,5 +1100,9 @@ v21.PostInitialMessage = function(v387)
 		v2.Print("Fire Mage rotation has been updated for patch 11.1.0. Please report any issues on the discord. Thank you!");
 	elseif (v387 == (1194 - 933)) then
 		v2.Print("Subtlety Rogue rotation has been updated for patch 11.1.0. Please report any issues on the discord. Thank you!");
+	elseif (v387 == (650 - 383)) then
+		v2.Print("Destruction Warlock rotation has been updated for patch 11.1.0. Please report any issues on the discord. Thank you!");
+	elseif (v387 == (1203 - 953)) then
+		v2.Print("Blood DK rotation has been updated for patch 11.1.0. Please report any issues on the discord. Thank you!");
 	end
 end;
