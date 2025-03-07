@@ -372,7 +372,7 @@ local function v82()
 			return "hammer_of_light finishers 2";
 		end
 	end
-	if (v20.DivineHammer:Ready() and not v24.DivineHammerActive and v7:IsInRange(1392 - (746 + 638))) then
+	if (v20.DivineHammer:IsReady() and not v24.DivineHammerActive and v7:IsInRange(1392 - (746 + 638))) then
 		if v15(v20.DivineHammer) then
 			return "divine_hammer finishers 4";
 		end
