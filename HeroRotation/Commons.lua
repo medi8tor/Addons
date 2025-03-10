@@ -1104,5 +1104,7 @@ v21.PostInitialMessage = function(v387)
 		v2.Print("Destruction Warlock rotation has been updated for patch 11.1.0. Please report any issues on the discord. Thank you!");
 	elseif (v387 == (33 + 217)) then
 		v2.Print("Blood DK rotation has been updated for patch 11.1.0. Please report any issues on the discord. Thank you!");
+	elseif (v387 == (311 - 240)) then
+		v2.Print("Arms Warrior rotation has been updated for patch 11.1.0. Please report any issues on the discord. Thank you!");
 	end
 end;
