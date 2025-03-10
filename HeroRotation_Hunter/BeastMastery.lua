@@ -359,7 +359,7 @@ local function v89()
 			return "kill_command st 20";
 		end
 	end
-	if (v25.KillShot:IsReady() and v7:IsInRange(132 - 92) and ((v25.VenomsBite:IsAvailable() and v85(v7) and v25.CalloftheWild:IsAvailable()) or v25.CullTheHerd:IsAvailable())) then
+	if (v25.KillShot:IsReady() and v7:IsInRange(132 - 92) and v25.VenomsBite:IsAvailable() and v85(v7) and v25.CalloftheWild:IsAvailable()) then
 		if v21.CastCycle(v25.KillShot, v51, v72, 414 - (123 + 251), false, false, KillShotTab) then
 			return "kill_shot st 22";
 		end
