@@ -435,12 +435,12 @@ local function v86()
 			return "Summon Jade Serpent Statue";
 		end
 	end
-	if (v6:BuffDown(v20.ThunderFocusTea) and not v6:PrevGCD(1 + 0, v20.CracklingJadeLightning) and v37.TargetIsValid() and v20.ThunderFocusTea:IsReady() and v20.JadeEmpowerment:IsAvailable() and not (v56() or v55())) then
+	if (v6:BuffDown(v20.ThunderFocusTea) and not v6:PrevGCD(1 + 0, v20.CracklingJadeLightning) and v37.TargetIsValid() and not v6:IsMoving() and v20.ThunderFocusTea:IsReady() and v20.JadeEmpowerment:IsAvailable() and not (v56() or v55())) then
 		v15(v20.ThunderFocusTea, true);
 		v15(v20.CracklingJadeLightning);
 		return "Thunder Focus Tea for Jade Empower into Crackling - Proactive AoE";
 	end
-	if (v6:BuffUp(v20.ThunderFocusTea) and v84 and v37.TargetIsValid() and not v6:PrevGCD(1172 - (418 + 753), v20.CracklingJadeLightning)) then
+	if (v6:BuffUp(v20.ThunderFocusTea) and v84 and v37.TargetIsValid() and not v6:IsMoving() and not v6:PrevGCD(1172 - (418 + 753), v20.CracklingJadeLightning)) then
 		if v20.CracklingJadeLightning:IsReady() then
 			v15(v20.CracklingJadeLightning);
 			return "Crackling Jade While Empowerment Up";
