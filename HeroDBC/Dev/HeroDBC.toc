@@ -1,4 +1,4 @@
-## Interface: 110005
+## Interface: 110003
 
 ## Title: Hero|cFFA330C9DBC|r
 ## Author: HeroTC, Aethys, KutiKuti
