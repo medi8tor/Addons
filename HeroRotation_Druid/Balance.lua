@@ -648,7 +648,7 @@ local function v93()
 	IsWildMushroom = v87(v28.Balance_TTD.WildMushroomTTD) and v86(v28.Balance_CDUSE.WildMushroom);
 	IsFuryofElune = v87(v28.Balance_TTD.FuryofEluneTTD) and v86(v28.Balance_CDUSE.FuryofElune);
 	IsConvoketheSpirits = v87(v28.Balance_TTD.ConvoketheSpiritsTTD) and v86(v28.Balance_CDUSE.ConvoketheSpirits);
-	if (v25.TargetIsValid() or (v6:AffectingCombat() and v8 and v8:AffectingCombat())) then
+	if (v25.TargetIsValid() or (v6:AffectingCombat() and v8)) then
 		TargetinRange = v8:IsSpellInRange(v22.Wrath);
 		v46 = v3.BossFightRemains();
 		v85 = true;
@@ -668,7 +668,7 @@ local function v93()
 			return "mark_of_the_wild precombat";
 		end
 	end
-	if (v22.MoonkinForm:IsCastable() and v6:BuffDown(v22.TravelFormBuff) and v6:BuffDown(v22.BearForm) and v6:BuffDown(v22.CatForm) and v28.Balance.ShowMoonkinFormOOC) then
+	if (v22.MoonkinForm:IsCastable() and not (v6:BuffUp(v22.MoonkinForm2) or v6:BuffUp(v22.MoonkinForm1)) and v6:BuffDown(v22.TravelFormBuff) and v6:BuffDown(v22.BearForm) and v6:BuffDown(v22.CatForm) and v28.Balance.ShowMoonkinFormOOC) then
 		if v16(v22.MoonkinForm) then
 			return "moonkin_form ooc";
 		end
@@ -858,6 +858,6 @@ local function v94()
 	v13.ToggleIconFrame:AddButtonCustom("D", 1 + 1, "Dispel", "dispel");
 	v13.ToggleIconFrame:AddButtonCustom("S", 1 + 2, "smallCDs", "smallcds");
 	v13.ToggleIconFrame:AddButtonCustom("P", 2 + 2, "UseSpender", "usespender");
-	v25.PostInitialMessage(631 - (406 + 123));
+	v13.Print("Balance Druid rotation has been updated for patch 11.0.2. Last Update 07.10.2024");
 end
-v13.SetAPL(1871 - (1749 + 20), v93, v94);
+v13.SetAPL(631 - (406 + 123), v93, v94);
