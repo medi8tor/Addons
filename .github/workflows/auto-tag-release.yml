@@ -37,7 +37,7 @@ jobs:
       - name: Archive Release
         uses: thedoctor0/zip-release@master
         with:
-          filename: AscendedRotation-${{ steps.get_latest_tag.outputs.tag }}.zip
+          filename: HeroRotation-${{ steps.get_latest_tag.outputs.tag }}.zip
           exclusions: '*.git* *.pkgmeta *.svn* .editorconfig LICENSE README.md symlink.bat symlink.sh HeroRotation_ClassTemplate HeroRotation_ClassTemplate/*'
 
       - name: Create Release
@@ -45,7 +45,7 @@ jobs:
         uses: actions/create-release@v1
         with:
           tag_name: ${{ steps.get_latest_tag.outputs.tag }}
-          release_name: AscendedRotation ${{ steps.get_latest_tag.outputs.tag }}
+          release_name: HeroRotation ${{ steps.get_latest_tag.outputs.tag }}
           body: |
             Changes: https://github.com/medi8tor/Addons/compare/${{ steps.get_latest_tag.outputs.oldtag }}...${{ steps.get_latest_tag.outputs.tag }}
           draft: false
@@ -57,8 +57,8 @@ jobs:
         uses: actions/upload-release-asset@v1
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./AscendedRotation-${{ steps.get_latest_tag.outputs.tag }}.zip
-          asset_name: AscendedRotation-${{ steps.get_latest_tag.outputs.tag }}.zip
+          asset_path: ./HeroRotation-${{ steps.get_latest_tag.outputs.tag }}.zip
+          asset_name: HeroRotation-${{ steps.get_latest_tag.outputs.tag }}.zip
           asset_content_type: application/zip
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
