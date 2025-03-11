@@ -1109,5 +1109,7 @@ v21.PostInitialMessage = function(v387)
 	elseif (specid == (14 + 88)) then
 		v2.Print("Balance Druid rotation has been updated for patch 11.1.0. Please report any issues on the discord. Thank you!");
 		v2.Print("Convoke Will Be Used for DPS, if the Settings is Enabled and Cooldown Toggle is on");
+	elseif (specid == (202 + 68)) then
+		v2.Print("Mistweaver Monk rotation has been updated for patch 11.1.0. Please report any issues on the discord. Thank you!");
 	end
 end;
