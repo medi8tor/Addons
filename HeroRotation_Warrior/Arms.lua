@@ -39,28 +39,28 @@ local v51 = 21447 - 10336;
 local v52 = 28620 - 17509;
 local v53 = 619 - (555 + 64);
 local function v54()
-	local v76, v77 = v6:GetTrinketData(v20);
-	if ((v53 < (936 - (857 + 74))) and ((v76.ID == (568 - (367 + 201))) or (v77.ID == (927 - (214 + 713))) or ((v76.SpellID > (0 + 0)) and not v76.Usable) or ((v77.SpellID > (0 + 0)) and not v77.Usable))) then
+	local v77, v78 = v6:GetTrinketData(v20);
+	if ((v53 < (936 - (857 + 74))) and ((v77.ID == (568 - (367 + 201))) or (v78.ID == (927 - (214 + 713))) or ((v77.SpellID > (0 + 0)) and not v77.Usable) or ((v78.SpellID > (0 + 0)) and not v78.Usable))) then
 		v53 = v53 + (878 - (282 + 595));
 		v16(1642 - (1523 + 114), function()
 			v54();
 		end);
 		return;
 	end
-	v24 = v76.Object;
-	v25 = v77.Object;
-	v26 = v76.Spell;
-	v28 = v76.Range;
-	v30 = v76.CastTime;
-	v27 = v77.Spell;
-	v29 = v77.Range;
-	v31 = v77.CastTime;
-	v32 = v76.Cooldown;
-	v33 = v77.Cooldown;
-	v34 = v76.Blacklisted;
-	v35 = v77.Blacklisted;
-	v36 = v76.ID == v19.TreacherousTransmitter:ID();
-	v37 = v77.ID == v19.TreacherousTransmitter:ID();
+	v24 = v77.Object;
+	v25 = v78.Object;
+	v26 = v77.Spell;
+	v28 = v77.Range;
+	v30 = v77.CastTime;
+	v27 = v78.Spell;
+	v29 = v78.Range;
+	v31 = v78.CastTime;
+	v32 = v77.Cooldown;
+	v33 = v78.Cooldown;
+	v34 = v77.Blacklisted;
+	v35 = v78.Blacklisted;
+	v36 = v77.ID == v19.TreacherousTransmitter:ID();
+	v37 = v78.ID == v19.TreacherousTransmitter:ID();
 	v38 = 0.5 + 0;
 	if (v24:HasUseBuff() and ((v32 % (128 - 38)) == (1065 - (68 + 997)))) then
 		v38 = 1271 - (226 + 1044);
@@ -71,14 +71,14 @@ local function v54()
 	end
 	v40 = v24:HasUseBuff() or (v24:HasStatAnyDps() and not v36);
 	v41 = v25:HasUseBuff() or (v25:HasStatAnyDps() and not v37);
-	local v90 = ((v24:BuffDuration() > (957 - (892 + 65))) and v24:BuffDuration()) or (2 - 1);
-	local v91 = ((v25:BuffDuration() > (0 - 0)) and v25:BuffDuration()) or (1 - 0);
+	local v91 = ((v24:BuffDuration() > (957 - (892 + 65))) and v24:BuffDuration()) or (2 - 1);
+	local v92 = ((v25:BuffDuration() > (0 - 0)) and v25:BuffDuration()) or (1 - 0);
 	v44 = 351 - (87 + 263);
-	if ((not v40 and v41) or (v41 and (((v33 / v91) * v39) > ((v32 / v90) * v38)))) then
+	if ((not v40 and v41) or (v41 and (((v33 / v92) * v39) > ((v32 / v91) * v38)))) then
 		v44 = 182 - (67 + 113);
 	end
-	v42 = v76.ID == v19.AlgetharPuzzleBox:ID();
-	v43 = v77.ID == v19.AlgetharPuzzleBox:ID();
+	v42 = v77.ID == v19.AlgetharPuzzleBox:ID();
+	v43 = v78.ID == v19.AlgetharPuzzleBox:ID();
 end
 v54();
 local v55 = {{v18.StormBolt,"Cast Storm Bolt (Interrupt)",function()
@@ -92,11 +92,11 @@ v3:RegisterForEvent(function()
 	v53 = 0 - 0;
 	v54();
 end, "PLAYER_EQUIPMENT_CHANGED");
-local function v56(v92)
-	return v92:HealthPercentage();
+local function v56(v93)
+	return v93:HealthPercentage();
 end
-local function v57(v93)
-	return v93:NPCID() == (148897 + 55663);
+local function v57(v94)
+	return v94:NPCID() == (148897 + 55663);
 end
 local v58;
 local function v59()
@@ -105,11 +105,11 @@ end
 local function v60()
 	return v19.AlgetharPuzzleBox:IsEquipped() and (v19.AlgetharPuzzleBox:CooldownUp() or (v19.AlgetharPuzzleBox:CooldownRemains() <= v6:GCDRemains()));
 end
-local function v61(v94)
-	return (v94 ~= "Not Used") and ((((v94 == "with Cooldowns") or ((v94 == "small CDs") and v23.Arms_CDUSE.smallcdswithCooldowns) or (v94 == "with Cooldowns or AoE") or (v94 == "on Enemycount or Cooldowns") or (v94 == "on Boss or with Cooldowns")) and v13()) or (v94 == "always") or (((v94 == "on Boss only") or (v94 == "on Boss or on Enemycount") or (v94 == "on Boss or with Cooldowns")) and (v58 or v7:IsDummy())) or ((v94 == "with Bloodlust only") and v6:BloodlustUp()) or ((v94 == "small CDs") and Smallcds) or (((v94 == "on AOE") or (v94 == "with Cooldowns or AoE")) and (v50 > (999 - (915 + 82))) and v12()) or (((v94 == "on Enemycount or Cooldowns") or (v94 == "on Enemycount") or (v94 == "on Boss or on Enemycount")) and (v50 >= v23.Arms_CDUSE.Enemycount) and v12()));
+local function v61(v95)
+	return (v95 ~= "Not Used") and ((((v95 == "with Cooldowns") or ((v95 == "small CDs") and v23.Arms_CDUSE.smallcdswithCooldowns) or (v95 == "with Cooldowns or AoE") or (v95 == "on Enemycount or Cooldowns") or (v95 == "on Boss or with Cooldowns")) and v13()) or (v95 == "always") or (((v95 == "on Boss only") or (v95 == "on Boss or on Enemycount") or (v95 == "on Boss or with Cooldowns")) and (v58 or v7:IsDummy())) or ((v95 == "with Bloodlust only") and v6:BloodlustUp()) or ((v95 == "small CDs") and Smallcds) or (((v95 == "on AOE") or (v95 == "with Cooldowns or AoE")) and (v50 > (999 - (915 + 82))) and v12()) or (((v95 == "on Enemycount or Cooldowns") or (v95 == "on Enemycount") or (v95 == "on Boss or on Enemycount")) and (v50 >= v23.Arms_CDUSE.Enemycount) and v12()));
 end
-local function v62(v95)
-	return (v58 and v23.Arms_TTD.IgnoreWhenBoss) or v21.Buggedmobs[v7:NPCID()] or (v21.ISSolo() and v23.Arms_TTD.IgnoreWhenSolo) or (v95 == (0 - 0)) or ((v52 >= v95) and (v52 < (4531 + 3246)));
+local function v62(v96)
+	return (v58 and v23.Arms_TTD.IgnoreWhenBoss) or v21.Buggedmobs[v7:NPCID()] or (v21.ISSolo() and v23.Arms_TTD.IgnoreWhenSolo) or (v96 == (0 - 0)) or ((v52 >= v96) and (v52 < (4531 + 3246)));
 end
 local function v63()
 	if (v18.VictoryRush:IsCastable() and v48 and v6:CanAttack(v7) and v6:BuffUp(v18.VictoriousBuff) and (v6:HealthPercentage() <= v23.Arms.Defensives.VictoryRushHP)) then
@@ -533,129 +533,12 @@ local function v68()
 	end
 end
 local function v69()
-	if (v18.StormBolt:IsReady() and (v6:BuffUp(v18.Bladestorm)) and v7:IsInRange(73 - 53)) then
-		if v11(v18.StormBolt) then
-			return "storm_bolt slayer_aoe 2";
-		end
-	end
-	if (v18.ThunderClap:IsReady() and v48 and (v7:DebuffDown(v18.RendDebuff))) then
-		if v11(v18.ThunderClap) then
-			return "thunder_clap slayer_aoe 4";
-		end
-	end
-	if (v18.ThunderousRoar:IsCastable() and v7:IsInMeleeRange(42 - 30) and IsThunderousRoar) then
-		if v11(v18.ThunderousRoar, true) then
-			return "thunderous_roar slayer_execute 6";
-		end
-	end
-	if (v18.Avatar:IsCastable() and IsAvatar) then
-		if v11(v18.Avatar, true) then
-			return "avatar slayer_aoe 8";
-		end
-	end
-	if (v18.ChampionsSpear:IsCastable() and v48 and IsChampionsSpear) then
-		if v10.CastTarget(v18.ChampionsSpear, v10.TName().PLAYER) then
-			return "champions_spear slayer_execute 8";
-		end
-	end
-	if (IsBladestorm and v48 and v18.Ravager:IsCastable() and (v18.ColossusSmash:CooldownRemains() <= v6:GCD())) then
-		if v10.CastTarget(v18.Ravager, v10.TName().PLAYER) then
-			return "ravager slayer_execute 8";
-		end
-	end
-	if (v18.Warbreaker:IsCastable() and v7:IsInRange(867 - (814 + 45)) and IsColossusSmash) then
-		if v11(v18.Warbreaker, true) then
-			return "warbreaker slayer_execute 12";
-		end
-	end
-	if (v18.ColossusSmash:IsCastable() and v48 and IsColossusSmash) then
-		if v11(v18.ColossusSmash, true) then
-			return "colossus_smash slayer_execute 14";
-		end
-	end
-	if (v18.Cleave:IsReady() and v48) then
-		if v11(v18.Cleave) then
-			return "cleave slayer_aoe 18";
-		end
-	end
-	if (v18.Execute:IsReady() and v48 and ((v6:BuffUp(v18.SuddenDeathBuff) and (v6:BuffStack(v18.ImminentDemiseBuff) < (7 - 4))) or ((v6:BuffRemains(v18.JuggernautBuff) < (1 + 2)) and v18.Juggernaut:IsAvailable()))) then
-		if v11(v18.Executecast) then
-			return "execute slayer_execute 16";
-		end
-	end
-	if (v18.Bladestorm:IsCastable() and v48 and IsBladestorm) then
-		if v11(v18.Bladestormcast, true) then
-			return "bladestorm slayer_execute 18";
-		end
-	end
-	if (v18.Overpower:IsCastable() and v48 and v6:BuffUp(v18.SweepingStrikesBuff) and (v6:BuffUp(v18.OpportunistBuff) or (v18.Dreadnaught:IsAvailable() and not v18.Juggernaut:IsAvailable()))) then
-		if v11(v18.Overpower) then
-			return "overpower slayer_aoe 24";
-		end
-	end
-	if (v18.MortalStrike:IsReady() and v48 and (v6:BuffUp(v18.SweepingStrikesBuff))) then
-		if v11(v18.MortalStrike) then
-			return "mortal_strike slayer_execute 22";
-		end
-	end
-	if (v18.Execute:IsReady() and v48 and ((v6:BuffUp(v18.SweepingStrikesBuff) and (v7:DebuffStack(v18.ExecutionersPrecisionDebuff) < (1 + 1)) and v18.ExecutionersPrecision:IsAvailable()) or v7:DebuffUp(v18.MarkedforExecutionDebuff))) then
-		if v11(v18.Execute) then
-			return "execute slayer_aoe 28";
-		end
-	end
-	if (v18.Skullsplitter:IsCastable() and v48 and (v6:BuffUp(v18.SweepingStrikesBuff))) then
-		if v11(v18.Skullsplitter, true) then
-			return "skullsplitter slayer_aoe 30";
-		end
-	end
-	if (v18.Overpower:IsCastable() and v48 and (v6:BuffUp(v18.OpportunistBuff) or v18.Dreadnaught:IsAvailable())) then
-		if v11(v18.Overpower) then
-			return "overpower slayer_execute 24";
-		end
-	end
-	if (v18.MortalStrike:IsReady() and v48) then
-		if v11(v18.MortalStrike) then
-			return "MortalStrike slayer_execute 26";
-		end
-	end
-	if (v18.Overpower:IsCastable() and v48) then
-		if v11(v18.Overpower) then
-			return "overpower slayer_execute 28";
-		end
-	end
-	if (v18.ThunderClap:IsReady() and v48) then
-		if v11(v18.ThunderClap) then
-			return "thunder_clap slayer_aoe 38";
-		end
-	end
-	if (v18.Execute:IsReady() and v48) then
-		if v11(v18.Execute) then
-			return "execute slayer_aoe 40";
-		end
-	end
-	if (v18.Whirlwind:IsReady() and v48) then
-		if v11(v18.Whirlwind) then
-			return "whirlwind slayer_aoe 42";
-		end
-	end
-	if (v18.Skullsplitter:IsCastable() and v48) then
-		if v11(v18.Skullsplitter) then
-			return "skullsplitter slayer_aoe 44";
-		end
-	end
-	if (v18.Slam:IsReady() and v48) then
-		if v11(v18.Slam) then
-			return "slam slayer_aoe 46";
-		end
-	end
-end
-local function v70()
-	if (v18.StormBolt:IsReady() and v7:IsInRange(905 - (261 + 624)) and (v6:BuffUp(v18.Bladestorm))) then
+	if (v18.StormBolt:IsReady() and v7:IsInRange(73 - 53) and (v6:BuffUp(v18.Bladestorm))) then
 		if v11(v18.StormBolt) then
 			return "storm_bolt slayer_execute 2";
 		end
 	end
-	if (v18.SweepingStrikes:IsCastable() and (v50 == (3 - 1)) and v48) then
+	if (v18.SweepingStrikes:IsCastable() and (v50 == (7 - 5)) and v48) then
 		if v11(v18.SweepingStrikes, true) then
 			return "sweeping_strikes slayer_execute 4";
 		end
@@ -665,12 +548,12 @@ local function v70()
 			return "rend slayer_st 2";
 		end
 	end
-	if (v18.ThunderousRoar:IsCastable() and v7:IsInMeleeRange(1092 - (1020 + 60)) and IsThunderousRoar) then
+	if (v18.ThunderousRoar:IsCastable() and v7:IsInMeleeRange(871 - (814 + 45)) and IsThunderousRoar) then
 		if v11(v18.ThunderousRoar, true) then
 			return "thunderous_roar slayer_st 4";
 		end
 	end
-	if (IsAvatar and v18.Avatar:IsCastable() and ((v18.ColossusSmash:CooldownRemains() <= (1428 - (630 + 793))) or v7:DebuffUp(v18.ColossusSmashDebuff))) then
+	if (IsAvatar and v18.Avatar:IsCastable() and ((v18.ColossusSmash:CooldownRemains() <= (12 - 7)) or v7:DebuffUp(v18.ColossusSmashDebuff))) then
 		if v11(v18.Avatar, true) then
 			return "avatar slayer_execute 10";
 		end
@@ -695,32 +578,32 @@ local function v70()
 			return "colossus_smash slayer_st 10";
 		end
 	end
-	if (v18.Execute:IsReady() and v48 and (v6:BuffRemains(v18.JuggernautBuff) <= (v6:GCD() * (6 - 4))) and v18.Juggernaut:IsAvailable()) then
+	if (v18.Execute:IsReady() and v48 and (v6:BuffRemains(v18.JuggernautBuff) <= (v6:GCD() * (1 + 1))) and v18.Juggernaut:IsAvailable()) then
 		if v11(v18.Executecast) then
 			return "execute slayer_st 14";
 		end
 	end
-	if (IsBladestorm and v18.Bladestorm:IsCastable() and (((v7:DebuffStack(v18.ExecutionersPrecisionDebuff) == (9 - 7)) and (v7:DebuffRemains(v18.ColossusSmashDebuff) > (2 + 2))) or ((v7:DebuffStack(v18.ExecutionersPrecisionDebuff) == (6 - 4)) and (v18.ColossusSmash:CooldownRemains() > (1762 - (760 + 987)))) or not v18.ExecutionersPrecision:IsAvailable())) then
+	if (IsBladestorm and v18.Bladestorm:IsCastable() and (((v7:DebuffStack(v18.ExecutionersPrecisionDebuff) == (1 + 1)) and (v7:DebuffRemains(v18.ColossusSmashDebuff) > (889 - (261 + 624)))) or ((v7:DebuffStack(v18.ExecutionersPrecisionDebuff) == (3 - 1)) and (v18.ColossusSmash:CooldownRemains() > (1095 - (1020 + 60)))) or not v18.ExecutionersPrecision:IsAvailable())) then
 		if v11(v18.Bladestormcast, true) then
 			return "bladestorm slayer_st 16";
 		end
 	end
-	if (v18.Skullsplitter:IsCastable() and v7:IsInMeleeRange(1921 - (1789 + 124)) and (v6:Rage() < (806 - (745 + 21)))) then
+	if (v18.Skullsplitter:IsCastable() and v7:IsInMeleeRange(1431 - (630 + 793)) and (v6:Rage() < (135 - 95))) then
 		if v11(v18.Skullsplitter) then
 			return "sweeping_strikes slayer_st 22";
 		end
 	end
-	if (v18.Overpower:IsCastable() and v48 and (v6:BuffStack(v18.MartialProwessBuff) < (1 + 1)) and v6:BuffUp(v18.OpportunistBuff) and v18.Opportunist:IsAvailable() and (v18.Bladestorm:IsAvailable() or (v18.Ravager:IsAvailable() and (v6:Rage() < (233 - 148))))) then
+	if (v18.Overpower:IsCastable() and v48 and (v6:BuffStack(v18.MartialProwessBuff) < (9 - 7)) and v6:BuffUp(v18.OpportunistBuff) and v18.Opportunist:IsAvailable() and (v18.Bladestorm:IsAvailable() or (v18.Ravager:IsAvailable() and (v6:Rage() < (34 + 51))))) then
 		if v11(v18.Overpower) then
 			return "overpower slayer_st 18";
 		end
 	end
-	if (v18.MortalStrike:IsReady() and v48 and ((v7:DebuffRemains(v18.RendDebuff) < (7 - 5)) or ((v7:DebuffStack(v18.ExecutionersPrecisionDebuff) == (1 + 1)) and v7:DebuffDown(v18.RavagerDebuff)))) then
+	if (v18.MortalStrike:IsReady() and v48 and ((v7:DebuffRemains(v18.RendDebuff) < (6 - 4)) or ((v7:DebuffStack(v18.ExecutionersPrecisionDebuff) == (1749 - (760 + 987))) and v7:DebuffDown(v18.RavagerDebuff)))) then
 		if v11(v18.MortalStrike) then
 			return "mortal_strike slayer_st 20";
 		end
 	end
-	if (v18.Overpower:IsCastable() and v48 and (v6:Rage() <= (32 + 8)) and (v6:BuffStack(v18.MartialProwessBuff) < (1057 - (87 + 968))) and v18.FierceFollowthrough:IsAvailable()) then
+	if (v18.Overpower:IsCastable() and v48 and (v6:Rage() <= (1953 - (1789 + 124))) and (v6:BuffStack(v18.MartialProwessBuff) < (768 - (745 + 21))) and v18.FierceFollowthrough:IsAvailable()) then
 		if v11(v18.Overpower) then
 			return "overpower slayer_st 26";
 		end
@@ -736,7 +619,7 @@ local function v70()
 		end
 	end
 end
-local function v69()
+local function v70()
 	if (v18.StormBolt:IsReady() and v48 and (v6:BuffUp(v18.Bladestorm))) then
 		if v11(v18.StormBolt) then
 			return "StormBolt slayer_aoe 2";
@@ -747,12 +630,12 @@ local function v69()
 			return "rend slayer_st 4";
 		end
 	end
-	if (v18.ThunderousRoar:IsCastable() and v7:IsInMeleeRange(52 - 40) and IsThunderousRoar) then
+	if (v18.ThunderousRoar:IsCastable() and v7:IsInMeleeRange(5 + 7) and IsThunderousRoar) then
 		if v11(v18.ThunderousRoar, true) then
 			return "thunderous_roar slayer_aoe 6";
 		end
 	end
-	if (v48 and IsAvatar and v18.Avatar:IsCastable() and ((v18.ColossusSmash:CooldownRemains() <= (5 + 0)) or v7:DebuffUp(v18.ColossusSmashDebuff))) then
+	if (v48 and IsAvatar and v18.Avatar:IsCastable() and ((v18.ColossusSmash:CooldownRemains() <= (13 - 8)) or v7:DebuffUp(v18.ColossusSmashDebuff))) then
 		if v11(v18.Avatar, true) then
 			return "avatar slayer_aoe 8";
 		end
@@ -772,12 +655,12 @@ local function v69()
 			return "colossus_smash slayer_st 14";
 		end
 	end
-	if (v18.Warbreaker:IsCastable() and v7:IsInRange(17 - 9) and IsColossusSmash) then
+	if (v18.Warbreaker:IsCastable() and v7:IsInRange(31 - 23) and IsColossusSmash) then
 		if v11(v18.Warbreaker, true) then
 			return "warbreaker slayer_aoe 12";
 		end
 	end
-	if (v18.Execute:IsReady() and v48 and (((v6:BuffRemains(v18.JuggernautBuff) <= (v6:GCD() * (1415 - (447 + 966)))) and v18.Juggernaut:IsAvailable()) or (v6:BuffStack(v18.SuddenDeathBuff) == (5 - 3)) or (v6:BuffRemains(v18.SuddenDeathBuff) <= (v6:GCD() * (1820 - (1703 + 114)))) or (v7:DebuffStack(v18.MarkedforExecutionDebuff) == (704 - (376 + 325))))) then
+	if (v18.Execute:IsReady() and v48 and (((v6:BuffRemains(v18.JuggernautBuff) <= (v6:GCD() * (1 + 1))) and v18.Juggernaut:IsAvailable()) or (v6:BuffStack(v18.SuddenDeathBuff) == (2 + 0)) or (v6:BuffRemains(v18.SuddenDeathBuff) <= (v6:GCD() * (1058 - (87 + 968)))) or (v7:DebuffStack(v18.MarkedforExecutionDebuff) == (13 - 10)))) then
 		if v11(v18.Executecast) then
 			return "execute slayer_aoe 20";
 		end
@@ -792,7 +675,7 @@ local function v69()
 			return "mortal_strike slayer_aoe 28";
 		end
 	end
-	if (v18.Bladestorm:IsCastable() and v48 and IsBladestorm and ((v18.ColossusSmash:CooldownRemains() >= (v6:GCD() * (5 - 1))) or (v18.Warbreaker:CooldownRemains() >= (v6:GCD() * (12 - 8))) or (v7:DebuffRemains(v18.ColossusSmashDebuff) >= (v6:GCD() * (2 + 2))))) then
+	if (v18.Bladestorm:IsCastable() and v48 and IsBladestorm and ((v18.ColossusSmash:CooldownRemains() >= (v6:GCD() * (4 + 0))) or (v18.Warbreaker:CooldownRemains() >= (v6:GCD() * (8 - 4))) or (v7:DebuffRemains(v18.ColossusSmashDebuff) >= (v6:GCD() * (1417 - (447 + 966)))))) then
 		if v11(v18.Bladestormcast, true) then
 			return "bladestorm slayer_st 24";
 		end
@@ -807,7 +690,7 @@ local function v69()
 			return "overpower slayer_st 28";
 		end
 	end
-	if (v18.Rend:IsCastable() and (v7:DebuffRemains(v18.RendDebuff) <= (17 - 9)) and v48) then
+	if (v18.Rend:IsCastable() and (v7:DebuffRemains(v18.RendDebuff) <= (21 - 13)) and v48) then
 		if v11(v18.Rend) then
 			return "rend slayer_st 30";
 		end
@@ -829,7 +712,7 @@ local function v69()
 	end
 end
 local function v71()
-	if (v18.StormBolt:IsCastable() and v7:IsInRange(34 - (9 + 5)) and (v6:BuffUp(v18.Bladestorm))) then
+	if (v18.StormBolt:IsCastable() and v7:IsInRange(1837 - (1703 + 114)) and (v6:BuffUp(v18.Bladestorm))) then
 		if v11(v18.StormBolt) then
 			return "storm_bolt slayer_sweep 40";
 		end
@@ -839,7 +722,7 @@ local function v71()
 			return "thunderous_roar slayer_sweep 4";
 		end
 	end
-	if (v18.ThunderousRoar:IsCastable() and v7:IsInMeleeRange(388 - (85 + 291)) and IsThunderousRoar) then
+	if (v18.ThunderousRoar:IsCastable() and v7:IsInMeleeRange(713 - (376 + 325)) and IsThunderousRoar) then
 		if v11(v18.ThunderousRoar, true) then
 			return "thunderous_roar slayer_sweep 2";
 		end
@@ -869,22 +752,22 @@ local function v71()
 			return "colossus_smash slayer_sweep 12";
 		end
 	end
-	if (v18.Warbreaker:IsCastable() and v7:IsInRange(1273 - (243 + 1022)) and IsColossusSmash) then
+	if (v18.Warbreaker:IsCastable() and v7:IsInRange(12 - 4) and IsColossusSmash) then
 		if v11(v18.Warbreaker, true) then
 			return "warbreaker slayer_sweep 14";
 		end
 	end
-	if (v18.Skullsplitter:IsCastable() and v7:IsInMeleeRange(30 - 22) and (v6:BuffUp(v18.SweepingStrikesBuff))) then
+	if (v18.Skullsplitter:IsCastable() and v7:IsInMeleeRange(24 - 16) and (v6:BuffUp(v18.SweepingStrikesBuff))) then
 		if v11(v18.Skullsplitter) then
 			return "sweeping_strikes slayer_sweep 16";
 		end
 	end
-	if (v18.Execute:IsReady() and v48 and ((v6:BuffRemains(v18.JuggernautBuff) <= (v6:GCD() * (2 + 0))) or (v7:DebuffStack(v18.MarkedforExecutionDebuff) == (1183 - (1123 + 57))) or (v6:BuffStack(v18.SuddenDeathBuff) == (2 + 0)) or (v6:BuffRemains(v18.SuddenDeathBuff) <= (v6:GCD() * (257 - (163 + 91)))))) then
+	if (v18.Execute:IsReady() and v48 and ((v6:BuffRemains(v18.JuggernautBuff) <= (v6:GCD() * (1 + 1))) or (v7:DebuffStack(v18.MarkedforExecutionDebuff) == (6 - 3)) or (v6:BuffStack(v18.SuddenDeathBuff) == (16 - (9 + 5))) or (v6:BuffRemains(v18.SuddenDeathBuff) <= (v6:GCD() * (379 - (85 + 291)))))) then
 		if v11(v18.Executecast) then
 			return "execute slayer_sweep 18";
 		end
 	end
-	if (v48 and IsBladestorm and v18.Bladestorm:IsCastable() and ((v18.ColossusSmash:CooldownRemains() >= (v6:GCD() * (1934 - (1869 + 61)))) or (v18.Warbreaker:CooldownRemains() >= (v6:GCD() * (2 + 2))) or (v7:DebuffRemains(v18.ColossusSmashDebuff) >= (v6:GCD() * (14 - 10))))) then
+	if (v48 and IsBladestorm and v18.Bladestorm:IsCastable() and ((v18.ColossusSmash:CooldownRemains() >= (v6:GCD() * (1269 - (243 + 1022)))) or (v18.Warbreaker:CooldownRemains() >= (v6:GCD() * (14 - 10))) or (v7:DebuffRemains(v18.ColossusSmashDebuff) >= (v6:GCD() * (4 + 0))))) then
 		if v11(v18.Bladestormcast, true) then
 			return "bladestorm slayer_sweep 20";
 		end
@@ -904,12 +787,12 @@ local function v71()
 			return "overpower slayer_sweep 30";
 		end
 	end
-	if (v18.ThunderClap:IsReady() and v48 and (v7:DebuffRemains(v18.RendDebuff) < (12 - 4)) and v6:BuffDown(v18.SweepingStrikesBuff)) then
+	if (v18.ThunderClap:IsReady() and v48 and (v7:DebuffRemains(v18.RendDebuff) < (1188 - (1123 + 57))) and v6:BuffDown(v18.SweepingStrikesBuff)) then
 		if v11(v18.ThunderClap) then
 			return "thunder_clap slayer_sweep 32";
 		end
 	end
-	if (v18.Rend:IsCastable() and v48 and (v7:DebuffRemains(v18.RendDebuff) <= (1 + 4))) then
+	if (v18.Rend:IsCastable() and v48 and (v7:DebuffRemains(v18.RendDebuff) <= (5 + 0))) then
 		if v11(v18.Rend) then
 			return "rend slayer_sweep 34";
 		end
@@ -936,60 +819,147 @@ local function v71()
 	end
 end
 local function v72()
-	if (v23.Commons.Enabled.Items and IsWeapon and v48 and not v6:IsMoving() and v19.Fyralath:IsEquippedAndReady() and (((v18.MarkofFyralathDebuff:AuraActiveCount() > (0 - 0)) and not v18.BlademastersTorment:IsAvailable()) or ((v18.MarkofFyralathDebuff:AuraActiveCount() > (0 + 0)) and (v18.Avatar:CooldownRemains() > (1477 - (1329 + 145))) and (v18.Bladestorm:CooldownRemains() > (974 - (140 + 831))) and v7:DebuffDown(v18.ColossusSmashDebuff)))) then
-		v10.CastMacro(1851 - (1409 + 441), nil, nil, v19.Fyralath);
+	if (v18.StormBolt:IsReady() and v7:IsInRange(274 - (163 + 91)) and (v6:BuffUp(v18.Bladestorm))) then
+		if v11(v18.StormBolt) then
+			return "storm_bolt slayer_execute 2";
+		end
+	end
+	if (v18.SweepingStrikes:IsCastable() and v48 and (v50 == (1932 - (1869 + 61)))) then
+		if v11(v18.SweepingStrikes, true) then
+			return "sweeping_strikes slayer_execute 4";
+		end
+	end
+	if (v18.Rend:IsCastable() and v48 and (v7:DebuffRemains(v18.RendDebuff) <= v6:GCD()) and not v18.Bloodletting:IsAvailable()) then
+		if v11(v18.Rend) then
+			return "rend slayer_execute 6";
+		end
+	end
+	if (IsThunderousRoar and v18.ThunderousRoar:IsCastable() and v7:IsInMeleeRange(4 + 8)) then
+		if v11(v18.ThunderousRoar, true) then
+			return "thunderous_roar slayer_execute 8";
+		end
+	end
+	if (IsAvatar and v18.Avatar:IsCastable() and v48 and ((v18.ColossusSmash:CooldownRemains() <= (17 - 12)) or v7:DebuffUp(v18.ColossusSmashDebuff))) then
+		if v11(v18.Avatar, true) then
+			return "avatar slayer_execute 10";
+		end
+	end
+	if (v18.ChampionsSpear:IsCastable() and v48 and IsChampionsSpear and (v7:DebuffUp(v18.ColossusSmashDebuff) or v6:BuffUp(v18.AvatarBuff))) then
+		if v10.CastTarget(v18.ChampionsSpear, v10.TName().PLAYER) then
+			return "champions_spear colossus_execute 8";
+		end
+	end
+	if (v18.Ravager:IsCastable() and v48 and IsBladestorm and (v18.ColossusSmash:CooldownRemains() <= v6:GCD())) then
+		if v10.CastTarget(v18.Ravager, v10.TName().PLAYER) then
+			return "ravager colossus_execute 10";
+		end
+	end
+	if (v18.Warbreaker:IsCastable() and IsWarbreaker and v48) then
+		if v11(v18.Warbreaker, true) then
+			return "warbreaker slayer_execute 16";
+		end
+	end
+	if (v18.ColossusSmash:IsCastable() and v48 and IsColossusSmash) then
+		if v11(v18.ColossusSmash, true) then
+			return "colossus_smash slayer_execute 18";
+		end
+	end
+	if (v18.Execute:IsReady() and v48 and (v6:BuffRemains(v18.JuggernautBuff) <= (v6:GCD() * (2 - 0))) and v18.Juggernaut:IsAvailable()) then
+		if v11(v18.Executecast) then
+			return "execute slayer_execute 20";
+		end
+	end
+	if (IsBladestorm and v48 and v18.Bladestorm:IsCastable() and (((v7:DebuffStack(v18.ExecutionersPrecisionDebuff) == (1 + 1)) and (v7:DebuffRemains(v18.ColossusSmashDebuff) > (5 - 1))) or ((v7:DebuffStack(v18.ExecutionersPrecisionDebuff) == (2 + 0)) and (v18.ColossusSmash:CooldownRemains() > (1489 - (1329 + 145)))) or not v18.ExecutionersPrecision:IsAvailable())) then
+		if v11(v18.Bladestorm, true) then
+			return "bladestorm slayer_execute 22";
+		end
+	end
+	if (v18.Skullsplitter:IsCastable() and (v6:Rage() < (1011 - (140 + 831))) and v48) then
+		if v11(v18.Skullsplitter, true) then
+			return "skullsplitter slayer_execute 24";
+		end
+	end
+	if (v18.Overpower:IsCastable() and v48 and (v6:BuffStack(v18.MartialProwessBuff) < (1852 - (1409 + 441))) and v6:BuffUp(v18.OpportunistBuff) and v18.Opportunist:IsAvailable() and (v18.Bladestorm:IsAvailable() or (v18.Ravager:IsAvailable() and (v6:Rage() < (803 - (15 + 703)))))) then
+		if v11(v18.Overpower) then
+			return "overpower slayer_execute 26";
+		end
+	end
+	if (v18.MortalStrike:IsReady() and v48 and ((v7:DebuffRemains(v18.RendDebuff) < (1 + 1)) or ((v7:DebuffStack(v18.ExecutionersPrecisionDebuff) == (440 - (262 + 176))) and v7:DebuffDown(v18.RavagerDebuff)))) then
+		if v11(v18.MortalStrike) then
+			return "mortal_strike slayer_execute 28";
+		end
+	end
+	if (v18.Overpower:IsCastable() and v48 and (v6:Rage() <= (1761 - (345 + 1376))) and (v6:BuffStack(v18.MartialProwessBuff) < (690 - (198 + 490))) and v18.FierceFollowthrough:IsAvailable()) then
+		if v11(v18.Overpower) then
+			return "overpower slayer_execute 30";
+		end
+	end
+	if (v18.Execute:IsReady() and v48) then
+		if v11(v18.Executecast) then
+			return "execute slayer_execute 32";
+		end
+	end
+	if (v18.Overpower:IsCastable() and v48) then
+		if v11(v18.Overpower) then
+			return "overpower slayer_execute 34";
+		end
+	end
+end
+local function v73()
+	if (v23.Commons.Enabled.Items and IsWeapon and v48 and not v6:IsMoving() and v19.Fyralath:IsEquippedAndReady() and (((v18.MarkofFyralathDebuff:AuraActiveCount() > (0 - 0)) and not v18.BlademastersTorment:IsAvailable()) or ((v18.MarkofFyralathDebuff:AuraActiveCount() > (0 - 0)) and (v18.Avatar:CooldownRemains() > (1209 - (696 + 510))) and (v18.Bladestorm:CooldownRemains() > (5 - 2)) and v7:DebuffDown(v18.ColossusSmashDebuff)))) then
+		v10.CastMacro(1263 - (1091 + 171), nil, nil, v19.Fyralath);
 		return "weapon cast";
 	end
 	if v23.Commons.Enabled.Trinkets then
-		if (v19.TreacherousTransmitter:IsEquippedAndReady() and (((v24:ID() == v19.TreacherousTransmitter:ID()) and IsTrinket1) or ((v25:ID() == v19.TreacherousTransmitter:ID()) and IsTrinket2)) and (v45 or v46) and (v18.Avatar:CooldownRemains() < (721 - (15 + 703)))) then
+		if (v19.TreacherousTransmitter:IsEquippedAndReady() and (((v24:ID() == v19.TreacherousTransmitter:ID()) and IsTrinket1) or ((v25:ID() == v19.TreacherousTransmitter:ID()) and IsTrinket2)) and (v45 or v46) and (v18.Avatar:CooldownRemains() < (1 + 2))) then
 			if v11(v19.TreacherousTransmitter, true) then
 				return "treacherous_transmitter trinkets 2";
 			end
 		end
-		if (v24:IsReady() and v48 and IsTrinket1 and not v34 and ((v40 and not v42 and ((v6:BuffDown(v18.AvatarBuff) and (v30 > (0 + 0))) or (v30 == (438 - (262 + 176)))) and v6:BuffUp(v18.AvatarBuff) and (v37 or not v25:HasCooldown() or v33 or (v44 == (1722 - (345 + 1376))))) or (v24:BuffDuration() >= v52))) then
+		if (v24:IsReady() and v48 and IsTrinket1 and not v34 and ((v40 and not v42 and ((v6:BuffDown(v18.AvatarBuff) and (v30 > (0 - 0))) or (v30 == (0 - 0))) and v6:BuffUp(v18.AvatarBuff) and (v37 or not v25:HasCooldown() or v33 or (v44 == (375 - (123 + 251))))) or (v24:BuffDuration() >= v52))) then
 			if v11(v24, true) then
 				return "use_item for " .. v24:Name() .. " trinkets 4";
 			end
 		end
-		if (v25:IsReady() and v48 and IsTrinket2 and not v35 and ((v41 and not v43 and ((v6:BuffDown(v18.AvatarBuff) and (v31 > (688 - (198 + 490)))) or (v31 == (0 - 0))) and v6:BuffUp(v18.AvatarBuff) and (v36 or not v24:HasCooldown() or v32 or (v44 == (4 - 2)))) or (v25:BuffDuration() >= v52))) then
+		if (v25:IsReady() and v48 and IsTrinket2 and not v35 and ((v41 and not v43 and ((v6:BuffDown(v18.AvatarBuff) and (v31 > (0 - 0))) or (v31 == (698 - (208 + 490)))) and v6:BuffUp(v18.AvatarBuff) and (v36 or not v24:HasCooldown() or v32 or (v44 == (1 + 1)))) or (v25:BuffDuration() >= v52))) then
 			if v11(v25, true) then
 				return "use_item for " .. v25:Name() .. " trinkets 6";
 			end
 		end
-		if (v24:IsReady() and v48 and IsTrinket1 and not v34 and not v40 and (((v30 > (1206 - (696 + 510))) and v6:BuffDown(v18.AvatarBuff)) or (v30 == (0 - 0))) and not v42 and ((not v40 and (v33 or not v41)) or ((v30 > (1262 - (1091 + 171))) and v6:BuffDown(v18.AvatarBuff)) or (v30 == (0 + 0)) or (v18.Avatar:CooldownRemains() > (62 - 42)))) then
+		if (v24:IsReady() and v48 and IsTrinket1 and not v34 and not v40 and (((v30 > (0 + 0)) and v6:BuffDown(v18.AvatarBuff)) or (v30 == (836 - (660 + 176)))) and not v42 and ((not v40 and (v33 or not v41)) or ((v30 > (0 + 0)) and v6:BuffDown(v18.AvatarBuff)) or (v30 == (202 - (14 + 188))) or (v18.Avatar:CooldownRemains() > (695 - (534 + 141))))) then
 			if v11(v24, true) then
 				return "use_item for " .. v24:Name() .. " trinkets 8";
 			end
 		end
-		if (v25:IsReady() and v48 and IsTrinket2 and not v35 and not v41 and (((v31 > (0 - 0)) and v6:BuffDown(v18.AvatarBuff)) or (v31 == (374 - (123 + 251)))) and not v43 and ((not v41 and (v32 or not v40)) or ((v31 > (0 - 0)) and v6:BuffDown(v18.AvatarBuff)) or (v31 == (698 - (208 + 490))) or (v18.Avatar:CooldownRemains() > (2 + 18)))) then
+		if (v25:IsReady() and v48 and IsTrinket2 and not v35 and not v41 and (((v31 > (0 + 0)) and v6:BuffDown(v18.AvatarBuff)) or (v31 == (0 + 0))) and not v43 and ((not v41 and (v32 or not v40)) or ((v31 > (0 + 0)) and v6:BuffDown(v18.AvatarBuff)) or (v31 == (0 - 0)) or (v18.Avatar:CooldownRemains() > (31 - 11)))) then
 			if v11(v25, true) then
 				return "use_item for " .. v25:Name() .. " trinkets 10";
 			end
 		end
 	end
 	if v23.Commons.Enabled.Items then
-		local v100, v101, v102 = v6:GetUseableItems(v20, 8 + 8);
-		if (v100 and v100:IsReady() and IsWeapon and v7:IsInRange(v102) and not v19.Fyralath:IsEquipped() and (not v40 or v32) and (not v41 or v33)) then
-			v10.CastMacro(837 - (660 + 176));
+		local v101, v102, v103 = v6:GetUseableItems(v20, 44 - 28);
+		if (v101 and v101:IsReady() and IsWeapon and v7:IsInRange(v103) and not v19.Fyralath:IsEquipped() and (not v40 or v32) and (not v41 or v33)) then
+			v10.CastMacro(1 + 0);
 			return "weapon cast";
 		end
 	end
 end
-local function v73()
-	v46 = v50 == (1 + 0);
-	v45 = v50 >= (204 - (14 + 188));
-	v47 = (v18.Massacre:IsAvailable() and (v7:HealthPercentage() < (710 - (534 + 141)))) or (v7:HealthPercentage() < (9 + 11));
-end
 local function v74()
-	Smallcds = v10.ToggleIconFrame:GetToggle(1 + 0);
-	AutoStance = v10.ToggleIconFrame:GetToggle(2 + 0);
-	InterruptToggle = v10.ToggleIconFrame:GetToggle(6 - 3);
+	v46 = v50 == (1 + 0);
+	v45 = v50 >= (398 - (115 + 281));
+	v47 = (v18.Massacre:IsAvailable() and (v7:HealthPercentage() < (81 - 46))) or (v7:HealthPercentage() < (17 + 3));
+end
+local function v75()
+	Smallcds = v10.ToggleIconFrame:GetToggle(2 - 1);
+	AutoStance = v10.ToggleIconFrame:GetToggle(7 - 5);
+	InterruptToggle = v10.ToggleIconFrame:GetToggle(870 - (550 + 317));
 	Lowlevel = not v18.SlayersDominance:IsAvailable() and not v18.Demolish:IsAvailable();
-	v49 = v6:GetEnemiesInMeleeRange(12 - 4);
+	v49 = v6:GetEnemiesInMeleeRange(11 - 3);
 	if v12() then
 		v50 = #v49;
 	else
-		v50 = 2 - 1;
+		v50 = 1 - 0;
 	end
 	IsAvatar = v62(v23.Arms_TTD.AvatarTTD) and v61(v23.Arms_CDUSE.Avatar);
 	IsRacials = v62(v23.Arms_TTD.RacialsTTD) and v61(v23.Arms_CDUSE.Racials);
@@ -1003,18 +973,18 @@ local function v74()
 	IsBladestorm = v62(v23.Arms_TTD.BladestormTTD) and v61(v23.Arms_CDUSE.Bladestorm);
 	IsWeapon = v62(v23.Arms_TTD.WeaponTTD) and v61(v23.Arms_CDUSE.Weapon);
 	IsDemolish = v62(v23.Arms_TTD.DemolishTTD) and v61(v23.Arms_CDUSE.Demolish);
-	local v96 = 0 + 0;
+	local v97 = 0 - 0;
 	if v18.RumblingEarth:IsAvailable() then
-		v96 = 11 + 5;
+		v97 = 301 - (134 + 151);
 	else
-		v96 = 406 - (115 + 281);
+		v97 = 1675 - (970 + 695);
 	end
 	if (v21.TargetIsValid() or v6:AffectingCombat()) then
 		v48 = v7:IsSpellInRange(v18.MortalStrike);
 		v51 = v3.BossFightRemains();
 		v58 = true;
 		v52 = v51;
-		if (v52 == (25844 - 14733)) then
+		if (v52 == (21202 - 10091)) then
 			v58 = false;
 			v52 = v3.FightRemains(v49, false);
 		end
@@ -1025,19 +995,19 @@ local function v74()
 		end
 	end
 	if v23.Commons.CCIncorperal then
-		v17 = v21.IncorpCycle(v18.IntimidatingShout, 7 + 1, false, false);
-		v17 = v21.IncorpCycle(v18.StormBolt, 48 - 28, false, false);
+		v17 = v21.IncorpCycle(v18.IntimidatingShout, 1998 - (582 + 1408), false, false);
+		v17 = v21.IncorpCycle(v18.StormBolt, 69 - 49, false, false);
 		if v17 then
 			return v17;
 		end
 	end
-	local v97 = v6:IncomingSpell(Warrior.SpellReflectList);
-	local v98 = v6:IncomingSpellreflection(Warrior.SpellReflectList);
-	if (v98 and v10.DebugON()) then
-		print("Spell Reflect Cast: " .. v98);
+	local v98 = v6:IncomingSpell(Warrior.SpellReflectList);
+	local v99 = v6:IncomingSpellreflection(Warrior.SpellReflectList);
+	if (v99 and v10.DebugON()) then
+		print("Spell Reflect Cast: " .. v99);
 	end
-	local v99 = v6:BuffUp(v18.SpellReflection) or (v97 and v18.SpellReflection:IsReady() and v23.Commons.AutoSpellreflection);
-	if (v18.SpellReflection:IsReady() and v98 and v23.Commons.AutoSpellreflection) then
+	local v100 = v6:BuffUp(v18.SpellReflection) or (v98 and v18.SpellReflection:IsReady() and v23.Commons.AutoSpellreflection);
+	if (v18.SpellReflection:IsReady() and v99 and v23.Commons.AutoSpellreflection) then
 		if v11(v18.SpellReflection, true) then
 			return "Spell Reflection";
 		end
@@ -1060,20 +1030,20 @@ local function v74()
 						return v17;
 					end
 				end
-				if (v23.Commons.Enabled.Potions and IsPotions and ((v7:DebuffRemains(v18.ColossusSmashDebuff) > (29 - 21)) or (v51 < (892 - (550 + 317)))) and v48) then
-					local v103 = v21.PotionSelected();
-					if (v103 and v103:IsReady()) then
-						v10.CastMacro(3 - 0, nil, nil, v103);
+				if (v23.Commons.Enabled.Potions and IsPotions and ((v7:DebuffRemains(v18.ColossusSmashDebuff) > (9 - 1)) or (v51 < (94 - 69))) and v48) then
+					local v104 = v21.PotionSelected();
+					if (v104 and v104:IsReady()) then
+						v10.CastMacro(1827 - (1195 + 629), nil, nil, v104);
 						return "Cast Potion";
 					end
 				end
-				if (InterruptToggle and not v99) then
-					v17 = v21.InterruptCycle(v18.Pummel, 7 - 2, true, nil, false);
+				if (InterruptToggle and not v100) then
+					v17 = v21.InterruptCycle(v18.Pummel, 6 - 1, true, nil, false);
 					if v17 then
 						return v17;
 					end
-					v17 = v23.Interrupt.UseStormbolt and v21.InterruptCycle(v18.StormBolt, 55 - 35, false, nil, true);
-					v17 = v23.Interrupt.UseShockwave and v21.InterruptCycle(v18.Shockwave, v96, false, nil, true, true);
+					v17 = v23.Interrupt.UseStormbolt and v21.InterruptCycle(v18.StormBolt, 261 - (187 + 54), false, nil, true);
+					v17 = v23.Interrupt.UseShockwave and v21.InterruptCycle(v18.Shockwave, v97, false, nil, true, true);
 					if v17 then
 						return v17;
 					end
@@ -1081,9 +1051,9 @@ local function v74()
 				if v17 then
 					return v17;
 				end
-				v73();
+				v74();
 				if (v23.Commons.Enabled.Trinkets or v23.Commons.Enabled.Items) then
-					v17 = v72();
+					v17 = v73();
 					if v17 then
 						return v17;
 					end
@@ -1093,7 +1063,7 @@ local function v74()
 						return "Wrecking Throw Shield";
 					end
 				end
-				if (v18.ArcaneTorrent:IsCastable() and IsRacials and v7:IsInRange(293 - (134 + 151)) and (v18.MortalStrike:CooldownRemains() > (1666.5 - (970 + 695))) and (v6:Rage() < (95 - 45))) then
+				if (v18.ArcaneTorrent:IsCastable() and IsRacials and v7:IsInRange(788 - (162 + 618)) and (v18.MortalStrike:CooldownRemains() > (1.5 + 0)) and (v6:Rage() < (34 + 16))) then
 					if v11(v18.ArcaneTorrent, true) then
 						return "arcane_torrent main 8";
 					end
@@ -1108,7 +1078,7 @@ local function v74()
 						return "bag_of_tricks main 12";
 					end
 				end
-				if (v18.Berserking:IsCastable() and IsRacials and (((v7:TimeToDie() > (2170 - (582 + 1408))) and v6:BuffUp(v18.AvatarBuff)) or ((v7:TimeToDie() < (624 - 444)) and v47 and v6:BuffUp(v18.AvatarBuff)) or (v7:TimeToDie() < (25 - 5)))) then
+				if (v18.Berserking:IsCastable() and IsRacials and (((v7:TimeToDie() > (383 - 203)) and v6:BuffUp(v18.AvatarBuff)) or ((v7:TimeToDie() < (302 - 122)) and v47 and v6:BuffUp(v18.AvatarBuff)) or (v7:TimeToDie() < (2 + 18)))) then
 					if v11(v18.Berserking, true) then
 						return "berserking main 14";
 					end
@@ -1128,73 +1098,73 @@ local function v74()
 						return "ancestral_call main 20";
 					end
 				end
-				if (v18.Demolish:IsAvailable() and v12() and (v50 > (7 - 5))) then
-					local v104 = v65();
-					if v104 then
-						return v104;
+				if (v18.Demolish:IsAvailable() and v12() and (v50 > (1638 - (1373 + 263)))) then
+					local v105 = v65();
+					if v105 then
+						return v105;
 					end
 					if v10.CastAnnotated(v18.Pool, false, "WAIT") then
 						return "Pool for ColossusAoE()";
 					end
 				end
 				if (v18.Demolish:IsAvailable() and v47) then
-					local v105 = v66();
-					if v105 then
-						return v105;
+					local v106 = v66();
+					if v106 then
+						return v106;
 					end
 					if v10.CastAnnotated(v18.Pool, false, "WAIT") then
 						return "Pool for ColossusExecute()";
 					end
 				end
-				if (v18.Demolish:IsAvailable() and v12() and (v50 == (1826 - (1195 + 629))) and not v47) then
-					local v106 = v68();
-					if v106 then
-						return v106;
+				if (v18.Demolish:IsAvailable() and v12() and (v50 == (1002 - (451 + 549))) and not v47) then
+					local v107 = v68();
+					if v107 then
+						return v107;
 					end
 					if v10.CastAnnotated(v18.Pool, false, "WAIT") then
 						return "Pool for ColossusSweep()";
 					end
 				end
 				if v18.Demolish:IsAvailable() then
-					local v107 = v67();
-					if v107 then
-						return v107;
+					local v108 = v67();
+					if v108 then
+						return v108;
 					end
 					if v10.CastAnnotated(v18.Pool, false, "WAIT") then
 						return "Pool for ColossusST()";
 					end
 				end
-				if ((v18.SlayersDominance:IsAvailable() or Lowlevel) and v12() and (v50 > (2 - 0))) then
-					local v108 = v69();
-					if v108 then
-						return v108;
+				if ((v18.SlayersDominance:IsAvailable() or Lowlevel) and v12() and (v50 > (1 + 1))) then
+					local v109 = v70();
+					if v109 then
+						return v109;
 					end
 					if v10.CastAnnotated(v18.Pool, false, "WAIT") then
 						return "Pool for SlayerAoE()";
 					end
 				end
 				if ((v18.SlayersDominance:IsAvailable() or Lowlevel) and v47) then
-					local v109 = SlayerExecute();
-					if v109 then
-						return v109;
+					local v110 = v72();
+					if v110 then
+						return v110;
 					end
 					if v10.CastAnnotated(v18.Pool, false, "WAIT") then
 						return "Pool for SlayerExecute()";
 					end
 				end
-				if ((v18.SlayersDominance:IsAvailable() or Lowlevel) and v12() and (v50 == (243 - (187 + 54))) and not v47) then
-					local v110 = v71();
-					if v110 then
-						return v110;
+				if ((v18.SlayersDominance:IsAvailable() or Lowlevel) and v12() and (v50 == (2 - 0)) and not v47) then
+					local v111 = v71();
+					if v111 then
+						return v111;
 					end
 					if v10.CastAnnotated(v18.Pool, false, "WAIT") then
 						return "Pool for SlayerSweep()";
 					end
 				end
 				if (v18.SlayersDominance:IsAvailable() or Lowlevel) then
-					local v111 = v70();
-					if v111 then
-						return v111;
+					local v112 = v69();
+					if v112 then
+						return v112;
 					end
 					if v10.CastAnnotated(v18.Pool, false, "WAIT") then
 						return "Pool for SlayerST()";
@@ -1207,14 +1177,14 @@ local function v74()
 		end
 	end
 end
-local function v75()
+local function v76()
 	v10.ResetToggle();
 	v23.Arms.Display();
 	v18.MarkofFyralathDebuff:RegisterAuraTracking();
 	v10:UpdateMacro("macro1", "/use 16");
-	v10.ToggleIconFrame:AddButtonCustom("S", 781 - (162 + 618), "smallCDs", "smallcds");
-	v10.ToggleIconFrame:AddButtonCustom("A", 2 + 0, "Auto Stance", "autostance");
+	v10.ToggleIconFrame:AddButtonCustom("S", 1 - 0, "smallCDs", "smallcds");
+	v10.ToggleIconFrame:AddButtonCustom("A", 1386 - (746 + 638), "Auto Stance", "autostance");
 	v10.ToggleIconFrame:AddButtonCustom("I", 2 + 1, "Interrupt", "interrupt");
-	v21.PostInitialMessage(151 - 80);
+	v21.PostInitialMessage(107 - 36);
 end
-v10.SetAPL(119 - 48, v74, v75);
+v10.SetAPL(412 - (218 + 123), v75, v76);
