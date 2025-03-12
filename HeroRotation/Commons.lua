@@ -1111,5 +1111,7 @@ v21.PostInitialMessage = function(v387)
 		v2.Print("Convoke Will Be Used for DPS, if the Settings is Enabled and Cooldown Toggle is on");
 	elseif (specid == (202 + 68)) then
 		v2.Print("Mistweaver Monk rotation has been updated for patch 11.1.0. Please report any issues on the discord. Thank you!");
+	elseif (v387 == (455 - 192)) then
+		v2.Print("Enhancement Shaman rotation has been updated for patch 11.1.0. Please report any issues on the discord. Thank you!");
 	end
 end;
