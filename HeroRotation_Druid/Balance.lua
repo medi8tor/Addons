@@ -55,39 +55,42 @@ local v65, v66;
 local v67;
 local v68 = 927 - (214 + 713);
 local function v69()
-	local v95, v96 = v6:GetTrinketData(v24);
-	if ((v68 < (2 + 3)) and ((v95.ID == (0 + 0)) or (v96.ID == (877 - (282 + 595))) or (v95.Level == (1637 - (1523 + 114))) or (v96.Level == (0 + 0)) or ((v95.SpellID > (0 - 0)) and not v95.Usable) or ((v96.SpellID > (1065 - (68 + 997))) and not v96.Usable))) then
+	return v6:BuffUp(v22.MoonkinForm) or v6:BuffUp(v22.MoonkinForm2) or v6:BuffUp(v22.MoonkinForm1);
+end
+local function v70()
+	local v96, v97 = v6:GetTrinketData(v24);
+	if ((v68 < (2 + 3)) and ((v96.ID == (0 + 0)) or (v97.ID == (877 - (282 + 595))) or (v96.Level == (1637 - (1523 + 114))) or (v97.Level == (0 + 0)) or ((v96.SpellID > (0 - 0)) and not v96.Usable) or ((v97.SpellID > (1065 - (68 + 997))) and not v97.Usable))) then
 		v68 = v68 + (1271 - (226 + 1044));
 		v21(21 - 16, function()
-			v69();
+			v70();
 		end);
 		return;
 	end
-	v49 = v95.Object;
-	v50 = v96.Object;
-	v51 = v95.ID;
-	v52 = v96.ID;
-	v53 = v95.Level;
-	v54 = v96.Level;
-	v55 = v95.Spell;
-	v57 = v95.Range;
-	v61 = v95.CastTime;
-	v56 = v96.Spell;
-	v58 = v96.Range;
-	v62 = v96.CastTime;
-	v63 = v95.Cooldown;
-	v64 = v96.Cooldown;
-	v65 = v95.Blacklisted;
-	v66 = v96.Blacklisted;
+	v49 = v96.Object;
+	v50 = v97.Object;
+	v51 = v96.ID;
+	v52 = v97.ID;
+	v53 = v96.Level;
+	v54 = v97.Level;
+	v55 = v96.Spell;
+	v57 = v96.Range;
+	v61 = v96.CastTime;
+	v56 = v97.Spell;
+	v58 = v97.Range;
+	v62 = v97.CastTime;
+	v63 = v96.Cooldown;
+	v64 = v97.Cooldown;
+	v65 = v96.Blacklisted;
+	v66 = v97.Blacklisted;
 	v59 = (v51 == v23.SpymastersWeb:ID()) or (v51 == v23.ImperfectAscendancySerum) or (v51 == v23.TreacherousTransmitter) or (v51 == v23.AberrantSpellforge);
 	v60 = (v52 == v23.SpymastersWeb:ID()) or (v52 == v23.ImperfectAscendancySerum) or (v52 == v23.TreacherousTransmitter) or (v51 == v23.AberrantSpellforge);
-	local v113 = v17(v49:HasUseBuff() and (v51 ~= v23.OvinaxsMercurialEgg:ID()));
-	local v114 = v17(v50:HasUseBuff() and (v52 ~= v23.OvinaxsMercurialEgg:ID())) * (119 - (32 + 85));
-	v67 = 0 + 0 + v113 + v114;
+	local v114 = v17(v49:HasUseBuff() and (v51 ~= v23.OvinaxsMercurialEgg:ID()));
+	local v115 = v17(v50:HasUseBuff() and (v52 ~= v23.OvinaxsMercurialEgg:ID())) * (119 - (32 + 85));
+	v67 = 0 + 0 + v114 + v115;
 end
-v69();
+v70();
 v3:RegisterForEvent(function()
-	v69();
+	v70();
 end, "PLAYER_EQUIPMENT_CHANGED");
 v3:RegisterForEvent(function()
 	v46 = 2464 + 8647;
@@ -99,112 +102,112 @@ v3:RegisterForEvent(function()
 	ConvokeCD = (v22.ElunesGuidance:IsAvailable() and (410 - (87 + 263))) or (300 - (67 + 113));
 	v43 = (v22.AstralInfluence:IsAvailable() and (33 + 12)) or (98 - 58);
 end, "SPELLS_CHANGED", "LEARNED_SPELL_IN_TAB");
-local function v70(v115)
-	local v116 = 0 + 0;
-	if (v115 == v22.Wrath) then
-		v116 = 31 - 23;
+local function v71(v116)
+	local v117 = 0 + 0;
+	if (v116 == v22.Wrath) then
+		v117 = 31 - 23;
 		if v22.WildSurges:IsAvailable() then
-			v116 = v116 + (954 - (802 + 150));
+			v117 = v117 + (954 - (802 + 150));
 		end
 		if (v22.SouloftheForest:IsAvailable() and v6:BuffUp(v22.EclipseSolar)) then
-			v116 = v116 * (2.6 - 1);
+			v117 = v117 * (2.6 - 1);
 		end
-	elseif (v115 == v22.Starfire) then
-		v116 = 18 - 8;
+	elseif (v116 == v22.Starfire) then
+		v117 = 18 - 8;
 		if v22.WildSurges:IsAvailable() then
-			v116 = v116 + 2 + 0;
+			v117 = v117 + 2 + 0;
 		end
 		if v6:BuffUp(v22.WarriorofEluneBuff) then
-			v116 = v116 * (998.4 - (915 + 82));
+			v117 = v117 * (998.4 - (915 + 82));
 		end
 		if (v22.SouloftheForest:IsAvailable() and v6:BuffUp(v22.EclipseLunar)) then
-			local v142 = (2 - 1) + ((0.2 + 0) * v45);
-			if (v142 > (1.6 - 0)) then
-				v142 = 1188.6 - (1069 + 118);
+			local v143 = (2 - 1) + ((0.2 + 0) * v45);
+			if (v143 > (1.6 - 0)) then
+				v143 = 1188.6 - (1069 + 118);
 			end
-			v116 = v116 * v142;
+			v117 = v117 * v143;
 		end
-	elseif (v115 == v22.Moonfire) then
-		v116 = 13 - 7;
+	elseif (v116 == v22.Moonfire) then
+		v117 = 13 - 7;
 		if v22.MoonGuardian:IsAvailable() then
-			v116 = v116 + (3 - 1);
+			v117 = v117 + (3 - 1);
 		end
-	elseif (v115 == v22.Sunfire) then
-		v116 = 2 + 4;
-	elseif (v115 == v22.NewMoon) then
-		v116 = 17 - 7;
-	elseif (v115 == v22.HalfMoon) then
-		v116 = 20 + 0;
-	elseif (v115 == v22.FullMoon) then
-		v116 = 831 - (368 + 423);
-	elseif (v115 == v22.ForceofNature) then
-		v116 = 62 - 42;
+	elseif (v116 == v22.Sunfire) then
+		v117 = 2 + 4;
+	elseif (v116 == v22.NewMoon) then
+		v117 = 17 - 7;
+	elseif (v116 == v22.HalfMoon) then
+		v117 = 20 + 0;
+	elseif (v116 == v22.FullMoon) then
+		v117 = 831 - (368 + 423);
+	elseif (v116 == v22.ForceofNature) then
+		v117 = 62 - 42;
 	end
-	return v116;
-end
-local function v71(v117)
-	return v117:DebuffRefreshable(v22.MoonfireDebuff) and ((v117:TimeToDie() - v117:DebuffRemains(v22.MoonfireDebuff)) > (24 - (10 + 8))) and (not v22.TreantsoftheMoon:IsAvailable() or ((v45 - v22.MoonfireDebuff:AuraActiveCount()) > (22 - 16)) or ((v22.ForceofNature:CooldownRemains() > (445 - (416 + 26))) and v6:BuffDown(v22.HarmonyoftheGroveBuff)));
+	return v117;
 end
 local function v72(v118)
-	return (v118:DebuffRemains(v22.MoonfireDebuff) < (9 - 6)) and (not v22.TreantsoftheMoon:IsAvailable() or ((v22.ForceofNature:CooldownRemains() > (2 + 1)) and v6:BuffDown(v22.HarmonyoftheGroveBuff)));
+	return v118:DebuffRefreshable(v22.MoonfireDebuff) and ((v118:TimeToDie() - v118:DebuffRemains(v22.MoonfireDebuff)) > (24 - (10 + 8))) and (not v22.TreantsoftheMoon:IsAvailable() or ((v45 - v22.MoonfireDebuff:AuraActiveCount()) > (22 - 16)) or ((v22.ForceofNature:CooldownRemains() > (445 - (416 + 26))) and v6:BuffDown(v22.HarmonyoftheGroveBuff)));
 end
 local function v73(v119)
-	return v119:DebuffRefreshable(v22.MoonfireDebuff) and (not v22.TreantsoftheMoon:IsAvailable() or ((v22.ForceofNature:CooldownRemains() > (4 - 1)) and v6:BuffDown(v22.HarmonyoftheGroveBuff)));
+	return (v119:DebuffRemains(v22.MoonfireDebuff) < (9 - 6)) and (not v22.TreantsoftheMoon:IsAvailable() or ((v22.ForceofNature:CooldownRemains() > (2 + 1)) and v6:BuffDown(v22.HarmonyoftheGroveBuff)));
 end
 local function v74(v120)
-	return v120:DebuffRefreshable(v22.StellarFlareDebuff) and ((v120:TimeToDie() - v120:DebuffRemains(v22.StellarFlareDebuff)) > ((445 - (145 + 293)) + v45));
+	return v120:DebuffRefreshable(v22.MoonfireDebuff) and (not v22.TreantsoftheMoon:IsAvailable() or ((v22.ForceofNature:CooldownRemains() > (4 - 1)) and v6:BuffDown(v22.HarmonyoftheGroveBuff)));
 end
 local function v75(v121)
-	return v121:DebuffRefreshable(v22.StellarFlareDebuff) and ((v121:TimeToDie() - v121:DebuffRemains(v22.StellarFlareDebuff)) > ((437 - (44 + 386)) + v45));
+	return v121:DebuffRefreshable(v22.StellarFlareDebuff) and ((v121:TimeToDie() - v121:DebuffRemains(v22.StellarFlareDebuff)) > ((445 - (145 + 293)) + v45));
 end
 local function v76(v122)
-	return v122:DebuffRefreshable(v22.SunfireDebuff) and ((v122:TimeToDie() - v122:DebuffRemains(v22.SunfireDebuff)) > ((1492 - (998 + 488)) - (v45 / (1 + 1))));
+	return v122:DebuffRefreshable(v22.StellarFlareDebuff) and ((v122:TimeToDie() - v122:DebuffRemains(v22.StellarFlareDebuff)) > ((437 - (44 + 386)) + v45));
 end
 local function v77(v123)
-	return (v123:DebuffRemains(v22.SunfireDebuff) < (3 + 0)) or v123:DebuffRefreshable(v22.SunfireDebuff);
+	return v123:DebuffRefreshable(v22.SunfireDebuff) and ((v123:TimeToDie() - v123:DebuffRemains(v22.SunfireDebuff)) > ((1492 - (998 + 488)) - (v45 / (1 + 1))));
 end
 local function v78(v124)
-	return v124:DebuffRefreshable(v22.SunfireDebuff);
+	return (v124:DebuffRemains(v22.SunfireDebuff) < (3 + 0)) or v124:DebuffRefreshable(v22.SunfireDebuff);
 end
 local function v79(v125)
-	return v125:NPCID() == (205332 - (201 + 571));
+	return v125:DebuffRefreshable(v22.SunfireDebuff);
 end
 local function v80(v126)
-	return v126:CastSpellID() == (409943 - (116 + 1022));
+	return v126:NPCID() == (205332 - (201 + 571));
 end
-local function v81()
-	return (v12:Exists() or not v28.Balance.CursorCheck) and not v6:IsCameraBusy();
+local function v81(v127)
+	return v127:CastSpellID() == (409943 - (116 + 1022));
 end
 local function v82()
+	return (v12:Exists() or not v28.Balance.CursorCheck) and not v6:IsCameraBusy();
+end
+local function v83()
 	if v25.TargetIsValid() then
-		local v137 = 166 - 126;
-		local v138 = v6:GetEnemiesInRange(v137);
-		local v139 = 0 + 0;
-		for v140, v141 in ipairs(v138) do
-			if v141:AffectingCombat() then
-				v139 = v139 + (3 - 2);
+		local v138 = 166 - 126;
+		local v139 = v6:GetEnemiesInRange(v138);
+		local v140 = 0 + 0;
+		for v141, v142 in ipairs(v139) do
+			if v142:AffectingCombat() then
+				v140 = v140 + (3 - 2);
 			end
 		end
-		v139 = math.max(v139, 3 - 2);
-		return v139;
+		v140 = math.max(v140, 3 - 2);
+		return v140;
 	else
 		return #(v6:GetEnemiesInRange(899 - (814 + 45)));
 	end
 end
-local function v83()
+local function v84()
 	return v6:ChannelSpellID() == (964711 - 573183);
 end
-local function v84(v127, v128)
-	return (v127:gsub("{(.-)}", v128));
+local function v85(v128, v129)
+	return (v128:gsub("{(.-)}", v129));
 end
-local v85;
-local function v86(v129)
-	return (v129 ~= "Not Used") and ((((v129 == "with Cooldowns") or ((v129 == "small CDs") and v28.Balance_CDUSE.smallcdswithCooldowns) or (v129 == "with Cooldowns or AoE") or (v129 == "on Enemycount or Cooldowns") or (v129 == "on Boss or with Cooldowns")) and v15()) or (v129 == "always") or (((v129 == "on Boss only") or (v129 == "on Boss or on Enemycount") or (v129 == "on Boss or with Cooldowns")) and (v85 or v8:IsDummy())) or ((v129 == "with Bloodlust only") and v6:BloodlustUp()) or ((v129 == "small CDs") and Smallcds) or (((v129 == "on AOE") or (v129 == "with Cooldowns or AoE")) and (v45 >= (1 + 1))) or (((v129 == "on Enemycount or Cooldowns") or (v129 == "on Enemycount") or (v129 == "on Boss or on Enemycount")) and (v45 >= v28.Balance_CDUSE.Enemycount)));
-end
+local v86;
 local function v87(v130)
-	return (v85 and v28.Balance_TTD.IgnoreWhenBoss) or v25.Buggedmobs[v8:NPCID()] or (v25.ISSolo() and v28.Balance_TTD.IgnoreWhenSolo) or (v130 == (0 + 0)) or ((v47 >= v130) and (v47 < (8662 - (261 + 624))));
+	return (v130 ~= "Not Used") and ((((v130 == "with Cooldowns") or ((v130 == "small CDs") and v28.Balance_CDUSE.smallcdswithCooldowns) or (v130 == "with Cooldowns or AoE") or (v130 == "on Enemycount or Cooldowns") or (v130 == "on Boss or with Cooldowns")) and v15()) or (v130 == "always") or (((v130 == "on Boss only") or (v130 == "on Boss or on Enemycount") or (v130 == "on Boss or with Cooldowns")) and (v86 or v8:IsDummy())) or ((v130 == "with Bloodlust only") and v6:BloodlustUp()) or ((v130 == "small CDs") and Smallcds) or (((v130 == "on AOE") or (v130 == "with Cooldowns or AoE")) and (v45 >= (1 + 1))) or (((v130 == "on Enemycount or Cooldowns") or (v130 == "on Enemycount") or (v130 == "on Boss or on Enemycount")) and (v45 >= v28.Balance_CDUSE.Enemycount)));
 end
-local function v88()
+local function v88(v131)
+	return (v86 and v28.Balance_TTD.IgnoreWhenBoss) or v25.Buggedmobs[v8:NPCID()] or (v25.ISSolo() and v28.Balance_TTD.IgnoreWhenSolo) or (v131 == (0 + 0)) or ((v47 >= v131) and (v47 < (8662 - (261 + 624))));
+end
+local function v89()
 	if (v22.Regrowth:IsCastable() and not v6:IsMoving() and (v6:HealthPercentage() <= v28.Balance.Defensives.RegrowthHP)) then
 		if v16(v22.Regrowth) then
 			return "regrowth";
@@ -255,14 +258,14 @@ local function v88()
 			return "BearForm";
 		end
 	end
-	if (v22.MoonkinForm:IsCastable() and v6:BuffUp(v22.BearForm) and (v6:HealthPercentage() > v28.Balance.Defensives.MoonkinFormHP) and (v28.Balance.Defensives.MoonkinFormHP > (0 - 0))) then
+	if (v22.MoonkinForm:IsCastable() and not v69() and v6:BuffUp(v22.BearForm) and (v6:HealthPercentage() > v28.Balance.Defensives.MoonkinFormHP) and (v28.Balance.Defensives.MoonkinFormHP > (0 - 0))) then
 		if v16(v22.MoonkinForm) then
 			return "MoonkinForm";
 		end
 	end
 end
-local function v89()
-	if (v22.MoonkinForm:IsCastable() and v6:BuffDown(v22.TravelFormBuff) and v6:BuffDown(v22.BearForm) and v6:BuffDown(v22.CatForm)) then
+local function v90()
+	if (v22.MoonkinForm:IsCastable() and not v69() and v6:BuffDown(v22.TravelFormBuff) and v6:BuffDown(v22.BearForm) and v6:BuffDown(v22.CatForm)) then
 		if v16(v22.MoonkinForm) then
 			return "moonkin_form precombat";
 		end
@@ -283,7 +286,7 @@ local function v89()
 		end
 	end
 end
-local function v90()
+local function v91()
 	if (v15() and v22.Berserking:IsCastable() and v32) then
 		if v16(v22.Berserking, true) then
 			return "berserking pre_cd 4";
@@ -307,7 +310,7 @@ local function v90()
 		end
 	end
 end
-local function v91()
+local function v92()
 	if (v22.WarriorofElune:IsCastable() and IsWarriorofElune and (v22.LunarCalling:IsAvailable() or (not v22.LunarCalling:IsAvailable() and (v35 <= (6 + 1))))) then
 		if v16(v22.WarriorofElune, true) then
 			return "warrior_of_elune st 2";
@@ -324,18 +327,18 @@ local function v91()
 		end
 	end
 	if v22.Sunfire:IsCastable() then
-		if v25.CastCycle(v22.Sunfire, v44, v77, v43) then
+		if v25.CastCycle(v22.Sunfire, v44, v78, v43) then
 			return "sunfire st 2";
 		end
 	end
 	if (v22.Moonfire:IsCastable() and (not v22.ForceofNature:IsAvailable() or (v22.ForceofNature:CooldownRemains() > (1060 - (87 + 968))) or not IsForceofNature or not v22.TreantsoftheMoon:IsAvailable())) then
-		if v25.CastCycle(v22.Moonfire, v44, v72, v43) then
+		if v25.CastCycle(v22.Moonfire, v44, v73, v43) then
 			return "moonfire st 4";
 		end
 	end
-	local v131 = v90();
-	if v131 then
-		return v131;
+	local v132 = v91();
+	if v132 then
+		return v132;
 	end
 	if (v15() and v32) then
 		if (v22.CelestialAlignment:IsCastable() and IsIncarnation) then
@@ -359,7 +362,7 @@ local function v91()
 			return "starfire st 18";
 		end
 	end
-	if (v22.Starsurge:IsReady() and v43 and v32 and (v6:AstralPowerDeficit() > (v29 + v70(v22.ForceofNature)))) then
+	if (v22.Starsurge:IsReady() and v43 and v32 and (v6:AstralPowerDeficit() > (v29 + v71(v22.ForceofNature)))) then
 		if v16(v22.Starsurge) then
 			return "starsurge st 20";
 		end
@@ -385,17 +388,17 @@ local function v91()
 		end
 	end
 	if v22.Sunfire:IsCastable() then
-		if v25.CastCycle(v22.Sunfire, v44, v78, v43) then
+		if v25.CastCycle(v22.Sunfire, v44, v79, v43) then
 			return "sunfire st 30";
 		end
 	end
 	if v22.Moonfire:IsCastable() then
-		if v25.CastCycle(v22.Moonfire, v44, v73, v43) then
+		if v25.CastCycle(v22.Moonfire, v44, v74, v43) then
 			return "moonfire st 32";
 		end
 	end
 	if v22.StellarFlare:IsCastable() then
-		if v25.CastCycle(v22.StellarFlare, v44, v75, v43) then
+		if v25.CastCycle(v22.StellarFlare, v44, v76, v43) then
 			return "stellar_flare st 34";
 		end
 	end
@@ -414,17 +417,17 @@ local function v91()
 			return "starsurge st 26";
 		end
 	end
-	if (v22.NewMoon:IsCastable() and not v6:IsMoving() and ((v6:AstralPowerDeficit() > (v29 + v70(v22.NewMoon))) or (v46 < (1950 - (1869 + 61))) or (v41:CooldownRemains() > (5 + 10)))) then
+	if (v22.NewMoon:IsCastable() and not v6:IsMoving() and ((v6:AstralPowerDeficit() > (v29 + v71(v22.NewMoon))) or (v46 < (1950 - (1869 + 61))) or (v41:CooldownRemains() > (5 + 10)))) then
 		if v16(v22.NewMoon) then
 			return "new_moon st 28";
 		end
 	end
-	if (v22.HalfMoon:IsCastable() and not v6:IsMoving() and (((v6:AstralPowerDeficit() > (v29 + v70(v22.HalfMoon))) and ((v6:BuffRemains(v22.EclipseLunar) > v22.HalfMoon:ExecuteTime()) or (v6:BuffRemains(v22.EclipseSolar) > v22.HalfMoon:ExecuteTime()))) or (v46 < (70 - 50)) or (v41:CooldownRemains() > (23 - 8)))) then
+	if (v22.HalfMoon:IsCastable() and not v6:IsMoving() and (((v6:AstralPowerDeficit() > (v29 + v71(v22.HalfMoon))) and ((v6:BuffRemains(v22.EclipseLunar) > v22.HalfMoon:ExecuteTime()) or (v6:BuffRemains(v22.EclipseSolar) > v22.HalfMoon:ExecuteTime()))) or (v46 < (70 - 50)) or (v41:CooldownRemains() > (23 - 8)))) then
 		if v16(v22.HalfMoon) then
 			return "half_moon st 30";
 		end
 	end
-	if (v22.FullMoon:IsCastable() and not v6:IsMoving() and (((v6:AstralPowerDeficit() > (v29 + v70(v22.FullMoon))) and ((v6:BuffRemains(v22.EclipseLunar) > v22.FullMoon:ExecuteTime()) or (v6:BuffRemains(v22.EclipseSolar) > v22.FullMoon:ExecuteTime()))) or (v46 < (3 + 17)) or (v41:CooldownRemains() > (20 - 5)))) then
+	if (v22.FullMoon:IsCastable() and not v6:IsMoving() and (((v6:AstralPowerDeficit() > (v29 + v71(v22.FullMoon))) and ((v6:BuffRemains(v22.EclipseLunar) > v22.FullMoon:ExecuteTime()) or (v6:BuffRemains(v22.EclipseSolar) > v22.FullMoon:ExecuteTime()))) or (v46 < (3 + 17)) or (v41:CooldownRemains() > (20 - 5)))) then
 		if v16(v22.FullMoon) then
 			return "full_moon st 32";
 		end
@@ -434,7 +437,7 @@ local function v91()
 			return "starsurge st 34";
 		end
 	end
-	if (v22.Starsurge:IsReady() and UseSpender and (v6:AstralPowerDeficit() < (v29 + v70(v22.Wrath) + ((v70(v22.Starfire) + v29) * (v17(v6:BuffRemains(v22.EclipseSolar) < (v6:GCD() * (3 + 0)))))))) then
+	if (v22.Starsurge:IsReady() and UseSpender and (v6:AstralPowerDeficit() < (v29 + v71(v22.Wrath) + ((v71(v22.Starfire) + v29) * (v17(v6:BuffRemains(v22.EclipseSolar) < (v6:GCD() * (3 + 0)))))))) then
 		if v16(v22.Starsurge) then
 			return "starsurge st 38";
 		end
@@ -472,8 +475,8 @@ local function v91()
 		end
 	end
 end
-local function v92()
-	local v132 = v6:IsInDungeonArea();
+local function v93()
+	local v133 = v6:IsInDungeonArea();
 	if (v22.Wrath:IsCastable() and v43 and v36 and v34 and (v35 < v22.Wrath:CastTime())) then
 		if v16(v22.Wrath) then
 			return "wrath aoe 2";
@@ -489,18 +492,18 @@ local function v92()
 			return "starfall aoe 6";
 		end
 	end
-	if (v22.Moonfire:IsCastable() and v132) then
-		if v25.CastCycle(v22.Moonfire, v44, v71, v43) then
+	if (v22.Moonfire:IsCastable() and v133) then
+		if v25.CastCycle(v22.Moonfire, v44, v72, v43) then
 			return "moonfire aoe 2";
 		end
 	end
 	if v22.Sunfire:IsCastable() then
-		if v25.CastCycle(v22.Sunfire, v44, v76, v43) then
+		if v25.CastCycle(v22.Sunfire, v44, v77, v43) then
 			return "sunfire aoe 4";
 		end
 	end
-	if (v22.Moonfire:IsCastable() and not v132) then
-		if v25.CastCycle(v22.Moonfire, v44, v71, v43) then
+	if (v22.Moonfire:IsCastable() and not v133) then
+		if v25.CastCycle(v22.Moonfire, v44, v72, v43) then
 			return "moonfire aoe 6";
 		end
 	end
@@ -515,7 +518,7 @@ local function v92()
 		end
 	end
 	if (v22.StellarFlare:IsCastable() and (v45 < ((((449 - (262 + 176)) - v22.UmbralIntensity:TalentRank()) - ((1723 - (345 + 1376)) * v17(v22.AstralSmolder:IsAvailable()))) - v17(v22.LunarCalling:IsAvailable())))) then
-		if v25.CastCycle(v22.StellarFlare, v44, v74, v43) then
+		if v25.CastCycle(v22.StellarFlare, v44, v75, v43) then
 			return "stellar_flare aoe 8";
 		end
 	end
@@ -529,9 +532,9 @@ local function v92()
 			return "fury_of_elune aoe 12";
 		end
 	end
-	local v133 = v90();
-	if v133 then
-		return v133;
+	local v134 = v91();
+	if v134 then
+		return v134;
 	end
 	if (v15() and v32) then
 		if (v22.CelestialAlignment:IsCastable() and IsIncarnation) then
@@ -618,7 +621,7 @@ local function v92()
 		end
 	end
 end
-local function v93()
+local function v94()
 	v25.HealthPotions();
 	if v25.ShouldStopCastUpdate() then
 		v13.CastMacro(1 + 5, true);
@@ -628,33 +631,33 @@ local function v93()
 	DispelToggle = v13.ToggleIconFrame:GetToggle(677 - (534 + 141));
 	Smallcds = v13.ToggleIconFrame:GetToggle(2 + 1);
 	UseSpender = v13.ToggleIconFrame:GetToggle(4 + 0);
-	local v134 = not v6:AffectingCombat() or not v8:AffectingCombat() or v8:IsDummy();
+	local v135 = not v6:AffectingCombat() or not v8:AffectingCombat() or v8:IsDummy();
 	Enemies40Yard = v6:GetEnemiesInRange(39 + 1);
-	EnemiesRangeOOCCount = v82() or #Enemies40Yard;
+	EnemiesRangeOOCCount = v83() or #Enemies40Yard;
 	v48 = v25.UnitsinRange(v22.Regrowth);
 	v44 = v8:GetEnemiesInSplashRange(21 - 11);
 	if v14() then
-		v45 = (v134 and #Enemies40Yard) or EnemiesRangeOOCCount;
+		v45 = (v135 and #Enemies40Yard) or EnemiesRangeOOCCount;
 	else
 		v45 = 1 - 0;
 	end
-	IsRacials = v87(v28.Balance_TTD.RacialsTTD) and v86(v28.Balance_CDUSE.Racials);
-	IsPotions = v87(v28.Balance_TTD.PotionsTTD) and (v28.Balance_CDUSE.Potionswhensolo or (not v28.Balance_CDUSE.Potionswhensolo and not v25.ISSolo())) and v86(v28.Balance_CDUSE.Potions);
-	IsTrinket1 = v87(v28.Balance_TTD.TrinketsTTD) and v86(v28.Balance_CDUSE.Trinket1);
-	IsTrinket2 = v87(v28.Balance_TTD.TrinketsTTD) and v86(v28.Balance_CDUSE.Trinket2);
-	IsIncarnation = (not v22.OrbitalStrike:IsAvailable() or v81()) and v87(v28.Balance_TTD.IncarnationTTD) and v86(v28.Balance_CDUSE.Incarnation);
-	IsWarriorofElune = v87(v28.Balance_TTD.WarriorofEluneTTD) and v86(v28.Balance_CDUSE.WarriorofElune);
-	IsForceofNature = v81() and v87(v28.Balance_TTD.ForceofNatureTTD) and v86(v28.Balance_CDUSE.ForceofNature);
-	IsWildMushroom = v87(v28.Balance_TTD.WildMushroomTTD) and v86(v28.Balance_CDUSE.WildMushroom);
-	IsFuryofElune = v87(v28.Balance_TTD.FuryofEluneTTD) and v86(v28.Balance_CDUSE.FuryofElune);
-	IsConvoketheSpirits = v87(v28.Balance_TTD.ConvoketheSpiritsTTD) and v86(v28.Balance_CDUSE.ConvoketheSpirits);
+	IsRacials = v88(v28.Balance_TTD.RacialsTTD) and v87(v28.Balance_CDUSE.Racials);
+	IsPotions = v88(v28.Balance_TTD.PotionsTTD) and (v28.Balance_CDUSE.Potionswhensolo or (not v28.Balance_CDUSE.Potionswhensolo and not v25.ISSolo())) and v87(v28.Balance_CDUSE.Potions);
+	IsTrinket1 = v88(v28.Balance_TTD.TrinketsTTD) and v87(v28.Balance_CDUSE.Trinket1);
+	IsTrinket2 = v88(v28.Balance_TTD.TrinketsTTD) and v87(v28.Balance_CDUSE.Trinket2);
+	IsIncarnation = (not v22.OrbitalStrike:IsAvailable() or v82()) and v88(v28.Balance_TTD.IncarnationTTD) and v87(v28.Balance_CDUSE.Incarnation);
+	IsWarriorofElune = v88(v28.Balance_TTD.WarriorofEluneTTD) and v87(v28.Balance_CDUSE.WarriorofElune);
+	IsForceofNature = v82() and v88(v28.Balance_TTD.ForceofNatureTTD) and v87(v28.Balance_CDUSE.ForceofNature);
+	IsWildMushroom = v88(v28.Balance_TTD.WildMushroomTTD) and v87(v28.Balance_CDUSE.WildMushroom);
+	IsFuryofElune = v88(v28.Balance_TTD.FuryofEluneTTD) and v87(v28.Balance_CDUSE.FuryofElune);
+	IsConvoketheSpirits = v88(v28.Balance_TTD.ConvoketheSpiritsTTD) and v87(v28.Balance_CDUSE.ConvoketheSpirits);
 	if (v25.TargetIsValid() or (v6:AffectingCombat() and v8)) then
 		TargetinRange = v8:IsSpellInRange(v22.Wrath);
 		v46 = v3.BossFightRemains();
-		v85 = true;
+		v86 = true;
 		v47 = v46;
 		if (v47 == (31166 - 20055)) then
-			v85 = false;
+			v86 = false;
 			v47 = v3.FightRemains(v44, false);
 		end
 		v39 = (v22.IncarnationTalent:IsAvailable() and (v6:BuffUp(v22.IncarnationBuff1) or v6:BuffUp(v22.IncarnationBuff2))) or v6:BuffUp(v22.CABuff1) or v6:BuffUp(v22.CABuff2);
@@ -668,7 +671,7 @@ local function v93()
 			return "mark_of_the_wild precombat";
 		end
 	end
-	if (v22.MoonkinForm:IsCastable() and not (v6:BuffUp(v22.MoonkinForm2) or v6:BuffUp(v22.MoonkinForm1)) and v6:BuffDown(v22.TravelFormBuff) and v6:BuffDown(v22.BearForm) and v6:BuffDown(v22.CatForm) and v28.Balance.ShowMoonkinFormOOC) then
+	if (v22.MoonkinForm:IsCastable() and not v69() and v6:BuffDown(v22.TravelFormBuff) and v6:BuffDown(v22.BearForm) and v6:BuffDown(v22.CatForm) and v28.Balance.ShowMoonkinFormOOC) then
 		if v16(v22.MoonkinForm) then
 			return "moonkin_form ooc";
 		end
@@ -705,21 +708,21 @@ local function v93()
 			return "Rebirth on Mouseover";
 		end
 	end
-	v19 = v88();
+	v19 = v89();
 	if v19 then
 		return v19;
 	end
 	if (v25.TargetIsValid() and v6:BuffDown(v22.TravelFormBuff)) then
 		if (not v28.Balance.AttackonlyinCombat or (v28.Balance.AttackonlyinCombat and v8:AffectingCombat())) then
-			if not v79(v5.Target) then
+			if not v80(v5.Target) then
 				if TargetinRange then
 					if not v6:AffectingCombat() then
-						local v144 = v6:BuffDown(v22.BearForm) and v89();
-						if v144 then
-							return v144;
+						local v145 = v6:BuffDown(v22.BearForm) and v90();
+						if v145 then
+							return v145;
 						end
 					end
-					if (InterruptToggle and not v83()) then
+					if (InterruptToggle and not v84()) then
 						v19 = v25.InterruptCycle(v22.SolarBeam, 34 + 6, true, nil, false);
 						if v19 then
 							return v19;
@@ -775,9 +778,9 @@ local function v93()
 						end
 					end
 					if (v28.Commons.Enabled.Potions and (v39 or (v46 <= (1054 - (706 + 318))))) then
-						local v145 = v25.PotionSelected();
-						if (v145 and v145:IsReady() and IsPotions) then
-							v13.CastMacro(1254 - (721 + 530), nil, nil, v145);
+						local v146 = v25.PotionSelected();
+						if (v146 and v146:IsReady() and IsPotions) then
+							v13.CastMacro(1254 - (721 + 530), nil, nil, v146);
 							return "potion main 14";
 						end
 					end
@@ -828,14 +831,14 @@ local function v93()
 						end
 					end
 					if (v14() and (v45 > (1172 - (418 + 753))) and v22.Starfall:IsAvailable()) then
-						local v146 = v92();
-						if v146 then
-							return v146;
+						local v147 = v93();
+						if v147 then
+							return v147;
 						end
 					end
-					local v143 = v91();
-					if v143 then
-						return v143;
+					local v144 = v92();
+					if v144 then
+						return v144;
 					end
 					if v13.CastAnnotated(v22.Pool, false, "WAIT") then
 						return "Pool Resources";
@@ -845,13 +848,13 @@ local function v93()
 		end
 	end
 end
-local function v94()
+local function v95()
 	v13.ResetToggle();
 	v22.MoonfireDebuff:RegisterAuraTracking();
 	v28.Balance.Display();
-	local v135 = {Starlordvalue=v22.StarlordBuff:Name()};
-	local v136 = "/cancelaura {Starlordvalue}";
-	v13:UpdateMacro("macro1", v84(v136, v135));
+	local v136 = {Starlordvalue=v22.StarlordBuff:Name()};
+	local v137 = "/cancelaura {Starlordvalue}";
+	v13:UpdateMacro("macro1", v85(v137, v136));
 	v13:UpdateMacro("macro2", "/use 16");
 	v13:UpdateMacro("macro6", "/stopcasting");
 	v13.ToggleIconFrame:AddButtonCustom("I", 1 + 0, "Interrupt", "interrupt");
@@ -860,4 +863,4 @@ local function v94()
 	v13.ToggleIconFrame:AddButtonCustom("P", 2 + 2, "UseSpender", "usespender");
 	v13.Print("Balance Druid rotation has been updated for patch 11.0.2. Last Update 07.10.2024");
 end
-v13.SetAPL(631 - (406 + 123), v93, v94);
+v13.SetAPL(631 - (406 + 123), v94, v95);
