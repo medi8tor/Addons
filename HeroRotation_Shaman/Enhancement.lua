@@ -1797,11 +1797,3 @@ local function v103()
 	v30.PostInitialMessage(1468 - (902 + 303));
 end
 v11.SetAPL(576 - 313, v102, v103);
-
-
-
-
-
-
-
-
