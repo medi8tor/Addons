@@ -220,7 +220,7 @@ local function v91()
 	end
 end
 local function v92()
-	if (v25.PrimordialWave:IsReady() and v7:IsSpellInRange(v25.PrimordialWave) and IsPrimordialWave) then
+	if (v25.PrimordialWave:IsReady() and TargetInMeleeRange and IsPrimordialWave) then
 		if v12(v25.PrimordialWave) then
 			return "primordial_wave precombat 4";
 		end
@@ -247,7 +247,7 @@ local function v93()
 			return "voltaic_blaze single_open 4";
 		end
 	end
-	if (v25.PrimordialWave:IsReady() and v7:IsSpellInRange(v25.PrimordialWave) and IsPrimordialWave and (v53 >= (2 + 2)) and v7:DebuffUp(v25.FlameShockDebuff) and (v25.FlameShockDebuff:AuraActiveCount() == v20(v63, 891 - (261 + 624)))) then
+	if (v25.PrimordialWave:IsReady() and TargetInMeleeRange and IsPrimordialWave and (v53 >= (2 + 2)) and v7:DebuffUp(v25.FlameShockDebuff) and (v25.FlameShockDebuff:AuraActiveCount() == v20(v63, 891 - (261 + 624)))) then
 		if v12(v25.PrimordialWave) then
 			return "primordial_wave single_open 6";
 		end
@@ -269,8 +269,8 @@ local function v93()
 			end
 		end
 	end
-	if (v25.PrimordialStormAbility:IsCastable() and v7:IsSpellInRange(v25.PrimordialStormAbility) and (v53 >= (1089 - (1020 + 60))) and (v6:BuffUp(v25.LegacyoftheFrostWitchBuff) or not v25.LegacyoftheFrostWitch:IsAvailable())) then
-		if v12(v25.PrimordialStormAbility) then
+	if (v25.PrimordialStormAbility:IsCastable() and TargetInMeleeRange and (v53 >= (1089 - (1020 + 60))) and (v6:BuffUp(v25.LegacyoftheFrostWitchBuff) or not v25.LegacyoftheFrostWitch:IsAvailable())) then
+		if v12(v25.PrimordialWave) then
 			return "primordial_storm single_open 14";
 		end
 	end
@@ -332,8 +332,8 @@ local function v94()
 			return "Wait for SingleOpen()";
 		end
 	end
-	if (v25.PrimordialStormAbility:IsCastable() and v7:IsSpellInRange(v25.PrimordialStormAbility) and ((v53 >= (1923 - (1789 + 124))) or ((v6:BuffRemains(v25.PrimordialStormBuff) <= (770 - (745 + 21))) and (v53 >= (2 + 3))))) then
-		if v12(v25.PrimordialStormAbility) then
+	if (v25.PrimordialStormAbility:IsCastable() and TargetInMeleeRange and ((v53 >= (1923 - (1789 + 124))) or ((v6:BuffRemains(v25.PrimordialStormBuff) <= (770 - (745 + 21))) and (v53 >= (2 + 3))))) then
+		if v12(v25.PrimordialWave) then
 			return "primordial_storm single 2";
 		end
 	end
@@ -357,7 +357,7 @@ local function v94()
 			return "doom_winds single 10";
 		end
 	end
-	if (v25.PrimordialWave:IsReady() and v7:IsSpellInRange(v25.PrimordialWave) and IsPrimordialWave and (v7:DebuffDown(v25.FlameShockDebuff))) then
+	if (v25.PrimordialWave:IsReady() and TargetInMeleeRange and IsPrimordialWave and (v7:DebuffDown(v25.FlameShockDebuff))) then
 		if v12(v25.PrimordialWave) then
 			return "primordial_wave single 12";
 		end
@@ -509,7 +509,7 @@ local function v95()
 			return "surging_totem single_totemic 6";
 		end
 	end
-	if (v25.PrimordialWave:IsReady() and v7:IsSpellInRange(v25.PrimordialWave) and IsPrimordialWave) then
+	if (v25.PrimordialWave:IsReady() and TargetInMeleeRange and IsPrimordialWave) then
 		if v12(v25.PrimordialWave) then
 			return "primordial_wave single_totemic_open 8";
 		end
@@ -525,8 +525,8 @@ local function v95()
 				return "doom_winds single_totemic_open 12";
 			end
 		end
-		if (v25.PrimordialStormAbility:IsCastable() and v7:IsSpellInRange(v25.PrimordialStormAbility) and (v53 >= (1860 - (1409 + 441)))) then
-			if v12(v25.PrimordialStormAbility) then
+		if (v25.PrimordialStormAbility:IsCastable() and TargetInMeleeRange and (v53 >= (1860 - (1409 + 441)))) then
+			if v12(v25.PrimordialWave) then
 				return "primordial_storm single_totemic_open 14";
 			end
 		end
@@ -606,7 +606,7 @@ local function v96()
 			return "feral_spirit single_totemic 10";
 		end
 	end
-	if (v25.PrimordialWave:IsReady() and v7:IsSpellInRange(v25.PrimordialWave) and IsPrimordialWave and (v7:DebuffUp(v25.FlameShockDebuff))) then
+	if (v25.PrimordialWave:IsReady() and TargetInMeleeRange and IsPrimordialWave and (v7:DebuffUp(v25.FlameShockDebuff))) then
 		if v12(v25.PrimordialWave) then
 			return "primordial_wave single_totemic 12";
 		end
@@ -616,8 +616,8 @@ local function v96()
 			return "doom_winds single_totemic 14";
 		end
 	end
-	if (v25.PrimordialStormAbility:IsCastable() and v7:IsSpellInRange(v25.PrimordialStormAbility) and (v53 >= (2 + 8)) and (v6:BuffUp(v25.LegacyoftheFrostWitchBuff) or not v25.LegacyoftheFrostWitch:IsAvailable()) and ((v25.DoomWinds:CooldownRemains() >= (47 - 32)) or v6:BuffUp(v25.DoomWindsBuff))) then
-		if v12(v25.PrimordialStormAbility) then
+	if (v25.PrimordialStormAbility:IsCastable() and TargetInMeleeRange and (v53 >= (2 + 8)) and (v6:BuffUp(v25.LegacyoftheFrostWitchBuff) or not v25.LegacyoftheFrostWitch:IsAvailable()) and ((v25.DoomWinds:CooldownRemains() >= (47 - 32)) or v6:BuffUp(v25.DoomWindsBuff))) then
+		if v12(v25.PrimordialWave) then
 			return "primordial_storm single_totemic 16";
 		end
 	end
@@ -758,7 +758,7 @@ local function v97()
 			return "lava_lash aoe_open 8";
 		end
 	end
-	if (v25.PrimordialWave:IsReady() and v7:IsSpellInRange(v25.PrimordialWave) and IsPrimordialWave and (v53 >= (7 - 3)) and v7:DebuffUp(v25.FlameShockDebuff) and (v25.FlameShockDebuff:AuraActiveCount() == v20(v63, 1996 - (582 + 1408)))) then
+	if (v25.PrimordialWave:IsReady() and TargetInMeleeRange and IsPrimordialWave and (v53 >= (7 - 3)) and v7:DebuffUp(v25.FlameShockDebuff) and (v25.FlameShockDebuff:AuraActiveCount() == v20(v63, 1996 - (582 + 1408)))) then
 		if v12(v25.PrimordialWave) then
 			return "primordial_wave aoe_open 10";
 		end
@@ -780,8 +780,8 @@ local function v97()
 			return "ascendance aoe_open 16";
 		end
 	end
-	if (v25.PrimordialStormAbility:IsCastable() and v7:IsSpellInRange(v25.PrimordialStormAbility) and (v53 >= (1833 - (1195 + 629))) and (v6:BuffUp(v25.LegacyoftheFrostWitchBuff) or not v25.LegacyoftheFrostWitch:IsAvailable())) then
-		if v12(v25.PrimordialStormAbility) then
+	if (v25.PrimordialStormAbility:IsCastable() and TargetInMeleeRange and (v53 >= (1833 - (1195 + 629))) and (v6:BuffUp(v25.LegacyoftheFrostWitchBuff) or not v25.LegacyoftheFrostWitch:IsAvailable())) then
+		if v12(v25.PrimordialWave) then
 			return "primordial_storm aoe_open 18";
 		end
 	end
@@ -866,13 +866,13 @@ local function v98()
 			return "doom_winds aoe 12";
 		end
 	end
-	if (v25.PrimordialWave:IsReady() and v7:IsSpellInRange(v25.PrimordialWave) and IsPrimordialWave and (v25.FlameShockDebuff:AuraActiveCount() == v20(v63, 1 + 5))) then
+	if (v25.PrimordialWave:IsReady() and TargetInMeleeRange and IsPrimordialWave and (v25.FlameShockDebuff:AuraActiveCount() == v20(v63, 1 + 5))) then
 		if v12(v25.PrimordialWave) then
 			return "primordial_wave aoe 14";
 		end
 	end
-	if (v25.PrimordialStormAbility:IsCastable() and v7:IsSpellInRange(v25.PrimordialStormAbility) and (v53 >= (570 - (306 + 254))) and (v6:BuffUp(v25.DoomWindsBuff) or (v25.DoomWinds:CooldownRemains() > (1 + 14)) or (v6:BuffRemains(v25.PrimordialStormBuff) < (5 - 2)))) then
-		if v12(v25.PrimordialStormAbility) then
+	if (v25.PrimordialStormAbility:IsCastable() and TargetInMeleeRange and (v53 >= (570 - (306 + 254))) and (v6:BuffUp(v25.DoomWindsBuff) or (v25.DoomWinds:CooldownRemains() > (1 + 14)) or (v6:BuffRemains(v25.PrimordialStormBuff) < (5 - 2)))) then
+		if v12(v25.PrimordialWave) then
 			return "primordial_storm aoe 16";
 		end
 	end
@@ -1028,7 +1028,7 @@ local function v99()
 			return "fire_nova aoe_totemic_open 6";
 		end
 	end
-	if (v25.PrimordialWave:IsReady() and v7:IsSpellInRange(v25.PrimordialWave) and IsPrimordialWave and (v25.FlameShockDebuff:AuraActiveCount() == v20(v63, 3 + 3))) then
+	if (v25.PrimordialWave:IsReady() and TargetInMeleeRange and IsPrimordialWave and (v25.FlameShockDebuff:AuraActiveCount() == v20(v63, 3 + 3))) then
 		if v12(v25.PrimordialWave) then
 			return "primordial_wave aoe_totemic_open 8";
 		end
@@ -1048,8 +1048,8 @@ local function v99()
 			return "doom_winds aoe_totemic_open 14";
 		end
 	end
-	if (v25.PrimordialStormAbility:IsCastable() and v7:IsSpellInRange(v25.PrimordialStormAbility) and (v53 >= (3 + 7)) and v6:BuffUp(v25.LegacyoftheFrostWitchBuff)) then
-		if v12(v25.PrimordialStormAbility) then
+	if (v25.PrimordialStormAbility:IsCastable() and TargetInMeleeRange and (v53 >= (3 + 7)) and v6:BuffUp(v25.LegacyoftheFrostWitchBuff)) then
+		if v12(v25.PrimordialWave) then
 			return "primordial_storm aoe_totemic_open 16";
 		end
 	end
@@ -1141,12 +1141,12 @@ local function v100()
 			return "doom_winds aoe_totemic 12";
 		end
 	end
-	if (v25.PrimordialStormAbility:IsCastable() and v7:IsSpellInRange(v25.PrimordialStormAbility) and (v53 >= (1437 - (41 + 1386))) and (v25.DoomWinds:CooldownRemains() > (106 - (17 + 86)))) then
-		if v12(v25.PrimordialStormAbility) then
+	if (v25.PrimordialStormAbility:IsCastable() and TargetInMeleeRange and (v53 >= (1437 - (41 + 1386))) and (v25.DoomWinds:CooldownRemains() > (106 - (17 + 86)))) then
+		if v12(v25.PrimordialWave) then
 			return "primordial_storm aoe_totemic 14";
 		end
 	end
-	if (v25.PrimordialWave:IsReady() and v7:IsSpellInRange(v25.PrimordialWave) and IsPrimordialWave and (v25.FlameShockDebuff:AuraActiveCount() == v20(v63, 5 + 1))) then
+	if (v25.PrimordialWave:IsReady() and TargetInMeleeRange and IsPrimordialWave and (v25.FlameShockDebuff:AuraActiveCount() == v20(v63, 5 + 1))) then
 		if v12(v25.PrimordialWave) then
 			return "primordial_wave aoe_totemic 16";
 		end
@@ -1370,7 +1370,7 @@ local function v101()
 			return "lava_lash funnel 20";
 		end
 	end
-	if (v25.PrimordialWave:IsReady() and v7:IsSpellInRange(v25.PrimordialWave) and IsPrimordialWave and (v6:BuffDown(v25.PrimordialWaveBuff))) then
+	if (v25.PrimordialWave:IsReady() and TargetInMeleeRange and IsPrimordialWave and (v6:BuffDown(v25.PrimordialWaveBuff))) then
 		if v12(v25.PrimordialWave) then
 			return "primordial_wave funnel 22";
 		end
@@ -1726,39 +1726,19 @@ local function v102()
 						return "ancestral_call racial";
 					end
 				end
-				if (v25.PrimordialWave:IsReady() and IsPrimordialWave and v7:IsSpellInRange(v25.PrimordialWave) and (v6:HasTier(1258 - (322 + 905), 613 - (602 + 9)))) then
-					if v12(v25.PrimordialWave) then
-						return "primordial_wave main 22";
-					end
-				end
-				if (v25.FeralSpirit:IsCastable() and TargetInMeleeRange and IsFeralSpirit and (v25.ElementalSpirits:IsAvailable() or (v25.AlphaWolf:IsAvailable() and (v63 > (1190 - (449 + 740)))))) then
-					if v12(v25.FeralSpirit, true) then
-						return "feral_spirit main 24";
-					end
-				end
-				if (v25.SurgingTotem:IsReady() and IsSurgingTotem and TargetInMeleeRange) then
-					if v11.CastTarget(v25.SurgingTotem, v11.TName().PLAYER) then
-						return "surging_totem main 26";
-					end
-				end
-				if (v25.Ascendance:IsCastable() and IsAscendance and TargetInMeleeRange and v7:DebuffUp(v25.FlameShockDebuff) and (((v66 == v25.LightningBolt) and (v63 == (873 - (826 + 46)))) or ((v66 == v25.ChainLightning) and (v63 > (948 - (245 + 702)))))) then
-					if v12(v25.Ascendance) then
-						return "ascendance main 28";
-					end
-				end
-				if ((v63 < (6 - 4)) and not v25.SurgingTotem:IsAvailable()) then
+				if ((v63 < (1229 - (322 + 905))) and not v25.SurgingTotem:IsAvailable()) then
 					local v149 = v94();
 					if v149 then
 						return v149;
 					end
 				end
-				if ((v63 < (1 + 1)) and v25.SurgingTotem:IsAvailable()) then
+				if ((v63 < (613 - (602 + 9))) and v25.SurgingTotem:IsAvailable()) then
 					local v150 = v96();
 					if v150 then
 						return v150;
 					end
 				end
-				if (v13() and (v63 > (1899 - (260 + 1638)))) then
+				if (v13() and (v63 > (1190 - (449 + 740)))) then
 					if not FunnelToggle then
 						if not v25.SurgingTotem:IsAvailable() then
 							local v152 = v98();
@@ -1789,11 +1769,11 @@ local function v103()
 	v11.ResetToggle();
 	v32.Enhancement.Display();
 	v25.FlameShockDebuff:RegisterAuraTracking();
-	v11.ToggleIconFrame:AddButtonCustom("I", 441 - (382 + 58), "Interrupt", "interrupt");
-	v11.ToggleIconFrame:AddButtonCustom("D", 6 - 4, "Dispel", "dispel");
-	v11.ToggleIconFrame:AddButtonCustom("S", 3 + 0, "smallCDs", "smallcds");
-	v11.ToggleIconFrame:AddButtonCustom("P", 8 - 4, "UseSpender", "usespender");
-	v11.ToggleIconFrame:AddButtonCustom("F", 14 - 9, "Funnel", "funnel");
-	v30.PostInitialMessage(1468 - (902 + 303));
+	v11.ToggleIconFrame:AddButtonCustom("I", 873 - (826 + 46), "Interrupt", "interrupt");
+	v11.ToggleIconFrame:AddButtonCustom("D", 949 - (245 + 702), "Dispel", "dispel");
+	v11.ToggleIconFrame:AddButtonCustom("S", 9 - 6, "smallCDs", "smallcds");
+	v11.ToggleIconFrame:AddButtonCustom("P", 2 + 2, "UseSpender", "usespender");
+	v11.ToggleIconFrame:AddButtonCustom("F", 1903 - (260 + 1638), "Funnel", "funnel");
+	v30.PostInitialMessage(703 - (382 + 58));
 end
-v11.SetAPL(576 - 313, v102, v103);
+v11.SetAPL(843 - 580, v102, v103);
