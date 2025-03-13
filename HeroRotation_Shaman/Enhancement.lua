@@ -242,8 +242,8 @@ local function v93()
 			return "flame_shock single_open 2";
 		end
 	end
-	if (v25.VoltaicBlazeAbility:IsReady() and (v25.FlameShockDebuff:AuraActiveCount() < (1 + 2)) and v6:BuffDown(v25.AscendanceBuff)) then
-		if v12(v25.VoltaicBlazeAbility, nil, nil, not v7:IsSpellInRange(v25.VoltaicBlazeAbility)) then
+	if (v25.VoltaicBlazeAbility:IsReady() and v7:IsSpellInRange(v25.VoltaicBlazeAbility) and (v25.FlameShockDebuff:AuraActiveCount() < (1 + 2)) and v6:BuffDown(v25.AscendanceBuff)) then
+		if v12(v25.VoltaicBlazeAbility) then
 			return "voltaic_blaze single_open 4";
 		end
 	end
@@ -306,8 +306,8 @@ local function v93()
 			return "crash_lightning single_open 26";
 		end
 	end
-	if v25.VoltaicBlazeAbility:IsReady() then
-		if v12(v25.VoltaicBlazeAbility, nil, nil, not v7:IsSpellInRange(v25.VoltaicBlazeAbility)) then
+	if (v25.VoltaicBlazeAbility:IsReady() and v7:IsSpellInRange(v25.VoltaicBlazeAbility)) then
+		if v12(v25.VoltaicBlazeAbility) then
 			return "voltaic_blaze single_open 28";
 		end
 	end
@@ -316,14 +316,14 @@ local function v93()
 			return "lava_lash single_open 30";
 		end
 	end
-	if v25.IceStrike:IsReady() then
-		if v12(v25.IceStrike, nil, nil, not v7:IsSpellInRange(v25.IceStrike)) then
+	if (v25.IceStrike:IsReady() and v7:IsSpellInRange(v25.IceStrike)) then
+		if v12(v25.IceStrike) then
 			return "ice_strike single_open 32";
 		end
 	end
 end
 local function v94()
-	if (v3.CombatTime() < (1762 - (760 + 987))) then
+	if ((v3.CombatTime() < (1762 - (760 + 987))) and v6:AffectingCombat()) then
 		local v140 = v93();
 		if v140 then
 			return v140;
@@ -427,8 +427,8 @@ local function v94()
 			return "crash_lightning single 38";
 		end
 	end
-	if v25.VoltaicBlazeAbility:IsReady() then
-		if v12(v25.VoltaicBlazeAbility, nil, nil, not v7:IsSpellInRange(v25.VoltaicBlazeAbility)) then
+	if (v25.VoltaicBlazeAbility:IsReady() and v7:IsSpellInRange(v25.VoltaicBlazeAbility)) then
+		if v12(v25.VoltaicBlazeAbility) then
 			return "voltaic_blaze single 40";
 		end
 	end
@@ -442,8 +442,8 @@ local function v94()
 			return "lava_lash single 44";
 		end
 	end
-	if v25.IceStrike:IsReady() then
-		if v12(v25.IceStrike, nil, nil, not v7:IsSpellInRange(v25.IceStrike)) then
+	if (v25.IceStrike:IsReady() and v7:IsSpellInRange(v25.IceStrike)) then
+		if v12(v25.IceStrike) then
 			return "ice_strike single 46";
 		end
 	end
@@ -504,9 +504,9 @@ local function v95()
 			return "lava_lash single_totemic_open 4";
 		end
 	end
-	if v25.SurgingTotem:IsReady() then
-		if v12(v25.SurgingTotem) then
-			return "surging_totem single_totemic_open 6";
+	if (v25.SurgingTotem:IsReady() and IsSurgingTotem and TargetInMeleeRange) then
+		if v11.CastTarget(v25.SurgingTotem, v11.TName().PLAYER) then
+			return "surging_totem single_totemic 6";
 		end
 	end
 	if (v25.PrimordialWave:IsReady() and v7:IsSpellInRange(v25.PrimordialWave) and IsPrimordialWave) then
@@ -581,8 +581,8 @@ local function v96()
 			return "Wait for SingleTotemicOpen()";
 		end
 	end
-	if v25.SurgingTotem:IsReady() then
-		if v12(v25.SurgingTotem) then
+	if (v25.SurgingTotem:IsReady() and IsSurgingTotem and TargetInMeleeRange) then
+		if v11.CastTarget(v25.SurgingTotem, v11.TName().PLAYER) then
 			return "surging_totem single_totemic 2";
 		end
 	end
@@ -671,7 +671,7 @@ local function v96()
 			return "stormstrike single_totemic 38";
 		end
 	end
-	if (v25.LavaLash:IsReady() and (v6:BuffUp(v25.WhirlingFireBuff) or (v6:BuffStack(v25.AshenCatalystBuff) >= (404 - (115 + 281))))) then
+	if (v25.LavaLash:IsReady() and v7:IsSpellInRange(v25.LavaLash) and (v6:BuffUp(v25.WhirlingFireBuff) or (v6:BuffStack(v25.AshenCatalystBuff) >= (404 - (115 + 281))))) then
 		if v12(v25.LavaLash) then
 			return "lava_lash single_totemic 40";
 		end
@@ -686,7 +686,7 @@ local function v96()
 			return "stormstrike single_totemic 44";
 		end
 	end
-	if (v25.LavaLash:IsReady() and (v25.MoltenAssault:IsAvailable())) then
+	if (v25.LavaLash:IsReady() and v7:IsSpellInRange(v25.LavaLash) and (v25.MoltenAssault:IsAvailable())) then
 		if v12(v25.LavaLash) then
 			return "lava_lash single_totemic 46";
 		end
@@ -696,8 +696,8 @@ local function v96()
 			return "crash_lightning single_totemic 48";
 		end
 	end
-	if v25.VoltaicBlazeAbility:IsReady() then
-		if v12(v25.VoltaicBlazeAbility, nil, nil, not v7:IsSpellInRange(v25.VoltaicBlazeAbility)) then
+	if (v25.VoltaicBlazeAbility:IsReady() and v7:IsSpellInRange(v25.VoltaicBlazeAbility)) then
+		if v12(v25.VoltaicBlazeAbility) then
 			return "voltaic_blaze single_totemic 50";
 		end
 	end
@@ -706,8 +706,8 @@ local function v96()
 			return "crash_lightning single_totemic 52";
 		end
 	end
-	if (v25.IceStrike:IsReady() and (v6:BuffDown(v25.IceStrikeBuff))) then
-		if v12(v25.IceStrike, nil, nil, not v7:IsSpellInRange(v25.IceStrike)) then
+	if (v25.IceStrike:IsReady() and v7:IsSpellInRange(v25.IceStrike) and (v6:BuffDown(v25.IceStrikeBuff))) then
+		if v12(v25.IceStrike) then
 			return "ice_strike single_totemic 54";
 		end
 	end
@@ -748,12 +748,12 @@ local function v97()
 			return "crash_lightning aoe_open 4";
 		end
 	end
-	if (v25.VoltaicBlazeAbility:IsReady() and (v25.FlameShockDebuff:AuraActiveCount() < (8 - 5))) then
-		if v12(v25.VoltaicBlazeAbility, nil, nil, not v7:IsSpellInRange(v25.VoltaicBlazeAbility)) then
+	if (v25.VoltaicBlazeAbility:IsReady() and v7:IsSpellInRange(v25.VoltaicBlazeAbility) and (v25.FlameShockDebuff:AuraActiveCount() < (8 - 5))) then
+		if v12(v25.VoltaicBlazeAbility) then
 			return "voltaic_blaze aoe_open 6";
 		end
 	end
-	if (v25.LavaLash:IsReady() and v25.MoltenAssault:IsAvailable() and (v25.PrimordialWave:IsAvailable() or v25.FireNova:IsAvailable()) and (v25.FlameShockDebuff:AuraActiveCount() > (285 - (134 + 151))) and (v25.FlameShockDebuff:AuraActiveCount() < v63) and (v25.FlameShockDebuff:AuraActiveCount() < (1668 - (970 + 695)))) then
+	if (v25.LavaLash:IsReady() and v7:IsSpellInRange(v25.LavaLash) and v25.MoltenAssault:IsAvailable() and (v25.PrimordialWave:IsAvailable() or v25.FireNova:IsAvailable()) and (v25.FlameShockDebuff:AuraActiveCount() > (285 - (134 + 151))) and (v25.FlameShockDebuff:AuraActiveCount() < v63) and (v25.FlameShockDebuff:AuraActiveCount() < (1668 - (970 + 695)))) then
 		if v12(v25.LavaLash) then
 			return "lava_lash aoe_open 8";
 		end
@@ -815,8 +815,8 @@ local function v97()
 			return "crash_lightning aoe_open 30";
 		end
 	end
-	if v25.VoltaicBlazeAbility:IsReady() then
-		if v12(v25.VoltaicBlazeAbility, nil, nil, not v7:IsSpellInRange(v25.VoltaicBlazeAbility)) then
+	if (v25.VoltaicBlazeAbility:IsReady() and v7:IsSpellInRange(v25.VoltaicBlazeAbility)) then
+		if v12(v25.VoltaicBlazeAbility) then
 			return "voltaic_blaze aoe_open 32";
 		end
 	end
@@ -901,8 +901,8 @@ local function v98()
 			return "crash_lightning aoe 26";
 		end
 	end
-	if (v25.VoltaicBlazeAbility:IsReady() and (v53 <= (22 - 14))) then
-		if v12(v25.VoltaicBlazeAbility, nil, nil, not v7:IsSpellInRange(v25.VoltaicBlazeAbility)) then
+	if (v25.VoltaicBlazeAbility:IsReady() and v7:IsSpellInRange(v25.VoltaicBlazeAbility) and (v53 <= (22 - 14))) then
+		if v12(v25.VoltaicBlazeAbility) then
 			return "voltaic_blaze aoe 28";
 		end
 	end
@@ -921,18 +921,18 @@ local function v98()
 			return "stormstrike aoe 34";
 		end
 	end
-	if v25.VoltaicBlazeAbility:IsReady() then
-		if v12(v25.VoltaicBlazeAbility, nil, nil, not v7:IsSpellInRange(v25.VoltaicBlazeAbility)) then
+	if (v25.VoltaicBlazeAbility:IsReady() and v7:IsSpellInRange(v25.VoltaicBlazeAbility)) then
+		if v12(v25.VoltaicBlazeAbility) then
 			return "voltaic_blaze aoe 36";
 		end
 	end
-	if (v25.LavaLash:IsReady() and (v25.LashingFlames:IsAvailable() or (v25.MoltenAssault:IsAvailable() and (v25.FlameShockDebuff:AuraActiveCount() > (0 - 0))))) then
+	if (v25.LavaLash:IsReady() and v7:IsSpellInRange(v25.LavaLash) and (v25.LashingFlames:IsAvailable() or (v25.MoltenAssault:IsAvailable() and (v25.FlameShockDebuff:AuraActiveCount() > (0 - 0))))) then
 		if v12(v25.LavaLash) then
 			return "lava_lash aoe 38";
 		end
 	end
-	if (v25.IceStrike:IsReady() and v25.Hailstorm:IsAvailable() and v6:BuffDown(v25.IceStrikeBuff)) then
-		if v12(v25.IceStrike, nil, nil, not v7:IsSpellInRange(v25.IceStrike)) then
+	if (v25.IceStrike:IsReady() and v7:IsSpellInRange(v25.IceStrike) and v25.Hailstorm:IsAvailable() and v6:BuffDown(v25.IceStrikeBuff)) then
+		if v12(v25.IceStrike) then
 			return "ice_strike aoe 40";
 		end
 	end
@@ -976,12 +976,12 @@ local function v98()
 			return "stormstrike aoe 56";
 		end
 	end
-	if v25.IceStrike:IsReady() then
-		if v12(v25.IceStrike, nil, nil, not v7:IsSpellInRange(v25.IceStrike)) then
+	if (v25.IceStrike:IsReady() and v7:IsSpellInRange(v25.IceStrike)) then
+		if v12(v25.IceStrike) then
 			return "ice_strike aoe 58";
 		end
 	end
-	if v25.LavaLash:IsReady() then
+	if (v25.LavaLash:IsReady() and v7:IsSpellInRange(v25.LavaLash)) then
 		if v12(v25.LavaLash) then
 			return "lava_lash aoe 60";
 		end
@@ -1013,8 +1013,8 @@ local function v98()
 	end
 end
 local function v99()
-	if v25.SurgingTotem:IsReady() then
-		if v12(v25.SurgingTotem) then
+	if (v25.SurgingTotem:IsReady() and IsSurgingTotem and TargetInMeleeRange) then
+		if v11.CastTarget(v25.SurgingTotem, v11.TName().PLAYER) then
 			return "surging_totem aoe_totemic_open 2";
 		end
 	end
@@ -1085,8 +1085,8 @@ local function v99()
 			return "fire_nova aoe_totemic_open 28";
 		end
 	end
-	if v25.IceStrike:IsReady() then
-		if v12(v25.IceStrike, nil, nil, not v7:IsSpellInRange(v25.IceStrike)) then
+	if (v25.IceStrike:IsReady() and v7:IsSpellInRange(v25.IceStrike)) then
+		if v12(v25.IceStrike) then
 			return "ice_strike aoe_totemic_open 30";
 		end
 	end
@@ -1102,12 +1102,12 @@ local function v99()
 	end
 end
 local function v100()
-	if v25.SurgingTotem:IsReady() then
-		if v12(v25.SurgingTotem) then
+	if (v25.SurgingTotem:IsReady() and IsSurgingTotem and TargetInMeleeRange) then
+		if v11.CastTarget(v25.SurgingTotem, v11.TName().PLAYER) then
 			return "surging_totem aoe_totemic 2";
 		end
 	end
-	if ((v25.DoomWinds:CooldownUp() or v25.Sundering:CooldownUp() or v6:BuffDown(v25.HotHandBuff)) and (v3.CombatTime() < (42 - 27))) then
+	if ((v25.DoomWinds:CooldownUp() or v25.Sundering:CooldownUp() or v6:BuffDown(v25.HotHandBuff)) and (v3.CombatTime() < (42 - 27)) and v6:AffectingCombat()) then
 		local v143 = v99();
 		if v143 then
 			return v143;
@@ -1196,8 +1196,8 @@ local function v100()
 			return "crash_lightning aoe_totemic 34";
 		end
 	end
-	if v25.VoltaicBlazeAbility:IsReady() then
-		if v12(v25.VoltaicBlazeAbility, nil, nil, not v7:IsSpellInRange(v25.VoltaicBlazeAbility)) then
+	if (v25.VoltaicBlazeAbility:IsReady() and v7:IsSpellInRange(v25.VoltaicBlazeAbility)) then
+		if v12(v25.VoltaicBlazeAbility) then
 			return "voltaic_blaze aoe_totemic 36";
 		end
 	end
@@ -1206,7 +1206,7 @@ local function v100()
 			return "fire_nova aoe_totemic 38";
 		end
 	end
-	if (v25.LavaLash:IsReady() and v25.MoltenAssault:IsAvailable() and v7:DebuffUp(v25.FlameShockDebuff)) then
+	if (v25.LavaLash:IsReady() and v7:IsSpellInRange(v25.LavaLash) and v25.MoltenAssault:IsAvailable() and v7:DebuffUp(v25.FlameShockDebuff)) then
 		if v12(v25.LavaLash) then
 			return "lava_lash aoe_totemic 40";
 		end
@@ -1236,8 +1236,8 @@ local function v100()
 			return "crash_lightning aoe_totemic 50";
 		end
 	end
-	if (v25.IceStrike:IsReady() and v25.Hailstorm:IsAvailable() and v6:BuffDown(v25.IceStrikeBuff)) then
-		if v12(v25.IceStrike, nil, nil, not v7:IsSpellInRange(v25.IceStrike)) then
+	if (v25.IceStrike:IsReady() and v7:IsSpellInRange(v25.IceStrike) and v25.Hailstorm:IsAvailable() and v6:BuffDown(v25.IceStrikeBuff)) then
+		if v12(v25.IceStrike) then
 			return "ice_strike aoe_totemic 52";
 		end
 	end
@@ -1268,13 +1268,13 @@ local function v100()
 			return "fire_nova aoe_totemic 62";
 		end
 	end
-	if v25.VoltaicBlazeAbility:IsReady() then
-		if v12(v25.VoltaicBlazeAbility, nil, nil, not v7:IsSpellInRange(v25.VoltaicBlazeAbility)) then
+	if (v25.VoltaicBlazeAbility:IsReady() and v7:IsSpellInRange(v25.VoltaicBlazeAbility)) then
+		if v12(v25.VoltaicBlazeAbility) then
 			return "voltaic_blaze aoe_totemic 64";
 		end
 	end
-	if (v25.IceStrike:IsReady() and v25.Hailstorm:IsAvailable() and v6:BuffDown(v25.IceStrikeBuff)) then
-		if v12(v25.IceStrike, nil, nil, not v7:IsSpellInRange(v25.IceStrike)) then
+	if (v25.IceStrike:IsReady() and v7:IsSpellInRange(v25.IceStrike) and v25.Hailstorm:IsAvailable() and v6:BuffDown(v25.IceStrikeBuff)) then
+		if v12(v25.IceStrike) then
 			return "ice_strike aoe_totemic 66";
 		end
 	end
@@ -1298,12 +1298,12 @@ local function v100()
 			return "fire_nova aoe_totemic 74";
 		end
 	end
-	if v25.IceStrike:IsReady() then
-		if v12(v25.IceStrike, nil, nil, not v7:IsSpellInRange(v25.IceStrike)) then
+	if (v25.IceStrike:IsReady() and v7:IsSpellInRange(v25.IceStrike)) then
+		if v12(v25.IceStrike) then
 			return "ice_strike aoe_totemic 76";
 		end
 	end
-	if v25.LavaLash:IsReady() then
+	if (v25.LavaLash:IsReady() and v7:IsSpellInRange(v25.LavaLash)) then
 		if v12(v25.LavaLash) then
 			return "lava_lash aoe_totemic 78";
 		end
@@ -1325,8 +1325,8 @@ local function v101()
 			return "feral_spirit funnel 2";
 		end
 	end
-	if v25.SurgingTotem:IsReady() then
-		if v12(v25.SurgingTotem) then
+	if (v25.SurgingTotem:IsReady() and IsSurgingTotem and TargetInMeleeRange) then
+		if v11.CastTarget(v25.SurgingTotem, v11.TName().PLAYER) then
 			return "surging_totem funnel 4";
 		end
 	end
@@ -1365,7 +1365,7 @@ local function v101()
 			return "chain_lightning funnel 18";
 		end
 	end
-	if (v25.LavaLash:IsReady() and ((v25.MoltenAssault:IsAvailable() and v7:DebuffUp(v25.FlameShockDebuff) and (v25.FlameShockDebuff:AuraActiveCount() < v63) and (v25.FlameShockDebuff:AuraActiveCount() < (411 - (118 + 287)))) or (v25.AshenCatalyst:IsAvailable() and (v6:BuffStack(v25.AshenCatalystBuff) == v55)))) then
+	if (v25.LavaLash:IsReady() and v7:IsSpellInRange(v25.LavaLash) and ((v25.MoltenAssault:IsAvailable() and v7:DebuffUp(v25.FlameShockDebuff) and (v25.FlameShockDebuff:AuraActiveCount() < v63) and (v25.FlameShockDebuff:AuraActiveCount() < (411 - (118 + 287)))) or (v25.AshenCatalyst:IsAvailable() and (v6:BuffStack(v25.AshenCatalystBuff) == v55)))) then
 		if v12(v25.LavaLash) then
 			return "lava_lash funnel 20";
 		end
@@ -1425,8 +1425,8 @@ local function v101()
 			return "fire_nova funnel 42";
 		end
 	end
-	if (v25.IceStrike:IsReady() and v25.Hailstorm:IsAvailable() and v6:BuffDown(v25.IceStrikeBuff)) then
-		if v12(v25.IceStrike, nil, nil, not v7:IsSpellInRange(v25.IceStrike)) then
+	if (v25.IceStrike:IsReady() and v7:IsSpellInRange(v25.IceStrike) and v25.Hailstorm:IsAvailable() and v6:BuffDown(v25.IceStrikeBuff)) then
+		if v12(v25.IceStrike) then
 			return "ice_strike funnel 44";
 		end
 	end
@@ -1475,12 +1475,12 @@ local function v101()
 			return "stormstrike funnel 62";
 		end
 	end
-	if v25.IceStrike:IsReady() then
-		if v12(v25.IceStrike, nil, nil, not v7:IsSpellInRange(v25.IceStrike)) then
+	if (v25.IceStrike:IsReady() and v7:IsSpellInRange(v25.IceStrike)) then
+		if v12(v25.IceStrike) then
 			return "ice_strike funnel 64";
 		end
 	end
-	if v25.LavaLash:IsReady() then
+	if (v25.LavaLash:IsReady() and v7:IsSpellInRange(v25.LavaLash)) then
 		if v12(v25.LavaLash) then
 			return "lava_lash funnel 66";
 		end
