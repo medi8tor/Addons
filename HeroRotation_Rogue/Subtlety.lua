@@ -42,7 +42,7 @@ local v52, v53, v54, v55, v56, v57;
 local v58, v59;
 local v60, v61 = v6:GetTrinketItems();
 if ((v60:ID() == (619 - (555 + 64))) or (v61:ID() == (931 - (857 + 74)))) then
-	v28(570 - (367 + 201), function()
+	v28(573 - (367 + 201), function()
 		v60, v61 = v6:GetTrinketItems();
 	end);
 end
@@ -316,13 +316,13 @@ local function v82()
 	end
 	if v63.Commons.Enabled.Potions then
 		local v124 = v29.PotionSelected();
-		if (v124 and v124:IsReady() and (v6:BloodlustUp() or v3.BossFilteredFightRemains("<", 915 - (261 + 624)) or v6:BuffUp(v31.SymbolsofDeath)) and (v6:BuffUp(v31.ShadowBlades) or (v31.ShadowBlades:CooldownRemains() <= (17 - 7)))) then
+		if (v124 and v124:IsReady() and (v6:BloodlustUp() or v3.BossFilteredFightRemains("<", 915 - (261 + 624)) or v6:BuffUp(v31.FlagellationBuff)) and (v6:BuffUp(v31.ShadowBlades) or (v31.ShadowBlades:CooldownRemains() <= (17 - 7)))) then
 			v14.CastMacro(1083 - (1020 + 60), nil, nil, v124);
 			return "Cast Potion";
 		end
 	end
 	if (v66() and v31.SymbolsofDeath:IsReady()) then
-		if (((v6:BuffRemains(v31.SymbolsofDeath) <= (1426 - (630 + 793))) and v54 and (not v31.Flagellation:IsAvailable() or ((v31.Flagellation:CooldownRemains() >= ((101 - 71) - ((71 - 56) * v21(not v31.DeathPerception:IsAvailable())))) and (v31.SecretTechnique:CooldownRemains() <= (4 + 4))) or not v31.DeathPerception:IsAvailable())) or v3.BossFilteredFightRemains("<=", 51 - 36)) then
+		if (((v6:BuffRemains(v31.SymbolsofDeath) <= (1426 - (630 + 793))) and v54 and (not v31.Flagellation:IsAvailable() or (((v31.Flagellation:CooldownRemains() >= ((101 - 71) - ((71 - 56) * v21(not v31.DeathPerception:IsAvailable())))) or v31.Flagellation:IsReady()) and (v31.SecretTechnique:CooldownRemains() <= (4 + 4))) or not v31.DeathPerception:IsAvailable())) or v3.BossFilteredFightRemains("<=", 51 - 36)) then
 			if v18(v31.SymbolsofDeath, true) then
 				return "Cast Symbols of Death";
 			end
@@ -342,8 +342,8 @@ local function v82()
 			end
 		end
 	end
-	if (v66() and v7:IsSpellInRange(v31.Flagellation) and v31.Flagellation:IsAvailable() and v31.Flagellation:IsReady() and (v31.ShadowDance:IsReady() or v6:BuffUp(v31.ShadowDanceBuff)) and (v31.SymbolsofDeath:IsReady() or v6:BuffUp(v31.SymbolsofDeath)) and (v31.ShadowBlades:IsReady() or v6:BuffUp(v31.ShadowBlades))) then
-		if (((v49 >= (1918 - (1789 + 124))) and (v31.ShadowBlades:CooldownRemains() <= (769 - (745 + 21)))) or v3.BossFilteredFightRemains("<=", 9 + 16)) then
+	if (v66() and v7:IsSpellInRange(v31.Flagellation) and v31.Flagellation:IsAvailable() and v31.Flagellation:IsReady() and (v31.ShadowDance:IsReady() or v6:BuffUp(v31.ShadowDanceBuff)) and (v31.SymbolsofDeath:IsReady() or v6:BuffUp(v31.SymbolsofDeath)) and (v31.ShadowBlades:IsReady() or v6:BuffUp(v31.ShadowBlades) or (v31.ShadowBlades:CooldownRemains() <= (1916 - (1789 + 124))))) then
+		if ((v49 >= (771 - (745 + 21))) or v3.BossFilteredFightRemains("<=", 9 + 16)) then
 			if v18(v31.Flagellation) then
 				return "Cast Flagellation";
 			end
