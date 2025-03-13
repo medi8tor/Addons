@@ -572,7 +572,7 @@ local function v95()
 	end
 end
 local function v96()
-	if (v3.CombatTime() < (458 - (262 + 176))) then
+	if ((v3.CombatTime() < (458 - (262 + 176))) and v6:AffectingCombat()) then
 		local v141 = v95();
 		if v141 then
 			return v141;
@@ -832,7 +832,7 @@ local function v98()
 			return "feral_spirit aoe 2";
 		end
 	end
-	if (v3.CombatTime() < (5 + 10)) then
+	if ((v3.CombatTime() < (5 + 10)) and v6:AffectingCombat()) then
 		local v142 = v97();
 		if v142 then
 			return v142;
