@@ -1,0 +1,9 @@
+local v0, v1 = ...;
+local v2 = HeroLib;
+local v3 = HeroRotation();
+local v4 = HeroCache;
+local v5 = v2.Unit;
+local v6 = v5.Player;
+local v7 = v5.Target;
+local v8 = v2.Spell;
+local v9 = v2.Item;
