@@ -233,9 +233,12 @@ v6("Slider", v32, "APL.Paladin.HolyRaidSpecialHealing.HLBoth", {(0 - 0),(397 - (
 v6("Slider", v32, "APL.Paladin.HolyRaidSpecialHealing.FoLBoth", {(433 - (114 + 319)),(128 - 28),(1 - 0)}, "FoL /w Both Buffs HP", "Set the Divine Favor with Flash of Light with Favor and Infusion HP threshold.");
 v6("Slider", v32, "APL.Paladin.HolyRaidSpecialHealing.HandofDivinityHP", {(1963 - (556 + 1407)),(565 - (170 + 295)),(1 + 0)}, "Hand Of Divinity HP", "Set the Hand of Divinity HP threshold.");
 v6("Slider", v32, "APL.Paladin.HolyRaidSpecialHealing.LoHHP", {(0 + 0),(57 + 43),(1 + 0)}, "Lay on Hands HP", "Set the Lay on Hands HP threshold.");
+v6("Slider", v32, "APL.Paladin.HolyRaidSpecialHealing.AwakeningHP", {(0 - 0),(305 - 205),(1781 - (389 + 1391))}, "Awakening HP", "Set the Awakening HP threshold.");
+v6("Slider", v32, "APL.Paladin.HolyRaidSpecialHealing.AwakeningCount", {(0 + 0),(956 - (783 + 168)),(1 + 0)}, "Awakening Count", "Set the Unit Count threshold to Cast.");
+v6("Slider", v32, "APL.Paladin.HolyRaidSpecialHealing.JudgementInAC", {(0 - 0),(33 + 67),(1 + 0)}, "Judgement In AC Cast", "Set the Judgement In AC threshold.");
 v6("CheckButton", v25, "APL.Paladin.HolyTyrs.BeforeTyrs", "Hand of Divinity Before Tyr's", "Attempt to use Hand of Divinity before Tyrs");
-v6("Slider", v25, "APL.Paladin.HolyTyrs.TyrFoLHP", {(0 - 0),(305 - 205),(1781 - (389 + 1391))}, "Flash of Light with Tyrs HP", "Set the Flash of Light with Tyrs HP threshold.");
-v6("Slider", v25, "APL.Paladin.HolyTyrs.TyrHLHP", {(0 + 0),(1051 - (783 + 168)),(1 + 0)}, "Holy Light with Tyrs HP", "Set the Holy Light with Tyrs HP threshold.");
+v6("Slider", v25, "APL.Paladin.HolyTyrs.TyrFoLHP", {(0 + 0),(457 - 357),(1 - 0)}, "Flash of Light with Tyrs HP", "Set the Flash of Light with Tyrs HP threshold.");
+v6("Slider", v25, "APL.Paladin.HolyTyrs.TyrHLHP", {(0 + 0),(1795 - (556 + 1139)),(1 + 0)}, "Holy Light with Tyrs HP", "Set the Holy Light with Tyrs HP threshold.");
 v8(v32, "APL.Paladin.HolyRaidSpecialHealing");
 v8(v30, "APL.Paladin.HolyRaidAoE");
 v8(v31, "APL.Paladin.HolyRaidAoE2");

@@ -497,6 +497,16 @@ local function v117()
 				end
 			end
 		end
+		if v6:IsInRaid() then
+			if (v6:BuffUp(v24.AwakeningMaxBuff) and v18.TargetIsValid() and v7:AffectingCombat() and v6:AffectingCombat() and v6:IsInRange(8 + 22) and v24.Judgment:IsReady()) then
+				if not v24.BoV:IsAvailable() then
+					if v18.AoELogicWithCount(v38.HolyRaidSpecialHealing.AwakeningHP, v38.HolyRaidSpecialHealing.AwakeningCount, "With Logic", v36) then
+						v13.Cast(v24.Judgment);
+						return "Judgement for Awakening Proc - Higher Priority with BoV Active or Untalented";
+					end
+				end
+			end
+		end
 		if v6:AffectingCombat() then
 			if (v24.AvengingWrath:IsReady() and v18.AoELogicWithCountUnweighted(v38.AoE.AWHP, v38.AoE.AWCount, v38.Cooldowns.AWUsage, v36)) then
 				v13.Cast(v24.AvengingWrath, false);
@@ -506,7 +516,7 @@ local function v117()
 				v16(v24.AvengingCrusader, false);
 				return "Avenging Crusader Casted Per Settings";
 			end
-			if (v24.AuraMastery:IsReady() and v6:BuffDown(v24.AvengingWrathBuff) and v6:BuffDown(v24.AvengingCrusader) and (v18.GetAverageGroupHealthPercent(v36) <= (4 + 11)) and v18.AoELogicWithCountUnweighted(v38.AoE.AMHP, v38.AoE.AMCount, v38.Cooldowns.AMUsage, v36)) then
+			if (v24.AuraMastery:IsReady() and v6:BuffDown(v24.AvengingWrathBuff) and v6:BuffDown(v24.AvengingCrusader) and (v18.GetAverageGroupHealthPercent(v36) <= (41 - 26)) and v18.AoELogicWithCountUnweighted(v38.AoE.AMHP, v38.AoE.AMCount, v38.Cooldowns.AMUsage, v36)) then
 				v16(v24.AuraMastery, false);
 				return "Aura Mastery Casted Per Settings";
 			end
@@ -521,7 +531,7 @@ local function v117()
 		end
 		if not v38.Holy.ManualBeacon then
 			if (v69 ~= nil) then
-				if (v24.BoL:IsReady() and not v92 and v69:BuffDown(v24.BoL) and v69:BuffDown(v24.BoF) and (v18.BuffCount(v36, v24.BoL) < (2 - 1))) then
+				if (v24.BoL:IsReady() and not v92 and v69:BuffDown(v24.BoL) and v69:BuffDown(v24.BoF) and (v18.BuffCount(v36, v24.BoL) < (1 + 0))) then
 					v69:Cast(v24.BoL);
 					if v6:IsInRaid() then
 						v92 = true;
@@ -553,13 +563,13 @@ local function v117()
 						end
 					end
 				end
-				if ((v38.Healing.HBTank and (v70 <= (14 + 11)) and (v70 <= v38.Healing.HBHP)) or (not v38.Healing.HBTank and (v70 <= v38.Healing.HBHP))) then
+				if ((v38.Healing.HBTank and (v70 <= (35 - 10)) and (v70 <= v38.Healing.HBHP)) or (not v38.Healing.HBTank and (v70 <= v38.Healing.HBHP))) then
 					v68:Cast(v24.HolyBulwark);
 					return "Holy Bulwark";
 				end
 			end
 		end
-		if ((v24.BoV:CooldownRemains() >= (11.5 - 3)) or (v79 > (1 + 0)) or not v24.BoV:IsAvailable()) then
+		if ((v24.BoV:CooldownRemains() >= (5.5 + 3)) or (v79 > (164 - (92 + 71))) or not v24.BoV:IsAvailable()) then
 			if (v68 ~= nil) then
 				if (v24.DivineToll:IsReady() and v18.AoELogicWithCountUnweighted(v38.AoE.DivineTollHP, v38.AoE.DivineTollCount, v38.Cooldowns.DTUsage, v36)) then
 					v68:Cast(v24.DivineToll);
@@ -568,21 +578,27 @@ local function v117()
 			end
 		end
 		if v6:BuffUp(v24.AvengingCrusader) then
-			if (v79 >= (164 - (92 + 71))) then
+			if (v79 >= (1 + 0)) then
 				if (v108:IsReady() and v75 and ((v70 <= v38.Healing.WoGHP) or v76)) then
 					v68:Cast(v108);
 					return "WoG on BoV Unit During AC";
 				end
 			end
-			if (v24.Judgment:IsReady() and v7:IsInRange(15 + 15) and (v70 <= v38.SpecialHealing.JudgementInAC) and v18.TargetIsValid()) then
+			if (v24.Judgment:IsReady() and v7:IsInRange(50 - 20) and (v70 <= v38.SpecialHealing.JudgementInAC) and v18.TargetIsValid()) then
 				v16(v24.Judgment);
 				return "Judgement During AC";
 			end
-			if (v24.CrusaderStrike:IsReady() and v99 and (v70 <= (151 - 61)) and v18.TargetIsValid()) then
+			if v6:IsInRaid() then
+				if (v24.Judgment:IsReady() and v7:IsInRange(795 - (574 + 191)) and (v70 <= v38.HolyRaidSpecialHealing.JudgementInAC) and v18.TargetIsValid()) then
+					v16(v24.Judgment);
+					return "Judgement During AC";
+				end
+			end
+			if (v24.CrusaderStrike:IsReady() and v99 and (v70 <= (75 + 15)) and v18.TargetIsValid()) then
 				v16(v24.CrusaderStrike);
 				return "Crusader Strike During AC";
 			end
-			if ((v108:IsReady() and v75 and ((v6:HolyPower()) >= (770 - (574 + 191))) and (v70 <= v38.Healing.WoGHP)) or v76) then
+			if ((v108:IsReady() and v75 and ((v6:HolyPower()) >= (12 - 7)) and (v70 <= v38.Healing.WoGHP)) or v76) then
 				v68:Cast(v108);
 				return "WoG During AC";
 			end
@@ -594,26 +610,26 @@ local function v117()
 				v68:Cast(v24.HolyShock);
 				return "Holy Shock During AC";
 			end
-			if (v24.HammerofWrath:IsReady() and v7:IsInRange(25 + 5)) then
+			if (v24.HammerofWrath:IsReady() and v7:IsInRange(16 + 14)) then
 				v16(v24.HammerofWrath);
 				return " Hammer of Wrath During AC";
 			end
 		end
-		if ((v24.BoV:CooldownRemains() >= (19.5 - 11)) or (v79 > (1 + 0)) or not v24.BoV:IsAvailable()) then
-			if ((v24.DivineToll:IsAvailable() and (v24.DivineToll:CooldownRemains() < (901 - (254 + 595))) and v24.DivineResonanceTalent:IsAvailable()) or not v24.DivineResonanceTalent:IsAvailable()) then
-				if (((v6:BuffUp(v24.AwakeningBuff) and (v6:BuffStack(v24.AwakeningBuff) < (140 - (55 + 71)))) or v6:BuffDown(v24.AwakeningBuff)) and v6:BuffDown(v24.AvengingWrathBuff) and v6:BuffDown(v24.AvengingCrusader)) then
-					if (v24.HolyPrism:IsReady() and (v70 > (58 - 13)) and v7:IsInRange(1830 - (573 + 1217)) and v6:AffectingCombat() and v6:AffectingCombat() and v18.TargetIsValid() and v18.AoELogicWithCount(v38.AoE2.HPHP, v38.AoE2.HPCount, v38.Cooldowns.HPUsage, v36)) then
+		if ((v24.BoV:CooldownRemains() >= (857.5 - (254 + 595))) or (v79 > (127 - (55 + 71))) or not v24.BoV:IsAvailable()) then
+			if ((v24.DivineToll:IsAvailable() and (v24.DivineToll:CooldownRemains() < (67 - 15)) and v24.DivineResonanceTalent:IsAvailable()) or not v24.DivineResonanceTalent:IsAvailable()) then
+				if (((v6:BuffUp(v24.AwakeningBuff) and (v6:BuffStack(v24.AwakeningBuff) < (1804 - (573 + 1217)))) or v6:BuffDown(v24.AwakeningBuff)) and v6:BuffDown(v24.AvengingWrathBuff) and v6:BuffDown(v24.AvengingCrusader)) then
+					if (v24.HolyPrism:IsReady() and (v70 > (124 - 79)) and v7:IsInRange(4 + 36) and v6:AffectingCombat() and v6:AffectingCombat() and v18.TargetIsValid() and v18.AoELogicWithCount(v38.AoE2.HPHP, v38.AoE2.HPCount, v38.Cooldowns.HPUsage, v36)) then
 						v16(v24.HolyPrism);
 						return "Holy Prism on Target per Settings";
 					end
-					if (v24.HolyPrism:IsReady() and (v70 <= (124 - 79)) and v18.AoELogicWithCount(v38.AoE2.HPHP, v38.AoE2.HPCount, v38.Cooldowns.HPUsage, v36)) then
+					if (v24.HolyPrism:IsReady() and (v70 <= (72 - 27)) and v18.AoELogicWithCount(v38.AoE2.HPHP, v38.AoE2.HPCount, v38.Cooldowns.HPUsage, v36)) then
 						v68:Cast(v24.HolyPrism);
 						return "Holy Prism on Lowet Unit per Settings";
 					end
 				end
 			end
 		end
-		if (v24.HandofDivintiy:IsReady() and not v6:IsMoving() and v38.TyrSettings.BeforeTyrs and v18.AoELogicWithCount(v38.AoE.TyrsHP, v38.AoE.TyrsCount, "With Logic", v36) and ((not v6:IsInRaid() and v6:IsInParty() and (v70 >= (5 + 55))) or v6:IsInRaid())) then
+		if (v24.HandofDivintiy:IsReady() and not v6:IsMoving() and v38.TyrSettings.BeforeTyrs and v18.AoELogicWithCount(v38.AoE.TyrsHP, v38.AoE.TyrsCount, "With Logic", v36) and ((not v6:IsInRaid() and v6:IsInParty() and (v70 >= (999 - (714 + 225)))) or v6:IsInRaid())) then
 			v16(v24.HandofDivintiy);
 			return "Hand of Divinity before Tyrs";
 		end
@@ -621,11 +637,11 @@ local function v117()
 			v16(v24.TyrsDeliverance);
 			return "Tyr's based on Settings and/or Hand of Divinity Buff";
 		end
-		if (v24.HandofDivintiy:IsReady() and not v6:IsMoving() and (v70 <= v38.SpecialHealing.HandofDivinityHP) and (v70 >= (984 - (714 + 225))) and not v6:IsMoving()) then
+		if (v24.HandofDivintiy:IsReady() and not v6:IsMoving() and (v70 <= v38.SpecialHealing.HandofDivinityHP) and (v70 >= (62 - 17)) and not v6:IsMoving()) then
 			v16(v24.HandofDivintiy);
 			return "Hand of Divinity Normal";
 		end
-		if (v6:BuffUp(v24.DivineFavorBuff) and v24.FoL:IsReady() and not v6:PrevGCD(2 - 1, v24.FoL) and not v6:IsCasting() and (((v111 <= v38.SpecialHealing.FoLBoth) and v6:BuffUp(v24.Infusion)) or (v111 <= v38.SpecialHealing.FoLDFHP)) and not v6:IsMoving()) then
+		if (v6:BuffUp(v24.DivineFavorBuff) and v24.FoL:IsReady() and not v6:PrevGCD(1 + 0, v24.FoL) and not v6:IsCasting() and (((v111 <= v38.SpecialHealing.FoLBoth) and v6:BuffUp(v24.Infusion)) or (v111 <= v38.SpecialHealing.FoLDFHP)) and not v6:IsMoving()) then
 			v68:Cast(v24.FoL);
 			return "FoL for Divine Favor";
 		end
@@ -634,7 +650,7 @@ local function v117()
 			return "Holy Light for Divine Favor";
 		end
 		if (v69 ~= nil) then
-			if (not v24.HolyShock:IsReady() and (not v6:IsInRaid() or (v6:IsInRaid() and (v6:HolyPower() > (1 + 3))))) then
+			if (not v24.HolyShock:IsReady() and (not v6:IsInRaid() or (v6:IsInRaid() and (v6:HolyPower() > (810 - (118 + 688)))))) then
 				if (v24.FoL:IsReady() and not v6:IsMoving() and v6:BuffUp(v24.Infusion) and (v98 <= v38.Healing.FoLIHP)) then
 					v69:Cast(v24.FoL);
 					return "FoL Infusion Priority - Tank";
@@ -657,7 +673,7 @@ local function v117()
 				return "FoL Emergency or Infusion Priority - Unit Lowest";
 			end
 		end
-		if ((v111 >= (93 - 28)) and v6:AffectingCombat() and v24.BlessingofSummer:IsAvailable()) then
+		if ((v111 >= (113 - (25 + 23))) and v6:AffectingCombat() and v24.BlessingofSummer:IsAvailable()) then
 			if (v24.BlessingofAutumn:IsReady() and (v103 ~= nil)) then
 				v103:Cast(v24.BlessingofAutumn);
 				return "Blessing of Autmun Cast";
@@ -677,11 +693,11 @@ local function v117()
 		end
 		if (v6:BuffUp(v24.TyrsDeliverancePlayerBuff) and v24.BoundlessSalvation:IsAvailable()) then
 			if (v72 ~= nil) then
-				if (v24.HolyLight:IsReady() and v6:BuffUp(v24.HandofDivintiy) and ((v72:HealthPercentage() <= v38.TyrSettings.TyrHLHP) or (v6:BuffRemains(v24.HandofDivintiy) <= (812 - (118 + 688))))) then
+				if (v24.HolyLight:IsReady() and v6:BuffUp(v24.HandofDivintiy) and ((v72:HealthPercentage() <= v38.TyrSettings.TyrHLHP) or (v6:BuffRemains(v24.HandofDivintiy) <= (2 + 4)))) then
 					v72:Cast(v24.HolyLight);
 					return "Holy Light on Tyr's Target";
 				end
-				if (v24.HolyShock:IsReady() and (((v6:HolyPower() < (53 - (25 + 23))) and v6:BuffDown(v24.RisingSunlight)) or ((v6:HolyPower() < (1 + 2)) and v6:BuffUp(v24.RisingSunlight)))) then
+				if (v24.HolyShock:IsReady() and (((v6:HolyPower() < (1891 - (927 + 959))) and v6:BuffDown(v24.RisingSunlight)) or ((v6:HolyPower() < (10 - 7)) and v6:BuffUp(v24.RisingSunlight)))) then
 					v72:Cast(v24.HolyShock);
 					return "Holy Shock on Tyr's Target";
 				end
@@ -692,20 +708,20 @@ local function v117()
 			end
 		end
 		if (v6:BuffDown(v24.TyrsDeliverancePlayerBuff) or not v24.BoundlessSalvation:IsAvailable()) then
-			if (v24.HolyLight:IsReady() and v6:BuffUp(v24.HandofDivintiy) and ((v70 <= v38.SpecialHealing.HandofDivinityHP) or (v6:BuffRemains(v24.HandofDivintiy) <= (1892 - (927 + 959))))) then
+			if (v24.HolyLight:IsReady() and v6:BuffUp(v24.HandofDivintiy) and ((v70 <= v38.SpecialHealing.HandofDivinityHP) or (v6:BuffRemains(v24.HandofDivintiy) <= (738 - (16 + 716))))) then
 				v68:Cast(v24.HolyLight);
 				return "Holy Light with HoD";
 			end
 		end
 		if v24.VenerationTalent:IsAvailable() then
 			if ((v24.EternalFlame:IsAvailable() and not v75) or not v24.EternalFlame:IsAvailable()) then
-				if (v24.HammerofWrath:IsReady() and v7:IsInRange(101 - 71) and v18.TargetIsValid()) then
+				if (v24.HammerofWrath:IsReady() and v7:IsInRange(57 - 27) and v18.TargetIsValid()) then
 					v13.Cast(v24.HammerofWrath);
 					return "Hammer of Wrath Veneration";
 				end
 			end
 		end
-		if (v79 >= (733 - (16 + 716))) then
+		if (v79 >= (98 - (11 + 86))) then
 			if ((not v6:IsInRaid() or v6:BuffUp(v24.EmpyreanLegacy)) and v108:IsReady() and v75 and ((v70 <= v38.Healing.WoGHP) or v18.AoELogicWithCount(v38.AoE.LoDHP, v38.AoE.LoDCount, "With Logic", v36) or v76)) then
 				v68:Cast(v108);
 				return "WoG during BoV";
@@ -719,7 +735,7 @@ local function v117()
 			v68:Cast(v108);
 			return "WoG Over LoD";
 		end
-		if (v79 < (1 - 0)) then
+		if (v79 < (2 - 1)) then
 			if (v80 and v106 and v24.LoD:IsReady() and v75 and v6:BuffDown(v24.EmpyreanLegacy) and (v18.AoELogicWithCount(v38.AoE.LoDHP, v38.AoE.LoDCount, "With Logic", v36) or v76)) then
 				v16(v24.LoD);
 				return "LoD";
@@ -737,24 +753,24 @@ local function v117()
 			v83 = v42(v68, v96, v38.Healing.HolyShockHP);
 			v84 = v42(v68, v96, v38.Healing.HolyShock2HP);
 			v85 = v83 and v6:BuffDown(v24.RisingSunlight);
-			v86 = v84 and (v24.HolyShock:Charges() == (99 - (11 + 86))) and v6:BuffDown(v24.RisingSunlight);
+			v86 = v84 and (v24.HolyShock:Charges() == (287 - (175 + 110))) and v6:BuffDown(v24.RisingSunlight);
 			v87 = (v70 <= v38.Healing.HolyShockRHP) and v6:BuffUp(v24.RisingSunlight);
-			v88 = ((v6:HolyPower() < (12 - 7)) and v6:BuffDown(v24.RisingSunlight)) or ((v6:HolyPower() < (289 - (175 + 110))) and v6:BuffUp(v24.RisingSunlight)) or v38.Holy.Overcap;
+			v88 = ((v6:HolyPower() < (12 - 7)) and v6:BuffDown(v24.RisingSunlight)) or ((v6:HolyPower() < (19 - 15)) and v6:BuffUp(v24.RisingSunlight)) or v38.Holy.Overcap;
 			if ((v85 or v86 or v87) and v88) then
 				v68:Cast(v24.HolyShock);
 				return "Holy Shock Cast";
 			end
 		end
 		if (v18.TargetIsValid() and v7:AffectingCombat()) then
-			if (v24.HammerofWrath:IsReady() and v7:IsInRange(75 - 45)) then
+			if (v24.HammerofWrath:IsReady() and v7:IsInRange(1826 - (503 + 1293))) then
 				v13.Cast(v24.HammerofWrath);
 				return "Hammer of Wrath";
 			end
-			if (v24.Judgment:IsReady() and v7:IsInRange(147 - 117) and ((v70 <= (1886 - (503 + 1293))) or v6:BuffUp(v24.AwakeningMaxBuff))) then
+			if (v24.Judgment:IsReady() and v7:IsInRange(83 - 53) and ((v70 <= (66 + 24)) or v6:BuffUp(v24.AwakeningMaxBuff))) then
 				v13.Cast(v24.Judgment);
 				return "Judgement";
 			end
-			if (v24.CrusaderStrike:IsReady() and ((v6:HolyPower() < (13 - 8)) or v38.Holy.Overcap) and v99) then
+			if (v24.CrusaderStrike:IsReady() and ((v6:HolyPower() < (1066 - (810 + 251))) or v38.Holy.Overcap) and v99) then
 				v13.Cast(v24.CrusaderStrike);
 				return "Crusader Strike";
 			end
@@ -768,40 +784,40 @@ local function v117()
 			return "Holy Light For Infusion or Normal";
 		end
 	end
-	if (v18.TargetIsValid() and ((v70 >= (33 + 12)) or v107) and not v26(v7) and (v7:AffectingCombat() or (v38.Holy.AttackOOC and v89))) then
-		if (v24.Consecration:IsReady() and v7:IsInRange(1069 - (810 + 251)) and not v6:IsMoving() and (v40(v24.Consecration) <= (0 + 0))) then
+	if (v18.TargetIsValid() and ((v70 >= (32 + 13)) or v107) and not v26(v7) and (v7:AffectingCombat() or (v38.Holy.AttackOOC and v89))) then
+		if (v24.Consecration:IsReady() and v7:IsInRange(3 + 5) and not v6:IsMoving() and (v40(v24.Consecration) <= (0 + 0))) then
 			v16(v24.Consecration);
 			return "consecration priority 20";
 		end
-		if (v24.ShieldoftheRighteous:IsUsable() and v99 and (v6:HolyPower() >= (1 + 2)) and ((v6:BuffUp(v24.AvengingWrathBuff) and (v111 >= (50 + 5))) or v110 or v107)) then
+		if (v24.ShieldoftheRighteous:IsUsable() and v99 and (v6:HolyPower() >= (536 - (43 + 490))) and ((v6:BuffUp(v24.AvengingWrathBuff) and (v111 >= (788 - (711 + 22)))) or v110 or v107)) then
 			v13.Cast(v24.ShieldoftheRighteous);
 			return "shield_of_the_righteous priority 2";
 		end
-		if (v24.HammerofWrath:IsReady() and v7:IsInRange(563 - (43 + 490)) and ((v6:HolyPower() < (738 - (711 + 22))) or v38.Holy.Overcap or v107)) then
+		if (v24.HammerofWrath:IsReady() and v7:IsInRange(116 - 86) and ((v6:HolyPower() < (864 - (240 + 619))) or v38.Holy.Overcap or v107)) then
 			v16(v24.HammerofWrath);
 			return "hammer_of_wrath priority 4";
 		end
-		if (v24.DivineToll:IsReady() and v107 and v38.Holy.UseDTDPS and v7:IsInRange(154 - 114)) then
+		if (v24.DivineToll:IsReady() and v107 and v38.Holy.UseDTDPS and v7:IsInRange(10 + 30)) then
 			v16(v24.DivineToll);
 			return "Divine Toll for DPS Only";
 		end
-		if (v24.HammerofWrath:IsReady() and v7:IsInRange(889 - (240 + 619)) and ((v6:HolyPower() < (2 + 3)) or v38.Holy.Overcap or v107)) then
+		if (v24.HammerofWrath:IsReady() and v7:IsInRange(47 - 17) and ((v6:HolyPower() < (1 + 4)) or v38.Holy.Overcap or v107)) then
 			v16(v24.HammerofWrath);
 			return "hammer_of_wrath priority 14";
 		end
-		if (v24.Judgment:IsReady() and v7:IsInRange(47 - 17) and ((v6:HolyPower() < (1 + 4)) or v38.Holy.Overcap or v107)) then
+		if (v24.Judgment:IsReady() and v7:IsInRange(1774 - (1344 + 400)) and ((v6:HolyPower() < (410 - (255 + 150))) or v38.Holy.Overcap or v107)) then
 			v16(v24.Judgment);
 			return "judgment priority 16";
 		end
-		if (v24.HolyShock:IsReady() and v7:IsInRange(1784 - (1344 + 400)) and ((v38.Holy.UseHolyShockDPS and ((v6:HolyPower() < (410 - (255 + 150))) or v38.Holy.Overcap)) or v107)) then
+		if (v24.HolyShock:IsReady() and v7:IsInRange(32 + 8) and ((v38.Holy.UseHolyShockDPS and ((v6:HolyPower() < (3 + 2)) or v38.Holy.Overcap)) or v107)) then
 			v16(v24.HolyShock);
 			return "holy_shock priority 22";
 		end
-		if (v24.CrusaderStrike:IsReady() and v99 and ((v6:HolyPower() < (4 + 1)) or v38.Holy.Overcap or v107)) then
+		if (v24.CrusaderStrike:IsReady() and v99 and ((v6:HolyPower() < (21 - 16)) or v38.Holy.Overcap or v107)) then
 			v16(v24.CrusaderStrike);
 			return "crusader_strike priority 24";
 		end
-		if (v24.HolyPrism:IsReady() and ((v34 >= (2 + 0)) or v107)) then
+		if (v24.HolyPrism:IsReady() and ((v34 >= (6 - 4)) or v107)) then
 			v6:Cast(v24.HolyPrism);
 			return "holy_prism on self priority 26";
 		end
@@ -809,7 +825,7 @@ local function v117()
 end
 local function v118()
 	if (not v6:IsInRaid() and v18.ShouldStopCastUpdate()) then
-		v13.CastMacro(25 - 19, true);
+		v13.CastMacro(1745 - (404 + 1335), true);
 		return "Stop Cast For Silence";
 	end
 	local v176 = v18.HealthPotions();
@@ -824,19 +840,19 @@ local function v118()
 	end
 	if (not v6:IsMounted() and not v6:IsChanneling() and (v18.TargetIsValid() or v6:AffectingCombat() or v89)) then
 		if v90 then
-			v176 = v18.InterruptCycle(v24.Rebuke, 16 - 11, true, nil, false, false);
+			v176 = v18.InterruptCycle(v24.Rebuke, 411 - (183 + 223), true, nil, false, false);
 			if v176 then
 				return v176;
 			end
 			if (v24.Rebuke:CooldownDown() or not v24.Rebuke:IsAvailable()) then
 				if (v24.BlindingLight:IsReady() and v38.Holy.UseBL) then
-					v176 = v18.InterruptCycle(v24.BlindingLight, 1749 - (404 + 1335), false, nil, true, true);
+					v176 = v18.InterruptCycle(v24.BlindingLight, 12 - 2, false, nil, true, true);
 					if v176 then
 						return v176;
 					end
 				end
 				if v24.HammerofJustice:IsReady() then
-					v176 = v18.InterruptCycle(v24.HammerofJustice, 416 - (183 + 223), false, nil, true);
+					v176 = v18.InterruptCycle(v24.HammerofJustice, 7 + 3, false, nil, true);
 					if v176 then
 						return v176;
 					end
@@ -903,25 +919,25 @@ local function v118()
 			end
 		end
 		if (v6:IsInRaid() and v24.BlessingofFreedom:IsReady()) then
-			if (v6:DebuffUp(v11(516552 - 92057), true) or v6:DebuffUp(v11(281267 + 143230), true)) then
+			if (v6:DebuffUp(v11(152766 + 271729), true) or v6:DebuffUp(v11(424834 - (10 + 327)), true)) then
 				v6:Cast(v24.BlessingofFreedom);
 				return;
 			end
 		end
 		if (v24.Repentance:IsReady() and not v6:IsInRaid() and v6:AffectingCombat()) then
-			v176 = v18.IncorpCycle(v24.Repentance, 11 + 19, false, false);
+			v176 = v18.IncorpCycle(v24.Repentance, 21 + 9, false, false);
 			if v176 then
 				return v176;
 			end
 		end
 		if (v24.TurnEvil:IsReady() and not v6:IsInRaid() and (not v24.Repentance:IsAvailable() or v24.Repentance:CooldownDown())) then
-			v176 = v18.IncorpCycle(v24.TurnEvil, 377 - (10 + 327), false, false);
+			v176 = v18.IncorpCycle(v24.TurnEvil, 378 - (118 + 220), false, false);
 			if v176 then
 				return v176;
 			end
 		end
 		if (v38.Holy.AutoTabMelee and (v33 > (0 + 0)) and not v99 and v6:CanAttack(v7)) then
-			v13.TopPanelAlternative:ChangeIcon(339 - (118 + 220), 1 + 2);
+			v13.TopPanelAlternative:ChangeIcon(450 - (108 + 341), 2 + 1);
 			return "Auto tab to melee";
 		end
 		v176 = v115();
@@ -947,12 +963,12 @@ local function v119()
 	v13:UpdateMacro("macro1", "/use 16");
 	v13:UpdateMacro("macro2", "/hr dpsonly");
 	v13:UpdateMacro("macro6", "/stopcasting");
-	v13.ToggleIconFrame:AddButtonCustom("O", 450 - (108 + 341), "OOC", "ooc");
-	v13.ToggleIconFrame:AddButtonCustom("D", 1 + 1, "Dispel", "dispel");
-	v13.ToggleIconFrame:AddButtonCustom("K", 12 - 9, "Kick", "kick");
-	v13.ToggleIconFrame:AddButtonCustom("L", 1497 - (711 + 782), "Light of Dawn", "lightofdawn");
-	v13.ToggleIconFrame:AddButtonCustom("DP", 9 - 4, "DPS Only", "dpsonly");
-	v13.ToggleIconFrame:AddButtonCustom("S", 475 - (270 + 199), "Shield of the Righteous", "shieldoftherighteous");
+	v13.ToggleIconFrame:AddButtonCustom("O", 4 - 3, "OOC", "ooc");
+	v13.ToggleIconFrame:AddButtonCustom("D", 1495 - (711 + 782), "Dispel", "dispel");
+	v13.ToggleIconFrame:AddButtonCustom("K", 5 - 2, "Kick", "kick");
+	v13.ToggleIconFrame:AddButtonCustom("L", 473 - (270 + 199), "Light of Dawn", "lightofdawn");
+	v13.ToggleIconFrame:AddButtonCustom("DP", 2 + 3, "DPS Only", "dpsonly");
+	v13.ToggleIconFrame:AddButtonCustom("S", 1825 - (580 + 1239), "Shield of the Righteous", "shieldoftherighteous");
 	v13.Print("Holy Paladin rotation has been updated for Pre-Patch");
 end
-v13.SetAPL(22 + 43, v118, v119, v116);
+v13.SetAPL(193 - 128, v118, v119, v116);
