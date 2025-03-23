@@ -594,7 +594,7 @@ local function v117()
 				v68:Cast(v24.HolyShock);
 				return "Holy Shock During AC";
 			end
-			if (v24.HammerofWrath.IsReady() and v7:IsInRange(25 + 5) and v18.TargetIsValid()) then
+			if (v24.HammerofWrath:IsReady() and v7:IsInRange(25 + 5)) then
 				v16(v24.HammerofWrath);
 				return " Hammer of Wrath During AC";
 			end
