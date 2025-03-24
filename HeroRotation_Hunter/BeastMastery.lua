@@ -18,646 +18,662 @@ local v17 = v13.CastSuggested;
 local v18 = v13.Commons().Everyone.num;
 local v19 = v13.Commons().Everyone.bool;
 local v20 = C_Timer.After;
-local v21 = v13.Commons().Everyone;
-local v22 = v13.Commons().Hunter;
-local v23 = v13.GUISettingsGet();
-local v24 = {General=v23.General,Commons=v23.APL.Hunter.Commons,Pet=v23.APL.Hunter.BMPet,Defensives=v23.APL.Hunter.Defensives,BeastMastery=v23.APL.Hunter.BeastMastery,TTD=v23.APL.Hunter.BeastMastery_TTD};
-local v25 = v10.Hunter.BeastMastery;
-local v26 = {v25.SummonPet,v25.SummonPet2,v25.SummonPet3,v25.SummonPet4,v25.SummonPet5};
-local v27 = v11.Hunter.BeastMastery;
-local v28 = {v27.BeacontotheBeyond:ID(),v27.ManicGrieftorch:ID()};
-local v29 = v6:GetEquipment();
-local v30 = (v29[940 - (214 + 713)] and v11(v29[4 + 9])) or v11(0 + 0);
-local v31 = (v29[891 - (282 + 595)] and v11(v29[1651 - (1523 + 114)])) or v11(0 + 0);
-local v32;
+local v21 = math.max;
+local v22 = v13.Commons().Everyone;
+local v23 = v13.Commons().Hunter;
+local v24 = v13.GUISettingsGet();
+local v25 = {General=v24.General,Commons=v24.APL.Hunter.Commons,Pet=v24.APL.Hunter.BMPet,Defensives=v24.APL.Hunter.Defensives,BeastMastery=v24.APL.Hunter.BeastMastery,TTD=v24.APL.Hunter.BeastMastery_TTD};
+local v26 = v10.Hunter.BeastMastery;
+local v27 = {v26.SummonPet,v26.SummonPet2,v26.SummonPet3,v26.SummonPet4,v26.SummonPet5};
+local v28 = v11.Hunter.BeastMastery;
+local v29 = {v28.BeacontotheBeyond:ID(),v28.ManicGrieftorch:ID()};
+local v30 = v6:GetEquipment();
+local v31 = (v30[940 - (214 + 713)] and v11(v30[4 + 9])) or v11(0 + 0);
+local v32 = (v30[891 - (282 + 595)] and v11(v30[1651 - (1523 + 114)])) or v11(0 + 0);
 local v33;
-local v34 = 15839 - 4728;
-local v35 = 12176 - (68 + 997);
-local v36 = false;
+local v34;
+local v35 = 15839 - 4728;
+local v36 = 12176 - (68 + 997);
 local v37 = false;
-local v38 = 1270 - (226 + 1044);
-local v30, v31;
-local v39, v40;
-local v41, v42;
-local v43, v44;
-local v45, v46;
-local v47, v48;
-local v49, v50;
-local v51, v52, v53;
-local v54, v55;
-local v56;
-local v57;
-local v58, v59;
-local v60;
-local v61;
+local v38 = false;
+local v39 = 1270 - (226 + 1044);
+local v31, v32;
+local v40, v41;
+local v42, v43;
+local v44, v45;
+local v46, v47;
+local v48, v49;
+local v50, v51;
+local v52;
+local v53, v54, v55;
+local v56, v57;
+local v58;
+local v59;
+local v60, v61;
 local v62;
-local v63 = 0 - 0;
-local function v64()
-	local v93, v94 = v6:GetTrinketData(v28);
-	if ((v63 < (122 - (32 + 85))) and ((v93.ID == (0 + 0)) or (v94.ID == (0 + 0)) or ((v93.SpellID > (957 - (892 + 65))) and not v93.Usable) or ((v94.SpellID > (0 - 0)) and not v94.Usable))) then
-		v63 = v63 + (1 - 0);
+local v63;
+local v64;
+local v65 = (v26.BlackArrow:IsLearned() and v26.BlackArrow) or v26.KillShot;
+local v66 = (v26.BlackArrow:IsLearned() and v26.KillShotBM) or v26.KillShot;
+local v67 = 0 - 0;
+local function v68()
+	local v100, v101 = v6:GetTrinketData(v29);
+	if ((v67 < (122 - (32 + 85))) and ((v100.ID == (0 + 0)) or (v101.ID == (0 + 0)) or ((v100.SpellID > (957 - (892 + 65))) and not v100.Usable) or ((v101.SpellID > (0 - 0)) and not v101.Usable))) then
+		v67 = v67 + (1 - 0);
 		v20(8 - 3, function()
-			v64();
+			v68();
 		end);
 		return;
 	end
-	v30 = v93.Object;
-	v31 = v94.Object;
-	v41 = v93.Spell;
-	v43 = v93.Range;
-	v39 = v93.CastTime;
-	v42 = v94.Spell;
-	v44 = v94.Range;
-	v40 = v94.CastTime;
-	v45 = v93.Cooldown;
-	v46 = v94.Cooldown;
-	v47 = v93.Blacklisted;
-	v48 = v94.Blacklisted;
-	v49 = (v45 == (350 - (87 + 263))) or (v30:HasUseBuff() and (not v31:HasUseBuff() or ((not v93.ID == v27.MirrorofFracturedTomorrows:ID()) and ((v94.ID == v27.MirrorofFracturedTomorrows:ID()) or (v46 < v45) or (v40 < v39) or ((v40 == v39) and (v46 == v45)))))) or (not v30:HasUseBuff() and not v31:HasUseBuff() and ((v46 < v45) or (v40 < v39) or ((v40 == v39) and (v46 == v45))));
-	v50 = not v49;
+	v31 = v100.Object;
+	v32 = v101.Object;
+	v42 = v100.Spell;
+	v44 = v100.Range;
+	v40 = v100.CastTime;
+	v43 = v101.Spell;
+	v45 = v101.Range;
+	v41 = v101.CastTime;
+	v46 = v100.Cooldown;
+	v47 = v101.Cooldown;
+	v48 = v100.Excluded;
+	v49 = v101.Excluded;
+	v50 = (v46 == (350 - (87 + 263))) or (v31:HasUseBuff() and (not v32:HasUseBuff() or ((not v100.ID == v28.MirrorofFracturedTomorrows:ID()) and ((v101.ID == v28.MirrorofFracturedTomorrows:ID()) or (v47 < v46) or (v41 < v40) or ((v41 == v40) and (v47 == v46)))))) or (not v31:HasUseBuff() and not v32:HasUseBuff() and ((v47 < v46) or (v41 < v40) or ((v41 == v40) and (v47 == v46))));
+	v51 = not v50;
 end
-v64();
+v68();
 v3:RegisterForEvent(function()
-	v34 = 11291 - (67 + 113);
-	v35 = 8148 + 2963;
+	v35 = 11291 - (67 + 113);
+	v36 = 8148 + 2963;
 end, "PLAYER_REGEN_ENABLED");
 v3:RegisterForEvent(function()
-	v63 = 0 - 0;
-	v64();
+	v67 = 0 - 0;
+	v68();
 end, "PLAYER_EQUIPMENT_CHANGED");
-local function v65(v107)
-	return (v107 ~= "Not Used") and (((v107 == "With Cooldowns") and v13.CDsON()) or ((v107 == "With Small or Cooldowns") and (SmallCDToggle or v13.CDsON())) or ((v107 == "With Small CDs") and SmallCDToggle) or ((v107 == "On Mobcount") and (v53 >= v24.BeastMastery.Mobcount)) or ((v107 == "On Mobcount or Cooldowns") and ((v53 >= v24.BeastMastery.Mobcount) or v15())) or (v107 == "Always") or ((v107 == "On Bosses") and (v61 or v7:IsDummy())) or ((v107 == "Mobcount or Boss") and (v61 or (v53 >= v24.BeastMastery.Mobcount))) or ((v107 == "With Bloodlust only") and v6:BloodlustUp()));
+local function v69(v114)
+	return (v114 ~= "Not Used") and (((v114 == "With Cooldowns") and v13.CDsON()) or ((v114 == "With Small or Cooldowns") and (SmallCDToggle or v13.CDsON())) or ((v114 == "With Small CDs") and SmallCDToggle) or ((v114 == "On Mobcount") and (v55 >= v25.BeastMastery.Mobcount)) or ((v114 == "On Mobcount or Cooldowns") and ((v55 >= v25.BeastMastery.Mobcount) or v15())) or (v114 == "Always") or ((v114 == "On Bosses") and (v63 or v7:IsDummy())) or ((v114 == "Mobcount or Boss") and (v63 or (v55 >= v25.BeastMastery.Mobcount))) or ((v114 == "With Bloodlust only") and v6:BloodlustUp()));
 end
-local function v66(v108, v109, v110)
-	if ((v61 and ((v24.TTD.IgnoreTTD and v6:IsInDungeonArea()) or v6:IsInRaidArea())) or v21.ISSolo() or (v110 == (0 + 0)) or ((v35 >= v110) and (v35 < (30909 - 23132)))) then
-		v13.Cast(v108, v109);
-		return "TTD cast " .. v108:Name();
+local function v70(v115, v116, v117)
+	if ((v63 and ((v25.TTD.IgnoreTTD and v6:IsInDungeonArea()) or v6:IsInRaidArea())) or v22.ISSolo() or (v117 == (0 + 0)) or ((v36 >= v117) and (v36 < (30909 - 23132)))) then
+		v13.Cast(v115, v116);
+		return "TTD cast " .. v115:Name();
 	end
 end
-local function v67(v111)
-	return (v61 and ((v24.TTD.IgnoreTTD and v6:IsInDungeonArea()) or v6:IsInRaidArea())) or v21.ISSolo() or (v111 == (952 - (802 + 150))) or v21.Buggedmobs[v7:NPCID()] or ((v35 >= v111) and (v35 < (20938 - 13161)));
+local function v71(v118)
+	return (v63 and ((v25.TTD.IgnoreTTD and v6:IsInDungeonArea()) or v6:IsInRaidArea())) or v22.ISSolo() or (v118 == (952 - (802 + 150))) or v22.Buggedmobs[v7:NPCID()] or ((v36 >= v118) and (v36 < (20938 - 13161)));
 end
-local v68 = {{v25.Intimidation,"Cast Intimidation (Interrupt)",function()
+local v72 = {{v26.Intimidation,"Cast Intimidation (Interrupt)",function()
 	return true;
 end}};
-local function v69(v112)
-	return (v112:HealthPercentage() > (0 + 0)) and (v112:HealthPercentage() <= (26 - 6)) and (v6:Focus() >= (1197 - (1069 + 118))) and v8:IsSpellInRange(v25.KillShot);
+local function v73(v119)
+	return (v119:HealthPercentage() > (0 + 0)) and (v119:HealthPercentage() <= (26 - 6)) and (v6:Focus() >= (1197 - (1069 + 118))) and v119:IsSpellInRange(v26.BlackArrow);
 end
-function GetTankUnit(v113)
-	local v114 = nil;
-	for v130, v131 in pairs(v113) do
-		if (v131:Role() == "TANK") then
-			v114 = v131;
+function GetTankUnit(v120)
+	local v121 = nil;
+	for v140, v141 in pairs(v120) do
+		if (v141:Role() == "TANK") then
+			v121 = v141;
 			break;
 		end
 	end
-	return v114;
+	return v121;
 end
-local function v70()
-	return v27.ManicGrieftorch:IsEquipped() and (v27.ManicGrieftorch:CooldownUp() or (v27.ManicGrieftorch:CooldownRemains() <= v6:GCDRemains()));
+local function v74()
+	return v6:BuffUp(v26.HowlBearBuff) or v6:BuffUp(v26.HowlBoarBuff) or v6:BuffUp(v26.HowlWyvernBuff);
 end
-local function v71()
-	return v27.AlgetharPuzzleBox:IsEquipped() and (v27.AlgetharPuzzleBox:CooldownUp() or (v27.AlgetharPuzzleBox:CooldownRemains() <= v6:GCDRemains()));
+local function v75()
+	return v28.ManicGrieftorch:IsEquipped() and (v28.ManicGrieftorch:CooldownUp() or (v28.ManicGrieftorch:CooldownRemains() <= v6:GCDRemains()));
 end
-local function v72(v115)
-	return v6:BuffUp(v25.HuntersPreyBuff) or ((v6:Focus() >= (22 - 12)) and (v115:HealthPercentage() <= (43 - 23)) and (v115:HealthPercentage() > (0 + 0)));
+local function v76()
+	return v28.AlgetharPuzzleBox:IsEquipped() and (v28.AlgetharPuzzleBox:CooldownUp() or (v28.AlgetharPuzzleBox:CooldownRemains() <= v6:GCDRemains()));
 end
-local function v73(v116)
-	return (v116:DebuffRemains(v25.BarbedShotDebuff));
+local function v77(v122)
+	return v6:BuffUp(v26.HuntersPreyBuff) or ((v6:Focus() >= (22 - 12)) and (v122:HealthPercentage() <= (43 - 23)) and (v122:HealthPercentage() > (0 + 0))) or (v26.BlackArrow:IsLearned() and (v122:HealthPercentage() >= (142 - 62))) or v7:IsDummy();
 end
-local function v74(v117)
-	return (v117:DebuffStack(v25.LatentPoisonDebuff));
+local function v78(v123)
+	return v123:DebuffRefreshable(v26.SerpentStingDebuff);
 end
-local function v75(v118)
-	return (v118:DebuffRemains(v25.SerpentStingDebuff));
+local function v79(v124)
+	return (v124:DebuffRemains(v26.BarbedShotDebuff));
 end
-local function v76(v119)
-	return (v119:TimeToDie() > (8 - 3)) and (v119:TimeToDie() < (7715 + 62)) and ((v9:BuffUp(v25.FrenzyPetBuff) and (v9:BuffRemains(v25.FrenzyPetBuff) <= (v33 + (791.25 - (368 + 423))))) or ((v9:BuffStack(v25.FrenzyPetBuff) < (9 - 6)) and ((v25.BestialWrath:CooldownUp() and (v9:BuffDown(v25.FrenzyPetBuff) or v25.ScentofBlood:IsAvailable())) or (v25.CalloftheWild:IsAvailable() and v25.CalloftheWild:CooldownUp()))));
+local function v80(v125)
+	return (v125:DebuffStack(v26.LatentPoisonDebuff));
 end
-local function v77(v120)
-	return (v120:TimeToDie() > (23 - (10 + 8))) and (v120:TimeToDie() < (29916 - 22139)) and ((v9:BuffUp(v25.FrenzyPetBuff) and (v9:BuffRemains(v25.FrenzyPetBuff) <= (v33 + (442.25 - (416 + 26))))) or (v25.ScentofBlood:IsAvailable() and (v25.BestialWrath:CooldownRemains() < ((38 - 26) + v33))) or ((v9:BuffStack(v25.FrenzyPetBuff) < (2 + 1)) and (v25.BestialWrath:CooldownUp() or v25.CalloftheWild:CooldownUp())) or ((v25.BarbedShot:FullRechargeTime() < v33) and v25.BestialWrath:CooldownDown()));
+local function v81(v126)
+	return (v126:DebuffRemains(v26.SerpentStingDebuff));
 end
-local function v78(v121)
-	return (v121:TimeToDie() > (8 - 3)) and (v121:TimeToDie() < (8215 - (145 + 293))) and (v121:DebuffStack(v25.LatentPoisonDebuff) > (439 - (44 + 386))) and (v6:BuffUp(v25.CalloftheWildBuff) or (v35 < (1495 - (998 + 488))) or (v25.WildCall:IsAvailable() and (v25.BarbedShot:ChargesFractional() > (1.2 + 0))) or v25.Savagery:IsAvailable());
+local function v82(v127)
+	return (v127:TimeToDie() > (5 + 0)) and (v127:TimeToDie() < (8568 - (368 + 423))) and ((v9:BuffUp(v26.FrenzyPetBuff) and (v9:BuffRemains(v26.FrenzyPetBuff) <= (v34 + (0.25 - 0)))) or ((v9:BuffStack(v26.FrenzyPetBuff) < (21 - (10 + 8))) and ((v26.BestialWrath:CooldownUp() and (v9:BuffDown(v26.FrenzyPetBuff) or v26.ScentofBlood:IsAvailable())) or (v26.CalloftheWild:IsAvailable() and v26.CalloftheWild:CooldownUp()))));
 end
-local function v79(v122)
-	return (v122:TimeToDie() > (5 + 0)) and (v122:TimeToDie() < (8549 - (201 + 571))) and (v122:TimeToDie() > (1143 - (116 + 1022))) and (v122:TimeToDie() < (32377 - 24600)) and (v6:BuffUp(v25.CalloftheWildBuff) or (v35 < (6 + 3)) or (v25.WildCall:IsAvailable() and (v25.BarbedShot:ChargesFractional() > (3.2 - 2))) or v25.Savagery:IsAvailable());
+local function v83(v128)
+	return (v128:TimeToDie() > (19 - 14)) and (v128:TimeToDie() < (8219 - (416 + 26))) and ((v9:BuffUp(v26.FrenzyPetBuff) and (v9:BuffRemains(v26.FrenzyPetBuff) <= (v34 + (0.25 - 0)))) or (v26.ScentofBlood:IsAvailable() and (v26.BestialWrath:CooldownRemains() < (6 + 6 + v34))) or ((v9:BuffStack(v26.FrenzyPetBuff) < (4 - 1)) and (v26.BestialWrath:CooldownUp() or v26.CalloftheWild:CooldownUp())) or ((v26.BarbedShot:FullRechargeTime() < v34) and v26.BestialWrath:CooldownDown()));
 end
-local function v80(v123)
-	return v123:DebuffRefreshable(v25.SerpentStingDebuff) and (v123:TimeToDie() > v25.SerpentStingDebuff:BaseDuration());
+local function v84(v129)
+	return (v129:TimeToDie() > (443 - (145 + 293))) and (v129:TimeToDie() < (8207 - (44 + 386))) and (v129:DebuffStack(v26.LatentPoisonDebuff) > (1495 - (998 + 488))) and (v6:BuffUp(v26.CalloftheWildBuff) or (v36 < (3 + 6)) or (v26.WildCall:IsAvailable() and (v26.BarbedShot:ChargesFractional() > (1.2 + 0))) or v26.Savagery:IsAvailable());
 end
-local function v81(v124)
-	return (v9:BuffUp(v25.FrenzyPetBuff) and (v9:BuffRemains(v25.FrenzyPetBuff) <= (v33 + (0.25 - 0)))) or (v25.ScentofBlood:IsAvailable() and (v9:BuffStack(v25.FrenzyPetBuff) < (862 - (814 + 45))) and (v25.BestialWrath:CooldownUp() or v25.CalloftheWild:CooldownUp()));
+local function v85(v130)
+	return (v130:TimeToDie() > (777 - (201 + 571))) and (v130:TimeToDie() < (8915 - (116 + 1022))) and (v130:TimeToDie() > (20 - 15)) and (v130:TimeToDie() < (4565 + 3212)) and (v6:BuffUp(v26.CalloftheWildBuff) or (v36 < (32 - 23)) or (v26.WildCall:IsAvailable() and (v26.BarbedShot:ChargesFractional() > (3.2 - 2))) or v26.Savagery:IsAvailable());
 end
-local function v82(v125)
-	return (v25.WildCall:IsAvailable() and (v25.BarbedShot:ChargesFractional() > (2.4 - 1))) or v6:BuffUp(v25.CalloftheWildBuff) or ((v25.BarbedShot:FullRechargeTime() < v33) and v25.BestialWrath:CooldownDown()) or (v25.ScentofBlood:IsAvailable() and (v25.BestialWrath:CooldownRemains() < (1 + 11 + v33))) or v25.Savagery:IsAvailable() or (v35 < (4 + 5));
+local function v86(v131)
+	return (v18((v131:HealthPercentage() < (894 - (814 + 45))) or not v26.KillerInstinct:IsAvailable()) * (4 - 2)) + v18(v131:DebuffRefreshable(v26.AMurderofCrows));
 end
-local function v83(v126)
-	return v126:DebuffRefreshable(v25.SerpentStingDebuff) and (v7:TimeToDie() > v25.SerpentStingDebuff:BaseDuration());
+local function v87(v132)
+	return v132:DebuffRefreshable(v26.SerpentStingDebuff) and (v132:TimeToDie() > v26.SerpentStingDebuff:BaseDuration());
 end
-local function v84(v127)
-	return (v127:DebuffRemains(v25.SerpentStingDebuff) < v6:GCD()) and (v127:TimeToDie() > (895 - (261 + 624)));
+local function v88(v133)
+	return (v9:BuffUp(v26.FrenzyPetBuff) and (v9:BuffRemains(v26.FrenzyPetBuff) <= (v34 + 0.25 + 0))) or (v26.ScentofBlood:IsAvailable() and (v9:BuffStack(v26.FrenzyPetBuff) < (2 + 1)) and (v26.BestialWrath:CooldownUp() or v26.CalloftheWild:CooldownUp()));
 end
-local function v85(v128)
-	return v128:DebuffRefreshable(v25.SerpentStingDebuff);
+local function v89(v134)
+	return (v26.WildCall:IsAvailable() and (v26.BarbedShot:ChargesFractional() > (886.4 - (261 + 624)))) or v6:BuffUp(v26.CalloftheWildBuff) or ((v26.BarbedShot:FullRechargeTime() < v34) and v26.BestialWrath:CooldownDown()) or (v26.ScentofBlood:IsAvailable() and (v26.BestialWrath:CooldownRemains() < ((21 - 9) + v34))) or v26.BarbedScales:IsAvailable() or v26.Savagery:IsAvailable() or (v36 < (1089 - (1020 + 60)));
+end
+local function v90(v135)
+	return v135:DebuffRefreshable(v26.SerpentStingDebuff) and (v7:TimeToDie() > v26.SerpentStingDebuff:BaseDuration());
+end
+local function v91(v136)
+	return (v136:DebuffRemains(v26.SerpentStingDebuff) < v6:GCD()) and (v136:TimeToDie() > (1433 - (630 + 793)));
+end
+local function v92(v137)
+	return v137:DebuffRefreshable(v26.SerpentStingDebuff);
 end
 function CombatCheck()
-	return v21.TargetIsValid() and (v7:AffectingCombat() or ((v24.Commons.AttackOutOfCombat == "Solo") and v21.ISSolo()) or (v24.Commons.AttackOutOfCombat == "Always"));
+	return v22.TargetIsValid() and (v7:AffectingCombat() or ((v25.Commons.AttackOutOfCombat == "Solo") and v22.ISSolo()) or (v25.Commons.AttackOutOfCombat == "Always"));
 end
-local function v86()
-	if (v25.BarbedShot:IsCastable() and v7:IsInRange(71 - 31) and v7:IsSpellInRange(v25.BarbedShot) and (v25.BarbedShot:Charges() >= (1082 - (1020 + 60)))) then
-		if v16(v25.BarbedShot) then
+local function v93()
+	if (v26.BestialWrath:IsCastable() and BestialWrathSetting and v7:IsInRange(135 - 95)) then
+		if v16(v26.BestialWrath) then
+			return "bestial_wrath precombat 4";
+		end
+	end
+	if (v26.BarbedShot:IsCastable() and v7:IsInRange(189 - 149) and v7:IsSpellInRange(v26.BarbedShot) and (v26.BarbedShot:Charges() >= (1 + 1))) then
+		if v16(v26.BarbedShot) then
 			return "barbed_shot precombat 8";
 		end
 	end
-	if (v25.KillShot:IsCastable() and v7:IsSpellInRange(v25.KillShot)) then
-		if v21.CastCycle(v25.KillShot, v51, v72, 1463 - (630 + 793), false, false, KillShotTab) then
+	if (v65:IsReady() and v7:IsSpellInRange(v26.KillShot)) then
+		if v22.CastCycle(v66, v53, v77, 137 - 97, false, false, false) then
 			return "kill_shot precombat 10";
 		end
 	end
-	if (v25.KillCommand:IsReady() and v7:IsSpellInRange(v25.KillCommand) and v7:IsSpellInRange(v25.KillCommand) and v62 and v56) then
-		if v16(v25.KillCommand) then
+	if (v26.KillCommand:IsReady() and v7:IsSpellInRange(v26.KillCommand) and v64 and v58) then
+		if v16(v26.KillCommand) then
 			return "kill_command precombat 12";
 		end
 	end
-	if (v53 > (3 - 2)) then
-		if (v25.MultiShot:IsReady() and v7:IsInRange(189 - 149) and v7:IsSpellInRange(v25.MultiShot)) then
-			if v16(v25.MultiShot) then
+	if (v55 > (1748 - (760 + 987))) then
+		if (v26.MultiShot:IsReady() and v7:IsInRange(1953 - (1789 + 124)) and v7:IsSpellInRange(v26.MultiShot)) then
+			if v16(v26.MultiShot) then
 				return "multishot precombat 14";
 			end
 		end
-	elseif (v25.CobraShot:IsReady() and v7:IsInRange(16 + 24) and v7:IsSpellInRange(v25.CobraShot)) then
-		if v16(v25.CobraShot) then
+	elseif (v26.CobraShot:IsReady() and v7:IsInRange(806 - (745 + 21)) and v7:IsSpellInRange(v26.CobraShot)) then
+		if v16(v26.CobraShot) then
 			return "cobra_shot precombat 16";
 		end
 	end
 end
-local function v87()
-	if (v25.Berserking:IsCastable() and RacialsSetting and v67(v24.TTD.RacialsTTD) and (v6:BuffUp(v25.CalloftheWildBuff) or (not v25.CalloftheWild:IsAvailable() and v6:BuffUp(v25.BestialWrathBuff)) or (v34 < (44 - 31))) and v7:IsInRange(1787 - (760 + 987))) then
-		if v16(v25.Berserking) then
+local function v94()
+	if (v26.Berserking:IsCastable() and RacialsSetting and v71(v25.TTD.RacialsTTD) and (v6:BuffUp(v26.CalloftheWildBuff) or (v26.Bloodshed:IsAvailable() and v6:PrevGCD(1 + 0, v26.Bloodshed)) or (not v26.CalloftheWild:IsAvailable() and v6:BuffUp(v26.BestialWrathBuff)) or (v35 < (35 - 22))) and v7:IsInRange(156 - 116)) then
+		if v16(v26.Berserking) then
 			return "Berserking";
 		end
 	end
-	if (v25.BloodFury:IsCastable() and RacialsSetting and v67(v24.TTD.RacialsTTD) and (v6:BuffUp(v25.CalloftheWildBuff) or (not v25.CalloftheWild:IsAvailable() and v6:BuffUp(v25.BestialWrathBuff)) or (v34 < (1929 - (1789 + 124)))) and v7:IsInRange(806 - (745 + 21))) then
-		if v16(v25.BloodFury) then
+	if (v26.BloodFury:IsCastable() and RacialsSetting and v71(v25.TTD.RacialsTTD) and (v6:BuffUp(v26.CalloftheWildBuff) or (v26.Bloodshed:IsAvailable() and v6:PrevGCD(1 + 0, v26.Bloodshed)) or (not v26.CalloftheWild:IsAvailable() and v6:BuffUp(v26.BestialWrathBuff)) or (v35 < (13 + 3))) and v7:IsInRange(1095 - (87 + 968))) then
+		if v16(v26.BloodFury) then
 			return "BloodFury";
 		end
 	end
-	if (v25.AncestralCall:IsCastable() and RacialsSetting and v67(v24.TTD.RacialsTTD) and (v6:BuffUp(v25.CalloftheWildBuff) or (not v25.CalloftheWild:IsAvailable() and v6:BuffUp(v25.BestialWrathBuff)) or (v34 < (6 + 10))) and v7:IsInRange(110 - 70)) then
-		if v16(v25.AncestralCall) then
+	if (v26.AncestralCall:IsCastable() and RacialsSetting and v71(v25.TTD.RacialsTTD) and (v6:BuffUp(v26.CalloftheWildBuff) or (v26.Bloodshed:IsAvailable() and v6:PrevGCD(4 - 3, v26.Bloodshed)) or (not v26.CalloftheWild:IsAvailable() and v6:BuffUp(v26.BestialWrathBuff)) or (v35 < (15 + 1))) and v7:IsInRange(90 - 50)) then
+		if v16(v26.AncestralCall) then
 			return "AncestralCall";
 		end
 	end
-	if (v25.Fireblood:IsCastable() and RacialsSetting and v67(v24.TTD.RacialsTTD) and (v6:BuffUp(v25.CalloftheWildBuff) or (not v25.CalloftheWild:IsAvailable() and v6:BuffUp(v25.BestialWrathBuff)) or (v34 < (35 - 26))) and v7:IsInRange(1 + 39)) then
-		if v16(v25.Fireblood) then
+	if (v26.Fireblood:IsCastable() and RacialsSetting and v71(v25.TTD.RacialsTTD) and (v6:BuffUp(v26.CalloftheWildBuff) or (v26.Bloodshed:IsAvailable() and v6:PrevGCD(1414 - (447 + 966), v26.Bloodshed)) or (not v26.CalloftheWild:IsAvailable() and v6:BuffUp(v26.BestialWrathBuff)) or (v35 < (24 - 15))) and v7:IsInRange(1857 - (1703 + 114))) then
+		if v16(v26.Fireblood) then
 			return "Fireblood";
 		end
 	end
-	if (v24.Commons.Enabled.Potions and PotionSetting and (v6:BuffUp(v25.CalloftheWildBuff) or (not v25.CalloftheWild:IsAvailable() and v6:BuffUp(v25.BestialWrathBuff)) or (v34 < (25 + 6))) and v7:IsInRange(1095 - (87 + 968))) then
-		local v132 = v21.PotionSelected();
-		if (v132 and v132:IsReady()) then
-			v13.CastMacro(13 - 10, nil, nil, v132);
+	if (v25.Commons.Enabled.Potions and PotionSetting and (v6:BuffUp(v26.CalloftheWildBuff) or (v26.Bloodshed:IsAvailable() and v6:PrevGCD(702 - (376 + 325), v26.Bloodshed)) or (not v26.CalloftheWild:IsAvailable() and v6:BuffUp(v26.BestialWrathBuff)) or (v35 < (50 - 19))) and v7:IsInRange(123 - 83)) then
+		local v142 = v22.PotionSelected();
+		if (v142 and v142:IsReady()) then
+			v13.CastMacro(1 + 2, nil, nil, v142);
 			return "Cast Potion";
 		end
 	end
 end
-local function v88()
-	if (v25.BarbedShot:IsCastable() and v7:IsInRange(37 + 3)) then
-		if v21.CastTargetIf(v25.BarbedShot, v51, "min", v73, v76, 90 - 50, false, false, MultidotBarbedShot, RecommendBarbedShot) then
-			return "barbed_shot cleave 2";
+local function v95()
+	if (v26.BestialWrath:IsCastable() and BestialWrathSetting and v7:IsInRange(88 - 48)) then
+		if v16(v26.BestialWrath) then
+			return "bestial_wrath cleave 2";
 		end
 	end
-	if (v25.BlackArrow:IsReady() and v7:IsInRange(1453 - (447 + 966))) then
-		if v16(v25.BlackArrow) then
-			return "black_arrow cleave 4";
+	if (v26.DireBeast:IsCastable() and v7:IsInRange(54 - (9 + 5)) and v26.HuntmastersCall:IsAvailable() and (v6:BuffStack(v26.HuntmastersCallBuff) == (378 - (85 + 291)))) then
+		if v16(v26.DireBeast) then
+			return "dire_beast cleave 4";
 		end
 	end
-	if (v25.MultiShot:IsReady() and v7:IsInRange(109 - 69) and (v9:BuffRemains(v25.BeastCleavePetBuff) < ((1817.25 - (1703 + 114)) + v33)) and (not v25.BloodyFrenzy:IsAvailable() or v25.CalloftheWild:CooldownDown() or (v25.CalloftheWild:IsLearned() and not CallOfTheWildSetting))) then
-		if v16(v25.MultiShot) then
-			return "multishot cleave 6";
+	if (v26.BlackArrow:IsReady() and v7:IsInRange(1305 - (243 + 1022)) and v9:BuffUp(v26.BeastCleavePetBuff) and v6:BuffUp(v26.WitheringFireBuff)) then
+		if v16(v66) then
+			return "black_arrow cleave 6";
 		end
 	end
-	if (v25.DireBeast:IsCastable() and v7:IsInRange(741 - (376 + 325))) then
-		if v16(v25.DireBeast) then
-			return "dire_beast cleave 8";
+	if (v26.BarbedShot:IsCastable() and v7:IsInRange(152 - 112) and ((v26.BarbedShot:FullRechargeTime() < v6:GCD()) or (v26.BarbedShot:ChargesFractional() >= v26.KillCommand:ChargesFractional()) or (v26.CalloftheWild:IsAvailable() and v26.CalloftheWild:CooldownUp()) or (v74() and (v26.BarbedShot:FullRechargeTime() < (7 + 1))))) then
+		if v22.CastTargetIf(v26.BarbedShot, v53, "min", v79, nil, 1220 - (1123 + 57), false, false, false, RecommendBarbedShot) then
+			return "barbed_shot cleave 8";
 		end
 	end
-	if (v25.CalloftheWild:IsCastable() and CallOfTheWildSetting) then
-		if v16(v25.CalloftheWild) then
-			return "call_of_the_wild cleave 10";
+	if (v26.MultiShot:IsReady() and v7:IsInRange(33 + 7) and v9:BuffDown(v26.BeastCleavePetBuff) and (not v26.BloodyFrenzy:IsAvailable() or v26.CalloftheWild:CooldownDown() or (v26.CalloftheWild:IsLearned() and not CallOfTheWildSetting))) then
+		if v16(v26.MultiShot) then
+			return "multishot cleave 10";
 		end
 	end
-	if (v25.BestialWrath:IsCastable() and BestialWrathSetting and v7:IsInRange(65 - 25)) then
-		if v16(v25.BestialWrath) then
-			return "bestial_wrath cleave 12 TTD:" .. v35;
+	if (v26.BlackArrow:IsReady() and v7:IsInRange(294 - (163 + 91)) and v9:BuffUp(v26.BeastCleavePetBuff)) then
+		if v22.CastCycle(v66, v53, v77, 1970 - (1869 + 61), false, false, false) then
+			return "black_arrow cleave 12";
 		end
 	end
-	if (v25.Bloodshed:IsCastable() and BloodshedSetting and v7:IsInRange(123 - 83)) then
-		if v16(v25.Bloodshed) then
-			return "bloodshed cleave 14";
+	if (v26.CalloftheWild:IsCastable() and CallOfTheWildSetting) then
+		if v16(v26.CalloftheWild) then
+			return "call_of_the_wild cleave 14";
 		end
 	end
-	if (v25.KillCommand:IsReady() and v7:IsInRange(15 + 35)) then
-		if v16(v25.KillCommand) then
-			return "kill_command cleave 16";
+	if (v26.Bloodshed:IsCastable() and BloodshedSetting and v7:IsInRange(12 + 28)) then
+		if v16(v26.Bloodshed) then
+			return "bloodshed cleave 16";
 		end
 	end
-	if (v25.BarbedShot:IsCastable() and v7:IsInRange(88 - 48)) then
-		if v21.CastTargetIf(v25.BarbedShot, v51, "min", v73, v79, 54 - (9 + 5), false, false, MultidotBarbedShot, RecommendBarbedShot) then
-			return "barbed_shot cleave 18";
+	if ((v26.DireBeast:IsCastable() and v7:IsInRange(140 - 100) and v26.ShadowHounds:IsAvailable()) or v26.DireCleave:IsAvailable()) then
+		if v16(v26.DireBeast) then
+			return "dire_beast cleave 18";
 		end
 	end
-	if (v25.CobraShot:IsReady() and v7:IsInRange(416 - (85 + 291)) and v6:BuffUp(v25.BestialWrathBuff) and v25.KillerCobra:IsAvailable()) then
-		if v16(v25.CobraShot) then
-			return "cobra_shot cleave 20";
+	if (v26.ExplosiveShot:IsReady() and v26.ThunderingHooves:IsAvailable() and v7:IsInRange(61 - 21)) then
+		if v16(v26.ExplosiveShot) then
+			return "explosive_shot cleave 20";
 		end
 	end
-	if (v25.KillShot:IsReady() and v7:IsInRange(1305 - (243 + 1022)) and v25.VenomsBite:IsAvailable() and v85(v7)) then
-		if v21.CastCycle(v25.KillShot, v51, v72, 152 - 112, false, false, KillShotTab) then
-			return "kill_shot cleave 22";
+	if (v26.KillCommand:IsReady() and v7:IsInRange(7 + 43)) then
+		if v22.CastTargetIf(v26.KillCommand, v52, "max", v86, nil, (62 - 16) + 4 + 0, false, false, false, true) then
+			return "kill_command cleave 22";
 		end
 	end
-	if (v25.ExplosiveShot:IsReady() and (v7:TimeToDie() > (3 + 0)) and v7:IsInRange(1220 - (1123 + 57))) then
-		if v16(v25.ExplosiveShot) then
-			return "explosive_shot cleave 24";
+	if (v26.LightsJudgment:IsCastable() and v7:IsInRange(1479 - (1329 + 145)) and RacialsSetting and (v6:BuffDown(v26.BestialWrathBuff) or (v7:TimeToDie() < (976 - (140 + 831))))) then
+		if v16(v26.LightsJudgment) then
+			return "lights_judgment cleave 24";
 		end
 	end
-	if (v25.LightsJudgment:IsCastable() and v7:IsInRange(5 + 0) and RacialsSetting and (v6:BuffDown(v25.BestialWrathBuff) or (v7:TimeToDie() < (259 - (163 + 91))))) then
-		if v16(v25.LightsJudgment) then
-			return "lights_judgment cleave 26";
-		end
-	end
-	if (v25.CobraShot:IsReady() and v7:IsInRange(1970 - (1869 + 61)) and (v6:FocusTimeToMax() < (v33 * (1 + 1)))) then
-		if v16(v25.CobraShot) then
+	if (v26.CobraShot:IsReady() and v7:IsInRange(1890 - (1409 + 441)) and ((v6:FocusTimeToMax() < (GCDMAX * (720 - (15 + 703)))) or (v6:BuffStack(v26.HogstriderBuff) > (2 + 1)))) then
+		if v16(v26.CobraShot) then
 			return "cobra_shot cleave 30";
 		end
 	end
-	if (v25.BagofTricks:IsCastable() and RacialsSetting and v7:IsInRange(140 - 100) and (v6:BuffDown(v25.BestialWrathBuff) or (v34 < (7 - 2)))) then
-		if v16(v25.BagofTricks) then
-			return "bag_of_tricks cleave 32";
+	if (v26.DireBeast:IsCastable() and v7:IsInRange(478 - (262 + 176))) then
+		if v16(v26.DireBeast) then
+			return "dire_beast cleave 26";
 		end
 	end
-	if (v25.ArcaneTorrent:IsCastable() and v7:IsInRange(2 + 6) and RacialsSetting and ((v6:Focus() + v6:FocusRegen() + (41 - 11)) < v6:FocusMax())) then
-		if v16(v25.ArcaneTorrentCast) then
-			return "arcane_torrent cleave 34";
+	if (v26.ExplosiveShot:IsReady() and v7:IsInRange(1761 - (345 + 1376))) then
+		if v16(v26.ExplosiveShot) then
+			return "explosive_shot cleave 28";
 		end
 	end
-end
-local function v89()
-	if (v25.DireBeast:IsCastable() and v7:IsInRange(38 + 2) and v9:BuffDown(v25.FrenzyPetBuff)) then
-		if v16(v25.DireBeast) then
-			return "dire_beast st 1";
+	if (v26.BagofTricks:IsCastable() and RacialsSetting and v7:IsInRange(728 - (198 + 490)) and (v6:BuffDown(v26.BestialWrathBuff) or (v35 < (22 - 17)))) then
+		if v16(v26.BagofTricks) then
+			return "bag_of_tricks cleave 30";
 		end
 	end
-	if (v25.BarbedShot:IsCastable() and v7:IsInRange(1514 - (1329 + 145)) and ((v9:BuffUp(v25.FrenzyPetBuff) and (v9:BuffRemains(v25.FrenzyPetBuff) <= (v6:GCD() + (971.25 - (140 + 831))))) or ((v9:BuffStack(v25.FrenzyPetBuff) < (1853 - (1409 + 441))) and ((v25.BestialWrath:CooldownUp() and (v9:BuffDown(v25.FrenzyPetBuff) or v25.ScentofBlood:IsAvailable())) or v25.CalloftheWild:CooldownUp())))) then
-		if v21.CastTargetIf(v25.BarbedShot, v51, "min", v73, nil, 758 - (15 + 703), false, false, MultidotBarbedShot, RecommendBarbedShot) then
-			return "barbed_shot st 2";
-		end
-	end
-	if (v25.BarbedShot:IsCastable() and v7:IsInRange(19 + 21) and ((v9:BuffUp(v25.FrenzyPetBuff) and (v9:BuffRemains(v25.FrenzyPetBuff) <= (v6:GCD() + (438.25 - (262 + 176))))) or ((v9:BuffStack(v25.FrenzyPetBuff) < (1724 - (345 + 1376))) and ((v25.ScentofBlood:IsAvailable() and (v25.BestialWrath:CooldownUp() or v25.CalloftheWild:CooldownUp())) or v25.BestialWrath:CooldownDown())))) then
-		if v16(v25.BarbedShot) then
-			return "barbed_shot st mt_backup 4";
-		end
-	end
-	if (v25.DireBeast:IsCastable() and v7:IsInRange(728 - (198 + 490))) then
-		if v16(v25.DireBeast) then
-			return "dire_beast st 6";
-		end
-	end
-	if (v25.KillCommand:IsReady() and v7:IsSpellInRange(v25.KillCommand) and v25.CalloftheWild:IsAvailable() and (v25.CalloftheWild:CooldownRemains() < (v6:GCD() + (0.25 - 0)))) then
-		if v16(v25.KillCommand) then
-			return "kill_command st 8";
-		end
-	end
-	if (v25.BlackArrow:IsReady() and v7:IsInRange(95 - 55)) then
-		if v16(v25.BlackArrow) then
-			return "black_arrow cleave 10";
-		end
-	end
-	if (v25.KillShot:IsReady() and v7:IsInRange(1246 - (696 + 510)) and v25.VenomsBite:IsAvailable() and v85(v7) and v25.Bloodshed:IsAvailable()) then
-		if v21.CastCycle(v25.KillShot, v51, v72, 83 - 43, false, false, KillShotTab) then
-			return "kill_shot st 12";
-		end
-	end
-	if (v25.CalloftheWild:IsCastable() and v7:IsInRange(1302 - (1091 + 171)) and CallOfTheWildSetting) then
-		if v16(v25.CalloftheWild) then
-			return "call_of_the_wild st 14";
-		end
-	end
-	if (v25.Bloodshed:IsCastable() and BloodshedSetting and v7:IsInRange(7 + 33)) then
-		if v16(v25.Bloodshed) then
-			return "bloodshed st 16";
-		end
-	end
-	if (v25.BestialWrath:IsCastable() and BestialWrathSetting and v7:IsInRange(125 - 85)) then
-		if v16(v25.BestialWrath) then
-			return "bestial_wrath st 18 TTD:" .. v35;
-		end
-	end
-	if (v25.KillCommand:IsReady() and v7:IsSpellInRange(v25.KillCommand)) then
-		if v16(v25.KillCommand) then
-			return "kill_command st 20";
-		end
-	end
-	if (v25.KillShot:IsReady() and v7:IsInRange(132 - 92) and v25.VenomsBite:IsAvailable() and v85(v7) and v25.CalloftheWild:IsAvailable()) then
-		if v21.CastCycle(v25.KillShot, v51, v72, 414 - (123 + 251), false, false, KillShotTab) then
-			return "kill_shot st 22";
-		end
-	end
-	if (v25.BarbedShot:IsCastable() and v7:IsInRange(198 - 158)) then
-		if v21.CastTargetIf(v25.BarbedShot, v51, "min", v73, v82, 738 - (208 + 490), false, false, MultidotBarbedShot, RecommendBarbedShot) then
-			return "barbed_shot st 26";
-		end
-	end
-	if (v25.CobraShot:IsReady() and v7:IsInRange(4 + 36) and v6:BuffUp(v25.BestialWrathBuff) and v25.KillerCobra:IsAvailable()) then
-		if v16(v25.CobraShot) then
-			return "cobra_shot st 28";
-		end
-	end
-	if (v25.ExplosiveShot:IsReady() and (v7:TimeToDie() > (2 + 1)) and v7:IsInRange(876 - (660 + 176)) and ((v6:BuffDown(v25.BestialWrathBuff) and v25.KillerCobra:IsAvailable()) or not v25.KillerCobra:IsAvailable())) then
-		if v16(v25.ExplosiveShot) then
-			return "explosive_shot st 32";
-		end
-	end
-	if (v25.KillShot:IsReady() and v7:IsInRange(5 + 35) and (((v6:BuffRemains(v25.HuntersPreyBuff) < (v6:GCD() * (204 - (14 + 188)))) and v25.VenomsBite:IsAvailable()) or (v7:HealthPercentage() < (695 - (534 + 141))))) then
-		if v21.CastCycle(v25.KillShot, v51, v72, 17 + 23, false, false, KillShotTab) then
-			return "kill_shot st 34";
-		end
-	end
-	if (v25.CobraShot:IsReady() and v7:IsInRange(36 + 4)) then
-		if v16(v25.CobraShot) then
-			return "cobra_shot st 38";
-		end
-	end
-	if (v25.BagofTricks:IsCastable() and RacialsSetting and v7:IsInRange(39 + 1) and (v6:BuffDown(v25.BestialWrathBuff) or (v34 < (10 - 5)))) then
-		if v16(v25.BagofTricks) then
-			return "bag_of_tricks st 40";
-		end
-	end
-	if (v25.ArcanePulse:IsCastable() and RacialsSetting and v7:IsInRange(12 - 4) and (v6:BuffDown(v25.BestialWrathBuff) or (v34 < (14 - 9)))) then
-		if v16(v25.ArcanePulse) then
-			return "arcane_pulse st 42";
-		end
-	end
-	if (v25.ArcaneTorrent:IsCastable() and RacialsSetting and ((v6:Focus() + v6:FocusRegen() + 9 + 6) < v6:FocusMax())) then
-		if v16(v25.ArcaneTorrentCast) then
-			return "arcane_torrent st 44";
+	if (v26.ArcaneTorrent:IsCastable() and v7:IsInRange(18 - 10) and RacialsSetting and ((v6:Focus() + v6:FocusRegen() + (1236 - (696 + 510))) < v6:FocusMax())) then
+		if v16(v26.ArcaneTorrentCast) then
+			return "arcane_torrent cleave 32";
 		end
 	end
 end
-local function v90()
-	v37 = (v25.CalloftheWild:IsAvailable() and v6:PrevGCD(1 + 0, v25.CalloftheWild)) or (not v25.CalloftheWild:IsAvailable() and (v6:BuffUp(v25.BestialWrathBuff) or (v25.BestialWrath:CooldownRemains() < (401 - (115 + 281)))));
-	v36 = (v25.CalloftheWild:IsAvailable() and v6:BuffUp(v25.CalloftheWildBuff)) or (not v25.CalloftheWild:IsAvailable() and v6:BuffUp(v25.BestialWrathBuff));
-	v38 = (not v25.CalloftheWild:IsAvailable() and v25.BestialWrath:CooldownRemains()) or v25.CalloftheWild:CooldownRemains();
-	if (((Trinket1Setting and (v30:ID() == v27.BeacontotheBeyond:ID())) or (Trinket2Setting and (v31:ID() == v27.BeacontotheBeyond:ID()))) and v67(v24.TTD.TrinketsTTD) and not v6:IsMoving() and v27.BeacontotheBeyond:IsEquippedAndReady()) then
-		if v16(v27.BeacontotheBeyond) then
+local function v96()
+	if (v26.DireBeast:IsCastable() and v7:IsInRange(83 - 43) and (v26.HuntmastersCall:IsAvailable())) then
+		if v16(v26.DireBeast) then
+			return "dire_beast st 2";
+		end
+	end
+	if (v26.BestialWrath:IsCastable() and BestialWrathSetting and v7:IsInRange(1302 - (1091 + 171))) then
+		if v16(v26.BestialWrath) then
+			return "bestial_wrath st 4 ";
+		end
+	end
+	if (v26.BlackArrow:IsReady() and v7:IsInRange(7 + 33) and (v6:BuffUp(v26.WitheringFireBuff))) then
+		if v16(v26.BlackArrow) then
+			return "black_arrow st 6";
+		end
+	end
+	if (v26.BarbedShot:IsCastable() and v7:IsInRange(125 - 85) and ((v26.BarbedShot:FullRechargeTime() < v6:GCD()) or (v26.BarbedShot:ChargesFractional() >= v26.KillCommand:ChargesFractional()) or (v26.CalloftheWild:IsAvailable() and v26.CalloftheWild:CooldownUp()) or (v74() and (v26.BarbedShot:FullRechargeTime() < (26 - 18))))) then
+		if v22.CastTargetIf(v26.BarbedShot, v53, "min", v79, nil, 414 - (123 + 251), false, false, false, RecommendBarbedShot) then
+			return "barbed_shot st 8";
+		end
+	end
+	if (v26.KillCommand:IsReady() and v7:IsSpellInRange(v26.KillCommand) and (v26.KillCommand:ChargesFractional() >= v26.BarbedShot:ChargesFractional())) then
+		if v16(v26.KillCommand) then
+			return "kill_command st 10";
+		end
+	end
+	if (v26.CalloftheWild:IsCastable() and v7:IsInRange(198 - 158) and CallOfTheWildSetting) then
+		if v16(v26.CalloftheWild) then
+			return "call_of_the_wild st 12";
+		end
+	end
+	if (v26.Bloodshed:IsCastable() and BloodshedSetting and v7:IsInRange(738 - (208 + 490))) then
+		if v16(v26.Bloodshed) then
+			return "bloodshed st 14";
+		end
+	end
+	if (v26.KillCommand:IsReady() and v7:IsSpellInRange(v26.KillCommand)) then
+		if v16(v26.KillCommand) then
+			return "kill_command st 16";
+		end
+	end
+	if (v26.BlackArrow:IsReady() and v56) then
+		if v22.CastCycle(v66, v53, v77, 4 + 36, false, false, false) then
+			return "black_arrow st 18";
+		end
+	end
+	if (v26.ExplosiveShot:IsReady() and v7:IsInRange(18 + 22)) then
+		if v16(v26.ExplosiveShot) then
+			return "explosive_shot st 20";
+		end
+	end
+	if ((v26.LightsJudgment:IsCastable() and v7:IsInRange(841 - (660 + 176)) and RacialsSetting and v6:BuffDown(v26.BestialWrathBuff)) or (v7:TimeToDie() < (1 + 4))) then
+		if v16(v26.LightsJudgment) then
+			return "lights_judgment st 22";
+		end
+	end
+	if (v26.CobraShot:IsReady() and v7:IsInRange(242 - (14 + 188))) then
+		if v16(v26.CobraShot) then
+			return "cobra_shot st 24";
+		end
+	end
+	if (v26.DireBeast:IsCastable() and v7:IsInRange(715 - (534 + 141))) then
+		if v16(v26.DireBeast) then
+			return "dire_beast st 26";
+		end
+	end
+	if (v26.BagofTricks:IsCastable() and RacialsSetting and v7:IsInRange(17 + 23) and (v6:BuffDown(v26.BestialWrathBuff) or (v35 < (5 + 0)))) then
+		if v16(v26.BagofTricks) then
+			return "bag_of_tricks st 28";
+		end
+	end
+	if (v26.ArcanePulse:IsCastable() and RacialsSetting and v7:IsInRange(8 + 0) and (v6:BuffDown(v26.BestialWrathBuff) or (v35 < (10 - 5)))) then
+		if v16(v26.ArcanePulse) then
+			return "arcane_pulse st 30";
+		end
+	end
+	if (v26.ArcaneTorrent:IsCastable() and RacialsSetting and ((v6:Focus() + v6:FocusRegen() + (23 - 8)) < v6:FocusMax())) then
+		if v16(v26.ArcaneTorrentCast) then
+			return "arcane_torrent st 32";
+		end
+	end
+end
+local function v97()
+	v38 = (v26.CalloftheWild:IsAvailable() and v6:PrevGCD(2 - 1, v26.CalloftheWild)) or (v26.Bloodshed:IsAvailable() and v6:PrevGCD(1 + 0, v26.Bloodshed)) or (not v26.CalloftheWild:IsAvailable() and not v26.Bloodshed:IsAvailable() and (v6:BuffUp(v26.BestialWrathBuff) or (v26.BestialWrath:CooldownRemains() < (4 + 1))));
+	v37 = (v26.CalloftheWild:IsAvailable() and v6:BuffUp(v26.CalloftheWildBuff)) or (v26.Bloodshed:IsAvailable() and v6:PrevGCD(397 - (115 + 281), v26.Bloodshed)) or (not v26.CalloftheWild:IsAvailable() and not v26.Bloodshed:IsAvailable() and v6:BuffUp(v26.BestialWrathBuff));
+	v39 = (not v26.CalloftheWild:IsAvailable() and not v26.Bloodshed:IsAvailable() and v26.BestialWrath:CooldownRemains()) or v26.CalloftheWild:CooldownRemains() or v26.Bloodshed:CooldownRemains();
+	if (((Trinket1Setting and (v31:ID() == v28.BeacontotheBeyond:ID())) or (Trinket2Setting and (v32:ID() == v28.BeacontotheBeyond:ID()))) and v71(v25.TTD.TrinketsTTD) and not v6:IsMoving() and v28.BeacontotheBeyond:IsEquippedAndReady()) then
+		if v16(v28.BeacontotheBeyond) then
 			return "BeacontotheBeyond cooldowns 8";
 		end
 	end
-	if (v70() and v6:AffectingCombat() and (((v30:ID() == v27.ManicGrieftorch:ID()) and Trinket1Setting) or ((v31:ID() == v27.ManicGrieftorch:ID()) and Trinket2Setting)) and v7:IsInRange(93 - 53)) then
-		if v16(v27.ManicGrieftorch) then
+	if (v75() and v6:AffectingCombat() and (((v31:ID() == v28.ManicGrieftorch:ID()) and Trinket1Setting) or ((v32:ID() == v28.ManicGrieftorch:ID()) and Trinket2Setting)) and v7:IsInRange(93 - 53)) then
+		if v16(v28.ManicGrieftorch) then
 			return "manic_grieftorch";
 		end
 	end
-	if (v30:IsReady() and v67(v24.TTD.TrinketsTTD) and Trinket1Setting and not v47 and ((v30:HasUseBuff() and ((v37 and (v49 or v31:CooldownDown())) or (not v37 and ((v49 and (((v38 > (v45 / (3 + 0))) and (v35 > (v45 + (48 - 28)))) or (v31:HasUseBuff() and (v31:CooldownRemains() > (v38 - (55 - 40))) and ((v31:CooldownRemains() - (872 - (550 + 317))) < v38) and ((v38 + (65 - 20)) > v35)))) or (v50 and ((v31:CooldownDown() and ((((v31:CooldownRemains() - (7 - 2)) < v38) and (v38 >= (55 - 35))) or (((v31:CooldownRemains() - (290 - (134 + 151))) >= v38) and ((v38 > (v45 / (1668 - (970 + 695)))) or ((v45 < v35) and ((v38 + v45) > v35)))))) or (v31:CooldownUp() and (v38 > (38 - 18)) and (v38 < (v46 / (1993 - (582 + 1408))))))))))) or (not v30:HasUseBuff() and ((v39 == (0 - 0)) or not v36) and ((not v31:HasUseBuff() and (v49 or v31:CooldownDown())) or (v31:HasUseBuff() and ((not v36 and (v38 > (25 - 5))) or (v31:CooldownRemains() > (75 - 55)))))) or ((v35 < (1849 - (1195 + 629))) and (v49 or v31:CooldownDown())))) then
-		if v16(v30) then
-			return "use_item for " .. v30:Name() .. " trinkets 2";
+	if (v28.SignetofthePriory:IsReady() and v6:AffectingCombat() and (v6:BuffUp(v26.CalloftheWildBuff) or not v26.CalloftheWild:IsAvailable()) and (((v31:ID() == v28.SignetofthePriory:ID()) and Trinket1Setting) or ((v32:ID() == v28.SignetofthePriory:ID()) and Trinket2Setting)) and v7:IsInRange(34 + 6)) then
+		if v16(v28.SignetofthePriory) then
+			return "SignetofthePriory";
 		end
 	end
-	if (v31:IsReady() and v67(v24.TTD.TrinketsTTD) and Trinket2Setting and not v48 and ((v31:HasUseBuff() and ((v37 and (v50 or v30:CooldownDown())) or (not v37 and ((v50 and (((v38 > (v46 / (3 - 0))) and (v35 > (v46 + (261 - (187 + 54))))) or (v30:HasUseBuff() and (v30:CooldownRemains() > (v38 - (795 - (162 + 618)))) and ((v30:CooldownRemains() - (4 + 1)) < v38) and ((v38 + 30 + 15) > v35)))) or (v49 and ((v30:CooldownDown() and ((((v30:CooldownRemains() - (10 - 5)) < v38) and (v38 >= (33 - 13))) or (((v30:CooldownRemains() - (1 + 4)) >= v38) and ((v38 > (v46 / (1639 - (1373 + 263)))) or ((v46 < v35) and ((v38 + v46) > v35)))))) or (v30:CooldownUp() and (v38 > (1020 - (451 + 549))) and (v38 < (v45 / (1 + 2)))))))))) or (not v31:HasUseBuff() and ((v40 == (0 - 0)) or not v36) and ((not v30:HasUseBuff() and (v50 or v30:CooldownDown())) or (v30:HasUseBuff() and ((not v36 and (v38 > (33 - 13))) or (v30:CooldownRemains() > (1404 - (746 + 638))))))) or ((v35 < (10 + 15)) and (v50 or v30:CooldownDown())))) then
+	if (v31:IsReady() and v71(v25.TTD.TrinketsTTD) and Trinket1Setting and not v48 and ((v31:HasUseBuff() and ((v38 and (v50 or v32:CooldownDown())) or (not v38 and ((v50 and (((v39 > (v46 / (7 - 4))) and (v36 > (v46 + (73 - 53)))) or (v32:HasUseBuff() and (v32:CooldownRemains() > (v39 - (882 - (550 + 317)))) and ((v32:CooldownRemains() - (7 - 2)) < v39) and ((v39 + (63 - 18)) > v36)))) or (v51 and ((v32:CooldownDown() and ((((v32:CooldownRemains() - (13 - 8)) < v39) and (v39 >= (305 - (134 + 151)))) or (((v32:CooldownRemains() - (1670 - (970 + 695))) >= v39) and ((v39 > (v46 / (5 - 2))) or ((v46 < v36) and ((v39 + v46) > v36)))))) or (v32:CooldownUp() and (v39 > (2010 - (582 + 1408))) and (v39 < (v47 / (10 - 7)))))))))) or (not v31:HasUseBuff() and ((v40 == (0 - 0)) or not v37) and ((not v32:HasUseBuff() and (v50 or v32:CooldownDown())) or (v32:HasUseBuff() and ((not v37 and (v39 > (75 - 55))) or (v32:CooldownRemains() > (1844 - (1195 + 629))))))) or ((v36 < (32 - 7)) and (v50 or v32:CooldownDown())))) then
 		if v16(v31) then
-			return "use_item for " .. v31:Name() .. " trinkets 4";
+			return "use_item for " .. v31:Name() .. " trinkets 2";
 		end
 	end
-	if (v30:IsReady() and v67(v24.TTD.TrinketsTTD) and Trinket1Setting and not v47 and v36) then
-		if v16(v30) then
-			return "use_item for " .. v30:Name() .. " trinkets 2";
+	if (v32:IsReady() and v71(v25.TTD.TrinketsTTD) and Trinket2Setting and not v49 and ((v32:HasUseBuff() and ((v38 and (v51 or v31:CooldownDown())) or (not v38 and ((v51 and (((v39 > (v47 / (244 - (187 + 54)))) and (v36 > (v47 + (800 - (162 + 618))))) or (v31:HasUseBuff() and (v31:CooldownRemains() > (v39 - (11 + 4))) and ((v31:CooldownRemains() - (4 + 1)) < v39) and ((v39 + (95 - 50)) > v36)))) or (v50 and ((v31:CooldownDown() and ((((v31:CooldownRemains() - (8 - 3)) < v39) and (v39 >= (2 + 18))) or (((v31:CooldownRemains() - (1641 - (1373 + 263))) >= v39) and ((v39 > (v47 / (1003 - (451 + 549)))) or ((v47 < v36) and ((v39 + v47) > v36)))))) or (v31:CooldownUp() and (v39 > (7 + 13)) and (v39 < (v46 / (4 - 1)))))))))) or (not v32:HasUseBuff() and ((v41 == (0 - 0)) or not v37) and ((not v31:HasUseBuff() and (v51 or v31:CooldownDown())) or (v31:HasUseBuff() and ((not v37 and (v39 > (1404 - (746 + 638)))) or (v31:CooldownRemains() > (8 + 12)))))) or ((v36 < (37 - 12)) and (v51 or v31:CooldownDown())))) then
+		if v16(v32) then
+			return "use_item for " .. v32:Name() .. " trinkets 4";
 		end
 	end
-	if (v31:IsReady() and v67(v24.TTD.TrinketsTTD) and Trinket2Setting and not v48 and v36) then
-		if v16(v31) then
-			return "use_item for " .. v31:Name() .. " trinkets 4";
+	if (v28.MadQueensMandate:IsEquippedAndReady() and v7:IsInRange(381 - (218 + 123)) and (((v31:ID() == v28.MadQueensMandate:ID()) and Trinket1Setting and ((v32:CooldownRemains() > (1581 - (1535 + 46))) or not v32:HasUseBuff())) or ((v32:ID() == v28.MadQueensMandate:ID()) and Trinket2Setting and ((v31:CooldownRemains() > (0 + 0)) or not v31:HasUseBuff()))) and ((v35 > (18 + 102)) or (v35 < (570 - (306 + 254))) or (not v63 and (v36 < (1 + 4))))) then
+		if v16(v28.MadQueensMandate) then
+			return "mad_queens_mandate";
 		end
 	end
 end
-local function v91()
-	v21.HealthPotions();
-	if v6:IsChanneling(v27.ManicGrieftorch.ItemUseSpell) then
+local function v98()
+	local v138 = v22.HealthPotions();
+	if v138 then
+		return v138;
+	end
+	if v6:IsChanneling(v28.ManicGrieftorch.ItemUseSpell) then
 		return "Dont cut Torch";
 	end
 	SmallCDToggle = v13.ToggleIconFrame:GetToggle(1 - 0);
-	TabToggle = v13.ToggleIconFrame:GetToggle(343 - (218 + 123));
-	InterruptToggle = v13.ToggleIconFrame:GetToggle(1584 - (1535 + 46));
-	if v25.Stomp:IsAvailable() then
+	InterruptToggle = v13.ToggleIconFrame:GetToggle(1469 - (899 + 568));
+	if v26.Stomp:IsAvailable() then
 		v3.SplashEnemies.ChangeFriendTargetsTracking("Mine Only");
 	else
 		v3.SplashEnemies.ChangeFriendTargetsTracking("All");
 	end
-	v58 = (v12.FindBySpellID(v25.BloodBolt:ID()) and v25.BloodBolt) or (v12.FindBySpellID(v25.Bite:ID()) and v25.Bite) or (v12.FindBySpellID(v25.Claw:ID()) and v25.Claw) or (v12.FindBySpellID(v25.Smack:ID()) and v25.Smack) or nil;
-	v59 = (v12.FindBySpellID(v25.Growl:ID()) and v25.Growl) or nil;
-	v62 = (v59 and v62) or true;
+	v60 = (v12.FindBySpellID(v26.BloodBolt:ID()) and v26.BloodBolt) or (v12.FindBySpellID(v26.Bite:ID()) and v26.Bite) or (v12.FindBySpellID(v26.Claw:ID()) and v26.Claw) or (v12.FindBySpellID(v26.Smack:ID()) and v26.Smack) or nil;
+	v61 = (v12.FindBySpellID(v26.Growl:ID()) and v26.Growl) or nil;
+	v64 = (v61 and v64) or true;
 	if v14() then
-		v60 = v6:GetEnemiesInRange(8 + 0);
-		v51 = v6:GetEnemiesInRange(6 + 34);
-		v52 = (v58 and v6:GetEnemiesInSpellActionRange(v58)) or v7:GetEnemiesInSplashRange(568 - (306 + 254));
-		v53 = (v58 and #v52) or v7:GetEnemiesInSplashRangeCount(1 + 7);
+		v62 = v6:GetEnemiesInRange(6 + 2);
+		v53 = v6:GetEnemiesInRange(96 - 56);
+		v52 = v6:GetEnemiesInRange(653 - (268 + 335));
+		v54 = (v60 and v6:GetEnemiesInSpellActionRange(v60)) or v7:GetEnemiesInSplashRange(298 - (60 + 230));
+		v55 = (v60 and #v54) or v7:GetEnemiesInSplashRangeCount(580 - (426 + 146));
 	else
-		v60 = {};
-		v51 = {};
-		v52 = v7 or {};
-		v53 = 0 - 0;
+		v62 = {};
+		v53 = {};
+		v52 = {};
+		v54 = v7 or {};
+		v55 = 0 + 0;
 	end
-	RacialsSetting = v65(v24.BeastMastery.RacialsSetting);
-	Trinket1Setting = v65(v24.BeastMastery.Trinket1Setting);
-	Trinket2Setting = v65(v24.BeastMastery.Trinket2Setting);
-	PotionSetting = v65(v24.BeastMastery.PotionSetting) and not v21.ISSolo() and v67(1487 - (899 + 568));
-	BloodshedSetting = v65(v24.BeastMastery.BloodshedSetting) and v67(v24.TTD.BloodshedTTD);
-	CallOfTheWildSetting = v65(v24.BeastMastery.CallOfTheWildSetting) and v67(v24.TTD.CallOfTheWildTTD);
-	BestialWrathSetting = v65(v24.BeastMastery.BestialWrathSetting) and v67(v24.TTD.BestialWrathTTD);
-	StampedeSetting = v65(v24.BeastMastery.StampedeSetting) and v67(14 + 6);
-	BarrageSetting = v65(v24.BeastMastery.BarrageSetting) and v67(48 - 28);
-	MultidotBarbedShot = v24.BeastMastery.BarbedShot and TabToggle;
-	RecommendBarbedShot = v24.BeastMastery.RecommendBarbedShot;
-	KillShotTab = v24.Commons.KillShot and TabToggle;
-	MultidotSerpentSting = v24.Commons.SerpentSting and TabToggle;
-	v54 = v7:IsInRange(643 - (268 + 335));
-	v55 = v7:IsInRange(320 - (60 + 230));
-	v56 = (v59 and v7:IsSpellInActionRange(v59)) or v7:IsInRange(602 - (426 + 146));
-	v33 = v6:GCD() + 0.15 + 0;
-	if (v24.Commons.UseMisdirection and v21.TargetIsValid() and v25.Misdirection:IsCastable()) then
-		MisdirectionUnitsInRange = v21.UnitsinRange(v25.Misdirection);
+	RacialsSetting = v69(v25.BeastMastery.RacialsSetting);
+	Trinket1Setting = v69(v25.BeastMastery.Trinket1Setting);
+	Trinket2Setting = v69(v25.BeastMastery.Trinket2Setting);
+	PotionSetting = v69(v25.BeastMastery.PotionSetting) and not v22.ISSolo() and v71(1476 - (282 + 1174));
+	BloodshedSetting = v69(v25.BeastMastery.BloodshedSetting) and v71(v25.TTD.BloodshedTTD);
+	CallOfTheWildSetting = v69(v25.BeastMastery.CallOfTheWildSetting) and v71(v25.TTD.CallOfTheWildTTD);
+	BestialWrathSetting = v69(v25.BeastMastery.BestialWrathSetting) and v71(v25.TTD.BestialWrathTTD);
+	StampedeSetting = v69(v25.BeastMastery.StampedeSetting) and v71(831 - (569 + 242));
+	BarrageSetting = v69(v25.BeastMastery.BarrageSetting) and v71(57 - 37);
+	RecommendBarbedShot = v25.BeastMastery.RecommendBarbedShot;
+	v65 = (v26.BlackArrow:IsLearned() and v26.BlackArrow) or v26.KillShot;
+	v66 = (v26.BlackArrow:IsLearned() and v26.KillShotBM) or v26.KillShot;
+	v56 = v7:IsInRange(3 + 37);
+	v57 = v7:IsInRange(1054 - (706 + 318));
+	v58 = (v61 and v7:IsSpellInActionRange(v61)) or v7:IsInRange(1281 - (721 + 530));
+	v34 = v6:GCD() + (1271.15 - (945 + 326));
+	if (v25.Commons.UseMisdirection and v22.TargetIsValid() and v26.Misdirection:IsCastable()) then
+		MisdirectionUnitsInRange = v22.UnitsinRange(v26.Misdirection);
 		MisdirectionRankUnit = GetTankUnit(MisdirectionUnitsInRange);
 	end
-	if (v21.TargetIsValid() or v6:AffectingCombat()) then
-		v34 = v3.BossFightRemains();
-		v61 = true;
-		v35 = v34;
-		if (v35 == (12567 - (282 + 1174))) then
-			v61 = false;
-			v35 = v3.FightRemains(v60, false);
+	if (v22.TargetIsValid() or v6:AffectingCombat()) then
+		v35 = v3.BossFightRemains();
+		v63 = true;
+		v36 = v35;
+		if (v36 == (27758 - 16647)) then
+			v63 = false;
+			v36 = v3.FightRemains(v62, false);
+		end
+	end
+	if (v26.FeignDeath:IsCastable() and v6:DebuffUp(v10(391799 + 48514))) then
+		if v16(v26.FeignDeath, false) then
+			return "Feign Death affix";
 		end
 	end
 	if v6:AffectingCombat() then
-		if (v25.Exhilaration:IsCastable() and (v6:HealthPercentage() <= v24.Defensives.ExhilarationHP)) then
-			if v16(v25.Exhilaration, false) then
+		if (v26.Exhilaration:IsCastable() and (v6:HealthPercentage() <= v25.Defensives.ExhilarationHP)) then
+			if v16(v26.Exhilaration, false) then
 				return "Exhilaration";
 			end
 		end
-		if (v25.SurvivalOfTheFittest:IsCastable() and v6:BuffDown(v25.SurvivalOfTheFittest) and (v6:HealthPercentage() <= v24.Defensives.SurvivalOfTheFittestHP)) then
-			if v16(v25.SurvivalOfTheFittest, false) then
+		if (v26.SurvivalOfTheFittest:IsCastable() and v6:BuffDown(v26.SurvivalOfTheFittest) and (v6:HealthPercentage() <= v25.Defensives.SurvivalOfTheFittestHP)) then
+			if v16(v26.SurvivalOfTheFittest, false) then
 				return "Survival of the Fittest";
 			end
 		end
-		if (v25.AspectOfTheTurtle:IsCastable() and (v6:HealthPercentage() <= v24.Defensives.AspectOfTheTurtleHP)) then
-			if v16(v25.AspectOfTheTurtle, false) then
+		if (v26.AspectOfTheTurtle:IsCastable() and (v6:HealthPercentage() <= v25.Defensives.AspectOfTheTurtleHP)) then
+			if v16(v26.AspectOfTheTurtle, false) then
 				return "Aspect of the Turtle";
 			end
 		end
-		if ((v24.Defensives.FeignDeathOnSpell and v6:IncomingSpell(FeignDeathList)) or (v6:HealthPercentage() <= v24.Defensives.FeignDeathHP)) then
-			if v25.FeignDeath:IsCastable() then
-				if v16(v25.FeignDeath, false) then
+		if ((v25.Defensives.FeignDeathOnSpell and v6:IncomingSpell(FeignDeathList)) or (v6:HealthPercentage() <= v25.Defensives.FeignDeathHP)) then
+			if v26.FeignDeath:IsCastable() then
+				if v16(v26.FeignDeath, false) then
 					return "Feign Death";
 				end
 			end
-			if v13.CastAnnotated(v25.PoolFocus, false, "Wait in Feign Death") then
+			if v13.CastAnnotated(v26.PoolFocus, false, "Wait in Feign Death") then
 				return "Wait in Feign Death";
 			end
 		end
-		if (v25.FortitudeOfTheBear:IsCastable() and (v6:HealthPercentage() <= v24.Defensives.FortitudeOfTheBearHP)) then
-			if v16(v25.FortitudeOfTheBear, false) then
+		if (v26.FortitudeOfTheBear:IsCastable() and (v6:HealthPercentage() <= v25.Defensives.FortitudeOfTheBearHP)) then
+			if v16(v26.FortitudeOfTheBear, false) then
 				return "Fortitude of the Bear";
 			end
 		end
-		if (v25.SpiritMend:IsCastable() and (v6:HealthPercentage() <= v24.Pet.SpiritMend)) then
-			if v16(v25.SpiritMend, true) then
+		if (v26.SpiritMend:IsCastable() and (v6:HealthPercentage() <= v25.Pet.SpiritMend)) then
+			if v16(v26.SpiritMend, true) then
 				return "Spirit Mend";
 			end
 		end
 	end
-	if (v6:DebuffUp(v25.FreezeTagFixation) and v25.FreezingTrap:IsCastable()) then
-		if v16(v25.FreezingTrap) then
+	if (v6:DebuffUp(v26.FreezeTagFixation) and v26.FreezingTrap:IsCastable()) then
+		if v16(v26.FreezingTrap) then
 			return "Freezing Trap on Fixate";
 		end
 	end
 	if not (v6:IsMounted() or v6:IsInVehicle()) then
-		if (v25.SummonPet:IsCastable() and not IsFalling() and (v24.Pet.SummonPetSlot > (811 - (569 + 242))) and ((v24.Pet.WhenSummonPet == "Always") or ((v24.Pet.WhenSummonPet == "In combat") and v6:AffectingCombat()) or ((v24.Pet.WhenSummonPet == "Out of combat") and not v6:AffectingCombat()))) then
-			if v16(v26[v24.Pet.SummonPetSlot], false) then
-				return "Summon Pet";
+		if (v26.RevivePet:IsCastable() and not v6:IsMoving()) then
+			if v16(v26.RevivePet, false) then
+				return "Revive Pet Status:" .. v23.Pet.Status;
 			end
 		end
-		if (v25.RevivePet:IsCastable() and not v6:IsMoving()) then
-			if v16(v25.RevivePet, false) then
-				return "Revive Pet";
+		if (v26.SummonPet:IsCastable() and not IsFalling() and (v25.Pet.SummonPetSlot > (700 - (271 + 429))) and ((v25.Pet.WhenSummonPet == "Always") or ((v25.Pet.WhenSummonPet == "In combat") and v6:AffectingCombat()) or ((v25.Pet.WhenSummonPet == "Out of combat") and not v6:AffectingCombat()))) then
+			if v16(v27[v25.Pet.SummonPetSlot], false) then
+				return "Summon Pet Status:" .. v23.Pet.Status;
 			end
 		end
-		if v25.MendPet:IsCastable() then
-			if v16(v25.MendPet, false) then
+		if v26.MendPet:IsCastable() then
+			if v16(v26.MendPet, false) then
 				return "Mend Pet High Priority";
 			end
 		end
 	end
-	if (v25.HuntersMark:IsCastable() and v7:DebuffDown(v25.HuntersMark, true) and v21.TargetIsValid() and not (v24.Commons.HuntersMark == "Not Used") and (((v24.Commons.HuntersMark == "On Bosses") and (v61 or v7:IsBoss())) or (v24.Commons.HuntersMark == "Always")) and v7:IsInRange(172 - 112) and (v25.HuntersMark:TimeSinceLastCast() > (1 + 4)) and (v7:HealthPercentage() > (1104 - (706 + 318)))) then
-		if v16(v25.HuntersMark) then
+	if (v26.HuntersMark:IsCastable() and v7:DebuffDown(v26.HuntersMark, true) and v22.TargetIsValid() and not (v25.Commons.HuntersMark == "Not Used") and (((v25.Commons.HuntersMark == "On Bosses") and (v63 or v7:IsBoss())) or (v25.Commons.HuntersMark == "Always")) and v7:IsInRange(56 + 4) and (v26.HuntersMark:TimeSinceLastCast() > (1505 - (1408 + 92))) and (v7:HealthPercentage() > (1166 - (461 + 625)))) then
+		if v16(v26.HuntersMark) then
 			return "Hunters Mark";
 		end
 	end
 	if CombatCheck() then
 		if not v6:AffectingCombat() then
-			v57 = v86();
-			if v57 then
-				return v57;
+			v138 = v93();
+			if v138 then
+				return v138;
 			end
 		end
-		if (((v24.Commons.UseMisdirection == "Always") or ((v24.Commons.UseMisdirection == "On Combat Start") and (v3.CombatTime() < (1256 - (721 + 530)))) or ((v24.Commons.UseMisdirection == "Solo") and v21.ISSolo()) or ((v24.Commons.UseMisdirection == "On AoE") and v14() and ((v53 > (1273 - (945 + 326))) or (v25.BeastCleave:IsAvailable() and (v53 > (2 - 1)))))) and v21.TargetIsValid() and v25.Misdirection:IsCastable() and v5.Focus:Exists() and v5.Focus:UnitIsFriend() and not v5.Focus:IsDeadOrGhost() and v5.Focus:IsSpellInRange(v25.Misdirection) and v6:BuffDown(v25.Misdirection) and ((v5.Focus:Role() == "TANK") or (UnitIsUnit("focus", "pet") and v21.ISSolo()))) then
-			v13.CastTarget(v25.Misdirection, v13.TName().FOCUS);
+		if (((v25.Commons.UseMisdirection == "Always") or ((v25.Commons.UseMisdirection == "On Combat Start") and (v3.CombatTime() < (1293 - (993 + 295)))) or ((v25.Commons.UseMisdirection == "Solo") and v22.ISSolo()) or ((v25.Commons.UseMisdirection == "On AoE") and v14() and ((v55 > (1 + 1)) or (v26.BeastCleave:IsAvailable() and (v55 > (1172 - (418 + 753))))))) and v22.TargetIsValid() and v26.Misdirection:IsCastable() and v5.Focus:Exists() and v5.Focus:UnitIsFriend() and not v5.Focus:IsDeadOrGhost() and v5.Focus:IsSpellInRange(v26.Misdirection) and v6:BuffDown(v26.Misdirection) and ((v5.Focus:Role() == "TANK") or (UnitIsUnit("focus", "pet") and v22.ISSolo()))) then
+			v13.CastTarget(v26.Misdirection, v13.TName().FOCUS);
 			return "Misdirection";
 		end
 		if InterruptToggle then
-			if v24.Commons.ImplosiveTrap then
-				v57 = v21.InterruptCycle(v25.ImplosiveTrap, 5 + 0, false, nil, true, true);
-				if v57 then
-					if v13.CastTarget(v25.ImplosiveTrap, v13.TName().PLAYER) then
+			if v25.Commons.ImplosiveTrap then
+				v138 = v22.InterruptCycle(v26.ImplosiveTrap, 2 + 3, false, nil, true, true);
+				if v138 then
+					if v13.CastTarget(v26.ImplosiveTrap, v13.TName().PLAYER) then
 						return "HighExplosiveTrap Player";
 					end
 				end
 			end
-			if v24.Commons.HighExplosiveTrap then
-				v57 = v21.InterruptCycle(v25.HighExplosiveTrap, 705 - (271 + 429), false, nil, true, true);
-				if v57 then
-					if v25.BindingShot:IsCastable() then
-						if v13.CastTarget(v25.BindingShot, v13.TName().PLAYER) then
+			if v25.Commons.HighExplosiveTrap then
+				v138 = v22.InterruptCycle(v26.HighExplosiveTrap, 1 + 4, false, nil, true, true);
+				if v138 then
+					if v26.BindingShot:IsCastable() then
+						if v13.CastTarget(v26.BindingShot, v13.TName().PLAYER) then
 							return "Binding Shot Player";
 						end
-						if v13.CastTarget(v25.HighExplosiveTrap, v13.TName().PLAYER) then
+						if v13.CastTarget(v26.HighExplosiveTrap, v13.TName().PLAYER) then
 							return "HighExplosiveTrap Player";
 						end
 					end
 				end
 			end
-			if v24.Commons.BurstingShot then
-				v57 = v21.InterruptCycle(v25.BurstingShot, 5 + 0, false, nil, true, true);
-				if v57 then
-					return v57;
+			if v25.Commons.BurstingShot then
+				v138 = v22.InterruptCycle(v26.BurstingShot, 2 + 3, false, nil, true, true);
+				if v138 then
+					return v138;
 				end
 			end
-			v57 = v21.InterruptCycle(v25.ScatterShot, 1540 - (1408 + 92), false, nil, true);
-			if v57 then
-				return v57;
+			v138 = v22.InterruptCycle(v26.ScatterShot, 11 + 29, false, nil, true);
+			if v138 then
+				return v138;
 			end
-			v57 = v21.InterruptCycle(v25.CounterShot, 1126 - (461 + 625), true, nil, false);
-			if v57 then
-				return v57;
+			v138 = v22.InterruptCycle(v26.CounterShot, 569 - (406 + 123), true, nil, false);
+			if v138 then
+				return v138;
 			end
-			v57 = v21.InterruptCycle(v25.Intimidation, 1328 - (993 + 295), false, nil, true);
-			if v57 then
-				return v57;
-			end
-		end
-		v57 = v21.PurgeCycle(v25.TranquilizingShot, 3 + 37, false, v24.Commons.TabForTranquilizingShot);
-		if v57 then
-			return v57;
-		end
-		v57 = v21.SootheCycle(v25.TranquilizingShot, 1211 - (418 + 753), false, v24.Commons.TabForTranquilizingShot);
-		if v57 then
-			return v57;
-		end
-		v57 = v87();
-		if v57 then
-			return v57;
-		end
-		if v24.Commons.Enabled.Trinkets then
-			v57 = v90();
-			if v57 then
-				return v57;
+			v138 = v22.InterruptCycle(v26.Intimidation, 1809 - (1749 + 20), false, nil, true);
+			if v138 then
+				return v138;
 			end
 		end
-		if ((v53 < (1 + 1)) or (not v25.BeastCleave:IsAvailable() and (v53 < (1 + 2)))) then
-			v57 = v89();
-			if v57 then
-				return v57;
+		v138 = v22.PurgeCycle(v26.TranquilizingShot, 10 + 30, false, v25.Commons.TabForTranquilizingShot);
+		if v138 then
+			return v138;
+		end
+		v138 = v22.SootheCycle(v26.TranquilizingShot, 1362 - (1249 + 73), false, v25.Commons.TabForTranquilizingShot);
+		if v138 then
+			return v138;
+		end
+		v138 = v94();
+		if v138 then
+			return v138;
+		end
+		if v25.Commons.Enabled.Trinkets then
+			v138 = v97();
+			if v138 then
+				return v138;
 			end
 		end
-		if ((v53 > (1 + 1)) or (v25.BeastCleave:IsAvailable() and (v53 > (1 + 0)))) then
-			v57 = v88();
-			if v57 then
-				return v57;
+		if ((v55 < (1 + 1)) or (not v26.BeastCleave:IsAvailable() and (v55 < (1148 - (466 + 679))))) then
+			v138 = v96();
+			if v138 then
+				return v138;
+			end
+		end
+		if ((v55 > (4 - 2)) or (v26.BeastCleave:IsAvailable() and (v55 > (2 - 1)))) then
+			v138 = v95();
+			if v138 then
+				return v138;
 			end
 		end
 	end
-	if (not (v6:IsMounted() or v6:IsInVehicle()) and v25.MendPet:IsCastable()) then
-		if v16(v25.MendPet) then
+	if (not (v6:IsMounted() or v6:IsInVehicle()) and v26.MendPet:IsCastable()) then
+		if v16(v26.MendPet) then
 			return "Mend Pet Low Priority (w/ Target)";
 		end
 	end
-	if (not (v6:IsMounted() or v6:IsInVehicle()) and v25.MendPet:IsCastable()) then
-		if v16(v25.MendPet) then
+	if (not (v6:IsMounted() or v6:IsInVehicle()) and v26.MendPet:IsCastable()) then
+		if v16(v26.MendPet) then
 			return "Mend Pet Low Priority (w/o Target)";
 		end
 	end
 end
-local function v92()
-	v24.BeastMastery.Display();
+local function v99()
+	v25.BeastMastery.Display();
+	if v60 then
+		v13.Print("Pet ability found");
+	else
+		v13.Print("Please add a Pet ability to your action bar");
+	end
 	v13.Print("Beast Mastery can use pet abilities to better determine AoE. Make sure you have Growl and Blood Bolt / Bite / Claw / Smack on your player action bars.");
-	v21.PostInitialMessage(782 - (406 + 123));
+	v22.PostInitialMessage(2153 - (106 + 1794));
 end
-v13.SetAPL(2022 - (1749 + 20), v91, v92);
+v13.SetAPL(81 + 172, v98, v99);
