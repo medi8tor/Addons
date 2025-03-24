@@ -300,7 +300,7 @@ local function v95()
 			return "lights_judgment cleave 24";
 		end
 	end
-	if (v26.CobraShot:IsReady() and v7:IsInRange(1890 - (1409 + 441)) and ((v6:FocusTimeToMax() < (GCDMAX * (720 - (15 + 703)))) or (v6:BuffStack(v26.HogstriderBuff) > (2 + 1)))) then
+	if (v26.CobraShot:IsReady() and v7:IsInRange(1890 - (1409 + 441)) and ((v6:FocusTimeToMax() < (v34 * (720 - (15 + 703)))) or (v6:BuffStack(v26.HogstriderBuff) > (2 + 1)))) then
 		if v16(v26.CobraShot) then
 			return "cobra_shot cleave 30";
 		end
