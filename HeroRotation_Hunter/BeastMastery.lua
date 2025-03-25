@@ -11,7 +11,7 @@ local v10 = v3.Spell;
 local v11 = v3.Item;
 local v12 = v3.Action;
 local v13 = HeroRotation();
-local v14 = v13.AoEON;
+local AoeON = v13.AoEON;
 local v15 = v13.CDsON;
 local v16 = v13.Cast;
 local v17 = v13.CastSuggested;
@@ -463,7 +463,7 @@ local function v98()
 	v60 = (v12.FindBySpellID(v26.BloodBolt:ID()) and v26.BloodBolt) or (v12.FindBySpellID(v26.Bite:ID()) and v26.Bite) or (v12.FindBySpellID(v26.Claw:ID()) and v26.Claw) or (v12.FindBySpellID(v26.Smack:ID()) and v26.Smack) or nil;
 	v61 = (v12.FindBySpellID(v26.Growl:ID()) and v26.Growl) or nil;
 	v64 = (v61 and v64) or true;
-	if v14() then
+	if AoeON() then
 		v62 = v6:GetEnemiesInRange(6 + 2);
 		v53 = v6:GetEnemiesInRange(96 - 56);
 		v52 = v6:GetEnemiesInRange(653 - (268 + 335));
@@ -581,7 +581,7 @@ local function v98()
 				return v138;
 			end
 		end
-		if (((v25.Commons.UseMisdirection == "Always") or ((v25.Commons.UseMisdirection == "On Combat Start") and (v3.CombatTime() < (1293 - (993 + 295)))) or ((v25.Commons.UseMisdirection == "Solo") and v22.ISSolo()) or ((v25.Commons.UseMisdirection == "On AoE") and v14() and ((v55 > (1 + 1)) or (v26.BeastCleave:IsAvailable() and (v55 > (1172 - (418 + 753))))))) and v22.TargetIsValid() and v26.Misdirection:IsCastable() and v5.Focus:Exists() and v5.Focus:UnitIsFriend() and not v5.Focus:IsDeadOrGhost() and v5.Focus:IsSpellInRange(v26.Misdirection) and v6:BuffDown(v26.Misdirection) and ((v5.Focus:Role() == "TANK") or (UnitIsUnit("focus", "pet") and v22.ISSolo()))) then
+		if (((v25.Commons.UseMisdirection == "Always") or ((v25.Commons.UseMisdirection == "On Combat Start") and (v3.CombatTime() < (1293 - (993 + 295)))) or ((v25.Commons.UseMisdirection == "Solo") and v22.ISSolo()) or ((v25.Commons.UseMisdirection == "On AoE") and AoeON() and ((v55 > (1 + 1)) or (v26.BeastCleave:IsAvailable() and (v55 > (1172 - (418 + 753))))))) and v22.TargetIsValid() and v26.Misdirection:IsCastable() and v5.Focus:Exists() and v5.Focus:UnitIsFriend() and not v5.Focus:IsDeadOrGhost() and v5.Focus:IsSpellInRange(v26.Misdirection) and v6:BuffDown(v26.Misdirection) and ((v5.Focus:Role() == "TANK") or (UnitIsUnit("focus", "pet") and v22.ISSolo()))) then
 			v13.CastTarget(v26.Misdirection, v13.TName().FOCUS);
 			return "Misdirection";
 		end
