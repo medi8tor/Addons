@@ -545,11 +545,11 @@ local function v86()
 	if v20.BlessingofProtection:IsReady() then
 		BoPTarget = v75(v142);
 		PlayerIsBoPTarget = v75(v142, true);
-		if ((BoPTarget ~= nil) and not v26.RetHealing.BoPPlayerOnly) then
+		if ((BoPTarget ~= nil) and not v26.RetHealing.BoPPlayerOnly and not BoPTarget:DebuffUp(v20.ForbearanceDebuff)) then
 			BoPTarget:Cast(v20.BlessingofProtection);
 			return "Blessing of Protection Party";
 		end
-		if (PlayerIsBoPTarget ~= nil) then
+		if ((PlayerIsBoPTarget ~= nil) and not v6:DebuffUp(v20.ForbearanceDebuff)) then
 			v6:Cast(v20.BlessingofProtection);
 			return "Blessing of Protection Player";
 		end
