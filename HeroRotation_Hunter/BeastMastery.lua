@@ -280,7 +280,9 @@ local function v95()
 			return "bloodshed cleave 16";
 		end
 	end
-	if ((v26.DireBeast:IsCastable() and v7:IsInRange(140 - 100) and v26.ShadowHounds:IsAvailable()) or v26.DireCleave:IsAvailable()) then
+	if v26.DireBeast:IsCastable() and 
+	v7:IsInRange(140 - 100) and 
+	(v26.ShadowHounds:IsAvailable() or v26.DireCleave:IsAvailable()) then
 		if v16(v26.DireBeast) then
 			return "dire_beast cleave 18";
 		end
