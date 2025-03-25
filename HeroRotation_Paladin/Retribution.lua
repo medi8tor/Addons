@@ -339,7 +339,7 @@ local function v82()
 				return "use_item for trinket2 (" .. v43:Name() .. ") cooldowns 12";
 			end
 		end
-		if ((v21.BestinSlotsMelee:IsEquippedAndReady() and WeaponSetting and (v26.Retribution.DisableCrusadeAWCDCheck or (v6:BuffUp(v20.AvengingWrathBuff) and (v20.AvengingWrath:CooldownRemains() > (22 + 18))) or (v6:BuffUp(v20.CrusadeBuff) and (v6:BuffStack(v20.CrusadeBuff) == (7 + 3)))) and not v20.RadiantGlory:IsAvailable()) or (v20.RadiantGlory:IsAvailable() and ((not v20.ExecutionSentence:IsAvailable() and v20.WakeofAshes:CooldownUp()) or v7:DebuffUp(v20.ExecutionSentenceDebuff)))) then
+		if (v21.BestinSlotsMelee:IsEquippedAndReady() and (((v26.Retribution.DisableCrusadeAWCDCheck or (v6:BuffUp(v20.AvengingWrathBuff) and (v20.AvengingWrath:CooldownRemains() > (22 + 18))) or (v6:BuffUp(v20.CrusadeBuff) and (v6:BuffStack(v20.CrusadeBuff) == (7 + 3)))) and not v20.RadiantGlory:IsAvailable()) or (v20.RadiantGlory:IsAvailable() and ((not v20.ExecutionSentence:IsAvailable() and v20.WakeofAshes:CooldownUp()) or v7:DebuffUp(v20.ExecutionSentenceDebuff))))) then
 			v12.CastMacro(397 - (115 + 281), nil, nil, v21.BestinSlotsMelee);
 			return "Weapon cast";
 		end
