@@ -643,12 +643,8 @@ do
 			v31("CheckButton", v295, v296, v297, "Use stun as interrupt in dungeon");
 		elseif (v297 == "Interrupt Percent") then
 			v31("Slider", v295, v296, {(1000 - (451 + 549)),(155 - 55),(1385 - (746 + 638))}, v297, "Percentage of cast at which casts must be interrupted.");
-		elseif (v297 == "Use Random Interrupt Percent") then
-			v31("CheckButton", v295, v296, v297, "Use random interrupt percent.");
 		elseif (v297 == "Interrupt Percent Channel") then
 			v31("Slider", v295, v296, {(0 - 0),(1681 - (1535 + 46)),(1 + 0)}, v297, "Percentage of cast at which channel casts must be interrupted.");
-		elseif (v297 == "Use Random Interrupt Percent Channel") then
-			v31("CheckButton", v295, v296, v297, "Use random interrupt percent for channel.");
 		end
 	end,GCDasOffGCD=function(v298, v299, v300)
 		v31("CheckButton", v298, v299, v142(v300), v143(v300));
