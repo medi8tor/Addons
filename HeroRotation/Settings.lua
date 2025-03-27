@@ -5,7 +5,7 @@ local v4 = v2.GUI;
 local v5 = v4.CreatePanel;
 local v6 = v4.CreateChildPanel;
 local v7 = v4.CreatePanelOption;
-local v8 = {General={MainFrameStrata="BACKGROUND",NamePlateIconAnchor="Clickable Area",ShowWhileMounted=false,BlackBorderIcon=false,HideKeyBinds=false,SoloMode=false,HideToggleIcons=false,SetAlpha=(2 - 1),AutoTab=false,AutoTargetFocusTarget=false,HealthstoneLifePercent=(57 - 37),HealingPotionLifePercent=(38 - 18)},Scaling={ScaleUI=(2 - 1),ScaleButtons=(620 - (555 + 64)),ScaleHotkey=(932 - (857 + 74)),ScaleNameplateIcon=(569 - (367 + 201))},APL={},Interrupt={Interrupt={AutoInterrupt=true,AutoStun=true,AutoTargetInterrupt=false,AutoTargetStun=false,InterruptEverythingSolo=true,InterruptEverythingRaid=true,InterruptInDungeon="Whitelist",InterruptInDungeonUseStunAsInterrupt=true,InterruptPercent=(987 - (214 + 713)),InterruptPercentChannel=(16 + 44)}}};
+local v8 = {General={MainFrameStrata="BACKGROUND",NamePlateIconAnchor="Clickable Area",ShowWhileMounted=false,BlackBorderIcon=false,HideKeyBinds=false,SoloMode=false,HideToggleIcons=false,SetAlpha=(2 - 1),AutoTab=false,AutoTargetFocusTarget=false,HealthstoneLifePercent=(57 - 37),HealingPotionLifePercent=(38 - 18)},Scaling={ScaleUI=(2 - 1),ScaleButtons=(620 - (555 + 64)),ScaleHotkey=(932 - (857 + 74)),ScaleNameplateIcon=(569 - (367 + 201))},APL={},Interrupt={Interrupt={AutoInterrupt=true,AutoStun=true,InterruptEverythingSolo=true,InterruptEverythingRaid=true,InterruptInDungeon="Whitelist",InterruptInDungeonUseStunAsInterrupt=true,InterruptPercent=(987 - (214 + 713)),UseRandomInterruptPercent=false,InterruptPercentChannel=(16 + 44),UseRandomInterruptPercentChannel=false}}};
 v3.GUISettingsGet = function()
 	return v8;
 end;
