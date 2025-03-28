@@ -42,8 +42,8 @@ v21.TankBustersList2 = v21.converArrayToList({(265194 + 141965),(432045 - (312 +
 v21.TankBustersMagicList = {(1334609 - 950012),(395403 - (61 + 50)),(1785163 - 1410630),(154378 + 238546),(86248 + 291743),(382909 - (819 + 578)),(205410 - (588 + 155)),(193263 - (1834 + 103)),(1233608 - 820079),(407650 - (128 + 363)),(661484 - 395603),(440301 - 174541),(1038073 - 610697),(205620 - (615 + 394)),(251958 + 12420),(759229 - 591844),(966010 - 529688),(306367 + 128355),(1090933 - 649635),(1159945 - 698103),(108936 + 341119),(441045 - (653 + 746)),(621645 - 190152),(199041 + 252072),(376991 + 54646),(70605 + 381897),(407454 + 20632),(454446 - (885 + 349)),(1252350 - 793140),(430390 - (915 + 53)),(1641493 - 1212782),(322897 - (287 + 41)),(167592 + 154965),(464889 - (741 + 931)),(969521 - 629232),(138089 + 183739),(102141 + 218321),(104129 + 216333),(1049038 - 791870),(273082 - (64 + 430)),(452334 - (106 + 257)),(451962 - (496 + 225)),(2182171 - 1734205),(451999 - (30 + 1869)),(413717 - (96 + 92)),(375432 - (142 + 757)),(155909 + 225603),(397269 - (1053 + 924)),(676731 - 283807),(416182 - 211515),(193035 - (541 + 1168)),(407997 - (669 + 169)),(820832 - 442841),(84828 + 299769),(267155 - (665 + 730)),(417272 - 212661),(1057004 - 792626),(340096 + 87280),(438203 - (22 + 1859)),(266143 - (30 + 232)),(442075 - (55 + 722)),(436397 - (78 + 1597)),(420189 + 41653),(167934 - (305 + 244)),(431598 - (95 + 10)),(1426228 - 976173),(451875 - (592 + 170)),(1104113 - 664467),(176109 + 276393),(69653 + 359769),(432144 - (353 + 154)),(627373 - 168163),(354925 + 98287),(618616 - 190530),(751931 - 429374),(200542 + 228169),(643721 - 321152),(96695 + 243594),(463597 - (262 + 118)),(693091 - 372629),(321941 - (88 + 25)),(159059 + 161403),(258204 - (1007 + 29)),(666305 - 393717),(100723 + 351248),(1136579 - 685338),(1093573 - 645607),(187178 + 254219),(445459 - (495 + 1477)),(294861 + 155239),(205358 + 264252),(283312 + 179423),(1156857 - 716723),(456151 - (173 + 390)),(473665 - (203 + 111)),(331048 + 138430),(420637 + 45029),(466574 - (328 + 56)),(449027 - (433 + 79)),(342636 + 81784),(2023727 - 1595777),(387668 + 47497),(997599 - 570003),(473454 - (76 + 829)),(621240 - 290543),(153243 + 106231),(272392 + 201695),(260655 - (258 + 79)),(620491 - 325562),(447128 - (1231 + 440)),(191891 + 138984),(141618 + 182461),(1026823 - 706523),(977878 - 686000),(425568 - (877 + 712))};
 v21.TankBustersPhysicalList = {(373484 - (242 + 512)),(385605 - (92 + 535)),(771981 - 397192),(1371475 - 994131),(260296 + 115641),(751281 - 374284),(390696 - (1476 + 309)),(47786 + 153353),(225825 - (86 + 7)),(18757 + 178661),(91713 + 122290),(205056 - (339 + 106)),(99775 + 98604),(404217 + 6037),(138718 + 279341),(282873 + 130140),(379296 + 25620),(772222 - 344552),(65055 + 190524),(332305 + 82230),(1617766 - 1216518),(159615 + 5270),(256383 - (438 + 511)),(417784 - (728 + 340)),(810460 - 545904),(412383 - (163 + 176)),(1221329 - 955569),(169195 - (1564 + 246)),(299594 + 139005),(953642 - 520640),(433831 - (45 + 1)),(440461 - (1282 + 708)),(73766 + 369631),(237013 + 215138),(197263 + 253975),(442414 - (706 + 1240)),(1219108 - 787617),(1509015 - 1057898),(35515 + 391486),(429049 - (586 + 1081)),(380594 + 43172),(1092847 - 663953),(376856 + 48032),(318169 + 104064),(224195 + 116013),(321976 - (883 + 397)),(1259086 - 937279),(325810 - (85 + 1402)),(837337 - 512943),(338574 - (12 + 205)),(1312344 - 973888),(321080 - (27 + 357)),(338933 - (90 + 207)),(321516 - (706 + 155)),(336051 - (1339 + 224)),(285549 + 35222),(257459 - (268 + 575)),(705903 - 449194),(270035 - (323 + 1482)),(18090 + 257745),(107902 + 172487),(37740 + 413624),(453299 - (962 + 959)),(79166 + 368095),(329666 + 119778),(449930 - (19 + 224)),(450298 - (37 + 161)),(144497 + 228233),(374850 - (60 + 1)),(191188 + 6230),(421525 - 216914),(216002 - (1864 + 135)),(86086 + 302825),(923664 - 547727),(213805 + 163192),(278864 + 98480),(385043 - (39 + 26)),(225930 - (45 + 153)),(410806 - (457 + 95)),(419851 - 218712),(1493383 - 1080370),(1441826 - 1023767),(428418 - (485 + 263)),(405777 - (750 + 111)),(213871 + 51889),(291286 - 126401),(401558 - (189 + 121)),(168732 - (634 + 713)),(256547 - (493 + 475)),(199163 - (158 + 626)),(689150 - 272434),(14280 + 250276),(413003 - (114 + 845)),(653867 - 398433),(415584 - (179 + 870)),(433880 - (827 + 51)),(219668 + 218931),(31547 + 402238),(397111 + 55040),(1641569 - 1203098),(1936271 - 1492874),(137353 + 303115),(864435 - 432944),(452658 - (1004 + 416)),(429321 - (337 + 1602)),(424781 - (446 + 569)),(1323537 - 872420),(886834 - 459833),(429399 - (223 + 282)),(676605 - 251717),(422903 - (623 + 47)),(179786 + 140910),(322497 - (1070 + 731)),(323211 - (1257 + 147)),(650675 - 310467),(136039 + 188284),(1139623 - 800987),(297734 + 40623),(339013 - (395 + 162)),(336429 - (816 + 1125)),(257764 - (701 + 447)),(448729 - 192020),(874192 - 549798),(679661 - 403826),(261883 + 188217),(452900 - (251 + 1271)),(1208496 - 757132),(444207 - 175977),(80133 + 240638),(83245 + 237410),(421453 + 28234),(1220756 - 773495),(2188277 - 1738833),(280955 - (237 + 329)),(290990 + 150361),(440155 - (408 + 716)),(433050 - (344 + 477)),(436534 - (1188 + 573)),(411691 + 10937),(674938 - 238314),(427065 - (508 + 1021)),(429232 - (228 + 938)),(515959 - 92458),(432895 + 23996),(1711360 - 1283431),(195011 + 230554),(643508 - 221263),(471775 - (694 + 1076)),(442071 + 27695),(419270 + 46550),(1347031 - 887232),(470642 - (214 + 1756)),(28944 + 233571),(269395 - (217 + 368)),(295325 + 153160),(14285 + 408684),(468192 - (242 + 42)),(1033866 - 589138),(682791 - 255162),(258230 + 75615),(331505 - (9 + 931)),(190940 + 129704),(983950 - 652634),(201688 + 121827),(321472 - (1183 + 220)),(1967395 - 751984),(4151676 - 2936611),(331815 - (187 + 340)),(731328 - 437255),(798862 - 478276),(150900 + 271346),(992203 - 564801)};
 v21.NPCAlwaysInCombat = v21.converArrayToList({(109796 + 106389),(200245 + 14198),(229971 - (5 + 197)),(520668 - 290929),(196257 - (365 + 11)),(867097 - 641654),(214608 - (837 + 87)),(223014 - (837 + 833)),(136628 - (356 + 1031)),(221648 - (73 + 1573)),(224110 - (7 + 227)),(224243 - (90 + 76)),(114670 + 119354),(183276 + 37225),(219974 - (197 + 63)),(51121 + 164705),(36078 + 183668),(215120 - (618 + 751)),(235533 - (206 + 1704)),(421717 - 210483),(206493 - (155 + 1120)),(521340 - 290533),(175309 + 57303),(222839 - (230 + 746)),(210845 - (39 + 9)),(389533 - 175090),(20692 + 213751),(707672 - 487168),(122366 + 86381)});
-v21.NPCAlwaysInCombatBossFight = v21.converArrayToList({(124212 - (334 + 910)),(54291 + 44251),(187354 - (230 + 386)),(188126 - (353 + 1157)),(198117 - (1568 + 67)),(26572 + 159544),(558214 - 368495),(211154 + 12625),(196723 + 23155),(177466 + 38360),(89316 + 72993)});
-v21.Buggedmobs = v21.converArrayToList({(474252 - 256763),(624042 - 406551),(220860 - (286 + 1690)),(57755 + 160615),(126547 + 96603),(177029 + 46645),(42774 + 181594),(592190 - 368986),(608164 - 384846),(221709 - (12 + 353)),(14038 + 206463),(220895 - (212 + 937)),(222925 - (111 + 951))});
+v21.NPCAlwaysInCombatBossFight = v21.converArrayToList({(124212 - (334 + 910)),(54291 + 44251),(187354 - (230 + 386)),(188126 - (353 + 1157)),(198117 - (1568 + 67)),(26572 + 159544),(558214 - 368495),(211154 + 12625),(196723 + 23155),(177466 + 38360),(89316 + 72993),(459660 - 248863)});
+v21.Buggedmobs = v21.converArrayToList({(624036 - 406547),(219467 - (286 + 1690)),(57891 + 160993),(123836 + 94534),(176614 + 46536),(42642 + 181032),(595278 - 370910),(607854 - 384650),(223683 - (12 + 353)),(14092 + 207252),(221650 - (212 + 937)),(220808 - (111 + 951)),(221890 - (18 + 9))});
 do
 	local v136 = C_UnitAuras.GetAuraDataByIndex;
 	local v137, v138;
@@ -95,7 +95,7 @@ do
 				if (v146 == "player") then
 					UnitFilterInfoPlayer[v142] = {v139,v140,v141,v146,v143};
 				end
-				v143 = v143 + (2 - 1);
+				v143 = v143 + 1 + 0;
 			end
 			v396[v144] = UnitFilterInfoAll;
 			v396[v145] = UnitFilterInfoPlayer;
@@ -107,14 +107,14 @@ do
 		end
 	end;
 end
-local v43 = v7.Persistent.Player.Class[1017 - (85 + 929)];
+local v43 = v7.Persistent.Player.Class[1870 - (1151 + 716)];
 local v44 = v28[v43];
 local v45 = v7.Persistent.Player.Spec[1 + 0];
 local v46 = v27[v45];
 v20.ClassUpdate = function()
-	v43 = v7.Persistent.Player.Class[1870 - (1151 + 716)];
+	v43 = v7.Persistent.Player.Class[3 + 0];
 	v44 = v28[v43];
-	v45 = v7.Persistent.Player.Spec[1 + 0];
+	v45 = v7.Persistent.Player.Spec[1705 - (95 + 1609)];
 	v46 = v27[v45];
 	if v23.APL[v44][v46 .. "_Interrupt"] then
 		v25 = v23.APL[v44][v46 .. "_Interrupt"].Interrupt;
@@ -122,7 +122,7 @@ v20.ClassUpdate = function()
 		v25 = v23.Interrupt.Interrupt;
 	end
 end;
-local v48, v49, v50 = false, false, 0 + 0;
+local v48, v49, v50 = false, false, 0 - 0;
 v6:RegisterForEvent(function()
 	v48 = true;
 end, "PLAYER_STARTED_LOOKING");
@@ -138,7 +138,7 @@ v6:RegisterForEvent(function()
 	v50 = GetTime();
 end, "PLAYER_STOPPED_TURNING");
 v10.IsCameraBusy = function(v152)
-	return (v49 or v48) and (v50 < (GetTime() + (1705 - (95 + 1609))));
+	return (v49 or v48) and (v50 < (GetTime() + (759 - (364 + 394))));
 end;
 v9.CanBeStunned = function(v153)
 	return (v10:Level() >= v153:Level()) and not v153:IsStunned() and not v153:IsBoss();
@@ -169,10 +169,10 @@ v9.UnitIsEnemy = function(v162)
 	return UnitIsEnemy("player", v162:ID());
 end;
 v9.Role = function(v163)
-	return UnitGroupRolesAssigned(v163.UnitID) or -(3 - 2);
+	return UnitGroupRolesAssigned(v163.UnitID) or -(1 + 0);
 end;
 v9.SpecID = function(v164)
-	return GetInspectSpecialization(v164.UnitID) or -(759 - (364 + 394));
+	return GetInspectSpecialization(v164.UnitID) or -(1 + 0);
 end;
 v9.ClassID = function(v165)
 	local v166, v166, v167 = UnitClass(v165.UnitID);
@@ -187,13 +187,13 @@ v9.IncomingHeals = function(v168)
 	if (v170 <= (0 + 0)) then
 		return 0 + 0;
 	end
-	local v171 = (v169 / v170) * (38 + 62);
+	local v171 = (v169 / v170) * (32 + 68);
 	return math.ceil(v171);
 end;
 v9.HealthPercentageWeighted = function(v172)
 	GUID = v172:GUID();
 	if not GUID then
-		return 92 + 8;
+		return 1056 - (719 + 237);
 	end
 	local v173 = v7.UnitInfo[GUID];
 	if not v173 then
@@ -211,13 +211,13 @@ v9.DebuffElapsed = function(v175, v176, v177, v178)
 	local v179 = v175:DebuffDuration(v176, v177);
 	local v180 = v175:DebuffRemains(v176, v177, v178);
 	local v181 = v179 - v180;
-	return ((v181 >= (0 + 0)) and v181) or (1955 - (719 + 237));
+	return ((v181 >= (0 - 0)) and v181) or (825 + 174);
 end;
 v21.num = function(v182)
 	if v182 then
 		return 2 - 1;
 	else
-		return 0 + 0;
+		return 0 - 0;
 	end
 end;
 v21.bool = function(v183)
@@ -241,7 +241,7 @@ end;
 v21.ISSolo = function()
 	return not v10:IsInRaidArea() and not v10:IsInDungeonArea();
 end;
-local v73 = v15(643447 - 415129);
+local v73 = v15(230309 - (761 + 1230));
 local function v74(v193, v194)
 	if ((v10:IsInRaidArea() and v25.InterruptEverythingRaid) or (v10:IsInDungeonArea() and v193:BuffDown(v73) and ((v25.InterruptInDungeon == "Everything") or ((v25.InterruptInDungeon == "Whitelist") and v194[v193:CastSpellID() or v193:ChannelSpellID()]))) or (v25.InterruptEverythingSolo and v21.ISSolo())) then
 		local v467 = v193:ID();
@@ -257,18 +257,18 @@ local function v74(v193, v194)
 	end
 end
 do
-	local v195 = v15(145690 - 84386);
+	local v195 = v15(61497 - (80 + 113));
 	v10.GCDDuration = function(v399)
 		local v400, v400, v400, v401 = v195:CooldownInfo();
 		return v401;
 	end;
 	v15.CooldownWithoutGCD = function(v402)
 		local v403, v404, v403, v405 = v402:CooldownInfo();
-		if (v404 == (1991 - (761 + 1230))) then
-			return 193 - (80 + 113);
+		if (v404 == (0 + 0)) then
+			return 0 + 0;
 		end
 		local v406 = ((v404 + v405) - GetTime()) - v10:GCDDuration();
-		v406 = ((v406 > (0 + 0)) and v406) or (0 + 0);
+		v406 = ((v406 > (0 + 0)) and v406) or (0 - 0);
 		return v406 == (0 + 0);
 	end;
 end
@@ -331,7 +331,7 @@ v21.SootheCycle = function(v218, v219, v220, v221)
 	end
 end;
 local function v82(v224)
-	if ((v224:NPCID() == (821135 - 616575)) and (v224:CastSpellID() == (94559 + 314246))) then
+	if ((v224:NPCID() == (37390 + 167170)) and (v224:CastSpellID() == (410048 - (965 + 278)))) then
 		return true;
 	end
 end
@@ -346,11 +346,11 @@ v21.IncorpCycle = function(v225, v226, v227, v228)
 	end
 end;
 v21.AfflictedLogic = function(v231, v232)
-	if (v12:Exists() and (v12:NPCID() == (37429 + 167344)) and v12:IsSpellInRange(v231)) then
+	if (v12:Exists() and (v12:NPCID() == (206502 - (1391 + 338))) and v12:IsSpellInRange(v231)) then
 		v4(v231, v232);
 		return "afflicted";
 	end
-	if (v14:Exists() and (v14:NPCID() == (206016 - (965 + 278))) and v14:IsSpellInRange(v231)) then
+	if (v14:Exists() and (v14:NPCID() == (522922 - 318149)) and v14:IsSpellInRange(v231)) then
 		v2.CastTarget(v231, v2.TName().MOUSEOVER, v232);
 		return "afflicted mouseover";
 	end
@@ -430,7 +430,7 @@ v21.CastTargetIf = function(v244, v245, v246, v247, v248, v249, v250, v251, v252
 		return "CastTargetIf Mouseover Cast " .. v244:Name();
 	end
 end;
-local v87 = v15(4554 - (1391 + 338));
+local v87 = v15(2750 + 75);
 v21.unitHasBuffFromList = function(v256, v257)
 	local v258 = v7.UnitInfo[v257:GUID()];
 	local v259 = 0 - 0;
@@ -448,7 +448,7 @@ v21.unitHasBuffFromList = function(v256, v257)
 			for v535, v536 in v17(v472) do
 				if v256[v535] then
 					if (v259 == (0 + 0)) then
-						v259 = math.random(0.4 - 0, 0.9 + 0);
+						v259 = math.random(1408.4 - (496 + 912), 0.9 - 0);
 					end
 					if (v257:BuffRemains(v15(v535), true) >= v259) then
 						if v2.DebugON() then
@@ -491,7 +491,7 @@ v21.unitHasBuffFromListRemainingTime = function(v260, v261, v262)
 end;
 v21.unitHasDebuffFromList = function(v264, v265)
 	local v266 = v7.UnitInfo[v265:GUID()];
-	local v267 = 1408 - (496 + 912);
+	local v267 = 0 + 0;
 	if not v266 then
 		v265:DebuffInfo(v73, "HARMFUL");
 		v266 = v7.UnitInfo[v265:GUID()];
@@ -506,7 +506,7 @@ v21.unitHasDebuffFromList = function(v264, v265)
 			for v539, v540 in v17(v476) do
 				if v264[v539] then
 					if (v267 == (0 - 0)) then
-						v267 = math.random(0.4 + 0, 0.9 - 0);
+						v267 = math.random(1330.4 - (1190 + 140), 0.9 + 0);
 					end
 					if (v265:DebuffElapsed(v15(v539), true) >= v267) then
 						if v2.DebugON() then
@@ -520,37 +520,37 @@ v21.unitHasDebuffFromList = function(v264, v265)
 	end
 	return false;
 end;
-local v91 = v15(322118 - (1190 + 140));
-local v92 = v15(132244 + 142770);
-local v93 = v15(449279 - (317 + 401));
-local v94 = v15(444386 - (303 + 646));
-local v95 = v15(1533975 - 1101527);
-local v96 = v15(463219 - (1675 + 57));
-local v97 = v15(273678 + 151211);
+local v91 = v15(321506 - (317 + 401));
+local v92 = v15(275963 - (303 + 646));
+local v93 = v15(1591131 - 1142570);
+local v94 = v15(445169 - (1675 + 57));
+local v95 = v15(278547 + 153901);
+local v96 = v15(1205918 - 744431);
+local v97 = v15(52928 + 371961);
 v21.DispelCycle = function(v268, v269, v270, v271)
 	local v272 = v21.DebuffList[v269];
 	local function v273(v411)
 		if (v269 == "Magic") then
-			if (v411:DebuffUp(v91, true) and (v411:DebuffElapsed(v91, true) >= (7.25 - 4))) then
+			if (v411:DebuffUp(v91, true) and (v411:DebuffElapsed(v91, true) >= (980.25 - (338 + 639)))) then
 				return true;
 			end
-			if (v411:DebuffUp(v92, true) and (v411:DebuffElapsed(v92, true) >= (1 + 2))) then
+			if (v411:DebuffUp(v92, true) and (v411:DebuffElapsed(v92, true) >= (382 - (320 + 59)))) then
 				return true;
 			end
-			if (v411:DebuffUp(v93, true) and (v411:DebuffElapsed(v93, true) >= (980 - (338 + 639)))) then
+			if (v411:DebuffUp(v93, true) and (v411:DebuffElapsed(v93, true) >= (2 + 1))) then
 				return true;
 			end
-			if (v411:DebuffUp(v94, true) and (v411:DebuffElapsed(v94, true) >= (382 - (320 + 59)))) then
+			if (v411:DebuffUp(v94, true) and (v411:DebuffElapsed(v94, true) >= (735 - (628 + 104)))) then
 				return true;
 			end
-			if (v411:DebuffUp(v95, true) and (v411:DebuffElapsed(v95, true) >= (2 + 1))) then
+			if (v411:DebuffUp(v95, true) and (v411:DebuffElapsed(v95, true) >= (3 - 0))) then
 				return true;
 			end
-			if (v411:DebuffUp(v97, true) and (v411:DebuffRemains(v97, true) <= (740 - (628 + 104)))) then
+			if (v411:DebuffUp(v97, true) and (v411:DebuffRemains(v97, true) <= (1899 - (439 + 1452)))) then
 				return true;
 			end
 		elseif (v269 == "Disease") then
-			if (v411:DebuffUp(v91, true) and (v411:DebuffElapsed(v91, true) >= (3.25 - 0))) then
+			if (v411:DebuffUp(v91, true) and (v411:DebuffElapsed(v91, true) >= (1950.25 - (105 + 1842)))) then
 				return true;
 			end
 		elseif (v269 == "Poison") then
@@ -581,7 +581,7 @@ v21.CycleFriendly = function(v274, v275, v276, v277, v278)
 		end
 	end
 end;
-local v100 = v15(445503 - (439 + 1452));
+local v100 = v15(2029457 - 1585845);
 local function v101(v280)
 	return (v10:DebuffUp(v100, true) and v280:DebuffUp(v100, true)) or (v10:DebuffDown(v100, true) and v280:DebuffDown(v100, true));
 end
@@ -607,11 +607,11 @@ v21.UnitsinRange = function(v281)
 	end
 	return v282;
 end;
-local v103 = {[444232 - (105 + 1842)]=(0.3 - 0),[1100539 - 649315]=(0.3 - 0),[13582 + 306880]=(0.4 - 0),[229505 + 213800]=(1164.3 - (274 + 890)),[396077 + 59327]=(0.3 + 0),[119344 + 307392]=(0.3 + 0),[262821 + 187274]=(0.3 - 0),[443256 - (731 + 88)]=(0.3 + 0),[271861 + 171413]=(0.3 + 0),[646750 - 204090]=(0.3 - 0),[937269 - 614783]=(0.8 - 0),[387108 + 39200]=(0.8 + 0),[80680 + 368474]=(0.8 + 0),[431467 - (139 + 19)]=(0.8 + 0),[434441 - (1687 + 306)]=(0.8 - 0),[432504 - (1018 + 136)]=(0.8 + 0),[1947214 - 1503784]=(815.8 - (117 + 698)),[443914 - (305 + 176)]=(0.8 + 0),[331406 + 112031]=(0.8 - 0),[419944 + 28617]=(0.8 - 0),[995286 - 555179]=(0.8 - 0),[434000 - (159 + 101)]=(0.8 - 0),[1159472 - 824724]=(0.8 + 0),[1020675 - 700475]=(0.8 - 0),[30938 + 241633]=(266.8 - (112 + 154)),[634281 - 360811]=(31.8 - (21 + 10)),[276733 - (531 + 1188)]=(0.8 + 0),[440976 - (96 + 567)]=(0.6 - 0),[192304 + 272747]=(0.8 - 0)};
-local v104 = v15(104037 - (867 + 828));
-local v105 = v15(72656 - 39450);
-local v106 = v15(173292 - 125504);
-local v107 = v15(15496 - 8556);
+local v103 = {[1078737 - 636452]=(0.3 - 0),[19124 + 432100]=(0.3 - 0),[165907 + 154555]=(1164.4 - (274 + 890)),[385554 + 57751]=(0.3 + 0),[127362 + 328042]=(0.3 + 0),[249181 + 177555]=(0.3 - 0),[450914 - (731 + 88)]=(0.3 + 0),[271348 + 171089]=(0.3 + 0),[647646 - 204372]=(0.3 - 0),[1286542 - 843882]=(0.3 - 0),[292832 + 29654]=(0.8 + 0),[76576 + 349732]=(0.8 + 0),[449312 - (139 + 19)]=(0.8 + 0),[433302 - (1687 + 306)]=(0.8 - 0),[433602 - (1018 + 136)]=(0.8 + 0),[1894168 - 1462818]=(815.8 - (117 + 698)),[443911 - (305 + 176)]=(0.8 + 0),[331403 + 112030]=(0.8 - 0),[415147 + 28290]=(0.8 - 0),[1014404 - 565843]=(0.8 - 0),[440367 - (159 + 101)]=(0.8 - 0),[1502353 - 1068613]=(0.8 + 0),[1067049 - 732301]=(0.8 - 0),[36344 + 283856]=(266.8 - (112 + 154)),[632196 - 359625]=(31.8 - (21 + 10)),[275189 - (531 + 1188)]=(0.8 + 0),[275677 - (96 + 567)]=(0.8 - 0),[182075 + 258238]=(0.6 - 0),[466746 - (867 + 828)]=(0.8 - 0)};
+local v104 = v15(371119 - 268777);
+local v105 = v15(74148 - 40942);
+local v106 = v15(73634 - 25846);
+local v107 = v15(3023 + 3917);
 v21.CalculateWeight = function(v283)
 	local v284 = 1 - 0;
 	local v285 = v7.UnitInfo[v283:GUID()];
@@ -635,9 +635,9 @@ v21.CalculateWeight = function(v283)
 			end
 		end
 	end
-	if (v284 > (0.3 + 0)) then
-		local v480 = (1 - 0) * (((v283:BuffUp(v104, true) or v283:BuffUp(v107, true) or v283:BuffUp(v105, true)) and (772.1 - (134 + 637))) or (1 + 0));
-		v480 = v480 * ((v283:BuffUp(v106, true) and (1158.3 - (775 + 382))) or (1 - 0));
+	if (v284 > (771.3 - (134 + 637))) then
+		local v480 = (1 + 0) * (((v283:BuffUp(v104, true) or v283:BuffUp(v107, true) or v283:BuffUp(v105, true)) and (1158.1 - (775 + 382))) or (1 - 0));
+		v480 = v480 * ((v283:BuffUp(v106, true) and (608.3 - (45 + 562))) or (863 - (545 + 317)));
 		v284 = v284 * v480;
 	end
 	return v283:HealthPercentage() * v284;
@@ -650,10 +650,10 @@ v21.GetLowestHealthUnit = function(v286)
 	for v412, v413 in v17(v286) do
 		local v414 = v413:HealthPercentageWeighted();
 		if (v413:Role() == "TANK") then
-			if ((not v413:ClassID() == (613 - (45 + 562))) and (v413:HealthPercentage() >= (927 - (545 + 317)))) then
-				v414 = v414 * (1.9 - 0);
-			elseif (v413:PowerPercentage() > (1046 - (763 + 263))) then
-				v414 = v414 * (1.2 + 0);
+			if ((not v413:ClassID() == (8 - 2)) and (v413:HealthPercentage() >= (1091 - (763 + 263)))) then
+				v414 = v414 * (1.9 + 0);
+			elseif (v413:PowerPercentage() > (1770 - (512 + 1238))) then
+				v414 = v414 * (1595.2 - (272 + 1322));
 			end
 		end
 		if (v414 < v288) then
@@ -670,10 +670,10 @@ v21.GetLowestHealthUnit = function(v286)
 	return v287, v289;
 end;
 v21.GetAverageGroupHealthPercent = function(v291)
-	local v292 = 1750 - (512 + 1238);
+	local v292 = 0 - 0;
 	local v293 = #v291;
-	if (v293 == (1594 - (272 + 1322))) then
-		return 187 - 87;
+	if (v293 == (1246 - (533 + 713))) then
+		return 128 - (14 + 14);
 	end
 	for v415, v416 in v17(v291) do
 		v292 = v292 + v416:HealthPercentage();
@@ -681,28 +681,28 @@ v21.GetAverageGroupHealthPercent = function(v291)
 	return v292 / v293;
 end;
 v21.BuffCount = function(v294, v295)
-	local v296 = 1246 - (533 + 713);
+	local v296 = 825 - (499 + 326);
 	for v417, v418 in v17(v294) do
 		if v418:BuffUp(v295, nil, true) then
-			v296 = v296 + (29 - (14 + 14));
+			v296 = v296 + (1 - 0);
 		end
 	end
 	return v296;
 end;
 v21.DebuffCount = function(v297, v298)
-	local v299 = 825 - (499 + 326);
+	local v299 = 424 - (104 + 320);
 	for v419, v420 in v17(v297) do
 		if v420:DebuffUp(v298, true) then
-			v299 = v299 + (1 - 0);
+			v299 = v299 + (1998 - (1929 + 68));
 		end
 	end
 	return v299;
 end;
 v21.DebuffCountWithStacks = function(v300, v301, v302)
-	local v303 = 424 - (104 + 320);
+	local v303 = 1323 - (1206 + 117);
 	for v421, v422 in v17(v300) do
 		if (v422:DebuffUp(v301, true) and (v422:DebuffStack(v301, true) >= v302)) then
-			v303 = v303 + (1998 - (1929 + 68));
+			v303 = v303 + 1 + 0;
 		end
 	end
 	return v303;
@@ -825,16 +825,16 @@ v21.GetLowestHealthUnitWithout2Buff = function(v329, v330, v331)
 	end
 end;
 v21.AoELogicWithCount = function(v334, v335, v336, v337)
-	local v338 = 1323 - (1206 + 117);
+	local v338 = 1592 - (683 + 909);
 	for v437, v438 in v17(v337) do
-		v338 = ((v438:HealthPercentageWeighted() < v334) and (v338 + 1 + 0)) or v338;
+		v338 = ((v438:HealthPercentageWeighted() < v334) and (v338 + (2 - 1))) or v338;
 	end
 	return (((v338 >= v335) or (v338 >= #v337)) and ((v336 == nil) or (v336 == "With Logic") or ((v336 == "With Cooldowns and Logic") and v2.CDsON()))) or ((v336 == "With Cooldowns") and v2.CDsON());
 end;
 v21.AoELogicWithCountUnweighted = function(v339, v340, v341, v342)
-	local v343 = 1592 - (683 + 909);
+	local v343 = 0 - 0;
 	for v439, v440 in v17(v342) do
-		v343 = ((v440:HealthPercentage() < v339) and (v343 + (2 - 1))) or v343;
+		v343 = ((v440:HealthPercentage() < v339) and (v343 + (778 - (772 + 5)))) or v343;
 	end
 	return (((v343 >= v340) or (v343 >= #v342)) and ((v341 == nil) or (v341 == "With Logic") or ((v341 == "With Cooldowns and Logic") and v2.CDsON()))) or ((v341 == "With Cooldowns") and v2.CDsON());
 end;
@@ -843,10 +843,10 @@ v21.AoELogic = function(v344, v345, v346)
 	return ((v347 <= v344) and ((v345 == nil) or (v345 == "With Logic") or ((v345 == "With Cooldowns and Logic") and v2.CDsON()))) or ((v345 == "With Cooldowns") and v2.CDsON());
 end;
 v21.GroupBuffMissing = function(v348, v349)
-	local v350 = 74 - 34;
-	local v351 = {[778 - (772 + 5)]=(383185 - (19 + 1408)),[290 - (134 + 154)]=(629258 - 247506),[9 - 6]=(129758 + 251991),[4 + 0]=(381956 - (10 + 192)),[52 - (13 + 34)]=(383042 - (342 + 947)),[24 - 18]=(383440 - (119 + 1589)),[15 - 8]=(528630 - 146874),[560 - (545 + 7)]=(1082279 - 700529),[4 + 5]=(383460 - (494 + 1209)),[26 - 16]=(382749 - (197 + 801)),[21 - 10]=(1845738 - 1463992),[966 - (919 + 35)]=(323400 + 58341),[52 - 39]=(382215 - (369 + 98))};
-	if (v348:ID() == (7788 - (400 + 715))) then
-		v350 = 45 + 55;
+	local v350 = 1467 - (19 + 1408);
+	local v351 = {[289 - (134 + 154)]=(629268 - 247510),[6 - 4]=(129759 + 251993),[3 + 0]=(381951 - (10 + 192)),[51 - (13 + 34)]=(383043 - (342 + 947)),[20 - 15]=(383461 - (119 + 1589)),[13 - 7]=(528597 - 146865),[559 - (545 + 7)]=(1082296 - 700540),[4 + 4]=(383453 - (494 + 1209)),[23 - 14]=(382755 - (197 + 801)),[20 - 10]=(1845763 - 1464012),[965 - (919 + 35)]=(323404 + 58342),[48 - 36]=(382208 - (369 + 98)),[1128 - (400 + 715)]=(169904 + 211844)};
+	if (v348:ID() == (2905 + 3768)) then
+		v350 = 1425 - (744 + 581);
 	end
 	if v10:BuffDown(v348, true) then
 		return true;
@@ -860,61 +860,61 @@ v21.GroupBuffMissing = function(v348, v349)
 		return false;
 	end
 	local v353 = 0 + 0;
-	local v354 = 1325 - (744 + 581);
+	local v354 = 1622 - (653 + 969);
 	for v441, v442 in v17(v352) do
 		if (v442:Exists() and not v442:IsDeadOrGhost() and (v349 or (v442:IsSpellInRange(v348) and not (v10:IsInDelve() and (v442:Name() == "Brann Bronzebeard"))))) then
-			v353 = v353 + 1 + 0;
-			if (v348:ID() == (383370 - (653 + 969))) then
+			v353 = v353 + (1 - 0);
+			if (v348:ID() == (383379 - (12 + 1619))) then
 				local v545, v545, v546 = v442:Class();
 				if v442:BuffUp(v15(v351[v546]), true) then
-					v354 = v354 + (1 - 0);
+					v354 = v354 + (164 - (103 + 60));
 				end
 			elseif v442:BuffDown(v348, true) then
 				return true;
 			end
 		end
 	end
-	if ((v348:ID() == (383379 - (12 + 1619))) and (v354 < v353)) then
+	if ((v348:ID() == (1881462 - 1499714)) and (v354 < v353)) then
 		return true;
 	end
 	return false;
 end;
-local v125 = v21.converArrayToList({(1900239 - 1514681),(1796724 - 1419720),(383384 - (555 + 1313)),(149797 + 17588),(385833 - (1261 + 207))});
+local v125 = v21.converArrayToList({(1837490 - 1451932),(378872 - (555 + 1313)),(341428 + 40088),(168853 - (1261 + 207)),(385112 - (212 + 535))});
 do
-	v21.stopCastRemains = 252 - (245 + 7);
+	v21.stopCastRemains = 0 - 0;
 	v21.ShouldStopCastUpdate = function()
-		local v443 = v10:GetEnemiesInRange(787 - (212 + 535));
+		local v443 = v10:GetEnemiesInRange(1516 - (905 + 571));
 		for v482, v483 in v17(v443) do
 			if v125[v483:CastSpellID()] then
 				v21.stopCastRemains = v483:CastRemains() - (0.1 - 0);
-				return v483:CastRemains() <= (v10:CastRemains() + (1476.1 - (905 + 571)));
+				return v483:CastRemains() <= (v10:CastRemains() + (0.1 - 0));
 			end
 		end
 		v21.stopCastRemains = 0 - 0;
 		return false;
 	end;
 	v21.ShouldStopCast = function(v445)
-		return (v21.stopCastRemains == (0 - 0)) or (v445:ExecuteTime() < v21.stopCastRemains);
+		return (v21.stopCastRemains == (0 + 0)) or (v445:ExecuteTime() < v21.stopCastRemains);
 	end;
 	v15.IsCastable = function(v446, v447)
-		return v446:IsLearned() and v446:CooldownUp(v447) and ((v21.stopCastRemains == (0 - 0)) or (v446:ExecuteTime() < v21.stopCastRemains));
+		return v446:IsLearned() and v446:CooldownUp(v447) and ((v21.stopCastRemains == (1463 - (522 + 941))) or (v446:ExecuteTime() < v21.stopCastRemains));
 	end;
 	v15.IsReady2 = function(v448)
 		return v448:IsCastable2() and v448:IsUsableP();
 	end;
 end
 v21.GetCurrentEmpowerData = function(v360)
-	local v361 = 0 + 0;
+	local v361 = 1511 - (292 + 1219);
 	local v362 = {};
 	_, _, _, StartTimeMS, EndTimeMS, _, _, _, _, StageTotal = UnitChannelInfo("player");
-	if (StageTotal and (StageTotal > (1463 - (522 + 941)))) then
-		local v484 = 1511 - (292 + 1219);
-		for v511 = 1113 - (787 + 325), StageTotal do
-			v362[v511] = {Start=v484,Finish=(v484 + (GetUnitEmpowerStageDuration("player", v511 - (2 - 1)) / (890 + 110)))};
+	if (StageTotal and (StageTotal > (1112 - (787 + 325)))) then
+		local v484 = 0 - 0;
+		for v511 = 1 + 0, StageTotal do
+			v362[v511] = {Start=v484,Finish=(v484 + (GetUnitEmpowerStageDuration("player", v511 - (2 - 1)) / (1534 - (424 + 110))))};
 			v2.Print(" Start" .. v511 .. ": " .. v362[v511].Start);
 			v2.Print("Finish" .. v511 .. ": " .. v362[v511].Finish);
 			v484 = v362[v511].Finish;
-			if (((StartTimeMS / (2294 - 1294)) + v484) <= GetTime()) then
+			if (((StartTimeMS / (574 + 426)) + v484) <= GetTime()) then
 				v361 = v511;
 			end
 		end
@@ -934,7 +934,7 @@ v6:RegisterForEvent(function(v366, v367)
 end, "NAME_PLATE_UNIT_REMOVED");
 local v128 = {};
 v6:RegisterForCombatEvent(function(...)
-	local v369, v370, v370, v370, v370, v370, v370, v370, v371 = select(538 - (424 + 110), ...);
+	local v369, v370, v370, v370, v370, v370, v370, v370, v371 = select(3 + 1, ...);
 	local v372 = v127[v369];
 	if v372 then
 		if (UnitIsUnit(v372 .. "target", v10:ID()) and v371) then
@@ -990,7 +990,7 @@ v9.IncomingSpellreflection = function(v375, v376)
 			v128[v375:ID()][v451] = nil;
 		elseif v376[v451] then
 			for v553, v554 in v17(v127) do
-				if ((v9.Nameplate[v554]:CastRemains() > (0 + 0)) and (v9.Nameplate[v554]:CastRemains() < (1 + 0))) then
+				if ((v9.Nameplate[v554]:CastRemains() > (0 + 0)) and (v9.Nameplate[v554]:CastRemains() < (313 - (33 + 279)))) then
 					return v451;
 				end
 			end
@@ -1000,12 +1000,12 @@ end;
 v21.PotionSelected = function()
 	local v377 = v23.APL[v44][v46].PotionType.Selected;
 	local v378 = v23.APL[v44][v46].PotionRank and v23.APL[v44][v46].PotionRank.Selected;
-	local v379 = {(212577 - (33 + 279)),(213617 - (1338 + 15)),(101022 + 111241)};
-	local v380 = {(1822 - (298 + 1521)),(312 - (154 + 156)),(1 - 0)};
+	local v379 = {(213618 - (1338 + 15)),(101022 + 111242),(214082 - (298 + 1521))};
+	local v380 = {(313 - (154 + 156)),(3 - 1),(451 - (168 + 282))};
 	local v381 = "";
 	if (v377 == "Tempered Potion") then
 		for v516, v517 in ipairs(v379) do
-			local v518 = v380[((v516 - (1116 - (712 + 403))) % #v380) + (451 - (168 + 282))];
+			local v518 = v380[((v516 - (1 - 0)) % #v380) + 1 + 0];
 			if ((not v378 or (tostring(v518) == v378) or (v378 == "Any")) and v16(v517):IsUsable()) then
 				return v16(v517);
 			end
@@ -1015,10 +1015,10 @@ v21.PotionSelected = function()
 	end
 end;
 do
-	local v382 = {Spells={v15(372055 + 5167),v15(927051 - 598622),v15(347514 - (20 + 659)),v15(129730 + 58089),v15(371901 - 190556),v15(352798 - 195739),v15(206558 - (1427 + 520))},PetMounts={(443269 - 326467),(88314 - (712 + 520)),(88424 - (565 + 781)),(43000 + 44081),(88458 - (1330 + 48)),(15180 + 71899),(382284 - 295208)}};
+	local v382 = {Spells={v15(1064778 - 687556),v15(329108 - (20 + 659)),v15(239564 + 107271),v15(385177 - 197358),v15(407351 - 226006),v15(159006 - (1427 + 520)),v15(776508 - 571897)},PetMounts={(118034 - (712 + 520)),(88428 - (565 + 781)),(42999 + 44079),(88459 - (1330 + 48)),(15180 + 71900),(382297 - 295218),(278879 - 191803)}};
 	v10.IsInWhitelistedVehicle = function(v453)
 		local v454 = v382.Spells;
-		for v487 = 1170 - (854 + 315), #v454 do
+		for v487 = 1 + 0, #v454 do
 			local v488 = v454[v487];
 			if v453:DebuffUp(v488, true, true) then
 				return true;
@@ -1026,7 +1026,7 @@ do
 		end
 		local v455 = v382.PetMounts;
 		if v11:IsActive() then
-			for v533 = 3 - 2, #v455 do
+			for v533 = 45 - (31 + 13), #v455 do
 				local v534 = v455[v533];
 				if (v11:NPCID() == v534) then
 					return true;
@@ -1037,22 +1037,22 @@ do
 	end;
 end
 do
-	local v384 = {v15(2869 - (31 + 13)),v15(74573 - 42391),v15(80916 - (281 + 282)),v15(45286 + 45069),v15(162299 - (137 + 1710)),v15(265205 - (100 + 438)),v15(263616 + 126770),v15(36780 - (535 + 770)),v15(19462 + 16014),v15(23324 + 123231),v15(179117 - (793 + 117)),v15(231795 - (747 + 113)),v15(1238812 - 982072),v15(289940 + 19718),v15(201431 + 179870),v15(259281 + 184976)};
+	local v384 = {v15(6546 - 3721),v15(32745 - (281 + 282)),v15(40273 + 40080),v15(92202 - (137 + 1710)),v15(160990 - (100 + 438)),v15(178722 + 85945),v15(391691 - (535 + 770)),v15(19462 + 16013),v15(5646 + 29830),v15(147465 - (793 + 117)),v15(179067 - (747 + 113)),v15(1114299 - 883364),v15(240392 + 16348),v15(163584 + 146074),v15(222538 + 158763),v15(1061899 - 617642)};
 	v9.BloodlustRemains = function(v456, v457)
 		local v458 = v456:GUID();
 		if not v458 then
 			return false;
 		end
-		for v489 = 1 + 0, #v384 do
+		for v489 = 455 - (246 + 208), #v384 do
 			local v490 = v384[v489];
 			if v456:BuffUp(v490, true) then
 				return v456:BuffRemains(v490, true, v457);
 			end
 		end
-		return 0 - 0;
+		return 1892 - (614 + 1278);
 	end;
 	v9.BloodlustUp = function(v459, v460)
-		return v459:BloodlustRemains(v460) > (454 - (246 + 208));
+		return v459:BloodlustRemains(v460) > (0 + 0);
 	end;
 	v9.BloodlustDown = function(v461, v462)
 		return not v461:BloodlustUp(v462);
@@ -1060,61 +1060,61 @@ do
 end
 v21.HealthPotions = function()
 	if ((v10:HealthPercentage() < v23.General.HealthstoneLifePercent) and v10:AffectingCombat() and (v16.Common.HealthStone:IsReady())) then
-		if v2.CastMacro(1896 - (614 + 1278), nil, nil, v16.Common.HealthStone) then
+		if v2.CastMacro(318 - (249 + 65), nil, nil, v16.Common.HealthStone) then
 			return "Use Healthstone";
 		end
 	elseif ((v10:HealthPercentage() < v23.General.HealthstoneLifePercent) and v10:AffectingCombat() and (v16.Common.HealthStone2:IsReady())) then
-		if v2.CastMacro(5 + 5, nil, nil, v16.Common.HealthStone2) then
+		if v2.CastMacro(22 - 12, nil, nil, v16.Common.HealthStone2) then
 			return "Use Demonic Healthstone";
 		end
 	elseif ((v10:HealthPercentage() < v23.General.HealingPotionLifePercent) and v10:AffectingCombat() and (v16.Common.HealingPotion:IsReady() or v16.Common.HealingPotion2:IsReady() or v16.Common.HealingPotion3:IsReady())) then
-		v2.CastMacro(319 - (249 + 65), nil, nil, v16.Common.HealingPotion);
+		v2.CastMacro(1280 - (726 + 549), nil, nil, v16.Common.HealingPotion);
 		return "Use Heal Potion";
 	elseif (v23.General.AutoTargetFocusTarget and (not v12:Exists() or v12:IsDeadOrGhost()) and v9.Focus:Exists() and v9.Focus:UnitIsFriend() and v9.Focus:AffectingCombat()) then
 		local v556 = v9("focustarget");
 		if (v556:Exists() and v556:AffectingCombat() and v10:CanAttack(v556) and not v556:IsDeadOrGhost()) then
-			v2.CastMacro(15 - 8, true);
+			v2.CastMacro(5 + 2, true);
 			return "Auto asssist focus";
 		end
-	elseif (v23.General.AutoTab and v10:AffectingCombat() and (not v12:Exists() or v12:IsDeadOrGhost()) and (v12:NPCID() ~= (209075 - (726 + 549)))) then
-		v2.TopPanelAlternative:ChangeIcon(1 + 0, 1427 - (916 + 508));
+	elseif (v23.General.AutoTab and v10:AffectingCombat() and (not v12:Exists() or v12:IsDeadOrGhost()) and (v12:NPCID() ~= (209224 - (916 + 508)))) then
+		v2.TopPanelAlternative:ChangeIcon(3 - 2, 2 + 1);
 		return "Auto tab to target";
 	end
 end;
 v21.PostInitialMessage = function(v388)
-	if (v388 == (871 - 612)) then
+	if (v388 == (582 - (140 + 183))) then
 		v2.Print("Assassination Rogue rotation has been updated for patch 11.1.0. Please report any issues on the discord. Thank you!");
-	elseif (v388 == (163 + 89)) then
+	elseif (v388 == (183 + 69)) then
 		v2.Print("Unholy DK rotation has been updated for patch 11.1.0. Please report any issues on the discord. Thank you!");
-	elseif (v388 == (389 - (140 + 183))) then
+	elseif (v388 == (630 - (297 + 267))) then
 		v2.Print("Protection Paladin rotation has been updated for patch 11.1.0. Please report any issues on the discord. Thank you!");
-	elseif (v388 == (53 + 20)) then
+	elseif (v388 == (47 + 26)) then
 		v2.Print("Protection Warrior rotation has been updated for patch 11.1.0. Please report any issues on the discord. Thank you!");
-	elseif (v388 == (669 - (297 + 267))) then
+	elseif (v388 == (447 - (37 + 305))) then
 		v2.Print("Restoration Druid rotation has been updated for  patch 11.1.0. Please report any issues on the discord. Thank you!");
 		v2.Print("Convoke Will Be Used for DPS, if the Settings is Enabled and Cooldown Toggle is on");
-	elseif (v388 == (45 + 25)) then
+	elseif (v388 == (1336 - (323 + 943))) then
 		v2.Print("Retribution Paladin rotation has been updated for patch 11.1.0. Please report any issues on the discord. Thank you!");
-	elseif (v388 == (595 - (37 + 305))) then
+	elseif (v388 == (101 + 152)) then
 		v2.Print("Beast Mastery Hunter rotation has been updated for patch 11.1.0. Please report any issues on the discord. Thank you!");
-	elseif (v388 == (1329 - (323 + 943))) then
+	elseif (v388 == (81 - 18)) then
 		v2.Print("Fire Mage rotation has been updated for patch 11.1.0. Please report any issues on the discord. Thank you!");
-	elseif (v388 == (104 + 157)) then
+	elseif (v388 == (1796 - (394 + 1141))) then
 		v2.Print("Subtlety Rogue rotation has been updated for patch 11.1.0. Please report any issues on the discord. Thank you!");
-	elseif (v388 == (348 - 81)) then
+	elseif (v388 == (167 + 100)) then
 		v2.Print("Destruction Warlock rotation has been updated for patch 11.1.0. Please report any issues on the discord. Thank you!");
-	elseif (v388 == (1785 - (394 + 1141))) then
+	elseif (v388 == (71 + 179)) then
 		v2.Print("Blood DK rotation has been updated for patch 11.1.0. Please report any issues on the discord. Thank you!");
-	elseif (v388 == (45 + 26)) then
+	elseif (v388 == (5 + 66)) then
 		v2.Print("Arms Warrior rotation has been updated for patch 11.1.0. Please report any issues on the discord. Thank you!");
-	elseif (v388 == (29 + 73)) then
+	elseif (v388 == (129 - 27)) then
 		v2.Print("Balance Druid rotation has been updated for patch 11.1.0. Please report any issues on the discord. Thank you!");
 		v2.Print("Convoke Will Be Used for DPS, if the Settings is Enabled and Cooldown Toggle is on");
-	elseif (v388 == (19 + 251)) then
+	elseif (v388 == (396 - 126)) then
 		v2.Print("Mistweaver Monk rotation has been updated for patch 11.1.0. Please report any issues on the discord. Thank you!");
-	elseif (v388 == (334 - 71)) then
+	elseif (v388 == (241 + 22)) then
 		v2.Print("Enhancement Shaman rotation has been updated for patch 11.1.0. Please report any issues on the discord. Thank you!");
-	elseif (v388 == (105 - 33)) then
+	elseif (v388 == (67 + 5)) then
 		v2.Print("Fury Warrior rotation has been updated for patch 11.1.0. Please report any issues on the discord. Thank you!");
 	end
 end;
