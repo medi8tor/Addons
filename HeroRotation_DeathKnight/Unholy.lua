@@ -21,1115 +21,1178 @@ local v6 = v5.Player;
 local v7 = v5.Target;
 local v8 = v5.MouseOver;
 local v9 = v5.Boss;
-local v10 = v5.Pet;
-local v11 = v3.Spell;
-local v12 = v3.Item;
-local v13 = HeroRotation();
-local v14 = v13.Cast;
-local v15 = v13.CDsON;
-local v16 = v13.AoEON;
-local v17 = v13.Commons().Everyone.num;
-local v18 = v13.Commons().Everyone.bool;
-local v19 = C_Timer.After;
-local v20 = math.max;
-local v21 = table.insert;
-local v22 = GetTime;
-local v23 = v13.Commons().DeathKnight;
-local v24 = v11.DeathKnight.Unholy;
-local v25 = v12.DeathKnight.Unholy;
-local v26 = {[LUAOBFUSACTOR_DECRYPT_STR_0("\226\206\218\41\234\152\227\42\222\196\220\41\227", "\126\177\163\187\69\134\219\167")]=false,[LUAOBFUSACTOR_DECRYPT_STR_0("\23\204\40\241\243\36\202\38\192", "\156\67\173\74\165")]=false,[LUAOBFUSACTOR_DECRYPT_STR_0("\29\185\93\19\174\52\83\36\163\125\25\187\33\74\49", "\38\84\215\41\118\220\70")]=false,[LUAOBFUSACTOR_DECRYPT_STR_0("\116\24\6\33\251\68\2\43\28\249", "\158\48\118\66\114")]=false,[LUAOBFUSACTOR_DECRYPT_STR_0("\143\37\2\61\71\183\250\165\55\22\57\97\168\250\191\45\31\56\64\160\239\191\45\30\49", "\155\203\68\112\86\19\197")]=false,[LUAOBFUSACTOR_DECRYPT_STR_0("\116\220\53\245\65\116\246\203\67\201\34\245\78\127", "\152\38\189\86\156\32\24\133")]=false,[LUAOBFUSACTOR_DECRYPT_STR_0("\200\69\174\72\247\82\179\23\207\82\179\82\245\89\160", "\38\156\55\199")]=false,[LUAOBFUSACTOR_DECRYPT_STR_0("\156\111\117\38\24\113\238\17\155\120\104\60\26\122\253", "\35\200\29\28\72\115\20\154")]=false,[LUAOBFUSACTOR_DECRYPT_STR_0("\41\176\197\214\130\34\7\28\171\197\214\131\43", "\84\121\223\177\191\237\76")]=false,[LUAOBFUSACTOR_DECRYPT_STR_0("\154\70\198\163\59\92\41\209\168\83\250\165\46\68\57\207\188", "\161\219\54\169\192\90\48\80")]=false,[LUAOBFUSACTOR_DECRYPT_STR_0("\124\76\8\42\69\91\33\54\90\67\21\41\93\113\5\49\93\75\14\34", "\69\41\34\96")]=false,[LUAOBFUSACTOR_DECRYPT_STR_0("\157\193\216\7\11\37\189\215\222\5\12\7\181\206\213\57\7\63\168\202\217\13", "\75\220\163\183\106\98")]=false,[LUAOBFUSACTOR_DECRYPT_STR_0("\39\183\155\56\206\7\168\185\34\215\7\141\142\54\201\13\180\184\50\205\22\179\133\48", "\185\98\218\235\87")]=false,[LUAOBFUSACTOR_DECRYPT_STR_0("\254\50\47\233\210\179\233\48\46\225\214\190\248\57\51\242\215\164\204", "\202\171\92\71\134\190")]=false,[LUAOBFUSACTOR_DECRYPT_STR_0("\26\212\33\133\38\207\11\137\59\198\35\145\37\196\31\141\61\213\37\134\46", "\232\73\161\76")]=false,[LUAOBFUSACTOR_DECRYPT_STR_0("\137\216\75\78\27\154\219\77\80\23\181\216\86\84\17\181\234\71\73\10\178\215\69", "\126\219\185\34\61")]=false,[LUAOBFUSACTOR_DECRYPT_STR_0("\45\220\83\107\81\113\199\239\9\234\91\115\122\68\246\243\24\199\80\117", "\135\108\174\62\18\30\23\147")]=false};
-local v27 = {v25.AlgetharPuzzleBox:ID(),v25.Fyralath:ID(),v25.IrideusFragment:ID(),v25.VialofAnimatedBlood:ID(),v25.ManicGrieftorch:ID(),v25.TreacherousTransmitter:ID()};
-local v28 = v6:GetEquipment();
-local v29 = (v28[18 - 5] and v12(v28[170 - (26 + 131)])) or v12(0 + 0);
-local v30 = (v28[53 - 39] and v12(v28[873 - (240 + 619)])) or v12(0 + 0);
-local v31;
-local v32;
-local v33 = v13.GUISettingsGet();
-local v34 = v13.Commons().Everyone;
-local v35 = {[LUAOBFUSACTOR_DECRYPT_STR_0("\145\236\36\206\10\175\63", "\167\214\137\74\171\120\206\83")]=v33.General,[LUAOBFUSACTOR_DECRYPT_STR_0("\168\255\63\80\247\169\152", "\199\235\144\82\61\152")]=v33.APL.DeathKnight.Commons,[LUAOBFUSACTOR_DECRYPT_STR_0("\35\19\191\46\9\5\176\61\2\5", "\75\103\118\217")]=v33.APL.DeathKnight.Unholy.Defensives,[LUAOBFUSACTOR_DECRYPT_STR_0("\242\90\120\27\181\7", "\126\167\52\16\116\217")]=v33.APL.DeathKnight.Unholy,[LUAOBFUSACTOR_DECRYPT_STR_0("\252\26\4", "\156\168\78\64\224\212\121")]=v33.APL.DeathKnight.Unholy_TTD};
-local v36;
-local v37;
-local v38;
-local v39;
-local v40;
-local v41;
-local v42;
-local v43, v44;
-local v45, v46;
-local v47, v48;
-local v49, v50;
-local v51 = ((v24.VampiricStrikeAction:IsLearned()) and v24.VampiricStrikeAction) or ((v24.ClawingShadows:IsAvailable()) and v24.ClawingShadows) or v24.ScourgeStrike;
-local v52 = ((v24.ClawingShadows:IsAvailable()) and v24.ClawingShadows) or v24.ScourgeStrike;
-local v53 = ((v24.Defile:IsAvailable()) and v24.Defile) or v24.DeathAndDecay;
-local v54, v55, v56;
-local v57, v58, v59;
-local v60, v61;
-local v62;
-local v63 = 17673 - 6562;
-local v64 = 736 + 10375;
-local v65 = v13.Commons().DeathKnight.GhoulTable;
-local v29, v30;
-local v66, v67;
-local v68, v69;
-local v70, v71;
-local v72, v73;
-local v74, v75;
-local v76, v77;
-local v78, v79;
-local v80, v81;
-local v82, v83;
-local v84, v85;
-local function v86(v146)
-	return (v146 ~= LUAOBFUSACTOR_DECRYPT_STR_0("\41\225\177\142\50\253\160\202", "\174\103\142\197")) and (((v146 == LUAOBFUSACTOR_DECRYPT_STR_0("\97\33\75\48\101\125\247\89\36\91\55\50\80\235", "\152\54\72\63\88\69\62")) and v13.CDsON()) or ((v146 == LUAOBFUSACTOR_DECRYPT_STR_0("\227\205\250\84\148\247\227\93\216\200\174\83\198\132\205\83\219\200\234\83\195\202\253", "\60\180\164\142")) and (v26[1745 - (1344 + 400)] or v13.CDsON())) or ((v146 == LUAOBFUSACTOR_DECRYPT_STR_0("\111\87\17\33\103\222\31\89\82\9\105\4\201\1", "\114\56\62\101\73\71\141")) and v26[406 - (255 + 150)]) or ((v146 == LUAOBFUSACTOR_DECRYPT_STR_0("\151\231\155\233\183\235\216\203\173\231\207", "\164\216\137\187")) and (v59 >= v35.Unholy.Mobcount)) or ((v146 == LUAOBFUSACTOR_DECRYPT_STR_0("\253\232\113\159\169\252\8\221\243\63\166\230\241\25\146\197\62\189\170\250\4\197\232\34", "\107\178\134\81\210\198\158")) and ((v59 >= v35.Unholy.Mobcount) or v15())) or (v146 == LUAOBFUSACTOR_DECRYPT_STR_0("\25\2\149\199\179\43", "\202\88\110\226\166")) or ((v146 == LUAOBFUSACTOR_DECRYPT_STR_0("\236\1\194\213\197\208\28\135\228", "\170\163\111\226\151")) and IsBossfight) or ((v146 == LUAOBFUSACTOR_DECRYPT_STR_0("\60\63\176\59\65\34\39\5\112\189\42\14\21\38\2\35", "\73\113\80\210\88\46\87")) and (IsBossfight or (v59 >= v35.Unholy.Mobcount))));
+local v10 = v5.Boss.boss1;
+local v11 = v5.Boss.boss2;
+local v12 = v5.Boss.boss3;
+local v13 = v5.Pet;
+local v14 = v3.Spell;
+local v15 = v3.Item;
+local v16 = HeroRotation();
+local v17 = v16.Cast;
+local v18 = v16.CDsON;
+local v19 = v16.AoEON;
+local v20 = v16.Commons().Everyone.num;
+local v21 = v16.Commons().Everyone.bool;
+local v22 = C_Timer.After;
+local v23 = math.max;
+local v24 = table.insert;
+local v25 = GetTime;
+local v26 = v16.Commons().DeathKnight;
+local v27 = v14.DeathKnight.Unholy;
+local v28 = v15.DeathKnight.Unholy;
+local v29 = {v28.AlgetharPuzzleBox:ID(),v28.Fyralath:ID(),v28.IrideusFragment:ID(),v28.VialofAnimatedBlood:ID(),v28.ManicGrieftorch:ID(),v28.TreacherousTransmitter:ID()};
+local v30 = v6:GetEquipment();
+local v31 = (v30[10 + 3] and v15(v30[3 + 10])) or v15(0 + 0);
+local v32 = (v30[38 - 24] and v15(v30[46 - 32])) or v15(0 + 0);
+local v33;
+local v34;
+local v35 = v16.GUISettingsGet();
+local v36 = v16.Commons().Everyone;
+local v37 = {[LUAOBFUSACTOR_DECRYPT_STR_0("\246\198\213\32\244\186\203", "\126\177\163\187\69\134\219\167")]=v35.General,[LUAOBFUSACTOR_DECRYPT_STR_0("\0\194\39\200\243\45\222", "\156\67\173\74\165")]=v35.APL.DeathKnight.Commons,[LUAOBFUSACTOR_DECRYPT_STR_0("\16\178\79\19\178\53\79\34\178\90", "\38\84\215\41\118\220\70")]=v35.APL.DeathKnight.Unholy.Defensives,[LUAOBFUSACTOR_DECRYPT_STR_0("\101\24\42\29\242\73", "\158\48\118\66\114")]=v35.APL.DeathKnight.Unholy,[LUAOBFUSACTOR_DECRYPT_STR_0("\159\16\52", "\155\203\68\112\86\19\197")]=v35.APL.DeathKnight.Unholy_TTD};
+local v38 = {[LUAOBFUSACTOR_DECRYPT_STR_0("\117\233\6\240\65\118\235\241\72\218", "\152\38\189\86\156\32\24\133")]=nil,[LUAOBFUSACTOR_DECRYPT_STR_0("\221\83\163\85\206\82\170\71\245\89", "\38\156\55\199")]=nil,[LUAOBFUSACTOR_DECRYPT_STR_0("\137\109\115\43\39\125\247\74\166\122", "\35\200\29\28\72\115\20\154")]=nil,[LUAOBFUSACTOR_DECRYPT_STR_0("\41\176\193\232\130\57\58\29\172", "\84\121\223\177\191\237\76")]=nil,[LUAOBFUSACTOR_DECRYPT_STR_0("\139\89\198\172\51\94\55\243\174\88\192\163\10\95\39\196\169", "\161\219\54\169\192\90\48\80")]=nil,[LUAOBFUSACTOR_DECRYPT_STR_0("\122\82\5\43\77\112\48", "\69\41\34\96")]=nil,[LUAOBFUSACTOR_DECRYPT_STR_0("\143\194\217\41\13\34\176\238\194\6\22", "\75\220\163\183\106\98")]=nil,[LUAOBFUSACTOR_DECRYPT_STR_0("\54\168\130\57\210\7\174\218\30\253", "\185\98\218\235\87")]=nil,[LUAOBFUSACTOR_DECRYPT_STR_0("\255\46\46\232\213\175\223\110\14\194", "\202\171\92\71\134\190")]=nil,[LUAOBFUSACTOR_DECRYPT_STR_0("\29\211\37\134\34\196\56\217\10\192\63\156\29\200\33\141", "\232\73\161\76")]=nil,[LUAOBFUSACTOR_DECRYPT_STR_0("\143\203\75\83\21\190\205\16\126\31\168\205\118\84\19\190", "\126\219\185\34\61")]=nil,[LUAOBFUSACTOR_DECRYPT_STR_0("\56\220\87\124\117\114\231\182\47\234", "\135\108\174\62\18\30\23\147")]=nil,[LUAOBFUSACTOR_DECRYPT_STR_0("\130\251\35\197\19\171\39\149\149\205", "\167\214\137\74\171\120\206\83")]=nil,[LUAOBFUSACTOR_DECRYPT_STR_0("\191\226\59\83\243\162\159\161\23\69", "\199\235\144\82\61\152")]=nil,[LUAOBFUSACTOR_DECRYPT_STR_0("\51\4\176\37\12\19\173\121\34\14", "\75\103\118\217")]=nil,[LUAOBFUSACTOR_DECRYPT_STR_0("\243\70\121\26\178\27\211\5\82\1\191\24\212", "\126\167\52\16\116\217")]=nil,[LUAOBFUSACTOR_DECRYPT_STR_0("\252\60\41\142\191\28\232\154\12\53\134\178\10", "\156\168\78\64\224\212\121")]=nil,[LUAOBFUSACTOR_DECRYPT_STR_0("\51\252\172\192\12\235\177\159\35\251\183\207\19\231\170\192", "\174\103\142\197")]=nil,[LUAOBFUSACTOR_DECRYPT_STR_0("\98\58\86\54\46\91\236\4\12\74\42\36\74\241\89\38", "\152\54\72\63\88\69\62")]=nil,[LUAOBFUSACTOR_DECRYPT_STR_0("\224\214\231\82\223\193\250\13\231\221\224\95", "\60\180\164\142")]=nil,[LUAOBFUSACTOR_DECRYPT_STR_0("\108\76\12\39\44\232\6\10\109\28\39\36", "\114\56\62\101\73\71\141")]=nil,[LUAOBFUSACTOR_DECRYPT_STR_0("\140\251\210\202\179\236\207\244\170\224\212\214\177\253\194", "\164\216\137\187")]=nil,[LUAOBFUSACTOR_DECRYPT_STR_0("\246\231\60\179\161\251\63\192\239\63\185\163\234\59\192\239\62\160\175\234\18", "\107\178\134\81\210\198\158")]=nil,[LUAOBFUSACTOR_DECRYPT_STR_0("\29\30\139\194\175\53\7\129\242\171\42\9\135\210\185", "\202\88\110\226\166")]=nil,[LUAOBFUSACTOR_DECRYPT_STR_0("\226\13\141\250\235\192\27\139\225\207", "\170\163\111\226\151")]=nil,[LUAOBFUSACTOR_DECRYPT_STR_0("\48\50\189\53\124\50\36\16\57\188\43", "\73\113\80\210\88\46\87")]=nil,[LUAOBFUSACTOR_DECRYPT_STR_0("\160\60\194\17\192\137\35\216\30\198\130\56\196\4\226", "\135\225\76\173\114")]=nil,[LUAOBFUSACTOR_DECRYPT_STR_0("\59\253\183\179\139\181\168\15\225\138\181\161\188\174\20\254", "\199\122\141\216\208\204\221")]=nil,[LUAOBFUSACTOR_DECRYPT_STR_0("\140\207\29\233\95\254\162\200\28\209\123\226\164\203\21", "\150\205\189\112\144\24")]=nil,[LUAOBFUSACTOR_DECRYPT_STR_0("\4\150\178\85\35\128\30\5\41\182\186\65\5\129\31\3", "\112\69\228\223\44\100\232\113")]=nil,[LUAOBFUSACTOR_DECRYPT_STR_0("\243\30\21\212\151\127\146\221\9\2", "\230\180\127\103\179\214\28")]=nil,[LUAOBFUSACTOR_DECRYPT_STR_0("\171\4\77\65\214\68\237\141\12\81\85", "\128\236\101\63\38\132\33")]=nil};
+local v39 = ((v27.VampiricStrikeAction:IsLearned()) and v27.VampiricStrikeAction) or ((v27.ClawingShadows:IsAvailable()) and v27.ClawingShadows) or v27.ScourgeStrike;
+local v40 = ((v27.ClawingShadows:IsAvailable()) and v27.ClawingShadows) or v27.ScourgeStrike;
+local v41 = ((v27.Defile:IsAvailable()) and v27.Defile) or v27.DeathAndDecay;
+local v42 = nil;
+local v43 = nil;
+local v44 = nil;
+local v45 = (v27.EbonFever:IsAvailable() and (2 + 2)) or (7.1 + 1);
+local v46 = (v27.EbonFever:IsAvailable() and (3.6 + 0)) or (4.2 + 3);
+local v47 = (v27.EbonFever:IsAvailable() and (1436.6 - (797 + 636))) or (33.2 - 26);
+local v31, v32;
+local v48, v49, v50;
+local v51, v52;
+local v53 = 12730 - (1427 + 192);
+local v54 = 3850 + 7261;
+local v55 = v16.Commons().DeathKnight.GhoulTable;
+local function v56(v117)
+	return (v117 ~= LUAOBFUSACTOR_DECRYPT_STR_0("\130\166\5\4\131\248\202\168", "\175\204\201\113\36\214\139")) and (((v117 == LUAOBFUSACTOR_DECRYPT_STR_0("\112\197\33\212\68\100\195\58\208\0\72\219\59\207", "\100\39\172\85\188")) and v16.CDsON()) or ((v117 == LUAOBFUSACTOR_DECRYPT_STR_0("\154\113\173\136\115\158\117\184\140\63\237\119\171\192\16\162\119\181\132\60\186\118\170", "\83\205\24\217\224")) and (SmallCDToggle or v16.CDsON())) or ((v117 == LUAOBFUSACTOR_DECRYPT_STR_0("\209\204\217\53\166\246\192\60\234\201\141\30\194\214", "\93\134\165\173")) and SmallCDToggle) or ((v117 == LUAOBFUSACTOR_DECRYPT_STR_0("\145\252\129\239\53\204\177\113\171\252\213", "\30\222\146\161\162\90\174\210")) and (v50 >= v37.Unholy.Mobcount)) or ((v117 == LUAOBFUSACTOR_DECRYPT_STR_0("\202\64\48\39\234\76\115\5\240\64\100\74\234\92\48\41\234\65\124\14\234\89\126\25", "\106\133\46\16")) and ((v50 >= v37.Unholy.Mobcount) or v18())) or (v117 == LUAOBFUSACTOR_DECRYPT_STR_0("\121\44\100\253\67\83", "\32\56\64\19\156\58")) or ((v117 == LUAOBFUSACTOR_DECRYPT_STR_0("\117\198\165\116\85\225\147\95\219", "\224\58\168\133\54\58\146")) and IsBossfight) or ((v117 == LUAOBFUSACTOR_DECRYPT_STR_0("\116\89\73\254\122\147\137\31\25\89\89\189\87\137\148\24", "\107\57\54\43\157\21\230\231")) and (IsBossfight or (v50 >= v37.Unholy.Mobcount))));
 end
-local function v87(v147, v148, v149)
-	if (IsBossfight or v34.ISSolo() or (v149 == (0 + 0)) or ((v64 >= v149) and (v64 < (4164 + 3613)))) then
-		v13.Cast(v147, v148);
-		return LUAOBFUSACTOR_DECRYPT_STR_0("\181\24\233\82\228\128\63\217\82", "\135\225\76\173\114") .. v147:Name();
+local function v57(v118, v119, v120)
+	if (IsBossfight or v36.ISSolo() or (v120 == (0 - 0)) or ((v54 >= v120) and (v54 < (6991 + 786)))) then
+		v16.Cast(v118, v119);
+		return LUAOBFUSACTOR_DECRYPT_STR_0("\239\191\53\181\186\221\220\207\203", "\175\187\235\113\149\217\188") .. v118:Name();
 	end
 end
-local function v88(v150)
-	if (v150 == nil) then
+local function v58(v121)
+	if (v121 == nil) then
 		return true;
 	end
-	return IsBossfight or v34.ISSolo() or (v150 == (0 - 0)) or v34.Buggedmobs[v7:NPCID()] or ((v64 >= v150) and (v64 < (25118 - 17341)));
+	return IsBossfight or v36.ISSolo() or (v121 == (0 + 0)) or v36.Buggedmobs[v7:NPCID()] or ((v54 >= v121) and (v54 < (8103 - (192 + 134))));
 end
-local v89 = {{v24.Asphyxiate,LUAOBFUSACTOR_DECRYPT_STR_0("\57\236\171\164\236\156\180\10\229\161\168\165\188\179\31\173\240\153\162\169\162\8\255\173\160\184\244", "\199\122\141\216\208\204\221"),function()
+local v59 = {{v27.Asphyxiate,LUAOBFUSACTOR_DECRYPT_STR_0("\31\174\146\88\163\88\107\44\167\152\84\234\120\108\57\239\201\101\237\109\125\46\189\148\92\247\48", "\24\92\207\225\44\131\25"),function()
 	return true;
 end}};
-local function v90()
-	return v25.ManicGrieftorch:IsEquipped() and (v25.ManicGrieftorch:CooldownUp() or (v25.ManicGrieftorch:CooldownRemains() <= v6:GCDRemains()));
+local function v60()
+	return v28.ManicGrieftorch:IsEquipped() and (v28.ManicGrieftorch:CooldownUp() or (v28.ManicGrieftorch:CooldownRemains() <= v6:GCDRemains()));
 end
-local function v91()
-	return v25.AlgetharPuzzleBox:IsEquipped() and (v25.AlgetharPuzzleBox:CooldownUp() or (v25.AlgetharPuzzleBox:CooldownRemains() <= v6:GCDRemains()));
+local function v61()
+	return v28.AlgetharPuzzleBox:IsEquipped() and (v28.AlgetharPuzzleBox:CooldownUp() or (v28.AlgetharPuzzleBox:CooldownRemains() <= v6:GCDRemains()));
 end
-local v92 = 0 + 0;
-local function v93()
-	local v151, v152 = v6:GetTrinketData(v27);
-	if ((v92 < (342 - (10 + 327))) and ((v151.ID == (0 + 0)) or (v152.ID == (338 - (118 + 220))) or (v151.Level == (0 + 0)) or (v152.Level == (449 - (108 + 341))) or ((v151.SpellID > (0 + 0)) and not v151.Usable) or ((v152.SpellID > (0 - 0)) and not v152.Usable))) then
-		v92 = v92 + (1494 - (711 + 782));
-		v19(9 - 4, function()
-			v93();
+local v62 = (0 - 0) - (551 - (83 + 468));
+local function v63()
+	local v122, v123 = v6:GetTrinketData(v29);
+	if ((v62 < (1811 - (1202 + 604))) and ((v122.ID == (0 - 0)) or (v123.ID == (0 - 0)) or (v122.Level == (0 - 0)) or (v123.Level == (325 - (45 + 280))) or ((v122.SpellID > (0 + 0)) and not v122.Usable) or ((v123.SpellID > (0 + 0)) and not v123.Usable))) then
+		v62 = v62 + 1 + 0;
+		v22(3 + 2, function()
+			v63();
 		end);
 		return;
 	end
-	v29 = v151.Object;
-	v30 = v152.Object;
-	v66 = v151.ID;
-	v67 = v152.ID;
-	VarTrinket1Level = v151.Level;
-	VarTrinket2Level = v152.Level;
-	v68 = v151.Spell;
-	v70 = v151.Range;
-	v72 = v151.CastTime;
-	v69 = v152.Spell;
-	v71 = v152.Range;
-	v73 = v152.CastTime;
-	v74 = v151.Cooldown;
-	v75 = v152.Cooldown;
-	v76 = v151.Blacklisted;
-	v77 = v152.Blacklisted;
-	v78 = v29:HasUseBuff() or (v66 == v25.TreacherousTransmitter:ID());
-	v79 = v30:HasUseBuff() or (v67 == v25.TreacherousTransmitter:ID());
-	v80 = ((v66 == v25.TreacherousTransmitter:ID()) and (484 - (270 + 199))) or v29:BuffDuration();
-	v81 = ((v67 == v25.TreacherousTransmitter:ID()) and (5 + 10)) or v30:BuffDuration();
-	v82 = 1819.5 - (580 + 1239);
-	if ((v78 and ((v24.Apocalypse:IsAvailable() and ((v74 % (89 - 59)) == (0 + 0))) or (v24.DarkTransformation:IsAvailable() and ((v74 % (2 + 43)) == (0 + 0))))) or (v66 == v25.TreacherousTransmitter:ID())) then
-		v82 = 2 - 1;
+	v31 = v122.Object;
+	v32 = v123.Object;
+	v38.Trinket1ID = v122.ID;
+	v38.Trinket2ID = v123.ID;
+	VarTrinket1Level = v122.Level;
+	VarTrinket2Level = v123.Level;
+	VarTrinket1Spell = v122.Spell;
+	VarTrinket1Range = v122.Range;
+	v38.Trinket1CastTime = v122.CastTime;
+	VarTrinket2Spell = v123.Spell;
+	VarTrinket2Range = v123.Range;
+	v38.Trinket2CastTime = v123.CastTime;
+	v38.Trinket1CD = v122.Cooldown;
+	v38.Trinket2CD = v123.Cooldown;
+	v38.Trinket1Ex = v122.Excluded;
+	v38.Trinket2Ex = v123.Excluded;
+	v38.Trinket1Buffs = v31:HasUseBuff() or (v38.Trinket1ID == v28.TreacherousTransmitter:ID());
+	v38.Trinket2Buffs = v32:HasUseBuff() or (v38.Trinket2ID == v28.TreacherousTransmitter:ID());
+	v38.Trinket1Duration = 0 + 0;
+	v38.Trinket2Duration = 0 - 0;
+	if (v38.Trinket1ID == v28.TreacherousTransmitter:ID()) then
+		v38.Trinket1Duration = 1926 - (340 + 1571);
+	elseif (v38.Trinket1ID == v28.FunhouseLens:ID()) then
+		v38.Trinket1Duration = 6 + 9;
+	elseif (v38.Trinket1ID == v28.SignetofthePriory:ID()) then
+		v38.Trinket1Duration = 1792 - (1733 + 39);
+	else
+		v38.Trinket1Duration = v31:BuffDuration();
 	end
-	v83 = 0.5 + 0;
-	if ((v79 and ((v24.Apocalypse:IsAvailable() and ((v75 % (1197 - (645 + 522))) == (1790 - (1010 + 780)))) or (v24.DarkTransformation:IsAvailable() and ((v75 % (45 + 0)) == (0 - 0))))) or (v67 == v25.TreacherousTransmitter:ID())) then
-		v83 = 2 - 1;
+	if (v38.Trinket2ID == v28.TreacherousTransmitter:ID()) then
+		v38.Trinket2Duration = 41 - 26;
+	elseif (v38.Trinket2ID == v28.FunhouseLens:ID()) then
+		v38.Trinket2Duration = 1049 - (125 + 909);
+	elseif (v38.Trinket2ID == v28.SignetofthePriory:ID()) then
+		v38.Trinket2Duration = 1968 - (1096 + 852);
+	else
+		v38.Trinket2Duration = v32:BuffDuration();
 	end
-	v84 = 1837 - (1045 + 791);
-	local v169 = ((v80 > (0 - 0)) and v80) or (1 - 0);
-	local v170 = ((v81 > (505 - (351 + 154))) and v81) or (1575 - (1281 + 293));
-	if ((not v78 and v79 and (v30:HasCooldown() or not v29:HasCooldown())) or (v79 and (((v75 / v170) * v83) > ((v74 / v169) * v82 * ((267 - (28 + 238)) + ((VarTrinket1Level - VarTrinket2Level) / (223 - 123))))))) then
-		v84 = 1561 - (1381 + 178);
+	VarTrinket1HighValue = ((v38.Trinket1ID == v28.TreacherousTransmitter:ID()) and (1 + 1)) or (1 - 0);
+	VarTrinket2HighValue = ((v38.Trinket2ID == v28.TreacherousTransmitter:ID()) and (2 + 0)) or (513 - (409 + 103));
+	v38.Trinket1Sync = 236.5 - (46 + 190);
+	if ((v38.Trinket1Buffs and ((v27.Apocalypse:IsAvailable() and ((v38.Trinket1CD % (125 - (51 + 44))) == (0 + 0))) or (v27.DarkTransformation:IsAvailable() and ((v38.Trinket1CD % (1362 - (1114 + 203))) == (726 - (228 + 498)))))) or (v38.Trinket1ID == v28.TreacherousTransmitter:ID())) then
+		v38.Trinket1Sync = 1 + 0;
 	end
-	v85 = 1 + 0;
-	if (not v78 and not v79 and (VarTrinket2Level >= VarTrinket1Level)) then
-		v85 = 2 + 0;
+	v38.Trinket2Sync = 0.5 + 0;
+	if ((v38.Trinket2Buffs and ((v27.Apocalypse:IsAvailable() and ((v38.Trinket2CD % (693 - (174 + 489))) == (0 - 0))) or (v27.DarkTransformation:IsAvailable() and ((v38.Trinket2CD % (1950 - (830 + 1075))) == (524 - (303 + 221)))))) or (v38.Trinket2ID == v28.TreacherousTransmitter:ID())) then
+		v38.Trinket2Sync = 1270 - (231 + 1038);
+	end
+	v38.TrinketPriority = 1 + 0;
+	local v155 = ((v38.Trinket1Duration > (1162 - (171 + 991))) and v38.Trinket1Duration) or (4 - 3);
+	local v156 = ((v38.Trinket2Duration > (0 - 0)) and v38.Trinket2Duration) or (2 - 1);
+	if ((not v38.Trinket1Buffs and v38.Trinket2Buffs and (v32:HasCooldown() or not v31:HasCooldown())) or (v38.Trinket2Buffs and (((v38.Trinket2CD / v156) * v38.Trinket2Sync * VarTrinket2HighValue * (1 + 0 + ((VarTrinket2Level - VarTrinket1Level) / (350 - 250)))) > ((v38.Trinket1CD / v155) * v38.Trinket1Sync * VarTrinket1HighValue * ((2 - 1) + ((VarTrinket1Level - VarTrinket2Level) / (161 - 61))))))) then
+		v38.TrinketPriority = 6 - 4;
+	end
+	v38.DamageTrinketPriority = 1249 - (111 + 1137);
+	if (not v38.Trinket1Buffs and not v38.Trinket2Buffs and (VarTrinket2Level >= VarTrinket1Level)) then
+		v38.DamageTrinketPriority = 160 - (91 + 67);
 	end
 end
-v93();
-local v94 = false;
-local v89 = {{v24.Asphyxiate,LUAOBFUSACTOR_DECRYPT_STR_0("\142\220\3\228\56\215\190\205\24\233\96\255\172\201\21\176\48\223\163\201\21\226\106\227\189\201\89", "\150\205\189\112\144\24"),function()
+v63();
+local v64 = false;
+local v59 = {{v27.Asphyxiate,LUAOBFUSACTOR_DECRYPT_STR_0("\104\210\171\88\91\92\88\195\176\85\3\116\74\199\189\12\83\84\69\199\189\94\9\104\91\199\241", "\29\43\179\216\44\123"),function()
 	return true;
 end}};
-local function v95()
-	if (v33.General.AutoTab and v6:AffectingCombat()) then
-		v13.TopPanelAlternative:ChangeIcon(1 + 0, 3 + 0);
-		return LUAOBFUSACTOR_DECRYPT_STR_0("\4\145\171\67\68\156\16\18\101\144\176\12\16\137\3\23\32\144", "\112\69\228\223\44\100\232\113");
+local function v65()
+	if (v35.General.AutoTab and v6:AffectingCombat()) then
+		v16.TopPanelAlternative:ChangeIcon((3765 - 2405) - (591 + 542 + (989 - (326 + 445))), (52 - 40) - (17 - 9));
+		return LUAOBFUSACTOR_DECRYPT_STR_0("\156\204\52\67\253\205\33\78\253\205\47\12\169\216\50\75\184\205", "\44\221\185\64");
 	end
 end
 v3:RegisterForEvent(function()
-	v63 = 19032 - 7921;
-	v64 = 12267 - (1074 + 82);
-end, LUAOBFUSACTOR_DECRYPT_STR_0("\228\51\38\234\147\78\185\230\58\32\246\152\67\163\250\62\37\255\147\88", "\230\180\127\103\179\214\28"));
+	v53 = 25935 - 14824;
+	v54 = 11822 - (530 + 181);
+end, LUAOBFUSACTOR_DECRYPT_STR_0("\49\203\105\102\86\51\216\122\122\84\36\201\119\122\93\32\197\100\122\87", "\19\97\135\40\63"));
 v3:RegisterForEvent(function()
-	v53 = ((v24.Defile:IsAvailable()) and v24.Defile) or v24.DeathAndDecay;
-	v92 = 0 - 0;
-	v93();
-end, LUAOBFUSACTOR_DECRYPT_STR_0("\188\41\126\127\193\115\223\169\52\106\111\212\108\197\162\49\96\101\204\96\206\171\32\123", "\128\236\101\63\38\132\33"), LUAOBFUSACTOR_DECRYPT_STR_0("\159\153\52\104\154\216\240\143\129\48\106\145\206\235", "\175\204\201\113\36\214\139"), LUAOBFUSACTOR_DECRYPT_STR_0("\107\233\20\238\42\98\232\10\239\52\98\224\25\227\45\105\243\1\253\38", "\100\39\172\85\188"));
-local function v96()
-	return (v6:HealthPercentage() < v35.Unholy.Defensives.UseDeathStrikeHP) or ((v6:HealthPercentage() < v35.Unholy.Defensives.UseDarkSuccorHP) and v6:BuffUp(v24.DeathStrikeBuff));
+	v41 = ((v27.Defile:IsAvailable()) and v27.Defile) or v27.DeathAndDecay;
+	v45 = (v27.EbonFever:IsAvailable() and ((882 - (614 + 267)) + (35 - (19 + 13)))) or ((20.1 - 7) - (11 - 6));
+	v46 = (v27.EbonFever:IsAvailable() and ((11.6 - 7) - (1 + 0))) or ((759.2 - 327) - ((490 - 253) + (2000 - (1293 + 519))));
+	v47 = (v27.EbonFever:IsAvailable() and ((5.6 - 2) + (0 - 0))) or ((13.2 - 6) + (0 - 0));
+	v62 = 0 - 0;
+	v63();
+end, LUAOBFUSACTOR_DECRYPT_STR_0("\158\112\18\2\10\3\145\121\2\14\6\1\131\121\29\15\16\18\134\125\29\28\10\21", "\81\206\60\83\91\79"), LUAOBFUSACTOR_DECRYPT_STR_0("\125\155\245\94\3\240\114\135\102\138\254\85\10\231", "\196\46\203\176\18\79\163\45"), LUAOBFUSACTOR_DECRYPT_STR_0("\148\7\95\44\10\222\203\135\17\78\59\8\215\208\145\12\65\42\5\217", "\143\216\66\30\126\68\155"));
+local function v66()
+	return (v6:HealthPercentage() < v37.Unholy.Defensives.UseDeathStrikeHP) or ((v6:HealthPercentage() < v37.Unholy.Defensives.UseDarkSuccorHP) and v6:BuffUp(v27.DeathStrikeBuff));
 end
-local function v97(v171)
-	local v172 = 1784 - (214 + 1570);
-	for v218, v219 in pairs(v171) do
-		if v219:DebuffDown(v24.VirulentPlagueDebuff) then
-			v172 = v172 + (1456 - (990 + 465));
+local function v67(v158)
+	local v159 = 0 + 0;
+	for v207, v208 in pairs(v158) do
+		if v208:DebuffDown(v27.VirulentPlagueDebuff) then
+			v159 = v159 + 1 + 0;
 		end
 	end
-	return v172;
+	return v159;
 end
 function IsNpcNearPlayer()
-	local v173 = v6:GetEnemiesInRange(17 + 23);
-	for v220, v221 in pairs(v173) do
-		if ((v221:NPCID() == (17561 + 22796)) or (v221:CastSpellID() == (435670 + 12343))) then
-			print(LUAOBFUSACTOR_DECRYPT_STR_0("\163\104\186\192\53\162\109\183\132\105\237\124\182\192\61\162\108\249\149\32\168\56\184\130\60\237\116\176\141\49", "\83\205\24\217\224"));
+	local v160 = v6:GetEnemiesInRange(92 - 52);
+	for v209, v210 in pairs(v160) do
+		if ((v210:NPCID() == (9326 + 31031)) or (v210:CastSpellID() == (148834 + 299179))) then
+			print(LUAOBFUSACTOR_DECRYPT_STR_0("\164\216\14\139\195\172\194\239\174\146\77\207\202\227\217\238\190\136\24\216\192\227\214\227\165\136\1\194\200\161", "\129\202\168\109\171\165\195\183"));
 			return true;
 		end
 	end
 	return false;
 end
-local function v98(v174)
-	local v175 = {};
-	for v222 in pairs(v174) do
-		if not v5:IsInBossList(v174[v222]['UnitNPCID']) then
-			v21(v175, v174[v222]);
+local v68 = {((214539 - (709 + 387)) - ((2118 - (673 + 1185)) + (11 - 7))),((571136 - 224012) - (94212 + 37505)),((806875 - 209260) - (106374 + 326740)),((319288 - 156637) - (124212 - (446 + 1434)))};
+function NoNPCAvailable(v161)
+	for v211, v212 in ipairs(v161) do
+		if ((v10:NPCID() == v212) or (v11:NPCID() == v212) or (v12:NPCID() == v212) or (v7:NPCID() == v212)) then
+			return LUAOBFUSACTOR_DECRYPT_STR_0("\54\74\34\221", "\134\66\56\87\184\190\116");
 		end
 	end
-	return v3.FightRemains(v175);
+	return LUAOBFUSACTOR_DECRYPT_STR_0("\58\48\5\168\28", "\85\92\81\105\219\121\139\65");
 end
-local function v99(v176)
-	return v176:DebuffStack(v24.FesteringWoundDebuff);
-end
-local function v100(v177)
-	return v177:DebuffRemains(v24.TrollbaneSlowDebuff);
-end
-local function v101(v178)
-	return v178:DebuffStack(v24.FesteringWoundDebuff) < (7 - 5);
-end
-local function v102(v179)
-	return v179:DebuffStack(v24.FesteringWoundDebuff) <= (1728 - (1668 + 58));
-end
-local function v103(v180)
-	return not v24.VileContagion:IsAvailable();
-end
-local function v104(v181)
-	return (v24.VileContagion:CooldownRemains() < (631 - (512 + 114))) or ((v24.FesteringWoundDebuff:AuraActiveCount() == v59) and (v181:DebuffStack(v24.FesteringWoundDebuff) <= (10 - 6)));
-end
-local function v105(v182)
-	return ((v24.Apocalypse:CooldownRemains() < v6:GCD()) and v182:DebuffDown(v24.FesteringWoundDebuff)) or (v24.FesteringWoundDebuff:AuraActiveCount() < v59);
-end
-local function v106(v183)
-	return (not v39 and (v183:DebuffStack(v24.FesteringWoundDebuff) < (8 - 4))) or v6:BuffUp(v24.FesteringScytheBuff);
-end
-local function v107(v184)
-	return (v24.Apocalypse:CooldownRemains() < v38) and (v184:DebuffStack(v24.FesteringWoundDebuff) < (13 - 9));
-end
-local function v108(v185)
-	return v37 and (((v185:DebuffStack(v24.FesteringWoundDebuff) >= (1 + 1)) and (v24.VileContagion:CooldownRemains() < (1 + 2))) or not v24.VileContagion:IsAvailable());
-end
-local function v109(v186)
-	return v37 and (((v186:DebuffStack(v24.FesteringWoundDebuff) >= (2 + 0)) and (v24.VileContagion:CooldownRemains() < (20 - 14))) or not v24.VileContagion:IsAvailable());
-end
-local function v110(v187)
-	return ((v187:DebuffStack(v24.FesteringWoundDebuff) >= (1998 - (109 + 1885))) and (v64 > (1473 - (1269 + 200))) and ((v53:CooldownRemains() < (5 - 2)) or (v6:BuffUp(v24.DeathAndDecayBuff) and (v187:DebuffStack(v24.FesteringWoundDebuff) >= (819 - (98 + 717)))))) or (v37 and (v187:DebuffStack(v24.FesteringWoundDebuff) == (832 - (802 + 24))));
-end
-local function v111(v188)
-	return ((v188:DebuffStack(v24.FesteringWoundDebuff) == (10 - 4)) and (v6:DnDTicking() or (v53:CooldownRemains() < (3 - 0)))) or (v6:BuffUp(v24.DeathAndDecayBuff) and (v188:DebuffStack(v24.FesteringWoundDebuff) >= (1 + 3))) or ((v53:CooldownRemains() < (3 + 0)) and (v188:DebuffStack(v24.FesteringWoundDebuff) >= (1 + 3)));
-end
-local function v112(v189)
-	return v189:DebuffStack(v24.FesteringWoundDebuff) >= (1 + 0);
-end
-local function v113(v190)
-	return v190:DebuffUp(v24.TrollbaneSlowDebuff) and (v190:DebuffRemains(v24.TrollbaneSlowDebuff) < v6:GCD());
-end
-local function v114(v191)
-	return ((v191:DebuffStack(v24.FesteringWoundDebuff) >= (2 - 1)) and (v24.Apocalypse:CooldownRemains() > v6:GCD())) or (v24.VampiricStrikeAction:IsLearned() and v191:DebuffUp(v24.VirulentPlagueDebuff));
-end
-local function v115(v192)
-	return (v192:DebuffStack(v24.FesteringWoundDebuff) >= (3 - 2)) or v24.VampiricStrikeAction:IsLearned();
-end
-local function v116(v193)
-	return v193:DebuffUp(v24.TrollbaneSlowDebuff);
-end
-local function v117(v194)
-	return v194:DebuffUp(v24.TrollbaneSlowDebuff) and (v194:DebuffRemains(v24.TrollbaneSlowDebuff) < v6:GCD());
-end
-local function v118(v195)
-	return (v195:TimeToDie() > v195:DebuffRemains(v24.VirulentPlagueDebuff)) and (v195:DebuffTicksRemain(v24.VirulentPlagueDebuff) < (2 + 3)) and (v195:DebuffRefreshable(v24.VirulentPlagueDebuff) or (v24.Superstrain:IsAvailable() and (v195:DebuffRefreshable(v24.FrostFeverDebuff) or v195:DebuffRefreshable(v24.BloodPlagueDebuff)))) and (not v26[6 + 8] or not v24.UnholyBlight:IsAvailable() or v24.Plaguebringer:IsAvailable()) and (not v26[14 + 2] or not v24.RaiseAbomination:IsAvailable() or (v24.RaiseAbomination:IsAvailable() and (v24.RaiseAbomination:CooldownRemains() > (v195:DebuffTicksRemain(v24.VirulentPlagueDebuff) * (3 + 0)))));
-end
-local function v119(v196)
-	return (v196:TimeToDie() > v196:DebuffRemains(v24.VirulentPlagueDebuff)) and (v196:DebuffTicksRemain(v24.VirulentPlagueDebuff) < (3 + 2)) and (v196:DebuffRefreshable(v24.VirulentPlagueDebuff) or (v24.Morbidity:IsAvailable() and v6:BuffUp(v24.InflictionofSorrowBuff) and v24.Superstrain:IsAvailable() and v196:DebuffRefreshable(v24.FrostFeverDebuff) and v196:DebuffRefreshable(v24.BloodPlagueDebuff))) and (not v26[1447 - (797 + 636)] or not v24.UnholyBlight:IsAvailable() or (v24.UnholyBlight:IsAvailable() and (v24.DarkTransformation:CooldownDown() or not v26[24 - 19]))) and (not v26[1635 - (1427 + 192)] or not v24.RaiseAbomination:IsAvailable() or (v24.RaiseAbomination:IsAvailable() and v24.RaiseAbomination:CooldownDown()));
-end
-local function v120(v197)
-	return (v197:DebuffRefreshable(v24.VirulentPlagueDebuff) or (v24.Morbidity:IsAvailable() and v6:BuffDown(v24.GiftoftheSanlaynBuff) and v24.Superstrain:IsAvailable() and v7:DebuffRefreshable(v24.FrostFeverDebuff) and v7:DebuffRefreshable(v24.BloodPlagueDebuff))) and (not v24.UnholyBlight:IsAvailable() or (v24.UnholyBlight:IsAvailable() and (v24.DarkTransformation:CooldownRemains() > ((6 + 9) / (((4 - 2) * v17(v24.Superstrain:IsAvailable())) + ((2 + 0) * v17(v24.EbonFever:IsAvailable())) + ((1 + 1) * v17(v24.Plaguebringer:IsAvailable()))))))) and (not v24.RaiseAbomination:IsAvailable() or not v26[342 - (192 + 134)] or (v24.RaiseAbomination:IsAvailable() and (v24.RaiseAbomination:CooldownRemains() > ((1291 - (316 + 960)) / (((2 + 0) * v17(v24.Superstrain:IsAvailable())) + ((2 + 0) * v17(v24.EbonFever:IsAvailable())) + ((2 + 0) * v17(v24.Plaguebringer:IsAvailable())))))));
-end
-local function v121(v198)
-	return (v198:TimeToDie() > v198:DebuffRemains(v24.VirulentPlagueDebuff)) and v198:DebuffRefreshable(v24.VirulentPlagueDebuff);
-end
-local function v122(v199)
-	return v199:DebuffUp(v24.TrollbaneSlowDebuff);
-end
-local function v123()
-	if (v24.ArmyoftheDead:IsReady() and v7:IsInMeleeRange(18 - 13) and v26[568 - (83 + 468)] and v26[1823 - (1202 + 604)] and not v25.Fyralath:IsEquipped()) then
-		if v14(v24.ArmyoftheDead) then
-			return LUAOBFUSACTOR_DECRYPT_STR_0("\231\215\192\36\217\202\203\2\242\205\200\2\226\192\204\57\166\213\223\56\229\202\192\63\231\209\141\105", "\93\134\165\173");
+local function v69(v162)
+	local v163 = {};
+	for v213 in pairs(v162) do
+		if not v5:IsInBossList(v162[v213]['UnitNPCID']) then
+			v24(v163, v162[v213]);
 		end
 	end
-	if (v24.Outbreak:IsReady() and v7:IsSpellInRange(v24.Outbreak) and v121(v7)) then
-		if v14(v24.Outbreak) then
-			return LUAOBFUSACTOR_DECRYPT_STR_0("\177\231\213\192\40\203\179\117\254\226\211\199\57\193\191\124\191\230\129\148", "\30\222\146\161\162\90\174\210");
-		end
-	end
-	if (v55:IsReady() and v7:IsInMeleeRange(v56) and v7:IsInMeleeRange(v56)) then
-		if v14(v24.FesteringStrike) then
-			return LUAOBFUSACTOR_DECRYPT_STR_0("\227\75\99\30\224\92\121\4\226\113\99\30\247\71\123\15\165\94\98\15\230\65\125\8\228\90\48\82", "\106\133\46\16");
-		end
-	end
+	return v3.FightRemains(v163);
 end
-local function v124()
-	if (v55:IsReady() and v7:IsInMeleeRange(v56)) then
-		if v14(v55) then
-			return LUAOBFUSACTOR_DECRYPT_STR_0("\94\37\96\232\95\82\81\46\116\195\73\67\65\52\123\249\26\65\87\37\51\174", "\32\56\64\19\156\58");
+local function v70(v164)
+	return v164:DebuffStack(v27.FesteringWoundDebuff);
+end
+local function v71(v165)
+	return v165:DebuffRemains(v27.TrollbaneSlowDebuff);
+end
+local function v72(v166)
+	return v166:DebuffStack(v27.FesteringWoundDebuff) < (1285 - (1040 + 243));
+end
+local function v73(v167)
+	return v167:DebuffStack(v27.FesteringWoundDebuff) <= (5 - 3);
+end
+local function v74(v168)
+	return not v27.VileContagion:IsAvailable() and (v168:DebuffStack(v27.FesteringWoundDebuff) <= ((2386 - (559 + 1288)) - ((2292 - (609 + 1322)) + (628 - (13 + 441)))));
+end
+local function v75(v169)
+	return (v27.VileContagion:IsAvailable() and (v27.VileContagion:CooldownRemains() < ((5866 - 4296) - ((1147 - 709) + (5612 - 4485))))) or ((v27.FesteringWoundDebuff:AuraActiveCount() == v50) and (v169:DebuffStack(v27.FesteringWoundDebuff) <= ((66 + 1684) - ((1612 - 1168) + 463 + 839))));
+end
+local function v76(v170)
+	return ((v27.Apocalypse:CooldownRemains() < v6:GCD()) and v170:DebuffDown(v27.FesteringWoundDebuff)) or (v27.FesteringWoundDebuff:AuraActiveCount() < v50);
+end
+local function v77(v171)
+	return (not v27.VampiricStrikeAction:IsReady() and not v38.PopWounds and (v171:DebuffStack(v27.FesteringWoundDebuff) < (1 + 1))) or v6:BuffUp(v27.FesteringScytheBuff);
+end
+local function v78(v172)
+	return not v27.VampiricStrikeAction:IsReady() and (v27.Apocalypse:CooldownRemains() < v38.ApocTiming) and v172:DebuffDown(v27.FesteringWoundDebuff);
+end
+local function v79(v173)
+	return (v27.Apocalypse:CooldownRemains() < v38.ApocTiming) and (v173:DebuffStack(v27.FesteringWoundDebuff) < ((839 - 556) - (85 + 69 + (229 - 104))));
+end
+local function v80(v174)
+	return v38.AddsRemain and (((v174:DebuffStack(v27.FesteringWoundDebuff) >= (2 + 0)) and (v27.VileContagion:CooldownRemains() < (2 + 1))) or not v27.VileContagion:IsAvailable());
+end
+local function v81(v175)
+	return v38.AddsRemain and (((v175:DebuffStack(v27.FesteringWoundDebuff) >= (2 + 0)) and (v27.VileContagion:CooldownRemains() < (6 + 0))) or not v27.VileContagion:IsAvailable());
+end
+local function v82(v176)
+	return ((v176:DebuffStack(v27.FesteringWoundDebuff) >= (4 + 0)) and (v54 > (437 - (153 + 280))) and ((v41:CooldownRemains() < (8 - 5)) or (v6:BuffUp(v27.DeathAndDecayBuff) and (v176:DebuffStack(v27.FesteringWoundDebuff) >= (4 + 0))))) or (v38.AddsRemain and (v176:DebuffStack(v27.FesteringWoundDebuff) == (3 + 3)));
+end
+local function v83(v177)
+	return ((v177:DebuffStack(v27.FesteringWoundDebuff) == (4 + 2)) and (v6:DnDTicking() or (v41:CooldownRemains() < (3 + 0)))) or (v6:BuffUp(v27.DeathAndDecayBuff) and (v177:DebuffStack(v27.FesteringWoundDebuff) >= (3 + 1))) or ((v41:CooldownRemains() < (4 - 1)) and (v177:DebuffStack(v27.FesteringWoundDebuff) >= (3 + 1)));
+end
+local function v84(v178)
+	return v178:DebuffStack(v27.FesteringWoundDebuff) >= (668 - (89 + 578));
+end
+local function v85(v179)
+	return v179:DebuffUp(v27.TrollbaneSlowDebuff) and (v179:DebuffRemains(v27.TrollbaneSlowDebuff) < v6:GCD());
+end
+local function v86(v180)
+	return ((v180:DebuffStack(v27.FesteringWoundDebuff) >= (1 + 0)) and (v27.Apocalypse:CooldownRemains() > v6:GCD())) or (v27.VampiricStrikeAction:IsLearned() and v180:DebuffUp(v27.VirulentPlagueDebuff));
+end
+local function v87(v181)
+	return (v181:DebuffStack(v27.FesteringWoundDebuff) >= (1 - 0)) or v27.VampiricStrikeAction:IsLearned();
+end
+local function v88(v182)
+	return v182:DebuffUp(v27.TrollbaneSlowDebuff);
+end
+local function v89(v183)
+	return v183:DebuffUp(v27.TrollbaneSlowDebuff) and (v183:DebuffRemains(v27.TrollbaneSlowDebuff) < v6:GCD());
+end
+local function v90(v184)
+	return (v184:TimeToDie() > v184:DebuffRemains(v27.VirulentPlagueDebuff)) and (v184:DebuffTicksRemain(v27.VirulentPlagueDebuff) < (1054 - (572 + 477))) and ((v184:DebuffRemains(v27.VirulentPlagueDebuff) <= v45) or (v27.Superstrain:IsAvailable() and ((v184:DebuffRemains(v27.FrostFeverDebuff) <= v46) or (v184:DebuffRemains(v27.BloodPlagueDebuff) <= v47)))) and (not UnholyBlightSetting or not v27.UnholyBlight:IsAvailable() or v27.Plaguebringer:IsAvailable()) and (not RaiseAbominationSetting or not v27.RaiseAbomination:IsAvailable() or (v27.RaiseAbomination:IsAvailable() and RaiseAbominationSetting and (v27.RaiseAbomination:CooldownRemains() > (v184:DebuffTicksRemain(v27.VirulentPlagueDebuff) * (1 + 2)))));
+end
+local function v91(v185)
+	return (v185:TimeToDie() > v185:DebuffRemains(v27.VirulentPlagueDebuff)) and (v185:DebuffTicksRemain(v27.VirulentPlagueDebuff) < (4 + 1)) and (v185:DebuffRefreshable(v27.VirulentPlagueDebuff) or (v27.Morbidity:IsAvailable() and v6:BuffUp(v27.InflictionofSorrowBuff) and v27.Superstrain:IsAvailable() and v185:DebuffRefreshable(v27.FrostFeverDebuff) and v185:DebuffRefreshable(v27.BloodPlagueDebuff))) and (not v27.UnholyBlight:IsAvailable() or (v27.UnholyBlight:IsAvailable() and (v27.DarkTransformation:CooldownRemains() > (1 + 4)))) and (not v27.RaiseAbomination:IsAvailable() or (v27.RaiseAbomination:IsAvailable() and (v27.RaiseAbomination:CooldownRemains() > (91 - (84 + 2)))));
+end
+local function v92(v186)
+	return (v186:TimeToDie() > v186:DebuffRemains(v27.VirulentPlagueDebuff)) and (v186:DebuffTicksRemain(v27.VirulentPlagueDebuff) < (8 - 3)) and ((v186:DebuffRemains(v27.VirulentPlagueDebuff) <= v45) or (v27.Morbidity:IsAvailable() and v6:BuffUp(v27.InflictionofSorrowBuff) and v27.Superstrain:IsAvailable() and (v186:DebuffRemains(v27.FrostFeverDebuff) <= v46) and (v186:DebuffRemains(v27.BloodPlagueDebuff) <= v47))) and (not UnholyBlightSetting or not v27.UnholyBlight:IsAvailable() or (v27.UnholyBlight:IsAvailable() and (v27.DarkTransformation:CooldownDown() or not DarkTransformationSetting))) and (not RaiseAbominationSetting or not v27.RaiseAbomination:IsAvailable() or (v27.RaiseAbomination:IsAvailable() and v27.RaiseAbomination:CooldownDown()));
+end
+local function v93(v187)
+	return ((v7:DebuffRemains(v27.VirulentPlagueDebuff) <= v45) or (v27.Morbidity:IsAvailable() and v6:BuffDown(v27.GiftoftheSanlaynBuff) and v27.Superstrain:IsAvailable() and (v7:DebuffRemains(v27.FrostFeverDebuff) <= v46) and (v7:DebuffRemains(v27.BloodPlagueDebuff) <= v47))) and (not v27.UnholyBlight:IsAvailable() or (v27.UnholyBlight:IsAvailable() and (v27.DarkTransformation:CooldownRemains() > (((838 + 325) - ((1482 - (497 + 345)) + 13 + 495)) / ((((149 + 730) - ((1435 - (605 + 728)) + 553 + 222)) * v20(v27.Superstrain:IsAvailable())) + (((1 - 0) + 1 + 0) * v20(v27.EbonFever:IsAvailable())) + (((4691 - 3422) - (566 + 61 + (1773 - 1133))) * v20(v27.Plaguebringer:IsAvailable()))))))) and (not v27.RaiseAbomination:IsAvailable() or not RaiseAbominationSetting or (v27.RaiseAbomination:IsAvailable() and (v27.RaiseAbomination:CooldownRemains() > ((7 + 2 + (495 - (457 + 32))) / ((((842 + 1141) - ((1890 - (832 + 570)) + 1407 + 86)) * v20(v27.Superstrain:IsAvailable())) + (((2 + 4) - (13 - 9)) * v20(v27.EbonFever:IsAvailable())) + (((1 + 1) - (796 - (588 + 208))) * v20(v27.Plaguebringer:IsAvailable())))))));
+end
+local function v94(v188)
+	return (v188:TimeToDie() > v188:DebuffRemains(v27.VirulentPlagueDebuff)) and v188:DebuffRefreshable(v27.VirulentPlagueDebuff);
+end
+local function v95(v189)
+	return v189:DebuffUp(v27.TrollbaneSlowDebuff);
+end
+local function v96()
+	if (v27.ArmyoftheDead:IsReady() and v7:IsInMeleeRange(13 - 8) and ArmyOfTheDeadSetting and not v28.Fyralath:IsEquipped()) then
+		if v17(v27.ArmyoftheDead) then
+			return LUAOBFUSACTOR_DECRYPT_STR_0("\252\161\93\92\67\208\251\140\68\77\121\224\249\182\81\65\60\207\239\182\83\74\113\221\252\167\16\17", "\191\157\211\48\37\28");
 		end
 	end
-	if (v51:IsReady() and v7:IsInRange(WoundSpenderRange) and (v54 >= (4 - 3)) and v112(v7) and v6:BuffUp(v24.DeathAndDecayBuff) and v24.BurstingSores:IsAvailable() and (v24.Apocalypse:CooldownRemains() > v38)) then
-		if v34.CastCycle(v51, v57, v122, WoundSpenderRange) then
-			return LUAOBFUSACTOR_DECRYPT_STR_0("\77\199\240\88\94\205\147\74\205\235\82\95\224\192\91\199\224\22\14", "\224\58\168\133\54\58\146");
+	if (v27.Outbreak:IsReady() and v7:IsSpellInRange(v27.Outbreak) and v94(v7)) then
+		if v17(v27.Outbreak) then
+			return LUAOBFUSACTOR_DECRYPT_STR_0("\208\10\224\30\40\218\30\255\92\42\205\26\247\19\55\221\30\224\92\108", "\90\191\127\148\124");
 		end
 	end
-	if (v24.DeathCoil:IsReady() and not v40 and (v58 < v42)) then
-		if v14(v24.DeathCoil, true, nil, not v7:IsInRange(66 - 26)) then
-			return LUAOBFUSACTOR_DECRYPT_STR_0("\93\83\74\233\125\185\132\4\80\90\11\252\122\131\199\93", "\107\57\54\43\157\21\230\231");
-		end
-	end
-	if (v24.Epidemic:IsReady() and v7:IsInRange(110 - 70) and not v40) then
-		if v14(v24.Epidemic) then
-			return LUAOBFUSACTOR_DECRYPT_STR_0("\222\155\24\241\188\209\198\216\203\16\250\188\156\153", "\175\187\235\113\149\217\188");
-		end
-	end
-	if (v51:IsReady() and v7:IsInRange(WoundSpenderRange) and v122(v7) and (v54 >= (326 - (45 + 280))) and v113(v7)) then
-		if v14(v52) then
-			return LUAOBFUSACTOR_DECRYPT_STR_0("\43\160\148\66\231\70\107\44\170\143\72\230\107\56\61\160\132\12\187", "\24\92\207\225\44\131\25");
-		end
-	end
-	if (v55:IsReady() and v7:IsInMeleeRange(v56) and ((v24.Apocalypse:CooldownRemains() < v38) or v6:BuffUp(v24.FesteringScytheBuff))) then
-		if v14(v55) then
-			return LUAOBFUSACTOR_DECRYPT_STR_0("\77\214\171\88\30\111\66\221\191\115\8\105\89\218\179\73\91\124\68\214\248\29\75", "\29\43\179\216\44\123");
-		end
-	end
-	if (v55:IsReady() and v101(v7) and v7:IsInMeleeRange(v56)) then
-		if v14(v55) then
-			return LUAOBFUSACTOR_DECRYPT_STR_0("\187\220\51\88\184\203\41\66\186\230\51\88\175\208\43\73\253\216\47\73\253\136\114", "\44\221\185\64");
-		end
-	end
-	if (v51:IsReady() and v7:IsInRange(WoundSpenderRange) and (v54 >= (1 + 0)) and v114(v7)) then
-		if v14(v52) then
-			return LUAOBFUSACTOR_DECRYPT_STR_0("\22\232\93\81\119\62\244\88\90\125\5\226\90\31\114\14\226\8\14\39", "\19\97\135\40\63");
+	if (v43:IsReady() and v7:IsInMeleeRange(v44)) then
+		if v17(v27.FesteringStrike) then
+			return LUAOBFUSACTOR_DECRYPT_STR_0("\126\130\61\3\125\149\39\25\127\184\61\3\106\142\37\18\56\151\60\18\123\136\35\21\121\147\110\79", "\119\24\231\78");
 		end
 	end
 end
-local function v125()
-	if (v24.FesteringScytheAction:IsReady() and v7:IsInMeleeRange(13 + 1)) then
-		if v14(v24.FesteringScytheAction) then
-			return LUAOBFUSACTOR_DECRYPT_STR_0("\168\89\32\47\42\35\167\82\52\4\60\50\183\72\59\62\111\48\161\89\12\57\58\35\189\72\115\105", "\81\206\60\83\91\79");
+local function v97()
+	if (v27.FesteringScytheAction:IsReady() and v7:IsInMeleeRange(v44)) then
+		if v17(v27.FesteringStrike) then
+			return LUAOBFUSACTOR_DECRYPT_STR_0("\132\40\182\94\217\82\24\140\42\154\89\223\89\5\138\40\229\75\211\69\81\208", "\113\226\77\197\42\188\32");
 		end
 	end
-	if (v24.DeathCoil:IsReady() and not v24.VampiricStrikeAction:IsLearned() and (v58 < v42) and (not v24.BurstingSores:IsAvailable() or (v24.BurstingSores:IsAvailable() and (v24.FesteringWoundDebuff:AuraActiveCount() < v58) and (v24.FesteringWoundDebuff:AuraActiveCount() < (v58 * (0.4 + 0))) and v6:BuffUp(v24.SuddenDoomBuff)) or (v6:BuffUp(v24.SuddenDoomBuff) and ((v24.DoomedBidding:IsAvailable() and v24.MenacingMagus:IsAvailable()) or v24.RottenTouch:IsAvailable() or (v7:DebuffRemains(v24.DeathRotDebuff) < v6:GCD()))))) then
-		if v14(v24.DeathCoil, true, nil, not v7:IsInRange(23 + 17)) then
-			return LUAOBFUSACTOR_DECRYPT_STR_0("\74\174\209\102\39\252\78\171\71\167\144\115\32\198\114\166\91\185\195\102\111\151", "\196\46\203\176\18\79\163\45");
+	if (v39:IsReady() and v7:IsInRange(WoundSpenderRange) and v6:BuffUp(v27.DeathAndDecayBuff) and v27.BurstingSores:IsAvailable() and ((v27.Apocalypse:CooldownRemains() > v38.ApocTiming) or not ApocalypseSetting)) then
+		if v36.CastTargetIf(v40, v48, LUAOBFUSACTOR_DECRYPT_STR_0("\55\23\236", "\213\90\118\148"), v70, v84, WoundSpenderRange, false, false, false, true) then
+			return LUAOBFUSACTOR_DECRYPT_STR_0("\76\33\161\88\73\100\61\164\83\67\95\43\166\22\76\84\43\244\2", "\45\59\78\212\54");
 		end
 	end
-	if (v24.Epidemic:IsReady() and v7:IsInRange(8 + 32) and not v24.VampiricStrikeAction:IsLearned() and (not v24.BurstingSores:IsAvailable() or (v24.BurstingSores:IsAvailable() and (((v24.FesteringWoundDebuff:AuraActiveCount() < v59) and (v24.FesteringWoundDebuff:AuraActiveCount() < (v59 * (0.4 - 0))) and v6:BuffUp(v24.SuddenDoomBuff)) or not v94)) or (v6:BuffUp(v24.SuddenDoomBuff) and (v6:BuffUp(v24.AFeastofSoulsBuff) or (v7:DebuffRemains(v24.DeathRotDebuff) < v6:GCD()) or (v7:DebuffStack(v24.DeathRotDebuff) < (1921 - (340 + 1571))))))) then
-		if v14(v24.Epidemic) then
-			return LUAOBFUSACTOR_DECRYPT_STR_0("\189\50\119\26\33\246\230\187\98\127\17\33\196\237\173\48\109\10\100\175", "\143\216\66\30\126\68\155");
+	if (v27.DeathCoil:IsReady() and v7:IsSpellInRange(v27.DeathCoil) and not v38.PoolingRunicPower and (v50 < v38.EpidemicTargets)) then
+		if v17(v27.DeathCoil) then
+			return LUAOBFUSACTOR_DECRYPT_STR_0("\20\83\130\159\142\17\174\255\25\90\195\136\138\43\172\230\21\22\215", "\144\112\54\227\235\230\78\205");
 		end
 	end
-	if (v51:IsReady() and v116(v7) and v7:IsInRange(WoundSpenderRange)) then
-		if v34.CastCycle(v51, v57, v122, WoundSpenderRange) then
-			return LUAOBFUSACTOR_DECRYPT_STR_0("\189\199\24\197\193\156\196\241\175\198\9\206\215\227\214\238\175\247\15\222\215\176\195\161\252", "\129\202\168\109\171\165\195\183");
+	if (v27.Epidemic:IsReady() and v7:IsInRange(1840 - (884 + 916)) and not v38.PoolingRunicPower) then
+		if v17(v27.Epidemic) then
+			return LUAOBFUSACTOR_DECRYPT_STR_0("\182\56\6\248\213\86\186\43\79\253\223\94\243\126", "\59\211\72\111\156\176");
 		end
 	end
-	if (v51:IsReady() and v7:IsInRange(WoundSpenderRange) and (v54 >= (1 + 0)) and v115(v7)) then
-		if v14(v52) then
-			return LUAOBFUSACTOR_DECRYPT_STR_0("\53\87\34\214\218\43\245\50\93\57\220\219\6\166\35\87\50\231\220\1\244\49\76\119\128", "\134\66\56\87\184\190\116");
+	if (v39:IsReady() and v7:IsInRange(WoundSpenderRange)) then
+		if v36.CastCycle(v40, v48, v95, 10 - 5) then
+			return LUAOBFUSACTOR_DECRYPT_STR_0("\89\136\246\35\74\184\240\61\75\137\231\40\92\199\226\34\75\199\187", "\77\46\231\131");
 		end
 	end
-	if (v24.Epidemic:IsReady() and v7:IsInRange(1812 - (1733 + 39))) then
-		if v14(v24.Epidemic) then
-			return LUAOBFUSACTOR_DECRYPT_STR_0("\57\33\0\191\28\230\40\54\124\48\6\190\38\233\52\39\47\37\73\234\73", "\85\92\81\105\219\121\139\65");
+	if (v43:IsReady() and v7:IsInMeleeRange(v44) and ((ApocalypseSetting and (v27.Apocalypse:CooldownRemains() < v38.ApocTiming)) or v6:BuffUp(v27.FesteringScytheBuff))) then
+		if v36.CastTargetIf(v27.FesteringStrike, v48, LUAOBFUSACTOR_DECRYPT_STR_0("\183\85\174", "\32\218\52\214"), v70, nil, v44, false, false, false, true) then
+			return LUAOBFUSACTOR_DECRYPT_STR_0("\72\18\34\188\244\162\76\84\73\40\34\188\227\185\78\95\14\22\62\173\177\225\21", "\58\46\119\81\200\145\208\37");
 		end
 	end
-	if (v55:IsReady() and v7:IsInMeleeRange(v56) and v102(v7)) then
-		if v14(v55) then
-			return LUAOBFUSACTOR_DECRYPT_STR_0("\251\182\67\81\121\205\244\189\87\122\111\203\239\186\91\64\60\222\242\182\111\71\105\205\238\167\16\20\46", "\191\157\211\48\37\28");
+	if (v43:IsReady() and v7:IsInMeleeRange(v44)) then
+		if v36.CastTargetIf(v27.FesteringStrike, v48, LUAOBFUSACTOR_DECRYPT_STR_0("\38\133\62", "\86\75\236\80\204\201\221"), v70, v72, v44, false, false, false, true) then
+			return LUAOBFUSACTOR_DECRYPT_STR_0("\116\68\100\145\251\153\123\79\112\186\237\159\96\72\124\128\190\138\125\68\55\212\172", "\235\18\33\23\229\158");
 		end
 	end
-	if (v51:IsReady() and v7:IsInRange(WoundSpenderRange) and (v54 >= (2 - 1))) then
-		if v14(v52) then
-			return LUAOBFUSACTOR_DECRYPT_STR_0("\200\16\225\18\62\224\12\228\25\52\219\26\230\92\59\208\26\203\30\47\205\12\224\92\107\139", "\90\191\127\148\124");
-		end
-	end
-end
-local function v126()
-	if (v24.FesteringScytheAction:IsReady() and v7:IsInMeleeRange(1048 - (125 + 909))) then
-		if v14(v24.FesteringScytheAction) then
-			return LUAOBFUSACTOR_DECRYPT_STR_0("\126\130\61\3\125\149\39\25\127\184\61\20\97\147\38\18\56\134\33\18\71\148\43\3\109\151\110\69", "\119\24\231\78");
-		end
-	end
-	if (v53:IsReady() and v26[1952 - (1096 + 852)] and ((v58 >= (1 + 0)) or v7:IsInRange(11 - 3)) and (v35.Commons.DnDMoving or not v6:IsMoving()) and not v6:DnDTicking() and ((not v24.BurstingSores:IsAvailable() and not v24.VileContagion:IsAvailable()) or (v24.FesteringWoundDebuff:AuraActiveCount() == v59) or (v24.FesteringWoundDebuff:AuraActiveCount() >= (8 + 0)) or (v6:BuffUp(v24.DeathAndDecayBuff) and v24.Defile:IsAvailable()))) then
-		if v13.CastTarget(v24.DeathAndDecay, v13.TName().PLAYER) then
-			return LUAOBFUSACTOR_DECRYPT_STR_0("\131\35\188\117\216\78\21\194\44\170\79\227\83\20\150\56\181\10\136", "\113\226\77\197\42\188\32");
-		end
-	end
-	if (v51:IsReady() and v7:IsInRange(WoundSpenderRange)) then
-		if v34.CastCycle(v51, v57, v122, WoundSpenderRange) then
-			return LUAOBFUSACTOR_DECRYPT_STR_0("\45\25\225\187\62\41\231\165\63\24\240\176\40\86\245\186\63\41\231\176\46\3\228\245\108", "\213\90\118\148");
-		end
-	end
-	if (v55:IsReady() and v7:IsInMeleeRange(v56)) then
-		if v34.CastTargetIf(v55, v57, LUAOBFUSACTOR_DECRYPT_STR_0("\86\47\172", "\45\59\78\212\54"), v99, v103, v56) then
-			return LUAOBFUSACTOR_DECRYPT_STR_0("\22\83\144\159\131\60\164\254\23\105\144\159\148\39\166\245\80\87\140\142\185\61\168\228\5\70\195\211", "\144\112\54\227\235\230\78\205");
-		end
-	end
-	if (v55:IsReady() and v7:IsInMeleeRange(v56)) then
-		if v34.CastTargetIf(v55, v57, LUAOBFUSACTOR_DECRYPT_STR_0("\190\41\23", "\59\211\72\111\156\176"), v99, v104, v56) then
-			return LUAOBFUSACTOR_DECRYPT_STR_0("\72\130\240\57\75\149\234\35\73\184\240\57\92\142\232\40\14\134\236\40\113\148\230\57\91\151\163\124\30", "\77\46\231\131");
-		end
-	end
-	if (v24.DeathCoil:IsReady() and not v40 and v6:BuffUp(v24.SuddenDoomBuff) and (v58 < v42)) then
-		if v14(v24.DeathCoil, true, nil, not v7:IsInRange(552 - (409 + 103))) then
-			return LUAOBFUSACTOR_DECRYPT_STR_0("\190\81\183\84\178\107\181\79\179\88\246\65\181\81\137\83\191\64\163\80\250\5\228", "\32\218\52\214");
-		end
-	end
-	if (v24.Epidemic:IsReady() and v7:IsInRange(276 - (46 + 190)) and not v40 and v6:BuffUp(v24.SuddenDoomBuff)) then
-		if v14(v24.Epidemic) then
-			return LUAOBFUSACTOR_DECRYPT_STR_0("\75\7\56\172\244\189\76\89\14\22\62\173\206\163\64\78\91\7\113\249\163", "\58\46\119\81\200\145\208\37");
-		end
-	end
-	if (v55:IsReady() and v7:IsInMeleeRange(v56)) then
-		if v34.CastTargetIf(v55, v57, LUAOBFUSACTOR_DECRYPT_STR_0("\38\133\62", "\86\75\236\80\204\201\221"), v99, v105, v56) then
-			return LUAOBFUSACTOR_DECRYPT_STR_0("\116\68\100\145\251\153\123\79\112\186\237\159\96\72\124\128\190\138\125\68\72\150\251\159\103\81\55\212\170", "\235\18\33\23\229\158");
-		end
-	end
-	if (v24.DeathCoil:IsReady() and not v40 and (v58 < v42)) then
-		if v14(v24.DeathCoil, true, nil, not v7:IsInRange(135 - (51 + 44))) then
-			return LUAOBFUSACTOR_DECRYPT_STR_0("\84\191\192\175\88\133\194\180\89\182\129\186\95\191\254\168\85\174\212\171\16\235\153", "\219\48\218\161");
-		end
-	end
-	if (v24.Epidemic:IsReady() and v7:IsInRange(12 + 28) and not v40) then
-		if v14(v24.Epidemic) then
-			return LUAOBFUSACTOR_DECRYPT_STR_0("\225\97\117\77\222\66\233\231\49\125\70\222\112\243\225\101\105\89\155\30\182", "\128\132\17\28\41\187\47");
+	if (v39:IsReady() and v7:IsInRange(WoundSpenderRange)) then
+		if v36.CastTargetIf(v40, v48, LUAOBFUSACTOR_DECRYPT_STR_0("\93\187\217", "\219\48\218\161"), v70, v86, WoundSpenderRange, false, false, false, true) then
+			return LUAOBFUSACTOR_DECRYPT_STR_0("\243\126\105\71\223\112\243\244\116\114\77\222\93\160\229\126\121\9\138\27", "\128\132\17\28\41\187\47");
 		end
 	end
 end
-local function v127()
-	if (v24.DarkTransformation:IsCastable() and v7:IsInMeleeRange(1322 - (1114 + 203)) and v26[731 - (228 + 498)] and ((v36 and ((v24.Apocalypse:CooldownRemains() < (2 + 6)) or not v24.Apocalypse:IsAvailable() or (v59 >= (1 + 0)))) or (v63 < (683 - (174 + 489))))) then
-		if v14(v24.DarkTransformation) then
-			return LUAOBFUSACTOR_DECRYPT_STR_0("\5\51\20\49\98\21\32\7\52\78\7\61\20\55\92\21\59\9\52\29\2\54\21\122\15", "\61\97\82\102\90");
+local function v98()
+	if (v27.FesteringScytheAction:IsReady() and v7:IsInMeleeRange(9 + 5)) then
+		if v17(v27.FesteringStrike) then
+			return LUAOBFUSACTOR_DECRYPT_STR_0("\7\55\21\46\88\19\59\8\61\98\18\49\31\46\85\4\114\7\53\88\62\48\19\40\78\21\114\84", "\61\97\82\102\90");
 		end
 	end
-	if (v24.UnholyAssault:IsCastable() and v7:IsInMeleeRange(12 - 7) and v26[1916 - (830 + 1075)] and v36 and ((v24.Apocalypse:CooldownRemains() < (v6:GCD() * (526 - (303 + 221)))) or not v24.Apocalypse:IsAvailable() or ((v59 >= (1271 - (231 + 1038))) and v10:BuffUp(v24.DarkTransformation)))) then
-		if v14(v24.UnholyAssault) then
-			return LUAOBFUSACTOR_DECRYPT_STR_0("\185\32\163\68\203\78\33\8\191\61\170\94\203\67\94\10\168\61\235\31", "\105\204\78\203\43\167\55\126");
+	if (v27.DeathCoil:IsReady() and v7:IsSpellInRange(v27.DeathCoil) and not v27.VampiricStrikeAction:IsLearned() and (v50 < v38.EpidemicTargets) and (not v27.BurstingSores:IsAvailable() or (v27.BurstingSores:IsAvailable() and (v27.FesteringWoundDebuff:AuraActiveCount() < v50) and (v27.FesteringWoundDebuff:AuraActiveCount() < (v50 * (653.4 - (232 + 421)))) and v6:BuffUp(v27.SuddenDoomBuff)) or (v6:BuffUp(v27.SuddenDoomBuff) and ((v27.DoomedBidding:IsAvailable() and v27.MenacingMagus:IsAvailable()) or v27.RottenTouch:IsAvailable() or (v7:DebuffRemains(v27.DeathRotDebuff) < v6:GCD()))))) then
+		if v17(v27.DeathCoil) then
+			return LUAOBFUSACTOR_DECRYPT_STR_0("\168\43\170\95\207\104\29\6\165\34\235\74\200\82\33\11\185\60\184\95\135\3", "\105\204\78\203\43\167\55\126");
 		end
 	end
-	if (v24.Apocalypse:IsReady() and v7:IsInMeleeRange(5 + 0) and v26[1172 - (171 + 991)] and (v36 or (v63 < (82 - 62)))) then
-		if v14(v24.Apocalypse) then
-			return LUAOBFUSACTOR_DECRYPT_STR_0("\164\186\44\29\18\8\222\65\182\175\99\29\23\23\135\0\245", "\49\197\202\67\126\115\100\167");
+	if (v27.Epidemic:IsReady() and v7:IsInRange(1929 - (1569 + 320)) and not v27.VampiricStrikeAction:IsLearned() and (not v27.BurstingSores:IsAvailable() or (v27.BurstingSores:IsAvailable() and (v27.FesteringWoundDebuff:AuraActiveCount() < v50) and (v27.FesteringWoundDebuff:AuraActiveCount() < (v50 * (0.4 + 0))) and v6:BuffUp(v27.SuddenDoomBuff)) or (v6:BuffUp(v27.SuddenDoomBuff) and (v6:BuffUp(v27.AFeastofSoulsBuff) or (v7:DebuffRemains(v27.DeathRotDebuff) < v6:GCD()) or (v7:DebuffStack(v27.DeathRotDebuff) < (2 + 8)))))) then
+		if v17(v27.Epidemic) then
+			return LUAOBFUSACTOR_DECRYPT_STR_0("\160\186\42\26\22\9\206\82\229\171\44\27\44\6\210\67\182\190\99\74", "\49\197\202\67\126\115\100\167");
 		end
 	end
-	if (v24.Outbreak:IsReady() and v7:IsSpellInRange(v24.Outbreak)) then
-		if v34.CastCycle(v24.Outbreak, v60, v118, 107 - 67) then
-			return LUAOBFUSACTOR_DECRYPT_STR_0("\56\78\203\43\146\83\95\60\27\220\45\147\22\6", "\62\87\59\191\73\224\54");
+	if (v39:IsReady() and v7:IsInRange(WoundSpenderRange)) then
+		if v36.CastCycle(v40, v48, v95, WoundSpenderRange, false, false, false, true) then
+			return LUAOBFUSACTOR_DECRYPT_STR_0("\32\84\202\39\132\105\77\39\94\209\45\133\68\30\54\84\218\22\130\67\76\36\79\159\127", "\62\87\59\191\73\224\54");
 		end
 	end
-	if (v24.AbominationLimb:IsCastable() and v7:IsInRange(49 - 29) and v26[10 + 2] and ((v36 and v6:BuffDown(v24.SuddenDoomBuff) and ((v6:BuffUp(v24.FestermightBuff) and (v6:BuffStack(v24.FestermightBuff) > (27 - 19))) or not v24.Festermight:IsAvailable()) and ((v46 < (14 - 9)) or not v24.Apocalypse:IsAvailable()) and (v54 <= (2 - 0))) or (v63 < (36 - 24)))) then
-		if v14(v24.AbominationLimb) then
-			return LUAOBFUSACTOR_DECRYPT_STR_0("\230\0\245\196\238\12\251\221\238\13\244\246\235\11\247\203\167\1\254\218\167\83\168", "\169\135\98\154");
+	if (v39:IsReady() and v7:IsInRange(WoundSpenderRange)) then
+		if v36.CastTargetIf(v40, v48, LUAOBFUSACTOR_DECRYPT_STR_0("\234\3\226", "\169\135\98\154"), v70, v87, WoundSpenderRange, false, false, false, true) then
+			return LUAOBFUSACTOR_DECRYPT_STR_0("\220\120\49\90\249\12\219\219\114\42\80\248\33\136\202\120\33\107\255\38\218\216\99\100\12", "\168\171\23\68\52\157\83");
 		end
 	end
-end
-local function v128()
-	if (v24.VileContagion:IsReady() and v110(v7) and v7:IsSpellInRange(v24.VileContagion)) then
-		if v14(v24.VileContagion) then
-			return LUAOBFUSACTOR_DECRYPT_STR_0("\221\126\40\81\194\48\199\197\99\37\83\244\60\198\139\116\32\71\194\50\199\206\55\118", "\168\171\23\68\52\157\83");
+	if (v27.DeathCoil:IsReady() and v7:IsSpellInRange(v27.DeathCoil) and (v50 < v38.EpidemicTargets)) then
+		if v17(v27.DeathCoil) then
+			return LUAOBFUSACTOR_DECRYPT_STR_0("\240\116\244\185\45\18\132\251\120\249\237\36\34\130\203\115\224\191\54\57\199\165\33", "\231\148\17\149\205\69\77");
 		end
 	end
-	if (v24.UnholyAssault:IsCastable() and v7:IsInMeleeRange(1253 - (111 + 1137)) and v26[169 - (91 + 67)] and v108(v7)) then
-		if v14(v24.UnholyAssault) then
-			return LUAOBFUSACTOR_DECRYPT_STR_0("\225\127\253\162\41\52\184\245\98\230\172\48\33\147\180\114\241\190\26\44\136\241\49\161", "\231\148\17\149\205\69\77");
+	if (v27.Epidemic:IsReady() and v7:IsInRange(134 - 94)) then
+		if v17(v27.Epidemic) then
+			return LUAOBFUSACTOR_DECRYPT_STR_0("\133\183\206\255\82\242\137\164\135\250\88\250\191\165\210\233\68\235\192\246\151", "\159\224\199\167\155\55");
 		end
 	end
-	if (v24.DarkTransformation:IsCastable() and v7:IsInMeleeRange(14 - 9) and v26[2 + 3] and v37 and ((v24.VileContagion:CooldownRemains() > (528 - (423 + 100))) or not v24.VileContagion:IsAvailable() or v6:DnDTicking() or (v53:CooldownRemains() < (1 + 2)))) then
-		if v14(v24.DarkTransformation) then
-			return LUAOBFUSACTOR_DECRYPT_STR_0("\132\166\213\240\104\235\146\166\201\232\81\240\146\170\198\239\94\240\142\231\196\255\68\192\129\168\194\187\1", "\159\224\199\167\155\55");
+	if (v43:IsReady() and v7:IsInMeleeRange(v44)) then
+		if v36.CastTargetIf(v43, v48, LUAOBFUSACTOR_DECRYPT_STR_0("\250\250\50", "\178\151\147\92"), v70, v73, v44, false, false, false, true) then
+			return LUAOBFUSACTOR_DECRYPT_STR_0("\138\248\95\38\23\94\115\130\250\115\33\6\94\115\135\248\12\51\29\73\69\142\232\94\33\6\12\43\222", "\26\236\157\44\82\114\44");
 		end
 	end
-	if (v24.Outbreak:IsReady() and v7:IsSpellInRange(v24.Outbreak) and (v7:DebuffTicksRemain(v24.VirulentPlagueDebuff) < (13 - 8)) and v7:DebuffRefreshable(v24.VirulentPlagueDebuff) and (not v24.UnholyBlight:IsAvailable() or (v24.UnholyBlight:IsAvailable() and v24.DarkTransformation:CooldownDown())) and (not v24.RaiseAbomination:IsAvailable() or (v24.RaiseAbomination:IsAvailable() and v24.RaiseAbomination:CooldownDown()))) then
-		if v14(v24.Outbreak) then
-			return LUAOBFUSACTOR_DECRYPT_STR_0("\248\230\40\208\229\246\61\217\183\240\56\193\200\242\51\215\183\171", "\178\151\147\92");
-		end
-	end
-	if (v24.Apocalypse:IsReady() and v7:IsInMeleeRange(3 + 2) and v26[781 - (326 + 445)] and v37 and (v6:Rune() <= (13 - 10))) then
-		if v14(v24.Apocalypse) then
-			return LUAOBFUSACTOR_DECRYPT_STR_0("\141\237\67\49\19\64\99\156\238\73\114\17\72\105\179\252\67\55\82\29\42", "\26\236\157\44\82\114\44");
-		end
-	end
-	if (v24.AbominationLimb:IsCastable() and v7:IsInRange(44 - 24) and v26[27 - 15] and v37) then
-		if v14(v24.AbominationLimb) then
-			return LUAOBFUSACTOR_DECRYPT_STR_0("\43\44\218\86\35\32\212\79\35\33\219\100\38\39\216\89\106\45\209\72\21\47\218\94\106\127\135", "\59\74\78\181");
+	if (v39:IsReady() and v7:IsInRange(WoundSpenderRange)) then
+		if v36.CastTargetIf(v40, v48, LUAOBFUSACTOR_DECRYPT_STR_0("\39\47\205", "\59\74\78\181"), v70, nil, WoundSpenderRange, false, false, false, true) then
+			return LUAOBFUSACTOR_DECRYPT_STR_0("\50\222\79\84\183\26\194\74\95\189\33\212\72\26\178\42\212\101\88\166\55\194\78\26\226\113", "\211\69\177\58\58");
 		end
 	end
 end
-local function v129()
-	if (v24.DarkTransformation:IsCastable() and v7:IsInMeleeRange(716 - (530 + 181)) and v26[886 - (614 + 267)] and ((v37 and v6:BuffUp(v24.DeathAndDecayBuff)) or (v59 <= (35 - (19 + 13))))) then
-		if v14(v24.DarkTransformation) then
-			return LUAOBFUSACTOR_DECRYPT_STR_0("\33\208\72\81\140\49\195\91\84\160\35\222\72\87\178\49\216\85\84\243\38\213\73\101\178\42\212\101\73\178\43\145\8", "\211\69\177\58\58");
+local function v99()
+	if (v27.FesteringScytheAction:IsReady() and v7:IsInMeleeRange(619 - (316 + 289))) then
+		if v36.CastTargetIf(v43, v48, LUAOBFUSACTOR_DECRYPT_STR_0("\186\236\119", "\171\215\133\25\149\137"), v70, v73, v44, false, false, false, true) then
+			return LUAOBFUSACTOR_DECRYPT_STR_0("\231\205\33\238\234\34\245\76\230\247\33\249\246\36\244\71\161\201\61\255\208\35\249\86\244\216\114\168", "\34\129\168\82\154\143\80\156");
 		end
 	end
-	if (v24.VileContagion:IsReady() and v7:IsSpellInRange(v24.VileContagion) and v110(v7)) then
-		if v14(v24.VileContagion) then
-			return LUAOBFUSACTOR_DECRYPT_STR_0("\161\236\117\240\214\200\184\235\109\244\238\194\184\235\57\246\237\216\136\228\118\240\214\216\182\235\57\161", "\171\215\133\25\149\137");
+	if (v41:IsReady() and DnDSetting and not v6:DnDTicking() and ((not v27.BurstingSores:IsAvailable() and not v27.VileContagion:IsAvailable()) or (v27.FesteringWoundDebuff:AuraActiveCount() == v50) or (v27.FesteringWoundDebuff:AuraActiveCount() >= (20 - 12)) or v27.Defile:IsAvailable())) then
+		if v16.CastTarget(v27.DeathAndDecay, v16.TName().PLAYER) then
+			return LUAOBFUSACTOR_DECRYPT_STR_0("\132\188\42\52\76\64\141\197\179\60\14\119\93\140\145\167\35\75\28", "\233\229\210\83\107\40\46");
 		end
 	end
-	if (v24.UnholyAssault:IsCastable() and v7:IsInMeleeRange(7 - 2) and v26[25 - 14] and v109(v7) and v37) then
-		if v14(v24.UnholyAssault) then
-			return LUAOBFUSACTOR_DECRYPT_STR_0("\244\198\58\245\227\41\195\67\242\219\51\239\227\36\188\65\229\219\13\251\224\53\195\81\224\198\114\172", "\34\129\168\82\154\143\80\156");
+	if (v39:IsReady() and v7:IsInRange(WoundSpenderRange)) then
+		if v36.CastCycle(v40, v48, v95, WoundSpenderRange, false, false, false, true) then
+			return LUAOBFUSACTOR_DECRYPT_STR_0("\214\77\39\216\1\254\81\34\211\11\197\71\32\150\4\206\71\13\197\0\213\87\34\150\83", "\101\161\34\82\182");
 		end
 	end
-	if (v24.Outbreak:IsReady() and v7:IsSpellInRange(v24.Outbreak) and (v7:DebuffTicksRemain(v24.VirulentPlagueDebuff) < (14 - 9)) and (v7:DebuffRefreshable(v24.VirulentPlagueDebuff) or (v24.Morbidity:IsAvailable() and v6:BuffDown(v24.GiftoftheSanlaynBuff) and v24.Superstrain:IsAvailable() and v7:DebuffRefreshable(v24.FrostFeverDebuff) and v7:DebuffRefreshable(v24.BloodPlagueDebuff))) and (not v24.UnholyBlight:IsAvailable() or (v24.UnholyBlight:IsAvailable() and v24.DarkTransformation:CooldownDown())) and (not v24.RaiseAbomination:IsAvailable() or (v24.RaiseAbomination:IsAvailable() and v24.RaiseAbomination:CooldownDown()))) then
-		if v14(v24.Outbreak) then
-			return LUAOBFUSACTOR_DECRYPT_STR_0("\138\167\39\9\90\75\136\142\242\48\15\91\113\136\138\183\12\24\73\64\201\221", "\233\229\210\83\107\40\46");
+	if v43:IsReady() then
+		if v36.CastTargetIf(v43, v48, LUAOBFUSACTOR_DECRYPT_STR_0("\229\12\65", "\78\136\109\57\158\187\130\226"), v70, v74, v44, false, false, false, true) then
+			return LUAOBFUSACTOR_DECRYPT_STR_0("\56\58\234\229\59\45\240\255\57\0\234\229\44\54\242\244\126\62\246\244\1\44\252\229\43\47\185\169", "\145\94\95\153");
 		end
 	end
-	if (v24.Apocalypse:IsReady() and v7:IsInMeleeRange(2 + 3) and v26[17 - 7] and v37 and (v6:Rune() <= (6 - 3))) then
-		if v14(v24.Apocalypse) then
-			return LUAOBFUSACTOR_DECRYPT_STR_0("\192\82\61\213\4\205\91\34\197\0\129\65\54\197\58\192\77\55\233\22\192\76\114\135\85", "\101\161\34\82\182");
+	if (v43:IsReady() and v7:IsInMeleeRange(v44)) then
+		if v36.CastTargetIf(v43, v48, LUAOBFUSACTOR_DECRYPT_STR_0("\240\204\12", "\215\157\173\116\181\46"), v70, v75, v44, false, false, false, true) then
+			return LUAOBFUSACTOR_DECRYPT_STR_0("\51\177\152\230\223\39\189\133\245\229\38\160\153\251\209\48\244\138\253\223\10\167\142\230\207\37\244\218\162", "\186\85\212\235\146");
 		end
 	end
-	if (v24.AbominationLimb:IsCastable() and v7:IsInRange(1832 - (1293 + 519)) and v26[23 - 11] and v37) then
-		if v14(v24.AbominationLimb) then
-			return LUAOBFUSACTOR_DECRYPT_STR_0("\233\15\86\243\210\236\131\58\225\2\87\193\215\235\143\44\168\14\93\237\228\227\141\43\215\30\88\240\155\179\208", "\78\136\109\57\158\187\130\226");
+	if (v27.DeathCoil:IsReady() and v7:IsSpellInRange(v27.DeathCoil) and v6:BuffUp(v27.SuddenDoomBuff) and (v50 < v38.EpidemicTargets)) then
+		if v17(v27.DeathCoil) then
+			return LUAOBFUSACTOR_DECRYPT_STR_0("\198\132\23\234\49\209\91\205\136\26\190\56\225\93\253\146\19\234\44\254\24\147\211", "\56\162\225\118\158\89\142");
 		end
 	end
-end
-local function v130()
-	if (v24.DarkTransformation:IsCastable() and v7:IsInMeleeRange(13 - 8) and v26[9 - 4] and (v59 >= (4 - 3)) and v36 and ((v24.Apocalypse:IsAvailable() and v45) or not v24.Apocalypse:IsAvailable())) then
-		if v14(v24.DarkTransformation) then
-			return LUAOBFUSACTOR_DECRYPT_STR_0("\58\62\235\250\1\43\235\240\48\44\255\254\44\50\248\229\55\48\247\177\61\59\234\206\45\62\247\177\108", "\145\94\95\153");
+	if (v27.Epidemic:IsReady() and v7:IsInRange(2 + 38) and not v38.PoolingRunicPower and v6:BuffUp(v27.SuddenDoomBuff)) then
+		if v17(v27.Epidemic) then
+			return LUAOBFUSACTOR_DECRYPT_STR_0("\89\21\201\171\39\213\85\6\128\174\45\221\99\22\197\187\55\200\28\84\146", "\184\60\101\160\207\66");
 		end
 	end
-	if (v24.UnholyAssault:IsCastable() and v7:IsInMeleeRange(11 - 6) and v26[6 + 5] and v36 and v10:BuffUp(v24.DarkTransformation) and (v10:BuffRemains(v24.DarkTransformation) < (3 + 9))) then
-		if v14(v24.UnholyAssault) then
-			return LUAOBFUSACTOR_DECRYPT_STR_0("\232\195\28\218\66\174\194\204\7\198\79\162\241\217\84\214\74\164\194\222\21\219\14\227", "\215\157\173\116\181\46");
+	if (v43:IsReady() and v7:IsInMeleeRange(v44)) then
+		if v36.CastTargetIf(v43, v48, LUAOBFUSACTOR_DECRYPT_STR_0("\60\139\114", "\220\81\226\28"), v70, v76, v44, false, false, false, true) then
+			return LUAOBFUSACTOR_DECRYPT_STR_0("\21\208\145\239\239\213\26\219\133\196\249\211\1\220\137\254\170\198\28\208\189\232\239\211\6\197\194\170\190", "\167\115\181\226\155\138");
 		end
 	end
-	if (v24.Apocalypse:IsReady() and v7:IsInMeleeRange(11 - 6) and v26[3 + 7] and ((v36 and (v54 >= (1 + 2))) or (v63 < (13 + 7)))) then
-		if v14(v24.Apocalypse) then
-			return LUAOBFUSACTOR_DECRYPT_STR_0("\52\164\132\241\219\57\173\155\225\223\117\183\143\225\229\38\181\133\178\140", "\186\85\212\235\146");
+	if (v27.DeathCoil:IsReady() and v7:IsSpellInRange(v27.DeathCoil) and (v50 < v38.EpidemicTargets)) then
+		if v17(v27.DeathCoil) then
+			return LUAOBFUSACTOR_DECRYPT_STR_0("\230\39\230\72\115\78\197\237\43\235\28\122\126\195\221\49\226\72\110\97\134\179\116", "\166\130\66\135\60\27\17");
 		end
 	end
-	if (v24.Outbreak:IsReady() and v7:IsSpellInRange(v24.Outbreak)) then
-		if v34.CastCycle(v24.Outbreak, v60, v119, 1136 - (709 + 387)) then
-			return LUAOBFUSACTOR_DECRYPT_STR_0("\205\148\2\252\43\235\89\201\193\21\250\42\209\75\195\143\86\166", "\56\162\225\118\158\89\142");
-		end
-	end
-	if (v24.AbominationLimb:IsCastable() and v7:IsInRange(1878 - (673 + 1185)) and v26[34 - 22] and (((v59 >= (3 - 2)) and v36 and v6:BuffDown(v24.GiftoftheSanlaynBuff) and v10:BuffDown(v24.DarkTransformation) and v6:BuffDown(v24.SuddenDoomBuff) and v6:BuffUp(v24.FestermightBuff) and (v54 <= (2 - 0))) or (v6:BuffDown(v24.GiftoftheSanlaynBuff) and (v63 < (9 + 3))))) then
-		if v14(v24.AbominationLimb) then
-			return LUAOBFUSACTOR_DECRYPT_STR_0("\93\7\207\162\43\214\93\17\201\160\44\231\80\12\205\173\98\219\88\22\255\188\35\214\28\84\144", "\184\60\101\160\207\66");
+	if (v27.Epidemic:IsReady() and v7:IsInRange(1493 - (666 + 787)) and not v38.PoolingRunicPower) then
+		if v17(v27.Epidemic) then
+			return LUAOBFUSACTOR_DECRYPT_STR_0("\65\90\199\113\53\73\67\205\53\49\75\79\241\102\53\80\95\222\53\97\18", "\80\36\42\174\21");
 		end
 	end
 end
-local function v131()
-	if v35.Commons.Enabled.Potions then
-		local v223 = v34.PotionSelected();
-		if (v223 and v26[7 + 2]) then
-			if (v223:IsReady() and (((v59 >= (1 - 0)) and (not v24.SummonGargoyle:IsAvailable() or (v24.SummonGargoyle:CooldownRemains() > (15 + 45))) and ((v10:BuffUp(v24.DarkTransformation) and ((59 - 29) >= v10:BuffRemains(v24.DarkTransformation))) or (v47 and (v48 <= (58 - 28))) or (v45 and (v46 <= (1910 - (446 + 1434)))) or (v43 and (v44 <= (1313 - (1040 + 243)))))) or (v63 <= (89 - 59)))) then
-				if v13.CastMacro(1850 - (559 + 1288), nil, nil, v223) then
-					return LUAOBFUSACTOR_DECRYPT_STR_0("\33\141\104\181\62\140\60\180\56\133\116\131\33\144\117\179\14\131\127\168\56\141\114\175\113\208", "\220\81\226\28");
+local function v100()
+	if (v27.DarkTransformation:IsCastable() and v7:IsInMeleeRange(430 - (360 + 65)) and DarkTransformationSetting and ((v38.STPlanning and ((v27.Apocalypse:CooldownRemains() < (8 + 0)) or not v27.Apocalypse:IsAvailable() or (v50 >= (255 - (79 + 175))))) or (v53 < (31 - 11)))) then
+		if v17(v27.DarkTransformation) then
+			return LUAOBFUSACTOR_DECRYPT_STR_0("\74\17\37\113\113\4\37\123\64\3\49\117\92\29\54\110\71\31\57\58\77\20\36\58\28", "\26\46\112\87");
+		end
+	end
+	if (v27.UnholyAssault:IsCastable() and v7:IsInMeleeRange(4 + 1) and UnholyAssaultSetting and ((v38.STPlanning and ((v27.Apocalypse:CooldownRemains() < (v6:GCD() * (5 - 3))) or not v27.Apocalypse:IsAvailable() or ((v50 >= (3 - 1)) and v13:BuffUp(v27.DarkTransformation)))) or (v53 < (919 - (503 + 396))))) then
+		if v17(v27.UnholyAssault) then
+			return LUAOBFUSACTOR_DECRYPT_STR_0("\172\45\163\123\179\166\122\181\170\48\170\97\179\171\5\183\189\48\235\32", "\212\217\67\203\20\223\223\37");
+		end
+	end
+	if (v27.Apocalypse:IsReady() and v7:IsInMeleeRange(191 - (92 + 89)) and ApocalypseSetting and (v38.STPlanning or (v53 < (38 - 18)))) then
+		if v17(v27.Apocalypse) then
+			return LUAOBFUSACTOR_DECRYPT_STR_0("\187\157\167\209\187\129\177\194\169\136\232\209\190\158\232\132", "\178\218\237\200");
+		end
+	end
+	if (v27.Outbreak:IsReady() and v7:IsSpellInRange(v27.Outbreak)) then
+		if v36.CastCycle(v27.Outbreak, v51, v90, 21 + 19) then
+			return LUAOBFUSACTOR_DECRYPT_STR_0("\185\160\242\210\164\176\231\219\246\182\226\195\246\237", "\176\214\213\134");
+		end
+	end
+	if (v27.Apocalypse:IsReady() and v7:IsInMeleeRange(6 + 4) and ApocalypseSetting and ((v38.STPlanning and v6:BuffDown(v27.SuddenDoomBuff) and ((v6:BuffUp(v27.FestermightBuff) and (v6:BuffStack(v27.FestermightBuff) > (31 - 23))) or not v27.Festermight:IsAvailable()) and ((v38.ApocGhoulRemains < (1 + 4)) or not v27.Apocalypse:IsAvailable()) and (v42 <= (4 - 2))) or (v53 < (11 + 1)))) then
+		if v17(v27.Apocalypse) then
+			return LUAOBFUSACTOR_DECRYPT_STR_0("\245\189\185\215\169\90\64\228\190\179\148\171\82\74\180\252\230", "\57\148\205\214\180\200\54");
+		end
+	end
+	if (v27.AbominationLimb:IsCastable() and v7:IsInRange(10 + 10) and AbominationLimbSetting and v38.AddsRemain) then
+		if v17(v27.AbominationLimb) then
+			return LUAOBFUSACTOR_DECRYPT_STR_0("\19\255\58\57\127\28\252\33\61\121\28\194\57\61\123\16\189\54\48\101\82\172\103", "\22\114\157\85\84");
+		end
+	end
+end
+local function v101()
+	if (v27.VileContagion:IsReady() and v82(v7) and v7:IsSpellInRange(v27.VileContagion)) then
+		if v17(v27.VileContagion) then
+			return LUAOBFUSACTOR_DECRYPT_STR_0("\210\194\31\193\98\245\167\202\223\18\195\84\249\166\132\200\23\215\98\247\167\193\139\65", "\200\164\171\115\164\61\150");
+		end
+	end
+	if (v27.UnholyAssault:IsCastable() and v7:IsInMeleeRange(15 - 10) and UnholyAssaultSetting and v80(v7)) then
+		if v17(v27.UnholyAssault) then
+			return LUAOBFUSACTOR_DECRYPT_STR_0("\171\250\11\74\143\167\203\2\86\144\191\225\15\81\195\189\240\16\122\130\177\241\67\17", "\227\222\148\99\37");
+		end
+	end
+	if (v27.DarkTransformation:IsCastable() and v7:IsInMeleeRange(1 + 4) and DarkTransformationSetting and v38.AddsRemain and ((v27.VileContagion:CooldownRemains() > (7 - 2)) or not v27.VileContagion:IsAvailable() or v6:DnDTicking() or (v41:CooldownRemains() < (1247 - (485 + 759))))) then
+		if v17(v27.DarkTransformation) then
+			return LUAOBFUSACTOR_DECRYPT_STR_0("\55\83\64\253\198\39\64\83\248\234\53\93\64\251\248\39\91\93\248\185\48\86\65\201\248\60\87\18\160", "\153\83\50\50\150");
+		end
+	end
+	if (v27.Outbreak:IsReady() and v7:IsSpellInRange(v27.Outbreak) and (((v7:DebuffTicksRemain(v27.VirulentPlagueDebuff) < (11 - 6)) and (v7:DebuffRemains(v27.VirulentPlagueDebuff) <= v45)) or (v27.Superstrain:IsAvailable() and (v7:DebuffRemains(v27.FrostFeverDebuff) <= v46) and (v7:DebuffRemains(v27.BloodPlagueDebuff) <= v47))) and (not UnholyBlightSetting or not v27.UnholyBlight:IsAvailable() or (v27.UnholyBlight:IsAvailable() and v27.DarkTransformation:CooldownDown())) and (not RaiseAbominationSetting or not v27.RaiseAbomination:IsAvailable() or (v27.RaiseAbomination:IsAvailable() and v27.RaiseAbomination:CooldownDown()))) then
+		if v17(v27.Outbreak) then
+			return LUAOBFUSACTOR_DECRYPT_STR_0("\82\99\103\30\97\174\76\86\54\112\24\96\148\76\82\115\51\68", "\45\61\22\19\124\19\203");
+		end
+	end
+	if (v27.Apocalypse:IsReady() and v7:IsInMeleeRange(1199 - (442 + 747)) and ApocalypseSetting and v38.AddsRemain and (v6:Rune() <= (1138 - (832 + 303)))) then
+		if v17(v27.Apocalypse) then
+			return LUAOBFUSACTOR_DECRYPT_STR_0("\192\2\2\246\3\124\160\209\1\8\181\1\116\170\254\19\2\240\66\33\233", "\217\161\114\109\149\98\16");
+		end
+	end
+	if (v27.AbominationLimb:IsCastable() and v7:IsInRange(966 - (88 + 858)) and AbominationLimbSetting and v38.AddsRemain) then
+		if v17(v27.AbominationLimb) then
+			return LUAOBFUSACTOR_DECRYPT_STR_0("\19\34\55\113\181\122\19\52\49\115\178\75\30\41\53\126\252\119\22\51\7\125\179\113\82\113\106", "\20\114\64\88\28\220");
+		end
+	end
+end
+local function v102()
+	if (v27.DarkTransformation:IsCastable() and v7:IsInMeleeRange(2 + 3) and DarkTransformationSetting and v38.AddsRemain and (v6:BuffUp(v27.DeathAndDecayBuff) or (v50 <= (3 + 0)))) then
+		if v17(v27.DarkTransformation) then
+			return LUAOBFUSACTOR_DECRYPT_STR_0("\53\0\192\191\199\196\175\48\15\193\178\247\194\176\48\21\219\187\246\144\190\53\18\237\181\247\213\130\34\0\220\244\170", "\221\81\97\178\212\152\176");
+		end
+	end
+	if (v27.VileContagion:IsReady() and v7:IsSpellInRange(v27.VileContagion) and v82(v7)) then
+		if v17(v27.VileContagion) then
+			return LUAOBFUSACTOR_DECRYPT_STR_0("\219\238\17\254\37\206\232\19\239\27\202\238\18\245\90\206\227\14\196\27\194\226\34\232\27\195\167\73", "\122\173\135\125\155");
+		end
+	end
+	if (v27.UnholyAssault:IsCastable() and v7:IsInMeleeRange(1 + 4) and UnholyAssaultSetting and v81(v7) and v38.AddsRemain) then
+		if v17(v27.UnholyAssault) then
+			return LUAOBFUSACTOR_DECRYPT_STR_0("\145\207\8\182\51\40\247\133\210\19\184\42\61\220\196\194\4\170\0\48\199\129\254\19\184\49\113\158", "\168\228\161\96\217\95\81");
+		end
+	end
+	if (v27.Outbreak:IsReady() and v7:IsSpellInRange(v27.Outbreak) and ((v7:DebuffRemains(v27.VirulentPlagueDebuff) <= v45) or (v27.Morbidity:IsAvailable() and v6:BuffDown(v27.GiftoftheSanlaynBuff) and v27.Superstrain:IsAvailable() and (v7:DebuffRemains(v27.FrostFeverDebuff) <= v46) and (v7:DebuffRemains(v27.BloodPlagueDebuff) <= v47))) and (not v27.UnholyBlight:IsAvailable() or (v27.UnholyBlight:IsAvailable() and v27.DarkTransformation:CooldownDown())) and (not v27.RaiseAbomination:IsAvailable() or (v27.RaiseAbomination:IsAvailable() and v27.RaiseAbomination:CooldownDown()))) then
+		if v17(v27.Outbreak) then
+			return LUAOBFUSACTOR_DECRYPT_STR_0("\212\196\58\94\61\82\218\218\110\95\43\68\228\208\33\89\16\68\218\223\110\4", "\55\187\177\78\60\79");
+		end
+	end
+	if (v27.Apocalypse:IsReady() and v7:IsInMeleeRange(799 - (766 + 23)) and ApocalypseSetting and v38.AddsRemain and (v6:Rune() <= (14 - 11))) then
+		if v17(v27.Apocalypse) then
+			return LUAOBFUSACTOR_DECRYPT_STR_0("\44\222\80\232\71\195\153\61\221\90\171\69\203\147\18\207\80\238\121\220\129\35\142\14\187", "\224\77\174\63\139\38\175");
+		end
+	end
+	if (v27.AbominationLimb:IsCastable() and v7:IsInRange(27 - 7) and AbominationLimbSetting and v38.AddsRemain) then
+		if v17(v27.AbominationLimb) then
+			return LUAOBFUSACTOR_DECRYPT_STR_0("\133\67\87\35\141\79\89\58\141\78\86\17\136\72\85\44\196\66\92\61\187\64\87\43\187\82\89\32\196\16\10", "\78\228\33\56");
+		end
+	end
+end
+local function v103()
+	if (v27.DarkTransformation:IsCastable() and v7:IsInMeleeRange(13 - 8) and DarkTransformationSetting and (((v50 >= (3 - 2)) and v38.STPlanning and ((v27.Apocalypse:IsAvailable() and v38.ApocGhoulActive) or not v27.Apocalypse:IsAvailable() or not ApocalypseSetting)) or (v53 < (1093 - (1036 + 37))))) then
+		if v17(v27.DarkTransformation) then
+			return LUAOBFUSACTOR_DECRYPT_STR_0("\202\127\160\8\186\218\108\179\13\150\200\113\160\14\132\218\119\189\13\197\205\122\161\60\150\207\112\242\81", "\229\174\30\210\99");
+		end
+	end
+	if (v27.UnholyAssault:IsCastable() and v7:IsInMeleeRange(4 + 1) and UnholyAssaultSetting and ((v38.STPlanning and v13:BuffUp(v27.DarkTransformation) and (v13:BuffRemains(v27.DarkTransformation) < (23 - 11))) or (v53 < (16 + 4)))) then
+		if v17(v27.UnholyAssault) then
+			return LUAOBFUSACTOR_DECRYPT_STR_0("\14\227\142\94\225\36\6\26\254\149\80\248\49\45\91\238\130\66\210\46\56\21\173\210", "\89\123\141\230\49\141\93");
+		end
+	end
+	if (v27.Apocalypse:IsReady() and v7:IsInMeleeRange(1490 - (641 + 839)) and ApocalypseSetting and (v38.STPlanning or (v53 < (933 - (910 + 3))))) then
+		if v17(v27.Apocalypse) then
+			return LUAOBFUSACTOR_DECRYPT_STR_0("\242\97\249\15\17\70\234\97\229\9\80\73\247\98\201\31\17\68\179\39", "\42\147\17\150\108\112");
+		end
+	end
+	if (v27.Outbreak:IsReady() and v7:IsSpellInRange(v27.Outbreak)) then
+		if v36.CastCycle(v27.Outbreak, v51, v92, 101 - 61) then
+			return LUAOBFUSACTOR_DECRYPT_STR_0("\0\179\57\125\245\237\14\173\109\124\227\251\48\181\44\113\167\176", "\136\111\198\77\31\135");
+		end
+	end
+	if (v27.AbominationLimb:IsCastable() and v7:IsInRange(1704 - (1466 + 218)) and AbominationLimbSetting and (v50 >= (1 + 0)) and v38.STPlanning and v13:BuffDown(v27.DarkTransformation) and v6:BuffDown(v27.SuddenDoomBuff) and v6:BuffUp(v27.FestermightBuff) and (v42 <= (1150 - (556 + 592)))) then
+		if v17(v27.AbominationLimb) then
+			return LUAOBFUSACTOR_DECRYPT_STR_0("\3\11\168\91\180\234\22\189\11\6\169\105\177\237\26\171\66\10\163\69\130\247\22\167\66\88\247", "\201\98\105\199\54\221\132\119");
+		end
+	end
+end
+local function v104()
+	if (v27.DarkTransformation:IsCastable() and v7:IsInMeleeRange(2 + 3) and DarkTransformationSetting and ((v6:BuffUp(v27.DeathAndDecayBuff) and ((v27.Apocalypse:IsAvailable() and v38.ApocGhoulActive) or not v27.Apocalypse:IsAvailable())) or (v53 < (828 - (329 + 479))))) then
+		if v17(v27.DarkTransformation) then
+			return LUAOBFUSACTOR_DECRYPT_STR_0("\189\13\145\42\61\33\190\184\2\144\39\13\39\161\184\24\138\46\12\117\175\189\31\188\34\14\48\173\175\9\188\50\3\59\236\235", "\204\217\108\227\65\98\85");
+		end
+	end
+	if (v27.UnholyAssault:IsCastable() and v7:IsInMeleeRange(859 - (174 + 680)) and UnholyAssaultSetting and ((v13:BuffUp(v27.DarkTransformation) and (v13:BuffRemains(v27.DarkTransformation) < (41 - 29))) or (v53 < (41 - 21)))) then
+		if v17(v27.UnholyAssault) then
+			return LUAOBFUSACTOR_DECRYPT_STR_0("\75\205\253\234\32\217\97\194\230\246\45\213\82\215\181\230\40\211\97\192\249\224\45\214\91\252\230\228\34\128\10", "\160\62\163\149\133\76");
+		end
+	end
+	if (v27.Apocalypse:IsReady() and v7:IsInMeleeRange(8 + 2) and ApocalypseSetting) then
+		if v17(v27.Apocalypse) then
+			return LUAOBFUSACTOR_DECRYPT_STR_0("\215\176\2\44\194\218\185\29\60\198\150\163\9\60\252\213\172\8\46\213\211\159\30\46\205\150\246", "\163\182\192\109\79");
+		end
+	end
+	if (v27.Outbreak:IsReady() and v7:IsSpellInRange(v27.Outbreak)) then
+		if v36.CastCycle(v27.Outbreak, v48, v91, 779 - (396 + 343)) then
+			return LUAOBFUSACTOR_DECRYPT_STR_0("\59\51\20\194\231\49\39\11\128\246\48\53\63\195\249\49\39\22\197\202\39\39\14\128\173", "\149\84\70\96\160");
+		end
+	end
+	if (v27.AbominationLimb:IsCastable() and v7:IsInRange(2 + 18) and AbominationLimbSetting and ((v6:BuffDown(v27.GiftoftheSanlaynBuff) and v6:BuffDown(v27.SuddenDoomBuff) and v6:BuffUp(v27.FestermightBuff) and (v42 <= (1479 - (29 + 1448)))) or (v6:BuffUp(v27.GiftoftheSanlaynBuff) and (v53 < (1401 - (135 + 1254)))))) then
+		if v17(v27.AbominationLimb) then
+			return LUAOBFUSACTOR_DECRYPT_STR_0("\57\4\2\224\49\8\12\249\49\9\3\210\52\15\0\239\120\5\9\254\7\5\1\232\57\16\8\210\43\7\3\173\105\86", "\141\88\102\109");
+		end
+	end
+end
+local function v105()
+	if v37.Commons.Enabled.Potions then
+		local v220 = v36.PotionSelected();
+		if (v220 and PotionSetting) then
+			if (v220:IsReady() and (((v50 >= (3 - 2)) and (not v27.SummonGargoyle:IsAvailable() or (v27.SummonGargoyle:CooldownRemains() > (280 - 220))) and ((v13:BuffUp(v27.DarkTransformation) and ((20 + 10) >= v13:BuffRemains(v27.DarkTransformation))) or (v38.ArmyGhoulActive and (v38.ArmyGhoulRemains <= (1557 - (389 + 1138)))) or (v38.ApocGhoulActive and (v38.ApocGhoulRemains <= (604 - (102 + 472)))) or (v38.AbomActive and (v38.AbomRemains <= (29 + 1))))) or (v53 <= (17 + 13)))) then
+				if v16.CastMacro(3 + 0, nil, nil, v220) then
+					return LUAOBFUSACTOR_DECRYPT_STR_0("\163\92\222\121\21\51\21\201\186\84\194\79\10\47\92\206\140\82\201\100\19\50\91\210\243\1", "\161\211\51\170\16\122\93\53");
 				end
 			end
 		end
 	end
-	if (v24.ArmyoftheDead:IsReady() and v7:IsInMeleeRange(1936 - (609 + 1322)) and v26[471 - (13 + 441)] and (((v36 or v37) and ((v24.CommanderoftheDead:IsAvailable() and (v24.DarkTransformation:CooldownRemains() < (18 - 13))) or (not v24.CommanderoftheDead:IsAvailable() and (v59 >= (2 - 1))))) or (v63 < (174 - 139)))) then
-		if v14(v24.ArmyoftheDead) then
-			return LUAOBFUSACTOR_DECRYPT_STR_0("\18\199\143\226\213\200\21\234\150\243\239\248\23\208\131\255\170\196\23\198\189\232\226\198\1\208\134\187\190", "\167\115\181\226\155\138");
+	if (v27.ArmyoftheDead:IsReady() and v7:IsInMeleeRange(1550 - (320 + 1225)) and ArmyOfTheDeadSetting and (((v38.STPlanning or v38.AddsRemain) and ((v27.CommanderoftheDead:IsAvailable() and (v27.DarkTransformation:CooldownRemains() < (8 - 3))) or (not v27.CommanderoftheDead:IsAvailable() and (v50 >= (1 + 0))))) or (v53 < (1499 - (157 + 1307))))) then
+		if v17(v27.ArmyoftheDead) then
+			return LUAOBFUSACTOR_DECRYPT_STR_0("\250\188\191\49\196\161\180\23\239\166\183\23\255\171\179\44\187\173\182\59\196\189\186\41\233\171\182\104\175", "\72\155\206\210");
 		end
 	end
-	if (v24.RaiseAbomination:IsCastable() and v7:IsInMeleeRange(1 + 4) and v26[58 - 42] and (v36 or v37 or (v63 < (11 + 19)))) then
-		if v14(v24.RaiseAbomination) then
-			return LUAOBFUSACTOR_DECRYPT_STR_0("\240\35\238\79\126\78\199\224\45\234\85\117\112\210\235\45\233\28\120\117\213\221\49\239\93\105\116\194\162\116", "\166\130\66\135\60\27\17");
+	if (v27.RaiseAbomination:IsCastable() and v7:IsInMeleeRange(1864 - (821 + 1038)) and RaiseAbominationSetting and (v38.STPlanning or v38.AddsRemain or (v53 < (74 - 44)))) then
+		if v17(v27.RaiseAbomination) then
+			return LUAOBFUSACTOR_DECRYPT_STR_0("\84\123\93\29\54\121\123\86\1\62\79\116\85\26\58\73\116\20\13\55\85\69\71\6\50\84\127\80\78\101", "\83\38\26\52\110");
 		end
 	end
-	if (v24.SummonGargoyle:IsReady() and v7:IsInMeleeRange(3 + 2) and v26[44 - 29] and (v36 or v37) and (v6:BuffUp(v24.CommanderoftheDeadBuff) or (not v24.CommanderoftheDead:IsAvailable() and (v59 >= (1 + 0))))) then
-		if v14(v24.SummonGargoyle) then
-			return LUAOBFUSACTOR_DECRYPT_STR_0("\87\95\195\120\63\74\117\201\116\34\67\69\215\121\53\4\73\202\102\15\87\66\207\103\53\64\10\150", "\80\36\42\174\21");
-		end
-	end
-end
-local function v132()
-	if (v53:IsReady() and v26[7 - 3] and ((v58 >= (1 + 0)) or v7:IsInRange(5 + 3)) and (v35.Commons.DnDMoving or not v6:IsMoving()) and not v6:DnDTicking()) then
-		if v13.CastTarget(v24.DeathAndDecay, v13.TName().PLAYER) then
-			return LUAOBFUSACTOR_DECRYPT_STR_0("\79\30\46\69\74\30\51\58\77\28\50\123\88\21\119\40", "\26\46\112\87");
-		end
-	end
-	if (v24.DeathCoil:IsReady() and v7:IsSpellInRange(v24.DeathCoil) and not v40 and v24.ImprovedDeathCoil:IsAvailable()) then
-		if v14(v24.DeathCoil) then
-			return LUAOBFUSACTOR_DECRYPT_STR_0("\189\38\170\96\183\128\70\187\176\47\235\119\179\186\68\162\188\99\255", "\212\217\67\203\20\223\223\37");
-		end
-	end
-	if (v55:IsReady() and v7:IsInMeleeRange(v56) and v106(v7)) then
-		if v14(v55) then
-			return LUAOBFUSACTOR_DECRYPT_STR_0("\188\136\187\198\191\159\161\220\189\178\187\198\168\132\163\215\250\142\164\215\187\155\173\146\226", "\178\218\237\200");
-		end
-	end
-	if (v55:IsReady() and v7:IsInMeleeRange(v56) and v107(v7)) then
-		if v14(v55) then
-			return LUAOBFUSACTOR_DECRYPT_STR_0("\176\176\245\196\179\167\239\222\177\138\245\196\164\188\237\213\246\182\234\213\183\163\227\144\231\229", "\176\214\213\134");
-		end
-	end
-	if (v51:IsReady() and v7:IsInRange(WoundSpenderRange) and (v54 >= (1 + 0)) and v39) then
-		if v14(v52) then
-			return LUAOBFUSACTOR_DECRYPT_STR_0("\227\162\163\218\172\105\74\228\168\184\208\173\68\25\247\161\179\213\190\83\25\165\255", "\57\148\205\214\180\200\54");
+	if (v27.SummonGargoyle:IsReady() and v7:IsInMeleeRange(1 + 4) and SummonGargoyleSetting and (((v38.STPlanning or v38.AddsRemain) and (v6:BuffUp(v27.CommanderoftheDeadBuff) or (not v27.CommanderoftheDead:IsAvailable() and (v50 >= (1 - 0))))) or (v53 < (10 + 15)))) then
+		if v17(v27.SummonGargoyle) then
+			return LUAOBFUSACTOR_DECRYPT_STR_0("\75\2\42\75\87\25\24\65\89\5\32\73\65\27\34\6\91\19\52\121\75\31\38\84\93\19\103\30", "\38\56\119\71");
 		end
 	end
 end
-local function v133()
-	if (v24.ArcaneTorrent:IsCastable() and v7:IsInRange(7 + 1) and v26[6 + 0] and (v6:RunicPower() < (453 - (153 + 280))) and (v6:Rune() < (5 - 3))) then
-		if v14(v24.ArcaneTorrent) then
-			return LUAOBFUSACTOR_DECRYPT_STR_0("\19\239\54\53\120\23\194\33\59\100\0\248\59\32\54\0\252\54\61\119\30\238\117\102", "\22\114\157\85\84");
+local function v106()
+	if (v41:IsReady() and DnDSetting and not v6:DnDTicking() and v38.AddsRemain and (v27.Apocalypse:CooldownDown() or not v27.Apocalypse:IsAvailable())) then
+		if v16.CastTarget(v27.DeathAndDecay, v16.TName().PLAYER) then
+			return LUAOBFUSACTOR_DECRYPT_STR_0("\242\225\65\233\33\88\247\175\91\218\32\87\229\234\24\132", "\54\147\143\56\182\69");
 		end
 	end
-	if (v24.BloodFury:IsCastable() and v7:IsInRange(5 + 0) and v26[3 + 3] and ((((v24.BloodFury:BaseDuration() + 2 + 1) >= v50) and v49) or ((not v24.SummonGargoyle:IsAvailable() or (v24.SummonGargoyle:CooldownRemains() > (55 + 5))) and ((v47 and (v48 <= (v24.BloodFury:BaseDuration() + 3 + 0))) or (v45 and (v46 <= (v24.BloodFury:BaseDuration() + (4 - 1)))) or ((v59 >= (2 + 0)) and v6:DnDTicking()))) or (v63 <= (v24.BloodFury:BaseDuration() + (670 - (89 + 578)))))) then
-		if v14(v24.BloodFury) then
-			return LUAOBFUSACTOR_DECRYPT_STR_0("\198\199\28\203\89\201\174\209\217\10\132\79\247\171\205\202\31\215\29\162", "\200\164\171\115\164\61\150");
+	if (v27.DeathCoil:IsReady() and v7:IsSpellInRange(v27.DeathCoil) and not v38.PoolingRunicPower and v27.ImprovedDeathCoil:IsAvailable()) then
+		if v17(v27.DeathCoil) then
+			return LUAOBFUSACTOR_DECRYPT_STR_0("\210\132\254\93\215\233\130\240\64\211\150\130\243\76\222\192\132\191\29", "\191\182\225\159\41");
 		end
 	end
-	if (v24.Berserking:IsCastable() and v7:IsInRange(4 + 1) and v26[11 - 5] and ((((v24.Berserking:BaseDuration() + (1052 - (572 + 477))) >= v50) and v49) or ((not v24.SummonGargoyle:IsAvailable() or (v24.SummonGargoyle:CooldownRemains() > (9 + 51))) and ((v47 and (v48 <= (v24.Berserking:BaseDuration() + 2 + 1))) or (v45 and (v46 <= (v24.Berserking:BaseDuration() + 1 + 2))) or ((v59 >= (88 - (84 + 2))) and v6:DnDTicking()))) or (v63 <= (v24.Berserking:BaseDuration() + (4 - 1))))) then
-		if v14(v24.Berserking) then
-			return LUAOBFUSACTOR_DECRYPT_STR_0("\188\241\17\86\134\172\255\10\75\132\254\230\2\70\138\191\248\16\5\213", "\227\222\148\99\37");
+	if (v39:IsReady() and v7:IsInRange(WoundSpenderRange) and (v27.VampiricStrikeAction:IsLearned())) then
+		if v17(v40) then
+			return LUAOBFUSACTOR_DECRYPT_STR_0("\60\29\61\91\143\184\209\59\23\38\81\142\149\130\40\30\45\84\157\130\130\125", "\162\75\114\72\53\235\231");
 		end
 	end
-	if (v24.LightsJudgment:IsCastable() and v7:IsInRange(4 + 1) and v26[848 - (497 + 345)] and v6:BuffUp(v24.UnholyStrengthBuff) and (not v24.Festermight:IsAvailable() or (v6:BuffRemains(v24.FestermightBuff) < v7:TimeToDie()) or (v6:BuffRemains(v24.UnholyStrengthBuff) < v7:TimeToDie()))) then
-		if v14(v24.LightsJudgment) then
-			return LUAOBFUSACTOR_DECRYPT_STR_0("\63\91\85\254\237\32\109\88\227\253\52\95\87\248\237\115\64\83\245\240\50\94\65\182\161", "\153\83\50\50\150");
+	if (v27.DeathCoil:IsReady() and v7:IsSpellInRange(v27.DeathCoil) and not v38.PoolingRunicPower and not v27.ImprovedDeathCoil:IsAvailable()) then
+		if v17(v27.DeathCoil) then
+			return LUAOBFUSACTOR_DECRYPT_STR_0("\136\57\69\246\91\61\143\51\77\238\19\1\128\57\69\244\86\66\219", "\98\236\92\36\130\51");
 		end
 	end
-	if (v24.AncestralCall:IsCastable() and v7:IsInRange(1 + 4) and v26[2 + 4] and ((((1351 - (605 + 728)) >= v50) and v49) or ((not v24.SummonGargoyle:IsAvailable() or (v24.SummonGargoyle:CooldownRemains() > (43 + 17))) and ((v47 and (v48 <= (39 - 21))) or (v45 and (v46 <= (1 + 17))) or ((v59 >= (7 - 5)) and v6:DnDTicking()))) or (v63 <= (17 + 1)))) then
-		if v14(v24.AncestralCall) then
-			return LUAOBFUSACTOR_DECRYPT_STR_0("\92\120\112\25\96\191\95\92\122\76\31\114\167\65\29\100\114\31\122\170\65\78\54\34\76", "\45\61\22\19\124\19\203");
+	if (v43:IsReady() and v7:IsInMeleeRange(v44)) then
+		if v36.CastTargetIf(v27.FesteringStrike, v48, LUAOBFUSACTOR_DECRYPT_STR_0("\169\16\2", "\80\196\121\108\218\37\200\213"), v70, v77, v44, false, false, false, true) then
+			return LUAOBFUSACTOR_DECRYPT_STR_0("\6\118\17\107\78\28\131\14\116\61\108\95\28\131\11\118\66\124\71\11\139\22\118\66\39", "\234\96\19\98\31\43\110");
 		end
 	end
-	if (v24.ArcanePulse:IsCastable() and v7:IsInRange(21 - 13) and v26[5 + 1] and ((v59 >= (491 - (457 + 32))) or ((v6:Rune() <= (1 + 0)) and (v6:RunicPowerDeficit() >= (1462 - (832 + 570)))))) then
-		if v14(v24.ArcanePulse) then
-			return LUAOBFUSACTOR_DECRYPT_STR_0("\192\0\14\244\12\117\134\209\7\1\230\7\48\171\192\17\4\244\14\99\249\144\64", "\217\161\114\109\149\98\16");
+	if (v43:IsReady() and v7:IsInMeleeRange(v44)) then
+		if v36.CastTargetIf(v27.FesteringStrike, v48, LUAOBFUSACTOR_DECRYPT_STR_0("\11\30\74", "\235\102\127\50\167\204\18"), v70, v79, v44, false, false, false, true) then
+			return LUAOBFUSACTOR_DECRYPT_STR_0("\86\164\230\55\65\60\89\175\242\28\87\58\66\168\254\38\4\45\92\164\244\53\65\110\1\241", "\78\48\193\149\67\36");
 		end
 	end
-	if (v24.Fireblood:IsCastable() and v7:IsInRange(5 + 0) and v26[2 + 4] and ((((v24.Fireblood:BaseDuration() + (10 - 7)) >= v50) and v49) or ((not v24.SummonGargoyle:IsAvailable() or (v24.SummonGargoyle:CooldownRemains() > (29 + 31))) and ((v47 and (v48 <= (v24.Fireblood:BaseDuration() + (799 - (588 + 208))))) or (v45 and (v46 <= (v24.Fireblood:BaseDuration() + (8 - 5)))) or ((v59 >= (1802 - (884 + 916))) and v6:DnDTicking()))) or (v63 <= (v24.Fireblood:BaseDuration() + (6 - 3))))) then
-		if v14(v24.Fireblood) then
-			return LUAOBFUSACTOR_DECRYPT_STR_0("\20\41\42\121\190\120\29\47\60\60\174\117\17\41\57\112\175\52\67\116", "\20\114\64\88\28\220");
-		end
-	end
-	if (v24.BagofTricks:IsCastable() and v7:IsInRange(3 + 2) and v26[659 - (232 + 421)] and (v59 <= (1890 - (1569 + 320))) and (v6:BuffUp(v24.UnholyStrengthBuff) or (v63 < (2 + 3)))) then
-		if v14(v24.BagofTricks) then
-			return LUAOBFUSACTOR_DECRYPT_STR_0("\51\0\213\139\247\214\130\37\19\219\183\243\195\253\35\0\209\189\249\220\174\113\80\132", "\221\81\97\178\212\152\176");
+	if (v39:IsReady() and v7:IsInRange(WoundSpenderRange) and (v42 >= (2 - 1)) and v38.PopWounds) then
+		if v17(v40) then
+			return LUAOBFUSACTOR_DECRYPT_STR_0("\39\17\149\22\69\15\13\144\29\79\52\27\146\88\66\60\27\129\14\68\112\79\210", "\33\80\126\224\120");
 		end
 	end
 end
-local function v134()
-	if (v24.AntiMagicShell:IsCastable() and v35.Commons.UseAMSAMZOffensively and (v35.Unholy.AMSAbsorbPercent > (0 + 0)) and (v6:RunicPower() < (134 - 94))) then
-		if v14(v24.AntiMagicShell) then
-			return LUAOBFUSACTOR_DECRYPT_STR_0("\204\233\9\242\23\204\224\20\248\37\222\239\24\247\22\141\244\28\245\37\203\238\14\243\19\195\224\93\169", "\122\173\135\125\155");
+local function v107()
+	if (v27.ArcaneTorrent:IsCastable() and v7:IsInRange(1034 - (834 + 192)) and RacialsSetting and (v6:RunicPower() < (2 + 18)) and (v6:Rune() < (1 + 1))) then
+		if v17(v27.ArcaneTorrent) then
+			return LUAOBFUSACTOR_DECRYPT_STR_0("\237\186\0\197\82\233\151\23\203\78\254\173\13\208\28\254\169\0\205\93\224\187\67\150", "\60\140\200\99\164");
 		end
 	end
-	if (v53:IsReady() and v26[609 - (316 + 289)] and ((v58 >= (2 - 1)) or v7:IsInRange(1 + 7)) and (v35.Commons.DnDMoving or not v6:IsMoving()) and v6:BuffDown(v24.DeathAndDecayBuff) and not v24.VampiricStrikeAction:IsLearned()) then
-		if v13.CastTarget(v24.DeathAndDecay, v13.TName().PLAYER) then
-			return LUAOBFUSACTOR_DECRYPT_STR_0("\133\207\25\134\59\63\204\196\210\1\183\0\55\193\151\201\9\183\56\113\156", "\168\228\161\96\217\95\81");
+	if (v27.BloodFury:IsCastable() and v7:IsInRange(1 + 4) and RacialsSetting and ((((v27.BloodFury:BaseDuration() + (4 - 1)) >= v38.GargRemains) and v38.GargActive) or ((not v27.SummonGargoyle:IsAvailable() or (v27.SummonGargoyle:CooldownRemains() > (364 - (300 + 4)))) and ((v38.ArmyGhoulActive and (v38.ArmyGhoulRemains <= (v27.BloodFury:BaseDuration() + 1 + 2))) or (v38.ApocGhoulActive and (v38.ApocGhoulRemains <= (v27.BloodFury:BaseDuration() + (7 - 4)))) or ((v50 >= (364 - (112 + 250))) and v6:DnDTicking()))) or (v53 <= (v27.BloodFury:BaseDuration() + 2 + 1)))) then
+		if v17(v27.BloodFury) then
+			return LUAOBFUSACTOR_DECRYPT_STR_0("\133\248\11\41\166\184\242\17\52\187\199\230\5\37\171\134\248\23\102\246", "\194\231\148\100\70");
 		end
 	end
-	if (v24.DeathCoil:IsReady() and v7:IsSpellInRange(v24.DeathCoil) and v6:BuffUp(v24.SuddenDoomBuff) and v24.DoomedBidding:IsAvailable()) then
-		if v14(v24.DeathCoil) then
-			return LUAOBFUSACTOR_DECRYPT_STR_0("\223\212\47\72\39\104\216\222\39\80\111\68\218\223\17\90\38\68\211\216\32\91\111\1", "\55\187\177\78\60\79");
+	if (v27.Berserking:IsCastable() and v7:IsInRange(12 - 7) and RacialsSetting and ((((v27.Berserking:BaseDuration() + 2 + 1) >= v38.GargRemains) and v38.GargActive) or ((not v27.SummonGargoyle:IsAvailable() or (v27.SummonGargoyle:CooldownRemains() > (32 + 28))) and ((v38.ArmyGhoulActive and (v38.ArmyGhoulRemains <= (v27.Berserking:BaseDuration() + 3 + 0))) or (v38.ApocGhoulActive and (v38.ApocGhoulRemains <= (v27.Berserking:BaseDuration() + 2 + 1))) or ((v50 >= (2 + 0)) and v6:DnDTicking()))) or (v53 <= (v27.Berserking:BaseDuration() + (1417 - (1001 + 413)))))) then
+		if v17(v27.Berserking) then
+			return LUAOBFUSACTOR_DECRYPT_STR_0("\68\73\211\176\243\218\77\69\207\164\182\218\71\79\200\162\250\219\6\26", "\168\38\44\161\195\150");
 		end
 	end
-	if (v24.SoulReaper:IsReady() and v7:IsInMeleeRange(1458 - (666 + 787)) and ((v7:HealthPercentage() <= (460 - (360 + 65))) or (v7:TimeToX(33 + 2) <= (259 - (79 + 175)))) and (v7:TimeToDie() > (7 - 2))) then
-		if v14(v24.SoulReaper) then
-			return LUAOBFUSACTOR_DECRYPT_STR_0("\62\193\74\231\121\221\133\44\222\90\249\6\220\129\35\241\89\226\85\199\137\35\201\31\179", "\224\77\174\63\139\38\175");
+	if (v27.LightsJudgment:IsCastable() and v7:IsInRange(11 - 6) and RacialsSetting and v6:BuffUp(v27.UnholyStrengthBuff) and (not v27.Festermight:IsAvailable() or (v6:BuffRemains(v27.FestermightBuff) < v7:TimeToDie()) or (v6:BuffRemains(v27.UnholyStrengthBuff) < v7:TimeToDie()))) then
+		if v17(v27.LightsJudgment) then
+			return LUAOBFUSACTOR_DECRYPT_STR_0("\140\245\133\126\36\251\137\28\149\248\133\123\53\230\162\86\146\253\129\127\49\228\165\86\216", "\118\224\156\226\22\80\136\214");
 		end
 	end
-	if (v24.DeathCoil:IsReady() and v7:IsSpellInRange(v24.DeathCoil) and not v24.VampiricStrikeAction:IsLearned()) then
-		if v14(v24.DeathCoil) then
-			return LUAOBFUSACTOR_DECRYPT_STR_0("\128\68\89\58\140\126\91\33\141\77\24\61\133\79\103\40\141\82\80\39\138\70\24\127\212", "\78\228\33\56");
+	if (v27.AncestralCall:IsCastable() and v7:IsInRange(887 - (244 + 638)) and RacialsSetting and ((((694 - (627 + 66)) >= v38.GargRemains) and v38.GargActive) or ((not v27.SummonGargoyle:IsAvailable() or (v27.SummonGargoyle:CooldownRemains() > (178 - 118))) and ((v38.ArmyGhoulActive and (v38.ArmyGhoulRemains <= (620 - (512 + 90)))) or (v38.ApocGhoulActive and (v38.ApocGhoulRemains <= (1924 - (1665 + 241)))) or ((v50 >= (719 - (373 + 344))) and v6:DnDTicking()))) or (v53 <= (9 + 9)))) then
+		if v17(v27.AncestralCall) then
+			return LUAOBFUSACTOR_DECRYPT_STR_0("\67\224\90\133\81\250\75\129\78\209\90\129\78\226\25\146\67\237\80\129\78\253\25\209\18", "\224\34\142\57");
 		end
 	end
-	if (v51:IsReady() and v7:IsInRange(WoundSpenderRange) and (v54 >= (1 + 0)) and (((v54 >= ((8 - 5) - v17(v43))) and (v24.Apocalypse:CooldownRemains() > v38)) or v24.VampiricStrikeAction:IsLearned())) then
-		if v14(v52) then
-			return LUAOBFUSACTOR_DECRYPT_STR_0("\217\113\167\13\129\241\109\162\6\139\202\123\160\67\150\207\112\141\5\140\221\118\187\13\130\142\47\224", "\229\174\30\210\99");
+	if (v27.ArcanePulse:IsCastable() and v7:IsInRange(3 + 5) and RacialsSetting and ((v50 >= (5 - 3)) or ((v6:Rune() <= (1 - 0)) and (v6:RunicPowerDeficit() >= (1159 - (35 + 1064)))))) then
+		if v17(v27.ArcanePulse) then
+			return LUAOBFUSACTOR_DECRYPT_STR_0("\223\181\198\220\125\244\98\30\203\171\214\216\51\227\92\13\215\166\201\206\51\160\15", "\110\190\199\165\189\19\145\61");
 		end
 	end
-	if (v55:IsReady() and v7:IsInMeleeRange(v56) and (v54 < ((5 - 2) - v17(v43)))) then
-		if v14(v55) then
-			return LUAOBFUSACTOR_DECRYPT_STR_0("\29\232\149\69\232\47\48\21\234\185\66\249\47\48\16\232\198\66\236\51\6\29\228\149\89\228\51\62\91\188\210", "\89\123\141\230\49\141\93");
+	if (v27.Fireblood:IsCastable() and v7:IsInRange(4 + 1) and RacialsSetting and ((((v27.Fireblood:BaseDuration() + (6 - 3)) >= v38.GargRemains) and v38.GargActive) or ((not v27.SummonGargoyle:IsAvailable() or (v27.SummonGargoyle:CooldownRemains() > (1 + 59))) and ((v38.ArmyGhoulActive and (v38.ArmyGhoulRemains <= (v27.Fireblood:BaseDuration() + (1239 - (298 + 938))))) or (v38.ApocGhoulActive and (v38.ApocGhoulRemains <= (v27.Fireblood:BaseDuration() + (1262 - (233 + 1026))))) or ((v50 >= (1668 - (636 + 1030))) and v6:DnDTicking()))) or (v53 <= (v27.Fireblood:BaseDuration() + 2 + 1)))) then
+		if v17(v27.Fireblood) then
+			return LUAOBFUSACTOR_DECRYPT_STR_0("\220\226\101\237\137\203\213\228\115\168\153\198\217\226\118\228\152\135\139\191", "\167\186\139\23\136\235");
 		end
 	end
-end
-local function v135()
-	if (v53:IsReady() and v26[903 - (503 + 396)] and ((v58 >= (182 - (92 + 89))) or v7:IsInRange(15 - 7)) and (v35.Commons.DnDMoving or not v6:IsMoving()) and v6:BuffDown(v24.DeathAndDecayBuff) and v24.UnholyGround:IsAvailable() and (v24.DarkTransformation:CooldownRemains() < (3 + 2))) then
-		if v13.CastTarget(v24.DeathAndDecay, v13.TName().PLAYER) then
-			return LUAOBFUSACTOR_DECRYPT_STR_0("\242\127\239\51\20\68\247\49\229\13\30\117\224\101\182\93", "\42\147\17\150\108\112");
-		end
-	end
-	if (v24.DeathCoil:IsReady() and v7:IsSpellInRange(v24.DeathCoil) and ((v6:BuffUp(v24.SuddenDoomBuff) and v6:BuffUp(v24.GiftoftheSanlaynBuff) and (v24.DoomedBidding:IsAvailable() or v24.RottenTouch:IsAvailable())) or ((v6:Rune() < (2 + 0)) and v6:BuffDown(v24.RunicCorruptionBuff)))) then
-		if v14(v24.DeathCoil) then
-			return LUAOBFUSACTOR_DECRYPT_STR_0("\11\163\44\107\239\215\12\169\36\115\167\251\14\168\18\108\243\168\93", "\136\111\198\77\31\135");
-		end
-	end
-	if (v51:IsReady() and v7:IsSpellInRange(v24.DeathCoil) and ((v6:BuffUp(v24.GiftoftheSanlaynBuff) and v24.VampiricStrikeAction:IsLearned()) or (v24.GiftoftheSanlayn:IsAvailable() and v10:BuffUp(v24.DarkTransformation) and (v10:BuffRemains(v24.DarkTransformation) < v6:GCD())))) then
-		if v14(v52) then
-			return LUAOBFUSACTOR_DECRYPT_STR_0("\21\6\178\88\185\219\4\185\7\7\163\83\175\164\4\168\12\54\180\66\253\176", "\201\98\105\199\54\221\132\119");
-		end
-	end
-	if (v24.SoulReaper:IsReady() and v7:IsInMeleeRange(19 - 14) and ((v7:HealthPercentage() <= (5 + 30)) or (v7:TimeToX(79 - 44) <= (5 + 0))) and (v7:TimeToDie() > (3 + 2)) and v6:BuffDown(v24.GiftoftheSanlaynBuff)) then
-		if v14(v24.SoulReaper) then
-			return LUAOBFUSACTOR_DECRYPT_STR_0("\170\3\150\45\61\39\169\184\28\134\51\66\38\173\183\51\144\53\66\99", "\204\217\108\227\65\98\85");
-		end
-	end
-	if (v51:IsReady() and v24.VampiricStrikeAction:IsLearned() and (v54 >= (2 - 1))) then
-		if v14(v51, nil, nil, not v7:IsSpellInRange(v51)) then
-			return LUAOBFUSACTOR_DECRYPT_STR_0("\73\204\224\235\40\255\77\211\240\235\40\197\76\131\230\228\34\255\77\215\181\178", "\160\62\163\149\133\76");
-		end
-	end
-	if (v55:IsReady() and v7:IsInMeleeRange(v56) and (((v54 < (1 + 3)) and (v24.Apocalypse:CooldownRemains() < v38)) or (((v24.GiftoftheSanlayn:IsAvailable() and v6:BuffDown(v24.GiftoftheSanlaynBuff)) or not v24.GiftoftheSanlayn:IsAvailable()) and (v6:BuffUp(v24.FesteringScytheBuff) or (v54 <= ((1 - 0) - v17(v43))))))) then
-		if v14(v55) then
-			return LUAOBFUSACTOR_DECRYPT_STR_0("\208\165\30\59\198\196\169\3\40\252\197\180\31\38\200\211\224\30\46\205\233\179\25\111\155", "\163\182\192\109\79");
-		end
-	end
-	if (v51:IsReady() and (not v24.Apocalypse:IsAvailable() or (v24.Apocalypse:CooldownRemains() > v38)) and ((v54 >= ((1247 - (485 + 759)) - v17(v43))) or v24.VampiricStrikeAction:IsLearned())) then
-		if v14(v52) then
-			return LUAOBFUSACTOR_DECRYPT_STR_0("\35\41\21\206\241\11\53\16\197\251\48\35\18\128\230\53\40\63\211\225\116\119\80", "\149\84\70\96\160");
-		end
-	end
-	if (v24.DeathCoil:IsReady() and v7:IsSpellInRange(v24.DeathCoil) and ((not v40 and (v7:DebuffRemains(v24.DeathRotDebuff) < v6:GCD())) or (v6:BuffUp(v24.SuddenDoomBuff) and (v54 >= (2 - 1))) or (v6:Rune() < (1191 - (442 + 747))))) then
-		if v14(v24.DeathCoil) then
-			return LUAOBFUSACTOR_DECRYPT_STR_0("\60\3\12\249\48\57\14\226\49\10\77\254\57\8\50\254\44\70\92\191", "\141\88\102\109");
-		end
-	end
-	if (v51:IsReady() and v7:IsInRange(WoundSpenderRange) and (v54 >= (1136 - (832 + 303))) and (v54 > (950 - (88 + 858)))) then
-		if v14(v52) then
-			return LUAOBFUSACTOR_DECRYPT_STR_0("\164\92\223\126\30\2\70\209\182\93\206\117\8\125\70\192\189\108\217\100\90\108\1", "\161\211\51\170\16\122\93\53");
-		end
-	end
-	if (v24.DeathCoil:IsReady() and v7:IsSpellInRange(v24.DeathCoil) and not v40) then
-		if v14(v24.DeathCoil) then
-			return LUAOBFUSACTOR_DECRYPT_STR_0("\255\171\179\60\243\145\177\39\242\162\242\59\250\160\141\59\239\238\227\126", "\72\155\206\210");
+	if (v27.BagofTricks:IsCastable() and v7:IsInRange(5 + 0) and RacialsSetting and (v50 <= (1 + 0)) and (v6:BuffUp(v27.UnholyStrengthBuff) or (v53 < (1 + 4)))) then
+		if v17(v27.BagofTricks) then
+			return LUAOBFUSACTOR_DECRYPT_STR_0("\24\180\143\50\21\179\183\25\8\188\139\6\9\245\154\12\25\188\137\1\9\245\217\91", "\109\122\213\232");
 		end
 	end
 end
-local function v136()
-	if (v35.Commons.Enabled.Items and v25.Fyralath:IsReady() and v7:DebuffUp(v24.MarkofFyralathDebuff) and ((v59 < (2 + 3)) or (v59 > (18 + 3)) or (v63 < (1 + 3))) and (v43 or v47 or (not v24.RaiseAbomination:IsAvailable() and not v24.ArmyoftheDead:IsAvailable()) or (v3.CombatTime() > (804 - (766 + 23))))) then
-		v13.CastMacro(4 - 3, nil, nil, v25.Fyralath);
-		return LUAOBFUSACTOR_DECRYPT_STR_0("\64\99\70\15\63\71\110\92\49\39\78\127\107\10\33\67\123\89\28\54\72\126\81\28\115\85\123\90\49\39\84\115\90\5\54\82\105\20\92", "\83\38\26\52\110");
-	end
-end
-if v35.Commons.Enabled.Trinkets then
-	if (v25.TreacherousTransmitter:IsEquippedAndReady() and (((v66 == v25.TreacherousTransmitter:ID()) and v26[9 - 2]) or ((v67 == v25.TreacherousTransmitter:ID()) and v26[20 - 12].Trinket2Setting)) and v7:IsInMeleeRange(16 - 11) and (v37 or v36) and (v24.DarkTransformation:CooldownRemains() < (1076 - (1036 + 37)))) then
-		if v14(v25.TreacherousTransmitter, nil) then
-			return LUAOBFUSACTOR_DECRYPT_STR_0("\76\5\34\71\91\31\34\84\87\2\52\121\76\5\38\72\75\26\46\82\76\18\53\6\75\22\41\121\76\5\46\72\83\18\51\85\24\69", "\38\56\119\71");
+local function v108()
+	if (v27.AntiMagicShell:IsCastable() and v37.Commons.UseAMSAMZOffensively and (v37.Unholy.AMSAbsorbPercent > (221 - (55 + 166))) and (v6:RunicPower() < (8 + 32))) then
+		if v17(v27.AntiMagicShell) then
+			return LUAOBFUSACTOR_DECRYPT_STR_0("\239\249\182\57\227\246\165\57\237\200\177\56\235\251\174\112\253\246\172\15\232\254\177\56\231\249\165\112\188", "\80\142\151\194");
 		end
 	end
-	if (v29:IsReady() and v26[5 + 2] and not v76 and ((v78 and v10:BuffUp(v24.DarkTransformation) and (v10:BuffRemains(v24.DarkTransformation) < (v80 * (0.73 - 0))) and ((v84 == (1 + 0)) or v30:CooldownDown() or not v30:HasCooldown())) or (v80 >= v63))) then
-		if v14(v29, true) then
-			return LUAOBFUSACTOR_DECRYPT_STR_0("\212\234\86\211\55\95\240\175\77\197\32\105\250\251\93\219\101\80\252\253\24", "\54\147\143\56\182\69") .. v29:Name() .. LUAOBFUSACTOR_DECRYPT_STR_0("\150\146\254\71\224\194\147\246\71\212\211\149\236\9\139", "\191\182\225\159\41");
+	if (v39:IsReady() and v7:IsInRange(WoundSpenderRange) and (v6:BuffUp(v27.InflictionofSorrowBuff))) then
+		if v17(v40) then
+			return LUAOBFUSACTOR_DECRYPT_STR_0("\20\201\98\66\7\249\100\92\6\200\115\73\17\134\100\77\13\249\113\69\16\206\126\66\4\134\36", "\44\99\166\23");
 		end
 	end
-	if (v30:IsReady() and v26[1488 - (641 + 839)] and not v77 and ((v79 and v10:BuffUp(v24.DarkTransformation) and (v10:BuffRemains(v24.DarkTransformation) < (v81 * (913.73 - (910 + 3)))) and ((v84 == (4 - 2)) or v29:CooldownDown() or not v29:HasCooldown())) or (v81 >= v63))) then
-		if v14(v30, true) then
-			return LUAOBFUSACTOR_DECRYPT_STR_0("\12\23\38\80\153\142\193\107\7\59\80\180\142\214\46\31\104\83\132\149\130", "\162\75\114\72\53\235\231") .. v30:Name() .. LUAOBFUSACTOR_DECRYPT_STR_0("\204\47\69\236\108\22\158\53\74\233\86\22\159\124\18", "\98\236\92\36\130\51");
+	if (v41:IsReady() and DnDSetting and v6:BuffDown(v27.DeathAndDecayBuff) and not v27.VampiricStrikeAction:IsLearned()) then
+		if v16.CastTarget(v27.DeathAndDecay, v16.TName().PLAYER) then
+			return LUAOBFUSACTOR_DECRYPT_STR_0("\125\249\48\9\55\170\120\183\58\55\61\155\122\254\58\62\58\170\123\183\125", "\196\28\151\73\86\83");
 		end
 	end
-	if (v29:IsReady() and v26[1691 - (1466 + 218)] and not v76 and ((not v78 and (((v72 > (0 + 0)) and v6:BuffDown(v24.GiftoftheSanlaynBuff)) or (v72 == (1148 - (556 + 592)))) and ((v85 == (1 + 0)) or v30:CooldownDown() or not v30:HasCooldown() or (not v24.SummonGargoyle:IsAvailable() and not v24.ArmyoftheDead:IsAvailable() and not v24.RaiseAbomination:IsAvailable()) or (not v24.SummonGargoyle:IsAvailable() and v24.ArmyoftheDead:IsAvailable() and ((not v24.RaiseAbomination:IsAvailable() and (v24.ArmyoftheDead:CooldownRemains() > (828 - (329 + 479)))) or (v24.RaiseAbomination:IsAvailable() and (v24.RaiseAbomination:CooldownRemains() > (874 - (174 + 680)))))) or (not v24.SummonGargoyle:IsAvailable() and not v24.ArmyoftheDead:IsAvailable() and not v24.RaiseAbomination:IsAvailable() and (v24.DarkTransformation:CooldownRemains() > (68 - 48))) or (v24.SummonGargoyle:IsAvailable() and (v24.SummonGargoyle:CooldownRemains() > (41 - 21)) and not v49))) or (v63 < (11 + 4)))) then
-		if v14(v29, true) then
-			return LUAOBFUSACTOR_DECRYPT_STR_0("\131\28\2\191\87\161\182\112\177\10\9\133\76\188\176\61\228\31\3\168\5", "\80\196\121\108\218\37\200\213") .. v29:Name() .. LUAOBFUSACTOR_DECRYPT_STR_0("\64\96\3\113\116\26\152\9\125\9\122\95\29\202\88", "\234\96\19\98\31\43\110");
+	if (v27.DeathCoil:IsReady() and v7:IsSpellInRange(v27.DeathCoil) and v6:BuffUp(v27.SuddenDoomBuff) and v27.DoomedBidding:IsAvailable()) then
+		if v17(v27.DeathCoil) then
+			return LUAOBFUSACTOR_DECRYPT_STR_0("\247\6\40\4\138\103\27\121\250\15\105\3\131\86\39\112\250\16\33\25\140\95\88\32", "\22\147\99\73\112\226\56\120");
 		end
 	end
-	if (v30:IsReady() and v26[747 - (396 + 343)] and not v77 and ((not v79 and (((v73 > (0 + 0)) and v6:BuffDown(v24.GiftoftheSanlaynBuff)) or (v73 == (1477 - (29 + 1448)))) and ((v85 == (1391 - (135 + 1254))) or v29:CooldownDown() or not v29:HasCooldown() or (not v24.SummonGargoyle:IsAvailable() and not v24.ArmyoftheDead:IsAvailable() and not v24.RaiseAbomination:IsAvailable()) or (not v24.SummonGargoyle:IsAvailable() and v24.ArmyoftheDead:IsAvailable() and ((not v24.RaiseAbomination:IsAvailable() and (v24.ArmyoftheDead:CooldownRemains() > (75 - 55))) or (v24.RaiseAbomination:IsAvailable() and (v24.RaiseAbomination:CooldownRemains() > (93 - 73))))) or (not SummonGargoyle:IsAvailable() and not v24.ArmyoftheDead:IsAvailable() and not v24.RaiseAbomination:IsAvailable() and (v24.DarkTransformation:CooldownRemains() > (14 + 6))) or (v24.SummonGargoyle:IsAvailable() and (v24.SummonGargoyle:CooldownRemains() > (1547 - (389 + 1138))) and not v49))) or (v63 < (589 - (102 + 472))))) then
-		if v14(v30, true) then
-			return LUAOBFUSACTOR_DECRYPT_STR_0("\33\26\92\194\190\123\136\70\10\65\194\147\123\159\3\18\18\193\163\96\203", "\235\102\127\50\167\204\18") .. v30:Name() .. LUAOBFUSACTOR_DECRYPT_STR_0("\16\178\244\45\123\58\66\168\251\40\65\58\67\225\164\115", "\78\48\193\149\67\36");
+	if (v27.SoulReaper:IsReady() and v7:IsInMeleeRange(1 + 4) and ((v7:HealthPercentage() <= (133 - 98)) or (v7:TimeToX(332 - (36 + 261)) <= (8 - 3))) and (v7:TimeToDie() > (1373 - (34 + 1334)))) then
+		if v17(v27.SoulReaper) then
+			return LUAOBFUSACTOR_DECRYPT_STR_0("\171\122\247\249\178\170\112\227\229\136\170\53\241\244\131\135\115\235\230\133\177\123\229\181\213", "\237\216\21\130\149");
 		end
 	end
-	if (v35.Commons.Enabled.Items and WeaponSetting) then
-		local v226, v227, v228 = v6:GetUseableItems(v27, nil, true);
-		if (v226 and v7:IsInMeleeRange(5 + 0) and (not v78 or v29:CooldownDown()) and (not v79 or v30:CooldownDown())) then
-			v13.CastMacro(1 + 0, nil, nil);
-			return v226:Name() .. LUAOBFUSACTOR_DECRYPT_STR_0("\112\13\129\22\126\36\12\137\22\74\53\10\147\88\16\98", "\33\80\126\224\120");
+	if (v27.DeathCoil:IsReady() and v7:IsSpellInRange(v27.DeathCoil) and not v27.VampiricStrikeAction:IsLearned()) then
+		if v17(v27.DeathCoil) then
+			return LUAOBFUSACTOR_DECRYPT_STR_0("\134\75\94\75\184\246\93\141\71\83\31\163\200\80\189\72\86\76\184\192\80\133\14\14\15", "\62\226\46\63\63\208\169");
 		end
 	end
-end
-local function v137()
-	if (v24.SoulReaper:IsReady() and v7:IsInMeleeRange(5 + 0) and ((v7:HealthPercentage() <= (1580 - (320 + 1225))) or (v7:TimeToX(62 - 27) <= (4 + 1))) and (v7:TimeToDie() > (1469 - (157 + 1307)))) then
-		if v14(v24.SoulReaper) then
-			return LUAOBFUSACTOR_DECRYPT_STR_0("\255\167\22\200\99\254\173\2\212\89\254\232\16\208\28\190", "\60\140\200\99\164");
+	if (v39:IsReady() and v7:IsInRange(WoundSpenderRange) and (v42 >= (1 + 0)) and (((v42 >= ((3 + 0) - v20(v38.AbomActive))) and (v27.Apocalypse:CooldownRemains() > v38.ApocTiming)) or v27.VampiricStrikeAction:IsLearned())) then
+		if v17(v40) then
+			return LUAOBFUSACTOR_DECRYPT_STR_0("\242\22\64\141\27\50\60\78\224\23\81\134\13\77\60\95\235\38\83\138\12\5\38\80\226\89\4\209", "\62\133\121\53\227\127\109\79");
 		end
 	end
-	if (v51:IsReady() and v7:IsInMeleeRange(v56) and (v7:DebuffUp(v24.TrollbaneSlowDebuff))) then
-		if v14(v51) then
-			return LUAOBFUSACTOR_DECRYPT_STR_0("\144\251\17\40\166\184\231\20\35\172\131\241\22\102\177\147\180\80", "\194\231\148\100\70");
-		end
-	end
-	if (v53:IsReady() and v26[1863 - (821 + 1038)] and ((v58 >= (2 - 1)) or v7:IsInRange(1 + 7)) and (v35.Commons.DnDMoving or not v6:IsMoving()) and v24.UnholyGround:IsAvailable() and v6:BuffDown(v24.DeathAndDecayBuff) and (v45 or v43 or v49)) then
-		if v13.CastTarget(v24.DeathAndDecay, v13.TName().PLAYER) then
-			return LUAOBFUSACTOR_DECRYPT_STR_0("\71\66\216\156\242\198\66\12\210\183\182\158", "\168\38\44\161\195\150");
-		end
-	end
-	if (v24.DeathCoil:IsReady() and v7:IsSpellInRange(v24.DeathCoil) and ((not v40 and v41) or (v63 < (17 - 7)))) then
-		if v14(v24.DeathCoil) then
-			return LUAOBFUSACTOR_DECRYPT_STR_0("\132\249\131\98\56\215\181\25\137\240\194\101\36\168\238", "\118\224\156\226\22\80\136\214");
-		end
-	end
-	if (v55:IsReady() and v7:IsInMeleeRange(v56) and (v54 < (2 + 2)) and (not v39 or v6:BuffUp(v24.FesteringScytheBuff))) then
-		if v14(v55) then
-			return LUAOBFUSACTOR_DECRYPT_STR_0("\68\235\74\148\71\252\80\142\69\209\74\148\80\231\82\133\2\253\77\192\19\190", "\224\34\142\57");
-		end
-	end
-	if (v51:IsReady() and v7:IsInRange(WoundSpenderRange) and (v54 >= (2 - 1)) and v39) then
-		if v14(v52) then
-			return LUAOBFUSACTOR_DECRYPT_STR_0("\201\168\208\211\119\206\78\30\219\169\193\216\97\177\78\26\158\246\151", "\110\190\199\165\189\19\145\61");
-		end
-	end
-	if (v24.DeathCoil:IsReady() and v7:IsSpellInRange(v24.DeathCoil) and not v40) then
-		if v14(v24.DeathCoil) then
-			return LUAOBFUSACTOR_DECRYPT_STR_0("\222\238\118\252\131\248\217\228\126\228\203\212\206\171\38\188", "\167\186\139\23\136\235");
-		end
-	end
-	if (v51:IsReady() and v7:IsInRange(WoundSpenderRange) and (v54 >= (1027 - (834 + 192))) and not v39 and (v54 >= (1 + 3))) then
-		if v14(v52) then
-			return LUAOBFUSACTOR_DECRYPT_STR_0("\13\186\157\3\30\138\155\29\31\187\140\8\8\245\155\25\90\228\222", "\109\122\213\232");
+	if (v43:IsReady() and v7:IsInMeleeRange(v44) and (v42 < ((1286 - (1035 + 248)) - v20(v38.AbomActive)))) then
+		if v17(v27.FesteringStrike) then
+			return LUAOBFUSACTOR_DECRYPT_STR_0("\22\17\33\225\211\188\171\30\19\13\230\194\188\171\27\17\114\230\215\160\157\22\29\33\253\223\160\165\80\69\102", "\194\112\116\82\149\182\206");
 		end
 	end
 end
-local function v138()
-	if (v35.Commons.Enabled.Items and WeaponSetting and v25.Fyralath:IsReady() and v7:DebuffUp(v24.MarkofFyralathDebuff) and ((v59 < (2 + 3)) or (v59 > (1 + 20)) or (v63 < (5 - 1))) and (v43 or v47 or (not v24.RaiseAbomination:IsAvailable() and not v24.ArmyoftheDead:IsAvailable()) or (v3.CombatTime() > (319 - (300 + 4))))) then
-		v13.CastMacro(1 + 0, nil, nil, v25.Fyralath);
-		return LUAOBFUSACTOR_DECRYPT_STR_0("\249\242\163\32\225\249\226\51\239\228\182", "\80\142\151\194");
+local function v109()
+	if (v41:IsReady() and DnDSetting and v6:BuffDown(v27.DeathAndDecayBuff) and v27.UnholyGround:IsAvailable() and (v27.DarkTransformation:CooldownRemains() < (26 - (20 + 1)))) then
+		if v16.CastTarget(v27.DeathAndDecay, v16.TName().PLAYER) then
+			return LUAOBFUSACTOR_DECRYPT_STR_0("\56\166\85\39\196\236\10\121\187\77\22\255\241\26\121\249", "\110\89\200\44\120\160\130");
+		end
 	end
-	if v35.Commons.Enabled.Trinkets then
-		if (v25.TreacherousTransmitter:IsEquippedAndReady() and (((v66 == v25.TreacherousTransmitter:ID()) and v26[18 - 11]) or ((v67 == v25.TreacherousTransmitter:ID()) and v26[370 - (112 + 250)])) and v7:IsInMeleeRange(2 + 3) and (v37 or v36) and (v24.DarkTransformation:CooldownRemains() < (7 - 4))) then
-			if v14(v25.TreacherousTransmitter, nil) then
-				return LUAOBFUSACTOR_DECRYPT_STR_0("\23\212\114\77\0\206\114\94\12\211\100\115\23\212\118\66\16\203\126\88\23\195\101\12\16\199\121\115\23\212\126\66\8\195\99\95\67\148", "\44\99\166\23");
+	if (v39:IsReady() and v7:IsInRange(WoundSpenderRange) and (v6:BuffUp(v27.InflictionofSorrowBuff))) then
+		if v17(v40) then
+			return LUAOBFUSACTOR_DECRYPT_STR_0("\188\204\94\72\71\117\40\93\174\205\79\67\81\10\40\76\165\252\88\82\3\24", "\45\203\163\43\38\35\42\91");
+		end
+	end
+	if (v27.DeathCoil:IsReady() and v7:IsSpellInRange(v27.DeathCoil) and ((v6:BuffUp(v27.SuddenDoomBuff) and v6:BuffUp(v27.GiftoftheSanlaynBuff) and (v27.DoomedBidding:IsAvailable() or v27.RottenTouch:IsAvailable())) or ((v6:Rune() < (2 + 1)) and v6:BuffDown(v27.RunicCorruptionBuff)))) then
+		if v17(v27.DeathCoil) then
+			return LUAOBFUSACTOR_DECRYPT_STR_0("\214\128\221\55\143\150\87\221\140\208\99\148\168\90\237\150\200\99\212", "\52\178\229\188\67\231\201");
+		end
+	end
+	if (v39:IsReady() and v7:IsInRange(WoundSpenderRange) and ((v6:BuffUp(v27.GiftoftheSanlaynBuff) and v27.VampiricStrikeAction:IsLearned()) or (v27.GiftoftheSanlayn:IsAvailable() and v13:BuffUp(v27.DarkTransformation) and (v13:BuffRemains(v27.DarkTransformation) < v6:GCD())))) then
+		if v17(v40) then
+			return LUAOBFUSACTOR_DECRYPT_STR_0("\54\78\69\10\243\99\48\49\68\94\0\242\78\99\50\64\94\59\228\72\99\117", "\67\65\33\48\100\151\60");
+		end
+	end
+	if (v27.SoulReaper:IsReady() and v7:IsInMeleeRange(324 - (134 + 185)) and ((v7:HealthPercentage() <= (1168 - (549 + 584))) or (v7:TimeToX(720 - (314 + 371)) <= (17 - 12))) and (v7:TimeToDie() > (973 - (478 + 490))) and v6:BuffDown(v27.GiftoftheSanlaynBuff)) then
+		if v17(v27.SoulReaper) then
+			return LUAOBFUSACTOR_DECRYPT_STR_0("\204\232\187\212\204\205\226\175\200\246\205\167\189\217\253\224\244\186\152\165", "\147\191\135\206\184");
+		end
+	end
+	if (v39:IsReady() and v27.VampiricStrikeAction:IsLearned() and (v42 >= (1 + 0))) then
+		if v17(v40) then
+			return LUAOBFUSACTOR_DECRYPT_STR_0("\147\39\179\207\220\108\161\148\45\168\197\221\65\242\151\41\168\254\203\71\242\211", "\210\228\72\198\161\184\51");
+		end
+	end
+	if (v43:IsReady() and v7:IsInMeleeRange(v44) and (((v42 == (1172 - (786 + 386))) and (v27.Apocalypse:CooldownRemains() < v38.ApocTiming)) or (((v27.GiftoftheSanlayn:IsAvailable() and v6:BuffDown(v27.GiftoftheSanlaynBuff)) or not v27.GiftoftheSanlayn:IsAvailable()) and (v6:BuffUp(v27.FesteringScytheBuff) or (v42 <= (3 - 2)))))) then
+		if v17(v27.FesteringStrike) then
+			return LUAOBFUSACTOR_DECRYPT_STR_0("\48\76\224\4\118\220\63\71\244\47\96\218\36\64\248\21\51\221\55\71\204\3\103\142\110", "\174\86\41\147\112\19");
+		end
+	end
+	if (v39:IsReady() and v7:IsInRange(WoundSpenderRange) and (v42 >= (1380 - (1055 + 324))) and (not v27.Apocalypse:IsAvailable() or (v27.Apocalypse:CooldownRemains() > v38.ApocTiming) or not ApocalypseSetting) and ((v42 >= ((1343 - (1093 + 247)) - v20(v38.AbomActive))) or v27.VampiricStrikeAction:IsLearned())) then
+		if v17(v40) then
+			return LUAOBFUSACTOR_DECRYPT_STR_0("\76\15\152\5\33\48\2\187\94\14\137\14\55\79\2\170\85\63\158\31\101\94\65", "\203\59\96\237\107\69\111\113");
+		end
+	end
+	if (v27.DeathCoil:IsReady() and v7:IsSpellInRange(v27.DeathCoil) and ((not v38.PoolingRunicPower and (v7:DebuffRemains(v27.DeathRotDebuff) < v6:GCD())) or (v6:BuffUp(v27.SuddenDoomBuff) and (v42 >= (1 + 0))) or (v6:Rune() < (1 + 1)))) then
+		if v17(v27.DeathCoil) then
+			return LUAOBFUSACTOR_DECRYPT_STR_0("\32\19\173\245\57\207\212\43\31\160\161\34\241\217\27\5\184\161\96\162", "\183\68\118\204\129\81\144");
+		end
+	end
+	if (v39:IsReady() and v7:IsInRange(WoundSpenderRange) and (v42 >= (3 - 2)) and (v42 > (13 - 9))) then
+		if v17(v40) then
+			return LUAOBFUSACTOR_DECRYPT_STR_0("\25\162\101\234\15\189\29\189\117\234\15\135\28\237\99\229\5\189\29\185\48\181\95", "\226\110\205\16\132\107");
+		end
+	end
+	if (v27.DeathCoil:IsReady() and v7:IsSpellInRange(v27.DeathCoil) and not v38.PoolingRunicPower) then
+		if v17(v27.DeathCoil) then
+			return LUAOBFUSACTOR_DECRYPT_STR_0("\239\198\225\205\73\212\192\239\208\77\171\208\225\215\126\248\215\160\136\23", "\33\139\163\128\185");
+		end
+	end
+end
+local function v110()
+	if (v37.Commons.Enabled.Items and v28.Fyralath:IsReady() and v7:DebuffUp(v27.MarkofFyralathDebuff) and ((v50 < (14 - 9)) or (v50 > (52 - 31)) or (v53 < (2 + 2))) and (v38.AbomActive or v38.ArmyGhoulActive or (not v27.RaiseAbomination:IsAvailable() and not v27.ArmyoftheDead:IsAvailable()) or (v3.CombatTime() > (57 - 42)))) then
+		v16.CastMacro(3 - 2, nil, nil, v28.Fyralath);
+		return LUAOBFUSACTOR_DECRYPT_STR_0("\81\65\22\223\91\89\16\214\104\76\12\219\104\92\22\219\86\85\22\219\89\92\1\204\23\75\5\208\104\76\22\215\89\83\1\202\68\24\86", "\190\55\56\100");
+	end
+	if v37.Commons.Enabled.Trinkets then
+		if (v28.TreacherousTransmitter:IsEquippedAndReady() and (((v38.Trinket1ID == v28.TreacherousTransmitter:ID()) and Trinket1Setting) or ((v38.Trinket2ID == v28.TreacherousTransmitter:ID()) and Trinket2Setting)) and v7:IsInMeleeRange(4 + 1) and (v38.AddsRemain or v38.STPlanning) and (v27.DarkTransformation:CooldownRemains() < (25 - 15))) then
+			if v17(v28.TreacherousTransmitter, nil) then
+				return LUAOBFUSACTOR_DECRYPT_STR_0("\66\189\57\31\16\235\246\68\160\41\13\44\247\225\87\161\47\19\26\247\231\83\189\124\13\18\237\204\66\189\53\16\24\230\231\69\239\110", "\147\54\207\92\126\115\131");
 			end
 		end
-		if (v29:IsReady() and v26[5 + 2] and ((v78 and ((not v24.SummonGargoyle:IsAvailable() and (((not v24.ArmyoftheDead:IsAvailable() or (v24.ArmyoftheDead:IsAvailable() and (v24.ArmyoftheDead:CooldownRemains() > (v74 * (0.51 + 0)))) or v35.Commons.DisableAotD or (v24.RaiseAbomination:IsAvailable() and (v24.RaiseAbomination:CooldownRemains() > (v74 * (0.51 + 0))))) and ((((10 + 10) > v80) and v45 and (v46 <= (v80 * (1.2 + 0)))) or (((1434 - (1001 + 413)) <= v80) and (v24.Apocalypse:CooldownRemains() < v6:GCD()) and v10:BuffUp(v24.DarkTransformation)) or ((not v24.Apocalypse:IsAvailable() or (v59 >= (4 - 2))) and v10:BuffUp(v24.DarkTransformation)))) or (v47 and (v48 < (v80 * (883.2 - (244 + 638))))) or (v43 and (v44 < (v80 * (694.2 - (627 + 66))))))) or (v24.SummonGargoyle:IsAvailable() and v49 and (v50 < (v80 * (2.2 - 1)))) or (v24.SummonGargoyle:CooldownRemains() > (682 - (512 + 90)))) and ((v84 == (1907 - (1665 + 241))) or Trinekt2:CooldownDown() or not v30:HasCooldown())) or (v80 >= v63))) then
-			if v14(v29, true) then
-				return LUAOBFUSACTOR_DECRYPT_STR_0("\91\242\39\51\33\173\127\183\60\37\54\155\117\227\44\59\115\162\115\229\105", "\196\28\151\73\86\83") .. v29:Name() .. LUAOBFUSACTOR_DECRYPT_STR_0("\179\23\59\25\140\83\29\98\224\67\125", "\22\147\99\73\112\226\56\120");
+		if (v31:IsReady() and Trinket1Setting and not v38.Trinket1Ex and not v6:IsItemBlacklisted(v31) and ((v38.Trinket1Buffs and v13:BuffUp(v27.DarkTransformation) and (v13:BuffRemains(v27.DarkTransformation) < (v38.Trinket1Duration * (688.73 - (364 + 324)))) and ((v38.TrinketPriority == (2 - 1)) or v32:CooldownDown() or not v32:HasCooldown())) or (v38.Trinket1Duration >= v53))) then
+			if v17(v31, true) then
+				return LUAOBFUSACTOR_DECRYPT_STR_0("\42\52\59\120\31\119\14\113\32\110\8\65\4\37\48\112\77\120\2\35\117", "\30\109\81\85\29\109") .. v31:Name() .. LUAOBFUSACTOR_DECRYPT_STR_0("\191\98\85\184\9\202\238\246\127\95\179\34\205\188\171", "\156\159\17\52\214\86\190");
 			end
 		end
-		if (v30:IsReady() and v26[725 - (373 + 344)] and ((v79 and ((not v24.SummonGargoyle:IsAvailable() and (((not v24.ArmyoftheDead:IsAvailable() or (v24.ArmyoftheDead:IsAvailable() and (v24.ArmyoftheDead:CooldownRemains() > (v75 * (0.51 + 0)))) or v35.Commons.DisableAotD or (v24.RaiseAbomination:IsAvailable() and (v24.RaiseAbomination:CooldownRemains() > (v75 * (0.51 + 0))))) and ((((52 - 32) > v81) and v45 and (v46 <= (v81 * (1.2 - 0)))) or (((1119 - (35 + 1064)) <= v81) and (v24.Apocalypse:CooldownRemains() < v6:GCD()) and v10:BuffUp(v24.DarkTransformation)) or ((not v24.Apocalypse:IsAvailable() or (v59 >= (2 + 0))) and v10:BuffUp(v24.DarkTransformation)))) or (v47 and (v48 < (v81 * (2.2 - 1)))) or (v43 and (v44 < (v81 * (1.2 + 0)))))) or (v24.SummonGargoyle:IsAvailable() and v49 and (v50 < (v81 * (1237.2 - (298 + 938))))) or (v24.SummonGargoyle:CooldownRemains() > (1339 - (233 + 1026)))) and ((v84 == (1668 - (636 + 1030))) or v29:CooldownDown() or not v29:HasCooldown())) or (v81 >= v63))) then
-			if v14(v30, true) then
-				return LUAOBFUSACTOR_DECRYPT_STR_0("\159\112\236\240\159\177\118\162\224\158\189\74\235\225\136\181\53\228\250\159\248", "\237\216\21\130\149") .. v30:Name() .. LUAOBFUSACTOR_DECRYPT_STR_0("\194\90\77\86\190\194\91\150\93\31\9", "\62\226\46\63\63\208\169");
+		if (v32:IsReady() and Trinket2Setting and not v38.Trinket2Ex and not v6:IsItemBlacklisted(v32) and ((v38.Trinket2Buffs and v13:BuffUp(v27.DarkTransformation) and (v13:BuffRemains(v27.DarkTransformation) < (v38.Trinket2Duration * (0.73 - 0))) and ((v38.TrinketPriority == (1 + 1)) or v31:CooldownDown() or not v31:HasCooldown())) or (v38.Trinket2Duration >= v53))) then
+			if v17(v32, true) then
+				return LUAOBFUSACTOR_DECRYPT_STR_0("\137\234\179\185\188\230\190\252\187\252\184\131\167\251\184\177\238\233\178\174\238", "\220\206\143\221") .. v32:Name() .. LUAOBFUSACTOR_DECRYPT_STR_0("\198\110\44\25\231\216\192\143\115\38\18\204\223\146\208", "\178\230\29\77\119\184\172");
 			end
 		end
-		if (v29:IsReady() and v26[4 + 3] and ((not v78 and ((v85 == (1 + 0)) or v30:CooldownDown() or not v30:HasCooldown() or (not v24.SummonGargoyle:IsAvailable() and not v24.ArmyoftheDead:IsAvailable() and not v24.RaiseAbomination:IsAvailable()) or (not v24.SummonGargoyle:IsAvailable() and v24.ArmyoftheDead:IsAvailable() and ((not v24.RaiseAbomination:IsAvailable() and (v24.ArmyoftheDead:CooldownRemains() > (6 + 14))) or (v24.RaiseAbomination:IsAvailable() and (v24.RaiseAbomination:CooldownRemains() > (2 + 18))))) or (not v24.SummonGargoyle:IsAvailable() and not v24.ArmyoftheDead:IsAvailable() and not v24.RaiseAbomination:IsAvailable() and (v24.DarkTransformation:CooldownRemains() > (241 - (55 + 166)))) or (v24.SummonGargoyle:IsAvailable() and (v24.SummonGargoyle:CooldownRemains() > (4 + 16)) and not v49))) or (v63 < (2 + 13)))) then
-			if v14(v29, true) then
-				return LUAOBFUSACTOR_DECRYPT_STR_0("\194\28\91\134\13\4\44\30\240\10\80\188\22\25\42\83\165\31\90\145\95", "\62\133\121\53\227\127\109\79") .. v29:Name() .. LUAOBFUSACTOR_DECRYPT_STR_0("\80\0\32\252\216\165\167\4\7\114\173", "\194\112\116\82\149\182\206");
+		if (v31:IsReady() and Trinket1Setting and not v38.Trinket1Ex and not v6:IsItemBlacklisted(v31) and ((not v38.Trinket1Buffs and (((v38.Trinket1CastTime > (0 - 0)) and v6:BuffDown(v27.GiftoftheSanlaynBuff)) or (v38.Trinket1CastTime == (0 - 0))) and ((v38.DamageTrinketPriority == (2 - 1)) or v32:CooldownDown() or not v32:HasCooldown() or (not v27.SummonGargoyle:IsAvailable() and not v27.ArmyoftheDead:IsAvailable() and not v27.RaiseAbomination:IsAvailable()) or (not v27.SummonGargoyle:IsAvailable() and v27.ArmyoftheDead:IsAvailable() and ((not v27.RaiseAbomination:IsAvailable() and (v27.ArmyoftheDead:CooldownRemains() > (1288 - (1249 + 19)))) or (v27.RaiseAbomination:IsAvailable() and (v27.RaiseAbomination:CooldownRemains() > (19 + 1))))) or (not v27.SummonGargoyle:IsAvailable() and not v27.ArmyoftheDead:IsAvailable() and not v27.RaiseAbomination:IsAvailable() and (v27.DarkTransformation:CooldownRemains() > (77 - 57))) or (v27.SummonGargoyle:IsAvailable() and (v27.SummonGargoyle:CooldownRemains() > (1106 - (686 + 400))) and not v38.GargActive))) or (v53 < (12 + 3)))) then
+			if v17(v31, true) then
+				return LUAOBFUSACTOR_DECRYPT_STR_0("\210\187\4\30\101\241\246\254\31\8\114\199\252\170\15\22\55\254\250\172\74", "\152\149\222\106\123\23") .. v31:Name() .. LUAOBFUSACTOR_DECRYPT_STR_0("\157\53\247\77\138\201\52\255\77\190\216\50\229\3\237", "\213\189\70\150\35");
 			end
 		end
-		if (v30:IsReady() and v26[30 - 22] and ((not v79 and ((v85 == (299 - (36 + 261))) or v29:CooldownDown() or not v29:HasCooldown() or (not v24.SummonGargoyle:IsAvailable() and not v24.ArmyoftheDead:IsAvailable() and not v24.RaiseAbomination:IsAvailable()) or (not v24.SummonGargoyle:IsAvailable() and v24.ArmyoftheDead:IsAvailable() and ((not v24.RaiseAbomination:IsAvailable() and (v24.ArmyoftheDead:CooldownRemains() > (34 - 14))) or (v24.RaiseAbomination:IsAvailable() and (v24.RaiseAbomination:CooldownRemains() > (1388 - (34 + 1334)))))) or (not v24.SummonGargoyle:IsAvailable() and not v24.ArmyoftheDead:IsAvailable() and not v24.RaiseAbomination:IsAvailable() and (v24.DarkTransformation:CooldownRemains() > (8 + 12))) or (v24.SummonGargoyle:IsAvailable() and (v24.SummonGargoyle:CooldownRemains() > (16 + 4)) and not v49))) or (v63 < (1298 - (1035 + 248))))) then
-			if v14(v30, true) then
-				return LUAOBFUSACTOR_DECRYPT_STR_0("\30\173\66\29\210\235\13\121\189\95\29\255\235\26\60\165\12\30\207\240\78", "\110\89\200\44\120\160\130") .. v30:Name() .. LUAOBFUSACTOR_DECRYPT_STR_0("\235\215\89\79\77\65\62\89\184\131\26\22", "\45\203\163\43\38\35\42\91");
+		if (v32:IsReady() and Trinket2Setting and not v38.Trinket2Ex and not v6:IsItemBlacklisted(v32) and ((not v38.Trinket2Buffs and (((v38.Trinket2CastTime > (229 - (73 + 156))) and v6:BuffDown(v27.GiftoftheSanlaynBuff)) or (v38.Trinket2CastTime == (0 + 0))) and ((v38.DamageTrinketPriority == (813 - (721 + 90))) or v31:CooldownDown() or not v31:HasCooldown() or (not v27.SummonGargoyle:IsAvailable() and not v27.ArmyoftheDead:IsAvailable() and not v27.RaiseAbomination:IsAvailable()) or (not v27.SummonGargoyle:IsAvailable() and v27.ArmyoftheDead:IsAvailable() and ((not v27.RaiseAbomination:IsAvailable() and (v27.ArmyoftheDead:CooldownRemains() > (1 + 19))) or (v27.RaiseAbomination:IsAvailable() and (v27.RaiseAbomination:CooldownRemains() > (64 - 44))))) or (not v27.SummonGargoyle:IsAvailable() and not v27.ArmyoftheDead:IsAvailable() and not v27.RaiseAbomination:IsAvailable() and (v27.DarkTransformation:CooldownRemains() > (490 - (224 + 246)))) or (v27.SummonGargoyle:IsAvailable() and (v27.SummonGargoyle:CooldownRemains() > (32 - 12)) and not v38.GargActive))) or (v53 < (27 - 12)))) then
+			if v17(v32, true) then
+				return LUAOBFUSACTOR_DECRYPT_STR_0("\104\80\122\13\93\92\119\72\90\70\113\55\70\65\113\5\15\83\123\26\15", "\104\47\53\20") .. v32:Name() .. LUAOBFUSACTOR_DECRYPT_STR_0("\227\95\128\18\131\27\177\69\143\23\185\27\176\12\208\76", "\111\195\44\225\124\220");
 			end
 		end
 	end
+	local v190 = v6:GetUseableItems(v29, 3 + 13, true);
+	if (v37.Commons.Enabled.Items and WeaponSetting and v190 and v7:IsInMeleeRange(1 + 4) and ((not v38.Trinket1Buffs and not v38.Trinket2Buffs) or ((v31:CooldownRemains() > (15 + 5)) and not v38.Trinket2Buffs) or ((v32:CooldownRemains() > (39 - 19)) and not v38.Trinket1Buffs) or ((v31:CooldownRemains() > (66 - 46)) and (v32:CooldownRemains() > (533 - (203 + 310))))) and v13:BuffUp(v27.DarkTransformation) and (v13:BuffRemains(v27.DarkTransformation) > (2003 - (1238 + 755))) and ((not v27.RaiseAbomination:IsAvailable() and not v27.ArmyoftheDead:IsAvailable()) or (not v27.RaiseAbomination:IsAvailable() and v27.ArmyoftheDead:IsAvailable() and v38.ArmyGhoulActive) or (v27.RaiseAbomination:IsAvailable() and v38.AbomActive) or v38.Trinket1Buffs or v38.Trinket2Buffs or (v53 < (2 + 13)))) then
+		v16.CastMacro(1535 - (709 + 825), nil, nil);
+		return v190:Name() .. LUAOBFUSACTOR_DECRYPT_STR_0("\152\113\5\114\187\164\214\6\81\33", "\203\184\38\96\19\203");
+	end
 end
-local function v139()
-	v36 = (v59 == (22 - (20 + 1))) or not v16();
-	v37 = (v59 >= (2 + 0)) and (v64 > (325 - (134 + 185)));
-	v38 = ((v24.Apocalypse:CooldownRemains() < (1138 - (549 + 584))) and (v54 < (686 - (314 + 371))) and (v24.UnholyAssault:CooldownRemains() > (17 - 12)) and (971 - (478 + 490))) or (0 + 0);
-	v39 = (((v24.Apocalypse:CooldownRemains() > v38) or not v24.Apocalypse:IsAvailable()) and (((v54 >= (1173 - (786 + 386))) and (v24.UnholyAssault:CooldownRemains() < (64 - 44)) and v24.UnholyAssault:IsAvailable() and v36) or (v7:DebuffUp(v24.RottenTouchDebuff) and (v54 >= (1380 - (1055 + 324)))) or (v54 >= ((1344 - (1093 + 247)) - v17(v43))))) or ((v63 < (5 + 0)) and (v54 >= (1 + 0)));
-	v40 = v24.VileContagion:IsAvailable() and (v24.VileContagion:CooldownRemains() < (19 - 14)) and (v6:RunicPower() < (101 - 71));
-	v41 = (not v24.RottenTouch:IsAvailable() or (v24.RottenTouch:IsAvailable() and v7:DebuffDown(v24.RottenTouchDebuff)) or (v6:RunicPowerDeficit() < (56 - 36))) and ((v24.ImprovedDeathCoil:IsAvailable() and ((v59 == (4 - 2)) or v24.CoilofDevastation:IsAvailable())) or (v6:Rune() < (2 + 1)) or v49 or v6:BuffUp(v24.SuddenDoomBuff) or (not v39 and (v54 >= (15 - 11))));
-	v42 = (10 - 7) + v17(v24.ImprovedDeathCoil:IsAvailable()) + v17(v24.FrenziedBloodthirst:IsAvailable() and (v6:BuffStack(v24.EssenceoftheBloodQueenBuff) > (4 + 1))) + v17(v24.HungeringThirst:IsAvailable() and v24.HarbingerofDoom:IsAvailable() and v6:BuffUp(v24.SuddenDoomBuff));
+local function v111()
+	if (v27.SoulReaper:IsReady() and v7:IsInMeleeRange(8 - 3) and ((v7:HealthPercentage() <= (50 - 15)) or (v7:TimeToX(899 - (196 + 668)) <= (19 - 14))) and (v7:TimeToDie() > (10 - 5))) then
+		if v17(v27.SoulReaper) then
+			return LUAOBFUSACTOR_DECRYPT_STR_0("\42\124\108\77\241\43\118\120\81\203\43\51\106\85\142\107", "\174\89\19\25\33");
+		end
+	end
+	if (v39:IsReady() and v7:IsInMeleeRange(v44) and v7:DebuffUp(v27.TrollbaneSlowDebuff)) then
+		if v17(v40) then
+			return LUAOBFUSACTOR_DECRYPT_STR_0("\56\29\71\64\243\184\24\63\23\92\74\242\149\75\60\6\18\26", "\107\79\114\50\46\151\231");
+		end
+	end
+	if (v41:IsReady() and DnDSetting and v27.UnholyGround:IsAvailable() and v6:BuffDown(v27.DeathAndDecayBuff) and (v38.ApocGhoulActive or v38.AbomActive or v38.GargActive)) then
+		if v16.CastTarget(v27.DeathAndDecay, v16.TName().PLAYER) then
+			return LUAOBFUSACTOR_DECRYPT_STR_0("\56\168\172\22\142\55\179\128\42\178\245\127", "\160\89\198\213\73\234\89\215");
+		end
+	end
+	if (v27.DeathCoil:IsReady() and v7:IsSpellInRange(v27.DeathCoil) and ((not v38.PoolingRunicPower and v38.SpendRP) or (v53 < (843 - (171 + 662))))) then
+		if v17(v27.DeathCoil) then
+			return LUAOBFUSACTOR_DECRYPT_STR_0("\76\116\181\234\205\119\114\187\247\201\8\98\160\190\157", "\165\40\17\212\158");
+		end
+	end
+	if (v43:IsReady() and v7:IsInMeleeRange(v44) and (v42 < (97 - (4 + 89))) and (not v38.PopWounds or v6:BuffUp(v27.FesteringScytheBuff))) then
+		if v17(v27.FesteringStrike) then
+			return LUAOBFUSACTOR_DECRYPT_STR_0("\227\220\27\39\35\247\208\6\52\25\246\205\26\58\45\224\153\27\39\102\180\137", "\70\133\185\104\83");
+		end
+	end
+	if (v39:IsReady() and v7:IsInRange(WoundSpenderRange) and (v42 >= (3 - 2)) and v38.PopWounds) then
+		if v17(v40) then
+			return LUAOBFUSACTOR_DECRYPT_STR_0("\19\74\81\36\205\59\86\84\47\199\0\64\86\106\218\16\5\21\120", "\169\100\37\36\74");
+		end
+	end
+	if (v27.DeathCoil:IsReady() and v7:IsSpellInRange(v27.DeathCoil) and not v38.PoolingRunicPower) then
+		if v17(v27.DeathCoil) then
+			return LUAOBFUSACTOR_DECRYPT_STR_0("\4\130\163\68\8\184\161\95\9\139\226\67\20\199\243\4", "\48\96\231\194");
+		end
+	end
+	if (v39:IsReady() and v7:IsInRange(WoundSpenderRange) and (v42 >= (1 + 0)) and not v38.PopWounds and (v42 >= (17 - 13))) then
+		if v17(v40) then
+			return LUAOBFUSACTOR_DECRYPT_STR_0("\223\85\27\35\29\231\188\147\205\84\10\40\11\152\188\151\136\11\88", "\227\168\58\110\77\121\184\207");
+		end
+	end
 end
-local function v140()
-	v26[2 - 1] = v13.ToggleIconFrame:GetToggle(689 - (364 + 324));
-	v26[5 - 3] = v13.ToggleIconFrame:GetToggle(4 - 2);
-	v26[1 + 2] = v13.ToggleIconFrame:GetToggle(12 - 9);
-	v26[5 - 1] = v13.ToggleIconFrame:GetToggle(11 - 7) and (v35.Commons.DnDMoving or not v6:IsMoving()) and v88(1276 - (1249 + 19));
+local function v112()
+	if (v37.Commons.Enabled.Items and WeaponSetting and v28.Fyralath:IsReady() and v7:DebuffUp(v27.MarkofFyralathDebuff) and ((v50 < (2 + 3)) or (v50 > (1507 - (35 + 1451))) or (v53 < (1457 - (28 + 1425)))) and (v38.AbomActive or v38.ArmyGhoulActive or (not v27.RaiseAbomination:IsAvailable() and not v27.ArmyoftheDead:IsAvailable()) or (v3.CombatTime() > (2008 - (941 + 1052))))) then
+		v16.CastMacro(1 + 0, nil, nil, v28.Fyralath);
+		return LUAOBFUSACTOR_DECRYPT_STR_0("\108\57\190\80\190\213\49\166\122\47\171", "\197\27\92\223\32\209\187\17");
+	end
+	if v37.Commons.Enabled.Trinkets then
+		if (v28.TreacherousTransmitter:IsEquippedAndReady() and (((v38.Trinket1ID == v28.TreacherousTransmitter:ID()) and Trinket1Setting) or ((v38.Trinket2ID == v28.TreacherousTransmitter:ID()) and Trinket2Setting)) and v7:IsInMeleeRange(1519 - (822 + 692)) and (v38.AddsRemain or v38.STPlanning) and (v27.DarkTransformation:CooldownRemains() < (14 - 4))) then
+			if v17(v28.TreacherousTransmitter, nil) then
+				return LUAOBFUSACTOR_DECRYPT_STR_0("\23\77\198\250\0\87\198\233\12\74\208\196\23\77\194\245\16\82\202\239\23\90\209\187\16\94\205\196\23\77\202\245\8\90\215\232\67\13", "\155\99\63\163");
+			end
+		end
+		if (v31:IsReady() and Trinket1Setting and not v38.Trinket1Ex and not v6:IsItemBlacklisted(v31) and ((v38.Trinket1Buffs and ((v38.TrinketPriority == (1 + 0)) or not v32:HasCooldown() or ((v32:CooldownRemains() > (317 - (45 + 252))) and ((not v27.Apocalypse:IsAvailable() and v13:BuffUp(v27.DarkTransformation)) or (v38.ApocGhoulActive and (v38.ApocGhoulRemains <= v38.Trinket1Duration) and (v38.ApocGhoulRemains > (5 + 0))))))) or (v53 <= v38.Trinket1Duration))) then
+			if v17(v31, true) then
+				return LUAOBFUSACTOR_DECRYPT_STR_0("\165\212\175\136\171\141\129\145\180\158\188\187\139\197\164\128\249\130\141\195\225", "\228\226\177\193\237\217") .. v31:Name() .. LUAOBFUSACTOR_DECRYPT_STR_0("\116\164\49\239\58\187\38\242\39\240\119", "\134\84\208\67");
+			end
+		end
+		if (v32:IsReady() and Trinket2Setting and not v38.Trinket2Ex and not v6:IsItemBlacklisted(v32) and ((v38.Trinket2Buffs and ((v38.TrinketPriority == (1 + 1)) or not v31:HasCooldown() or ((v31:CooldownRemains() > (48 - 28)) and ((not v27.Apocalypse:IsAvailable() and v13:BuffUp(v27.DarkTransformation)) or (v38.ApocGhoulActive and (v38.ApocGhoulRemains <= v38.Trinket2Duration) and (v38.ApocGhoulRemains > (438 - (114 + 319)))))))) or (v53 <= v38.Trinket2Duration))) then
+			if v17(v32, true) then
+				return LUAOBFUSACTOR_DECRYPT_STR_0("\52\169\136\89\1\165\133\28\6\191\131\99\26\184\131\81\83\170\137\78\83", "\60\115\204\230") .. v32:Name() .. LUAOBFUSACTOR_DECRYPT_STR_0("\167\46\249\121\233\49\238\100\244\122\189", "\16\135\90\139");
+			end
+		end
+	end
 end
-local function v141()
-	v57 = v6:GetEnemiesInMeleeRange(8 + 0);
-	v60 = v7:GetEnemiesInSplashRange(38 - 28);
-	if v16() then
-		v58 = #v57;
-		v61 = v7:GetEnemiesInSplashRangeCount(1096 - (686 + 400));
+local function v113()
+	v38.STPlanning = (v50 <= (1 - 0)) or not v19();
+	v38.AddsRemain = (v50 >= (2 - 0)) and (v54 > (4 + 2));
+	v38.ApocTiming = ((v27.Apocalypse:CooldownRemains() < (7 - 2)) and (v42 < (1 - 0)) and (v27.UnholyAssault:CooldownRemains() > (1968 - (556 + 1407))) and (1209 - (741 + 465))) or (465 - (170 + 295));
+	v38.PopWounds = (((v27.Apocalypse:CooldownRemains() > v38.ApocTiming) or not v27.Apocalypse:IsAvailable() or not ApocalypseSetting) and (((v42 >= (1 + 0)) and (v27.UnholyAssault:CooldownRemains() < (19 + 1)) and v27.UnholyAssault:IsAvailable() and v38.STPlanning) or (v7:DebuffUp(v27.RottenTouchDebuff) and (v42 >= (2 - 1))) or (v42 >= ((4 + 0) - v20(v38.AbomActive))))) or ((v53 < (4 + 1)) and (v42 >= (1 + 0)));
+	v38.PoolingRunicPower = v27.VileContagion:IsAvailable() and (v27.VileContagion:CooldownRemains() < (1235 - (957 + 273))) and (v6:RunicPower() < (9 + 21));
+	v38.SpendRP = (not v27.RottenTouch:IsAvailable() or (v27.RottenTouch:IsAvailable() and v7:DebuffDown(v27.RottenTouchDebuff)) or (v6:RunicPowerDeficit() < (9 + 11))) and ((v27.ImprovedDeathCoil:IsAvailable() and ((v50 == (7 - 5)) or v27.CoilofDevastation:IsAvailable())) or (v6:Rune() < (7 - 4)) or v38.GargActive or v6:BuffUp(v27.SuddenDoomBuff) or (not v38.PopWounds and (v42 >= (11 - 7))));
+end
+local function v114()
+	DarkTransformationSetting = v56(v37.Unholy.DarkTransformationSetting) and v58(v37.TTD.DarkTransformationTTD) and v7:IsInMeleeRange(24 - 19);
+	RacialsSetting = v56(v37.Unholy.RacialsSetting) and v58(v37.TTD.RacialsTTD) and v7:IsInMeleeRange(1785 - (389 + 1391));
+	Trinket1Setting = v56(v37.Unholy.Trinket1Setting) and v58(v37.TTD.TrinketsTTD);
+	Trinket2Setting = v56(v37.Unholy.Trinket2Setting) and v58(v37.TTD.TrinketsTTD);
+	PotionSetting = v56(v37.Unholy.PotionSetting) and v58(19 + 11, true) and not v36.ISSolo();
+	ApocalypseSetting = v56(v37.Unholy.ApocalypseSetting) and v58(v37.TTD.ApocalypseTTD) and v7:IsInMeleeRange(1 + 4);
+	UnholyAssaultSetting = v56(v37.Unholy.UnholyAssaultSetting) and v58(v37.TTD.UnholyAssaultTTD) and v7:IsInMeleeRange(11 - 6);
+	AbominationLimbSetting = v56(v37.Unholy.AbominationLimbSetting) and not IsNpcNearPlayer() and v58(v37.TTD.AbominationLimbTTD) and not NoNPCAvailable(v68) and v7:IsInMeleeRange(966 - (783 + 168));
+	EmpowerRuneWeaponSetting = v56(v37.Unholy.EmpowerRuneWeaponSetting) and v58(v37.TTD.EmpowerRuneWeaponTTD) and v7:IsInMeleeRange(16 - 11);
+	UnholyBlightSetting = v56(v37.Unholy.UnholyBlightSetting) and v58(v37.TTD.UnholyBlightTTD);
+	SummonGargoyleSetting = v56(v37.Unholy.SummonGargoyleSetting) and v58(v37.TTD.SummonGargoyleTTD);
+	RaiseAbominationSetting = v56(v37.Unholy.RaiseAbominationSetting) and v58(v37.TTD.RaiseAbominationTTD);
+	ArmyOfTheDeadSetting = v56(v37.Unholy.ArmyOfTheDeadSetting) and v58(40 + 0);
+	WeaponSetting = v56(v37.Unholy.Weapon);
+end
+local function v115()
+	if v6:IsChanneling(v28.ManicGrieftorch.ItemUseSpell) then
+		return LUAOBFUSACTOR_DECRYPT_STR_0("\112\123\8\39\14\87\109\64\52\50\60\92\87\112", "\24\52\20\102\83\46\52");
+	end
+	v48 = v6:GetEnemiesInMeleeRange(319 - (309 + 2));
+	v51 = v7:GetEnemiesInSplashRange(30 - 20);
+	if v19() then
+		v49 = #v48;
+		v52 = v7:GetEnemiesInSplashRangeCount(1222 - (1090 + 122));
 	else
-		v58 = 1 + 0;
-		v61 = 230 - (73 + 156);
+		v49 = 1 + 0;
+		v52 = 3 - 2;
 	end
-	v59 = v20(v58, v61);
-end
-local function v142()
-	v62 = v97(v60);
-end
-local function v143()
-	v43 = v65:AbomActive();
-	v44 = v65:AbomRemains();
-	v45 = v24.Apocalypse:TimeSinceLastCast() <= (1 + 14);
-	v46 = (v45 and ((826 - (721 + 90)) - v24.Apocalypse:TimeSinceLastCast())) or (0 + 0);
-	v47 = v24.ArmyoftheDead:TimeSinceLastCast() <= (97 - 67);
-	v48 = (v47 and ((500 - (224 + 246)) - v24.ArmyoftheDead:TimeSinceLastCast())) or (0 - 0);
-	v49 = v65:GargActive();
-	v50 = v65:GargRemains();
-	v54 = v7:DebuffStack(v24.FesteringWoundDebuff);
-	if v24.FesteringScytheAction:IsLearned() then
-		v55 = v24.FesteringScytheAction;
-		v56 = 25 - 11;
+	v50 = v23(v49, v52);
+	DnDSetting = v16.ToggleIconFrame:GetToggle(3 + 0) and ((v49 >= (1119 - (628 + 490))) or v7:IsInRange(2 + 6)) and (v37.Commons.DnDMoving or not v6:IsMoving()) and v58(19 - 11);
+	SmallCDToggle = v16.ToggleIconFrame:GetToggle(4 - 3);
+	InterruptToggle = v16.ToggleIconFrame:GetToggle(776 - (431 + 343));
+	v38.AbomActive = v55:AbomActive();
+	v38.AbomRemains = v55:AbomRemains();
+	v38.ApocGhoulActive = v27.Apocalypse:TimeSinceLastCast() <= (30 - 15);
+	v38.ApocGhoulRemains = (v38.ApocGhoulActive and ((43 - 28) - v27.Apocalypse:TimeSinceLastCast())) or (0 + 0);
+	v38.ArmyGhoulActive = v27.ArmyoftheDead:TimeSinceLastCast() <= (4 + 26);
+	v38.ArmyGhoulRemains = (v38.ArmyGhoulActive and ((1725 - (556 + 1139)) - v27.ArmyoftheDead:TimeSinceLastCast())) or (15 - (6 + 9));
+	v38.GargActive = v55:GargActive();
+	v38.GargRemains = v55:GargRemains();
+	v38.SanCoilMult = ((v6:BuffStack(v27.EssenceoftheBloodQueenBuff) >= (1 + 3)) and (2 + 0)) or (170 - (28 + 141));
+	v38.EpidemicTargets = 2 + 1 + v20(v27.ImprovedDeathCoil:IsAvailable()) + v20(v27.FrenziedBloodthirst:IsAvailable() and v38.SanCoilMult) + v20(v27.HungeringThirst:IsAvailable() and v27.HarbingerofDoom:IsAvailable() and v6:BuffUp(v27.SuddenDoomBuff));
+	v42 = v7:DebuffStack(v27.FesteringWoundDebuff);
+	if v27.FesteringScytheAction:IsLearned() then
+		v43 = v27.FesteringScytheAction;
+		v44 = 16 - 2;
 	else
-		v55 = v24.FesteringStrike;
-		v56 = 1 + 4;
+		v43 = v27.FesteringStrike;
+		v44 = 4 + 1;
 	end
-end
-local function v144()
-	v34.HealthPotions();
-	if v6:IsChanneling(v25.ManicGrieftorch.ItemUseSpell) then
-		return LUAOBFUSACTOR_DECRYPT_STR_0("\246\138\210\55\199\170\65\198\197\232\44\149\170\92", "\52\178\229\188\67\231\201");
-	end
-	v140();
-	v141();
-	v142();
-	v59 = v20(v58, v61);
-	v143();
-	v51 = (v24.VampiricStrikeAction:IsLearned() and v24.VampiricStrikeAction) or ((v24.ClawingShadows:IsAvailable()) and v24.ClawingShadows) or v24.ScourgeStrike;
-	v26[1 + 4] = v86(v35.Unholy.DarkTransformationSetting) and v88(v35.TTD.DarkTransformationTTD) and v7:IsInMeleeRange(4 + 1);
-	v26[11 - 5] = v86(v35.Unholy.RacialsSetting) and v88(v35.TTD.RacialsTTD) and v7:IsInMeleeRange(16 - 11);
-	v26[520 - (203 + 310)] = v86(v35.Unholy.Trinket1Setting) and v88(v35.TTD.TrinketsTTD);
-	v26[2001 - (1238 + 755)] = v86(v35.Unholy.Trinket2Setting) and v88(v35.TTD.TrinketsTTD);
-	v26[1 + 8] = v86(v35.Unholy.PotionSetting) and not v34.ISSolo();
-	v26[1544 - (709 + 825)] = v86(v35.Unholy.ApocalypseSetting) and v88(v35.TTD.ApocalypseTTD) and v7:IsInMeleeRange(8 - 3);
-	v26[15 - 4] = v86(v35.Unholy.UnholyAssaultSetting) and v88(v35.TTD.UnholyAssaultTTD) and v7:IsInMeleeRange(869 - (196 + 668));
-	v26[47 - 35] = v86(v35.Unholy.AbominationLimbSetting) and not IsNpcNearPlayer() and v88(v35.TTD.AbominationLimbTTD) and v7:IsInMeleeRange(31 - 16);
-	v26[846 - (171 + 662)] = v86(v35.Unholy.EmpowerRuneWeaponSetting) and v88(v35.TTD.EmpowerRuneWeaponTTD) and v7:IsInMeleeRange(98 - (4 + 89));
-	v26[48 - 34] = v86(v35.Unholy.UnholyBlightSetting) and v88(v35.TTD.UnholyBlightTTD);
-	v26[6 + 9] = v86(v35.Unholy.SummonGargoyleSetting) and v88(v35.TTD.SummonGargoyleTTD);
-	v26[70 - 54] = v86(v35.Unholy.RaiseAbominationSetting) and v88(v35.TTD.SummonGargoyleTTD);
-	v26[7 + 10] = v86(v35.Unholy.ArmyOfTheDeadSetting) and v88(1526 - (35 + 1451));
-	v26[1471 - (28 + 1425)] = v86(v35.Unholy.Weapon);
-	if (v34.TargetIsValid() or v6:AffectingCombat()) then
-		v63 = v3.BossFightRemains();
+	v39 = (v27.VampiricStrikeAction:IsLearned() and v27.VampiricStrikeAction) or (v27.ClawingShadows:IsAvailable() and v27.ClawingShadows) or v27.ScourgeStrike;
+	v40 = (v27.ClawingShadows:IsAvailable() and v27.ClawingShadows) or v27.ScourgeStrike;
+	v114();
+	if (v36.TargetIsValid() or v6:AffectingCombat()) then
+		v53 = v3.BossFightRemains();
 		IsBossfight = true;
-		v64 = v63;
-		if (v64 == (13104 - (941 + 1052))) then
+		v54 = v53;
+		if (v54 == (12428 - (486 + 831))) then
 			IsBossfight = false;
-			v64 = v3.FightRemains(v57, false);
+			v54 = v3.FightRemains(v48, false);
 		end
-		v51 = ((v24.VampiricStrikeAction:IsLearned()) and v24.VampiricStrikeAction) or ((v24.ClawingShadows:IsAvailable()) and v24.ClawingShadows) or v24.ScourgeStrike;
-		v53 = ((v24.Defile:IsAvailable()) and v24.Defile) or v24.DeathAndDecay;
-		WoundSpenderRange = ((v24.ClawingShadows:IsAvailable() or v24.VampiricStrikeAction:IsAvailable()) and (29 + 1)) or (1519 - (822 + 692));
+		v41 = (v27.Defile:IsAvailable() and v27.Defile) or v27.DeathAndDecay;
+		WoundSpenderRange = ((v27.ClawingShadows:IsAvailable() or v27.VampiricStrikeAction:IsAvailable()) and (78 - 48)) or (17 - 12);
 	end
-	if v24.RaiseDead:IsCastable() then
-		if v14(v24.RaiseDead) then
-			return LUAOBFUSACTOR_DECRYPT_STR_0("\51\64\89\23\242\99\39\36\64\84\68\231\78\38\34\78\93\6\246\72\99\115", "\67\65\33\48\100\151\60");
+	if v27.RaiseDead:IsCastable() then
+		if v17(v27.RaiseDead) then
+			return LUAOBFUSACTOR_DECRYPT_STR_0("\214\46\40\55\10\251\43\36\37\11\132\63\51\33\12\203\34\35\37\27\132\125", "\111\164\79\65\68");
 		end
 	end
-	if (v24.RaiseAlly:IsReady() and v35.Commons.RaiseAlly) then
+	if (v27.RaiseAlly:IsReady() and v37.Commons.RaiseAlly) then
 		if (v8:UnitIsFriend() and v8:UnitIsPlayer() and v8:Exists() and v8:IsDeadOrGhost()) then
-			v13.CastTarget(v24.RaiseAlly, v13.TName().MOUSEOVER);
-			return LUAOBFUSACTOR_DECRYPT_STR_0("\237\230\167\203\246\159\198\162\212\234\159\232\160\152\222\208\242\189\221\252\201\226\188", "\147\191\135\206\184");
+			v16.CastTarget(v27.RaiseAlly, v16.TName().MOUSEOVER);
+			return LUAOBFUSACTOR_DECRYPT_STR_0("\244\216\138\205\43\170\231\213\143\199\110\229\200\153\174\209\59\249\195\214\149\219\60", "\138\166\185\227\190\78");
 		end
 		if (v7:UnitIsFriend() and v7:UnitIsPlayer() and v7:Exists() and v7:IsDeadOrGhost()) then
-			v13.Cast(v24.RaiseAlly);
-			return LUAOBFUSACTOR_DECRYPT_STR_0("\182\41\175\210\221\19\147\136\36\191\129\215\93\242\176\41\180\198\221\71", "\210\228\72\198\161\184\51");
+			v16.Cast(v27.RaiseAlly);
+			return LUAOBFUSACTOR_DECRYPT_STR_0("\249\117\204\36\87\99\56\199\120\220\119\93\45\89\255\117\215\48\87\55", "\121\171\20\165\87\50\67");
 		end
 	end
-	if (v34.TargetIsValid() and (v7:AffectingCombat() or v35.Unholy.AttackOutOfCombat)) then
+	if (v36.TargetIsValid() and (v7:AffectingCombat() or v37.Commons.AttackOutOfCombat)) then
 		if not v6:AffectingCombat() then
-			local v229 = v123();
+			local v225 = v96();
+			if v225 then
+				return v225;
+			end
+		end
+		if (v27.DeathStrike:IsReady() and v66()) then
+			if v17(v27.DeathStrike) then
+				return LUAOBFUSACTOR_DECRYPT_STR_0("\194\61\184\34\177\61\213\44\171\63\178\7\134\52\182\33\249\10\214\120\182\36\249\18\212\55\186", "\98\166\88\217\86\217");
+			end
+		end
+		if v6:AffectingCombat() then
+			if (v27.IceboundFortitude:IsCastable() and (v6:HealthPercentage() <= v37.Unholy.Defensives.IceboundFortitudeHP)) then
+				if v17(v27.IceboundFortitude, false) then
+					return LUAOBFUSACTOR_DECRYPT_STR_0("\255\245\124\3\137\201\248\242\70\7\137\206\226\255\109\20\130\217\182\242\124\7\131\210\229\255\111\4\149", "\188\150\150\25\97\230");
+				end
+			end
+			if (v27.AntiMagicShell:IsCastable() and (v6:HealthPercentage() <= v37.Unholy.Defensives.AntiMagicShellHP)) then
+				if v17(v27.AntiMagicShell, false) then
+					return LUAOBFUSACTOR_DECRYPT_STR_0("\251\135\75\11\33\236\221\128\92\49\4\232\214\133\31\6\9\235\223\135\76\11\26\232\201", "\141\186\233\63\98\108");
+				end
+			end
+			if (v27.AntiMagicZone:IsCastable() and (v6:HealthPercentage() <= v37.Unholy.Defensives.AntiMagicZoneHP)) then
+				if v17(v27.AntiMagicZone, false) then
+					return LUAOBFUSACTOR_DECRYPT_STR_0("\208\228\56\191\8\240\237\37\181\31\254\228\41\246\33\244\236\41\184\54\248\252\41\165", "\69\145\138\76\214");
+				end
+			end
+			if (v27.Lichborne:IsCastable() and (v6:HealthPercentage() <= v37.Unholy.Defensives.LichborneHP)) then
+				if v17(v27.Lichborne, false) then
+					return LUAOBFUSACTOR_DECRYPT_STR_0("\92\198\138\129\189\25\98\193\140\201\187\19\118\202\135\154\182\0\117\220", "\118\16\175\233\233\223");
+				end
+			end
+		end
+		if InterruptToggle then
+			v33 = v36.InterruptCycle(v27.MindFreeze, (137 + 588) - ((651 - 445) + (1767 - (668 + 595))), true, nil, false);
+			if v33 then
+				return v33;
+			end
+			if v37.Commons.BlindingSleet then
+				v33 = v36.InterruptCycle(v27.BlindingSleet, 9 + 0 + 1 + 2, true, nil, true, true);
+				if v33 then
+					return v33;
+				end
+			end
+			v33 = v36.InterruptCycle(v27.Asphyxiate, (188 - 119) - (339 - (23 + 267)), true, nil, true);
+			if v33 then
+				return v33;
+			end
+		end
+		if not v7:IsInRange((2800 - (1129 + 815)) - ((960 - (371 + 16)) + (2023 - (1326 + 424)))) then
+			if (v27.Outbreak:IsReady() and v7:IsSpellInRange(v27.Outbreak) and v94(v7)) then
+				if v17(v27.Outbreak) then
+					return LUAOBFUSACTOR_DECRYPT_STR_0("\132\145\33\185\252\142\124\128\196\58\174\250\180\114\141\187\39\186\224\140\120", "\29\235\228\85\219\142\235");
+				end
+			end
+			if (v27.Epidemic:IsReady() and v7:IsInRange((518 - 244) - ((621 - 451) + (182 - (88 + 30)))) and (v27.VirulentPlagueDebuff:AuraActiveCount() >= v38.EpidemicTargets) and not v38.PoolingRunicPower) then
+				if v17(v27.Epidemic) then
+					return LUAOBFUSACTOR_DECRYPT_STR_0("\56\196\179\217\114\67\46\81\125\219\175\201\72\65\33\109\47\213\180\218\114", "\50\93\180\218\189\23\46\71");
+				end
+			end
+			if (v27.DeathCoil:IsReady() and v7:IsSpellInRange(v27.DeathCoil) and (v27.VirulentPlagueDebuff:AuraActiveCount() < v38.EpidemicTargets) and not v38.PoolingRunicPower) then
+				if v17(v27.DeathCoil) then
+					return LUAOBFUSACTOR_DECRYPT_STR_0("\218\161\90\88\76\227\75\209\173\87\12\75\201\92\225\171\93\115\86\221\70\217\161", "\40\190\196\59\44\36\188");
+				end
+			end
+		end
+		v113();
+		if v27.VampiricStrike:IsAvailable() then
+			local v226 = v110();
+			if v226 then
+				return v226;
+			end
+		end
+		if ((v37.Commons.Enabled.Trinkets or v37.Commons.Enabled.Items) and not v27.VampiricStrike:IsAvailable()) then
+			local v227 = v112();
+			if v227 then
+				return v227;
+			end
+		end
+		if true then
+			local v228 = v107();
+			if v228 then
+				return v228;
+			end
+		end
+		if true then
+			local v229 = v105();
 			if v229 then
 				return v229;
 			end
 		end
-		if (v24.DeathStrike:IsReady() and v96()) then
-			if v14(v24.DeathStrike) then
-				return LUAOBFUSACTOR_DECRYPT_STR_0("\50\76\242\4\123\241\37\93\225\25\120\203\118\69\252\7\51\198\38\9\252\2\51\222\36\70\240", "\174\86\41\147\112\19");
-			end
-		end
-		if v6:AffectingCombat() then
-			if (v24.IceboundFortitude:IsCastable() and (v6:HealthPercentage() <= v35.Unholy.Defensives.IceboundFortitudeHP)) then
-				if v14(v24.IceboundFortitude, false) then
-					return LUAOBFUSACTOR_DECRYPT_STR_0("\82\3\136\9\42\26\31\175\100\6\130\25\49\6\5\190\95\5\205\15\32\9\20\165\72\9\155\14\54", "\203\59\96\237\107\69\111\113");
-				end
-			end
-			if (v24.AntiMagicShell:IsCastable() and (v6:HealthPercentage() <= v35.Unholy.Defensives.AntiMagicShellHP)) then
-				if v14(v24.AntiMagicShell, false) then
-					return LUAOBFUSACTOR_DECRYPT_STR_0("\5\24\184\232\28\241\208\45\21\159\233\52\252\219\100\18\169\231\52\254\196\45\0\169\242", "\183\68\118\204\129\81\144");
-				end
-			end
-			if (v24.AntiMagicZone:IsCastable() and (v6:HealthPercentage() <= v35.Unholy.Defensives.AntiMagicZoneHP)) then
-				if v14(v24.AntiMagicZone, false) then
-					return LUAOBFUSACTOR_DECRYPT_STR_0("\47\163\100\237\38\131\9\164\115\222\4\140\11\237\116\225\13\135\0\190\121\242\14\145", "\226\110\205\16\132\107");
-				end
-			end
-			if (v24.Lichborne:IsCastable() and (v6:HealthPercentage() <= v35.Unholy.Defensives.LichborneHP)) then
-				if v14(v24.Lichborne, false) then
-					return LUAOBFUSACTOR_DECRYPT_STR_0("\199\202\227\209\67\228\209\238\220\1\239\198\230\220\79\248\202\246\220\82", "\33\139\163\128\185");
-				end
-			end
-		end
-		if v26[3 - 0] then
-			v31 = v34.InterruptCycle(v24.MindFreeze, 8 + 7, true, nil, false);
-			if v31 then
-				return v31;
-			end
-			if v35.Commons.BlindingSleet then
-				v31 = v34.InterruptCycle(v24.BlindingSleet, 309 - (45 + 252), true, nil, true, true);
-				if v31 then
-					return v31;
-				end
-			end
-			v31 = v34.InterruptCycle(v24.Asphyxiate, 20 + 0, true, nil, true);
-			if v31 then
-				return v31;
-			end
-		end
-		if not v7:IsInRange(4 + 6) then
-			if (v24.Outbreak:IsReady() and v7:IsSpellInRange(v24.Outbreak) and v121(v7)) then
-				if v14(v24.Outbreak) then
-					return LUAOBFUSACTOR_DECRYPT_STR_0("\88\77\16\220\69\93\5\213\23\87\17\202\104\87\2\225\69\89\10\217\82", "\190\55\56\100");
-				end
-			end
-			if (v24.Epidemic:IsReady() and v7:IsInRange(97 - 57) and v16() and (v24.VirulentPlagueDebuff:AuraActiveCount() > (434 - (114 + 319))) and not v40) then
-				if v14(v24.Epidemic, false, nil, not v7:IsInRange(57 - 17)) then
-					return LUAOBFUSACTOR_DECRYPT_STR_0("\83\191\53\26\22\238\250\85\239\51\11\7\220\252\80\144\46\31\29\228\246", "\147\54\207\92\126\115\131");
-				end
-			end
-			if (v24.DeathCoil:IsReady() and v7:IsSpellInRange(v24.DeathCoil) and (v24.VirulentPlagueDebuff:AuraActiveCount() < (2 - 0)) and not v40) then
-				if v14(v24.DeathCoil) then
-					return LUAOBFUSACTOR_DECRYPT_STR_0("\9\52\52\105\5\65\14\62\60\113\77\113\24\37\10\114\11\65\31\48\59\122\8", "\30\109\81\85\29\109");
-				end
-			end
-		end
-		v139();
-		if v24.VampiricStrike:IsAvailable() then
-			local v230 = v136();
+		if (v27.VampiricStrike:IsAvailable() and (v50 >= ((773 - (720 + 51)) + (2 - 1)))) then
+			local v230 = v102();
 			if v230 then
 				return v230;
 			end
 		end
-		if ((v35.Commons.Enabled.Trinkets or v35.Commons.Enabled.Items) and not v24.VampiricStrike:IsAvailable()) then
-			local v231 = v138();
+		if (not v27.VampiricStrike:IsAvailable() and (v50 >= ((3418 - (421 + 1355)) - ((2353 - 926) + 105 + 108)))) then
+			local v231 = v101();
 			if v231 then
 				return v231;
 			end
 		end
-		if true then
-			local v232 = v133();
+		if (v27.VampiricStrike:IsAvailable() and (v50 == ((2953 - (286 + 797)) - ((3461 - 2514) + (1525 - 604))))) then
+			local v232 = v104();
 			if v232 then
 				return v232;
 			end
 		end
-		if true then
-			local v233 = v131();
+		if (v27.VampiricStrike:IsAvailable() and ((v50 <= ((440 - (397 + 42)) + 0 + 0)) or not v19())) then
+			local v233 = v103();
 			if v233 then
 				return v233;
 			end
 		end
-		if (v16() and v24.VampiricStrike:IsAvailable() and (v59 >= (2 + 0))) then
-			local v234 = v129();
+		if (not v27.VampiricStrike:IsAvailable() and ((v50 <= ((803 - (24 + 776)) - (2 - 0))) or not v19())) then
+			local v234 = v100();
 			if v234 then
 				return v234;
 			end
 		end
-		if (v16() and not v24.VampiricStrike:IsAvailable() and (v59 >= (2 - 0))) then
-			local v235 = v128();
+		if (v50 ~= ((787 - (222 + 563)) + (0 - 0))) then
+		else
+			local v235 = v106();
 			if v235 then
 				return v235;
 			end
 		end
-		if (v24.VampiricStrike:IsAvailable() and ((v59 <= (1 - 0)) or not v16())) then
-			local v236 = v130();
+		if ((v50 >= ((7 + 2) - (196 - (23 + 167)))) and not v6:DnDTicking() and (v41:CooldownRemains() < ((1808 - (690 + 1108)) + 0 + 0))) then
+			local v236 = v99();
 			if v236 then
 				return v236;
 			end
 		end
-		if (not v24.VampiricStrike:IsAvailable() and ((v59 <= (1964 - (556 + 1407))) or not v16())) then
-			local v237 = v127();
+		if ((v50 >= (2 + 0 + (849 - (40 + 808)))) and (v6:DnDTicking() or (v6:BuffUp(v27.DeathAndDecayBuff) and (v27.FesteringWoundDebuff:AuraActiveCount() >= (v50 * ((0.5 + 0) - (0 - 0))))))) then
+			local v237 = v98();
 			if v237 then
 				return v237;
 			end
 		end
-		if (v16() and (v59 == (1208 - (741 + 465)))) then
-			local v238 = v132();
+		if ((v50 >= (1 + 0 + 2 + 0)) and v6:BuffDown(v27.DeathAndDecayBuff)) then
+			local v238 = v97();
 			if v238 then
 				return v238;
 			end
 		end
-		if (v16() and (v59 >= (468 - (170 + 295))) and not v6:DnDTicking() and (v53:CooldownRemains() < (6 + 4))) then
-			local v239 = v126();
+		if (((v50 <= (1 + 0 + (571 - (47 + 524)))) or not v19()) and v27.GiftoftheSanlayn:IsAvailable() and v27.DarkTransformation:CooldownDown() and v6:BuffDown(v27.GiftoftheSanlaynBuff) and (v6:BuffRemains(v27.EssenceoftheBloodQueenBuff) < (v27.DarkTransformation:CooldownRemains() + ((792 + 427) - ((207 - 131) + (1704 - 564)))))) then
+			local v239 = v108();
 			if v239 then
 				return v239;
 			end
+			if v16.CastAnnotated(v27.Pool, false, LUAOBFUSACTOR_DECRYPT_STR_0("\11\100\245\128", "\109\92\37\188\212\154\29")) then
+				return LUAOBFUSACTOR_DECRYPT_STR_0("\52\224\171\207\113\92\11\253\228\240\48\84\34\230\183\203\56\84\3\167\237", "\58\100\143\196\163\81");
+			end
 		end
-		if (v16() and (v59 >= (3 + 0)) and v6:BuffUp(v24.DeathAndDecayBuff)) then
-			local v240 = v125();
+		if (((v50 <= ((4 - 2) - (1727 - (1165 + 561)))) or not v19()) and v27.VampiricStrike:IsAvailable()) then
+			local v240 = v109();
 			if v240 then
 				return v240;
 			end
 		end
-		if (v16() and (v59 >= (7 - 4)) and v6:BuffDown(v24.DeathAndDecayBuff)) then
-			local v241 = v124();
+		if (((v50 <= (1 + 0 + (0 - 0))) or not v19()) and not v27.VampiricStrike:IsAvailable()) then
+			local v241 = v111();
 			if v241 then
 				return v241;
 			end
 		end
-		if (((v59 <= (1 + 0)) or not v16()) and v24.GiftoftheSanlayn:IsAvailable() and v24.DarkTransformation:CooldownDown() and v6:BuffDown(v24.GiftoftheSanlaynBuff) and (v6:BuffRemains(v24.EssenceoftheBloodQueenBuff) < (v24.DarkTransformation:CooldownRemains() + 2 + 0))) then
-			local v242 = v134();
-			if v242 then
-				return v242;
-			end
-			if v13.CastAnnotated(v24.Pool, false, LUAOBFUSACTOR_DECRYPT_STR_0("\200\80\125\130", "\156\159\17\52\214\86\190")) then
-				return LUAOBFUSACTOR_DECRYPT_STR_0("\158\224\178\176\238\233\178\174\238\220\188\178\136\230\174\180\167\225\186\244\231", "\220\206\143\221");
+		if (v43:IsReady() and v7:IsInMeleeRange(v44) and (v6:Rune() >= (1 + 1 + (483 - (341 + 138))))) then
+			if v17(v27.FesteringStrike) then
+				return LUAOBFUSACTOR_DECRYPT_STR_0("\28\71\48\183\58\91\236\0\29\125\48\183\45\64\238\11\90\67\45\183\54\9\230\15\10", "\110\122\34\67\195\95\41\133");
 			end
 		end
-		if (((v59 <= (1 + 0)) or not v16()) and v24.VampiricStrike:IsAvailable()) then
-			local v243 = v135();
-			if v243 then
-				return v243;
+		if (v39:IsReady() and v7:IsInRange(WoundSpenderRange) and not v7:IsInMeleeRange((6 + 14) - (24 - 12)) and (v42 >= ((327 - (89 + 237)) - (0 - 0)))) then
+			if v17(v40) then
+				return LUAOBFUSACTOR_DECRYPT_STR_0("\66\190\78\68\210\53\130\75\79\216\113\180\73\10\249\90\131", "\182\21\209\59\42");
 			end
 		end
-		if (((v59 <= (1231 - (957 + 273))) or not v16()) and not v24.VampiricStrike:IsAvailable()) then
-			local v244 = v137();
-			if v244 then
-				return v244;
-			end
+		if v16.CastAnnotated(v27.Pool, false, LUAOBFUSACTOR_DECRYPT_STR_0("\128\118\236\41", "\222\215\55\165\125\65")) then
+			return LUAOBFUSACTOR_DECRYPT_STR_0("\60\222\201\22\205\211\232\89\35\196\212\25\247\210", "\42\76\177\166\122\146\161\141");
 		end
-		if (v55:IsReady() and v7:IsInMeleeRange(v56) and (v6:Rune() >= (2 + 4))) then
-			if v14(v55) then
-				return LUAOBFUSACTOR_DECRYPT_STR_0("\128\120\62\3\221\222\219\136\122\18\4\204\222\219\141\120\109\22\214\216\219\198\126\44\7", "\178\230\29\77\119\184\172");
-			end
-		end
-		if (v51:IsReady() and v7:IsInRange(WoundSpenderRange) and not v7:IsInMeleeRange(4 + 4) and (v54 >= (3 - 2))) then
-			if v14(v52) then
-				return LUAOBFUSACTOR_DECRYPT_STR_0("\194\177\31\21\115\184\198\174\15\21\115\253\231\254\37\52\69", "\152\149\222\106\123\23");
-			end
-		end
-		if v13.CastAnnotated(v24.Pool, false, LUAOBFUSACTOR_DECRYPT_STR_0("\234\7\223\119", "\213\189\70\150\35")) then
-			return LUAOBFUSACTOR_DECRYPT_STR_0("\95\90\123\4\112\71\113\27\64\64\102\11\74\70", "\104\47\53\20");
-		end
-		v31 = (v58 > (0 - 0)) and not v7:IsInRange(24 - 16) and v95();
 	end
 end
-local function v145()
-	v24.VirulentPlagueDebuff:RegisterAuraTracking();
-	v24.FesteringWoundDebuff:RegisterAuraTracking();
-	v24.MarkofFyralathDebuff:RegisterAuraTracking();
-	v35.Unholy.Display();
-	v13:UpdateMacro(LUAOBFUSACTOR_DECRYPT_STR_0("\174\77\130\14\179\94", "\111\195\44\225\124\220"), LUAOBFUSACTOR_DECRYPT_STR_0("\151\83\19\118\235\250\142", "\203\184\38\96\19\203"));
-	v13:UpdateMacro(LUAOBFUSACTOR_DECRYPT_STR_0("\52\114\122\83\193\107", "\174\89\19\25\33"), LUAOBFUSACTOR_DECRYPT_STR_0("\96\6\83\92\240\130\31\111\41\114\67\248\146\24\42\29\68\75\229\186", "\107\79\114\50\46\151\231"));
-	v34.PostInitialMessage(1247 - 995);
+local function v116()
+	v27.VirulentPlagueDebuff:RegisterAuraTracking();
+	v27.FesteringWoundDebuff:RegisterAuraTracking();
+	v27.MarkofFyralathDebuff:RegisterAuraTracking();
+	v37.Unholy.Display();
+	v16:UpdateMacro(LUAOBFUSACTOR_DECRYPT_STR_0("\168\139\6\220\118\39", "\22\197\234\101\174\25"), LUAOBFUSACTOR_DECRYPT_STR_0("\98\33\182\217\54\254\129", "\230\77\84\197\188\22\207\183"));
+	v16:UpdateMacro(LUAOBFUSACTOR_DECRYPT_STR_0("\244\21\197\238\131\243", "\85\153\116\166\156\236\193\144"), LUAOBFUSACTOR_DECRYPT_STR_0("\235\244\76\161\227\5\176\160\118\147\233\15\177\243\72\188\242\5\182\221", "\96\196\128\45\211\132"));
+	v16.Print(LUAOBFUSACTOR_DECRYPT_STR_0("\0\131\115\80\222\182\244\252\30\205\105\80\198\174\160\209\58\131", "\184\85\237\27\63\178\207\212"));
 end
-v13.SetAPL(2032 - (389 + 1391), v144, v145);
+v16.SetAPL((1254 - 658) - (1225 - (581 + 300)), v115, v116);
