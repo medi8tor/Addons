@@ -728,7 +728,7 @@ local function v88()
 		PlayerIsBoPTarget = v75(v38, true);
 		if ((BoPTarget ~= nil) and not v26.RetHealing.BoPPlayerOnly) then
 			BoPTarget:Cast(v20.BlessingofProtection);
-			return "Blessing of Protection Party  " .. BoPTarget:Name() .. the .. BoPTarget:Role();
+			return "Blessing of Protection Party  ";
 		end
 		if (PlayerIsBoPTarget == nil) then
 		else
