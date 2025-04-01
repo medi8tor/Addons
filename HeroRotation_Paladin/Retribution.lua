@@ -177,7 +177,7 @@ local function v72(v119, v120)
 	end
 end
 local v73 = {(940744 - 714781),(730802 - 530620),(197213 - (814 + 45)),(12151 + 213333),(197261 - (261 + 624)),(261821 - (1020 + 60)),(1445808 - 1019148),(162460 + 250045),(257561 - (760 + 987)),(256200 - (745 + 21)),(726847 - 462697),(3366 + 408334),(413013 - (87 + 968)),(240023 + 24533),(203146 - (447 + 966)),(269724 - (1703 + 114)),(426989 - 166438),(73561 + 183846),(426673 - (9 + 5)),((622525 - (243 + 1022)) - (1504175 - 1108878))};
-local v74 = v23.converArrayToList({((212032 - (1123 + 57)) - (11 + 2 + (296 - (163 + 91))))});
+local v74 = v23.converArrayToList({(211977 - (1123 + 57)),(209001 - (163 + 91))});
 local function v75(v123, v124)
 	local v125 = nil;
 	if (v124 == nil) then
@@ -582,7 +582,10 @@ local function v87()
 	end
 end
 local function v88()
-	v23.HealthPotions();
+	v35 = v23.HealthPotions();
+	if v35 then
+		return v35;
+	end
 	if v6:IsChanneling(v21.ManicGrieftorch.ItemUseSpell) then
 		return "Dont cut Torch";
 	end
