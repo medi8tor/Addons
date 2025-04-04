@@ -339,18 +339,51 @@ end
 
 do
   local EnemyAbsorbSpells = {
-    ---- Vault of the Incarnates
+    ----- Dragonflight Raids -----
+    --- Vault of the Incarnates
     -- Raszageth
     Spell(382530), -- Surging Ruiner Shield (Surge)
     Spell(388691), -- Stormsurge Shield
-    ---- Aberrus
+    --- Aberrus
     -- Assault of the Zaqari
     Spell(397383), -- Molten Barrier (Mystics)
+    ----- The War Within Raids -----
+    --- Nerub-ar Palace
+    -- Silken Court
+    Spell(450980), -- Shatter Existence (Takazj)
+    Spell(451277), -- Spike Storm (Anub'arash)
+    -- Queen Ansurek
+    Spell(445013), -- Dark Barrier (Summoned Acolyte)
+    Spell(447207), -- Predation (Queen Ansurek)
+    ----- The War Within Dungeons -----
+    --- Cinderbrew Meadery
+    -- I'pa
+    Spell(440147), -- Fill 'Er Up
+    --- Priory of the Sacred Flame
+    -- Captain Dailcry
+    Spell(447443), -- Savage Mauling (Shield placed on Ember)
+    -- Prioress Murrpray
+    Spell(423588), -- Barrier of Light
+    --- The Rookery
+    -- Voidstone Monstrosity
+    Spell(445262), -- Void Shell
+    --- The Stonevault
+    -- Skarmorak
+    Spell(423228), -- Fortified Shell
+    ----- Older Dungeons in TWW S1 M+ Rotation -----
+    --- Mists of Tirna Scithe
+    -- Tred'ova
+    Spell(322527), -- Gorging Shield
+    --- The Necrotic Wake
+    -- Nalthor the Rimebinder
+    Spell(321368), -- Icebound Aegis (Normal/Heroic?)
+    Spell(321754), -- Icebound Aegis (Mythic/M+?)
+    -- Trash
+    Spell(343470), -- Boneshatter Shield (Skeletal Marauder)
   }
 
   function Unit:EnemyAbsorb()
-    for i = 1, #EnemyAbsorbSpells do
-      local AbsorbSpell = EnemyAbsorbSpells[i]
+    for _, AbsorbSpell in pairs(EnemyAbsorbSpells) do
       if self:BuffUp(AbsorbSpell, true) then
         return true
       end

@@ -21,6 +21,8 @@ local UnitPower              = UnitPower
 local UnitPowerMax           = UnitPowerMax
 -- Accepts: unitID, powerType, unmodified; Returns: maxPower (number)
 
+local UnitPowerCharged       = GetUnitChargedPowerPoints
+
 -- lua locals
 local GetTime                = GetTime
 local pairs                  = pairs
@@ -62,7 +64,7 @@ do
 
   -- mana.regen
   function Player:ManaRegen()
-    return GetPowerRegen(self.UnitID)
+    return GetPowerRegen()
   end
 
   -- Mana regen in a cast
@@ -169,7 +171,7 @@ do
 
   -- focus.regen
   function Player:FocusRegen()
-    return GetPowerRegen(self.UnitID)
+    return GetPowerRegen()
   end
 
   -- focus.pct
@@ -273,7 +275,7 @@ do
 
   -- energy.regen
   function Player:EnergyRegen()
-    return GetPowerRegen(self.UnitID)
+    return GetPowerRegen()
   end
 
   -- energy.pct
@@ -354,6 +356,7 @@ end
 ----------------------------------
 do
   local ComboPointsPowerType = Enum.PowerType.ComboPoints
+
   -- combo_points.max
   function Player:ComboPointsMax()
     return UnitPowerMax(self.UnitID, ComboPointsPowerType)
@@ -362,6 +365,11 @@ do
   -- combo_points
   function Player:ComboPoints()
     return UnitPower(self.UnitID, ComboPointsPowerType)
+  end
+
+  function Player:ChargedComboPoints()
+    local chargedCps = UnitPowerCharged(self.UnitID)
+    return (chargedCps and #chargedCps) or 0
   end
 
   -- combo_points.deficit

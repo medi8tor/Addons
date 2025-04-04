@@ -70,7 +70,7 @@ HL.Action = Action
 
 --- ============================ CONTENT ============================
 
--- See: http://wowwiki.wikia.com/wiki/ActionSlot
+-- See: https://warcraft.wiki.gg/wiki/Action_slot
 -- ActionSlot        ButtonBaseName               CommandName                    Page
 -- 1..12           = ActionButton                 ACTIONBUTTON..ActionSlot       1
 -- 13..24          = ActionButton                 NONE                           2
@@ -78,29 +78,32 @@ HL.Action = Action
 -- 37..48          = MultiBarLeftButton           MULTIACTIONBAR4BUTTON..BarSlot /
 -- 49..60          = MultiBarBottomRightButton    MULTIACTIONBAR2BUTTON..BarSlot /
 -- 61..72          = MultiBarBottomLeftButton     MULTIACTIONBAR1BUTTON..BarSlot /
--- 73..84          = ActionButton                 NONE                           3
--- 85..16          = ActionButton                 NONE                           4
--- 97..108         = ActionButton                 NONE                           5
--- 109..120        = ActionButton                 NONE                           6
--- Where ActionSlot is in 1..132 and BarSlot is in 1..12 for MULTIACTIONBARs.
+-- 73..120         = N/A (Class Reserved)         NONE                           /
+-- 121..132        = N/A (Skyriding)              NONE                           /
+-- 133..144        = N/A (Unknown)                NONE                           /
+-- 145..156        = MultiBar5Button              MULTIACTIONBAR5BUTTON..BarSlot /
+-- 157..168        = MultiBar6Button              MULTIACTIONBAR6BUTTON..BarSlot /
+-- 169..180        = MultiBar7Button              MULTIACTIONBAR7BUTTON..BarSlot /
+-- Where ActionSlot is in 1..180 and BarSlot is in 1..12 for MULTIACTIONBARs.
 -- Technically, ACTIONBUTTON commands above 12 are not bindables by default (hence why Dominos use virtual bars for those).
--- We ignore Slots from 121 to 132 because these aren't controlled by the player (Possess bar).
+-- We ignore Slots from 121 to 144 because these aren't controlled by the player (Skyriding and Possess bars).
 
 local ButtonByAddOn = {
   Bartender = {
     [1] = { "BT4Button", "CLICK BT4Button%i:LeftButton" },
   },
   Blizzard = {
-    [1]  = { "ActionButton",              "ACTIONBUTTON%i" },
-    [2]  = { "ActionButton",              nil },
-    [3]  = { "MultiBarRightButton",       "MULTIACTIONBAR3BUTTON%i" },
-    [4]  = { "MultiBarLeftButton",        "MULTIACTIONBAR4BUTTON%i" },
-    [5]  = { "MultiBarBottomRightButton", "MULTIACTIONBAR2BUTTON%i" },
-    [6]  = { "MultiBarBottomLeftButton",  "MULTIACTIONBAR1BUTTON%i" },
-    [7]  = { "ActionButton",              nil },
-    [8]  = { "ActionButton",              nil },
-    [9]  = { "ActionButton",              nil },
-    [10] = { "ActionButton",              nil },
+    -- Note: These are ordered by the bars as shown in-game.
+    [1]  = { "ActionButton",              "ACTIONBUTTON%i" },          -- Edit Mode Bar 1
+    [6]  = { "MultiBarBottomLeftButton",  "MULTIACTIONBAR1BUTTON%i" }, -- Edit Mode Bar 2
+    [5]  = { "MultiBarBottomRightButton", "MULTIACTIONBAR2BUTTON%i" }, -- Edit Mode Bar 3
+    [3]  = { "MultiBarRightButton",       "MULTIACTIONBAR3BUTTON%i" }, -- Edit Mode Bar 4
+    [4]  = { "MultiBarLeftButton",        "MULTIACTIONBAR4BUTTON%i" }, -- Edit Mode Bar 5
+    [2]  = { "MultiBar5Button",           "MULTIACTIONBAR5BUTTON%i" }, -- Edit Mode Bar 6
+    [7]  = { "MultiBar6Button",           "MULTIACTIONBAR6BUTTON%i" }, -- Edit Mode Bar 7
+    [8]  = { "MultiBar7Button",           "MULTIACTIONBAR7BUTTON%i" }, -- Edit Mode Bar 8
+    [9]  = { "MultiBar8Button",           "MULTIACTIONBAR8BUTTON%i" }, -- Unknown... this might be the Skyriding bar?
+    [10] = { "MultiBar9Button",           "MULTIACTIONBAR9BUTTON%i" }, -- Unknown... might also be the Skyriding bar?
   },
   Dominos = {
     [1]  = { "ActionButton",              "ACTIONBUTTON%i"                         },
@@ -129,7 +132,19 @@ local ButtonByAddOn = {
 } -- { [AddOn] = { [BarIndex] = { [1] = ButtonBaseName, [2] = CommandNameFormat } } }
 
 local function GetBarInfo(ActionSlot)
-  local BarIndex = mathceil(ActionSlot / 12)
+  -- Blizzard default bars 6 through 8 are offset to ActionSlots 145 through 180.
+  local BarIndex
+  if ActionSlot >= 145 and ActionSlot <= 156 then
+    BarIndex = 2
+  elseif ActionSlot >= 157 and ActionSlot <= 168 then
+    BarIndex = 7
+  elseif ActionSlot >= 169 and ActionSlot <= 180 then
+    BarIndex = 8
+  elseif ActionSlot >= 121 and ActionSlot <= 144 then
+    BarIndex = 10 -- Dummy just to avoid errors for these slots.
+  else
+    BarIndex = mathceil(ActionSlot / 12)
+  end
   local BarSlot = ActionSlot % 12
   if BarSlot == 0 then BarSlot = 12 end
 
@@ -143,14 +158,7 @@ local function GetButtonInfo(ActionSlot, Blizzard)
   if Blizzard then
     -- Blizzard
     ButtonBaseName = ButtonByAddOn.Blizzard[BarIndex][1]
-
-    if BarIndex >= 3 or BarIndex <= 6 then
-      -- Bar 3 to 6: MultiBarXXXButton
-      ButtonSlot = BarSlot
-    else
-      -- Bar 1 to 2 and 7 to 10: ActionButton
-      ButtonSlot = ActionSlot
-    end
+    ButtonSlot = BarSlot
   elseif _G.Bartender4 then
     -- Bartender
     ButtonBaseName = ButtonByAddOn.Bartender[1][1]
@@ -307,7 +315,7 @@ end
 
 local function UpdateAction(ActionSlot)
   -- Prevent update for other actions than the one from ability bars.
-  if not ActionSlot or ActionSlot <= 0 or ActionSlot > 120 then return end
+  if not ActionSlot or ActionSlot <= 0 or ActionSlot > 180 then return end
 
   -- Clear the action info cached from the previous update.
   ClearAction(ActionSlot)
@@ -363,7 +371,7 @@ HL:RegisterForEvent(function(Event, ActionSlot) UpdateAction(ActionSlot) end, "A
 
 HL:RegisterForEvent(
   function()
-    for i = 1, 120 do
+    for i = 1, 180 do
       UpdateAction(i)
     end
   end,

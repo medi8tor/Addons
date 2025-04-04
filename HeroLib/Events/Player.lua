@@ -115,12 +115,14 @@ local function BookScan(BlankScan)
     -- Flyout Spells
     for i = 1, GetNumFlyouts() do
       local FlyoutID = GetFlyoutID(i)
-      local NumSlots, IsKnown = select(3, GetFlyoutInfo(FlyoutID))
-      if IsKnown and NumSlots > 0 then
-        for j = 1, NumSlots do
-          local CurrentSpellID, _, IsKnownSpell = GetFlyoutSlotInfo(FlyoutID, j)
-          if CurrentSpellID and IsKnownSpell then
-            SpellLearned[CurrentSpellID] = true
+      if FlyoutID then
+        local NumSlots, IsKnown = select(3, GetFlyoutInfo(FlyoutID))
+        if IsKnown and NumSlots > 0 then
+          for j = 1, NumSlots do
+            local CurrentSpellID, _, IsKnownSpell = GetFlyoutSlotInfo(FlyoutID, j)
+            if CurrentSpellID and IsKnownSpell then
+              SpellLearned[CurrentSpellID] = true
+            end
           end
         end
       end
@@ -190,7 +192,7 @@ HL:RegisterForEvent(
     Player:UpdateEquipment()
     local Equip = Player:GetEquipment()
     for i=1,16 do
-      if slot ~= 4 and not Equip[slot] then
+      if i ~= 4 and not Equip[i] then
         C_Timer.After(2, function()
             Player:UpdateEquipment()
           end
@@ -239,7 +241,7 @@ HL:RegisterForEvent(
                   end
                 end
               end
-              if (ActiveTalent and TalentRank > 0) then
+              if ActiveTalent and TalentRank and TalentRank > 0 then
                 local TalentEntryID = ActiveTalent.entryID
                 local TalentEntryInfo = GetEntryInfo(TalentConfigID, TalentEntryID)
                 -- There are entries for SubTree (Hero Talents) items, as of TWW.
@@ -249,8 +251,10 @@ HL:RegisterForEvent(
                   local DefinitionID = TalentEntryInfo["definitionID"]
                   local DefinitionInfo = GetDefinitionInfo(DefinitionID)
                   local SpellID = DefinitionInfo["spellID"]
-                  local SpellName = GetSpellInfo(SpellID)
-                  Cache.Persistent.Talents[SpellID] = (Cache.Persistent.Talents[SpellID]) and (Cache.Persistent.Talents[SpellID] + TalentRank) or TalentRank
+                  if SpellID then
+                    local SpellName = GetSpellInfo(SpellID)
+                    Cache.Persistent.Talents[SpellID] = (Cache.Persistent.Talents[SpellID]) and (Cache.Persistent.Talents[SpellID] + TalentRank) or TalentRank
+                  end
                 end
               end
             end

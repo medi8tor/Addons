@@ -78,29 +78,31 @@ HL.Action = Action
 -- 37..48          = MultiBarLeftButton           MULTIACTIONBAR4BUTTON..BarSlot /
 -- 49..60          = MultiBarBottomRightButton    MULTIACTIONBAR2BUTTON..BarSlot /
 -- 61..72          = MultiBarBottomLeftButton     MULTIACTIONBAR1BUTTON..BarSlot /
--- 73..84          = ActionButton                 NONE                           3
--- 85..16          = ActionButton                 NONE                           4
--- 97..108         = ActionButton                 NONE                           5
--- 109..120        = ActionButton                 NONE                           6
--- Where ActionSlot is in 1..132 and BarSlot is in 1..12 for MULTIACTIONBARs.
+-- 73..120         = N/A (Class Reserved)         NONE                           /
+-- 121..132        = N/A (Skyriding)              NONE                           /
+-- 133..144        = N/A (Unknown)                NONE                           /
+-- 145..156        = MultiBar5Button              MULTIACTIONBAR5BUTTON..BarSlot /
+-- 157..168        = MultiBar6Button              MULTIACTIONBAR6BUTTON..BarSlot /
+-- 169..180        = MultiBar7Button              MULTIACTIONBAR7BUTTON..BarSlot /
+-- Where ActionSlot is in 1..180 and BarSlot is in 1..12 for MULTIACTIONBARs.
 -- Technically, ACTIONBUTTON commands above 12 are not bindables by default (hence why Dominos use virtual bars for those).
--- We ignore Slots from 121 to 132 because these aren't controlled by the player (Possess bar).
+-- We ignore Slots from 121 to 144 because these aren't controlled by the player (Skyriding and Possess bars).
 
 local ButtonByAddOn = {
   Bartender = {
     [1] = { "BT4Button", "CLICK BT4Button%i:LeftButton" },
   },
   Blizzard = {
-    [1]  = { "ActionButton",              "ACTIONBUTTON%i" },
-    [2]  = { "ActionButton",              nil },
-    [3]  = { "MultiBarRightButton",       "MULTIACTIONBAR3BUTTON%i" },
-    [4]  = { "MultiBarLeftButton",        "MULTIACTIONBAR4BUTTON%i" },
-    [5]  = { "MultiBarBottomRightButton", "MULTIACTIONBAR2BUTTON%i" },
-    [6]  = { "MultiBarBottomLeftButton",  "MULTIACTIONBAR1BUTTON%i" },
-    [7]  = { "ActionButton",              nil },
-    [8]  = { "ActionButton",              nil },
-    [9]  = { "ActionButton",              nil },
-    [10] = { "ActionButton",              nil },
+    [1]  = { "ActionButton",              "ACTIONBUTTON%i" },          -- Edit Mode Bar 1
+    [6]  = { "MultiBarBottomLeftButton",  "MULTIACTIONBAR1BUTTON%i" }, -- Edit Mode Bar 2
+    [5]  = { "MultiBarBottomRightButton", "MULTIACTIONBAR2BUTTON%i" }, -- Edit Mode Bar 3
+    [3]  = { "MultiBarRightButton",       "MULTIACTIONBAR3BUTTON%i" }, -- Edit Mode Bar 4
+    [4]  = { "MultiBarLeftButton",        "MULTIACTIONBAR4BUTTON%i" }, -- Edit Mode Bar 5
+    [2]  = { "MultiBar5Button",           "MULTIACTIONBAR5BUTTON%i" }, -- Edit Mode Bar 6
+    [7]  = { "MultiBar6Button",           "MULTIACTIONBAR6BUTTON%i" }, -- Edit Mode Bar 7
+    [8]  = { "MultiBar7Button",           "MULTIACTIONBAR7BUTTON%i" }, -- Edit Mode Bar 8
+    [9]  = { "MultiBar8Button",           "MULTIACTIONBAR8BUTTON%i" }, -- Unknown... this might be the Skyriding bar?
+    [10] = { "MultiBar9Button",           "MULTIACTIONBAR9BUTTON%i" }, -- Unknown... might also be the Skyriding bar?
   },
   Dominos = {
     [1]  = { "ActionButton",              "ACTIONBUTTON%i"                         },
