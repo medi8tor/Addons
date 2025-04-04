@@ -182,7 +182,7 @@ local function v79(v106, v107)
 		end
 	end
 	if v31.BlackPowder:IsCastable() then
-		if ((not v51 and v54 and (((v40 >= (7 - 5)) and v31.DeathStalkersMark:IsAvailable() and (v6:BuffDown(v31.DarkestNightBuff) or (v6:BuffUp(v31.ShadowDanceBuff) and (v40 >= (447 - (416 + 26)))))) or (v31.UnseenBlade:IsAvailable() and (v40 >= (22 - 15))))) or v31.CoupDeGrace:IsReady()) then
+		if ((not v51 and v54 and (((v40 >= (7 - 5)) and v31.DeathStalkersMark:IsAvailable() and (v6:BuffDown(v31.DarkestNightBuff) or (v6:BuffUp(v31.ShadowDanceBuff) and (v40 >= (447 - (416 + 26)))))) or (v31.UnseenBlade:IsAvailable() and (v40 >= (15 - 10))))) or v31.CoupDeGrace:IsReady()) then
 			if v106 then
 				return v31.BlackPowder;
 			elseif v18(v31.BlackPowder, nil, not v37) then
