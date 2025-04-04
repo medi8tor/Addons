@@ -323,7 +323,7 @@ local function v66()
 		end
 	end
 	if (v18.Execute:IsReady() and v48 and (v6:BuffRemains(v18.JuggernautBuff) <= v6:GCD()) and v18.Juggernaut:IsAvailable()) then
-		if v11(v18.Execute) then
+		if v11(v18.Executecast) then
 			return "execute colossus_execute 18";
 		end
 	end
@@ -604,7 +604,7 @@ local function v69()
 		end
 	end
 	if (v18.Execute:IsReady() and v48 and ((v6:BuffUp(v18.SweepingStrikesBuff) and (v7:DebuffStack(v18.ExecutionersPrecisionDebuff) < (1 + 1)) and v18.ExecutionersPrecision:IsAvailable()) or v7:DebuffUp(v18.MarkedforExecutionDebuff))) then
-		if v11(v18.Execute) then
+		if v11(v18.Executecast) then
 			return "execute slayer_aoe 28";
 		end
 	end
@@ -634,7 +634,7 @@ local function v69()
 		end
 	end
 	if (v18.Execute:IsReady() and v48) then
-		if v11(v18.Execute) then
+		if v11(v18.Executecast) then
 			return "execute slayer_aoe 40";
 		end
 	end
