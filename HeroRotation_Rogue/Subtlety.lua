@@ -182,7 +182,7 @@ local function v79(v106, v107)
 		end
 	end
 	if v31.BlackPowder:IsCastable() then
-		if (not v51 and v54 and (((v40 >= (7 - 5)) and v31.DeathStalkersMark:IsAvailable() and (v6:BuffDown(v31.DarkestNightBuff) or (v6:BuffUp(v31.ShadowDanceBuff) and (v40 >= (447 - (416 + 26)))))) or (v31.UnseenBlade:IsAvailable() and (v40 >= (22 - 15))))) then
+		if ((not v51 and v54 and (((v40 >= (7 - 5)) and v31.DeathStalkersMark:IsAvailable() and (v6:BuffDown(v31.DarkestNightBuff) or (v6:BuffUp(v31.ShadowDanceBuff) and (v40 >= (447 - (416 + 26)))))) or (v31.UnseenBlade:IsAvailable() and (v40 >= (22 - 15))))) or v31.CoupDeGrace:IsReady()) then
 			if v106 then
 				return v31.BlackPowder;
 			elseif v18(v31.BlackPowder, nil, not v37) then
@@ -200,6 +200,20 @@ local function v79(v106, v107)
 	return false;
 end
 local function v80(v108, v109)
+	if ((v31.Backstab:IsReady() and v7:IsSpellInRange(v31.Backstab) and (v6:BuffUp(v31.ShadowDanceBuff) or v109) and not v76(v31.Backstab)) or (not v52 and v6:BuffUp(v31.ShadowBlades))) then
+		if v108 then
+			return v31.Backstab;
+		elseif v18(v31.Backstab) then
+			return "Cast Backstab";
+		end
+	end
+	if ((v31.Gloomblade:IsReady() and v7:IsSpellInRange(v31.Gloomblade) and (v6:BuffUp(v31.ShadowDanceBuff) or v109) and not v76(v31.Gloomblade)) or (not v52 and v6:BuffUp(v31.ShadowBlades))) then
+		if v108 then
+			return v31.Gloomblade;
+		elseif v18(v31.Gloomblade) then
+			return "Cast Gloomblade";
+		end
+	end
 	if (v31.Shadowstrike:IsReady() and v14.AoEON() and v6:StealthUp(true, false)) then
 		if (((v40 == (1 + 1)) and v31.UnseenBlade:IsAvailable()) or (not v76(v31.Shadowstrike) and not v31.Premeditation:IsAvailable())) then
 			if v18(v31.Shadowstrike) then
@@ -217,7 +231,7 @@ local function v80(v108, v109)
 		end
 	end
 	if (v65() and v31.ShurikenStorm:IsReady() and not v109 and v14.AoEON()) then
-		if (v6:BuffUp(v31.ClearTheWitnessesBuff) and (v40 >= (1488 - (998 + 488)))) then
+		if (v6:BuffUp(v31.ClearTheWitnessesBuff) and ((v40 >= (1488 - (998 + 488))) or v6:BuffDown(v31.SymbolsofDeath))) then
 			if v108 then
 				return v31.ShurikenStorm;
 			elseif v18(v31.ShurikenStorm) then
@@ -236,13 +250,20 @@ local function v80(v108, v109)
 			end
 		end
 	end
-	if (v65() and v31.ShurikenStorm:IsReady() and not v109 and v14.AoEON()) then
-		if ((v31.DeathStalkersMark:IsAvailable() and not v6:BuffUp(v31.PremeditationBuff) and (v40 >= (2 + 0 + ((775 - (201 + 571)) * v21(v6:BuffUp(v31.ShadowDanceBuff)))))) or (v6:BuffUp(v31.ClearTheWitnessesBuff) and not v6:BuffUp(v31.SymbolsofDeath)) or (v6:BuffUp(v31.FlawlessFormBuff) and (v40 >= (1141 - (116 + 1022))) and not v52) or (v31.UnseenBlade:IsAvailable() and (v6:BuffStack(v31.TheRottenBuff) == (4 - 3)) and (v40 >= (5 + 2)) and v6:BuffUp(v31.ShadowDanceBuff))) then
+	if (v31.ShurikenStorm:IsReady() and not v109 and v14.AoEON()) then
+		if (v31.DeathStalkersMark:IsAvailable() and (v40 >= (2 + 0 + ((775 - (201 + 571)) * v21(v6:BuffUp(v31.ShadowDanceBuff)))))) then
 			if v108 then
 				return v31.ShurikenStorm;
 			elseif v18(v31.ShurikenStorm) then
 				return "Cast ShurikenStorm";
 			end
+		end
+	end
+	if (v31.ShurikenStorm:IsReady() and not v109 and v14.AoEON() and v31.UnseenBlade:IsAvailable() and ((v6:BuffUp(v31.FlawlessFormBuff) and (v40 >= (1141 - (116 + 1022))) and not v52) or ((v6:BuffStack(v31.TheRottenBuff) == (4 - 3)) and (v40 >= (5 + 2)) and v6:BuffUp(v31.ShadowDanceBuff)))) then
+		if v108 then
+			return v31.ShurikenStorm;
+		elseif v18(v31.ShurikenStorm) then
+			return "Cast ShurikenStorm";
 		end
 	end
 	if ((v31.Shadowstrike:IsReady() and v7:IsSpellInRange(v31.Shadowstrike)) or v109) then
@@ -316,7 +337,7 @@ local function v82()
 	end
 	if v63.Commons.Enabled.Potions then
 		local v124 = v29.PotionSelected();
-		if (v124 and v124:IsReady() and (v6:BloodlustUp() or v3.BossFilteredFightRemains("<", 915 - (261 + 624)) or v6:BuffUp(v31.FlagellationBuff)) and (v6:BuffUp(v31.ShadowBlades) or (v31.ShadowBlades:CooldownRemains() <= (17 - 7)))) then
+		if (v124 and v124:IsReady() and (v6:BloodlustUp() or v3.BossFilteredFightRemains("<", 915 - (261 + 624)) or v6:BuffUp(v31.SymbolsofDeath)) and (v6:BuffUp(v31.ShadowBlades) or (v31.ShadowBlades:CooldownRemains() <= (17 - 7)))) then
 			v14.CastMacro(1083 - (1020 + 60), nil, nil, v124);
 			return "Cast Potion";
 		end
@@ -342,8 +363,8 @@ local function v82()
 			end
 		end
 	end
-	if (v66() and v7:IsSpellInRange(v31.Flagellation) and v31.Flagellation:IsAvailable() and v31.Flagellation:IsReady() and (v31.ShadowDance:IsReady() or v6:BuffUp(v31.ShadowDanceBuff)) and (v31.SymbolsofDeath:IsReady() or v6:BuffUp(v31.SymbolsofDeath)) and (v31.ShadowBlades:IsReady() or v6:BuffUp(v31.ShadowBlades) or (v31.ShadowBlades:CooldownRemains() <= (1916 - (1789 + 124))))) then
-		if ((v49 >= (771 - (745 + 21))) or v3.BossFilteredFightRemains("<=", 9 + 16)) then
+	if (v66() and v7:IsSpellInRange(v31.Flagellation) and v31.Flagellation:IsAvailable() and v31.Flagellation:IsReady() and (v31.ShadowDance:IsReady() or v6:BuffUp(v31.ShadowDanceBuff)) and (v31.SymbolsofDeath:IsReady() or v6:BuffUp(v31.SymbolsofDeath)) and (v31.ShadowBlades:IsReady() or v6:BuffUp(v31.ShadowBlades))) then
+		if (((v49 >= (1918 - (1789 + 124))) and (v31.ShadowBlades:CooldownRemains() <= (769 - (745 + 21)))) or v3.BossFilteredFightRemains("<=", 9 + 16)) then
 			if v18(v31.Flagellation) then
 				return "Cast Flagellation";
 			end
@@ -389,14 +410,21 @@ local function v84()
 				end
 			end
 		end
+		if v32.MadQueensMandate:IsEquippedAndReady() then
+			if ((v7:IsInRange(196 - 146) and (not v31.LingeringDarkness:IsAvailable() or v6:BuffUp(v31.LingeringDarknessBuff) or v32.TreacherousTransmitter:IsEquipped()) and (not v32.TreacherousTransmitter:IsEquipped() or (v32.TreacherousTransmitter:CooldownRemains() > (1 + 19)))) or v3.BossFilteredFightRemains("<=", 12 + 3)) then
+				if v18(v32.MadQueensMandate) then
+					return "Mad Queens Mandate";
+				end
+			end
+		end
 		local v125;
-		local v126 = 392 - 292;
+		local v126 = 1155 - (87 + 968);
 		if v60 then
 			v125 = v60:OnUseSpell();
-			v126 = (v125 and (v125.MaximumRange > (0 + 0)) and (v125.MaximumRange <= (79 + 21)) and v125.MaximumRange) or (1155 - (87 + 968));
+			v126 = (v125 and (v125.MaximumRange > (0 - 0)) and (v125.MaximumRange <= (91 + 9)) and v125.MaximumRange) or (226 - 126);
 		end
 		if v78(v60) then
-			if (not v13(v33, v60:ID()) and (((v77() == (4 - 3)) and (v6:BuffUp(v31.ShadowBlades) or ((1 + 0 + v31.ShadowBlades:CooldownRemains()) >= v60:CooldownRemains()) or v3.BossFilteredFightRemains("<=", 45 - 25))) or ((v77() == (1415 - (447 + 966))) and not v61:IsReady() and not v6:BuffUp(v31.ShadowBlades) and (v31.ShadowBlades:CooldownRemains() > (54 - 34))) or (v77() == (1817 - (1703 + 114))))) then
+			if (not v13(v33, v60:ID()) and (((v77() == (1414 - (447 + 966))) and (v6:BuffUp(v31.ShadowBlades) or (((2 - 1) + v31.ShadowBlades:CooldownRemains()) >= v60:CooldownRemains()) or v3.BossFilteredFightRemains("<=", 1837 - (1703 + 114)))) or ((v77() == (703 - (376 + 325))) and not v61:IsReady() and not v6:BuffUp(v31.ShadowBlades) and (v31.ShadowBlades:CooldownRemains() > (32 - 12))) or (v77() == (0 - 0)))) then
 				if v18(v60) then
 					return "Generic use_items for " .. v60:Name();
 				end
@@ -404,10 +432,10 @@ local function v84()
 		end
 		if v61 then
 			v125 = v61:OnUseSpell();
-			v126 = (v125 and (v125.MaximumRange > (701 - (376 + 325))) and (v125.MaximumRange <= (163 - 63)) and v125.MaximumRange) or (307 - 207);
+			v126 = (v125 and (v125.MaximumRange > (0 + 0)) and (v125.MaximumRange <= (220 - 120)) and v125.MaximumRange) or (114 - (9 + 5));
 		end
 		if v78(v61) then
-			if (not v13(v33, v61:ID()) and (((v77() == (1 + 1)) and (v6:BuffUp(v31.ShadowBlades) or (((2 - 1) + v31.ShadowBlades:CooldownRemains()) >= v61:CooldownRemains()) or v3.BossFilteredFightRemains("<=", 34 - (9 + 5)))) or ((v77() == (377 - (85 + 291))) and not v60:IsReady() and not v6:BuffUp(v31.ShadowBlades) and (v31.ShadowBlades:CooldownRemains() > (1285 - (243 + 1022)))) or (v77() == (0 - 0)))) then
+			if (not v13(v33, v61:ID()) and (((v77() == (378 - (85 + 291))) and (v6:BuffUp(v31.ShadowBlades) or (((1266 - (243 + 1022)) + v31.ShadowBlades:CooldownRemains()) >= v61:CooldownRemains()) or v3.BossFilteredFightRemains("<=", 76 - 56))) or ((v77() == (1 + 0)) and not v60:IsReady() and not v6:BuffUp(v31.ShadowBlades) and (v31.ShadowBlades:CooldownRemains() > (1200 - (1123 + 57)))) or (v77() == (0 + 0)))) then
 				if v18(v61) then
 					return "Generic use_items for " .. v61:Name();
 				end
@@ -419,7 +447,7 @@ end
 local function v85()
 	if v64() then
 		if v31.ShadowDance:IsReady() then
-			if ((v57 and v54 and (v31.SecretTechnique:CooldownRemains() <= (20 + 4)) and ((v6:BuffRemains(v31.SymbolsofDeath) >= (1186 - (1123 + 57))) or (v6:BuffRemains(v31.ShadowBlades) >= (5 + 1)))) or v3.BossFilteredFightRemains("<=", 264 - (163 + 91))) then
+			if ((v57 and v54 and (v31.SecretTechnique:CooldownRemains() <= (278 - (163 + 91))) and ((v6:BuffRemains(v31.SymbolsofDeath) >= (1936 - (1869 + 61))) or (v6:BuffRemains(v31.ShadowBlades) >= (2 + 4)))) or v3.BossFilteredFightRemains("<=", 35 - 25)) then
 				v42 = v81(v31.ShadowDance);
 				if v42 then
 					return "Shadow Dance Macro " .. v42;
@@ -427,14 +455,14 @@ local function v85()
 			end
 		end
 		if (v31.Vanish:IsReady() and v64()) then
-			if ((v6:Energy() >= (1970 - (1869 + 61))) and not v6:BuffUp(v31.Subterfuge) and (v48 <= (1 + 2))) then
+			if ((v6:Energy() >= (61 - 21)) and not v6:BuffUp(v31.Subterfuge) and (v48 <= (1 + 2))) then
 				v42 = v81(v31.Vanish);
 				if v42 then
 					return "Vanish Macro " .. v42;
 				end
 			end
 		end
-		if (v63.Commons.ShowPooling and v31.Shadowmeld:IsReady() and (v6:Energy() >= (140 - 100)) and (v50 >= (4 - 1))) then
+		if (v63.Commons.ShowPooling and v31.Shadowmeld:IsReady() and (v6:Energy() >= (54 - 14)) and (v50 >= (3 + 0))) then
 			v42 = v81(v31.Shadowmeld);
 			if v42 then
 				return "Shadowmeld Macro " .. v42;
@@ -445,7 +473,7 @@ local function v85()
 end
 local function v86()
 	if (v66() or v14.CDsON()) then
-		if (v31.ArcaneTorrent:IsReady() and (v6:EnergyDeficitPredicted() >= (3 + 12 + v6:EnergyRegen()))) then
+		if (v31.ArcaneTorrent:IsReady() and (v6:EnergyDeficitPredicted() >= ((1489 - (1329 + 145)) + v6:EnergyRegen()))) then
 			if v18(v31.ArcaneTorrent, true) then
 				return "Cast Arcane Torrent";
 			end
@@ -471,26 +499,26 @@ local function v87()
 	v29.HealthPotions();
 	v43 = nil;
 	v45 = nil;
-	v44 = 0 - 0;
-	v34 = 5 + 0;
-	v35 = 1484 - (1329 + 145);
+	v44 = 971 - (140 + 831);
+	v34 = 1855 - (1409 + 441);
+	v35 = 728 - (15 + 703);
 	v36 = v7:IsInMeleeRange(v34);
 	v37 = v7:IsInMeleeRange(v35);
 	v58 = v3.BossFightRemains();
 	v59 = true;
-	if (v58 == (12082 - (140 + 831))) then
+	if (v58 == (5146 + 5965)) then
 		v59 = false;
 		v58 = v3.FightRemains(v38, false);
 	end
 	if v15() then
-		v38 = v6:GetEnemiesInRange(1880 - (1409 + 441));
+		v38 = v6:GetEnemiesInRange(468 - (262 + 176));
 		v39 = v6:GetEnemiesInMeleeRange(v35);
 		v40 = #v39;
 		v41 = v6:GetEnemiesInMeleeRange(v34);
 	else
 		v38 = {};
 		v39 = {};
-		v40 = 719 - (15 + 703);
+		v40 = 1722 - (345 + 1376);
 		v41 = {};
 	end
 	v49 = v6:ComboPoints();
@@ -498,23 +526,23 @@ local function v87()
 	v50 = v6:ComboPointsDeficit();
 	v51 = v70();
 	v52 = v6:StealthUp(true, false);
-	v53 = v6:BuffUp(v31.ShadowDanceBuff) or v6:BuffDown(v31.SliceandDice) or v6:BuffUp(v31.DarkestNightBuff) or ((v40 >= (4 + 4)) and not v31.ReplicatingShadows:IsAvailable() and v31.UnseenBlade:IsAvailable());
-	v54 = (v7:DebuffUp(v31.Rupture) or v53) and v6:BuffUp(v31.SliceandDice);
-	v55 = v6:BuffUp(v31.ShadowDanceBuff) or ((v31.Flagellation:CooldownRemains() < (478 - (262 + 176))) and (v31.Flagellation:CooldownRemains() > (1741 - (345 + 1376))) and v31.DeathPerception:IsAvailable());
-	v56 = (v6:BuffUp(v31.ShadowBlades) and v6:BuffUp(v31.ShadowDanceBuff)) or (not v31.ShadowBlades:IsAvailable() and v6:BuffUp(v31.SymbolsofDeath)) or v3.BossFilteredFightRemains("<", 708 - (198 + 490));
-	v57 = (v49 <= (4 - 3)) or (v6:BuffUp(v31.DarkestNightBuff) and (v49 >= (16 - 9))) or ((v48 >= (1212 - (696 + 510))) and v31.UnseenBlade:IsAvailable());
+	v53 = v6:BuffUp(v31.ShadowDanceBuff) or v6:BuffDown(v31.SliceandDice) or v6:BuffUp(v31.DarkestNightBuff) or ((v40 >= (696 - (198 + 490))) and not v31.ReplicatingShadows:IsAvailable() and v31.UnseenBlade:IsAvailable());
+	v54 = (v7:DebuffUp(v31.Rupture) or v53) and (v6:BuffUp(v31.SliceandDice) or (v40 <= (8 - 6)));
+	v55 = v6:BuffUp(v31.ShadowDanceBuff) or ((v31.Flagellation:CooldownRemains() < (95 - 55)) and (v31.Flagellation:CooldownRemains() > (1226 - (696 + 510))) and v31.DeathPerception:IsAvailable());
+	v56 = (v6:BuffUp(v31.ShadowBlades) and v6:BuffUp(v31.ShadowDanceBuff)) or (not v31.ShadowBlades:IsAvailable() and v6:BuffUp(v31.SymbolsofDeath)) or v3.BossFilteredFightRemains("<", 41 - 21);
+	v57 = (v49 <= (1263 - (1091 + 171))) or (v6:BuffUp(v31.DarkestNightBuff) and (v49 >= (2 + 5))) or ((v48 >= (18 - 12)) and v31.UnseenBlade:IsAvailable());
 	if (v6:BuffUp(v31.ShurikenTornado, nil, true) and (v49 < v30.CPMaxSpend())) then
 		local v127 = v30.TimeToNextTornado();
 		if ((v127 <= v6:GCDRemains()) or (v27(v6:GCDRemains() - v127) < (0.25 - 0))) then
 			local v129 = v40 + v21(v6:BuffUp(v31.ShadowBlades));
 			v49 = v25(v49 + v129, v30.CPMaxSpend());
-			v50 = v26(v50 - v129, 1262 - (1091 + 171));
+			v50 = v26(v50 - v129, 374 - (123 + 251));
 			if (v48 < v30.CPMaxSpend()) then
 				v48 = v49;
 			end
 		end
 	end
-	v46 = (1 + 3 + (v48 * (12 - 8))) * (0.3 - 0);
+	v46 = ((19 - 15) + (v48 * (702 - (208 + 490)))) * (0.3 + 0);
 	v47 = v31.Eviscerate:Damage() * v63.Subtlety.EviscerateDMGOffset;
 	v42 = v30.Defense();
 	if v42 then
@@ -532,7 +560,7 @@ local function v87()
 			end
 		end
 		if (v30.CombatCheck() and (v7:IsSpellInRange(v31.Shadowstrike) or v36)) then
-			if (v49 >= (379 - (123 + 251))) then
+			if (v49 >= (3 + 2)) then
 				v42 = v79();
 				if v42 then
 					return v42 .. " (OOC)";
@@ -547,20 +575,20 @@ local function v87()
 		return;
 	end
 	if v30.CombatCheck() then
-		if v14.ToggleIconFrame:GetToggle(14 - 11) then
+		if v14.ToggleIconFrame:GetToggle(839 - (660 + 176)) then
 			v42 = v29.InterruptCycle(v31.Kick, v34, true, nil, false);
 			if v42 then
 				return v42;
 			end
-			v42 = v29.IncorpCycle(v31.Blind, 713 - (208 + 490), true, nil, false);
+			v42 = v29.IncorpCycle(v31.Blind, 2 + 13, true, nil, false);
 			if v42 then
 				return v42;
 			end
-			v42 = v63.Interrupt.UseBlind and v29.InterruptCycle(v31.Blind, 2 + 13, true, nil, true);
+			v42 = v63.Interrupt.UseBlind and v29.InterruptCycle(v31.Blind, 217 - (14 + 188), true, nil, true);
 			if v42 then
 				return v42;
 			end
-			v42 = v63.Interrupt.UseKidneyShot and (v49 > (0 + 0)) and v29.InterruptCycle(v31.KidneyShot, v34, true, nil, true);
+			v42 = v63.Interrupt.UseKidneyShot and (v49 > (675 - (534 + 141))) and v29.InterruptCycle(v31.KidneyShot, v34, true, nil, true);
 			if v42 then
 				return v42;
 			end
@@ -569,7 +597,7 @@ local function v87()
 				return v42;
 			end
 		end
-		v42 = v63.Commons.Enabled.Shiv and v29.SootheCycle(v31.Shiv, 845 - (660 + 176), false, v63.Commons.Enabled["Shiv Auto Target"]);
+		v42 = v63.Commons.Enabled.Shiv and v29.SootheCycle(v31.Shiv, 4 + 5, false, v63.Commons.Enabled["Shiv Auto Target"]);
 		if v42 then
 			return v42;
 		end
@@ -596,7 +624,7 @@ local function v87()
 				return "Stealth CDs: " .. v42;
 			end
 		end
-		if ((not v6:BuffUp(v31.DarkestNightBuff) and (v48 >= (208 - (14 + 188)))) or (v6:BuffUp(v31.DarkestNightBuff) and (v49 == v30.CPMaxSpend()))) then
+		if ((not v6:BuffUp(v31.DarkestNightBuff) and (v48 >= (6 + 0))) or (v6:BuffUp(v31.DarkestNightBuff) and (v49 == v30.CPMaxSpend()))) then
 			v42 = v79();
 			if v42 then
 				return "Finish: " .. v42;
@@ -612,7 +640,7 @@ local function v87()
 				return "Fill: " .. v42;
 			end
 		end
-		if (v31.ShurikenToss:IsCastable() and v7:IsInRange(705 - (534 + 141)) and not v37 and not v6:StealthUp(true, true) and not v6:BuffUp(v31.Sprint) and (v6:EnergyDeficitPredicted() < (9 + 11)) and ((v50 >= (1 + 0)) or (v6:EnergyTimeToMax() <= (1.2 + 0)))) then
+		if (v31.ShurikenToss:IsCastable() and v7:IsInRange(63 - 33) and not v37 and not v6:StealthUp(true, true) and not v6:BuffUp(v31.Sprint) and (v6:EnergyDeficitPredicted() < (31 - 11)) and ((v50 >= (2 - 1)) or (v6:EnergyTimeToMax() <= (1.2 + 0)))) then
 			if v18(v31.ShurikenToss) then
 				return "Cast Shuriken Toss";
 			end
@@ -624,20 +652,20 @@ local function v88(v113, v114)
 end
 local function v89(v115)
 	local v116 = v6:GetEquipment();
-	local v117, v118 = v116[27 - 14], v116[21 - 7];
+	local v117, v118 = v116[9 + 4], v116[410 - (115 + 281)];
 	if (v117 and (v115:ID() == v117)) then
-		return 36 - 23;
+		return 30 - 17;
 	elseif (v118 and (v115:ID() == v118)) then
-		return 8 + 6;
+		return 12 + 2;
 	end
 end
 local function v90()
 	v31.Rupture:RegisterAuraTracking();
 	v63.Subtlety.Display();
-	v29.PostInitialMessage(167 + 94);
+	v29.PostInitialMessage(630 - 369);
 	local v119 = {bloodFuryValue=((v31.BloodFury:IsAvailable() and ("/cast " .. v31.BloodFury:Name() .. "\n")) or (v31.Berserking:IsAvailable() and ("/cast " .. v31.Berserking:Name() .. "\n")) or ""),ColdBlood=((v31.ColdBlood:IsAvailable() and ("/cast " .. v31.ColdBlood:Name() .. "\n")) or ""),SecretTechnique=v31.SecretTechnique:Name()};
-	v3.Timer.PulseOffset = 396.01 - (115 + 281);
+	v3.Timer.PulseOffset = 0.01 - 0;
 	local v121 = "{bloodFuryValue}{ColdBlood}/cast {SecretTechnique}";
 	v14:UpdateMacro("macro1", v88(v121, v119));
 end
-v14.SetAPL(606 - 345, v87, v90);
+v14.SetAPL(1128 - (550 + 317), v87, v90);
