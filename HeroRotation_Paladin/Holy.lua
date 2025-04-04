@@ -500,7 +500,7 @@ local function v117()
 		if v6:IsInRaid() then
 			if (v6:BuffUp(v24.AwakeningMaxBuff) and v18.TargetIsValid() and v7:AffectingCombat() and v6:AffectingCombat() and v6:IsInRange(8 + 22) and v24.Judgment:IsReady()) then
 				if not v24.BoV:IsAvailable() then
-					if v18.AoELogicWithCount(v38.HolySpecialHealing.AwakeningHP, v38.HolySpecialHealing.AwakeningCount, "With Logic", v36) then
+					if v18.AoELogicWithCount(v38.SpecialHealing.AwakeningHP, v38.SpecialHealing.AwakeningCount, "With Logic", v36) then
 						v13.Cast(v24.Judgment);
 						return "Judgement for Awakening Proc - Higher Priority with BoV Active or Untalented";
 					end
