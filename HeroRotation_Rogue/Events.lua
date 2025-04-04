@@ -20,99 +20,99 @@ local v26 = UnitAttackSpeed;
 local v27 = GetTime;
 do
 	local v28 = v27();
-	v19.RtBRemains = function(v48)
-		local v49 = (v28 - v27()) - v2.RecoveryOffset(v48);
-		return ((v49 >= (0 - 0)) and v49) or (0 - 0);
+	v19.RtBRemains = function(v50)
+		local v51 = (v28 - v27()) - v2.RecoveryOffset(v50);
+		return ((v51 >= (0 - 0)) and v51) or (0 - 0);
 	end;
-	v2:RegisterForSelfCombatEvent(function(v50, v50, v50, v50, v50, v50, v50, v50, v50, v50, v50, v51)
-		if (v51 == (609035 - 293527)) then
+	v2:RegisterForSelfCombatEvent(function(v52, v52, v52, v52, v52, v52, v52, v52, v52, v52, v52, v53)
+		if (v53 == (609035 - 293527)) then
 			v28 = v27() + (77 - 47);
 		end
 	end, "SPELL_AURA_APPLIED");
-	v2:RegisterForSelfCombatEvent(function(v52, v52, v52, v52, v52, v52, v52, v52, v52, v52, v52, v53)
-		if (v53 == (316127 - (555 + 64))) then
+	v2:RegisterForSelfCombatEvent(function(v54, v54, v54, v54, v54, v54, v54, v54, v54, v54, v54, v55)
+		if (v55 == (316127 - (555 + 64))) then
 			v28 = v27() + v22(971 - (857 + 74), (598 - (367 + 201)) + v19.RtBRemains(true));
 		end
 	end, "SPELL_AURA_REFRESH");
-	v2:RegisterForSelfCombatEvent(function(v54, v54, v54, v54, v54, v54, v54, v54, v54, v54, v54, v55)
-		if (v55 == (316435 - (214 + 713))) then
+	v2:RegisterForSelfCombatEvent(function(v56, v56, v56, v56, v56, v56, v56, v56, v56, v56, v56, v57)
+		if (v57 == (316435 - (214 + 713))) then
 			v28 = v27();
 		end
 	end, "SPELL_AURA_REMOVED");
 end
 do
 	local v30 = {CrimsonTempest={},Garrote={},Rupture={}};
-	v19.Exsanguinated = function(v56, v57)
-		local v58 = v56:GUID();
-		if not v58 then
+	v19.Exsanguinated = function(v58, v59)
+		local v60 = v58:GUID();
+		if not v60 then
 			return false;
 		end
-		local v59 = v57:ID();
-		if (v59 == (30391 + 91020)) then
-			return v30.CrimsonTempest[v58] or false;
-		elseif (v59 == (111 + 592)) then
-			return v30.Garrote[v58] or false;
-		elseif (v59 == (2820 - (282 + 595))) then
-			return v30.Rupture[v58] or false;
+		local v61 = v59:ID();
+		if (v61 == (30391 + 91020)) then
+			return v30.CrimsonTempest[v60] or false;
+		elseif (v61 == (111 + 592)) then
+			return v30.Garrote[v60] or false;
+		elseif (v61 == (2820 - (282 + 595))) then
+			return v30.Rupture[v60] or false;
 		end
 		return false;
 	end;
-	v19.WillLoseExsanguinate = function(v60, v61)
-		if v19.Exsanguinated(v60, v61) then
+	v19.WillLoseExsanguinate = function(v62, v63)
+		if v19.Exsanguinated(v62, v63) then
 			return true;
 		end
 		return false;
 	end;
-	v19.ExsanguinatedRate = function(v62, v63)
-		if v19.Exsanguinated(v62, v63) then
+	v19.ExsanguinatedRate = function(v64, v65)
+		if v19.Exsanguinated(v64, v65) then
 			return 1639 - (1523 + 114);
 		end
 		return 1 + 0;
 	end;
-	v2:RegisterForSelfCombatEvent(function(v64, v64, v64, v64, v64, v64, v64, v65, v64, v64, v64, v66)
-		if (v66 == (286266 - 85460)) then
-			for v109, v110 in v24(v30) do
-				for v111, v112 in v24(v110) do
-					if (v111 == v65) then
-						v110[v111] = true;
+	v2:RegisterForSelfCombatEvent(function(v66, v66, v66, v66, v66, v66, v66, v67, v66, v66, v66, v68)
+		if (v68 == (286266 - 85460)) then
+			for v113, v114 in v24(v30) do
+				for v115, v116 in v24(v114) do
+					if (v115 == v67) then
+						v114[v115] = true;
 					end
 				end
 			end
 		end
 	end, "SPELL_CAST_SUCCESS");
-	v2:RegisterForSelfCombatEvent(function(v67, v67, v67, v67, v67, v67, v67, v68, v67, v67, v67, v69)
-		if (v69 == (122476 - (68 + 997))) then
-			v30.CrimsonTempest[v68] = false;
-		elseif (v69 == (1973 - (226 + 1044))) then
-			v30.Garrote[v68] = false;
-		elseif (v69 == (8460 - 6517)) then
-			v30.Rupture[v68] = false;
+	v2:RegisterForSelfCombatEvent(function(v69, v69, v69, v69, v69, v69, v69, v70, v69, v69, v69, v71)
+		if (v71 == (122476 - (68 + 997))) then
+			v30.CrimsonTempest[v70] = false;
+		elseif (v71 == (1973 - (226 + 1044))) then
+			v30.Garrote[v70] = false;
+		elseif (v71 == (8460 - 6517)) then
+			v30.Rupture[v70] = false;
 		end
 	end, "SPELL_AURA_APPLIED", "SPELL_AURA_REFRESH");
-	v2:RegisterForSelfCombatEvent(function(v70, v70, v70, v70, v70, v70, v70, v71, v70, v70, v70, v72)
-		if (v72 == (121528 - (32 + 85))) then
-			if (v30.CrimsonTempest[v71] ~= nil) then
-				v30.CrimsonTempest[v71] = nil;
+	v2:RegisterForSelfCombatEvent(function(v72, v72, v72, v72, v72, v72, v72, v73, v72, v72, v72, v74)
+		if (v74 == (121528 - (32 + 85))) then
+			if (v30.CrimsonTempest[v73] ~= nil) then
+				v30.CrimsonTempest[v73] = nil;
 			end
-		elseif (v72 == (689 + 14)) then
-			if (v30.Garrote[v71] ~= nil) then
-				v30.Garrote[v71] = nil;
+		elseif (v74 == (689 + 14)) then
+			if (v30.Garrote[v73] ~= nil) then
+				v30.Garrote[v73] = nil;
 			end
-		elseif (v72 == (431 + 1512)) then
-			if (v30.Rupture[v71] ~= nil) then
-				v30.Rupture[v71] = nil;
+		elseif (v74 == (431 + 1512)) then
+			if (v30.Rupture[v73] ~= nil) then
+				v30.Rupture[v73] = nil;
 			end
 		end
 	end, "SPELL_AURA_REMOVED");
-	v2:RegisterForCombatEvent(function(v73, v73, v73, v73, v73, v73, v73, v74)
-		if (v30.CrimsonTempest[v74] ~= nil) then
-			v30.CrimsonTempest[v74] = nil;
+	v2:RegisterForCombatEvent(function(v75, v75, v75, v75, v75, v75, v75, v76)
+		if (v30.CrimsonTempest[v76] ~= nil) then
+			v30.CrimsonTempest[v76] = nil;
 		end
-		if (v30.Garrote[v74] ~= nil) then
-			v30.Garrote[v74] = nil;
+		if (v30.Garrote[v76] ~= nil) then
+			v30.Garrote[v76] = nil;
 		end
-		if (v30.Rupture[v74] ~= nil) then
-			v30.Rupture[v74] = nil;
+		if (v30.Rupture[v76] ~= nil) then
+			v30.Rupture[v76] = nil;
 		end
 	end, "UNIT_DIED", "UNIT_DESTROYED");
 end
@@ -130,10 +130,10 @@ do
 		end
 		return 180 - (67 + 113);
 	end;
-	v2:RegisterForSelfCombatEvent(function(v75, v75, v75, v75, v75, v75, v75, v75, v75, v75, v75, v76, v75, v75, v77, v78)
-		if (v76 == (136215 + 49548)) then
+	v2:RegisterForSelfCombatEvent(function(v77, v77, v77, v77, v77, v77, v77, v77, v77, v77, v77, v78, v77, v77, v79, v80)
+		if (v78 == (136215 + 49548)) then
 			if ((v27() - v36) > (0.5 - 0)) then
-				v35 = v22(v19.CPMaxSpend(), v6:ComboPoints() + v77 + (v21(0 + 0, v77 - (3 - 2)) * v22(954 - (802 + 150), v6:BuffStack(v34) - (2 - 1))));
+				v35 = v22(v19.CPMaxSpend(), v6:ComboPoints() + v79 + (v21(0 + 0, v79 - (3 - 2)) * v22(954 - (802 + 150), v6:BuffStack(v34) - (2 - 1))));
 				v36 = v27();
 			end
 		end
@@ -146,20 +146,20 @@ do
 		if not v6:BuffUp(v40, nil, true) then
 			return 0 - 0;
 		end
-		local v79 = v6:BuffRemains(v40, nil, true) % (1 + 0);
+		local v81 = v6:BuffRemains(v40, nil, true) % (1 + 0);
 		if (v27() == v38) then
 			return 0 - 0;
-		elseif (((v27() - v38) < (1187.1 - (1069 + 118))) and (v79 < (0.25 - 0))) then
+		elseif (((v27() - v38) < (1187.1 - (1069 + 118))) and (v81 < (0.25 - 0))) then
 			return 1 - 0;
-		elseif (((v79 > (0.9 + 0)) or (v79 == (0 - 0))) and ((v27() - v38) > (0.75 + 0))) then
+		elseif (((v81 > (0.9 + 0)) or (v81 == (0 - 0))) and ((v27() - v38) > (0.75 + 0))) then
 			return 791.1 - (368 + 423);
 		end
-		return v79;
+		return v81;
 	end;
-	v2:RegisterForSelfCombatEvent(function(v80, v80, v80, v80, v80, v80, v80, v80, v80, v80, v80, v81)
-		if (v81 == (668582 - 455839)) then
+	v2:RegisterForSelfCombatEvent(function(v82, v82, v82, v82, v82, v82, v82, v82, v82, v82, v82, v83)
+		if (v83 == (668582 - 455839)) then
 			v38 = v27();
-		elseif (v81 == (197853 - (10 + 8))) then
+		elseif (v83 == (197853 - (10 + 8))) then
 			v39 = v27();
 		end
 		if (v39 == v38) then
@@ -169,42 +169,42 @@ do
 end
 do
 	local v42 = {Counter=(442 - (416 + 26)),LastMH=(0 - 0),LastOH=(0 + 0)};
-	v19.TimeToSht = function(v82)
-		if (v42.Counter >= v82) then
+	v19.TimeToSht = function(v84)
+		if (v42.Counter >= v84) then
 			return 0 - 0;
 		end
-		local v83, v84 = v26("player");
-		local v85 = v21(v42.LastMH + v83, v27());
-		local v86 = v21(v42.LastOH + v84, v27());
-		local v87 = {};
-		for v99 = 438 - (145 + 293), 432 - (44 + 386) do
-			v25(v87, v85 + (v99 * v83));
-			v25(v87, v86 + (v99 * v84));
+		local v85, v86 = v26("player");
+		local v87 = v21(v42.LastMH + v85, v27());
+		local v88 = v21(v42.LastOH + v86, v27());
+		local v89 = {};
+		for v103 = 438 - (145 + 293), 432 - (44 + 386) do
+			v25(v89, v87 + (v103 * v85));
+			v25(v89, v88 + (v103 * v86));
 		end
-		table.sort(v87);
-		local v88 = v22(1491 - (998 + 488), v21(1 + 0, v82 - v42.Counter));
-		return v87[v88] - v27();
+		table.sort(v89);
+		local v90 = v22(1491 - (998 + 488), v21(1 + 0, v84 - v42.Counter));
+		return v89[v90] - v27();
 	end;
 	v2:RegisterForSelfCombatEvent(function()
 		v42.Counter = 0 + 0;
 		v42.LastMH = v27();
 		v42.LastOH = v27();
 	end, "PLAYER_ENTERING_WORLD");
-	v2:RegisterForSelfCombatEvent(function(v92, v92, v92, v92, v92, v92, v92, v92, v92, v92, v92, v93)
-		if (v93 == (197683 - (201 + 571))) then
+	v2:RegisterForSelfCombatEvent(function(v94, v94, v94, v94, v94, v94, v94, v94, v94, v94, v94, v95)
+		if (v95 == (197683 - (201 + 571))) then
 			v42.Counter = 1138 - (116 + 1022);
 		end
 	end, "SPELL_ENERGIZE");
-	v2:RegisterForSelfCombatEvent(function(v94, v94, v94, v94, v94, v94, v94, v94, v94, v94, v94, v94, v94, v94, v94, v94, v94, v94, v94, v94, v94, v94, v94, v95)
+	v2:RegisterForSelfCombatEvent(function(v96, v96, v96, v96, v96, v96, v96, v96, v96, v96, v96, v96, v96, v96, v96, v96, v96, v96, v96, v96, v96, v96, v96, v97)
 		v42.Counter = v42.Counter + (4 - 3);
-		if v95 then
+		if v97 then
 			v42.LastOH = v27();
 		else
 			v42.LastMH = v27();
 		end
 	end, "SWING_DAMAGE");
-	v2:RegisterForSelfCombatEvent(function(v97, v97, v97, v97, v97, v97, v97, v97, v97, v97, v97, v97, v97, v97, v97, v98)
-		if v98 then
+	v2:RegisterForSelfCombatEvent(function(v99, v99, v99, v99, v99, v99, v99, v99, v99, v99, v99, v99, v99, v99, v99, v100)
+		if v100 then
 			v42.LastOH = v27();
 		else
 			v42.LastMH = v27();
@@ -236,5 +236,21 @@ do
 	end, "PLAYER_EQUIPMENT_CHANGED");
 	v19.BaseAttackCrit = function()
 		return v44;
+	end;
+end
+do
+	local v48 = 1080 - (1020 + 60);
+	v2:RegisterForSelfCombatEvent(function(v101, v101, v101, v101, v101, v101, v101, v101, v101, v101, v101, v102)
+		if (v102 == (53113 - (630 + 793))) then
+			v48 = 6 - 4;
+		end
+		if ((v102 == (915299 - 721984)) or (v102 == (3417 + 5259)) or (v102 == (1480587 - 1050564))) then
+			if (v48 > (1747 - (760 + 987))) then
+				v48 = v48 - (1914 - (1789 + 124));
+			end
+		end
+	end, "SPELL_CAST_SUCCESS");
+	v19.DisorientingStrikesCount = function()
+		return v48;
 	end;
 end
