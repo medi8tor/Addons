@@ -1,41 +1,933 @@
-local v0, v1 = ...;
-local v2 = HeroDBC.DBC;
-local v3 = HeroLib;
-local v4 = HeroCache;
-local v5 = v3.Unit;
-local v6 = v5.Player;
-local v7 = v5.Target;
-local v8 = v5.Pet;
-local v9 = v3.Spell;
-local v10 = v3.MultiSpell;
-local v11 = v3.Item;
-local v12 = v3.Utils.MergeTableByKey;
-local v13 = HeroRotation();
-local v14 = v13.Commons().Everyone;
-Warrior = Warrior or {};
-if not v9.Warrior then
-	v9.Warrior = {};
-end
-v9.Warrior.Commons = {AncestralCall=v9(858975 - 584237),ArcaneTorrent=v9(144845 - 94232),BagofTricks=v9(603057 - 290646),Berserking=v9(67738 - 41441),BloodFury=v9(21191 - (555 + 64)),Fireblood=v9(266152 - (857 + 74)),LightsJudgment=v9(256215 - (367 + 201)),BattleShout=v9(7600 - (214 + 713)),BattleStance=v9(96663 + 289501),Charge=v9(16 + 84),HeroicThrow=v9(58632 - (282 + 595)),Pummel=v9(8189 - (1523 + 114)),Slam=v9(1316 + 148),VictoryRush=v9(49079 - 14651),DefensiveStance=v9(387273 - (68 + 997)),Avatar=v9(108844 - (226 + 1044)),BerserkerRage=v9(80551 - 62052),BerserkersTorment=v9(390240 - (32 + 85)),Bladestorm=v10(437119 + 8916, 50527 + 177320, 390731 - (892 + 65)),Bladestormcast=v9(543535 - 315688),BloodandThunder=v9(710310 - 326033),BitterImmunity=v9(704521 - 320759),DoubleTime=v9(104177 - (87 + 263)),ChampionsMight=v9(386464 - (67 + 113)),CrushingForce=v9(280671 + 102093),FrothingBerserker=v9(529261 - 313690),Hurricane=v9(287241 + 103322),ImmovableObject=v9(1567168 - 1172861),IntimidatingShout=v9(6198 - (802 + 150)),HeroicLeap=v9(17618 - 11074),ImpendingVictory=v9(366725 - 164557),OverwhelmingRage=v9(278612 + 104155),RallyingCry=v9(98459 - (915 + 82)),Ravager=v9(648204 - 419284),RumblingEarth=v9(160398 + 114941),Shockwave=v9(61769 - 14801),SonicBoom=v9(391912 - (1069 + 118)),ChampionsSpear=v9(853214 - 477135),SpellReflection=v9(52324 - 28404),StormBolt=v9(18701 + 88869),ThunderClap=v9(11269 - 4926),ThunderousRoar=v9(381244 + 3074),TitanicThrow=v9(384881 - (368 + 423)),WarlordsTorment=v9(1226085 - 835945),WreckingThrow=v9(384128 - (10 + 8)),AvatarBuff=v9(413808 - 306234),BattleShoutBuff=v9(7115 - (416 + 26)),ChampionsMightBuff=v9(1233379 - 847093),HurricaneBuff=v9(167619 + 222962),WarMachineBuff=v9(464001 - 201769),VictoriousBuff=v9(32654 - (145 + 293)),CorruptBuff=v9(422352 - (44 + 386)),SupernovaBuff=v9(425626 - (998 + 488)),ChampionsMightDebuff=v9(119478 + 256602),MarkofFyralathDebuff=v9(339428 + 75104),RavagerDebuff=v9(229692 - (201 + 571)),ThunderousRoarDebuff=v9(398502 - (116 + 1022)),Corruption=v9(1710986 - 1300014),ChargeDebuff=v9(62085 + 43686),Pool=v9(3650362 - 2650452)};
-v9.Warrior.Colossus = {Demolish=v9(1549545 - 1113187),ColossalMightBuff=v9(441848 - (814 + 45))};
-v9.Warrior.MountainThane = {ThunderBlastAbility=v9(1072371 - 637149),CrashingThunder=v9(23532 + 413175),LightningStrikes=v9(153691 + 281278),ThunderBlast=v9(436492 - (261 + 624)),BurstofPowerBuff=v9(776806 - 339685),ThunderBlastBuff=v9(436695 - (1020 + 60))};
-v9.Warrior.Slayer = {SlayersDominance=v9(446190 - (630 + 793)),BrutalFinishBuff=v9(1514456 - 1067538),ImminentDemiseBuff=v9(2109836 - 1664230),OpportunistBuff=v9(179637 + 276483),MarkedforExecutionDebuff=v9(1534165 - 1088581)};
-v9.Warrior.Fury = v12(v9.Warrior.Commons, {BerserkerStance=v9(387943 - (760 + 987)),Bloodbath=v9(337009 - (1789 + 124)),CrushingBlow=v9(335863 - (745 + 21)),Execute=v10(1826 + 3482, 772483 - 491748),Executecast=v9(20820 - 15512),Whirlwind=v9(1557 + 188854),AngerManagement=v9(119557 + 32721),AshenJuggernaut=v9(393591 - (87 + 968)),Bloodthirst=v9(105122 - 81241),DancingBlades=v9(355361 + 36322),EnragedRegeneration=v9(416763 - 232399),ImprovedWhilwind=v9(14363 - (447 + 966)),Massacre=v9(564818 - 358503),MeatCleaver=v9(282209 - (1703 + 114)),OdynsFury=v9(385760 - (376 + 325)),Onslaught=v9(517400 - 201680),RagingBlow=v9(262429 - 177141),Rampage=v9(52688 + 131679),RecklessAbandon=v9(873833 - 477084),Recklessness=v9(1733 - (9 + 5)),SlaughteringStrikes=v9(388380 - (85 + 291)),Tenderize=v9(390198 - (243 + 1022)),TitanicRage=v9(1500491 - 1106162),TitansTorment=v9(321848 + 68287),Unhinged=v9(387808 - (1123 + 57)),ViciousContempt=v9(312346 + 71539),WrathandFury=v9(393190 - (163 + 91)),AshenJuggernautBuff=v9(394467 - (1869 + 61)),BloodbathBuff=v9(128871 + 332417),BloodcrazeBuff=v9(1387500 - 993549),ChampionsMightBuff=v9(593316 - 207030),CrushingBlowBuff=v9(54291 + 342461),DancingBladesBuff=v9(538276 - 146588),EnrageBuff=v9(173166 + 11196),FuriousBloodthirstBuff=v9(424685 - (1329 + 145)),MeatCleaverBuff=v9(86710 - (140 + 831)),MercilessAssaultBuff=v9(411833 - (1409 + 441)),RecklessnessBuff=v9(2437 - (15 + 703)),SuddenDeathBuff=v9(130029 + 150747),GushingWoundDebuff=v9(385480 - (262 + 176)),OdynsFuryDebuff=v9(386781 - (345 + 1376))});
-v9.Warrior.Fury = v12(v9.Warrior.Fury, v9.Warrior.MountainThane);
-v9.Warrior.Fury = v12(v9.Warrior.Fury, v9.Warrior.Slayer);
-v9.Warrior.Arms = v12(v9.Warrior.Commons, {Execute=v10(281688 - (198 + 490), 721015 - 557814),Executecast=v9(391469 - 228268),Whirlwind=v9(2886 - (696 + 510)),BlademastersTorment=v9(818230 - 428092),Bloodletting=v9(384416 - (1091 + 171)),Cleave=v9(136 + 709),ColossusSmash=v9(526103 - 358998),DiebytheSword=v9(391453 - 273415),Dreadnaught=v9(262524 - (123 + 251)),ExecutionersPrecision=v9(1921165 - 1534531),FervorofBattle=v9(203014 - (208 + 490)),IgnorePain=v9(16072 + 174384),ImprovedSweepingStrikes=v9(170675 + 212480),Massacre=v9(281837 - (660 + 176)),MercilessBonegrinder=v9(46054 + 337263),MortalStrike=v9(12496 - (14 + 188)),Overpower=v9(8059 - (534 + 141)),Rend=v9(311 + 461),Skullsplitter=v9(230550 + 30093),SweepingStrikes=v9(250657 + 10051),Unhinged=v9(812516 - 425888),Warbreaker=v9(416211 - 154050),Juggernaut=v9(1105094 - 711127),CollateralDamageBuff=v9(179771 + 155012),JuggernautBuff=v9(244046 + 139244),LethalBlowsBuff=v9(455881 - (115 + 281)),MartialProwessBuff=v9(17175 - 9791),MercilessBonegrinderBuff=v9(317364 + 65952),StrikeVulnerabilitiesBuff=v9(952619 - 558446),SuddenDeathBuff=v9(192275 - 139838),SweepingStrikesBuff=v9(261575 - (550 + 317)),ColossusSmashDebuff=v9(300638 - 92552),DeepWoundsDebuff=v9(368422 - 106307),ExecutionersPrecisionDebuff=v9(1080438 - 693805),RendDebuff=v9(388824 - (134 + 151)),Battlelord=v9(388295 - (970 + 695)),StrengthofArms=v9(764826 - 364023)});
-v9.Warrior.Arms = v12(v9.Warrior.Arms, v9.Warrior.Colossus);
-v9.Warrior.Arms = v12(v9.Warrior.Arms, v9.Warrior.Slayer);
-v9.Warrior.Protection = v12(v9.Warrior.Commons, {Devastate=v9(22233 - (582 + 1408)),Execute=v10(565993 - 402792, 353560 - 72560),Executecast=v9(614999 - 451798),ShieldBlock=v9(4389 - (1195 + 629)),ShieldSlam=v9(31636 - 7714),BarbaricTraining=v9(390916 - (187 + 54)),Bolster=v9(280781 - (162 + 618)),BoomingVoice=v9(142062 + 60681),ChampionsBulwark=v9(257310 + 129018),DemoralizingShout=v9(2473 - 1313),EnduringDefenses=v9(648984 - 262957),HeavyRepercussions=v9(15887 + 187290),IgnorePain=v9(192092 - (1373 + 263)),Intervene=v9(4411 - (451 + 549)),ImpenetrableWall=v9(121237 + 262835),Juggernaut=v9(613111 - 219144),LastStand=v9(21806 - 8831),Massacre=v9(282385 - (746 + 638)),Rend=v9(148301 + 245761),Revenge=v9(9977 - 3405),SeismicReverberation=v9(383297 - (218 + 123)),ShieldCharge=v9(387533 - (1535 + 46)),ShieldWall=v9(866 + 5),SuddenDeath=v9(4302 + 25423),UnnervingFocus=v9(384602 - (306 + 254)),UnstoppableForce=v9(17046 + 258290),EarthenTenacityBuff=v9(805070 - 394852),FervidBuff=v9(426984 - (899 + 568)),LastStandBuff=v9(8529 + 4446),RallyingCryBuff=v9(235851 - 138388),RevengeBuff=v9(5905 - (268 + 335)),SeeingRedBuff=v9(386776 - (60 + 230)),ShieldBlockBuff=v9(132976 - (426 + 146)),ShieldWallBuff=v9(105 + 766),SuddenDeathBuff=v9(53893 - (282 + 1174)),ViolentOutburstBuff=v9(387289 - (569 + 242)),VanguardsDeterminationBuff=v9(1135115 - 741059),RendDebuff=v9(22220 + 366319)});
-v9.Warrior.Protection = v12(v9.Warrior.Protection, v9.Warrior.Colossus);
-v9.Warrior.Protection = v12(v9.Warrior.Protection, v9.Warrior.MountainThane);
-if not v11.Warrior then
-	v11.Warrior = {};
-end
-v11.Warrior.Commons = {AlgetharPuzzleBox=v11(194725 - (706 + 318), {(1284 - (945 + 326)),(13 + 1)}),TreacherousTransmitter=v11(221723 - (271 + 429), {(1513 - (1408 + 92)),(1302 - (993 + 295))}),Fyralath=v11(10720 + 195728, {(7 + 9)}),ShadowedRazingAnnihilator=v11(21133 + 183913, {(5 + 11)})};
-v11.Warrior.Fury = v12(v11.Warrior.Commons, {});
-v11.Warrior.Arms = v12(v11.Warrior.Commons, {});
-v11.Warrior.Protection = v12(v11.Warrior.Commons, {});
-Warrior.SpellReflectList = v14.converArrayToList({(387305 - (1749 + 20)),(1218460 - (1249 + 73)),(370968 - (466 + 679)),(1211228 - 787749),(83693 + 180863),(1259320 - 832779),(342083 - (4 + 110)),(203264 - (41 + 1386)),(217618 + 103019),(202249 - 132410),(132746 - 55895),(42278 + 9693),(141485 - 71645),(61077 + 27786),(294902 - 216899),(141814 - 89127),(70505 - (53 + 267)),(61851 - (15 + 398)),(105718 - 77632),(53576 + 31460),(65783 + 18490),(5725 + 71778),(183396 - 97845),(47671 + 46156),(81358 - 50483),(73945 - (1126 + 425)),(170203 - 126776),(251122 - 165310),(335393 - 261461),(40318 - (553 + 424)),(32407 + 4380),(42752 + 30672),(39758 + 29862),(118518 - 75982),(8173 + 19930),(42525 - (239 + 514)),(78333 - (797 + 532)),(24944 + 48995),(33650 - (373 + 829)),(79285 - (369 + 761)),(135694 - 60988),(85548 - (64 + 174)),(46355 - 15053),(87829 - (42 + 174)),(33024 + 6841),(83753 - (363 + 1141)),(224346 - 150653),(480 + 162),(57274 + 33668),(53046 - (565 + 1368)),(29524 - (1477 + 184)),(47744 + 3497),(88193 - 37079),(74002 - (244 + 60)),(77881 - (41 + 435)),(50667 + 15213),(21682 + 44199),(44975 + 27833),(23282 - (176 + 91)),(96345 - 30973),(26295 - (157 + 1718)),(258019 - 185336),(220404 - (697 + 321)),(190259 - 100455),(170426 + 267413),(52726 - 33057),(379429 - (602 + 9)),(430025 - (826 + 46)),(1223299 - 836174),(386721 - (260 + 1638)),(1073895 - 739147),(788195 - 406816),(388332 - (902 + 303)),(785940 - 459621),(324176 - (1121 + 569)),(416939 - (483 + 200)),(722786 - 458681),(377548 - (468 + 297)),(256319 - 180327),(472814 - 212115),(429781 - (141 + 95)),(988917 - 604723),(78142 + 255460),(273410 + 115513),(367129 - 106429),(430349 - (92 + 71)),(625972 - 253657),(352947 + 74938),(242312 + 232076),(428652 - (55 + 71)),(203151 - (573 + 1217)),(29233 + 354964),(397145 - (714 + 225)),(608303 - 171981),(470471 - 145548),(374413 - (25 + 23)),(388643 - (927 + 959)),(383402 - (16 + 716)),(417127 - (11 + 86)),(429707 - (175 + 110)),(1267898 - 1010835),(1198595 - 769422),(390504 - (810 + 251)),(81648 + 184388),(422171 - (43 + 490)),(1693241 - 1255508),(99805 + 313785),(21648 + 305452),(429453 - (255 + 150)),(229770 + 199406),(1213316 - 837667),(463182 - (183 + 223)),(246023 + 125283),(280941 - (10 + 327)),(1215753 - (118 + 220)),(255408 - (108 + 341)),(2000285 - 1527159),(820298 - 392398),(121783 + 253870),(1144457 - 759479),(7338 + 196905),(1118910 - 690368),(429328 - (645 + 522)),(388750 + 192),(1139411 - 750594),(1189225 - 719414),(168597 - (351 + 154)),(372984 - (28 + 238)),(393954 - (1381 + 178)),(375428 + 90167),(948009 - 673018),(448436 - (381 + 89)),(822688 + 393787),(419358 - (1074 + 82)),(280228 - (214 + 1570)),(189306 + 269904),(375377 + 10635),(265354 - (1668 + 58)),(430087 - 265122),(1439210 - 1025603),(61904 + 268793),(1363198 - 959044),(375858 - (1269 + 200)),(1215283 - (98 + 717)),(685305 - 287919),(68059 + 392788),(41544 + 211379),(705394 - 451832),(152642 + 274126),(355922 + 75572),(154451 + 176359),(1976719 - 1569598),(128972 + 243250),(386726 + 43512),(468233 - (192 + 134)),(231189 + 184246),(308072 + 25227),(1223500 - (83 + 468)),(1544163 - 1213379),(1184884 - 756933),(412483 + 14874),(156087 + 271382),(47288 + 221558),(377638 - (340 + 1571)),(426193 - (1733 + 39)),(323308 - (125 + 909)),(192243 + 236320),(252496 + 7827),(381766 - (46 + 190)),(131395 + 334476),(273307 - (228 + 498)),(204089 + 165328),(679202 - 418501),(412482 - (303 + 221)),(308000 + 61610),(5011114 - 3795180),(1051295 - 630011),(577984 - 413098),(704422 - 267426),(374940 - (111 + 1137)),(1100242 - 730568),(428786 - (423 + 100)),(1023577 - 653902),(321233 - (326 + 445)),(588198 - 324174),(264864 - (530 + 181)),(165005 - (19 + 13)),(956257 - 545906),(69141 + 197084),(894456 - 463153),(763118 - 389098),(705658 - 336652),(693046 - 398851),(34284 + 133756),(91437 + 304253),(266638 + 160039),(385872 - (673 + 1185)),(1186102 - 816737),(208768 + 83110),(609221 - 157999),(842828 - 420128),(428663 - (446 + 1434)),(1118601 - 743812),(376274 - (609 + 1322)),(1408140 - 1031313),(2174659 - 1738019),(1181145 - 855922),(164116 + 210419),(218975 + 181190),(214022 + 109708),(144635 + 56663),(326271 + 7208),(1066676 - 697277),(105749 + 162075),(408445 + 41642),(380824 - 130728),(393061 - (89 + 578)),(666911 - 346123),(60248 + 386469),(46070 + 339888),(708849 - 278740),(372826 - (497 + 345)),(33925 + 166759),(231588 + 93001),(14780 + 307713),(344096 + 37598),(199291 + 64652),(163245 + 221516),(307208 + 18884),(1143238 - 820181),(388367 - (588 + 208)),(377051 - (884 + 916)),(115768 + 83895),(78709 - (1569 + 320)),(38043 + 162195),(439465 - (316 + 289)),(18544 + 382981),(432456 - (360 + 65)),(435040 - (79 + 175)),(301185 + 84778),(622533 - 299283),(322836 - (92 + 89)),(196537 + 186694),(1669384 - 1243101),(977922 - 549033),(179567 + 196383),(21175 + 148482),(386780 - (485 + 759)),(1218327 - (442 + 747)),(370769 - (88 + 858)),(350472 + 73007),(265345 - (766 + 23)),(583362 - 156821),(1160654 - 818685),(143098 + 58739),(252224 + 68413),(70752 - (910 + 3)),(78535 - (1466 + 218)),(53119 - (556 + 592)),(70648 - (329 + 479)),(305348 - 216485),(55692 + 22311),(4662 + 48025),(71574 - (135 + 1254)),(286861 - 225423),(29613 - (389 + 1138)),(80248 + 4788),(78579 + 5694),(137970 - 60467),(87015 - (157 + 1307)),(234097 - 140270),(54841 - 23966),(179433 - 107039),(2761 + 40666),(1843 + 83969),(74236 - (300 + 4)),(102985 - 63644),(14665 + 22122),(42064 + 31360),(52068 + 17552),(31600 + 10936),(62668 - 34565),(42465 - (627 + 66)),(77606 - (512 + 90)),(74656 - (373 + 344)),(8586 + 23862),(132258 - 54103),(54357 + 20349),(341 + 84969),(32561 - (233 + 1026)),(44794 + 42819),(11843 + 28022),(82470 - (55 + 166)),(7411 + 66282),(939 - (36 + 261)),(92310 - (34 + 1334)),(39715 + 11398),(27884 - (20 + 1)),(51560 - (134 + 185)),(51799 - (314 + 371)),(74666 - (478 + 490)),(78577 - (786 + 386)),(67259 - (1055 + 324)),(58544 + 7337),(289060 - 216252),(65489 - 42474),(23255 + 42117),(84170 - 59750),(185880 - 113197),(601415 - 382029),(29764 + 60040),(701217 - 263378),(20937 - (1249 + 19)),(1474553 - 1095735),(336715 + 92438),(1832 + 385293),(4327 + 380496),(335218 - (224 + 246)),(702209 - 320830),(9213 + 377914),(648772 - 322453),(322999 - (203 + 310)),(29081 + 387175),(486684 - 222579),(377647 - (196 + 668)),(157411 - 81419),(260792 - (4 + 89)),(156409 + 273136),(150663 + 233531),(335055 - (28 + 1425)),(372922 + 16001),(372193 - 111493),(430483 - (45 + 252)),(128134 + 244181),(428318 - (114 + 319)),(607877 - 133489),(638442 - 209916),(203324 - (556 + 1407)),(384662 - (170 + 295)),(363927 + 32279),(361695 + 74627),(183994 + 140929),(100126 + 274239),(1473715 - 1086958),(1168867 - 786197),(418810 - (389 + 1391)),(44698 + 384724),(258014 - (783 + 168)),(422145 + 7028),(1195943 - 806500),(86252 + 179784),(288556 + 133082),(78492 + 359241),(1890107 - 1476517),(660614 - 333514),(338951 + 90097),(430871 - (556 + 1139)),(68779 + 306870),(462945 - (28 + 141)),(458323 - 87017),(281921 - (486 + 831)),(4279028 - 3063613),(806175 - 551216),(425730 + 47396),(1166925 - 739025),(377597 - (1129 + 815)),(386728 - (1326 + 424)),(746356 - 542113),(429313 - (720 + 51)),(429937 - (421 + 1355)),(191055 + 197887),(1421371 - 1032554),(470250 - (397 + 42)),(168892 - (24 + 776)),(373503 - (222 + 563)),(282516 + 109879),(467393 - (690 + 1108)),(226825 + 48166),(73756 + 374210),(1162678 + 53797),(229332 + 188870),(180698 + 97746),(686658 - 227448),(387738 - (1165 + 561)),(816501 - 552873),(165444 - (341 + 138)),(853581 - 439974),(1063852 - 733155),(405035 - (581 + 300)),(889255 - 514866),(1215703 - (1030 + 205)),(369674 + 27712),(1047134 - 586287),(518015 - 265092),(147860 + 105702),(120701 + 306067),(432657 - (671 + 492)),(332025 - (369 + 846)),(347436 + 59685),(295946 + 76276),(430441 - (11 + 192)),(468082 - (135 + 40)),(250409 + 165026),(499649 - 166350),(3405350 - 2182401),(332197 - (1233 + 180)),(429372 - (107 + 1314)),(1302211 - 874854),(848874 - 421405),(270756 - (716 + 1194)),(40246 + 335481),(818747 - 394326),(737717 - 415443),(1321241 - 892678),(260756 - (279 + 154)),(300173 + 81357),(251179 + 214692),(100727 + 171854),(1578552 - 1209135),(48879 + 211822),(1767568 - 1355610),(88173 + 281437),(1217832 - (41 + 1857)),(1088840 - 667556),(166068 - (229 + 953)),(438575 - (874 + 705)),(254959 + 118733),(10405 + 359269),(97649 + 330614),(928179 - 558504),(741037 - 420575),(265565 - (718 + 823)),(264958 - (266 + 539)),(166198 - (636 + 589)),(846365 - 436014),(96719 + 169506),(1141989 - 710686),(375207 - (1151 + 36)),(97014 + 271992),(296027 - (1552 + 280)),(114091 + 53949),(70255 + 325435),(854041 - 427364),(589070 - 205056),(370184 - (599 + 220)),(293809 - (1813 + 118)),(452439 - (841 + 376)),(98195 + 324505),(427642 - (464 + 395)),(179988 + 194801),(773591 - 399248),(1291766 - 914939),(1015876 - 579236),(326505 - (74 + 1208)),(1776267 - 1401732),(400555 - (14 + 376)),(209475 + 114255),(191980 + 9318),(250874 + 82605),(875457 - 506058),(240506 + 27318),(141580 + 308507),(669294 - 419198),(1065128 - 672734),(320815 - (10 + 17)),(448449 - (1400 + 332)),(387866 - (242 + 1666)),(157633 + 272476),(372924 - (850 + 90)),(202074 - (360 + 1030)),(916161 - 591572),(324154 - (909 + 752)),(698819 - 317125),(264185 - (6 + 236)),(309703 + 75058),(569584 - 243492),(53128 + 269929),(30600 + 356971),(199156 + 176095),(557715 - 358052),(34161 + 42659),(178636 + 21602),(1353003 - 914143),(945317 - 543792),(206157 + 225874),(309863 + 124923),(386685 - (478 + 244)),(146975 + 176275),(324211 - (655 + 901)),(293389 + 89842),(1717338 - 1291055),(1464537 - 1035648),(1511976 - 1136026),(395487 - 225830),(196550 + 1022836),(185593 + 258101),(469889 - (239 + 30)),(283403 + 11457),(916714 - 622887),(915216 - 652946),(746023 + 469893),(1213678 - 789258),(269197 + 153818),(108696 + 314840),(115422 + 204247),(142556 + 181052),(310254 + 20621),(39224 + 391581)});
-Warrior.ShieldBlockList = v14.converArrayToList({(440525 - (1309 + 179)),(199493 + 258847),(337834 + 109427),(511363 - 254736),(1081882 - 641414),(1370970 - 934378),(136889 + 126697),(436127 - (851 + 554)),(938388 - 600031),(321073 - (115 + 187)),(422997 + 23822),(445855 - (160 + 1001)),(177233 + 79634),(440004 - (237 + 121)),(840561 - 397200),(271068 - (96 + 46)),(120748 + 213740),(1190349 - 869735),(930932 - 456582),(439668 - (316 + 403)),(1240970 - 789606),(646485 - 389776),(104547 + 219847),(1582329 - 1251010),(15655 + 257815),(12535 + 244081),(424905 - (12 + 5)),(691460 - 367381),(1103592 - 658576),(445627 - (1656 + 317)),(218534 + 54177),(2139401 - 1704699),(2137906 - 1687806),(295639 + 153001),(605123 - 145496),(417867 - 97212),(426627 - (507 + 559)),(1341564 - 907779),(440373 - (250 + 655)),(749430 - 320536),(434185 - (1869 + 87)),(468877 - (484 + 1417)),(754230 - 304188),(528495 - 204980),(267609 + 192863),(126332 + 325076),(473862 - (152 + 701)),(169651 + 273344),(137493 + 327678),(1661270 - 1186864),(950211 - 509311),(435639 - (39 + 827)),(585187 - 323168),(491875 - 171499),(931044 - 612942),(734409 - 270297),(449489 - (475 + 79)),(905440 - 622495),(291502 + 39722),(778008 - 510651),(202802 + 262326),(449763 - (27 + 292)),(598013 - 129081),(920458 - 453710),(422372 - (43 + 96)),(1061437 - 591958),(123966 + 315065),(162664 + 261762),(146353 + 318523),(464957 - (1414 + 337)),(1133983 - 698983),(949829 - 629760),(341290 + 97361),(300170 + 127451),(286050 + 47795),(341803 + 85558),(289743 + 171222),(322504 - (128 + 569)),(454038 - (687 + 1200)),(1642846 - 1175872),(460220 - (275 + 146)),(422309 - (29 + 35)),(852401 - 567024),(208555 + 111645),(425029 - (312 + 96)),(435043 - (147 + 138)),(384087 + 40940),(268722 - (18 + 474))});
-Warrior.SpellBlockList = v14.converArrayToList({(1545509 - 1071990),(442075 - (121 + 182)),(475971 - (988 + 252)),(135860 + 297880),(444384 - (223 + 667)),(727016 - 304623),(432762 - (146 + 979)),(273186 - (311 + 294)),(136255 + 185414),(27641 - (1233 + 125)),(30731 + 3521),(25124 - (963 + 682)),(44937 - (504 + 1000)),(88451 + 8676),(58971 - 18980),(54781 + 39414),(125180 + 92114),(30402 - (149 + 15)),(61680 - (39 + 78)),(50040 - 27284),(13859 + 13001),(7400 + 27429),(9209 + 25939),(20224 + 238),(1232 + 47559),(37483 + 2806),(145621 - 104734),(15113 + 13598),(13631 + 6833),(37498 - (1596 + 114)),(21497 - (164 + 549)),(83674 - 16289),(8086 + 39880),(54582 + 11937),(125954 - 83470),(18639 + 2999),(35427 - (254 + 466)),(77611 - 53190),(92288 - (236 + 17)),(20219 + 5755),(288081 - 227234),(47085 + 10083),(867 + 19729),(76746 - 47201),(366170 - 151260),(219750 - (326 + 38)),(47969 - 14367),(12393 + 22763),(101192 - 38845),(217618 - (76 + 416)),(70309 - 39551),(203900 - 130248),(116649 - 76838),(70171 - (1261 + 650)),(355316 - 132367),(3322 + 20225),(42421 - (1524 + 320)),(47427 - (18 + 138)),(23376 - (67 + 1035)),(910179 - 695989),(55669 + 4719),(30504 - (1050 + 32)),(24957 + 17235),(3253 + 37047),(42069 - (267 + 458)),(114372 - 54898),(95324 - (1410 + 87)),(72984 - 45983),(28235 - (461 + 335)),(39600 - (1730 + 31)),(262196 - 188164),(110110 - 62053),(25666 + 2420),(33305 + 5555),(78000 - (459 + 1307)),(48223 - 20607),(201 + 61286),(3418 + 23550),(131310 - 101201),(34361 + 5943),(23891 + 6295),(28535 - (448 + 190)),(33111 + 40240),(135202 - 100037),(32299 - (1307 + 187)),(132788 - 76075),(40375 - (232 + 451)),(38734 + 5113),(58650 - 29540),(88766 - 43229),(392331 - 176397),(223004 - 159787),(21367 + 3746),(102912 - 75012),(76309 - (237 + 4)),(159945 - 96727),(39691 + 8801),(151548 - 111407),(26724 + 22406),(752998 - 311709),(331156 - (45 + 327)),(442939 - (444 + 58)),(208926 + 1005400),(1230082 - 805622),(332693 - (1227 + 746)),(614070 - 283195),(11647 + 441565),(179866 + 240005),(604857 + 612281),(900609 - 569912),(324907 - (200 + 118)),(828905 - 354821),(411189 + 51587),(236212 + 203937),(2633739 - 1418103),(2122938 - 907197),(67738 + 371069),(292567 + 135594),(92506 + 230149),(671567 - 247902),(292765 - (289 + 548)),(436577 - (195 + 60)),(474582 - (251 + 1250)),(221571 + 100894),(624508 - 196557),(1491600 - 1040487),(223843 + 203629),(465795 - (118 + 11)),(382481 + 76729),(452063 - (551 + 398)),(153021 + 276992),(1607060 - 1174943),(394315 + 822296),(117492 + 308062),(1688050 - 1244776),(373873 + 78135),(1106238 - 659521),(1180317 - 731751),(1218350 - (203 + 214)),(345470 + 96142),(1018279 - 754651),(1189680 - 768398),(470206 - (269 + 141)),(453587 - (362 + 1619)),(98935 + 157704),(446030 - (485 + 802)),(466535 - (1065 + 8)),(452988 - (635 + 966)),(291920 - (5 + 37)),(176132 + 247192),(210039 + 238849),(1745603 - 1285176),(1113215 - 647620),(469256 - (318 + 211)),(429056 - (963 + 624)),(445209 - (518 + 328)),(683472 - 255875),(1288550 - 848904),(1215542 - 749712),(242026 + 184233),(280274 + 185597),(3865817 - 2649901),(466485 - (829 + 190)),(344916 - 72328),(1062847 - 634993),(396996 + 818414),(416346 + 24896),(1215688 - (259 + 17)),(152860 + 271935),(1218555 - (396 + 195)),(474555 - (440 + 1321)),(2187794 - 1714668),(77940 + 349661),(481385 + 734119),(2004602 - 1544444),(1694992 - 1255214),(13216 + 255884),(1359874 - 933738),(229923 + 32347),(1266161 - 834797),(1226455 - 794007),(196733 + 63590),(317446 - 57343),(427141 - (423 + 453)),(57066 + 375893),(344357 + 87136),(467172 - (50 + 1140)),(279529 + 193911),(607491 - 184476),(432090 - (157 + 439)),(1433129 - 1001826),(295778 - (782 + 136)),(296132 - (1026 + 145)),(430889 - (493 + 225)),(740948 + 477169),(8147 + 420416),(94056 + 229001),(440996 - (210 + 1385)),(264428 + 162249),(793778 - 351189),(1044512 - 612314),(1313111 - 851269),(276492 - (277 + 1224)),(398610 + 55200),(423894 - (461 + 414)),(169770 + 254552),(442206 + 6356),(713556 - 271026),(616330 - 189230),(108523 + 216386),(1531285 - 314810),(673256 + 544240),(1757046 - 1315651),(136227 + 308023),(428723 - (133 + 314)),(433116 - (199 + 14)),(428906 - (647 + 902)),(435019 - (85 + 148)),(2054392 - 1615432),(563627 - 142708),(31642 + 44727),(368428 - 111365),(447465 - (414 + 1533)),(423255 - (443 + 112)),(1099167 - 673773),(1648670 - 1210937),(214066 + 228470),(841074 - 399712),(445169 - (136 + 1542)),(440076 + 3321),(233436 + 89121),(1156958 - 730171),(365607 + 57929),(25161 + 411479),(64122 + 405697),(625324 - 302831),(1631063 - 1187636),(684365 - 227614),(268632 + 169568),(1651812 - 1213156),(147681 + 289315),(1456760 - 1016073),(2236508 - 1784537),(1418331 - 980319)});
+--- ============================ HEADER ============================
+--- ======= LOCALIZE =======
+-- Addon
+local addonName, addonTable = ...
+-- HeroDBC
+local DBC = HeroDBC.DBC
+-- HeroLib
+local HL = HeroLib
+local Cache = HeroCache
+local Unit = HL.Unit
+local Player = Unit.Player
+local Target = Unit.Target
+local Pet = Unit.Pet
+local Spell = HL.Spell
+local MultiSpell = HL.MultiSpell
+local Item = HL.Item
+local MergeTableByKey = HL.Utils.MergeTableByKey
+-- HeroRotation
+local HR = HeroRotation()
+local Everyone = HR.Commons().Everyone
+
+-- warrior.lua
+Warrior = Warrior or {}
+
+--- ============================ CONTENT ============================
+
+-- Spell
+if not Spell.Warrior then Spell.Warrior = {} end
+Spell.Warrior.Commons = {
+    -- Racials
+    AncestralCall = Spell(274738),
+    ArcaneTorrent = Spell(50613),
+    BagofTricks = Spell(312411),
+    Berserking = Spell(26297),
+    BloodFury = Spell(20572),
+    Fireblood = Spell(265221),
+    LightsJudgment = Spell(255647),
+    -- Abilities
+    BattleShout = Spell(6673),
+    BattleStance = Spell(386164),
+    Charge = Spell(100),
+    HeroicThrow = Spell(57755),
+    Pummel = Spell(6552),
+    Slam = Spell(1464),
+    VictoryRush = Spell(34428),
+    DefensiveStance = Spell(386208),
+    -- Talents
+    Avatar = Spell(107574),
+    BerserkerRage = Spell(18499),
+    BerserkersTorment = Spell(390123),
+    Bladestorm = MultiSpell(446035, 227847, 389774),
+    Bladestormcast = Spell(227847),
+    BloodandThunder = Spell(384277),
+    BitterImmunity = Spell(383762),
+    DoubleTime = Spell(103827),
+    ChampionsMight = Spell(386284),
+    CrushingForce = Spell(382764),
+    FrothingBerserker = Spell(215571),
+    Hurricane = Spell(390563),
+    ImmovableObject = Spell(394307),
+    IntimidatingShout = Spell(5246),
+    HeroicLeap = Spell(6544),
+    ImpendingVictory = Spell(202168),
+    OverwhelmingRage = Spell(382767),
+    RallyingCry = Spell(97462),
+    Ravager = Spell(228920),
+    RumblingEarth = Spell(275339),
+    Shockwave = Spell(46968),
+    SonicBoom = Spell(390725),
+    ChampionsSpear = Spell(376079),
+    SpellReflection = Spell(23920),
+    StormBolt = Spell(107570),
+    ThunderClap = Spell(6343),
+    ThunderousRoar = Spell(384318),
+    TitanicThrow = Spell(384090),
+    WarlordsTorment = Spell(390140),
+    WreckingThrow = Spell(384110),
+    -- Buffs
+    AvatarBuff = Spell(107574),
+    BattleShoutBuff = Spell(6673),
+    ChampionsMightBuff = Spell(386286),
+    HurricaneBuff = Spell(390581),
+    WarMachineBuff = Spell(262232),
+    VictoriousBuff = Spell(32216),
+    CorruptBuff = Spell(421922),
+    SupernovaBuff = Spell(424140),
+    -- Debuffs
+    ChampionsMightDebuff = Spell(376080),
+    MarkofFyralathDebuff = Spell(414532),
+    RavagerDebuff = Spell(228920), -- Dummy Debuff entry. Actually handled in Events.
+    ThunderousRoarDebuff = Spell(397364),
+    Corruption = Spell(410972),
+    ChargeDebuff = Spell(105771),
+    -- Pool
+    Pool = Spell(999910)
+}
+
+Spell.Warrior.Colossus = {
+    -- Talents
+    Demolish = Spell(436358),
+    -- Buffs
+    ColossalMightBuff = Spell(440989)
+}
+
+Spell.Warrior.MountainThane = {
+    -- Abilities
+    ThunderBlastAbility = Spell(435222),
+    -- Talents
+    CrashingThunder = Spell(436707),
+    LightningStrikes = Spell(434969),
+    ThunderBlast = Spell(435607),
+    -- Buffs
+    BurstofPowerBuff = Spell(437121),
+    ThunderBlastBuff = Spell(435615)
+}
+
+Spell.Warrior.Slayer = {
+    SlayerBladestorm                      = Spell(446035),
+    -- Talents
+    FierceFollowthrough                   = Spell(444773),
+    Opportunist                           = Spell(444774),
+    SlayersDominance                      = Spell(444767),
+    UnrelentingOnslaught                  = Spell(444780),
+    -- Buffs
+    BrutalFinishBuff                      = Spell(446918),
+    ImminentDemiseBuff                    = Spell(445606),
+    OpportunistBuff                       = Spell(456120),
+    -- Debuffs
+    MarkedforExecutionDebuff              = Spell(445584),
+}
+
+Spell.Warrior.Fury = MergeTableByKey(Spell.Warrior.Commons, {
+    -- Abilities
+    BerserkerStance = Spell(386196),
+    Bloodbath = Spell(335096),
+    CrushingBlow = Spell(335097),
+    Execute = MultiSpell(5308, 280735),
+    Executecast = Spell(5308),
+    Whirlwind = Spell(190411),
+    -- Talents
+    AngerManagement = Spell(152278),
+    AshenJuggernaut = Spell(392536),
+    Bloodthirst = Spell(23881),
+    DancingBlades = Spell(391683),
+    EnragedRegeneration = Spell(184364),
+    ImprovedWhilwind = Spell(12950),
+    Massacre = Spell(206315),
+    MeatCleaver = Spell(280392),
+    OdynsFury = Spell(385059),
+    Onslaught = Spell(315720),
+    RagingBlow = Spell(85288),
+    Rampage = Spell(184367),
+    RecklessAbandon = Spell(396749),
+    Recklessness = Spell(1719),
+    SlaughteringStrikes = Spell(388004),
+    Tenderize = Spell(388933),
+    TitanicRage = Spell(394329),
+    TitansTorment = Spell(390135),
+    Unhinged = Spell(386628),
+    ViciousContempt = Spell(383885),
+    WrathandFury = Spell(392936),
+    -- Buffs
+    AshenJuggernautBuff = Spell(392537),
+    BloodbathBuff = Spell(461288),
+    BloodcrazeBuff = Spell(393951),
+    ChampionsMightBuff = Spell(386286),
+    CrushingBlowBuff = Spell(396752),
+    DancingBladesBuff = Spell(391688),
+    EnrageBuff = Spell(184362),
+    FuriousBloodthirstBuff = Spell(423211), -- T31 2pc
+    MeatCleaverBuff = Spell(85739),
+    MercilessAssaultBuff = Spell(409983),
+    RecklessnessBuff = Spell(1719),
+    SuddenDeathBuff = Spell(280776),
+    -- Debuffs
+    GushingWoundDebuff = Spell(385042),
+    OdynsFuryDebuff = Spell(385060)
+})
+
+Spell.Warrior.Fury = MergeTableByKey(Spell.Warrior.Fury,
+                                     Spell.Warrior.MountainThane)
+Spell.Warrior.Fury = MergeTableByKey(Spell.Warrior.Fury, Spell.Warrior.Slayer)
+
+Spell.Warrior.Arms = MergeTableByKey(Spell.Warrior.Commons, {
+    -- Abilities
+    Execute = MultiSpell(281000, 163201),
+    Executecast = Spell(163201),
+    Whirlwind = Spell(1680),
+    -- Talents
+    BlademastersTorment = Spell(390138),
+    Bloodletting = Spell(383154),
+    Cleave = Spell(845),
+    ColossusSmash = Spell(167105),
+    DiebytheSword = Spell(118038),
+    Dreadnaught = Spell(262150),
+    ExecutionersPrecision = Spell(386634),
+    FervorofBattle = Spell(202316),
+    IgnorePain = Spell(190456),
+    ImprovedSweepingStrikes = Spell(383155),
+    Massacre = Spell(281001),
+    MercilessBonegrinder = Spell(383317),
+    MortalStrike = Spell(12294),
+    Overpower = Spell(7384),
+    Rend = Spell(772),
+    Skullsplitter = Spell(260643),
+    SweepingStrikes = Spell(260708),
+    Unhinged = Spell(386628),
+    Warbreaker = Spell(262161),
+    Juggernaut = Spell(393967),
+
+    -- Buffs
+    CollateralDamageBuff = Spell(334783),
+    JuggernautBuff = Spell(383290),
+    LethalBlowsBuff = Spell(455485), -- TWW S1 4pc
+    MartialProwessBuff = Spell(7384),
+    MercilessBonegrinderBuff = Spell(383316),
+    StrikeVulnerabilitiesBuff = Spell(394173),
+    SuddenDeathBuff = Spell(52437),
+    SweepingStrikesBuff = Spell(260708),
+    -- Debuffs
+    ColossusSmashDebuff = Spell(208086),
+    DeepWoundsDebuff = Spell(262115),
+
+    ExecutionersPrecisionDebuff = Spell(386633),
+    RendDebuff = Spell(388539),
+    -- Abilities
+  -- Talents
+  Battlelord                            = Spell(386630),
+  StrengthofArms                        = Spell(400803),
+})
+
+Spell.Warrior.Arms = MergeTableByKey(Spell.Warrior.Arms, Spell.Warrior.Colossus)
+Spell.Warrior.Arms = MergeTableByKey(Spell.Warrior.Arms, Spell.Warrior.Slayer)
+
+Spell.Warrior.Protection = MergeTableByKey(Spell.Warrior.Commons, {
+    -- Abilities
+    Devastate = Spell(20243),
+    Execute = MultiSpell(163201, 281000),
+    Executecast = Spell(163201),
+    ShieldBlock = Spell(2565),
+    ShieldSlam = Spell(23922),
+    -- Talents
+    BarbaricTraining = Spell(390675),
+    Bolster = Spell(280001),
+    BoomingVoice = Spell(202743),
+    ChampionsBulwark = Spell(386328),
+    DemoralizingShout = Spell(1160),
+    EnduringDefenses = Spell(386027),
+    HeavyRepercussions = Spell(203177),
+    IgnorePain = Spell(190456),
+    Intervene = Spell(3411),
+    ImpenetrableWall = Spell(384072),
+    Juggernaut = Spell(393967),
+    LastStand = Spell(12975),
+    Massacre = Spell(281001),
+    Rend = Spell(394062),
+    Revenge = Spell(6572),
+    SeismicReverberation = Spell(382956),
+    ShieldCharge = Spell(385952),
+    ShieldWall = Spell(871),
+    SuddenDeath = Spell(29725),
+    UnnervingFocus = Spell(384042),
+    UnstoppableForce = Spell(275336),
+    -- Buffs
+    EarthenTenacityBuff = Spell(410218), -- T30 4P
+    FervidBuff = Spell(425517), -- T31 2P
+    LastStandBuff = Spell(12975),
+    RallyingCryBuff = Spell(97463),
+    RevengeBuff = Spell(5302),
+    SeeingRedBuff = Spell(386486),
+    ShieldBlockBuff = Spell(132404),
+    ShieldWallBuff = Spell(871),
+    SuddenDeathBuff = Spell(52437),
+    ViolentOutburstBuff = Spell(386478),
+    VanguardsDeterminationBuff = Spell(394056), -- T29 2P
+    -- Debuffs
+    RendDebuff = Spell(388539)
+})
+
+Spell.Warrior.Protection = MergeTableByKey(Spell.Warrior.Protection,
+                                           Spell.Warrior.Colossus)
+Spell.Warrior.Protection = MergeTableByKey(Spell.Warrior.Protection,
+                                           Spell.Warrior.MountainThane)
+
+-- Items
+if not Item.Warrior then Item.Warrior = {} end
+Item.Warrior.Commons = {
+    AlgetharPuzzleBox = Item(193701, {13, 14}),
+    -- TWW Trinkets
+    TreacherousTransmitter = Item(221023, {13, 14}),
+    -- Other Items
+    Fyralath = Item(206448, {16}),
+    ShadowedRazingAnnihilator = Item(205046, {16})
+}
+
+Item.Warrior.Fury = MergeTableByKey(Item.Warrior.Commons, {})
+
+Item.Warrior.Arms = MergeTableByKey(Item.Warrior.Commons, {})
+
+Item.Warrior.Protection = MergeTableByKey(Item.Warrior.Commons, {})
+
+Warrior.SpellReflectList = Everyone.converArrayToList({
+    385536, -- FlameDance
+    1217138, -- NecroticBolt
+    369823, -- SpikedCarapace
+    423479, -- WicklighterBolt
+    264556, -- TearingStrike
+    426541, -- RunicBolt
+    341969, -- WitheringDischarge
+    201837, -- ShadowBolt
+    320637, -- FetidGas
+    69839, -- UnstableOozeExplosion
+    76851, -- Steelspark
+    51971, -- ScourgeDisguiseInstability
+    69840, -- UnstableOozeExplosionSummon
+    88863, -- InstantPoison
+    78003, -- [DND]Play
+    52687, -- BombardtheBallistae:Knockback
+    70185, -- Dizzy
+    61438, -- NassHeartbeat
+    28086, -- [PH]ButtressActivator
+    85036, -- GodfreyQuestCredit
+    84273, -- ReverseCastRide-CUSTOM
+    77503, -- PetrifyingStare
+    85551, -- SummonSmotheringOvergrowth
+    93827, -- DarkspearChampion
+    30875, -- TagMurloc
+    72394, -- ReverseCastTurtleRide
+    43427, -- IceLance
+    85812, -- Chieftan'sCall
+    73932, -- CitizenCostume
+    39341, -- Karazhan-Chess,MedivhCHEAT:FuryofMedivh,TargetHorde
+    36787, -- ForcefulCleave
+    73424, -- Shrink
+    69620, -- BoulderCrash
+    42536, -- BrewfestRequestChickChuckMug
+    28103, -- CreatePrimalWater
+    41772, -- IncreasedCritical14
+    77004, -- GnawsIIKillCredit
+    73939, -- CitizenCostume
+    32448, -- NetherAura
+    78155, -- TremorTotem
+    74706, -- SeeSpecialSoldier
+    85310, -- PingHeadSeat
+    31302, -- InfernoEffect
+    87613, -- Gargal'sShieldWall
+    39865, -- Rizzle'sBlackjack
+    82249, -- OgrebladeSmash
+    73693, -- ArcingSlash
+    642, -- DivineShield
+    90942, -- QuestCredit:Mylra
+    51113, -- MonteMuzzleshot'sInvisibility(Mangal)
+    27863, -- TheBaron'sUltimatum
+    51241, -- ZP-Retch!(BunnyAura)
+    51114, -- MonteMuzzleshot'sInvisibility(Camp)
+    73698, -- VoidRift
+    77405, -- StripVisionAuras
+    65880, -- FrostTrap
+    65881, -- ViperSting
+    72808, -- BloodbathedFrostbroodVanquisher
+    23015, -- CrystalPrison
+    65372, -- SummonPossessedAncientGroveHippogryph
+    24420, -- ZandalarSignetofSerenity
+    72683, -- UpdateCathedralAuras
+    219386, -- GrapplingHook
+    89804, -- MeteorShard
+    437839, -- NetherRift
+    19669, -- ArcaniteSkeletonKey
+    378818, -- MagmaConflagration
+    429153, -- TwistingSinge
+    387125, -- Thunderstrike
+    384823, -- Inferno
+    334748, -- DrainFluids
+    381379, -- DecayedSenses
+    387127, -- ChainLightning
+    326319, -- SpiritBolt
+    322486, -- Overgrowth
+    416256, -- Stonebolt
+    264105, -- RunicMark
+    376783, -- FlameEruption
+    75992, -- LightningSurge
+    260699, -- SoulBolt
+    429545, -- CensoringGear
+    384194, -- Cinderbolt
+    333602, -- Frostbolt
+    388923, -- BurstForth
+    260700, -- RuinousBolt
+    430186, -- SeepingCorruption
+    372315, -- FrostSpike
+    427885, -- ArcaneBlast
+    474388, -- Flamethrower
+    428526, -- InkBlast
+    201361, -- DarksoulBite
+    384197, -- Cinderbolt
+    396206, -- StormShock
+    436322, -- PoisonBolt
+    324923, -- BrambleBurst
+    374365, -- VolatileMutation
+    386757, -- Hailstorm
+    382670, -- GaleArrow
+    417030, -- Fireball
+    429422, -- StoneBolt
+    257063, -- BrackishBolt
+    429173, -- MindRot
+    389443, -- PurifyingBlast
+    266036, -- DrainEssence
+    421638, -- WicklighterBarrage
+    437733, -- BoilingFlames
+    413590, -- NoxiousEjection
+    327100, -- NoxiousFog
+    429048, -- FlameShock
+    429176, -- Aquablast
+    375649, -- InfusedGround
+    462776, -- SurveyingBeam
+    371306, -- ArcaneBolt
+    280604, -- IcedSpritzer
+    1215415, -- StickySludge
+    254959, -- Soulburn
+    473126, -- Mudslide
+    427900, -- MoltenPool
+    375653, -- StaticJolt
+    384978, -- DragonStrike
+    204243, -- TormentingEye
+    428542, -- CrushingDepths
+    428161, -- MoltenMetal
+    388942, -- ViciousAmbush
+    388817, -- ShardsofStone
+    469811, -- Backwash
+    168092, -- WaterBolt
+    372718, -- EarthenShards
+    392395, -- ThunderJaw
+    465595, -- LightningBolt
+    274991, -- PutridWaters
+    447966, -- ShadowflameBolt
+    1216475, -- NecroticBolt
+    418202, -- TemporalBlast
+    278444, -- Infest
+    459210, -- ShadowClaw
+    386012, -- Stormbolt
+    263628, -- ChargedShield
+    164965, -- ChokingVines
+    413607, -- CorrodingVolley
+    330697, -- DecayingStrike
+    404154, -- VoidSurge
+    374389, -- GulpSwogToxin
+    1214468, -- Trickshot
+    397386, -- LavaBolt
+    460847, -- ElectricBlast
+    252923, -- VenomBlast
+    253562, -- Wildfire
+    426768, -- LightningBolt
+    431494, -- BlackEdge
+    330810, -- BindSoul
+    407121, -- Immolate
+    372222, -- ArcaneCleave
+    430238, -- VoidBolt
+    467907, -- FesteringVoid
+    415435, -- InfiniteBolt
+    333299, -- CurseofDesolation
+    1222949, -- WellofDarkness
+    330784, -- NecroticBolt
+    427951, -- SealofFlame
+    427357, -- HolySmite
+    427469, -- Fireball
+    268846, -- EchoBlade
+    375727, -- SandBreath
+    424421, -- Fireball
+    322274, -- Enfeeble
+    428563, -- FlameBolt
+    260323, -- AlphaCannon
+    381530, -- StormShock
+    465871, -- BloodBlast
+    272581, -- WaterBolt
+    369417, -- VenomousFangs
+    260701, -- BrambleBolt
+    411958, -- Stonebolt
+    369610, -- ShockingQuake
+    1215934, -- RockLance
+    421284, -- CoilingFlames
+    164886, -- DreadpetalPollen
+    436996, -- StalkingShadows
+    373692, -- Inferno
+    369674, -- StoneSpike
+    428263, -- WaterBolt
+    369675, -- ChainLightning
+    320462, -- NecroticBolt
+    264024, -- SoulBolt
+    264153, -- Spit
+    164973, -- DancingThorns
+    410351, -- FlamingCudgel
+    266225, -- DarkenedLightning
+    431303, -- NightBolt
+    374020, -- ContainmentBeam
+    369006, -- BurningHeat
+    294195, -- ArcingZap
+    168040, -- Nature'sWrath
+    395690, -- LightningBlast
+    426677, -- CandleflameBolt
+    384014, -- StaticSurge
+    369365, -- CurseofStone
+    291878, -- PulseBlast
+    451222, -- VoidRush
+    422700, -- ExtinguishingGust
+    426783, -- MindFlay
+    374789, -- InfusedStrike
+    374343, -- EnergyBomb
+    376827, -- ConductiveStrike
+    436640, -- BurningRicochet
+    325223, -- AnimaInjection
+    374535, -- HeatedSwings
+    400165, -- EpochBolt
+    323730, -- FrozenBinds
+    201298, -- Bloodbolt
+    333479, -- SpewDisease
+    369399, -- StoneBolt
+    267824, -- ScarSoul
+    450087, -- Depth'sGrasp
+    250096, -- WrackingPain
+    392394, -- FireMaw
+    320788, -- FrozenBinds
+    446717, -- UmbralWeave
+    385958, -- ArcaneExpulsion
+    430109, -- LightningBolt
+    371984, -- Icebolt
+    200684, -- NightmareToxin
+    324589, -- DeathBolt
+    322493, -- FrostboltVolley
+    381694, -- DecayedSenses
+    263943, -- Etch
+    384761, -- WindBurst
+    326092, -- DebilitatingPoison
+    323057, -- SpiritBolt
+    387571, -- FocusedDeluge
+    375251, -- LavaSpray
+    199663, -- SoulBlast
+    76820, -- Hex
+    200238, -- FeedontheWeak
+    438860, -- UmbralWeave
+    401525, -- ScorchingDetonation
+    432031, -- GraspingBlood
+    434786, -- WebBolt
+    385963, -- FrostShock
+    323250, -- AnimaPuddle
+    322655, -- AcidExpulsion
+    383231, -- LavaBolt
+    426283, -- ArcingVoid
+    428889, -- FoulBolt
+    375950, -- IceShard
+    169657, -- PoisonousClaws
+    385536, -- Flame Dance
+    1217138, -- Necrotic Bolt
+    369823, -- Spiked Carapace
+    423479, -- Wicklighter Bolt
+    264556, -- Tearing Strike
+    426541, -- Runic Bolt
+    341969, -- Withering Discharge
+    201837, -- Shadow Bolt
+    320637, -- Fetid Gas
+    69839, -- Unstable Ooze Explosion
+    76851, -- Steelspark
+    51971, -- Scourge Disguise Instability
+    69840, -- Unstable Ooze Explosion Summon
+    88863, -- Instant Poison
+    78003, -- [DND] Play
+    52687, -- Bombard the Ballistae: Knockback
+    70185, -- Dizzy
+    61438, -- Nass Heartbeat
+    28086, -- [PH] Buttress Activator
+    85036, -- Godfrey Quest Credit
+    84273, -- Reverse Cast Ride - CUSTOM
+    77503, -- Petrifying Stare
+    85551, -- Summon Smothering Overgrowth
+    93827, -- Darkspear Champion
+    30875, -- Tag Murloc
+    72394, -- Reverse Cast Turtle Ride
+    43427, -- Ice Lance
+    85812, -- Chieftan's Call
+    73932, -- Citizen Costume
+    39341, -- Karazhan - Chess, Medivh CHEAT: Fury of Medivh, Target Horde
+    36787, -- Forceful Cleave
+    73424, -- Shrink
+    69620, -- Boulder Crash
+    42536, -- Brewfest Request Chick Chuck Mug
+    28103, -- Create Primal Water
+    41772, -- Increased Critical 14
+    77004, -- Gnaws II Kill Credit
+    73939, -- Citizen Costume
+    32448, -- Nether Aura
+    78155, -- Tremor Totem
+    74706, -- See Special Soldier
+    85310, -- Ping Head Seat
+    31302, -- Inferno Effect
+    87613, -- Gargal's Shield Wall
+    39865, -- Rizzle's Blackjack
+    82249, -- Ogreblade Smash
+    73693, -- Arcing Slash
+    642, -- Divine Shield
+    90942, -- Quest Credit: Mylra
+    51113, -- Monte Muzzleshot's Invisibility (Mangal)
+    27863, -- The Baron's Ultimatum
+    51241, -- ZP - Retch! (Bunny Aura)
+    51114, -- Monte Muzzleshot's Invisibility (Camp)
+    73698, -- Void Rift
+    77405, -- Strip Vision Auras
+    65880, -- Frost Trap
+    65881, -- Viper Sting
+    72808, -- Bloodbathed Frostbrood Vanquisher
+    23015, -- Crystal Prison
+    65372, -- Summon Possessed Ancient Grove Hippogryph
+    24420, -- Zandalar Signet of Serenity
+    72683, -- Update Cathedral Auras
+    219386, -- Grappling Hook
+    89804, -- Meteor Shard
+    437839, -- Nether Rift
+    19669, -- Arcanite Skeleton Key
+    378818, -- Magma Conflagration
+    429153, -- Twisting Singe
+    387125, -- Thunderstrike
+    384823, -- Inferno
+    334748, -- Drain Fluids
+    381379, -- Decayed Senses
+    387127, -- Chain Lightning
+    326319, -- Spirit Bolt
+    322486, -- Overgrowth
+    416256, -- Stonebolt
+    264105, -- Runic Mark
+    376783, -- Flame Eruption
+    75992, -- Lightning Surge
+    260699, -- Soul Bolt
+    429545, -- Censoring Gear
+    384194, -- Cinderbolt
+    333602, -- Frostbolt
+    388923, -- Burst Forth
+    260700, -- Ruinous Bolt
+    430186, -- Seeping Corruption
+    372315, -- Frost Spike
+    427885, -- Arcane Blast
+    474388, -- Flamethrower
+    428526, -- Ink Blast
+    201361, -- Darksoul Bite
+    384197, -- Cinderbolt
+    396206, -- Storm Shock
+    436322, -- Poison Bolt
+    324923, -- Bramble Burst
+    374365, -- Volatile Mutation
+    386757, -- Hailstorm
+    382670, -- Gale Arrow
+    417030, -- Fireball
+    429422, -- Stone Bolt
+    257063, -- Brackish Bolt
+    429173, -- Mind Rot
+    389443, -- Purifying Blast
+    266036, -- Drain Essence
+    421638, -- Wicklighter Barrage
+    437733, -- Boiling Flames
+    413590, -- Noxious Ejection
+    327100, -- Noxious Fog
+    429048, -- Flame Shock
+    429176, -- Aquablast
+    375649, -- Infused Ground
+    462776, -- Surveying Beam
+    371306, -- Arcane Bolt
+    280604, -- Iced Spritzer
+    1215415, -- Sticky Sludge
+    254959, -- Soulburn
+    473126, -- Mudslide
+    427900, -- Molten Pool
+    375653, -- Static Jolt
+    384978, -- Dragon Strike
+    204243, -- Tormenting Eye
+    428542, -- Crushing Depths
+    428161, -- Molten Metal
+    388942, -- Vicious Ambush
+    388817, -- Shards of Stone
+    469811, -- Backwash
+    168092, -- Water Bolt
+    372718, -- Earthen Shards
+    392395, -- Thunder Jaw
+    465595, -- Lightning Bolt
+    274991, -- Putrid Waters
+    447966, -- Shadowflame Bolt
+    1216475, -- Necrotic Bolt
+    418202, -- Temporal Blast
+    278444, -- Infest
+    459210, -- Shadow Claw
+    386012, -- Stormbolt
+    263628, -- Charged Shield
+    164965, -- Choking Vines
+    413607, -- Corroding Volley
+    330697, -- Decaying Strike
+    404154, -- Void Surge
+    374389, -- Gulp Swog Toxin
+    1214468, -- Trickshot
+    397386, -- Lava Bolt
+    460847, -- Electric Blast
+    252923, -- Venom Blast
+    253562, -- Wildfire
+    426768, -- Lightning Bolt
+    431494, -- Black Edge
+    330810, -- Bind Soul
+    407121, -- Immolate
+    372222, -- Arcane Cleave
+    430238, -- Void Bolt
+    467907, -- Festering Void
+    415435, -- Infinite Bolt
+    333299, -- Curse of Desolation
+    1222949, -- Well of Darkness
+    330784, -- Necrotic Bolt
+    427951, -- Seal of Flame
+    427357, -- Holy Smite
+    427469, -- Fireball
+    268846, -- Echo Blade
+    375727, -- Sand Breath
+    424421, -- Fireball
+    322274, -- Enfeeble
+    428563, -- Flame Bolt
+    260323, -- Alpha Cannon
+    381530, -- Storm Shock
+    465871, -- Blood Blast
+    272581, -- Water Bolt
+    369417, -- Venomous Fangs
+    260701, -- Bramble Bolt
+    411958, -- Stonebolt
+    369610, -- Shocking Quake
+    1215934, -- Rock Lance
+    421284, -- Coiling Flames
+    164886, -- Dreadpetal Pollen
+    436996, -- Stalking Shadows
+    373692, -- Inferno
+    369674, -- Stone Spike
+    428263, -- Water Bolt
+    369675, -- Chain Lightning
+    320462, -- Necrotic Bolt
+    264024, -- Soul Bolt
+    264153, -- Spit
+    164973, -- Dancing Thorns
+    410351, -- Flaming Cudgel
+    266225, -- Darkened Lightning
+    431303, -- Night Bolt
+    374020, -- Containment Beam
+    369006, -- Burning Heat
+    294195, -- Arcing Zap
+    168040, -- Nature's Wrath
+    395690, -- Lightning Blast
+    426677, -- Candleflame Bolt
+    384014, -- Static Surge
+    369365, -- Curse of Stone
+    291878, -- Pulse Blast
+    451222, -- Void Rush
+    422700, -- Extinguishing Gust
+    426783, -- Mind Flay
+    374789, -- Infused Strike
+    374343, -- Energy Bomb
+    376827, -- Conductive Strike
+    436640, -- Burning Ricochet
+    325223, -- Anima Injection
+    374535, -- Heated Swings
+    400165, -- Epoch Bolt
+    323730, -- Frozen Binds
+    201298, -- Bloodbolt
+    333479, -- Spew Disease
+    369399, -- Stone Bolt
+    267824, -- Scar Soul
+    450087, -- Depth's Grasp
+    250096, -- Wracking Pain
+    392394, -- Fire Maw
+    320788, -- Frozen Binds
+    446717, -- Umbral Weave
+    385958, -- Arcane Expulsion
+    430109, -- Lightning Bolt
+    371984, -- Icebolt
+    200684, -- Nightmare Toxin
+    324589, -- Death Bolt
+    322493, -- Frostbolt Volley
+    381694, -- Decayed Senses
+    263943, -- Etch
+    384761, -- Wind Burst
+    326092, -- Debilitating Poison
+    323057, -- Spirit Bolt
+    387571, -- Focused Deluge
+    375251, -- Lava Spray
+    199663, -- Soul Blast
+    76820, -- Hex
+    200238, -- Feed on the Weak
+    438860, -- Umbral Weave
+    401525, -- Scorching Detonation
+    432031, -- Grasping Blood
+    434786, -- Web Bolt
+    385963, -- Frost Shock
+    323250, -- Anima Puddle
+    322655, -- Acid Expulsion
+    383231, -- Lava Bolt
+    426283, -- Arcing Void
+    428889, -- Foul Bolt
+    375950, -- Ice Shard
+    169657, -- Poisonous Claws
+    1219386, -- Scrap Rockets
+    443694, -- Crude Weapons
+    469620, -- Creeping Shadow
+    294860, -- Blossom Blast
+    293827, -- Giga-Wallop
+    262270, -- Caustic Compound
+    1215916, -- Mind Lash
+    424420, -- Cinderblast
+    423015, -- Castigator's Shield
+    423536, -- Holy Smite
+    319669, -- Spectral Reach
+    323608, -- Dark Devastation
+    330875, -- Spirit Frost
+    430805 -- Arcing Void
+
+})
+
+Warrior.ShieldBlockList = Everyone.converArrayToList({
+    439037, -- Disembowel
+    458340, -- CosmicSimulacrum
+    447261, -- Skullsplitter
+    256627, -- SlobberKnocker
+    440468, -- RimeDagger
+    436592, -- CashCannon
+    263586, -- ThrowShield
+    434722, -- Subjugate
+    338357, -- Tenderize
+    320771, -- IcyShard
+    446819, -- PhaseLunge
+    444694, -- SavageAssault
+    256867, -- HeavyHitter
+    439646, -- ProcessofElimination
+    443361, -- Gorge
+    270926, -- DrillSmash
+    334488, -- SeverFlesh
+    320614, -- BloodGorge
+    474350, -- ShreddationSawblade
+    438949, -- VoraciousBite
+    451364, -- BrutalStrike
+    256709, -- SingingSteel
+    324394, -- Shatter
+    331319, -- SavageFlurry
+    273470, -- GutShot
+    256616, -- ToothBreaker
+    424888, -- SeismicSmash
+    324079, -- ReapingScythe
+    445016, -- SpectralSlam
+    443654, -- Infest
+    272711, -- CrushingSlam
+    434702, -- BrutalCrush
+    450100, -- Crush
+    448640, -- ShieldStampede
+    459627, -- TankBuster
+    320655, -- Crunch
+    425561, -- NastyNibble
+    433785, -- GraspingSlash
+    439468, -- DownwardTrend
+    428894, -- StonebreakerStrike
+    432229, -- KegSmash
+    466976, -- GoldKnuckles
+    450042, -- Gorge
+    323515, -- HatefulStrike
+    460472, -- TheBigHit
+    451408, -- Oust
+    473009, -- ExplosiveShrapnel
+    442995, -- SwarmingSurprise
+    465171, -- GoblinGravi-Gun
+    474406, -- GearGrinder
+    440900, -- Liquefy
+    434773, -- MeanMug
+    262019, -- GreaseGun
+    320376, -- Mutilate
+    318102, -- FinishingBlow
+    464112, -- Demolish
+    448935, -- RecklessDelivery
+    282945, -- BuzzSaw
+    331224, -- Bonestorm
+    267357, -- FanofKnives
+    465128, -- WindUp
+    449444, -- MoltenFlurry
+    468932, -- WrenchWallop
+    466748, -- InfectedBite
+    422233, -- CrystallineSmash
+    469479, -- SludgeClaws
+    439031, -- BottomsUppercut
+    424426, -- LungingStrike
+    464876, -- ConcussiveSmash
+    463206, -- Tenderize
+    435000, -- HighSteaks
+    320069, -- MortalStrike
+    438651, -- SnackTime
+    427621, -- Impale
+    333845, -- UnbalancingBlow
+    427361, -- Fracture
+    460965, -- BarrelingCharge
+    321807, -- Boneflay
+    452151, -- RigorousJab
+    466974, -- GoblinGun
+    459799, -- Wallop
+    422245, -- RockBuster
+    285377, -- B.4.T.T.L.3.Mine
+    320200, -- Stitchneedle
+    424621, -- BrutalSmash
+    434758, -- ThrowChair
+    425027, -- SeismicWave
+    268230 -- CrimsonSwipe
+
+})
+
+Warrior.SpellBlockList = Everyone.converArrayToList({
+    473519, 441772, 474731, 433740, 443494, 422393, 431637, 272581, 321669,
+    26283, 34252, 23479, 43433, 97127, 39991, 94195, 217294, 30238, 61563,
+    22756, 26860, 34829, 35148, 20462, 48791, 40289, 40887, 28711, 20464, 35788,
+    20784, 67385, 47966, 66519, 42484, 21638, 34707, 24421, 92035, 25974, 60847,
+    57168, 20596, 29545, 214910, 219386, 33602, 35156, 62347, 217126, 30758,
+    73652, 39811, 68260, 222949, 23547, 40577, 47271, 22274, 214190, 60388,
+    29422, 42192, 40300, 41344, 59474, 93827, 27001, 27439, 37839, 74032, 48057,
+    28086, 38860, 76234, 27616, 61487, 26968, 30109, 40304, 30186, 27897, 73351,
+    35165, 30805, 56713, 39692, 43847, 29110, 45537, 215934, 63217, 25113,
+    27900, 76068, 63218, 48492, 40141, 49130, 441289, 330784, 442437, 1214326,
+    424460, 330720, 330875, 453212, 419871, 1217138, 330697, 324589, 474084,
+    462776, 440149, 1215636, 1215741, 438807, 428161, 322655, 423665, 291928,
+    436322, 473081, 322465, 427951, 451113, 427472, 465666, 459210, 451114,
+    430013, 432117, 1216611, 425554, 443274, 452008, 446717, 448566, 1217933,
+    441612, 263628, 421282, 469796, 451606, 256639, 444743, 465462, 451387,
+    291878, 423324, 448888, 460427, 465595, 468727, 427469, 444363, 427597,
+    439646, 465830, 426259, 465871, 1215916, 465466, 272588, 427854, 1215410,
+    441242, 1215412, 424795, 1217964, 472794, 473126, 427601, 1215504, 460158,
+    439778, 269100, 426136, 262270, 431364, 432448, 260323, 260103, 426265,
+    432959, 431493, 465982, 473440, 423015, 431494, 431303, 294860, 294961,
+    430171, 1218117, 428563, 323057, 439401, 426677, 442589, 432198, 461842,
+    274991, 453810, 423019, 424322, 448562, 442530, 427100, 324909, 1216475,
+    1217496, 441395, 444250, 428276, 432903, 427357, 434786, 438960, 420919,
+    76369, 257063, 445518, 422700, 425394, 437733, 442536, 441362, 443491,
+    443397, 322557, 426787, 423536, 436640, 469819, 322493, 443427, 456751,
+    438200, 438656, 436996, 440687, 451971, 438012
+})
