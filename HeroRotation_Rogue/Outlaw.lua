@@ -25,7 +25,7 @@ local v24 = C_Timer.After;
 local v25 = v11.Commons().Everyone;
 local v26 = v11.Commons().Rogue;
 local v27 = v11.GUISettingsGet();
-local v28 = {General=v27.General,Commons=v27.APL.Rogue.Commons,Outlaw=v27.APL.Rogue.Outlaw,Outlaw_TTD=v27.APL.Rogue.Outlaw_TTD,Outlaw_CDUSE=v27.APL.Rogue.Outlaw_CDUSE,Interrupt=v27.APL.Rogue.Outlaw_Interrupt.Interrupt};
+local v28 = {General=v27.General,Commons=v27.APL.Rogue.Commons,Outlaw=v27.APL.Rogue.Outlaw,Outlaw_TTD=v27.APL.Rogue.Outlaw_TTD,Outlaw_CDUSE=v27.APL.Rogue.Outlaw_CDUSE,Interrupt=v27.APL.Rogue.Outlaw_Interrupt};
 local v29 = v8.Rogue.Outlaw;
 local v30 = v10.Rogue.Outlaw;
 local v31 = {v30.ImperfectAscendancySerum:ID(),v30.MadQueensMandate:ID(),v30.BottledFlayedwingToxin:ID(),v30.ImperfectAscendancySerum:ID(),v30.MadQueensMandate:ID(),v30.JunkmaestrosMegaMagnet:ID()};
@@ -332,8 +332,6 @@ local function v72(v92, v93)
 	return false;
 end
 function v71()
-	v11.Print(tostring(v29.Vanish:IsCastable() and IsVanish and v68()));
-	v11.Print("Castable=" .. tostring(v29.Vanish:IsCastable()) .. " IsVanish=" .. tostring(IsVanish) .. " Vanish_DPS_Condition=" .. tostring(v68()));
 	if (v29.Vanish:IsCastable() and v68() and IsVanish) then
 		if (not v29.KillingSpree:IsAvailable() and not v29.BetweentheEyes:IsReady() and (v6:BuffRemains(v29.RuthlessPrecision) > (12 - 8)) and (((v29.KeepItRolling:CooldownRemains() > (43 + 107)) and (v4.APLVar.RtB_Buffs.Normal > (0 - 0))) or not v29.KeepItRolling:IsAvailable())) then
 			if v14(v29.Vanish, true) then
@@ -371,8 +369,6 @@ function v71()
 	end
 end
 local function v73()
-	v11.Print(tostring(v29.Vanish:IsCastable() and IsVanish and v68()));
-	v11.Print(tostring(v29.Vaniish:IsCastable()) .. tostring(v29.Subterfuge:IsAvailable()) .. tostring(not v29.Crackshot:IsAvailable()));
 	if (v29.Vanish:IsCastable() and IsVanish and v68()) then
 		if (v29.UnderhandedUpperhand:IsAvailable() and v29.Subterfuge:IsAvailable() and not v29.Crackshot:IsAvailable() and v6:BuffUp(v29.AdrenalineRush) and (v67() or not v29.HiddenOpportunity:IsAvailable()) and ((not v29.BetweentheEyes:IsReady() and v6:BuffUp(v29.RuthlessPrecision)) or v6:BuffDown(v29.RuthlessPrecision or (v6:BuffRemains(v29.AdrenalineRush) < (3 + 0))))) then
 			if v14(v29.Vanish, true) then
@@ -616,6 +612,10 @@ local function v75()
 	end
 end
 local function v76()
+	v39 = v25.HealthPotions();
+	if v39 then
+		return v39;
+	end
 	Smallcds = v11.ToggleIconFrame:GetToggle(868 - (550 + 317));
 	AutoStealth = v11.ToggleIconFrame:GetToggle(2 - 0);
 	InterruptToggle = v11.ToggleIconFrame:GetToggle(3 - 0);
@@ -661,16 +661,12 @@ local function v76()
 	IsThistleTea = v59(v28.Outlaw_TTD.ThistleTeaTTD) and v58(v28.Outlaw_CDUSE.ThistleTea);
 	IsKillingSpree = KillingspreeToggle and not v6:IsMoving() and v59(v28.Outlaw_TTD.KillingSpreeTTD) and v58(v28.Outlaw_CDUSE.KillingSpree);
 	IsBladeRush = v59(v28.Outlaw_TTD.BladeRushTTD) and v58(v28.Outlaw_CDUSE.BladeRush);
-	v39 = v26.Defense(v29.Shadowstep);
-	if v39 then
-		return v39;
-	end
 	v39 = v26.Poisons();
 	if v39 then
 		return v39;
 	end
 	if not v6:AffectingCombat() then
-		if (AutoStealth and (v29.Stealth:IsCastable() or v29.Stealth2:IsCastable()) and v6:StealthDown() and (((Enemies30yCount >= ((242 - (187 + 54)) + (780 - (162 + 618)))) and (v28.Outlaw.AutoStealth == "near Target")) or (v28.Outlaw.AutoStealth == "always"))) then
+		if (AutoStealth and (v29.Stealth:IsCastable() or v29.Stealth2:IsCastable()) and v6:StealthDown() and (((Enemies30yCount >= ((242 - (187 + 54)) + (780 - (162 + 618)))) and (v28.Outlaw.AutoStealth == "near Target")) or (v28.Outlaw.AutoStealth == "Always"))) then
 			if v11.Cast(v29.Stealthcast) then
 				return "Cast Stealth (OOC)";
 			end
@@ -738,6 +734,10 @@ local function v76()
 	end
 	if v25.TargetIsValid() then
 		if (not v28.Outlaw.AttackonlyinCombat or (v28.Outlaw.AttackonlyinCombat and v7:AffectingCombat())) then
+			v39 = v26.Defense();
+			if v39 then
+				return v39;
+			end
 			if InterruptToggle then
 				v39 = v25.InterruptCycle(v29.Kick, 8 - 3, true, nil, false);
 				if v39 then
@@ -751,7 +751,7 @@ local function v76()
 				if v39 then
 					return v39;
 				end
-				v39 = v28.Interrupt.UseCheapShop and v6:StealthUp(true, true) and v25.InterruptCycle(v29.CheapShot, 2 + 3, true, nil, true);
+				v39 = v28.Interrupt.UseCheapShot and v6:StealthUp(true, true) and v25.InterruptCycle(v29.CheapShot, 2 + 3, true, nil, true);
 				if v39 then
 					return v39;
 				end
@@ -820,7 +820,7 @@ local function v77()
 	v11.ResetToggle();
 	v28.Outlaw.Display();
 	v11.ToggleIconFrame:AddButtonCustom("S", 1 + 0, "smallCDs", "smallcds");
-	v11.ToggleIconFrame:AddButtonCustom("A", 3 - 1, "AutoStealth", "autoStealth");
+	v11.ToggleIconFrame:AddButtonCustom("AS", 3 - 1, "AutoStealth", "autostealth");
 	v11.ToggleIconFrame:AddButtonCustom("I", 1470 - (899 + 568), "Interrupt", "interrupt");
 	v11.ToggleIconFrame:AddButtonCustom("V", 3 + 1, "Vanish", "vanish");
 	v11.ToggleIconFrame:AddButtonCustom("K", 12 - 7, "KillingSpree", "killingspree");
