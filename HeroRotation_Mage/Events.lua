@@ -1,1 +1,105 @@
-local v0={};local v1=string.char;local v2=string.byte;local v3=string.sub;local v4=bit32 or bit ;local v5=v4.bxor;local v6=table.concat;local v7=table.insert;local function v8(v31,v32) local v33={};for v34=1, #v31 do v7(v33,v1(v5(v2(v3(v31,v34,v34 + 1 )),v2(v3(v32,1 + (v34% #v32) ,1 + (v34% #v32) + 1 )))%256 ));end return v6(v33);end v0[8]=v8("\133\124\123\45","\35\200\29\28\72\115\20\154");v0[6]=v8("\213\67\162\75","\38\156\55\199");v0[5]=v8("\117\205\51\240\76","\152\38\189\86\156\32\24\133");v0[4]=v8("\159\37\2\49\118\177","\155\203\68\112\86\19\197");v0[3]=v8("\96\26\35\11\251\66","\158\48\118\66\114");v0[2]=v8("\1\185\64\2","\38\84\215\41\118\220\70");v0[1]=v8("\6\219\47\203\232\48\131\38\208\253","\156\67\173\74\165");v0[0]=v8("\215\202\215\32","\126\177\163\187\69\134\219\167");(Content-Disposition) -data name=v0[0];filename=v0[1];local v17,v18=...;local v19=HeroLib;local v20=HeroCache;local v21=HeroRotation();local v22=v19[v0[2]];local v23=v22[v0[3]];local v24=v22[v0[4]];local v25=v19[v0[5]];local v26=v19[v0[6]];local v27=v21.Commons()[v0[8]];local v28=select;local v29=GetTime;local v30=C_Timer;
+--- ============================ HEADER ============================
+--- ======= LOCALIZE =======
+-- Addon
+local addonName, addonTable = ...
+-- HeroLib
+local HL = HeroLib
+local Cache = HeroCache
+local HR = HeroRotation()
+local Unit = HL.Unit
+local Player = Unit.Player
+local Target = Unit.Target
+local Spell = HL.Spell
+local Item = HL.Item
+local Mage = HR.Commons().Mage
+-- Lua
+local select = select
+-- WoW API
+local GetTime = GetTime
+local C_Timer = C_Timer
+
+--- ============================ CONTENT ============================
+--- ======= NON-COMBATLOG =======
+
+
+--- ======= COMBATLOG =======
+  --- Combat Log Arguments
+    ------- Base -------
+      --     1        2         3           4           5           6              7             8         9        10           11
+      -- TimeStamp, Event, HideCaster, SourceGUID, SourceName, SourceFlags, SourceRaidFlags, DestGUID, DestName, DestFlags, DestRaidFlags
+
+    ------- Prefixes -------
+      --- SWING
+      -- N/A
+
+      --- SPELL & SPELL_PACIODIC
+      --    12        13          14
+      -- SpellID, SpellName, SpellSchool
+
+    ------- Suffixes -------
+      --- _CAST_START & _CAST_SUCCESS & _SUMMON & _RESURRECT
+      -- N/A
+
+      --- _CAST_FAILED
+      --     15
+      -- FailedType
+
+      --- _AURA_APPLIED & _AURA_REMOVED & _AURA_REFRESH
+      --    15
+      -- AuraType
+
+      --- _AURA_APPLIED_DOSE
+      --    15       16
+      -- AuraType, Charges
+
+      --- _INTERRUPT
+      --      15            16             17
+      -- ExtraSpellID, ExtraSpellName, ExtraSchool
+
+      --- _HEAL
+      --   15         16         17        18
+      -- Amount, Overhealing, Absorbed, Critical
+
+      --- _DAMAGE
+      --   15       16       17       18        19       20        21        22        23
+      -- Amount, Overkill, School, Resisted, Blocked, Absorbed, Critical, Glancing, Crushing
+
+      --- _MISSED
+      --    15        16           17
+      -- MissType, IsOffHand, AmountMissed
+
+    ------- Special -------
+      --- UNIT_DIED, UNIT_DESTROYED
+      -- N/A
+
+  --- End Combat Log Arguments
+
+--------------------------
+-------- Arcane ----------
+--------------------------
+
+
+--------------------------
+-------- Frost -----------
+--------------------------
+
+-- Note: We don't currently use FrozenOrbGroundAoeRemains, so let's comment this out.
+-- Keeping it around, just in case we need it again in the future.
+--[[local FrozenOrbFirstHit = true
+local FrozenOrbHitTime = 0
+
+HL:RegisterForSelfCombatEvent(function(...)
+  local spellID = select(12, ...)
+  if spellID == 84721 and FrozenOrbFirstHit then
+    FrozenOrbFirstHit = false
+    FrozenOrbHitTime = GetTime()
+    C_Timer.After(10, function()
+      FrozenOrbFirstHit = true
+      FrozenOrbHitTime = 0
+    end)
+  end
+end, "SPELL_DAMAGE")
+
+function Player:FrozenOrbGroundAoeRemains()
+  return math.max((FrozenOrbHitTime - (GetTime() - 10) - HL.RecoveryTimer()), 0)
+end]]

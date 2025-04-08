@@ -3,9 +3,9 @@
 -- Addon
 local addonName, addonTable = ...
 -- HeroLib
-local HL               = HeroLib
+local HL               = HeroLib()
 local HR               = HeroRotation()
-local Cache            = HeroCache
+local Cache            = HeroCache()
 local Unit             = HL.Unit
 local Player           = Unit.Player
 local Target           = Unit.Target
