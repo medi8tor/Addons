@@ -1,424 +1,146 @@
---- ============================ HEADER ============================
---- ======= LOCALIZE =======
--- Addon
-local addonName, addonTable = ...
--- HeroLib
-local HL = HeroLib
--- HeroRotation
-local HR = HeroRotation()
--- File Locals
-local GUI = HL.GUI
-local CreateChildPanel = GUI.CreateChildPanel
-local CreatePanelOption = GUI.CreatePanelOption
-local CreateARPanelOption = HR.HRGUIGet().CreateARPanelOption
-local CreateARPanelOptions = HR.HRGUIGet().CreateARPanelOptions
-local GUISettings = HR.GUISettingsGet()
---- ============================ CONTENT ============================
--- Default settings
-GUISettings.APL.Rogue = {
-    Commons = {
-        UseSoloVanish = false, -- don't vanish while solo
-        Enabled = {
-            Potions = true,
-            Trinket1 = true,
-            Trinket2 = true,
-            Items = true,
-            Shiv = true,
-            Racials = true,
-            IgnoreTtdOnBoss = true,
-        },
-        OnlyAttackEnnemyInCombat = true,
-        OnlyAttackEnnemyInCombatSolo = false
-    },
-    Defense = {
-        CrimsonVialHP = 30,
-        EvasionHP = 30,
-        FeintHP = 30,
-        FeintDanger = true,
-        CloakofShadowsHP = 30
-
-    },
-    Assassination = {
-        EnvenomDMGOffset = 3,
-        MutilateDMGOffset = 3,
-        AlwaysSuggestGarrote = false,   -- Suggest Garrote even when Vanish is up
-        UsePriorityRotation = "Toggle", -- Only for Assassination / Subtlety
-        PotionType = {
-            Selected = "Power"
-        },
-        PotionRank = {
-            Selected = "Any"
-        },
-        TimeToDie = {
-            Cooldowns = 15,
-        }
-    },
-    Assassination_Interrupt = {
-        Interrupt = {
-            -- Interrupt
-            AutoInterrupt = true,
-            AutoStun = true,
-            -- Interrupting everything when solo
-            InterruptEverythingSolo = true,
-            -- Interrupting everything when raid
-            InterruptEverythingRaid = true,
-            -- Interrupting list only when dungeon
-            InterruptInDungeon = "Whitelist",
-            InterruptInDungeonUseStunAsInterrupt = true,
-            InterruptPercent = 60,
-            InterruptPercentChannel = 60
-        },
-        UseBlind = true,
-        UseCheapShop = true,
-        UseKidneyShot = true
-    },
-    Outlaw = {
-        -- Roll the Bones Logic, accepts "SimC", "1+ Buff" and every "RtBName".
-        -- "SimC", "1+ Buff", "Broadside", "Buried Treasure", "Grand Melee", "Skull and Crossbones", "Ruthless Precision", "True Bearing"
-        RolltheBonesLogic = "SimC",
-        AutoTabGS = false,
-        PotionType = {
-            Selected = "Power"
-        },
-        PotionRank = {
-            Selected = "Any"
-        },
-        AutoStealth = "near Target",
-    },
-    Outlaw_Interrupt = {
-        Interrupt = {
-            -- Interrupt
-            AutoInterrupt = true,
-            AutoStun = true,
-            -- Interrupting everything when solo
-            InterruptEverythingSolo = true,
-            -- Interrupting everything when raid
-            InterruptEverythingRaid = true,
-            -- Interrupting list only when dungeon
-            InterruptInDungeon = "Whitelist",
-            InterruptInDungeonUseStunAsInterrupt = true,
-            InterruptPercent = 60,
-            InterruptPercentChannel = 60
-        },
-        UseBlind = true,
-        --UseCheapShot = true,
-        UseKidneyShot = true
-    },
-    Outlaw_TTD = {
-        RacialsTTD = 20,  
-        PotionsTTD = 20,
-        TrinketsTTD = 20,
-        VanishTTD = 20,
-        AdrenalineRushTTD = 20,
-        KeepItRollingTTD = 20,
-        GhostlyStrikeTTD = 20,
-        ThistleTeaTTD = 20, 
-        KillingSpreeTTD = 20,
-        BladeRushTTD = 20,
-    },
-    Outlaw_CDUSE = {
-        Enemycount = 5,
-        Racials = "with Cooldowns",
-        Potions = "with Cooldowns",
-        Trinket1 = "with Cooldowns",
-        Trinket2 = "with Cooldowns",
-        Vanish = "with Cooldowns",  
-        AdrenalineRush = "with Cooldowns",
-        GhostlyStrike = "with Cooldowns",
-        KeepItRolling = "with Cooldowns",
-        ThistleTea = "with Cooldowns",  
-        KillingSpree = "with Cooldowns",
-        BladeRush = "with Cooldowns",
-
-    },  
-    Subtlety = {
-        EviscerateDMGOffset = 3,                       -- Used to compute the rupture threshold
-        ShDEcoCharge = 1.75,                           -- Shadow Dance Eco Mode (Min Fractional Charges before using it while CDs are disabled)
-        BurnShadowDance = "On Bosses not in Dungeons", -- Burn Shadow Dance charges when the target is about to die
-        UsePriorityRotation = "Toggle",                -- Only for Assassination / Subtlety
-        PotionType = {
-            Selected = "Power"
-        },
-        PotionRank = {
-            Selected = "Any"
-        },
-
-        StealthMacro = {
-            Vanish = true,
-            Shadowmeld = true,
-            ShadowDance = true
-        },
-        TimeToDie = {
-            Cooldowns = 15,
-        }
-    },
-    Subtlety_Interrupt = {
-        Interrupt = {
-            -- Interrupt
-            AutoInterrupt = true,
-            AutoStun = true,
-            -- Interrupting everything when solo
-            InterruptEverythingSolo = true,
-            -- Interrupting everything when raid
-            InterruptEverythingRaid = true,
-            -- Interrupting list only when dungeon
-            InterruptInDungeon = "Whitelist",
-            InterruptInDungeonUseStunAsInterrupt = true,
-            InterruptPercent = 60,
-            InterruptPercentChannel = 60
-        },
-        UseBlind = true,
-        UseCheapShop = true,
-        UseKidneyShot = true
-    }
-
-}
-
---[[ General = HR.GUISettings.General,
-Commons = HR.GUISettings.APL.Rogue.Commons,
-Outlaw = GUISettings.APL.Rogue.Outlaw,
-Outlaw_TTD = GUISettings.APL.Rogue.Outlaw_TTD,
-Outlaw_CDUSE = GUISettings.APL.Rogue.Outlaw_CDUSE,
-Interrupt = GUISettings.APL.Rogue.Outlaw_Interrupt.Interrupt ]]
-
-
-GUISettings.APL.Rogue.Commons.Enabled["Shiv Auto Target"] = true
-GUISettings.APL.Rogue.Commons.Enabled["Tricks of Trade Focus"] = true
-HR.HRGUIGet().LoadSettingsRecursively(GUISettings)
-local DPSCooldownList =  {"Not Used" ,"with Cooldowns","small CDs" ,"with Cooldowns or AoE","on Enemycount or Cooldowns","on Boss or with Cooldowns","always" ,"on Boss only" ,"on Boss or on Enemycount" ,"on Boss or with Cooldowns","with Bloodlust only","small CDs" ,"with Cooldowns or AoE","on Enemycount or Cooldowns","on Enemycount","on Boss or on Enemycount"}
--- Child Panels
-local ARPanel = HR.HRGUIGet().Panel
-local CP_Rogue = CreateChildPanel(ARPanel, "Rogue")
-local CP_Defense = CreateChildPanel(ARPanel, "Defense")
-local CP_Assassination = CreateChildPanel(ARPanel, "Assassination")
-local CP_Outlaw = CreateChildPanel(ARPanel, "Outlaw")
-local CP_Outlaw_TTD = CreateChildPanel(ARPanel, "Outlaw_TTD")
-local CP_Outlaw_CDUSE = CreateChildPanel(ARPanel, "Outlaw_CDUSE")
-
-local CP_Subtlety = CreateChildPanel(ARPanel, "Subtlety")
-
-local CP_Outlaw_Interrupt = CreateChildPanel(CP_Outlaw, "Interrupt")
-CreateARPanelOptions(CP_Outlaw_Interrupt, "APL.Rogue.Outlaw_Interrupt")
-CreatePanelOption("CheckButton", CP_Outlaw_Interrupt, "APL.Rogue.Outlaw_Interrupt.UseBlind", "Use Blind",
-    "Use Blind for stun and or interrupt.")
---[[ CreatePanelOption("CheckButton", CP_Outlaw_Interrupt, "APL.Rogue.Outlaw_Interrupt.UseCheapShop", "Use Cheap Shot",
-    "Use Cheap Shot for stun and or interrupt.") ]]
-CreatePanelOption("CheckButton", CP_Outlaw_Interrupt, "APL.Rogue.Outlaw_Interrupt.UseKidneyShot", "Use Kidney Shot",
-    "Use Kidney Shot for stun and or interrupt.")
-
-local CP_Assassination_Interrupt = CreateChildPanel(CP_Assassination, "Interrupt")
-CreateARPanelOptions(CP_Assassination_Interrupt, "APL.Rogue.Assassination_Interrupt")
-CreatePanelOption("CheckButton", CP_Assassination_Interrupt, "APL.Rogue.Assassination_Interrupt.UseBlind", "Use Blind",
-    "Use Blind for stun and or interrupt.")
-CreatePanelOption("CheckButton", CP_Assassination_Interrupt, "APL.Rogue.Assassination_Interrupt.UseCheapShop",
-    "Use Cheap Shot", "Use Cheap Shot for stun and or interrupt.")
-CreatePanelOption("CheckButton", CP_Assassination_Interrupt, "APL.Rogue.Assassination_Interrupt.UseKidneyShot",
-    "Use Kidney Shot", "Use Kidney Shot for stun and or interrupt.")
-
-local CP_Subtlety_Interrupt = CreateChildPanel(CP_Subtlety, "Interrupt")
-CreateARPanelOptions(CP_Subtlety_Interrupt, "APL.Rogue.Subtlety_Interrupt")
-CreatePanelOption("CheckButton", CP_Subtlety_Interrupt, "APL.Rogue.Subtlety_Interrupt.UseBlind", "Use Blind",
-    "Use Blind for stun and or interrupt.")
-CreatePanelOption("CheckButton", CP_Subtlety_Interrupt, "APL.Rogue.Subtlety_Interrupt.UseCheapShop", "Use Cheap Shot",
-    "Use Cheap Shot for stun and or interrupt.")
-CreatePanelOption("CheckButton", CP_Subtlety_Interrupt, "APL.Rogue.Subtlety_Interrupt.UseKidneyShot", "Use Kidney Shot",
-    "Use Kidney Shot for stun and or interrupt.")
-
--- Controls
--- Rogue
-
-CreatePanelOption("CheckButton", CP_Rogue, "APL.Rogue.Commons.UseSoloVanish", "Use Vanish while Solo",
-    "Suggest Vanish while Solo.\nDisable to save prevent mobs resetting.")
-CreatePanelOption("CheckButton", CP_Rogue, "APL.Rogue.Commons.OnlyAttackEnnemyInCombat", "Only attack in combat",
-    "Only attack enemy in combat.")
-CreatePanelOption("CheckButton", CP_Rogue, "APL.Rogue.Commons.OnlyAttackEnnemyInCombatSolo",
-    "Only attack in combat Solo", "Only attack enemy in combat when solo.")
-
-CreateARPanelOptions(CP_Rogue, "APL.Rogue.Commons")
--- Defense
-CreatePanelOption("Slider", CP_Defense, "APL.Rogue.Defense.CrimsonVialHP", { 0, 100, 1 }, "Crimson Vial HP",
-    "Set the Crimson Vial HP threshold.")
-CreatePanelOption("Slider", CP_Defense, "APL.Rogue.Defense.EvasionHP", { 0, 100, 1 }, "Evasion HP",
-    "Set the Evasion HP threshold.")
-CreatePanelOption("Slider", CP_Defense, "APL.Rogue.Defense.FeintHP", { 0, 100, 1 }, "Feint HP",
-    "Set the Feint HP threshold.")
-CreatePanelOption("CheckButton", CP_Defense, "APL.Rogue.Defense.FeintDanger",
-    "Use Feint on danger", "Use feint on dangerous spell.")
-CreatePanelOption("Slider", CP_Defense, "APL.Rogue.Defense.CloakofShadowsHP", { 0, 100, 1 }, "Cloak of Shadows HP",
-    "Set the Cloak of Shadows HP threshold.")
-
-CreateARPanelOptions(CP_Defense, "APL.Rogue.Defense")
-
--- Assassination
-CreatePanelOption("Slider", CP_Assassination, "APL.Rogue.Assassination.EnvenomDMGOffset", { 1, 5, 0.25 },
-    "Envenom DMG Offset", "Set the Envenom DMG Offset.")
-CreatePanelOption("Slider", CP_Assassination, "APL.Rogue.Assassination.MutilateDMGOffset", { 1, 5, 0.25 },
-    "Mutilate DMG Offset", "Set the Mutilate DMG Offset.")
-CreatePanelOption("Dropdown", CP_Assassination, "APL.Rogue.Assassination.UsePriorityRotation",
-    { "Toggle", "On Bosses" }, "Use Priority Rotation",
-    "Select when to show rotation for maximum priority damage (at the cost of overall AoE damage.)\nAuto will function as Never except on specific encounters where AoE is not recommended.")
-CreatePanelOption("CheckButton", CP_Assassination, "APL.Rogue.Assassination.AlwaysSuggestGarrote",
-    "Always Suggest Garrote",
-    "Don't prevent Garrote suggestions when using Subterfuge and Vanish is ready. These should ideally be synced, but can be useful if holding Vanish for specific fights.")
-CreateARPanelOptions(CP_Assassination, "APL.Rogue.Assassination")
--- Outlaw
-
-
-CreatePanelOption("Dropdown", CP_Outlaw, "APL.Rogue.Outlaw.RolltheBonesLogic",
-    { "SimC", "1+ Buff", "Broadside", "Buried Treasure", "Grand Melee", "Skull and Crossbones", "Ruthless Precision",
-        "True Bearing" }, "Roll the Bones Logic",
-    "Define the Roll the Bones logic to follow.\n(SimC highly recommended!)")
-
-CreatePanelOption("CheckButton", CP_Outlaw, "APL.Rogue.Outlaw.AutoTabGS",
-    "Auto Target GS", "Auto Target Ghost Strike target.")
-CreatePanelOption("Dropdown", CP_Outlaw, "APL.Rogue.Outlaw.AutoStealth",
-    { "near Target", "Always" ,"never" }, "Auto Stealth",
-    "Select when to use Auto Stealth.\nAuto Stealth will be used when you are not in combat and the target is in range.")
-CreateARPanelOptions(CP_Outlaw, "APL.Rogue.Outlaw")
-
---cooldowns
---[[ Outlaw_TTD = GUISettings.APL.Rogue.Outlaw_TTD,
-Outlaw_CDUSE = GUISettings.APL.Rogue.Outlaw_CDUSE, ]]
-CreatePanelOption("Slider", CP_Outlaw_CDUSE, "APL.Rogue.Outlaw_CDUSE.Enemycount", { 0, 60, 1 }, "Mobcount",
-  "Mobcount")
-
-CreatePanelOption("Dropdown", CP_Outlaw_CDUSE, "APL.Rogue.Outlaw_CDUSE.Racials", DPSCooldownList,
-  "Racials Usage", "Select how to use Racials.")
-
-CreatePanelOption("Dropdown", CP_Outlaw_CDUSE, "APL.Rogue.Outlaw_CDUSE.Trinket1", DPSCooldownList,
-  "Trinket 1 Usage", "Select how to use Trinket 1.")
-
-CreatePanelOption("Dropdown", CP_Outlaw_CDUSE, "APL.Rogue.Outlaw_CDUSE.Trinket2", DPSCooldownList,
-  "Trinket 2 Usage", "Select how to use Trinket 2.")
-
-CreatePanelOption("Dropdown", CP_Outlaw_CDUSE, "APL.Rogue.Outlaw_CDUSE.Potions", DPSCooldownList,
-  "Potion Usage", "Select how to use Potion.")
-
-  CreatePanelOption("Dropdown", CP_Outlaw_CDUSE, "APL.Rogue.Outlaw_CDUSE.Vanish", DPSCooldownList,
-  "Vanish", "Select how to use Vanish.")
-
-  CreatePanelOption("Dropdown", CP_Outlaw_CDUSE, "APL.Rogue.Outlaw_CDUSE.AdrenalineRush", DPSCooldownList,
-  "AdrenalineRush", "Select how to use AdrenalineRush.")
-
-  CreatePanelOption("Dropdown", CP_Outlaw_CDUSE, "APL.Rogue.Outlaw_CDUSE.KeepItRolling", DPSCooldownList,
-  "KeepItRolling", "Select how to use KeepItRolling.")
-  
-  CreatePanelOption("Dropdown", CP_Outlaw_CDUSE, "APL.Rogue.Outlaw_CDUSE.GhostlyStrike", DPSCooldownList,
-  "GhostlyStrike", "Select how to use GhostlyStrike.")
-  
-  CreatePanelOption("Dropdown", CP_Outlaw_CDUSE, "APL.Rogue.Outlaw_CDUSE.ThistleTea", DPSCooldownList,
-  "ThistleTea", "Select how to use ThistleTea.")
-  
-  CreatePanelOption("Dropdown", CP_Outlaw_CDUSE, "APL.Rogue.Outlaw_CDUSE.KillingSpree", DPSCooldownList,
-  "KillingSpree", "Select how to use KillingSpree.")
-  
-  CreatePanelOption("Dropdown", CP_Outlaw_CDUSE, "APL.Rogue.Outlaw_CDUSE.BladeRush", DPSCooldownList,
-  "BladeRush", "Select how to use BladeRush.")
-  
-
-
-CreateARPanelOptions(CP_Outlaw_CDUSE, "APL.Rogue.Outlaw_CDUSE")
-
-
---TTD
-
-CreatePanelOption("Slider", CP_Outlaw_TTD, "APL.Rogue.Outlaw_TTD.RacialsTTD", { 0, 60, 1 }, "Racials TTD",
-  "TTD to use Racials on Dungeon Mobs")
-  CreatePanelOption("Slider", CP_Outlaw_TTD, "APL.Rogue.Outlaw_TTD.PotionsTTD", { 0, 60, 1 }, "PotionsTTD",
-  "TTD to use Potions on Dungeon Mobs")
-  CreatePanelOption("Slider", CP_Outlaw_TTD, "APL.Rogue.Outlaw_TTD.TrinketsTTD", { 0, 60, 1 }, "Trinkets TTD",
-  "TTD to use Trinkets on Dungeon Mobs")
-  CreatePanelOption("Slider", CP_Outlaw_TTD, "APL.Rogue.Outlaw_TTD.VanishTTD", { 0, 60, 1 }, "Vanish TTD",
-  "TTD to use Vanish on Dungeon Mobs")
-  CreatePanelOption("Slider", CP_Outlaw_TTD, "APL.Rogue.Outlaw_TTD.AdrenalineRushTTD", { 0, 60, 1 }, "Adrenaline Rush TTD",
-  "TTD to use Adrenaline Rush on Dungeon Mobs")
-  CreatePanelOption("Slider", CP_Outlaw_TTD, "APL.Rogue.Outlaw_TTD.KeepItRollingTTD", { 0, 60, 1 }, "Keep It Rolling TTD",
-  "TTD to use Keep It Rolling on Dungeon Mobs")
-  CreatePanelOption("Slider", CP_Outlaw_TTD, "APL.Rogue.Outlaw_TTD.GhostlyStrikeTTD", { 0, 60, 1 }, "Ghostly Strike TTD",
-  "TTD to use Ghostly Rolling on Dungeon Mobs")
-  CreatePanelOption("Slider", CP_Outlaw_TTD, "APL.Rogue.Outlaw_TTD.ThistleTeaTTD", { 0, 60, 1 }, "Thistle Tea TTD",
-  "TTD to use Thistle Tea on Dungeon Mobs")
-  CreatePanelOption("Slider", CP_Outlaw_TTD, "APL.Rogue.Outlaw_TTD.KillingSpreeTTD", { 0, 60, 1 }, "Killing Spree TTD",
-  "TTD to use Killing Spree on Dungeon Mobs")
-  CreatePanelOption("Slider", CP_Outlaw_TTD, "APL.Rogue.Outlaw_TTD.BladeRushTTD", { 0, 60, 1 }, "Blade Rush TTD",
-  "TTD to use Blade Rush on Dungeon Mobs")
-
-CreateARPanelOptions(CP_Outlaw_TTD, "APL.Rogue.Outlaw_TTD")
---[[ General = HR.GUISettings.General,
-Commons = HR.GUISettings.APL.Rogue.Commons,
-Outlaw = GUISettings.APL.Rogue.Outlaw,
-Outlaw_TTD = GUISettings.APL.Rogue.Outlaw_TTD,
-Outlaw_CDUSE = GUISettings.APL.Rogue.Outlaw_CDUSE,
-Interrupt = GUISettings.APL.Rogue.Outlaw_Interrupt.Interrupt ]]
-
--- Subtlety
-CreatePanelOption("Slider", CP_Subtlety, "APL.Rogue.Subtlety.EviscerateDMGOffset", { 1, 5, 0.25 },
-    "Eviscerate Damage Offset", "Set the Eviscerate Damage Offset, used to compute the rupture threshold.")
-CreatePanelOption("Slider", CP_Subtlety, "APL.Rogue.Subtlety.ShDEcoCharge", { 1, 2, 0.1 }, "ShD Eco Charge",
-    "Set the Shadow Dance Eco Charge threshold.")
-CreatePanelOption("Dropdown", CP_Subtlety, "APL.Rogue.Subtlety.UsePriorityRotation",
-    { "Toggle", "On Bosses" }, "Use Priority Rotation",
-    "Select when to show rotation for maximum priority damage (at the cost of overall AoE damage.)\nAuto will function as Never except on specific encounters where AoE is not recommended.")
-CreatePanelOption("Dropdown", CP_Subtlety, "APL.Rogue.Subtlety.BurnShadowDance",
-    { "Always", "On Bosses", "On Bosses not in Dungeons" }, "Burn Shadow Dance before Death",
-    "Use remaining Shadow Dance charges when the target is about to die.")
-CreatePanelOption("CheckButton", CP_Subtlety, "APL.Rogue.Subtlety.StealthMacro.Vanish", "Stealth Combo - Vanish",
-    "Allow suggesting Vanish stealth ability combos (recommended)")
-CreatePanelOption("CheckButton", CP_Subtlety, "APL.Rogue.Subtlety.StealthMacro.Shadowmeld",
-    "Stealth Combo - Shadowmeld", "Allow suggesting Shadowmeld stealth ability combos (recommended)")
-CreatePanelOption("CheckButton", CP_Subtlety, "APL.Rogue.Subtlety.StealthMacro.ShadowDance",
-    "Stealth Combo - Shadow Dance", "Allow suggesting Shadow Dance stealth ability combos (recommended)")
-CreateARPanelOptions(CP_Subtlety, "APL.Rogue.Subtlety")
-
-local CP_Interrupt = GUI.GetPanelByName("Interrupt")
-function GUISettings.APL.Rogue.AddCommonToggle()
-    HR.ResetToggle()
-    HR.ToggleIconFrame:AddButtonCustom("S", 1, "Stealth", "stealth");
-    HR.ToggleIconFrame:AddButtonCustom("I", 3, "Interrupt", "interrupt");
+local obf_stringchar = string.char;
+local obf_stringbyte = string.byte;
+local obf_stringsub = string.sub;
+local obf_bitlib = bit32 or bit;
+local obf_XOR = obf_bitlib.bxor;
+local obf_tableconcat = table.concat;
+local obf_tableinsert = table.insert;
+local function LUAOBFUSACTOR_DECRYPT_STR_0(LUAOBFUSACTOR_STR, LUAOBFUSACTOR_KEY)
+	local result = {};
+	for i = 1, #LUAOBFUSACTOR_STR do
+		obf_tableinsert(result, obf_stringchar(obf_XOR(obf_stringbyte(obf_stringsub(LUAOBFUSACTOR_STR, i, i + 1)), obf_stringbyte(obf_stringsub(LUAOBFUSACTOR_KEY, 1 + (i % #LUAOBFUSACTOR_KEY), 1 + (i % #LUAOBFUSACTOR_KEY) + 1))) % 256));
+	end
+	return obf_tableconcat(result);
 end
-
-function GUISettings.APL.Rogue.Outlaw.Display()
-    HL.GUI.HidePanel(CP_Subtlety)
-    HL.GUI.HidePanel(CP_Assassination)
-    HL.GUI.ShowPanel(CP_Outlaw)
-
-    HL.GUI.ShowPanel(CP_Outlaw_Interrupt)
-    HL.GUI.ShowPanel(CP_Outlaw_TTD)
-    HL.GUI.ShowPanel(CP_Outlaw_CDUSE)
-    HL.GUI.HidePanel(CP_Assassination_Interrupt)
-    HL.GUI.HidePanel(CP_Subtlety_Interrupt)
-    HL.GUI.HidePanel(CP_Interrupt)
-
-end
-
-function GUISettings.APL.Rogue.Assassination.Display()
-    GUISettings.APL.Rogue.AddCommonToggle()
-    HR.ToggleIconFrame:AddButtonCustom("P", 2, "Priority", "priority")
-    HR.ToggleIconFrame:AddButtonCustom("S", 4, "Small CDs", "smallcds")
-    HL.GUI.HidePanel(CP_Subtlety)
-    HL.GUI.ShowPanel(CP_Assassination)
-    HL.GUI.HidePanel(CP_Outlaw)
-
-    HL.GUI.HidePanel(CP_Outlaw_Interrupt)
-    HL.GUI.HidePanel(CP_Outlaw_TTD)
-    HL.GUI.HidePanel(CP_Outlaw_CDUSE)
-    HL.GUI.ShowPanel(CP_Assassination_Interrupt)
-    HL.GUI.HidePanel(CP_Subtlety_Interrupt)
-    HL.GUI.HidePanel(CP_Interrupt)
-end
-
-function GUISettings.APL.Rogue.Subtlety.Display()
-    GUISettings.APL.Rogue.AddCommonToggle()
-    HR.ToggleIconFrame:AddButtonCustom("P", 2, "Priority", "priority")
-    HR.ToggleIconFrame:AddButtonCustom("S", 4, "Small CDs", "smallcds")
-    HL.GUI.ShowPanel(CP_Subtlety)
-    HL.GUI.HidePanel(CP_Assassination)
-    HL.GUI.HidePanel(CP_Outlaw)
-
-    HL.GUI.HidePanel(CP_Outlaw_Interrupt)
-    HL.GUI.HidePanel(CP_Outlaw_TTD)
-    HL.GUI.HidePanel(CP_Outlaw_CDUSE)
-    HL.GUI.HidePanel(CP_Assassination_Interrupt)
-    HL.GUI.ShowPanel(CP_Subtlety_Interrupt)
-    HL.GUI.HidePanel(CP_Interrupt)
-end
+local v0, v1 = ...;
+local v2 = HeroLib;
+local v3 = HeroRotation();
+local v4 = v2['GUI'];
+local v5 = v4['CreateChildPanel'];
+local v6 = v4['CreatePanelOption'];
+local v7 = v3.HRGUIGet()['CreateARPanelOption'];
+local v8 = v3.HRGUIGet()['CreateARPanelOptions'];
+local v9 = v3.GUISettingsGet();
+v9['APL']['Rogue'] = {[LUAOBFUSACTOR_DECRYPT_STR_0("\242\204\214\40\233\181\212", "\126\177\163\187\69\134\219\167")]={[LUAOBFUSACTOR_DECRYPT_STR_0("\22\222\47\246\243\47\194\28\196\242\42\222\34", "\156\67\173\74\165")]=false,[LUAOBFUSACTOR_DECRYPT_STR_0("\17\185\72\20\176\35\66", "\38\84\215\41\118\220\70")]={[LUAOBFUSACTOR_DECRYPT_STR_0("\96\25\54\27\241\94\5", "\158\48\118\66\114")]=true,[LUAOBFUSACTOR_DECRYPT_STR_0("\159\54\25\56\120\160\239\250", "\155\203\68\112\86\19\197")]=true,[LUAOBFUSACTOR_DECRYPT_STR_0("\114\207\63\242\75\125\241\170", "\152\38\189\86\156\32\24\133")]=true,[LUAOBFUSACTOR_DECRYPT_STR_0("\213\67\162\75\239", "\38\156\55\199")]=true,[LUAOBFUSACTOR_DECRYPT_STR_0("\155\117\117\62", "\35\200\29\28\72\115\20\154")]=true,[LUAOBFUSACTOR_DECRYPT_STR_0("\43\190\210\214\140\32\39", "\84\121\223\177\191\237\76")]=true,[LUAOBFUSACTOR_DECRYPT_STR_0("\146\81\199\175\40\85\4\213\191\121\199\130\53\67\35", "\161\219\54\169\192\90\48\80")]=true},[LUAOBFUSACTOR_DECRYPT_STR_0("\102\76\12\60\104\86\20\36\74\73\37\43\71\71\13\60\96\76\35\42\68\64\1\49", "\69\41\34\96")]=true,[LUAOBFUSACTOR_DECRYPT_STR_0("\147\205\219\19\35\63\168\194\212\1\39\37\178\198\218\19\43\37\159\204\218\8\3\63\143\204\219\5", "\75\220\163\183\106\98")]=false},[LUAOBFUSACTOR_DECRYPT_STR_0("\38\191\141\50\215\17\191", "\185\98\218\235\87")]={[LUAOBFUSACTOR_DECRYPT_STR_0("\232\46\46\235\205\165\197\10\46\231\210\130\251", "\202\171\92\71\134\190")]=(64 - 34),[LUAOBFUSACTOR_DECRYPT_STR_0("\12\215\45\155\32\206\34\160\25", "\232\73\161\76")]=(1113 - (286 + 797)),[LUAOBFUSACTOR_DECRYPT_STR_0("\157\220\75\83\10\147\233", "\126\219\185\34\61")]=(109 - 79),[LUAOBFUSACTOR_DECRYPT_STR_0("\42\203\87\124\106\83\242\233\11\203\76", "\135\108\174\62\18\30\23\147")]=true,[LUAOBFUSACTOR_DECRYPT_STR_0("\149\229\37\202\19\161\53\244\190\232\46\196\15\189\27\247", "\167\214\137\74\171\120\206\83")]=(49 - 19)},[LUAOBFUSACTOR_DECRYPT_STR_0("\170\227\33\92\235\180\130\254\51\73\241\168\133", "\199\235\144\82\61\152")]={[LUAOBFUSACTOR_DECRYPT_STR_0("\34\24\175\46\9\25\180\15\42\49\150\45\1\5\188\63", "\75\103\118\217")]=(442 - (397 + 42)),[LUAOBFUSACTOR_DECRYPT_STR_0("\234\65\100\29\181\31\211\81\84\57\158\49\193\82\99\17\173", "\126\167\52\16\116\217")]=(1 + 2),[LUAOBFUSACTOR_DECRYPT_STR_0("\233\34\55\129\173\10\207\221\41\39\133\167\13\219\201\60\50\143\160\28", "\156\168\78\64\224\212\121")]=false,[LUAOBFUSACTOR_DECRYPT_STR_0("\50\253\160\254\21\231\170\220\14\250\188\252\8\250\164\218\14\225\171", "\174\103\142\197")]=LUAOBFUSACTOR_DECRYPT_STR_0("\98\39\88\63\41\91", "\152\54\72\63\88\69\62"),[LUAOBFUSACTOR_DECRYPT_STR_0("\228\203\250\85\219\202\218\69\196\193", "\60\180\164\142")]={[LUAOBFUSACTOR_DECRYPT_STR_0("\107\91\9\44\36\249\23\92", "\114\56\62\101\73\71\141")]=LUAOBFUSACTOR_DECRYPT_STR_0("\136\230\204\193\170", "\164\216\137\187")},[LUAOBFUSACTOR_DECRYPT_STR_0("\226\233\37\187\169\240\57\211\232\58", "\107\178\134\81\210\198\158")]={[LUAOBFUSACTOR_DECRYPT_STR_0("\11\11\142\195\169\44\11\134", "\202\88\110\226\166")]=LUAOBFUSACTOR_DECRYPT_STR_0("\226\1\155", "\170\163\111\226\151")},[LUAOBFUSACTOR_DECRYPT_STR_0("\37\57\191\61\122\56\13\24\53", "\73\113\80\210\88\46\87")]={[LUAOBFUSACTOR_DECRYPT_STR_0("\162\35\194\30\227\142\59\195\1", "\135\225\76\173\114")]=(815 - (24 + 776))}},[LUAOBFUSACTOR_DECRYPT_STR_0("\59\254\171\177\191\174\174\20\236\172\185\163\179\152\51\227\172\181\190\175\178\10\249", "\199\122\141\216\208\204\221")]={[LUAOBFUSACTOR_DECRYPT_STR_0("\132\211\4\245\106\228\184\205\4", "\150\205\189\112\144\24")]={[LUAOBFUSACTOR_DECRYPT_STR_0("\4\145\171\67\45\134\5\21\55\150\170\92\16", "\112\69\228\223\44\100\232\113")]=true,[LUAOBFUSACTOR_DECRYPT_STR_0("\245\10\19\220\133\104\147\218", "\230\180\127\103\179\214\28")]=true,[LUAOBFUSACTOR_DECRYPT_STR_0("\165\11\75\67\246\83\245\156\17\122\80\225\83\249\152\13\86\72\227\114\239\128\10", "\128\236\101\63\38\132\33")]=true,[LUAOBFUSACTOR_DECRYPT_STR_0("\133\167\5\65\164\249\218\188\189\52\82\179\249\214\184\161\24\74\177\217\206\165\173", "\175\204\201\113\36\214\139")]=true,[LUAOBFUSACTOR_DECRYPT_STR_0("\110\194\33\217\22\85\217\37\200\45\73\232\32\210\3\66\195\59", "\100\39\172\85\188")]=LUAOBFUSACTOR_DECRYPT_STR_0("\154\112\176\148\54\161\113\170\148", "\83\205\24\217\224"),[LUAOBFUSACTOR_DECRYPT_STR_0("\207\203\217\56\244\215\216\45\242\236\195\25\243\203\202\56\233\203\248\46\227\246\217\40\232\228\222\20\232\209\200\47\244\208\221\41", "\93\134\165\173")]=true,[LUAOBFUSACTOR_DECRYPT_STR_0("\151\252\213\199\40\220\167\110\170\194\196\208\57\203\188\106", "\30\222\146\161\162\90\174\210")]=(92 - 32),[LUAOBFUSACTOR_DECRYPT_STR_0("\204\64\100\15\247\92\101\26\241\126\117\24\230\75\126\30\198\70\113\4\235\75\124", "\106\133\46\16")]=(845 - (222 + 563))},[LUAOBFUSACTOR_DECRYPT_STR_0("\109\51\118\222\86\73\86\36", "\32\56\64\19\156\58")]=true,[LUAOBFUSACTOR_DECRYPT_STR_0("\111\219\224\117\82\247\129\74\251\237\89\74", "\224\58\168\133\54\58\146")]=true,[LUAOBFUSACTOR_DECRYPT_STR_0("\108\69\78\214\124\130\137\14\64\101\67\242\97", "\107\57\54\43\157\21\230\231")]=true},[LUAOBFUSACTOR_DECRYPT_STR_0("\244\158\5\249\184\203", "\175\187\235\113\149\217\188")]={[LUAOBFUSACTOR_DECRYPT_STR_0("\14\160\141\64\247\113\125\30\160\143\73\240\85\119\59\166\130", "\24\92\207\225\44\131\25")]=LUAOBFUSACTOR_DECRYPT_STR_0("\120\218\181\111", "\29\43\179\216\44\123"),[LUAOBFUSACTOR_DECRYPT_STR_0("\156\204\52\67\137\216\34\107\142", "\44\221\185\64")]=false,[LUAOBFUSACTOR_DECRYPT_STR_0("\49\232\92\86\124\15\211\81\79\118", "\19\97\135\40\63")]={[LUAOBFUSACTOR_DECRYPT_STR_0("\157\89\63\62\44\37\171\88", "\81\206\60\83\91\79")]=LUAOBFUSACTOR_DECRYPT_STR_0("\126\164\199\119\61", "\196\46\203\176\18\79\163\45")},[LUAOBFUSACTOR_DECRYPT_STR_0("\136\45\106\23\43\245\221\185\44\117", "\143\216\66\30\126\68\155")]={[LUAOBFUSACTOR_DECRYPT_STR_0("\153\205\1\206\198\183\210\229", "\129\202\168\109\171\165\195\183")]=LUAOBFUSACTOR_DECRYPT_STR_0("\3\86\46", "\134\66\56\87\184\190\116")},[LUAOBFUSACTOR_DECRYPT_STR_0("\29\36\29\180\42\255\36\52\48\37\1", "\85\92\81\105\219\121\139\65")]=LUAOBFUSACTOR_DECRYPT_STR_0("\243\182\81\87\60\235\252\161\87\64\104", "\191\157\211\48\37\28")},[LUAOBFUSACTOR_DECRYPT_STR_0("\240\10\224\16\59\200\32\221\18\46\218\13\230\9\42\203", "\90\191\127\148\124")]={[LUAOBFUSACTOR_DECRYPT_STR_0("\81\137\58\18\106\149\59\7\108", "\119\24\231\78")]={[LUAOBFUSACTOR_DECRYPT_STR_0("\163\56\177\69\245\78\5\135\63\183\95\204\84", "\113\226\77\197\42\188\32")]=true,[LUAOBFUSACTOR_DECRYPT_STR_0("\27\3\224\186\9\2\225\187", "\213\90\118\148")]=true,[LUAOBFUSACTOR_DECRYPT_STR_0("\114\32\160\83\95\73\59\164\66\104\77\43\166\79\89\83\39\186\81\126\84\34\187", "\45\59\78\212\54")]=true,[LUAOBFUSACTOR_DECRYPT_STR_0("\57\88\151\142\148\60\184\224\4\115\149\142\148\55\185\248\25\88\132\185\135\39\169", "\144\112\54\227\235\230\78\205")]=true,[LUAOBFUSACTOR_DECRYPT_STR_0("\154\38\27\249\194\73\166\56\27\213\222\127\166\38\8\249\223\85", "\59\211\72\111\156\176")]=LUAOBFUSACTOR_DECRYPT_STR_0("\121\143\234\57\75\139\234\62\90", "\77\46\231\131"),[LUAOBFUSACTOR_DECRYPT_STR_0("\147\90\162\69\168\70\163\80\174\125\184\100\175\90\177\69\181\90\131\83\191\103\162\85\180\117\165\105\180\64\179\82\168\65\166\84", "\32\218\52\214")]=true,[LUAOBFUSACTOR_DECRYPT_STR_0("\103\25\37\173\227\162\80\74\90\39\52\186\242\181\75\78", "\58\46\119\81\200\145\208\37")]=(132 - 72),[LUAOBFUSACTOR_DECRYPT_STR_0("\2\130\36\169\187\175\35\59\152\0\169\187\190\51\37\152\19\164\168\179\56\46\128", "\86\75\236\80\204\201\221")]=(44 + 16)},[LUAOBFUSACTOR_DECRYPT_STR_0("\71\82\114\167\242\130\124\69", "\235\18\33\23\229\158")]=true,[LUAOBFUSACTOR_DECRYPT_STR_0("\101\169\196\144\89\190\207\190\73\137\201\180\68", "\219\48\218\161")]=true},[LUAOBFUSACTOR_DECRYPT_STR_0("\203\100\104\69\218\88\223\208\69\88", "\128\132\17\28\41\187\47")]={[LUAOBFUSACTOR_DECRYPT_STR_0("\51\51\5\51\92\13\33\50\14\121", "\61\97\82\102\90")]=(210 - (23 + 167)),[LUAOBFUSACTOR_DECRYPT_STR_0("\156\33\191\66\200\89\13\61\152\10", "\105\204\78\203\43\167\55\126")]=(1818 - (690 + 1108)),[LUAOBFUSACTOR_DECRYPT_STR_0("\145\184\42\16\24\1\211\66\145\158\7", "\49\197\202\67\126\115\100\167")]=(8 + 12),[LUAOBFUSACTOR_DECRYPT_STR_0("\1\90\209\32\147\94\106\3\127", "\62\87\59\191\73\224\54")]=(17 + 3),[LUAOBFUSACTOR_DECRYPT_STR_0("\198\6\232\204\233\3\246\192\233\7\200\220\244\10\206\253\195", "\169\135\98\154")]=(868 - (40 + 808)),[LUAOBFUSACTOR_DECRYPT_STR_0("\224\114\33\68\212\39\250\196\123\40\93\243\52\252\255\83", "\168\171\23\68\52\157\83")]=(4 + 16),[LUAOBFUSACTOR_DECRYPT_STR_0("\211\121\250\190\49\33\158\199\101\231\164\46\40\179\192\85", "\231\148\17\149\205\69\77")]=(76 - 56),[LUAOBFUSACTOR_DECRYPT_STR_0("\180\175\206\232\67\243\133\147\194\250\99\203\164", "\159\224\199\167\155\55")]=(20 + 0),[LUAOBFUSACTOR_DECRYPT_STR_0("\220\250\48\222\254\253\59\225\231\225\57\215\195\199\24", "\178\151\147\92")]=(11 + 9),[LUAOBFUSACTOR_DECRYPT_STR_0("\174\241\77\54\23\126\111\159\245\120\6\54", "\26\236\157\44\82\114\44")]=(11 + 9)},[LUAOBFUSACTOR_DECRYPT_STR_0("\5\59\193\87\43\57\234\120\14\27\230\126", "\59\74\78\181")]={[LUAOBFUSACTOR_DECRYPT_STR_0("\0\223\95\87\170\38\222\79\84\167", "\211\69\177\58\58")]=(576 - (47 + 524)),[LUAOBFUSACTOR_DECRYPT_STR_0("\133\228\122\252\232\199\164", "\171\215\133\25\149\137")]=LUAOBFUSACTOR_DECRYPT_STR_0("\246\193\38\242\175\19\243\77\237\204\61\237\225\35", "\34\129\168\82\154\143\80\156"),[LUAOBFUSACTOR_DECRYPT_STR_0("\181\189\39\2\71\64\154", "\233\229\210\83\107\40\46")]=LUAOBFUSACTOR_DECRYPT_STR_0("\214\75\38\222\69\226\77\61\218\1\206\85\60\197", "\101\161\34\82\182"),[LUAOBFUSACTOR_DECRYPT_STR_0("\220\31\80\240\208\231\150\127", "\78\136\109\57\158\187\130\226")]=LUAOBFUSACTOR_DECRYPT_STR_0("\41\54\237\249\126\28\246\254\50\59\246\230\48\44", "\145\94\95\153"),[LUAOBFUSACTOR_DECRYPT_STR_0("\201\223\29\219\69\178\233\159", "\215\157\173\116\181\46")]=LUAOBFUSACTOR_DECRYPT_STR_0("\34\189\159\250\154\22\187\132\254\222\58\163\133\225", "\186\85\212\235\146"),[LUAOBFUSACTOR_DECRYPT_STR_0("\244\128\24\247\42\230", "\56\162\225\118\158\89\142")]=LUAOBFUSACTOR_DECRYPT_STR_0("\75\12\212\167\98\251\83\10\204\171\45\207\82\22", "\184\60\101\160\207\66"),[LUAOBFUSACTOR_DECRYPT_STR_0("\16\134\110\185\63\131\112\181\63\135\78\169\34\138", "\220\81\226\28")]=LUAOBFUSACTOR_DECRYPT_STR_0("\4\220\150\243\170\228\28\218\142\255\229\208\29\198", "\167\115\181\226\155\138"),[LUAOBFUSACTOR_DECRYPT_STR_0("\197\42\232\79\111\125\223\209\54\245\85\112\116", "\166\130\66\135\60\27\17")]=LUAOBFUSACTOR_DECRYPT_STR_0("\83\67\218\125\112\103\69\193\121\52\75\93\192\102", "\80\36\42\174\21"),[LUAOBFUSACTOR_DECRYPT_STR_0("\101\21\50\106\103\4\5\117\66\28\62\116\73", "\26\46\112\87")]=LUAOBFUSACTOR_DECRYPT_STR_0("\174\42\191\124\255\156\74\187\181\39\164\99\177\172", "\212\217\67\203\20\223\223\37"),[LUAOBFUSACTOR_DECRYPT_STR_0("\142\133\161\193\174\129\173\230\191\140", "\178\218\237\200")]=LUAOBFUSACTOR_DECRYPT_STR_0("\161\188\242\216\246\150\233\223\186\177\233\199\184\166", "\176\214\213\134"),[LUAOBFUSACTOR_DECRYPT_STR_0("\223\164\186\216\161\88\94\199\189\164\209\173", "\57\148\205\214\180\200\54")]=LUAOBFUSACTOR_DECRYPT_STR_0("\5\244\33\60\54\49\242\58\56\114\29\234\59\39", "\22\114\157\85\84"),[LUAOBFUSACTOR_DECRYPT_STR_0("\230\199\18\192\88\196\189\215\195", "\200\164\171\115\164\61\150")]=LUAOBFUSACTOR_DECRYPT_STR_0("\169\253\23\77\195\157\251\12\73\135\177\227\13\86", "\227\222\148\99\37")},[LUAOBFUSACTOR_DECRYPT_STR_0("\0\71\80\226\245\54\70\75", "\153\83\50\50\150")]={[LUAOBFUSACTOR_DECRYPT_STR_0("\120\96\122\15\112\174\95\92\98\118\56\94\140\98\91\112\96\25\103", "\45\61\22\19\124\19\203")]=(2 + 1),[LUAOBFUSACTOR_DECRYPT_STR_0("\242\26\41\208\1\127\154\201\19\31\242\7", "\217\161\114\109\149\98\16")]=(2.75 - 1),[LUAOBFUSACTOR_DECRYPT_STR_0("\48\53\42\114\143\124\19\36\55\107\152\117\28\35\61", "\20\114\64\88\28\220")]=LUAOBFUSACTOR_DECRYPT_STR_0("\30\15\146\150\247\195\174\52\18\146\186\247\196\253\56\15\146\144\237\222\186\52\14\220\167", "\221\81\97\178\212\152\176"),[LUAOBFUSACTOR_DECRYPT_STR_0("\248\244\24\203\8\196\232\15\242\14\212\213\18\239\27\217\238\18\245", "\122\173\135\125\155")]=LUAOBFUSACTOR_DECRYPT_STR_0("\176\206\7\190\51\52", "\168\228\161\96\217\95\81"),[LUAOBFUSACTOR_DECRYPT_STR_0("\235\222\58\85\32\89\239\200\62\89", "\55\187\177\78\60\79")]={[LUAOBFUSACTOR_DECRYPT_STR_0("\30\203\83\238\69\219\133\41", "\224\77\174\63\139\38\175")]=LUAOBFUSACTOR_DECRYPT_STR_0("\180\78\79\43\150", "\78\228\33\56")},[LUAOBFUSACTOR_DECRYPT_STR_0("\254\113\166\10\138\192\76\179\13\142", "\229\174\30\210\99")]={[LUAOBFUSACTOR_DECRYPT_STR_0("\40\232\138\84\238\41\60\31", "\89\123\141\230\49\141\93")]=LUAOBFUSACTOR_DECRYPT_STR_0("\210\127\239", "\42\147\17\150\108\112")},[LUAOBFUSACTOR_DECRYPT_STR_0("\60\178\40\126\235\252\7\139\44\124\245\231", "\136\111\198\77\31\135")]={[LUAOBFUSACTOR_DECRYPT_STR_0("\52\8\169\95\174\236", "\201\98\105\199\54\221\132\119")]=true,[LUAOBFUSACTOR_DECRYPT_STR_0("\138\4\130\37\13\34\161\188\0\135", "\204\217\108\227\65\98\85")]=true,[LUAOBFUSACTOR_DECRYPT_STR_0("\109\203\244\225\35\215\122\194\251\230\41", "\160\62\163\149\133\76")]=true},[LUAOBFUSACTOR_DECRYPT_STR_0("\226\169\0\42\247\217\132\4\42", "\163\182\192\109\79")]={[LUAOBFUSACTOR_DECRYPT_STR_0("\23\41\15\204\241\59\49\14\211", "\149\84\70\96\160")]=(22 - 7)}},[LUAOBFUSACTOR_DECRYPT_STR_0("\11\19\15\249\52\3\25\244\7\47\3\249\61\20\31\248\40\18", "\141\88\102\109")]={[LUAOBFUSACTOR_DECRYPT_STR_0("\154\93\222\117\8\47\64\209\167", "\161\211\51\170\16\122\93\53")]={[LUAOBFUSACTOR_DECRYPT_STR_0("\218\187\166\39\210\160\166\45\233\188\167\56\239", "\72\155\206\210")]=true,[LUAOBFUSACTOR_DECRYPT_STR_0("\103\111\64\1\0\82\111\90", "\83\38\26\52\110")]=true,[LUAOBFUSACTOR_DECRYPT_STR_0("\113\25\51\67\74\5\50\86\76\50\49\67\74\14\51\78\81\25\32\117\87\27\40", "\38\56\119\71")]=true,[LUAOBFUSACTOR_DECRYPT_STR_0("\218\225\76\211\55\68\230\255\76\243\51\83\225\246\76\222\44\88\244\221\89\223\33", "\54\147\143\56\182\69")]=true,[LUAOBFUSACTOR_DECRYPT_STR_0("\255\143\235\76\205\196\148\239\93\246\216\165\234\71\216\211\142\241", "\191\182\225\159\41")]=LUAOBFUSACTOR_DECRYPT_STR_0("\28\26\33\65\142\139\203\56\6", "\162\75\114\72\53\235\231"),[LUAOBFUSACTOR_DECRYPT_STR_0("\165\50\80\231\65\16\153\44\80\203\93\38\153\50\67\231\92\12\185\47\65\209\71\23\130\29\87\203\93\22\137\46\86\247\67\22", "\98\236\92\36\130\51")]=true,[LUAOBFUSACTOR_DECRYPT_STR_0("\141\23\24\191\87\186\160\32\176\41\9\168\70\173\187\36", "\80\196\121\108\218\37\200\213")]=(136 - 76),[LUAOBFUSACTOR_DECRYPT_STR_0("\41\125\22\122\89\28\159\16\103\50\122\89\13\143\14\103\33\119\74\0\132\5\127", "\234\96\19\98\31\43\110")]=(1786 - (1165 + 561))},[LUAOBFUSACTOR_DECRYPT_STR_0("\51\12\87\229\160\123\133\2", "\235\102\127\50\167\204\18")]=true,[LUAOBFUSACTOR_DECRYPT_STR_0("\101\178\240\0\76\43\81\177\198\43\75\62", "\78\48\193\149\67\36")]=true,[LUAOBFUSACTOR_DECRYPT_STR_0("\5\13\133\51\72\52\16\133\1\114\56\17\148", "\33\80\126\224\120")]=true}};
+v9['APL']['Rogue']['Commons']['Enabled'][LUAOBFUSACTOR_DECRYPT_STR_0("\223\160\10\210\28\205\189\23\203\28\216\169\17\195\89\248", "\60\140\200\99\164")] = true;
+v9['APL']['Rogue']['Commons']['Enabled'][LUAOBFUSACTOR_DECRYPT_STR_0("\179\230\13\37\169\148\180\11\32\226\179\230\5\34\167\199\210\11\37\183\148", "\194\231\148\100\70")] = true;
+v3.HRGUIGet().LoadSettingsRecursively(v9);
+local v13 = {LUAOBFUSACTOR_DECRYPT_STR_0("\104\67\213\227\195\219\67\72", "\168\38\44\161\195\150"),LUAOBFUSACTOR_DECRYPT_STR_0("\151\245\150\126\112\203\185\25\140\248\141\97\62\251", "\118\224\156\226\22\80\136\214"),LUAOBFUSACTOR_DECRYPT_STR_0("\81\227\88\140\78\174\122\164\81", "\224\34\142\57"),LUAOBFUSACTOR_DECRYPT_STR_0("\201\174\209\213\51\210\82\1\210\163\202\202\125\226\29\1\204\231\228\210\86", "\110\190\199\165\189\19\145\61"),LUAOBFUSACTOR_DECRYPT_STR_0("\213\229\55\205\133\194\215\242\116\231\158\201\206\171\120\250\203\228\213\228\123\236\132\208\212\248", "\167\186\139\23\136\235"),LUAOBFUSACTOR_DECRYPT_STR_0("\21\187\200\47\21\166\155\77\21\167\200\26\19\161\128\77\57\186\135\1\30\186\159\3\9", "\109\122\213\232"),LUAOBFUSACTOR_DECRYPT_STR_0("\239\251\181\49\247\228", "\80\142\151\194"),LUAOBFUSACTOR_DECRYPT_STR_0("\12\200\55\110\12\213\100\12\12\200\123\85", "\44\99\166\23"),LUAOBFUSACTOR_DECRYPT_STR_0("\115\249\105\20\60\183\111\183\38\36\115\171\114\183\12\56\54\169\101\244\38\35\61\176", "\196\28\151\73\86\83"),LUAOBFUSACTOR_DECRYPT_STR_0("\252\13\105\50\141\75\11\54\252\17\105\7\139\76\16\54\208\12\38\28\134\87\15\120\224", "\22\147\99\73\112\226\56\120"),LUAOBFUSACTOR_DECRYPT_STR_0("\175\124\246\253\205\154\121\237\250\137\180\96\241\225\205\183\123\238\236", "\237\216\21\130\149"),LUAOBFUSACTOR_DECRYPT_STR_0("\145\67\94\83\188\137\125\166\93", "\62\226\46\63\63\208\169"),LUAOBFUSACTOR_DECRYPT_STR_0("\242\16\65\139\95\46\32\81\233\29\90\148\17\30\111\81\247\89\116\140\58", "\62\133\121\53\227\127\109\79"),LUAOBFUSACTOR_DECRYPT_STR_0("\31\26\114\208\216\171\175\9\23\61\224\216\186\226\31\6\114\214\217\161\174\20\27\37\251\197", "\194\112\116\82\149\182\206"),LUAOBFUSACTOR_DECRYPT_STR_0("\54\166\12\61\206\231\3\32\171\67\13\206\246", "\110\89\200\44\120\160\130"),LUAOBFUSACTOR_DECRYPT_STR_0("\164\205\11\100\76\89\40\13\164\209\11\73\77\10\30\67\174\206\82\69\76\95\53\89", "\45\203\163\43\38\35\42\91")};
+local v14 = v3.HRGUIGet()['Panel'];
+local v15 = v5(v14, LUAOBFUSACTOR_DECRYPT_STR_0("\224\138\219\54\130", "\52\178\229\188\67\231\201"));
+local v16 = v5(v14, LUAOBFUSACTOR_DECRYPT_STR_0("\5\68\86\1\249\79\38", "\67\65\33\48\100\151\60"));
+local v17 = v5(v14, LUAOBFUSACTOR_DECRYPT_STR_0("\254\244\189\217\224\204\238\160\217\231\214\232\160", "\147\191\135\206\184"));
+local v18 = v5(v14, LUAOBFUSACTOR_DECRYPT_STR_0("\171\61\178\205\217\68", "\210\228\72\198\161\184\51"));
+local v19 = v5(v14, LUAOBFUSACTOR_DECRYPT_STR_0("\25\92\231\28\114\217\9\125\199\52", "\174\86\41\147\112\19"));
+local v20 = v5(v14, LUAOBFUSACTOR_DECRYPT_STR_0("\116\21\153\7\36\24\46\136\127\53\190\46", "\203\59\96\237\107\69\111\113"));
+local v21 = v5(v14, LUAOBFUSACTOR_DECRYPT_STR_0("\23\3\174\245\61\245\195\61", "\183\68\118\204\129\81\144"));
+local v22 = v5(v18, LUAOBFUSACTOR_DECRYPT_STR_0("\39\163\100\225\25\144\27\189\100", "\226\110\205\16\132\107"));
+v8(v22, LUAOBFUSACTOR_DECRYPT_STR_0("\202\243\204\151\115\228\196\245\220\15\196\214\244\213\64\252\252\201\215\85\238\209\242\204\81\255", "\33\139\163\128\185"));
+v6(LUAOBFUSACTOR_DECRYPT_STR_0("\116\80\1\221\92\122\17\202\67\87\10", "\190\55\56\100"), v22, LUAOBFUSACTOR_DECRYPT_STR_0("\119\159\16\80\33\236\244\67\170\114\49\6\247\255\87\184\3\55\29\247\246\68\189\41\14\7\173\198\69\170\30\18\26\237\247", "\147\54\207\92\126\115\131"), LUAOBFUSACTOR_DECRYPT_STR_0("\56\34\48\61\47\114\4\63\49", "\30\109\81\85\29\109"), LUAOBFUSACTOR_DECRYPT_STR_0("\202\98\81\246\20\210\245\241\117\20\176\57\204\188\236\101\65\184\118\223\242\251\49\91\164\118\215\242\235\116\70\164\35\206\232\177", "\156\159\17\52\214\86\190"));
+v6(LUAOBFUSACTOR_DECRYPT_STR_0("\141\231\184\191\165\205\168\168\186\224\179", "\220\206\143\221"), v22, LUAOBFUSACTOR_DECRYPT_STR_0("\167\77\1\89\234\195\213\147\120\99\56\205\216\222\135\106\18\62\214\216\215\148\111\56\7\204\130\231\149\120\6\30\220\194\215\159\78\37\24\204", "\178\230\29\77\119\184\172"), LUAOBFUSACTOR_DECRYPT_STR_0("\192\173\15\91\92\241\241\176\15\2\55\203\253\177\30", "\152\149\222\106\123\23"), LUAOBFUSACTOR_DECRYPT_STR_0("\232\53\243\3\158\212\34\248\70\172\157\21\254\76\161\157\32\249\81\245\206\50\227\77\245\220\40\242\3\186\207\102\255\77\161\216\52\228\86\165\201\104", "\213\189\70\150\35"));
+local v23 = v5(v17, LUAOBFUSACTOR_DECRYPT_STR_0("\102\91\96\13\93\71\97\24\91", "\104\47\53\20"));
+v8(v23, LUAOBFUSACTOR_DECRYPT_STR_0("\130\124\173\82\142\0\164\89\132\82\157\28\176\77\146\15\181\1\162\88\136\19\178\48\138\66\149\25\174\29\182\92\149", "\111\195\44\225\124\220"));
+v6(LUAOBFUSACTOR_DECRYPT_STR_0("\251\78\5\112\160\137\205\82\20\124\165", "\203\184\38\96\19\203"), v23, LUAOBFUSACTOR_DECRYPT_STR_0("\24\67\85\15\252\54\116\108\68\128\24\96\106\64\221\42\122\119\64\218\48\124\119\126\231\55\103\124\83\220\44\99\109\15\251\42\118\91\77\199\55\119", "\174\89\19\25\33"), LUAOBFUSACTOR_DECRYPT_STR_0("\26\1\87\14\213\139\2\33\22", "\107\79\114\50\46\151\231"), LUAOBFUSACTOR_DECRYPT_STR_0("\12\181\176\105\168\53\190\206\61\230\179\38\152\121\164\212\44\168\245\40\132\61\247\207\43\230\188\39\158\60\165\210\44\182\161\103", "\160\89\198\213\73\234\89\215"));
+v6(LUAOBFUSACTOR_DECRYPT_STR_0("\107\121\177\253\206\106\100\160\234\202\70", "\165\40\17\212\158"), v23, LUAOBFUSACTOR_DECRYPT_STR_0("\196\233\36\125\20\234\222\29\54\104\196\202\27\50\53\246\208\6\50\50\236\214\6\12\15\235\205\13\33\52\240\201\28\125\19\246\220\43\59\35\228\201\59\59\41\245", "\70\133\185\104\83"), LUAOBFUSACTOR_DECRYPT_STR_0("\49\86\65\106\234\12\64\69\58\137\55\77\75\62", "\169\100\37\36\74"), LUAOBFUSACTOR_DECRYPT_STR_0("\53\148\167\16\35\143\167\81\16\199\145\88\15\147\226\86\15\149\226\67\20\146\172\16\1\137\166\16\15\149\226\89\14\147\167\66\18\146\178\68\78", "\48\96\231\194"));
+v6(LUAOBFUSACTOR_DECRYPT_STR_0("\235\82\11\46\18\250\186\151\220\85\0", "\227\168\58\110\77\121\184\207"), v23, LUAOBFUSACTOR_DECRYPT_STR_0("\90\12\147\14\131\212\118\176\126\114\158\83\162\218\98\182\114\50\190\84\184\212\127\154\82\50\171\69\163\201\100\181\111\114\138\83\180\240\120\161\117\57\166\115\185\212\101", "\197\27\92\223\32\209\187\17"), LUAOBFUSACTOR_DECRYPT_STR_0("\54\76\198\187\40\86\199\245\6\70\131\200\11\80\215", "\155\99\63\163"), LUAOBFUSACTOR_DECRYPT_STR_0("\183\194\164\205\146\141\134\223\164\148\249\183\138\222\181\205\191\139\144\145\178\153\172\138\194\208\175\137\249\139\144\145\168\131\173\129\144\195\180\157\173\202", "\228\226\177\193\237\217"));
+local v24 = v5(v21, LUAOBFUSACTOR_DECRYPT_STR_0("\29\190\55\227\38\162\54\246\32", "\134\84\208\67"));
+v8(v24, LUAOBFUSACTOR_DECRYPT_STR_0("\50\156\170\18\33\163\129\73\22\226\181\73\17\184\138\89\7\181\185\117\29\184\131\78\1\185\150\72", "\60\115\204\230"));
+v6(LUAOBFUSACTOR_DECRYPT_STR_0("\196\50\238\115\236\24\254\100\243\53\229", "\16\135\90\139"), v24, LUAOBFUSACTOR_DECRYPT_STR_0("\117\68\42\125\124\91\127\65\113\72\0\91\86\108\88\113\18\42\113\125\118\64\113\20\33\91\68\108\26\65\21\54\108\88\113\90\112", "\24\52\20\102\83\46\52"), LUAOBFUSACTOR_DECRYPT_STR_0("\241\60\36\100\45\200\38\47\32", "\111\164\79\65\68"), LUAOBFUSACTOR_DECRYPT_STR_0("\243\202\134\158\12\230\207\215\135\158\40\229\212\153\144\202\59\228\134\216\141\218\110\229\212\153\138\208\58\239\212\203\150\206\58\164", "\138\166\185\227\190\78"));
+v6(LUAOBFUSACTOR_DECRYPT_STR_0("\232\124\192\52\89\1\12\223\96\202\57", "\121\171\20\165\87\50\67"), v24, LUAOBFUSACTOR_DECRYPT_STR_0("\231\8\149\120\139\13\193\45\188\120\138\23\196\44\181\51\173\27\249\17\183\34\188\16\212\45\169\34\247\55\213\61\154\62\188\3\214\11\177\57\169", "\98\166\88\217\86\217"), LUAOBFUSACTOR_DECRYPT_STR_0("\195\229\124\65\165\212\243\247\105\65\181\212\249\226", "\188\150\150\25\97\230"), LUAOBFUSACTOR_DECRYPT_STR_0("\239\154\90\66\47\229\223\136\79\66\63\229\213\157\31\4\3\255\154\154\75\23\2\173\219\135\91\66\3\255\154\128\81\22\9\255\200\156\79\22\66", "\141\186\233\63\98\108"));
+v6(LUAOBFUSACTOR_DECRYPT_STR_0("\210\226\41\181\46\211\255\56\162\42\255", "\69\145\138\76\214"), v24, LUAOBFUSACTOR_DECRYPT_STR_0("\81\255\165\199\141\25\119\218\140\199\140\3\114\219\133\140\171\15\79\230\135\157\186\4\98\218\153\157\241\35\99\202\162\128\187\24\117\214\186\129\176\2", "\118\16\175\233\233\223"), LUAOBFUSACTOR_DECRYPT_STR_0("\190\151\48\251\197\130\121\133\129\44\251\221\131\114\159", "\29\235\228\85\219\142\235"), LUAOBFUSACTOR_DECRYPT_STR_0("\8\199\191\157\92\71\35\92\56\205\250\238\127\65\51\18\59\219\168\157\100\90\50\92\125\213\180\217\55\65\53\18\52\218\174\216\101\92\50\66\41\154", "\50\93\180\218\189\23\46\71"));
+v6(LUAOBFUSACTOR_DECRYPT_STR_0("\253\172\94\79\79\254\93\202\176\84\66", "\40\190\196\59\44\36\188"), v15, LUAOBFUSACTOR_DECRYPT_STR_0("\29\117\240\250\200\114\10\41\64\146\151\245\112\0\51\75\207\250\207\110\8\15\74\208\187\204\124\3\53\86\212", "\109\92\37\188\212\154\29"), LUAOBFUSACTOR_DECRYPT_STR_0("\49\252\161\131\7\91\10\230\183\203\113\77\12\230\168\198\113\105\11\227\171", "\58\100\143\196\163\81"), "Suggest Vanish while Solo.\nDisable to save prevent mobs resetting.");
+v6(LUAOBFUSACTOR_DECRYPT_STR_0("\57\74\38\160\52\107\240\26\14\77\45", "\110\122\34\67\195\95\41\133"), v15, LUAOBFUSACTOR_DECRYPT_STR_0("\84\129\119\4\228\122\182\78\79\152\86\190\86\71\217\123\162\21\101\216\121\168\122\94\194\116\178\80\111\216\123\180\86\83\255\123\146\84\71\212\116\165", "\182\21\209\59\42"), LUAOBFUSACTOR_DECRYPT_STR_0("\152\89\201\4\97\191\163\67\196\30\42\254\190\89\133\30\46\179\181\86\209", "\222\215\55\165\125\65"), LUAOBFUSACTOR_DECRYPT_STR_0("\3\223\202\3\178\192\249\94\45\210\205\90\247\207\232\71\53\145\207\20\178\194\226\71\46\208\210\84", "\42\76\177\166\122\146\161\141"));
+v6(LUAOBFUSACTOR_DECRYPT_STR_0("\134\130\0\205\114\84\176\158\17\193\119", "\22\197\234\101\174\25"), v15, LUAOBFUSACTOR_DECRYPT_STR_0("\12\4\137\146\68\160\208\147\40\122\134\211\123\162\216\136\62\122\138\210\122\182\246\146\57\53\166\215\83\161\217\131\32\45\140\210\85\160\218\132\44\32\150\211\122\160", "\230\77\84\197\188\22\207\183"), LUAOBFUSACTOR_DECRYPT_STR_0("\214\26\202\229\204\160\228\33\248\23\205\188\133\175\176\54\246\25\196\253\152\225\195\58\245\27", "\85\153\116\166\156\236\193\144"), LUAOBFUSACTOR_DECRYPT_STR_0("\139\238\65\170\164\1\176\244\76\176\239\64\161\238\72\190\253\64\173\238\13\176\235\13\166\225\89\243\243\8\161\238\13\160\235\12\171\174", "\96\196\128\45\211\132"));
+v8(v15, LUAOBFUSACTOR_DECRYPT_STR_0("\20\189\87\17\224\160\179\205\48\195\88\80\223\162\187\214\38", "\184\85\237\27\63\178\207\212"));
+v6(LUAOBFUSACTOR_DECRYPT_STR_0("\59\85\0\91\13\75", "\63\104\57\105"), v16, LUAOBFUSACTOR_DECRYPT_STR_0("\42\183\136\10\57\136\163\81\14\201\128\65\13\130\170\87\14\201\135\86\2\138\183\75\5\177\173\69\7\175\148", "\36\107\231\196"), {(0 - 0),(204 - 104),(1 + 0)}, LUAOBFUSACTOR_DECRYPT_STR_0("\126\167\171\138\78\186\172\199\107\188\163\139\29\157\146", "\231\61\213\194"), LUAOBFUSACTOR_DECRYPT_STR_0("\58\168\41\51\29\165\56\51\42\191\52\126\26\162\51\51\63\164\60\127\73\133\13\51\29\165\47\118\26\165\50\127\13\227", "\19\105\205\93"));
+v6(LUAOBFUSACTOR_DECRYPT_STR_0("\154\4\215\133\58\187", "\95\201\104\190\225"), v16, LUAOBFUSACTOR_DECRYPT_STR_0("\142\251\237\128\157\196\198\219\170\133\229\203\169\206\207\221\170\133\228\216\174\216\200\193\161\227\241", "\174\207\171\161"), {(0 + 0),(1263 - (671 + 492)),(1216 - (369 + 846))}, LUAOBFUSACTOR_DECRYPT_STR_0("\200\232\12\224\241\216\227\190\37\195", "\183\141\158\109\147\152"), LUAOBFUSACTOR_DECRYPT_STR_0("\31\12\242\76\56\1\227\76\9\31\231\31\37\6\232\76\4\57\166\24\36\27\227\31\36\6\234\8\98", "\108\76\105\134"));
+v6(LUAOBFUSACTOR_DECRYPT_STR_0("\216\201\184\229\203\249", "\174\139\165\209\129"), v16, LUAOBFUSACTOR_DECRYPT_STR_0("\130\131\206\143\244\12\119\109\166\253\198\196\192\6\126\107\166\253\196\196\207\13\100\80\147", "\24\195\211\130\161\166\99\16"), {(0 + 0),(80 + 20),(204 - (11 + 192))}, LUAOBFUSACTOR_DECRYPT_STR_0("\96\6\224\34\71\86\110\51", "\118\38\99\137\76\51"), LUAOBFUSACTOR_DECRYPT_STR_0("\206\35\17\82\29\40\248\102\35\23\0\46\233\102\45\34\73\52\245\52\0\1\1\47\241\34\75", "\64\157\70\101\114\105"));
+v6(LUAOBFUSACTOR_DECRYPT_STR_0("\99\160\162\224\27\98\189\179\247\31\78", "\112\32\200\199\131"), v16, LUAOBFUSACTOR_DECRYPT_STR_0("\13\96\112\246\241\164\37\57\85\18\156\198\173\39\34\67\89\246\229\174\43\34\68\120\185\205\172\39\62", "\66\76\48\60\216\163\203"), LUAOBFUSACTOR_DECRYPT_STR_0("\143\149\124\179\121\203\45\180\146\57\252\81\142\32\187\136\126\246\77", "\68\218\230\25\147\63\174"), LUAOBFUSACTOR_DECRYPT_STR_0("\152\57\86\12\176\168\35\93\88\246\162\36\19\72\183\163\45\86\94\185\184\57\19\95\166\168\38\95\2", "\214\205\74\51\44"));
+v6(LUAOBFUSACTOR_DECRYPT_STR_0("\201\64\235\248\114\232", "\23\154\44\130\156"), v16, LUAOBFUSACTOR_DECRYPT_STR_0("\48\150\129\224\4\28\22\179\168\224\18\22\23\163\163\189\51\93\50\170\162\175\61\28\23\149\165\175\50\28\6\181\133\158", "\115\113\198\205\206\86"), {(175 - (135 + 40)),(61 + 39),(1 - 0)}, LUAOBFUSACTOR_DECRYPT_STR_0("\167\91\241\91\143\23\241\92\196\100\246\91\128\88\233\73\196\127\206", "\58\228\55\158"), LUAOBFUSACTOR_DECRYPT_STR_0("\135\140\196\110\40\165\48\244\170\220\33\61\166\117\187\143\144\29\52\172\49\187\158\195\110\20\157\117\160\129\194\43\47\165\58\184\141\158", "\85\212\233\176\78\92\205"));
+v8(v16, LUAOBFUSACTOR_DECRYPT_STR_0("\107\104\164\172\120\87\143\247\79\22\172\231\76\93\134\241\79", "\130\42\56\232"));
+v6(LUAOBFUSACTOR_DECRYPT_STR_0("\217\185\45\231\69\45", "\95\138\213\68\131\32"), v17, LUAOBFUSACTOR_DECRYPT_STR_0("\11\24\141\13\68\37\47\180\70\56\11\59\178\66\101\57\33\175\66\98\35\39\175\13\83\36\62\164\77\121\39\12\140\100\89\44\46\178\70\98", "\22\74\72\193\35"), {(2 - 1),(1418 - (1233 + 180)),(1421.25 - (107 + 1314))}, LUAOBFUSACTOR_DECRYPT_STR_0("\9\119\242\93\34\118\233\24\8\84\195\24\3\127\226\75\41\109", "\56\76\25\132"), LUAOBFUSACTOR_DECRYPT_STR_0("\109\196\191\102\219\86\196\235\3\193\72\196\165\41\194\30\229\134\1\143\113\199\173\53\202\74\143", "\175\62\161\203\70"));
+v6(LUAOBFUSACTOR_DECRYPT_STR_0("\15\209\202\23\48\46", "\85\92\189\163\115"), v17, LUAOBFUSACTOR_DECRYPT_STR_0("\8\156\28\118\27\163\55\45\44\226\17\43\58\173\35\43\32\162\49\44\32\163\62\118\4\185\36\49\37\173\36\61\13\129\23\23\47\170\35\61\61", "\88\73\204\80"), {(2 - 1),(9 - 4),(1910.25 - (716 + 1194))}, LUAOBFUSACTOR_DECRYPT_STR_0("\3\150\4\79\37\219\58\134\80\98\4\253\110\172\22\64\58\223\58", "\186\78\227\112\38\73"), LUAOBFUSACTOR_DECRYPT_STR_0("\207\82\233\21\71\114\249\23\208\64\71\115\240\86\233\80\19\94\209\112\189\122\85\124\239\82\233\27", "\26\156\55\157\53\51"));
+v6(LUAOBFUSACTOR_DECRYPT_STR_0("\168\202\25\201\188\95\155\214", "\48\236\184\118\185\216"), v17, LUAOBFUSACTOR_DECRYPT_STR_0("\196\141\123\126\253\59\226\168\82\126\238\39\246\188\68\35\198\58\228\169\94\63\193\122\208\174\82\0\221\61\234\175\94\36\214\6\234\169\86\36\198\59\235", "\84\133\221\55\80\175"), {LUAOBFUSACTOR_DECRYPT_STR_0("\137\232\35\161\203\89", "\60\221\135\68\198\167"),LUAOBFUSACTOR_DECRYPT_STR_0("\193\179\184\161\77\202\253\184\235", "\185\142\221\152\227\34")}, LUAOBFUSACTOR_DECRYPT_STR_0("\109\214\82\186\115\33\254\87\215\94\238\90\115\197\87\209\86\238\74\60\249", "\151\56\165\55\154\35\83"), "Select when to show rotation for maximum priority damage (at the cost of overall AoE damage.)\nAuto will function as Never except on specific encounters where AoE is not recommended.");
+v6(LUAOBFUSACTOR_DECRYPT_STR_0("\131\75\0\237\171\97\16\250\180\76\11", "\142\192\35\101"), v17, LUAOBFUSACTOR_DECRYPT_STR_0("\247\69\5\237\213\131\171\3\211\59\8\176\244\141\191\5\223\123\40\183\238\131\162\88\247\121\62\162\254\159\159\3\209\114\44\176\243\171\173\4\196\122\61\166", "\118\182\21\73\195\135\236\204"), LUAOBFUSACTOR_DECRYPT_STR_0("\41\48\13\65\29\30\189\59\41\29\71\1\30\233\72\27\27\82\22\2\233\13", "\157\104\92\122\32\100\109"), "Don't prevent Garrote suggestions when using Subterfuge and Vanish is ready. These should ideally be synced, but can be useful if holding Vanish for specific fights.");
+v8(v17, LUAOBFUSACTOR_DECRYPT_STR_0("\130\150\227\132\15\40\138\190\166\232\238\217\46\38\158\184\170\168\206\222\52\40\131", "\203\195\198\175\170\93\71\237"));
+v6(LUAOBFUSACTOR_DECRYPT_STR_0("\10\89\49\197\85\30\235\32", "\156\78\43\94\181\49\113"), v18, LUAOBFUSACTOR_DECRYPT_STR_0("\83\216\232\237\57\76\126\103\237\138\140\30\87\117\115\255\138\145\4\79\117\102\224\193\129\4\77\124\97\196\203\164\2\64", "\25\18\136\164\195\107\35"), {LUAOBFUSACTOR_DECRYPT_STR_0("\219\36\164\108", "\216\136\77\201\47\18\220\161"),LUAOBFUSACTOR_DECRYPT_STR_0("\124\167\107\248\29\218\132", "\226\77\140\75\186\104\188"),LUAOBFUSACTOR_DECRYPT_STR_0("\155\220\223\62\75\170\199\212\58", "\47\217\174\176\95"),LUAOBFUSACTOR_DECRYPT_STR_0("\154\200\100\11\183\80\56\18\170\216\119\17\167\70\125", "\70\216\189\22\98\210\52\24"),LUAOBFUSACTOR_DECRYPT_STR_0("\253\205\162\137\215\154\242\166\139\214\223", "\179\186\191\195\231"),LUAOBFUSACTOR_DECRYPT_STR_0("\202\52\13\232\245\127\25\234\253\127\59\246\246\44\11\230\246\49\29\247", "\132\153\95\120"),LUAOBFUSACTOR_DECRYPT_STR_0("\131\167\26\37\251\223\179\162\242\62\63\242\217\169\162\187\1\35", "\192\209\210\110\77\151\186"),LUAOBFUSACTOR_DECRYPT_STR_0("\212\17\55\236\191\230\229\2\48\224\241\195", "\164\128\99\66\137\159")}, LUAOBFUSACTOR_DECRYPT_STR_0("\50\134\229\178\64\157\225\187\64\171\230\176\5\154\169\146\15\142\224\189", "\222\96\233\137"), "Define the Roll the Bones logic to follow.\n(SimC highly recommended!)");
+v6(LUAOBFUSACTOR_DECRYPT_STR_0("\154\187\162\28\131\209\229\173\167\168\17", "\144\217\211\199\127\232\147"), v18, LUAOBFUSACTOR_DECRYPT_STR_0("\217\31\18\102\231\74\5\81\253\97\17\61\193\73\3\83\182\14\43\60\218\113\3\70\223\28", "\36\152\79\94\72\181\37\98"), LUAOBFUSACTOR_DECRYPT_STR_0("\246\205\83\48\151\236\70\45\208\221\83\127\240\235", "\95\183\184\39"), LUAOBFUSACTOR_DECRYPT_STR_0("\148\42\243\41\20\180\3\167\56\226\50\20\167\10\186\44\243\102\103\148\16\188\52\226\102\64\129\16\178\58\243\104", "\98\213\95\135\70\52\224"));
+v6(LUAOBFUSACTOR_DECRYPT_STR_0("\218\177\198\103\80\241\180\199", "\52\158\195\169\23"), v18, LUAOBFUSACTOR_DECRYPT_STR_0("\91\140\30\58\180\58\124\158\127\242\29\97\146\57\122\156\52\157\39\96\137\6\111\142\123\176\38\124", "\235\26\220\82\20\230\85\27"), {LUAOBFUSACTOR_DECRYPT_STR_0("\134\164\232\208\52\188\160\251\197\113\156", "\20\232\193\137\162"),LUAOBFUSACTOR_DECRYPT_STR_0("\3\211\210\167\254\159", "\17\66\191\165\198\135\236\119"),LUAOBFUSACTOR_DECRYPT_STR_0("\1\170\184\22\237", "\177\111\207\206\115\159\136\140")}, LUAOBFUSACTOR_DECRYPT_STR_0("\36\156\4\27\148\124\75\0\136\28\0\220", "\63\101\233\112\116\180\47"), "Select when to use Auto Stealth.\nAuto Stealth will be used when you are not in combat and the target is in range.");
+v8(v18, LUAOBFUSACTOR_DECRYPT_STR_0("\226\11\193\92\202\57\196\46\232\92\215\35\215\55\236\5", "\86\163\91\141\114\152"));
+v6(LUAOBFUSACTOR_DECRYPT_STR_0("\96\7\125\119\63\65", "\90\51\107\20\19"), v20, LUAOBFUSACTOR_DECRYPT_STR_0("\172\192\169\161\15\130\247\144\234\115\162\229\145\227\60\154\207\166\203\8\190\213\203\202\51\136\253\156\236\50\152\254\145", "\93\237\144\229\143"), {(0 - 0),(1153 - (277 + 816)),(1184 - (1058 + 125))}, LUAOBFUSACTOR_DECRYPT_STR_0("\56\249\242\26\4\83\27\226", "\38\117\150\144\121\107"), LUAOBFUSACTOR_DECRYPT_STR_0("\0\180\236\57\34\174\224\46", "\90\77\219\142"));
+v6(LUAOBFUSACTOR_DECRYPT_STR_0("\194\22\46\41\72\8\109\232", "\26\134\100\65\89\44\103"), v20, LUAOBFUSACTOR_DECRYPT_STR_0("\208\211\28\109\150\254\228\37\38\234\222\246\36\47\165\230\220\19\7\145\194\198\126\17\165\242\234\49\47\183", "\196\145\131\80\67"), v13, LUAOBFUSACTOR_DECRYPT_STR_0("\44\177\5\1\25\228\13\240\51\27\25\239\27", "\136\126\208\102\104\120"), LUAOBFUSACTOR_DECRYPT_STR_0("\75\143\194\70\172\70\125\89\119\157\142\87\160\18\40\66\125\202\252\66\172\91\60\93\107\196", "\49\24\234\174\35\207\50\93"));
+v6(LUAOBFUSACTOR_DECRYPT_STR_0("\40\224\242\152\117\3\229\243", "\17\108\146\157\232"), v20, LUAOBFUSACTOR_DECRYPT_STR_0("\106\243\56\163\29\167\76\214\17\163\0\189\95\207\21\250\16\139\111\246\39\200\97\156\89\202\26\230\42\188\26", "\200\43\163\116\141\79"), v13, LUAOBFUSACTOR_DECRYPT_STR_0("\139\36\52\141\187\241\247\255\103\125\182\163\245\228\186", "\131\223\86\93\227\208\148"), LUAOBFUSACTOR_DECRYPT_STR_0("\208\64\186\179\30\161\163\77\185\161\93\161\236\5\163\165\24\245\215\87\191\184\22\176\247\5\231\248", "\213\131\37\214\214\125"));
+v6(LUAOBFUSACTOR_DECRYPT_STR_0("\2\57\42\175\229\41\60\43", "\129\70\75\69\223"), v20, LUAOBFUSACTOR_DECRYPT_STR_0("\103\251\223\167\78\224\65\222\246\167\83\250\82\199\242\254\67\204\98\254\192\204\50\219\84\194\253\226\121\251\20", "\143\38\171\147\137\28"), v13, LUAOBFUSACTOR_DECRYPT_STR_0("\228\144\176\253\8\230\192\144\208\249\198\16\226\211\213", "\180\176\226\217\147\99\131"), LUAOBFUSACTOR_DECRYPT_STR_0("\224\188\35\2\208\173\111\15\220\174\111\19\220\249\58\20\214\249\27\21\218\183\36\2\199\249\125\73", "\103\179\217\79"));
+v6(LUAOBFUSACTOR_DECRYPT_STR_0("\110\165\19\197\69\131\180\68", "\195\42\215\124\181\33\236"), v20, LUAOBFUSACTOR_DECRYPT_STR_0("\44\105\27\112\23\247\10\76\50\112\10\237\25\85\54\41\26\219\41\108\4\27\107\200\2\77\62\49\43\235", "\152\109\57\87\94\69"), v13, LUAOBFUSACTOR_DECRYPT_STR_0("\201\216\30\170\177\220\20\157\234\214\13\166", "\200\153\183\106\195\222\178\52"), LUAOBFUSACTOR_DECRYPT_STR_0("\1\230\132\56\74\78\114\235\135\42\9\78\61\163\157\46\76\26\2\236\156\52\70\84\124", "\58\82\131\232\93\41"));
+v6(LUAOBFUSACTOR_DECRYPT_STR_0("\167\69\223\5\89\48\148\89", "\95\227\55\176\117\61"), v20, LUAOBFUSACTOR_DECRYPT_STR_0("\57\78\15\5\153\23\121\54\78\229\55\107\55\71\170\15\65\0\111\158\43\91\109\125\170\22\119\48\67", "\203\120\30\67\43"), v13, LUAOBFUSACTOR_DECRYPT_STR_0("\199\36\67\230\202\249", "\185\145\69\45\143"), LUAOBFUSACTOR_DECRYPT_STR_0("\185\26\21\163\223\158\95\17\169\203\202\11\22\230\201\153\26\89\144\221\132\22\10\174\146", "\188\234\127\121\198"));
+v6(LUAOBFUSACTOR_DECRYPT_STR_0("\28\32\28\147\60\61\4\141", "\227\88\82\115"), v20, LUAOBFUSACTOR_DECRYPT_STR_0("\98\47\150\233\48\124\68\10\191\233\45\102\87\19\187\176\61\80\103\42\137\130\76\82\71\13\191\169\3\127\74\17\191\149\23\96\75", "\19\35\127\218\199\98"), v13, LUAOBFUSACTOR_DECRYPT_STR_0("\61\255\24\231\18\250\6\235\18\254\56\247\15\243", "\130\124\155\106"), LUAOBFUSACTOR_DECRYPT_STR_0("\230\206\250\170\160\226\60\183\218\220\182\187\172\182\105\172\208\139\215\171\177\243\114\190\217\194\248\170\145\227\111\183\155", "\223\181\171\150\207\195\150\28"));
+v6(LUAOBFUSACTOR_DECRYPT_STR_0("\104\40\236\190\13\67\45\237", "\105\44\90\131\206"), v20, LUAOBFUSACTOR_DECRYPT_STR_0("\222\208\158\247\58\49\248\245\183\247\39\43\235\236\179\174\55\29\219\213\129\156\70\21\250\229\162\144\28\12\240\236\190\176\6\57", "\94\159\128\210\217\104"), v13, LUAOBFUSACTOR_DECRYPT_STR_0("\123\252\3\175\118\107\203\117\92\245\15\177\88", "\26\48\153\102\223\63\31\153"), LUAOBFUSACTOR_DECRYPT_STR_0("\49\69\225\246\1\84\173\251\13\87\173\231\13\0\248\224\7\0\198\246\7\80\196\231\48\79\225\255\11\78\234\189", "\147\98\32\141"));
+v6(LUAOBFUSACTOR_DECRYPT_STR_0("\60\81\236\218\2\89\92\22", "\43\120\35\131\170\102\54"), v20, LUAOBFUSACTOR_DECRYPT_STR_0("\117\54\171\248\151\191\131\65\3\201\153\176\164\136\85\17\184\149\129\133\183\113\72\160\190\170\163\144\88\31\180\162\183\185\143\81", "\228\52\102\231\214\197\208"), v13, LUAOBFUSACTOR_DECRYPT_STR_0("\57\232\122\217\254\135\0\229\10\242\124\193\239", "\182\126\128\21\170\138\235\121"), LUAOBFUSACTOR_DECRYPT_STR_0("\184\223\57\227\133\7\112\14\132\205\117\242\137\83\37\21\142\154\18\238\137\0\36\10\146\233\33\244\143\24\53\72", "\102\235\186\85\134\230\115\80"));
+v6(LUAOBFUSACTOR_DECRYPT_STR_0("\115\30\49\79\118\219\53\89", "\66\55\108\94\63\18\180"), v20, LUAOBFUSACTOR_DECRYPT_STR_0("\53\189\169\121\21\86\19\152\128\121\8\76\0\129\132\32\24\122\48\184\182\18\105\109\28\132\150\35\43\92\32\136\132", "\57\116\237\229\87\71"), v13, LUAOBFUSACTOR_DECRYPT_STR_0("\158\185\228\244\99\226\66\158\180\236", "\39\202\209\141\135\23\142"), LUAOBFUSACTOR_DECRYPT_STR_0("\204\54\5\15\49\236\191\59\6\29\114\236\240\115\28\25\55\184\203\59\0\25\38\244\250\7\12\11\124", "\152\159\83\105\106\82"));
+v6(LUAOBFUSACTOR_DECRYPT_STR_0("\165\212\94\226\205\83\150\200", "\60\225\166\49\146\169"), v20, LUAOBFUSACTOR_DECRYPT_STR_0("\14\46\3\100\51\8\40\11\42\100\46\18\59\18\46\61\62\36\11\43\28\15\79\44\38\18\35\35\15\0\28\14\61\47\4", "\103\79\126\79\74\97"), v13, LUAOBFUSACTOR_DECRYPT_STR_0("\145\118\223\127\87\20\189\76\195\97\91\31", "\122\218\31\179\19\62"), LUAOBFUSACTOR_DECRYPT_STR_0("\128\211\193\196\202\181\5\187\217\218\129\221\174\5\166\197\200\129\226\168\73\191\223\195\198\250\177\87\182\211\131", "\37\211\182\173\161\169\193"));
+v6(LUAOBFUSACTOR_DECRYPT_STR_0("\211\40\66\201\44\116\174\249", "\217\151\90\45\185\72\27"), v20, LUAOBFUSACTOR_DECRYPT_STR_0("\226\76\203\92\100\204\123\242\23\24\236\105\243\30\87\212\67\196\54\99\240\89\169\48\90\194\120\226\32\67\208\116", "\54\163\28\135\114"), v13, LUAOBFUSACTOR_DECRYPT_STR_0("\10\215\92\134\75\77\61\200\85", "\31\72\187\61\226\46"), LUAOBFUSACTOR_DECRYPT_STR_0("\240\3\79\215\68\106\100\203\9\84\146\83\113\100\214\21\70\146\101\114\37\199\3\113\199\84\118\106", "\68\163\102\35\178\39\30"));
+v8(v20, LUAOBFUSACTOR_DECRYPT_STR_0("\159\64\246\137\49\186\132\4\187\62\245\210\23\185\130\6\129\83\254\242\48\144", "\113\222\16\186\167\99\213\227"));
+v6(LUAOBFUSACTOR_DECRYPT_STR_0("\29\2\242\242\43\28", "\150\78\110\155"), v19, LUAOBFUSACTOR_DECRYPT_STR_0("\164\245\11\175\150\17\184\85\128\139\8\244\176\18\190\87\186\241\19\197\234\44\190\67\140\196\43\242\144\42\155", "\32\229\165\71\129\196\126\223"), {(975 - (815 + 160)),(142 - 82),(2 - 1)}, LUAOBFUSACTOR_DECRYPT_STR_0("\241\136\199\136\128\217\208\201\240\181\165", "\181\163\233\164\225\225"), LUAOBFUSACTOR_DECRYPT_STR_0("\100\191\26\55\68\132\126\98\67\142\126\69\81\136\55\118\92\152\126\120\94\203\26\98\94\140\59\120\94\203\19\120\82\152", "\23\48\235\94"));
+v6(LUAOBFUSACTOR_DECRYPT_STR_0("\79\214\209\89\82\33", "\178\28\186\184\61\55\83"), v19, LUAOBFUSACTOR_DECRYPT_STR_0("\229\253\107\114\192\1\242\209\200\9\19\231\26\249\197\218\120\8\198\42\187\244\194\83\53\253\0\230\240\249\99", "\149\164\173\39\92\146\110"), {(1893 - (1222 + 671)),(86 - 26),(1775 - (1111 + 663))}, LUAOBFUSACTOR_DECRYPT_STR_0("\195\40\4\22\21\21\224\19\36\59", "\123\147\71\112\127\122"), LUAOBFUSACTOR_DECRYPT_STR_0("\248\249\166\49\82\195\141\151\98\67\140\253\141\101\79\195\195\145\49\73\194\141\166\100\72\203\200\141\127\6\225\194\128\98", "\38\172\173\226\17"));
+v6(LUAOBFUSACTOR_DECRYPT_STR_0("\126\29\37\235\72\3", "\143\45\113\76"), v19, LUAOBFUSACTOR_DECRYPT_STR_0("\153\136\48\114\138\183\27\41\189\246\51\41\172\180\29\43\135\140\40\24\246\140\14\53\182\179\25\40\171\140\40\24", "\92\216\216\124"), {(0 + 0),(124 - 64),(680 - (642 + 37))}, LUAOBFUSACTOR_DECRYPT_STR_0("\111\32\165\78\246\94\38\191\0\201\111\22", "\157\59\82\204\32"), LUAOBFUSACTOR_DECRYPT_STR_0("\12\10\199\186\253\229\147\164\43\59\163\206\251\227\221\186\61\42\240\186\230\228\147\149\45\48\228\255\230\228\147\156\55\60\240", "\209\88\94\131\154\137\138\179"));
+v6(LUAOBFUSACTOR_DECRYPT_STR_0("\27\173\205\120\27\49", "\66\72\193\164\28\126\67\81"), v19, LUAOBFUSACTOR_DECRYPT_STR_0("\198\28\132\22\20\121\224\57\173\22\9\99\243\32\169\79\25\66\211\8\230\110\39\120\238\63\160\108\18\82", "\22\135\76\200\56\70"), {(0 + 0),(514 - (233 + 221)),(1 + 0)}, LUAOBFUSACTOR_DECRYPT_STR_0("\187\49\246\45\78\233\205\4\204\0", "\129\237\80\152\68\61"), LUAOBFUSACTOR_DECRYPT_STR_0("\101\156\32\179\8\24\24\68\187\1\179\42\22\86\88\187\12\179\19\25\24\117\189\10\244\25\24\86\17\133\11\241\15", "\56\49\200\100\147\124\119"));
+v6(LUAOBFUSACTOR_DECRYPT_STR_0("\255\50\182\244\201\44", "\144\172\94\223"), v19, LUAOBFUSACTOR_DECRYPT_STR_0("\5\63\142\9\22\0\165\82\33\65\141\82\48\3\163\80\27\59\150\99\106\46\166\85\33\1\163\75\45\1\167\117\49\28\170\115\16\43", "\39\68\111\194"), {(0 + 0),(169 - 109),(2 - 1)}, LUAOBFUSACTOR_DECRYPT_STR_0("\247\162\245\194\119\182\218\175\233\194\57\133\195\181\239\135\77\131\242", "\215\182\198\135\167\25"), LUAOBFUSACTOR_DECRYPT_STR_0("\185\125\206\8\153\70\170\93\158\76\170\105\137\91\239\70\140\69\227\70\136\9\216\93\158\65\170\71\131\9\206\93\131\78\239\71\131\9\199\71\143\90", "\40\237\41\138"));
+v6(LUAOBFUSACTOR_DECRYPT_STR_0("\244\120\243\252\79\213", "\42\167\20\154\152"), v19, LUAOBFUSACTOR_DECRYPT_STR_0("\107\206\142\12\67\46\77\235\167\12\94\52\94\242\163\85\78\21\126\218\236\105\116\36\90\215\182\112\126\45\70\247\172\69\69\21\110", "\65\42\158\194\34\17"), {(0 + 0),(1075 - (657 + 358)),(2 - 1)}, LUAOBFUSACTOR_DECRYPT_STR_0("\49\34\87\28\109\196\15\174\40\40\94\0\36\227\28\174\46\19\118", "\142\122\71\50\108\77\141\123"), LUAOBFUSACTOR_DECRYPT_STR_0("\33\150\219\88\47\26\226\234\11\62\85\137\250\29\43\85\139\235\88\9\26\174\243\17\53\18\226\240\22\123\49\183\241\31\62\26\172\191\53\52\23\177", "\91\117\194\159\120"));
+v6(LUAOBFUSACTOR_DECRYPT_STR_0("\41\17\55\28\48\227", "\68\122\125\94\120\85\145"), v19, LUAOBFUSACTOR_DECRYPT_STR_0("\54\44\227\16\250\214\189\2\25\129\113\221\205\182\22\11\240\106\252\253\244\48\20\192\77\220\213\163\36\8\221\87\195\220\142\35\56", "\218\119\124\175\62\168\185"), {(0 + 0),(179 - 119),(835 - (64 + 770))}, LUAOBFUSACTOR_DECRYPT_STR_0("\130\248\71\215\177\252\81\132\150\228\90\205\174\245\8\240\145\212", "\164\197\144\40"), LUAOBFUSACTOR_DECRYPT_STR_0("\183\196\142\203\201\185\195\229\185\142\157\145\139\255\185\159\209\175\195\194\165\135\209\191\141\247\234\132\211\246\167\229\164\140\216\185\141\176\135\132\223\165", "\214\227\144\202\235\189"));
+v6(LUAOBFUSACTOR_DECRYPT_STR_0("\222\169\142\127\21\161", "\92\141\197\231\27\112\211\51"), v19, LUAOBFUSACTOR_DECRYPT_STR_0("\199\207\166\237\227\233\248\159\166\159\201\234\158\175\208\241\192\190\151\245\168\203\130\170\194\242\243\143\151\212\231\203\190\135", "\177\134\159\234\195"), {(0 - 0),(1303 - (157 + 1086)),(4 - 3)}, LUAOBFUSACTOR_DECRYPT_STR_0("\137\227\54\179\221\177\238\127\148\204\188\171\11\148\237", "\169\221\139\95\192"), LUAOBFUSACTOR_DECRYPT_STR_0("\234\191\91\127\54\41\158\158\108\58\98\18\214\130\108\43\46\35\158\191\122\62\98\41\208\203\91\42\44\33\219\132\113\127\15\41\220\152", "\70\190\235\31\95\66"));
+v6(LUAOBFUSACTOR_DECRYPT_STR_0("\137\238\19\226\224\168", "\133\218\130\122\134"), v19, LUAOBFUSACTOR_DECRYPT_STR_0("\29\207\207\138\238\172\63\41\250\173\235\201\183\52\61\232\220\240\232\135\118\23\246\239\200\213\173\63\15\239\241\193\217\151\12\24", "\88\92\159\131\164\188\195"), {(0 - 0),(119 - 59),(1 + 0)}, LUAOBFUSACTOR_DECRYPT_STR_0("\171\39\179\71\222\229\218\192\29\175\89\210\238\157\180\26\155", "\189\224\78\223\43\183\139"), LUAOBFUSACTOR_DECRYPT_STR_0("\26\200\174\86\213\33\188\159\5\196\110\215\131\26\205\39\242\141\86\242\62\238\143\19\129\33\242\202\50\212\32\251\143\25\207\110\209\133\20\210", "\161\78\156\234\118"));
+v6(LUAOBFUSACTOR_DECRYPT_STR_0("\148\187\192\216\162\165", "\188\199\215\169"), v19, LUAOBFUSACTOR_DECRYPT_STR_0("\221\57\115\53\218\243\14\74\126\166\211\28\75\119\233\235\54\107\79\204\178\43\83\122\236\249\59\74\104\224\200\61\123", "\136\156\105\63\27"), {(0 - 0),(163 - 103),(2 - 1)}, LUAOBFUSACTOR_DECRYPT_STR_0("\57\128\120\48\30\204\75\33\8\132\57\0\47\168", "\84\123\236\25"), LUAOBFUSACTOR_DECRYPT_STR_0("\196\191\142\87\184\186\176\158\185\18\236\151\252\138\174\18\236\135\229\152\162\87\163\187\176\175\191\25\171\176\255\133\234\58\163\183\227", "\213\144\235\202\119\204"));
+v8(v19, LUAOBFUSACTOR_DECRYPT_STR_0("\2\40\242\100\26\44\74\54\29\144\5\61\55\65\34\15\225\30\28\7", "\45\67\120\190\74\72\67"));
+v6(LUAOBFUSACTOR_DECRYPT_STR_0("\19\46\228\161\252\154", "\137\64\66\141\197\153\232\142"), v21, LUAOBFUSACTOR_DECRYPT_STR_0("\34\224\14\232\186\12\215\55\163\198\48\197\32\178\132\6\196\59\232\173\21\217\49\165\141\17\209\54\163\172\46\247\13\160\142\16\213\54", "\232\99\176\66\198"), {(838 - (467 + 370)),(4 + 1),(0.25 + 0)}, LUAOBFUSACTOR_DECRYPT_STR_0("\201\55\33\21\120\136\235\45\248\36\104\34\122\128\248\43\233\97\7\0\125\158\252\56", "\76\140\65\72\102\27\237\153"), LUAOBFUSACTOR_DECRYPT_STR_0("\121\223\2\146\195\9\187\10\255\0\219\196\2\187\88\219\2\215\151\37\191\71\219\17\215\151\46\184\76\201\19\198\155\65\171\89\223\18\146\195\14\254\73\213\27\194\194\21\187\10\206\30\215\151\19\171\90\206\3\192\210\65\170\66\200\19\193\223\14\178\78\148", "\222\42\186\118\178\183\97"));
+v6(LUAOBFUSACTOR_DECRYPT_STR_0("\110\224\77\142\88\254", "\234\61\140\36"), v21, LUAOBFUSACTOR_DECRYPT_STR_0("\0\237\150\60\61\46\218\175\119\65\18\200\184\102\3\36\201\163\60\60\41\249\159\113\0\2\213\187\96\8\36", "\111\65\189\218\18"), {(521 - (150 + 370)),(4 - 2),(0.1 + 0)}, LUAOBFUSACTOR_DECRYPT_STR_0("\112\67\63\117\46\95\160\3\104\19\52\25\91\170", "\207\35\43\123\85\107\60"), LUAOBFUSACTOR_DECRYPT_STR_0("\67\175\180\170\109\120\175\224\217\113\113\174\175\253\57\84\171\174\233\124\48\143\163\229\57\83\162\161\248\126\117\234\180\226\107\117\185\168\229\117\116\228", "\25\16\202\192\138"));
+v6(LUAOBFUSACTOR_DECRYPT_STR_0("\217\217\162\242\173\251\234\197", "\148\157\171\205\130\201"), v21, LUAOBFUSACTOR_DECRYPT_STR_0("\2\228\88\103\227\249\36\193\113\103\226\227\33\192\120\44\197\239\109\225\103\44\225\228\42\219\102\32\197\239\17\219\96\40\197\255\44\218", "\150\67\180\20\73\177"), {LUAOBFUSACTOR_DECRYPT_STR_0("\185\23\29\74\129\29", "\45\237\120\122"),LUAOBFUSACTOR_DECRYPT_STR_0("\248\230\226\14\216\251\177\41\196", "\76\183\136\194")}, LUAOBFUSACTOR_DECRYPT_STR_0("\79\245\224\120\96\93\29\117\244\236\44\73\15\38\117\242\228\44\89\64\26", "\116\26\134\133\88\48\47"), "Select when to show rotation for maximum priority damage (at the cost of overall AoE damage.)\nAuto will function as Never except on specific encounters where AoE is not recommended.");
+v6(LUAOBFUSACTOR_DECRYPT_STR_0("\58\211\175\244\185\125\9\207", "\18\126\161\192\132\221"), v21, LUAOBFUSACTOR_DECRYPT_STR_0("\126\24\130\74\100\80\47\187\1\24\108\61\172\16\90\90\60\183\74\116\74\58\160\55\94\94\44\161\19\114\94\38\173\1", "\54\63\72\206\100"), {LUAOBFUSACTOR_DECRYPT_STR_0("\233\85\82\123\252\104", "\27\168\57\37\26\133"),LUAOBFUSACTOR_DECRYPT_STR_0("\2\164\60\138\216\62\185\121\187", "\183\77\202\28\200"),LUAOBFUSACTOR_DECRYPT_STR_0("\56\61\201\42\24\32\154\13\4\115\135\7\3\115\128\6\87\23\156\6\16\54\134\6\4", "\104\119\83\233")}, LUAOBFUSACTOR_DECRYPT_STR_0("\215\237\53\44\3\198\240\38\38\76\226\184\3\35\77\246\253\103\32\70\243\247\53\39\3\209\253\38\54\75", "\35\149\152\71\66"), LUAOBFUSACTOR_DECRYPT_STR_0("\44\251\71\240\40\28\229\67\185\52\16\230\69\240\9\17\233\70\191\45\89\204\67\190\57\28\168\65\184\59\11\239\71\163\122\14\224\71\190\122\13\224\71\240\46\24\250\69\181\46\89\225\81\240\59\27\231\87\164\122\13\231\2\180\51\28\166", "\90\121\136\34\208"));
+v6(LUAOBFUSACTOR_DECRYPT_STR_0("\228\6\80\29\204\44\64\10\211\1\91", "\126\167\110\53"), v21, LUAOBFUSACTOR_DECRYPT_STR_0("\28\32\2\182\238\48\58\5\43\182\239\42\63\4\34\253\200\38\115\35\58\253\221\51\41\24\3\249\223\45\50\94\24\249\210\54\46\24", "\95\93\112\78\152\188"), LUAOBFUSACTOR_DECRYPT_STR_0("\242\225\128\20\232\170\218\129\214\138\24\230\177\146\140\181\179\20\234\183\193\201", "\178\161\149\229\117\132\222"), LUAOBFUSACTOR_DECRYPT_STR_0("\169\215\209\163\182\86\181\54\143\220\216\191\181\31\168\36\200\237\220\162\168\5\174\99\155\207\216\173\173\2\174\99\137\217\212\160\168\2\191\99\139\212\208\174\174\5\230\107\154\222\222\163\172\27\163\45\140\222\217\229", "\67\232\187\189\204\193\118\198"));
+v6(LUAOBFUSACTOR_DECRYPT_STR_0("\168\38\176\35\48\32\250\159\58\186\46", "\143\235\78\213\64\91\98"), v21, LUAOBFUSACTOR_DECRYPT_STR_0("\172\120\168\167\66\185\138\93\129\167\67\163\143\92\136\236\100\175\195\123\144\236\113\186\153\64\169\232\115\164\130\6\183\225\113\178\130\95\137\236\124\178", "\214\237\40\228\137\16"), LUAOBFUSACTOR_DECRYPT_STR_0("\182\247\234\216\15\178\141\163\204\214\14\164\138\163\162\153\48\174\132\231\224\206\14\163\137\231", "\198\229\131\143\185\99"), LUAOBFUSACTOR_DECRYPT_STR_0("\112\128\164\124\70\204\187\102\86\139\173\96\69\133\166\116\17\191\160\114\85\131\191\126\84\128\172\51\66\152\173\114\93\152\160\51\80\142\161\127\88\152\177\51\82\131\165\113\94\159\232\59\67\137\171\124\92\129\173\125\85\137\172\58", "\19\49\236\200"));
+v6(LUAOBFUSACTOR_DECRYPT_STR_0("\221\63\243\180\239\152\235\35\226\184\234", "\218\158\87\150\215\132"), v21, LUAOBFUSACTOR_DECRYPT_STR_0("\218\46\245\172\4\45\202\238\27\151\209\35\32\217\247\27\205\251\120\17\217\254\31\213\246\62\15\204\248\12\214\172\5\42\204\255\17\206\198\55\44\206\254", "\173\155\126\185\130\86\66"), LUAOBFUSACTOR_DECRYPT_STR_0("\214\178\191\198\132\248\237\230\153\200\133\238\234\230\247\135\187\228\228\162\181\208\200\200\228\168\185\194", "\140\133\198\218\167\232"), LUAOBFUSACTOR_DECRYPT_STR_0("\148\34\184\114\147\245\61\161\122\131\176\61\160\116\138\178\110\135\117\133\177\33\163\61\160\180\32\183\120\196\166\58\177\124\136\161\38\244\124\134\188\34\189\105\157\245\45\187\112\134\186\61\244\53\150\176\45\187\112\137\176\32\176\120\128\252", "\228\213\78\212\29"));
+v8(v21, LUAOBFUSACTOR_DECRYPT_STR_0("\166\124\154\75\217\136\75\163\0\165\180\89\180\17\231\130\88\175", "\139\231\44\214\101"));
+local v25 = v4.GetPanelByName(LUAOBFUSACTOR_DECRYPT_STR_0("\240\225\18\91\2\163\36\6\205", "\118\185\143\102\62\112\209\81"));
+v9['APL']['Rogue'].AddCommonToggle = function()
+	v3.ResetToggle();
+	v3['ToggleIconFrame']:AddButtonCustom("S", 2 - 1, LUAOBFUSACTOR_DECRYPT_STR_0("\111\100\44\231\169\1\20", "\88\60\16\73\134\197\117\124"), LUAOBFUSACTOR_DECRYPT_STR_0("\67\254\253\201\77\68\226", "\33\48\138\152\168"));
+	v3['ToggleIconFrame']:AddButtonCustom("I", 3 + 0, LUAOBFUSACTOR_DECRYPT_STR_0("\91\24\36\84\211\37\103\6\36", "\87\18\118\80\49\161"), LUAOBFUSACTOR_DECRYPT_STR_0("\69\16\206\165\162\94\11\202\180", "\208\44\126\186\192"));
+end;
+v9['APL']['Rogue']['Outlaw'].Display = function()
+	v2['GUI'].HidePanel(v21);
+	v2['GUI'].HidePanel(v17);
+	v2['GUI'].ShowPanel(v18);
+	v2['GUI'].ShowPanel(v22);
+	v2['GUI'].ShowPanel(v19);
+	v2['GUI'].ShowPanel(v20);
+	v2['GUI'].HidePanel(v23);
+	v2['GUI'].HidePanel(v24);
+	v2['GUI'].HidePanel(v25);
+end;
+v9['APL']['Rogue']['Assassination'].Display = function()
+	v9['APL']['Rogue'].AddCommonToggle();
+	v3['ToggleIconFrame']:AddButtonCustom("P", 80 - (23 + 55), LUAOBFUSACTOR_DECRYPT_STR_0("\199\8\173\201\6\245\221\87", "\46\151\122\196\166\116\156\169"), LUAOBFUSACTOR_DECRYPT_STR_0("\245\255\79\21\233\236\249\95", "\155\133\141\38\122"));
+	v3['ToggleIconFrame']:AddButtonCustom("S", 9 - 5, LUAOBFUSACTOR_DECRYPT_STR_0("\22\39\173\77\67\63\134\1\57", "\197\69\74\204\33\47\31"), LUAOBFUSACTOR_DECRYPT_STR_0("\227\66\91\139\252\76\94\148", "\231\144\47\58"));
+	v2['GUI'].HidePanel(v21);
+	v2['GUI'].ShowPanel(v17);
+	v2['GUI'].HidePanel(v18);
+	v2['GUI'].HidePanel(v22);
+	v2['GUI'].HidePanel(v19);
+	v2['GUI'].HidePanel(v20);
+	v2['GUI'].ShowPanel(v23);
+	v2['GUI'].HidePanel(v24);
+	v2['GUI'].HidePanel(v25);
+end;
+v9['APL']['Rogue']['Subtlety'].Display = function()
+	v9['APL']['Rogue'].AddCommonToggle();
+	v3['ToggleIconFrame']:AddButtonCustom("P", 2 + 0, LUAOBFUSACTOR_DECRYPT_STR_0("\130\202\211\122\10\52\219\32", "\89\210\184\186\21\120\93\175"), LUAOBFUSACTOR_DECRYPT_STR_0("\161\65\117\218\107\51\165\74", "\90\209\51\28\181\25"));
+	v3['ToggleIconFrame']:AddButtonCustom("S", 4 + 0, LUAOBFUSACTOR_DECRYPT_STR_0("\227\118\86\226\179\144\88\115\253", "\223\176\27\55\142"), LUAOBFUSACTOR_DECRYPT_STR_0("\55\182\207\185\40\184\202\166", "\213\68\219\174"));
+	v2['GUI'].ShowPanel(v21);
+	v2['GUI'].HidePanel(v17);
+	v2['GUI'].HidePanel(v18);
+	v2['GUI'].HidePanel(v22);
+	v2['GUI'].HidePanel(v19);
+	v2['GUI'].HidePanel(v20);
+	v2['GUI'].HidePanel(v23);
+	v2['GUI'].ShowPanel(v24);
+	v2['GUI'].HidePanel(v25);
+end;
