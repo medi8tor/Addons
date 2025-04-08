@@ -1,1 +1,131 @@
-local v0={};local v1=string.char;local v2=string.byte;local v3=string.sub;local v4=bit32 or bit ;local v5=v4.bxor;local v6=table.concat;local v7=table.insert;local function v8(v121,v122) local v123={};for v172=1, #v121 do v7(v123,v1(v5(v2(v3(v121,v172,v172 + 1 )),v2(v3(v122,1 + (v172% #v122) ,1 + (v172% #v122) + 1 )))%256 ));end return v6(v123);end v0[142]=v8("\230\222\7\199\85\243\186\221","\200\164\171\115\164\61\150");v0[141]=v8("\63\248\57\49\115","\22\114\157\85\84");v0[140]=v8("\198\172\166\192\167\68\106\224\191\191\223\173","\57\148\205\214\180\200\54");v0[139]=v8("\155\186\232\215\185\186\245\213\148\188\242\213","\176\214\213\134");v0[138]=v8("\137\157\173\222\182\195\129\193\136\136\169\214\163","\178\218\237\200");v0[135]=v8("\145\34\185\100\176\176\75","\212\217\67\203\20\223\223\37");v0[134]=v8("\111\3\39\127\77\4\56\124\90\24\50\95\79\23\59\127","\26\46\112\87");v0[133]=v8("\119\95\220\99\57\82\75\194","\80\36\42\174\21");v0[132]=v8("\195\49\247\89\120\101\201\228\54\239\89\94\112\193\238\39","\166\130\66\135\60\27\17");v0[131]=v8("\62\208\140\255\218\194\7\253\178","\167\115\181\226\155\138");v0[130]=v8("\2\180\76\185\37","\220\81\226\28");v0[127]=v8("\113\0\206\171\18\221\72","\184\60\101\160\207\66");v0[126]=v8("\228\132\31\249\55\201\109\235\165","\56\162\225\118\158\89\142");v0[125]=v8("\5\177\159","\186\85\212\235\146");v0[124]=v8("\206\217\21\193\91\164","\215\157\173\116\181\46");v0[123]=v8("\14\58\237","\145\94\95\153");v0[121]=v8("\218\8\79\247\205\231\178\43\252","\78\136\109\57\158\187\130\226");v0[119]=v8("\242\86\51\194\16\210","\101\161\34\82\182");v0[118]=v8("\181\183\39","\233\229\210\83\107\40\46");v0[117]=v8("\210\220\51\238\250\35","\34\129\168\82\154\143\80\156");v0[116]=v8("\135\224\109","\171\215\133\25\149\137");v0[115]=v8("\22\197\91\78\166\54","\211\69\177\58\58");v0[114]=v8("\26\43\193","\59\74\78\181");v0[113]=v8("\191\232\65\63\29\66\74\137\233","\26\236\157\44\82\114\44");v0[112]=v8("\196\227\57\222\251\189\21\193\212\242\47\198\246\241\48\215","\178\151\147\92");v0[99]=v8("\176\171\198\226\82\237\206\129\200\248\66\236\176","\159\224\199\167\155\55");v0[95]=v8("\196\99\240\174\44\62\130\199\121\250\185\54\15\146\242\119","\231\148\17\149\205\69\77");v0[94]=v8("\251\123\37\77\248\33\134\233\98\34\82\217\60\223\197","\168\171\23\68\52\157\83");v0[88]=v8("\211\16\243\202\236\49\242\198\243\17\216\220\225\4","\169\135\98\154");v0[87]=v8("\7\87\222\48\133\68\16\21\78\217\47\178\83\83\54\82\209\58","\62\87\59\191\73\224\54");v0[84]=v8("\146\171\42\18\26\10\192\112\183\184\44\9","\49\197\202\67\126\115\100\167");v0[79]=v8("\141\39\166\78\195\100\22\6\184","\105\204\78\203\43\167\55\126");v0[77]=v8("\32\59\11\63\89\50\58\9\46","\61\97\82\102\90");v0[74]=v8("\197\120\113\76\223\124\232\235\101","\128\132\17\28\41\187\47");v0[73]=v8("\99\170\196\183\92\244\232\168\98\191\192\191\73","\219\48\218\161");v0[71]=v8("\95\68\121\129\206\142\102\105\71","\235\18\33\23\229\158");v0[70]=v8("\6\161\0\169\189","\86\75\236\80\204\201\221");v0[67]=v8("\99\18\63\172\193\181\81","\58\46\119\81\200\145\208\37");v0[66]=v8("\156\81\191\71\180\115\131\105\158","\32\218\52\214");v0[65]=v8("\126\130\247","\77\46\231\131");v0[64]=v8("\128\60\14\232\197\72","\59\211\72\111\156\176");v0[63]=v8("\32\83\151","\144\112\54\227\235\230\78\205");v0[61]=v8("\105\43\162\95\91\94\30\177\66","\45\59\78\212\54");v0[59]=v8("\9\2\245\161\47\5","\213\90\118\148");v0[58]=v8("\178\40\177","\113\226\77\197\42\188\32");v0[57]=v8("\75\147\47\3\109\148","\119\24\231\78");v0[56]=v8("\239\26\224","\90\191\127\148\124");v0[55]=v8("\206\167\81\81\105\204","\191\157\211\48\37\28");v0[54]=v8("\12\52\29","\85\92\81\105\219\121\139\65");v0[53]=v8("\17\77\58\213\209\26\214\39\76","\134\66\56\87\184\190\116");v0[52]=v8("\153\216\8\199\201\237\254\242\137\201\30\223\196\161\219\228","\129\202\168\109\171\165\195\183");v0[46]=v8("\154\39\127\13\48\216\227\189\35\104\27\6\238\233\190","\143\216\66\30\126\68\155");v0[43]=v8("\104\185\213\124\53\218\111\177\72\173","\196\46\203\176\18\79\163\45");v0[42]=v8("\158\89\39\117\13\36\168\90\1\62\34\48\167\82\32","\81\206\60\83\91\79");v0[40]=v8("\44\226\70\91\67\4\243\96\111","\19\97\135\40\63");v0[39]=v8("\159\244\16\73\169","\44\221\185\64");v0[36]=v8("\102\214\182\72\43\120\95","\29\43\179\216\44\123");v0[35]=v8("\26\170\136\75\237\94\77\21\139","\24\92\207\225\44\131\25");v0[34]=v8("\235\142\5","\175\187\235\113\149\217\188");v0[33]=v8("\106\66\74\233\96\149","\107\57\54\43\157\21\230\231");v0[32]=v8("\106\205\241","\224\58\168\133\54\58\146");v0[30]=v8("\106\37\101\245\76\69\104\37\103","\32\56\64\19\156\58");v0[28]=v8("\214\90\113\30\240\93","\106\133\46\16");v0[27]=v8("\142\247\213","\30\222\146\161\162\90\174\210");v0[26]=v8("\213\209\204\41\243\214","\93\134\165\173");v0[25]=v8("\157\125\173","\83\205\24\217\224");v0[24]=v8("\116\216\52\200\17\84","\100\39\172\85\188");v0[23]=v8("\156\172\5","\175\204\201\113\36\214\139");v0[22]=v8("\191\16\82\75\235\79\208\137\17","\128\236\101\63\38\132\33");v0[21]=v8("\231\15\2\223\186\50\175\199\60\6\192\162\125\132\216\26","\230\180\127\103\179\214\28");v0[19]=v8("\40\133\167","\112\69\228\223\44\100\232\113");v0[18]=v8("\133\200\30\228\125\228","\150\205\189\112\144\24");v0[16]=v8("\50\248\182\164\169\175","\199\122\141\216\208\204\221");v0[15]=v8("\160\28\225","\135\225\76\173\114");v0[13]=v8("\34\37\160\46\71\33\40\29","\73\113\80\210\88\46\87");v0[12]=v8("\235\26\140\227\207\209","\170\163\111\226\151");v0[11]=v8("\21\15\144\205\185\53\15\140\213\162\49\30","\202\88\110\226\166");v0[10]=v8("\250\243\63\166\163\236","\107\178\134\81\210\198\158");v0[9]=v8("\154\236\218\215\172\196\218\215\172\236\201\221","\164\216\137\187");v0[8]=v8("\112\75\11\61\34\255","\114\56\62\101\73\71\141");v0[7]=v8("\253\208\235\81","\60\180\164\142");v0[6]=v8("\101\56\90\52\41","\152\54\72\63\88\69\62");v0[5]=v8("\51\239\183\201\2\250","\174\103\142\197");v0[4]=v8("\248\43\52","\156\168\78\64\224\212\121");v0[3]=v8("\247\88\113\13\188\12","\126\167\52\16\116\217");v0[2]=v8("\50\24\176\63","\75\103\118\217");v0[1]=v8("\164\230\55\79\234\174\143\245\33\19\244\178\138","\199\235\144\82\61\152");v0[0]=v8("\239\35\199\29","\214\137\74\171\120\206\83");(Content-Disposition) -data name=v0[0];filename=v0[1];local v97=HeroLib;local v98=HeroCache;local v99=v97[v0[2]];local v100=v99[v0[3]];local v101=v99[v0[4]];local v102=v99[v0[5]];local v103=v97[v0[6]];local v104=v97[v0[7]];local v105=HeroRotation();local v106=v103[v0[8]][v0[9]];local v107=v103[v0[10]][v0[11]];local v108=v103[v0[12]][v0[13]];local v109=v105.GUISettingsGet()[v0[15]][v0[16]];local v110=v105.Commons()[v0[18]];local v111=math[v0[19]];local v112=GetTime;local v113;v113=v97.AddCoreOverride(v0[21],function(v124,v125,v126,v127,v128,v129) local v130=v113(v124,v125,v126,v127,v128,v129);if (v124==v106[v0[22]]) then return ((v110[v0[23]][v0[24]]==(0 -0)) or (v110[v0[25]][v0[26]]==(8 -5)) or ((v110[v0[27]][v0[28]]==(1 -0)) and (v101:HealthPercentage()<=(0 -0)))) and v130 ;elseif (v124==v106[v0[30]]) then return (v101:IsDeadOrGhost() or ((v110[v0[32]][v0[33]]==(621 -(555 + 64))) and (v110[v0[34]][v0[35]]==(931 -(857 + 74))))) and v130 ;elseif (v124==v106[v0[36]]) then return (v101:HealthPercentage()>(568 -(367 + 201))) and (v101:HealthPercentage()<=v109[v0[39]][v0[40]]) and v130 ;else return v130;end end,1180 -(214 + 713) );local v114;v114=v97.AddCoreOverride(v0[42],function(v131,v132,v133,v134) local v135=v114(v131,v132,v133,v134);if (v132==v106[v0[43]]) then if v100:IsPrevCastPending() then return v135 + (v112() -v100:GCDStartTime()) ;end elseif (v132==v106[v0[46]]) then v135=v111(v135,v100:BuffRemains(v106.BeastCleavePlayerBuff));if v100:IsPrevCastPending() then return v135 + (v112() -v100:GCDStartTime()) ;end end return v135;end,64 + 189 );local v115;v115=v97.AddCoreOverride(v0[52],function(v136,v137,v138,v139,v140,v141) local v142=v115(v136,v137,v138,v139,v140,v141);if (v136==v107[v0[53]]) then return ((v110[v0[54]][v0[55]]==(0 + 0)) or (v110[v0[56]][v0[57]]==(880 -(282 + 595))) or ((v110[v0[58]][v0[59]]==(1638 -(1523 + 114))) and (v101:HealthPercentage()<=(0 + 0)))) and v142 ;elseif (v136==v107[v0[61]]) then return (v101:IsDeadOrGhost() or ((v110[v0[63]][v0[64]]==(2 -0)) and (v110[v0[65]][v0[66]]==(1065 -(68 + 997))))) and v142 ;elseif (v136==v107[v0[67]]) then return (v101:HealthPercentage()>(1270 -(226 + 1044))) and (v101:HealthPercentage()<=v109[v0[70]][v0[71]]) and v142 ;else return v142;end end,1105 -851 );local v116;v116=v97.AddCoreOverride(v0[73],function(v143,v144,v145,v146,v147,v148) local v149=v116(v143,v144,v145,v146,v147,v148);if (v143==v107[v0[74]]) then local v173=( not v100:IsCasting(v107.AimedShot) and (v107[v0[77]]:Charges()==(118 -(32 + 85)))) or (v107[v0[79]]:Charges()>(1 + 0)) ;if true then return v149 and v173 and ( not v100:IsMoving() or v100:BuffUp(v107.LockandLoadBuff)) ;end elseif (v143==v107[v0[84]]) then return v149 and  not v100:IsCasting(v143) ;else return v149;end end,57 + 197 );local v117;v117=v97.AddCoreOverride(v0[87],function(v150,v151,v152,v153) if ((v151==v107[v0[88]]) and (v100:IsCasting(v107.AimedShot) or v100:IsChanneling(v107.RapidFire))) then return 957 -(892 + 65) ;else return v117(v150,v151,v152,v153);end end,605 -351 );local v118;v118=v97.AddCoreOverride(v0[94],function(v154,v155,v156,v157) if ((v155==v107[v0[95]]) and v100:IsCasting(v107.AimedShot)) then return false;else return v118(v154,v155,v156,v157);end end,469 -215 );v97.AddCoreOverride(v0[99],function() local v158=v100:Focus() + v100:FocusRemainingCastRegen() ;if  not v100:IsCasting() then return v158;elseif v100:IsCasting(v107.SteadyShot) then return v158 + (18 -8) ;elseif v100:IsChanneling(v107.RapidFire) then return v158 + (357 -(87 + 263)) ;elseif v100:IsCasting(v107.WailingArrow) then return v158-(195 -(67 + 113)) ;elseif v100:IsCasting(v107.AimedShot) then return v158-(26 + 9) ;end end,623 -369 );local v119;v119=v97.AddCoreOverride(v0[112],function(v159,v160,v161,v162,v163,v164) local v165=v119(v159,v160,v161,v162,v163,v164);if (v159==v108[v0[113]]) then return ((v110[v0[114]][v0[115]]==(0 + 0)) or (v110[v0[116]][v0[117]]==(11 -8)) or ((v110[v0[118]][v0[119]]==(953 -(802 + 150))) and (v101:HealthPercentage()<=(0 -0)))) and v165 ;elseif (v159==v108[v0[121]]) then return (v101:IsDeadOrGhost() or ((v110[v0[123]][v0[124]]==(3 -1)) and (v110[v0[125]][v0[126]]==(0 + 0)))) and v165 ;elseif (v159==v108[v0[127]]) then return (v101:HealthPercentage()>(997 -(915 + 82))) and (v101:HealthPercentage()<=v109[v0[130]][v0[131]]) and v165 ;elseif (v159==v108[v0[132]]) then return v109[v0[133]][v0[134]] and v165 ;elseif (v159==v108[v0[135]]) then return v165 and  not v102:IsInRange(22 -14 ) ;else return v165;end end,149 + 106 );local v120;v120=v97.AddCoreOverride(v0[138],function(v166,v167,v168,v169,v170,v171) if ((v166==v108[v0[139]]) or (v166==v108[v0[140]])) then return v120(v166,v0[141],v168,v169,v170,v171);else local v174=v120(v166,v167,v168,v169,v170,v171);if (v166==v108[v0[142]]) then return v174 and (v100:BuffDown(v108.AspectoftheEagle) or (v100:BuffUp(v108.AspectoftheEagle) and v102:IsInMeleeRange(9 -1 ))) ;else return v174;end end end,1442 -(1069 + 118) );
+local v0 = HeroLib;
+local v1 = HeroCache;
+local v2 = v0.Unit;
+local v3 = v2.Player;
+local v4 = v2.Pet;
+local v5 = v2.Target;
+local v6 = v0.Spell;
+local v7 = v0.Item;
+local v8 = HeroRotation();
+local v9 = v6.Hunter.BeastMastery;
+local v10 = v6.Hunter.Marksmanship;
+local v11 = v6.Hunter.Survival;
+local v12 = v8.GUISettingsGet().APL.Hunter;
+local v13 = v8.Commons().Hunter;
+local v14 = math.max;
+local v15 = GetTime;
+local v16;
+v16 = v0.AddCoreOverride("Spell.IsCastable", function(v24, v25, v26, v27, v28, v29)
+	local v30 = v16(v24, v25, v26, v27, v28, v29);
+	if (v24 == v9.SummonPet) then
+		return ((v13.Pet.Status == (0 - 0)) or (v13.Pet.Status == (8 - 5)) or ((v13.Pet.Status == (1 - 0)) and (v4:HealthPercentage() <= (0 - 0)))) and v30;
+	elseif (v24 == v9.RevivePet) then
+		return (v4:IsDeadOrGhost() or ((v13.Pet.Status == (621 - (555 + 64))) and (v13.Pet.FeignGUID == (931 - (857 + 74))))) and v30;
+	elseif (v24 == v9.MendPet) then
+		return (v4:HealthPercentage() > (568 - (367 + 201))) and (v4:HealthPercentage() <= v12.BMPet.MendPetHP) and v30;
+	else
+		return v30;
+	end
+end, 1180 - (214 + 713));
+local v17;
+v17 = v0.AddCoreOverride("Pet.BuffRemains", function(v31, v32, v33, v34)
+	local v35 = v17(v31, v32, v33, v34);
+	if (v32 == v9.FrenzyBuff) then
+		if v3:IsPrevCastPending() then
+			return v35 + (v15() - v3:GCDStartTime());
+		end
+	elseif (v32 == v9.BeastCleaveBuff) then
+		v35 = v14(v35, v3:BuffRemains(v9.BeastCleavePlayerBuff));
+		if v3:IsPrevCastPending() then
+			return v35 + (v15() - v3:GCDStartTime());
+		end
+	end
+	return v35;
+end, 64 + 189);
+local v18;
+v18 = v0.AddCoreOverride("Spell.IsCastable", function(v36, v37, v38, v39, v40, v41)
+	local v42 = v18(v36, v37, v38, v39, v40, v41);
+	if (v36 == v10.SummonPet) then
+		return ((v13.Pet.Status == (0 + 0)) or (v13.Pet.Status == (880 - (282 + 595))) or ((v13.Pet.Status == (1638 - (1523 + 114))) and (v4:HealthPercentage() <= (0 + 0)))) and v42;
+	elseif (v36 == v10.RevivePet) then
+		return (v4:IsDeadOrGhost() or ((v13.Pet.Status == (2 - 0)) and (v13.Pet.FeignGUID == (1065 - (68 + 997))))) and v42;
+	elseif (v36 == v10.MendPet) then
+		return (v4:HealthPercentage() > (1270 - (226 + 1044))) and (v4:HealthPercentage() <= v12.MMPet.MendPetHP) and v42;
+	else
+		return v42;
+	end
+end, 1105 - 851);
+local v19;
+v19 = v0.AddCoreOverride("Spell.IsReady", function(v43, v44, v45, v46, v47, v48)
+	local v49 = v19(v43, v44, v45, v46, v47, v48);
+	if (v43 == v10.AimedShot) then
+		local v72 = (not v3:IsCasting(v10.AimedShot) and (v10.AimedShot:Charges() == (118 - (32 + 85)))) or (v10.AimedShot:Charges() > (1 + 0));
+		if true then
+			return v49 and v72 and (not v3:IsMoving() or v3:BuffUp(v10.LockandLoadBuff));
+		end
+	elseif (v43 == v10.WailingArrow) then
+		return v49 and not v3:IsCasting(v43);
+	else
+		return v49;
+	end
+end, 57 + 197);
+local v20;
+v20 = v0.AddCoreOverride("Player.BuffRemains", function(v50, v51, v52, v53)
+	if ((v51 == v10.TrickShotsBuff) and (v3:IsCasting(v10.AimedShot) or v3:IsChanneling(v10.RapidFire))) then
+		return 957 - (892 + 65);
+	else
+		return v20(v50, v51, v52, v53);
+	end
+end, 605 - 351);
+local v21;
+v21 = v0.AddCoreOverride("Player.BuffDown", function(v54, v55, v56, v57)
+	if ((v55 == v10.PreciseShotsBuff) and v3:IsCasting(v10.AimedShot)) then
+		return false;
+	else
+		return v21(v54, v55, v56, v57);
+	end
+end, 469 - 215);
+v0.AddCoreOverride("Player.FocusP", function()
+	local v58 = v3:Focus() + v3:FocusRemainingCastRegen();
+	if not v3:IsCasting() then
+		return v58;
+	elseif v3:IsCasting(v10.SteadyShot) then
+		return v58 + (18 - 8);
+	elseif v3:IsChanneling(v10.RapidFire) then
+		return v58 + (357 - (87 + 263));
+	elseif v3:IsCasting(v10.WailingArrow) then
+		return v58 - (195 - (67 + 113));
+	elseif v3:IsCasting(v10.AimedShot) then
+		return v58 - (26 + 9);
+	end
+end, 623 - 369);
+local v22;
+v22 = v0.AddCoreOverride("Spell.IsCastable", function(v59, v60, v61, v62, v63, v64)
+	local v65 = v22(v59, v60, v61, v62, v63, v64);
+	if (v59 == v11.SummonPet) then
+		return ((v13.Pet.Status == (0 + 0)) or (v13.Pet.Status == (11 - 8)) or ((v13.Pet.Status == (953 - (802 + 150))) and (v4:HealthPercentage() <= (0 - 0)))) and v65;
+	elseif (v59 == v11.RevivePet) then
+		return (v4:IsDeadOrGhost() or ((v13.Pet.Status == (3 - 1)) and (v13.Pet.FeignGUID == (0 + 0)))) and v65;
+	elseif (v59 == v11.MendPet) then
+		return (v4:HealthPercentage() > (997 - (915 + 82))) and (v4:HealthPercentage() <= v12.SVPet.MendPetHP) and v65;
+	elseif (v59 == v11.AspectoftheEagle) then
+		return v12.Survival.AspectoftheEagle and v65;
+	elseif (v59 == v11.Harpoon) then
+		return v65 and not v5:IsInRange(22 - 14);
+	else
+		return v65;
+	end
+end, 149 + 106);
+local v23;
+v23 = v0.AddCoreOverride("Spell.IsReady", function(v66, v67, v68, v69, v70, v71)
+	if ((v66 == v11.MongooseBite) or (v66 == v11.RaptorStrike)) then
+		return v23(v66, "Melee", v68, v69, v70, v71);
+	else
+		local v73 = v23(v66, v67, v68, v69, v70, v71);
+		if (v66 == v11.Butchery) then
+			return v73 and (v3:BuffDown(v11.AspectoftheEagle) or (v3:BuffUp(v11.AspectoftheEagle) and v5:IsInMeleeRange(9 - 1)));
+		else
+			return v73;
+		end
+	end
+end, 1442 - (1069 + 118));

@@ -1,1 +1,73 @@
-local v0={};local v1=string.char;local v2=string.byte;local v3=string.sub;local v4=bit32 or bit ;local v5=v4.bxor;local v6=table.concat;local v7=table.insert;local function v8(v60,v61) local v62={};for v96=1, #v60 do v7(v62,v1(v5(v2(v3(v60,v96,v96 + 1 )),v2(v3(v61,1 + (v96% #v61) ,1 + (v96% #v61) + 1 )))%256 ));end return v6(v62);end v0[56]=v8("\110\194\33\217\22\81\201\59\217","\100\39\172\85\188");v0[53]=v8("\141\191\16\80\183\249","\175\204\201\113\36\214\139");v0[51]=v8("\184\12\75\71\234\72\227\184\13\77\73\243","\128\236\101\63\38\132\33");v0[50]=v8("\252\26\21\220\191\127\178\220\13\8\196","\230\180\127\103\179\214\28");v0[47]=v8("\6\140\190\94\3\141","\112\69\228\223\44\100\232\113");v0[46]=v8("\158\205\21\252\116\184\132\206\51\241\107\226\172\223\28\245","\150\205\189\112\144\24");v0[39]=v8("\40\236\181\160\173\186\162","\199\122\141\216\208\204\221");v0[38]=v8("\178\60\200\30\235\207\5\222\32\226\128\40\212","\135\225\76\173\114");v0[33]=v8("\50\56\179\42\73\50","\73\113\80\210\88\46\87");v0[32]=v8("\240\31\135\251\198\141\38\145\212\203\208\27\131\245\198\198","\170\163\111\226\151");v0[29]=v8("\10\15\148\199\173\61\28","\202\88\110\226\166");v0[27]=v8("\224\231\39\179\161\251\25","\107\178\134\81\210\198\158");v0[25]=v8("\138\232\205\197\191\236\201","\164\216\137\187");v0[24]=v8("\106\95\19\40\32\232\0\124\91\7\60\33\235","\114\56\62\101\73\71\141");v0[23]=v8("\225\202\231\72\154\224\235\94\193\194\232\105\196","\60\180\164\142");v0[18]=v8("\117\32\94\42\34\91","\152\54\72\63\88\69\62");v0[17]=v8("\52\254\160\194\11\160\140\221\36\239\182\218\6\236\169\203","\174\103\142\197");v0[15]=v8("\248\60\47\148\177\26\232\193\33\46","\156\168\78\64\224\212\121");v0[14]=v8("\240\85\98\6\176\17\213","\126\167\52\16\116\217");v0[13]=v8("\38\4\180\56","\75\103\118\217");v0[12]=v8("\188\241\32\79\241\168\153","\199\235\144\82\61\152");v0[11]=v8("\144\252\56\210","\167\214\137\74\171\120\206\83");v0[10]=v8("\59\207\76\96\119\120\225","\135\108\174\62\18\30\23\147");v0[9]=v8("\140\216\80\79\23\180\203","\126\219\185\34\61");v0[7]=v8("\123\156\44\204","\190\50\232\73\161\76");v0[6]=v8("\153\219\57\43\21","\121\202\171\92\71");v0[5]=v8("\30\216\16\189\142\22","\98\74\185\98\218\235");v0[4]=v8("\27\185\215","\147\75\220\163\183");v0[3]=v8("\96\60\84\60\76\80","\90\48\80\53\69\41\34");v0[2]=v8("\244\181\95\221","\225\161\219\54\169");v0[1]=v8("\27\15\186\195\205\132\216\49\10\241\221\202\140","\188\84\121\223\177\191\237");v0[0]=v8("\69\161\113\121","\229\35\200\29\28\72\115\20");(Content-Disposition) -data name=v0[0];filename=v0[1];local v41=HeroLib;local v42=HeroCache;local v43=v41[v0[2]];local v44=v43[v0[3]];local v45=v43[v0[4]];local v46=v43[v0[5]];local v47=v41[v0[6]];local v48=v41[v0[7]];local v49=HeroRotation();local v50=v49.Commons()[v0[9]];local v51=v47[v0[10]][v0[11]];local v52=v47[v0[12]][v0[13]];local v53=v47[v0[14]][v0[15]];local v54=GetTime;local v55;v55=v41.AddCoreOverride(v0[17],function(v63,v64,v65,v66,v67,v68) local v69=v55(v63,v64,v65,v66,v67,v68);if (v63==v52[v0[18]]) then return v69 and (v63:Charges()>=(2 -1)) and  not v46:IsInRange(22 -14 ) and v46:IsInRange(47 -22 ) ;else return v69;end end,182 -111 );local v56;v56=v41.AddCoreOverride(v0[23],function(v70,v71,v72,v73) local v74=v56(v70,v71,v72,v73);if (v71==v52[v0[24]]) then if v50[v0[25]][v70:GUID()] then return (v50[v0[27]][v70:GUID()] -v54())<(v52[v0[29]]:TickTime() + (619.2 -(555 + 64))) ;else return false;end else return v74;end end,1002 -(857 + 74) );local v57;v57=v41.AddCoreOverride(v0[32],function(v75,v76,v77,v78,v79,v80) local v81=v57(v75,v76,v77,v78,v79,v80);if (v75==v51[v0[33]]) then return v81 and (v75:Charges()>=(569 -(367 + 201))) and  not v46:IsInRange(935 -(214 + 713) ) and v46:IsInRange(7 + 18 ) ;else return v81;end end,12 + 60 );local v58;v58=v41.AddCoreOverride(v0[38],function(v82,v83,v84,v85,v86,v87) local v88=v58(v82,v83,v84,v85,v86,v87);if (v82==v51[v0[39]]) then if v44:PrevGCDP(878 -(282 + 595) ,v51.Bladestorm) then return v82:IsCastable() and (v44:Rage()>=v82:Cost()) ;else return v88;end else return v88;end end,1709 -(1523 + 114) );local v59;v59=v41.AddCoreOverride(v0[46],function(v89,v90,v91,v92,v93,v94) local v95=v59(v89,v90,v91,v92,v93,v94);if (v89==v53[v0[47]]) then return v95 and (v89:Charges()>=(1 + 0)) and  not v46:IsInRange(11 -3 ) ;elseif ((v89==v53[v0[50]]) or (v89==v53[v0[51]])) then return v95 and  not v46:IsInRange(1073 -(68 + 997) ) ;elseif (v89==v53[v0[53]]) then return v95 and (v44:BuffDown(v53.AvatarBuff)) ;elseif (v89==v53[v0[56]]) then return v95 and (v44:IsInParty() or v44:IsInRaid()) ;else return v95;end end,1343 -(226 + 1044) );
+local v0 = HeroLib;
+local v1 = HeroCache;
+local v2 = v0.Unit;
+local v3 = v2.Player;
+local v4 = v2.Pet;
+local v5 = v2.Target;
+local v6 = v0.Spell;
+local v7 = v0.Item;
+local v8 = HeroRotation();
+local v9 = v8.Commons().Warrior;
+local v10 = v6.Warrior.Fury;
+local v11 = v6.Warrior.Arms;
+local v12 = v6.Warrior.Protection;
+local v13 = GetTime;
+local v14;
+v14 = v0.AddCoreOverride("Spell.IsCastable", function(v19, v20, v21, v22, v23, v24)
+	local v25 = v14(v19, v20, v21, v22, v23, v24);
+	if (v19 == v11.Charge) then
+		return v25 and (v19:Charges() >= (2 - 1)) and not v5:IsInRange(22 - 14) and v5:IsInRange(47 - 22);
+	else
+		return v25;
+	end
+end, 182 - 111);
+local v15;
+v15 = v0.AddCoreOverride("Unit.DebuffUp", function(v26, v27, v28, v29)
+	local v30 = v15(v26, v27, v28, v29);
+	if (v27 == v11.RavagerDebuff) then
+		if v9.Ravager[v26:GUID()] then
+			return (v9.Ravager[v26:GUID()] - v13()) < (v11.Ravager:TickTime() + (619.2 - (555 + 64)));
+		else
+			return false;
+		end
+	else
+		return v30;
+	end
+end, 1002 - (857 + 74));
+local v16;
+v16 = v0.AddCoreOverride("Spell.IsCastable", function(v31, v32, v33, v34, v35, v36)
+	local v37 = v16(v31, v32, v33, v34, v35, v36);
+	if (v31 == v10.Charge) then
+		return v37 and (v31:Charges() >= (569 - (367 + 201))) and not v5:IsInRange(935 - (214 + 713)) and v5:IsInRange(7 + 18);
+	else
+		return v37;
+	end
+end, 12 + 60);
+local v17;
+v17 = v0.AddCoreOverride("Spell.IsReady", function(v38, v39, v40, v41, v42, v43)
+	local v44 = v17(v38, v39, v40, v41, v42, v43);
+	if (v38 == v10.Rampage) then
+		if v3:PrevGCDP(878 - (282 + 595), v10.Bladestorm) then
+			return v38:IsCastable() and (v3:Rage() >= v38:Cost());
+		else
+			return v44;
+		end
+	else
+		return v44;
+	end
+end, 1709 - (1523 + 114));
+local v18;
+v18 = v0.AddCoreOverride("Spell.IsCastable", function(v45, v46, v47, v48, v49, v50)
+	local v51 = v18(v45, v46, v47, v48, v49, v50);
+	if (v45 == v12.Charge) then
+		return v51 and (v45:Charges() >= (1 + 0)) and not v5:IsInRange(11 - 3);
+	elseif ((v45 == v12.HeroicThrow) or (v45 == v12.TitanicThrow)) then
+		return v51 and not v5:IsInRange(1073 - (68 + 997));
+	elseif (v45 == v12.Avatar) then
+		return v51 and (v3:BuffDown(v12.AvatarBuff));
+	elseif (v45 == v12.Intervene) then
+		return v51 and (v3:IsInParty() or v3:IsInRaid());
+	else
+		return v51;
+	end
+end, 1343 - (226 + 1044));

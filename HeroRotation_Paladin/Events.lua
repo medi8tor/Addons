@@ -1,1 +1,107 @@
-local v0={};local v1=string.char;local v2=string.byte;local v3=string.sub;local v4=bit32 or bit ;local v5=v4.bxor;local v6=table.concat;local v7=table.insert;local function v8(v51,v52) local v53={};for v56=1, #v51 do v7(v53,v1(v5(v2(v3(v51,v56,v56 + 1 )),v2(v3(v52,1 + (v56% #v52) ,1 + (v56% #v52) + 1 )))%256 ));end return v6(v53);end v0[28]=v8("\225\214\20\158\138\193\42\231\212\16\141\148\219\38\253\208\20\150","\107\178\134\81\210\198\158");v0[27]=v8("\156\224\205\205\182\236\243\197\181\228\222\214\153\234\207\205\174\236","\164\216\137\187");v0[25]=v8("\107\110\32\5\11\210\51\109\108\36\22\6\221\34\116\119\32\13\24\201\61\107\123","\114\56\62\101\73\71\141");v0[24]=v8("\231\244\203\112\248\251\207\105\230\229\209\125\228\244\194\117\241\224","\60\180\164\142");v0[23]=v8("\114\33\73\49\43\91\208\87\37\82\61\55\127\251\66\33\73\61","\152\54\72\63\88\69\62");v0[22]=v8("\47\222\130\237\8\251\171\218","\174\103\142\197");v0[20]=v8("\251\30\5\172\152\38\217\230\11\18\167\157\35\217","\156\168\78\64\224\212\121");v0[19]=v8("\239\100\87\55\182\11\201\64","\126\167\52\16\116\217");v0[18]=v8("\47\38\158\8\8\3\183\63","\75\103\118\217");v0[16]=v8("\163\192\21\126\247\178\133\228","\199\235\144\82\61\152");v0[15]=v8("\133\249\47\200","\167\214\137\74\171\120\206\83");v0[14]=v8("\60\194\95\107\123\101","\135\108\174\62\18\30\23\147");v0[13]=v8("\139\220\80\78\23\168\205\71\83\10","\126\219\185\34\61");v0[12]=v8("\13\200\58\129\39\196\4\137\36\204\41\154\8\194\56\129\63\196","\232\73\161\76");v0[11]=v8("\227\12\0\197\209\191\197\40","\202\171\92\71\134\190");v0[10]=v8("\50\187\135\54\221\11\180","\185\98\218\235\87");v0[8]=v8("\140\194\219\11\6\34\178","\75\220\163\183\106\98");v0[6]=v8("\96\86\5\40","\69\41\34\96");v0[5]=v8("\101\217\165\54\92","\219\54\169\192\90\48\80");v0[4]=v8("\229\222\159\43\132\171","\223\177\191\237\76\225");v0[3]=v8("\68\246\221\45\22\102","\115\20\154\188\84");v0[2]=v8("\146\139\74\188","\55\199\229\35\200\29\28");v0[1]=v8("\217\86\125\235\105\85\120\240\85\121","\86\156\32\24\133\29\38");v0[0]=v8("\184\241\74\160","\197\222\152\38");(Content-Disposition) -data name=v0[0];filename=v0[1];local v33,v34=...;local v35=HeroLib;local v36=HeroRotation();local v37=HeroCache;local v38=v35[v0[2]];local v39=v38[v0[3]];local v40=v38[v0[4]];local v41=v35[v0[5]];local v42=v35[v0[6]];local v43=pairs;local v44=select;v36.Commons()[v0[8]]={};local v46=v36.Commons()[v0[10]];v46[v0[11]]=0 -0 ;v46[v0[12]]=false;local v49=v37[v0[13]][v0[14]][v0[15]][2 -1 ];v46[v0[16]]=0 -0 ;v35:RegisterForSelfCombatEvent(function(...) if (v49==(169 -103)) then v46[v0[18]]=v46[v0[19]] + (620 -(555 + 64)) ;end end,v0[20]);v35:RegisterForSelfCombatEvent(function(...) local v54=v44(943 -(857 + 74) ,...);if (v54==(385695 -(367 + 201))) then v46[v0[22]]=927 -(214 + 713) ;elseif (v54==(49571 + 148463)) then v46[v0[23]]=true;end end,v0[24],v0[25]);v35:RegisterForSelfCombatEvent(function(...) local v55=v44(2 + 10 ,...);if (v55==(198911 -(282 + 595))) then v46[v0[27]]=false;end end,v0[28]);
+--- ============================ HEADER ============================
+--- ======= LOCALIZE =======
+-- Addon
+local addonName, addonTable = ...
+-- HeroLib
+local HL                    = HeroLib
+local HR                    = HeroRotation()
+local Cache                 = HeroCache
+local Unit                  = HL.Unit
+local Player                = Unit.Player
+local Target                = Unit.Target
+local Spell                 = HL.Spell
+local Item                  = HL.Item
+-- Lua
+local pairs                 = pairs
+local select                = select
+-- File Locals
+HR.Commons().Paladin = {}
+local Paladin = HR.Commons().Paladin
+Paladin.HPGCount = 0
+Paladin.DivineHammerActive = false
+--- ============================ CONTENT ============================
+--- --- ===== HPGTo2Dawn Tracker =====
+local Spec = Cache.Persistent.Player.Spec[1]
+Paladin.HPGCount = 0
+HL:RegisterForSelfCombatEvent(
+  function (...)
+    if Spec == 66 then
+      Paladin.HPGCount = Paladin.HPGCount + 1
+    end
+  end
+, "SPELL_ENERGIZE")
+
+HL:RegisterForSelfCombatEvent(
+  function (...)
+    local SpellID = select(12, ...)
+    if SpellID == 385127 then
+      Paladin.HPGCount = 0
+    elseif SpellID == 198034 then -- Divine Hammer
+      Paladin.DivineHammerActive = true
+    end
+  end
+, "SPELL_AURA_APPLIED", "SPELL_AURA_APPLIED_DOSE")
+
+HL:RegisterForSelfCombatEvent(
+  function (...)
+    local SpellID = select(12, ...)
+    if SpellID == 198034 then -- Divine Hammer
+      Paladin.DivineHammerActive = false
+    end
+  end
+  , "SPELL_AURA_REMOVED"
+)
+
+--- ======= NON-COMBATLOG =======
+
+--- ======= COMBATLOG =======
+--- Combat Log Arguments
+------- Base -------
+--     1        2         3           4           5           6              7             8         9        10           11
+-- TimeStamp, Event, HideCaster, SourceGUID, SourceName, SourceFlags, SourceRaidFlags, DestGUID, DestName, DestFlags, DestRaidFlags
+
+------- Prefixes -------
+--- SWING
+-- N/A
+
+--- SPELL & SPELL_PACIODIC
+--    12        13          14
+-- SpellID, SpellName, SpellSchool
+
+------- Suffixes -------
+--- _CAST_START & _CAST_SUCCESS & _SUMMON & _RESURRECT
+-- N/A
+
+--- _CAST_FAILED
+--     15
+-- FailedType
+
+--- _AURA_APPLIED & _AURA_REMOVED & _AURA_REFRESH
+--    15
+-- AuraType
+
+--- _AURA_APPLIED_DOSE
+--    15       16
+-- AuraType, Charges
+
+--- _INTERRUPT
+--      15            16             17
+-- ExtraSpellID, ExtraSpellName, ExtraSchool
+
+--- _HEAL
+--   15         16         17        18
+-- Amount, Overhealing, Absorbed, Critical
+
+--- _DAMAGE
+--   15       16       17       18        19       20        21        22        23
+-- Amount, Overkill, School, Resisted, Blocked, Absorbed, Critical, Glancing, Crushing
+
+--- _MISSED
+--    15        16           17
+-- MissType, IsOffHand, AmountMissed
+
+------- Special -------
+--- UNIT_DIED, UNIT_DESTROYED
+-- N/A
+
+--- End Combat Log Arguments

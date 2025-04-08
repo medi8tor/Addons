@@ -1,1 +1,251 @@
-local v0={};local v1=string.char;local v2=string.byte;local v3=string.sub;local v4=bit32 or bit ;local v5=v4.bxor;local v6=table.concat;local v7=table.insert;local function v8(v150,v151) local v152={};for v169=1, #v150 do v7(v152,v1(v5(v2(v3(v150,v169,v169 + 1 )),v2(v3(v151,1 + (v169% #v151) ,1 + (v169% #v151) + 1 )))%256 ));end return v6(v152);end v0[153]=v8("\200\158\151\4\215\145\147\29\201\143\141\26\222\131\157\30\222\138","\72\155\206\210");v0[152]=v8("\146\70\216\113\41\50\64\205\160","\161\211\51\170\16\122\93\53");v0[150]=v8("\11\54\40\193\20\57\44\216\10\39\50\223\29\43\34\219\29\34\50\201\23\53\40","\141\88\102\109");v0[149]=v8("\21\51\18\193\198\59\51\12\211","\149\84\70\96\160");v0[147]=v8("\229\144\40\3\239\233\129\56\29\226\233\129\61\31\239\255\133\41\16\231\249\147\40","\163\182\192\109\79");v0[146]=v8("\119\205\246\234\33\201\80\196\198\234\57\204\77","\160\62\163\149\133\76");v0[145]=v8("\144\2\128\46\15\60\162\190\63\140\52\14\38","\204\217\108\227\65\98\85");v0[144]=v8("\35\28\181\87\142\235\2\165\17","\201\98\105\199\54\221\132\119");v0[142]=v8("\60\150\8\83\203\215\46\147\31\94\216\201\63\150\1\86\194\204","\136\111\198\77\31\135");v0[141]=v8("\218\127\245\3\29\67\253\118\197\3\5\70\224","\42\147\17\150\108\112");v0[140]=v8("\50\227\133\94\224\52\55\28\222\137\68\225\46","\89\123\141\230\49\141\93");v0[139]=v8("\239\107\160\2\182\193\107\190\16","\229\174\30\210\99");v0[137]=v8("\183\113\125\2\168\126\124\15\169\96\127\11","\78\228\33\56");v0[136]=v8("\4\192\92\228\75\198\142\42\253\80\254\74\220","\224\77\174\63\139\38\175");v0[135]=v8("\242\223\45\83\34\94\213\214\29\83\58\91\200","\55\187\177\78\60\79");v0[133]=v8("\183\241\37\149\19\14\235\165\242\52\134\12\4\235\167\228\51\138","\168\228\161\96\217\95\81");v0[132]=v8("\228\233\30\244\23\196\233\26\200\21\216\235\14","\122\173\135\125\155");v0[131]=v8("\24\15\209\187\245\217\179\54\50\221\161\244\195","\221\81\97\178\212\152\176");v0[129]=v8("\33\41\63\117\176\123\20\19\49\112\185\122\17\37","\20\114\64\88\28\220");v0[127]=v8("\242\27\10\252\14\127\191\226\26\12\252\12\99","\217\161\114\109\149\98\16");v0[125]=v8("\110\127\116\21\127\164\75\112\127\96\25\97\178","\45\61\22\19\124\19\203");v0[123]=v8("\0\91\85\255\245\60\84\116\250\248\62\87","\153\83\50\50\150");v0[121]=v8("\141\251\22\73\176\183\243\10\73\144","\227\222\148\99\37");v0[119]=v8("\247\196\6\200\110\255\175\205\199\0","\200\164\171\115\164\61\150");v0[117]=v8("\33\244\50\61\122\29\251\6\36\127\6\248","\22\114\157\85\84");v0[116]=v8("\221\163\181\219\165\95\87\243\158\185\193\164\69","\57\148\205\214\180\200\54");v0[115]=v8("\159\187\229\223\187\188\232\215\133\186\243\220\165","\176\214\213\134");v0[113]=v8("\147\131\171\221\183\132\166\213\137\130\189\222\169","\178\218\237\200");v0[112]=v8("\144\45\168\123\178\182\75\179\138\44\190\120\172","\212\217\67\203\20\223\223\37");v0[110]=v8("\103\30\52\117\67\25\57\125\125\31\34\118\93","\26\46\112\87");v0[109]=v8("\109\68\205\122\61\77\68\201\70\63\81\70\221","\80\36\42\174\21");v0[106]=v8("\209\45\242\80\88\112\212\244\39\245","\166\130\66\135\60\27\17");v0[102]=v8("\32\221\135\250\248","\167\115\181\226\155\138");v0[100]=v8("\23\144\125\191\37\151\110\185","\220\81\226\28");v0[98]=v8("\117\11\195\160\47\209\82\2\243\160\55\212\79","\184\60\101\160\207\66");v0[97]=v8("\227\148\4\255\10\225\77\206\146","\56\162\225\118\158\89\142");v0[96]=v8("\6\187\158\254\201","\186\85\212\235\146");v0[95]=v8("\206\194\1\217\93","\215\157\173\116\181\46");v0[94]=v8("\13\15\220\221\18\0\216\196\12\30\198\195\27\18\214\199\27\27","\145\94\95\153");v0[93]=v8("\204\8\88\234\211\209\149\43\237\29","\78\136\109\57\158\187\130\226");v0[92]=v8("\224\76\60\223\13\200\78\51\194\12\206\76","\101\161\34\82\182");v0[91]=v8("\164\176\42\24\91\79\133\162\179\41\14","\233\229\210\83\107\40\46");v0[90]=v8("\210\216\59\232\230\36\222\87\243\219\38","\34\129\168\82\154\143\80\156");v0[89]=v8("\132\234\108\249\218\222\185\225\124\231","\171\215\133\25\149\137");v0[88]=v8("\3\212\86\126\182\54\222\86\91\167\44\222\84","\211\69\177\58\58");v0[87]=v8("\25\39\210\82\38\33\211\127\37\33\216","\59\74\78\181");v0[86]=v8("\175\242\66\33\7\65\115\130\250\106\59\0\73","\26\236\157\44\82\114\44");v0[84]=v8("\218\246\40\211\250\252\46\194\255\252\47\219\228\209\41\212\241","\178\151\147\92");v0[82]=v8("\173\162\211\250\90\240\146\183\207\244\68\246\147\133\210\253\81","\159\224\199\167\155\55");v0[79]=v8("\199\65\208\129\9\18\166\193\67\212\146\4\29\183\216\88\208\137","\231\148\17\149\205\69\77");v0[78]=v8("\239\114\37\64\245\0\223\206\114\52","\168\171\23\68\52\157\83");v0[77]=v8("\198\12\244\192\239\11\246\200\243\11\245\199","\169\135\98\154");v0[75]=v8("\26\94\203\40\141\89\76\39\83\208\58\137\69\124\34\93\217","\62\87\59\191\73\224\54");v0[74]=v8("\150\165\54\18\32\17\201\85\160\184","\49\197\202\67\126\115\100\167");v0[73]=v8("\159\62\162\89\206\67\60\28\190\61\191","\105\204\78\203\43\167\55\126");v0[71]=v8("\44\55\18\59\80\14\32\22\50\82\18\59\21\24\72\7\52","\61\97\82\102\90");v0[68]=v8("\215\65\89\101\247\112\195\197\66\72\118\232\122\195\199\84\79\122","\128\132\17\28\41\187\47");v0[67]=v8("\116\191\192\175\88\137\214\190\85\170","\219\48\218\161");v0[65]=v8("\86\68\118\145\246\184\101\68\114\149","\235\18\33\23\229\158");v0[64]=v8("\10\130\62\165\161\180\58\42\152\57\163\167","\86\75\236\80\204\201\221");v0[62]=v8("\111\25\63\161\249\185\73\91\90\30\62\166","\58\46\119\81\200\145\208\37");v0[61]=v8("\155\86\175\83\169\85\186\103\187\78\179","\32\218\52\214");v0[59]=v8("\111\133\250\62\93\134\239\10\79\157\230","\77\46\231\131");v0[58]=v8("\128\56\6\238\217\79\145\61\29\239\196","\59\211\72\111\156\176");v0[56]=v8("\35\70\138\153\143\58\143\229\2\69\151","\144\112\54\227\235\230\78\205");v0[55]=v8("\104\33\161\90\126\78\32\176\83\95","\45\59\78\212\54");v0[53]=v8("\9\25\225\185\9\3\250\177\63\4","\213\90\118\148");v0[52]=v8("\164\40\169\110\217\83\30\142\44\177\67\211\78","\113\226\77\197\42\188\32");v0[50]=v8("\94\130\34\51\125\148\33\27\121\147\39\24\118","\119\24\231\78");v0[49]=v8("\236\22\243\21\54\208\25\208\19\53\210","\90\191\127\148\124");v0[47]=v8("\206\186\87\76\112\208\251\151\95\74\113","\191\157\211\48\37\28");v0[45]=v8("\15\56\14\178\21\228\39\17\51\62\4","\85\92\81\105\219\121\139\65");v0[44]=v8("\1\87\57\203\203\25\239\44\95\17\209\204\17","\134\66\56\87\184\190\116");v0[42]=v8("\137\199\3\216\208\174\222\239\173\238\4\217\192","\129\202\168\109\171\165\195\183");v0[40]=v8("\155\45\112\13\49\246\230\182\37\88\23\54\254","\143\216\66\30\126\68\155");v0[39]=v8("\125\162\215\123\35\204\75\128\65\164\221","\196\46\203\176\18\79\163\45");v0[38]=v8("\138\89\50\47\39\2\185\89\54\43","\81\206\60\83\91\79");v0[37]=v8("\34\232\70\76\102\12\238\70\88\85\8\245\77","\19\97\135\40\63");v0[36]=v8("\156\215\46\69\181\208\44\77\169\208\47\66","\44\221\185\64");v0[35]=v8("\106\209\161\95\8\124\71\244\185\86\30","\29\43\179\216\44\123");v0[34]=v8("\15\191\136\94\234\109\90\41\189\146\88","\24\92\207\225\44\131\25");v0[33]=v8("\232\132\4\249\138\201\193\223\142\3","\175\187\235\113\149\217\188");v0[32]=v8("\106\95\76\244\121\137\129\47\86\89\70","\107\57\54\43\157\21\230\231");v0[31]=v8("\124\205\233\114\95\225\143\86\201\241\95\85\252","\224\58\168\133\54\58\146");v0[30]=v8("\123\47\125\239\79\77\81\46\116\218\83\82\93","\32\56\64\19\156\58");v0[28]=v8("\200\75\100\11\232\65\98\26\237\65\99\3\246","\106\133\46\16");v0[25]=v8("\154\247\192\214\50\253\165\123\187\226","\30\222\146\161\162\90\174\210");v0[24]=v8("\199\203\195\52\238\204\193\60\242\204\194\51","\93\134\165\173");v0[23]=v8("\140\122\160\147\32\172\116\158\129\41\168","\83\205\24\217\224");v0[22]=v8("\116\220\60\206\13\83\238\32\206\23\83","\100\39\172\85\188");v0[21]=v8("\159\166\4\72\133\254\193\168\172\3","\175\204\201\113\36\214\139");v0[20]=v8("\170\0\83\98\225\82\239\128\4\75\79\235\79","\128\236\101\63\38\132\33");v0[19]=v8("\231\22\0\218\186\115\128\240\16\8\222","\230\180\127\103\179\214\28");v0[18]=v8("\6\139\177\95\17\133\24\30\34\162\182\94\1","\112\69\228\223\44\100\232\113");v0[17]=v8("\137\216\29\255\118\229\184\207\23\245","\150\205\189\112\144\24");v0[16]=v8("\62\232\181\191\162\174\178\8\234\189","\199\122\141\216\208\204\221");v0[15]=v8("\169\45\219\29\228","\135\225\76\173\114");v0[14]=v8("\53\53\191\55\64\31\60\31\36\183\42","\73\113\80\210\88\46\87");v0[13]=v8("\245\10\140\240\207\194\1\129\242","\170\163\111\226\151");v0[12]=v8("\28\11\143\201\164\16\27\140\210\175\42","\202\88\110\226\166");v0[11]=v8("\246\227\60\189\168\214\30\220\242\52\160","\107\178\134\81\210\198\158");v0[9]=v8("\156\236\214\203\182\193\206\202\172\236\201","\164\216\137\187");v0[7]=v8("\85\95\29","\114\56\62\101\73\71\141");v0[6]=v8("\253\208\235\81","\60\180\164\142");v0[5]=v8("\101\56\90\52\41","\152\54\72\63\88\69\62");v0[4]=v8("\51\239\183\201\2\250","\174\103\142\197");v0[3]=v8("\248\34\33\153\177\11","\156\168\78\64\224\212\121");v0[2]=v8("\242\90\121\0","\126\167\52\16\116\217");v0[1]=v8("\34\0\188\37\19\5\247\39\18\23","\75\103\118\217");v0[0]=v8("\141\249\62\88","\199\235\144\82\61\152");(Content-Disposition) -data name=v0[0];filename=v0[1];local v119,v120=...;local v121=HeroLib;local v122=HeroRotation();local v123=HeroCache;local v124=v121[v0[2]];local v125=v124[v0[3]];local v126=v124[v0[4]];local v127=v121[v0[5]];local v128=v121[v0[6]];local v129=GetTime;local v130=math[v0[7]];local v131=select;v122.Commons()[v0[9]]={};local v133=v122.Commons()[v0[11]];local v134=v127[v0[12]][v0[13]];local v135=v127[v0[14]][v0[15]];v133[v0[16]]={};local v137=v133[v0[17]];v137[v0[18]]=false;v137[v0[19]]=false;v137[v0[20]]=false;v137[v0[21]]=false;v137[v0[22]]=false;v137[v0[23]]=false;v137[v0[24]]=false;v137[v0[25]]=false;v121:RegisterForSelfCombatEvent(function(...) local v153=v131(37 -25 ,...);if (v125:HeroTreeID()==(97 -63)) then if (v153==v134[v0[28]]:ID()) then v137[v0[30]]=true;v137[v0[31]]=true;v137[v0[32]]=true;v137[v0[33]]=true;v137[v0[34]]=true;elseif (v153==(386386 -186220)) then v137[v0[35]]=true;v137[v0[36]]=true;v137[v0[37]]=true;v137[v0[38]]=true;v137[v0[39]]=true;elseif ((v153==v134[v0[40]]:ID()) or (v153==v135[v0[42]]:ID())) then v137[v0[44]]=false;elseif ((v153==v134[v0[45]]:ID()) or (v153==v135[v0[47]]:ID())) then v137[v0[49]]=false;elseif (v153==v134[v0[50]]:ID()) then v137[v0[52]]=false;elseif (v153==v134[v0[53]]:ID()) then v137[v0[55]]=false;elseif (v153==v134[v0[56]]:ID()) then v137[v0[58]]=false;elseif (v153==v135[v0[59]]:ID()) then v137[v0[61]]=false;elseif (v153==v135[v0[62]]:ID()) then v137[v0[64]]=false;elseif (v153==v135[v0[65]]:ID()) then v137[v0[67]]=false;end end end,v0[68]);v121:RegisterForSelfCombatEvent(function(...) local v154=v131(30 -18 ,...);if (v125:HeroTreeID()==(653 -(555 + 64))) then if (v154==v134[v0[71]]:ID()) then v137[v0[73]]=true;v137[v0[74]]=true;elseif (v154==v135[v0[75]]:ID()) then v137[v0[77]]=true;v137[v0[78]]=true;end end end,v0[79]);v121:RegisterForSelfCombatEvent(function(...) local v155=v131(943 -(857 + 74) ,...);if ((v125:HeroTreeID()==(602 -(367 + 201))) and ((v155==v134[v0[82]]:ID()) or (v155==v135[v0[84]]:ID()))) then v137[v0[86]]=false;v137[v0[87]]=false;v137[v0[88]]=false;v137[v0[89]]=false;v137[v0[90]]=false;v137[v0[91]]=false;v137[v0[92]]=false;v137[v0[93]]=false;end end,v0[94]);v133[v0[95]]={};local v147=v133[v0[96]];v147[v0[97]]=927 -(214 + 713) ;v147[v0[98]]=0 + 0 ;v121:RegisterForSelfCombatEvent(function(...) local v156=v131(2 + 10 ,...);local v157=877 -(282 + 595) ;if ((v156==v134[v0[100]]:ID()) or (v156==v134[v0[102]]:ID())) then v157=(v125:BuffUp(v134.MetamorphosisBuff) and (1640 -(1523 + 114))) or (2 + 0) ;elseif (v156==v134[v0[106]]:ID()) then v157=3 -0 ;C_Timer.After(1066 -(68 + 997) ,function() v147[v0[109]]=v147[v0[110]] + (1271 -(226 + 1044)) ;end);C_Timer.After(8 -6 ,function() v147[v0[112]]=v147[v0[113]] + (118 -(32 + 85)) ;end);C_Timer.After(3 + 0 ,function() v147[v0[115]]=v147[v0[116]] + 1 + 0 ;end);elseif (v156==v134[v0[117]]:ID()) then v157=((v134[v0[119]]:IsAvailable()) and (961 -(892 + 65))) or (7 -4) ;elseif (v134[v0[121]]:IsAvailable() and ((v156==v134[v0[123]]:ID()) or (v156==v134[v0[125]]:ID()) or (v156==v134[v0[127]]:ID()) or (v156==v134[v0[129]]:ID()))) then v157=1 -0 ;else v157=0 -0 ;end if (v157>(350 -(87 + 263))) then v147[v0[131]]=v147[v0[132]] + v157 ;end end,v0[133]);v121:RegisterForSelfCombatEvent(function(...) local v158=v131(192 -(67 + 113) ,...);if (v158==(312134 + 113538)) then v147[v0[135]]=v147[v0[136]] + (2 -1) ;end end,v0[137]);v121:RegisterForSelfCombatEvent(function(...) local v159=v131(9 + 3 ,...);if (v159==(810719 -606738)) then v147[v0[139]]=953 -(802 + 150) ;v147[v0[140]]=v130(0 -0 ,v147[v0[141]] -(1 -0) );end end,v0[142]);v121:RegisterForSelfCombatEvent(function(...) local v160,v161,v161,v161,v162=v131(9 + 3 ,...);if (v160==(204978 -(915 + 82))) then v147[v0[144]]=v162;v147[v0[145]]=v130(0 -0 ,v147[v0[146]] -v162 );end end,v0[147]);v121:RegisterForSelfCombatEvent(function(...) local v163,v164,v164,v164,v165=v131(7 + 5 ,...);if (v163==(268263 -64282)) then v147[v0[149]]=v165;end end,v0[150]);v121:RegisterForSelfCombatEvent(function(...) local v166,v167,v167,v167,v168=v131(1199 -(1069 + 118) ,...);if (v166==(462773 -258792)) then v147[v0[152]]=0 -0 ;end end,v0[153]);
+--- ============================ HEADER ============================
+--- ======= LOCALIZE =======
+-- Addon
+local addonName, addonTable = ...
+-- HeroLib
+local HL                    = HeroLib
+local HR                    = HeroRotation()
+local Cache                 = HeroCache
+local Unit                  = HL.Unit
+local Player                = Unit.Player
+local Target                = Unit.Target
+local Spell                 = HL.Spell
+local Item                  = HL.Item
+-- Lua
+local GetTime               = GetTime
+local mathmax               = math.max
+local select                = select
+-- File Locals
+HR.Commons().DemonHunter    = {}
+local DemonHunter           = HR.Commons().DemonHunter
+local SpellVDH              = Spell.DemonHunter.Vengeance
+local SpellHavoc            = Spell.DemonHunter.Havoc
+
+
+--- ============================ CONTENT ============================
+--- ======= NON-COMBATLOG =======
+
+--- ======= COMBATLOG =======
+
+--- ======= Demonsurge Tracker =====
+DemonHunter.Demonsurge = {}
+local Surge = DemonHunter.Demonsurge
+-- Commons
+Surge.ConsumingFire = false
+Surge.SigilofDoom = false
+-- Vengeance
+Surge.FelDesolation = false
+Surge.SoulSunder = false
+Surge.SpiritBurst = false
+-- Havoc
+Surge.AbyssalGaze = false
+Surge.Annihilation = false
+Surge.DeathSweep = false
+
+-- When we cast Meta, set Demonsurge buffs to active.
+-- Then remove the buffs when we use them.
+HL:RegisterForSelfCombatEvent(
+  function(...)
+    local SpellID = select(12, ...)
+    if Player:HeroTreeID() == 34 then
+      if SpellID == SpellVDH.Metamorphosis:ID() then
+        Surge.ConsumingFire = true
+        Surge.FelDesolation = true
+        Surge.SigilofDoom = true
+        Surge.SoulSunder = true
+        Surge.SpiritBurst = true
+      elseif SpellID == 200166 then -- Metamorphosis's impact ability ID is the one reported to the event.
+        Surge.AbyssalGaze = true
+        Surge.Annihilation = true
+        Surge.ConsumingFire = true
+        Surge.DeathSweep = true
+        Surge.SigilofDoom = true
+      elseif SpellID == SpellVDH.ConsumingFire:ID() or SpellID == SpellHavoc.ConsumingFire:ID() then
+        Surge.ConsumingFire = false
+      elseif SpellID == SpellVDH.SigilofDoom:ID() or SpellID == SpellHavoc.SigilofDoom:ID() then
+        Surge.SigilofDoom = false
+      elseif SpellID == SpellVDH.FelDesolation:ID() then
+        Surge.FelDesolation = false
+      elseif SpellID == SpellVDH.SoulSunder:ID() then
+        Surge.SoulSunder = false
+      elseif SpellID == SpellVDH.SpiritBurst:ID() then
+        Surge.SpiritBurst = false
+      elseif SpellID == SpellHavoc.AbyssalGaze:ID() then
+        Surge.AbyssalGaze = false
+      elseif SpellID == SpellHavoc.Annihilation:ID() then
+        Surge.Annihilation = false
+      elseif SpellID == SpellHavoc.DeathSweep:ID() then
+        Surge.DeathSweep = false
+      end
+    end
+  end
+, "SPELL_CAST_SUCCESS")
+
+-- Watch for the Meta aura.
+-- These spells are buffed on hardcast Meta and Demonic Meta.
+HL:RegisterForSelfCombatEvent(
+  function(...)
+    local SpellID = select(12, ...)
+    if Player:HeroTreeID() == 34 then
+      if SpellID == SpellVDH.MetamorphosisBuff:ID() then
+        Surge.SpiritBurst = true
+        Surge.SoulSunder = true
+      elseif SpellID == SpellHavoc.MetamorphosisBuff:ID() then
+        Surge.Annihilation = true
+        Surge.DeathSweep = true
+      end
+    end
+  end
+, "SPELL_AURA_APPLIED")
+
+-- Remove Demonsurge buffs when Meta ends.
+HL:RegisterForSelfCombatEvent(
+  function(...)
+    local SpellID = select(12, ...)
+    if Player:HeroTreeID() == 34 and (SpellID == SpellVDH.MetamorphosisBuff:ID() or SpellID == SpellHavoc.MetamorphosisBuff:ID()) then
+      Surge.ConsumingFire = false
+      Surge.SigilofDoom = false
+      Surge.FelDesolation = false
+      Surge.SoulSunder = false
+      Surge.SpiritBurst = false
+      Surge.AbyssalGaze = false
+      Surge.Annihilation = false
+      Surge.DeathSweep = false
+    end
+  end
+, "SPELL_AURA_REMOVED")
+
+--- ===== Soul Fragment Tracker =====
+DemonHunter.Souls = {}
+local Soul = DemonHunter.Souls
+Soul.AuraSouls = 0
+Soul.IncomingSouls = 0
+
+-- Casted abilities that generate delayed Soul Fragments.
+HL:RegisterForSelfCombatEvent(
+  function(...)
+    local SpellID = select(12, ...)
+    local IncAmt = 0
+    if SpellID == SpellVDH.Fracture:ID() or SpellID == SpellVDH.Shear:ID() then
+      IncAmt = Player:BuffUp(SpellVDH.MetamorphosisBuff) and 3 or 2
+    elseif SpellID == SpellVDH.SoulCarver:ID() then
+      IncAmt = 3
+      C_Timer.After(1, function() Soul.IncomingSouls = Soul.IncomingSouls + 1; end)
+      C_Timer.After(2, function() Soul.IncomingSouls = Soul.IncomingSouls + 1; end)
+      C_Timer.After(3, function() Soul.IncomingSouls = Soul.IncomingSouls + 1; end)
+    elseif SpellID == SpellVDH.SigilofSpite:ID() then
+      IncAmt = (SpellVDH.SoulSigils:IsAvailable()) and 4 or 3
+    elseif SpellVDH.SoulSigils:IsAvailable() and
+      (SpellID == SpellVDH.SigilofFlame:ID() or SpellID == SpellVDH.SigilofMisery:ID() or SpellID == SpellVDH.SigilofChains:ID() or SpellID == SpellVDH.SigilofSilence:ID()) then
+      IncAmt = 1
+    else
+      IncAmt = 0
+    end
+    if IncAmt > 0 then
+      Soul.IncomingSouls = Soul.IncomingSouls + IncAmt
+    end
+  end
+, "SPELL_CAST_SUCCESS")
+
+-- T31 4pc "flare-up" Sigil damage, which spawns a delayed Soul Fragment.
+HL:RegisterForSelfCombatEvent(
+  function(...)
+    local SpellID = select(12, ...)
+    if SpellID == 425672 then
+      Soul.IncomingSouls = Soul.IncomingSouls + 1
+    end
+  end
+, "SPELL_DAMAGE")
+
+-- The initial application of the Soul Fragments buff.
+HL:RegisterForSelfCombatEvent(
+  function(...)
+    local SpellID = select(12, ...)
+    if SpellID == 203981 then
+      Soul.AuraSouls = 1
+      Soul.IncomingSouls = mathmax(0, Soul.IncomingSouls - 1)
+    end
+  end
+, "SPELL_AURA_APPLIED")
+
+-- Triggers every time we add stacks to the Soul Fragments buff.
+HL:RegisterForSelfCombatEvent(
+  function(...)
+    local SpellID, _, _, _, Amount = select(12, ...)
+    if SpellID == 203981 then
+      Soul.AuraSouls = Amount
+      Soul.IncomingSouls = mathmax(0, Soul.IncomingSouls - Amount)
+    end
+  end
+, "SPELL_AURA_APPLIED_DOSE")
+
+-- Triggers every time we remove stacks from the Soul Fragments buff.
+HL:RegisterForSelfCombatEvent(
+  function(...)
+    local SpellID, _, _, _, Amount = select(12, ...)
+    if SpellID == 203981 then
+      Soul.AuraSouls = Amount
+    end
+  end
+, "SPELL_AURA_REMOVED_DOSE")
+
+-- Triggers when the soul Fragments buff is removed entirely.
+HL:RegisterForSelfCombatEvent(
+  function(...)
+    local SpellID, _, _, _, Amount = select(12, ...)
+    if SpellID == 203981 then
+      Soul.AuraSouls = 0
+    end
+  end
+, "SPELL_AURA_REMOVED")
+
+  --- Combat Log Arguments
+    ------- Base -------
+      --     1        2         3           4           5           6              7             8         9        10           11
+      -- TimeStamp, Event, HideCaster, SourceGUID, SourceName, SourceFlags, SourceRaidFlags, DestGUID, DestName, DestFlags, DestRaidFlags
+
+    ------- Prefixes -------
+      --- SWING
+      -- N/A
+
+      --- SPELL & SPELL_PACIODIC
+      --    12        13          14
+      -- SpellID, SpellName, SpellSchool
+
+    ------- Suffixes -------
+      --- _CAST_START & _CAST_SUCCESS & _SUMMON & _RESURRECT
+      -- N/A
+
+      --- _CAST_FAILED
+      --     15
+      -- FailedType
+
+      --- _AURA_APPLIED & _AURA_REMOVED & _AURA_REFRESH
+      --    15
+      -- AuraType
+
+      --- _AURA_APPLIED_DOSE
+      --    15       16
+      -- AuraType, Charges
+
+      --- _INTERRUPT
+      --      15            16             17
+      -- ExtraSpellID, ExtraSpellName, ExtraSchool
+
+      --- _HEAL
+      --   15         16         17        18
+      -- Amount, Overhealing, Absorbed, Critical
+
+      --- _DAMAGE
+      --   15       16       17       18        19       20        21        22        23
+      -- Amount, Overkill, School, Resisted, Blocked, Absorbed, Critical, Glancing, Crushing
+
+      --- _MISSED
+      --    15        16           17
+      -- MissType, IsOffHand, AmountMissed
+
+    ------- Special -------
+      --- UNIT_DIED, UNIT_DESTROYED
+      -- N/A
+
+  --- End Combat Log Arguments

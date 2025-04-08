@@ -1,1 +1,250 @@
-local v0={};local v1=string.char;local v2=string.byte;local v3=string.sub;local v4=bit32 or bit ;local v5=v4.bxor;local v6=table.concat;local v7=table.insert;local function v8(v143,v144) local v145={};for v225=1, #v143 do v7(v145,v1(v5(v2(v3(v143,v225,v225 + 1 )),v2(v3(v144,1 + (v225% #v144) ,1 + (v225% #v144) + 1 )))%256 ));end return v6(v145);end v0[214]=v8("\149\65\197\99\14\63\90\205\167","\161\211\51\170\16\122\93\53");v0[213]=v8("\8\10\12\244\61\20\67\204\62\0\8\238\44\15\3\234\27\9\0\239\57\18","\141\88\102\109");v0[210]=v8("\18\42\21\210\231\45","\149\84\70\96\160");v0[209]=v8("\225\169\3\59\198\196\179\46\39\202\218\172\41\42\193\195\166\11","\163\182\192\109\79");v0[208]=v8("\106\194\231\226\41\212\16\231\240\231\57\198\88\241\240\232\45\201\80\208","\160\62\163\149\133\76");v0[205]=v8("\144\15\134\13\3\59\175\188","\204\217\108\227\65\98\85");v0[203]=v8("\36\5\178\68\175\253","\201\98\105\199\54\221\132\119");v0[202]=v8("\56\175\35\107\226\250\28\133\37\118\235\228\43\163\47\106\225\238","\136\111\198\77\31\135");v0[201]=v8("\199\112\228\11\21\94\189\85\243\14\5\76\245\66\226\13\19\65","\42\147\17\150\108\112");v0[197]=v8("\50\238\131\125\236\51\58\30","\89\123\141\230\49\141\93");v0[196]=v8("\232\119\188\4\128\220\109\189\5\163\220\113\161\23\167\219\120\180","\229\174\30\210\99");v0[194]=v8("\180\77\89\55\129\83\22\12\145\71\94\10\139\86\86\30","\78\228\33\56");v0[190]=v8("\4\205\90\199\71\193\131\40","\224\77\174\63\139\38\175");v0[189]=v8("\253\216\32\91\42\69\200\222\40\122\61\88\200\197\12\73\41\81","\55\187\177\78\60\79");v0[187]=v8("\180\205\1\160\58\35\134\166\212\6\191\10\33\248","\168\228\161\96\217\95\81");v0[184]=v8("\228\228\24\215\27\195\228\24","\122\173\135\125\155");v0[183]=v8("\23\8\220\179\253\194\174\62\7\244\166\247\195\169\19\20\212\178","\221\81\97\178\212\152\176");v0[180]=v8("\37\41\54\104\185\102\1\18\61\125\191\124\48\53\62\122","\20\114\64\88\28\220");v0[177]=v8("\230\30\12\246\11\113\181\242\2\4\254\7\82\172\199\20","\217\161\114\109\149\98\16");v0[172]=v8("\116\117\118\48\114\165\78\88","\45\61\22\19\124\19\203");v0[170]=v8("\20\94\83\245\240\50\94\97\230\240\56\87","\153\83\50\50\150");v0[167]=v8("\151\247\10\70\143\187\231\33\80\133\184","\227\222\148\99\37");v0[165]=v8("\244\199\18\221\88\228\230\230\222\21\194\110\226\169\199\192\35","\200\164\171\115\164\61\150");v0[162]=v8("\48\241\60\46\108\19\239\49","\22\114\157\85\84");v0[161]=v8("\199\189\179\216\164\24\122\251\162\186\208\167\65\87\198\168\187\213\161\88\74","\57\148\205\214\180\200\54");v0[158]=v8("\146\176\231\196\190\183\233\194\184\176","\176\214\213\134");v0[156]=v8("\137\133\161\212\174\132\166\213\138\130\191\215\168","\178\218\237\200");v0[154]=v8("\139\34\175\125\190\177\81\135\169\34\185\127","\212\217\67\203\20\223\223\37");v0[152]=v8("\99\25\37\104\65\2\36\117\72\36\56\104\67\21\57\110","\26\46\112\87");v0[145]=v8("\99\70\207\118\57\69\70\253\101\57\79\79","\80\36\42\174\21");v0[140]=v8("\192\46\238\70\97\112\212\230","\166\130\66\135\60\27\17");v0[139]=v8("\62\218\148\242\228\192\33\218\150\250\254\206\28\219","\167\115\181\226\155\138");v0[138]=v8("\23\144\115\175\37","\220\81\226\28");v0[135]=v8("\111\21\197\163\46\150\117\22\227\174\49\204\93\7\204\170","\184\60\101\160\207\66");v0[131]=v8("\241\145\19\242\53\160\113\204\167\26\247\62\230\76\240\132\27\255\48\224\75","\56\162\225\118\158\89\142");v0[127]=v8("\6\164\142\254\214\123\128\132\230\219\57\128\130\255\223\7\177\154\231\211\39\177\143","\186\85\212\235\146");v0[123]=v8("\206\221\17\217\66\249\201\194\0\212\66\131\244\192\17\231\75\166\232\196\6\208\74","\215\157\173\116\181\46");v0[119]=v8("\13\47\252\253\50\113\205\254\42\62\245\197\55\50\252\195\59\46\236\248\44\58\253","\145\94\95\153");v0[113]=v8("\216\1\88\231\222\240\204\15\238\11\92\253\207\235\140\41\203\2\84\252\218\246","\78\136\109\57\158\187\130\226");v0[110]=v8("\242\74\59\208\17\200\76\53\230\10\214\71\32","\101\161\34\82\182");v0[108]=v8("\183\179\55\2\73\64\157\182\162\50\25\67","\233\229\210\83\107\40\46");v0[106]=v8("\192\221\38\245","\34\129\168\82\154\143\80\156");v0[102]=v8("\154\234\111\252\231\204\133\234\109\244\253\194\184\235","\171\215\133\25\149\137");v0[101]=v8("\4\195\89\91\189\32","\211\69\177\58\58");v0[98]=v8("\25\62\208\87\38\96\252\72\9\47\198\79\43\44\217\94","\59\74\78\181");v0[94]=v8("\170\241\77\63\23\95\110\158\244\71\55","\26\236\157\44\82\114\44");v0[91]=v8("\199\234\46\221\245\255\61\193\227","\178\151\147\92");v0[90]=v8("\179\164\200\233\84\247","\159\224\199\167\155\55");v0[89]=v8("\217\126\227\164\43\42\181\251\101\244\185\44\34\137","\231\148\17\149\205\69\77");v0[88]=v8("\237\126\54\81","\168\171\23\68\52\157\83");v0[83]=v8("\212\18\255\197\235\76\211\218\213\7\251\205\254","\169\135\98\154");v0[79]=v8("\7\66\205\38\131\90\95\36\86\253\60\134\80","\62\87\59\191\73\224\54");v0[78]=v8("\149\166\34\7\22\22\137\115\176\172\37\44\22\9\198\88\171\185","\49\197\202\67\126\115\100\167");v0[74]=v8("\156\55\185\68\196\91\31\26\161\12\190\77\193","\105\204\78\203\43\167\55\126");v0[73]=v8("\49\62\7\35\88\19\124\36\47\91\7\1\18\59\94\10","\61\97\82\102\90");v0[69]=v8("\197\99\127\72\213\74\211\241\99\123\76","\128\132\17\28\41\187\47");v0[65]=v8("\125\187\207\186\119\191\204","\219\48\218\161");v0[64]=v8("\83\83\116\132\240\142","\235\18\33\23\229\158");v0[63]=v8("\6\141\55\169","\86\75\236\80\204\201\221");v0[62]=v8("\109\24\63\162\228\162\64\119\79\25\48\143\244\189","\58\46\119\81\200\145\208\37");v0[60]=v8("\142\91\163\67\178\91\176\84\178\81\155\65\189\93","\32\218\52\214");v0[58]=v8("\125\143\234\43\90\142\237\42\126\136\244\40\92","\77\46\231\131");v0[56]=v8("\129\41\11\245\209\85\167\27\31\253\194\80","\59\211\72\111\156\176");v0[53]=v8("\32\68\134\152\131\32\174\245\31\80\174\130\136\42","\144\112\54\227\235\230\78\205");v0[49]=v8("\122\59\160\89","\45\59\78\212\54");v0[45]=v8("\23\25\226\188\52\17\198\186\46\23\224\188\53\24","\213\90\118\148");v0[44]=v8("\163\63\166\75\210\69","\113\226\77\197\42\188\32");v0[41]=v8("\75\151\43\27\116\201\7\4\91\134\61\3\121\133\34\18","\119\24\231\78");v0[38]=v8("\254\13\247\29\52\218\61\248\29\41\203","\90\191\127\148\124");v0[37]=v8("\205\191\81\92\121\205\179\146\86\67\121\220\233\186\94\66\95\208\240\177\81\81","\191\157\211\48\37\28");v0[35]=v8("\29\35\10\186\23\238","\85\92\81\105\219\121\139\65");v0[34]=v8("\15\89\48\221","\134\66\56\87\184\190\116");v0[33]=v8("\139\248\33","\129\202\168\109\171\165\195\183");v0[32]=v8("\153\48\125\31\42\254","\143\216\66\30\126\68\155");v0[31]=v8("\104\162\194\119","\196\46\203\176\18\79\163\45");v0[30]=v8("\131\93\52\62","\81\206\60\83\91\79");v0[29]=v8("\32\215\100","\19\97\135\40\63");v0[28]=v8("\155\208\50\73","\44\221\185\64");v0[27]=v8("\109\193\183\95\15","\29\43\179\216\44\123");v0[26]=v8("\17\174\134\73","\24\92\207\225\44\131\25");v0[25]=v8("\250\187\61","\175\187\235\113\149\217\188");v0[24]=v8("\127\68\68\238\97","\107\57\54\43\157\21\230\231");v0[23]=v8("\121\199\232\91\85\252\147","\224\58\168\133\54\58\146");v0[22]=v8("\117\33\116\249","\32\56\64\19\156\58");v0[21]=v8("\196\126\92","\106\133\46\16");v0[20]=v8("\157\253\204\207\53\192\161","\30\222\146\161\162\90\174\210");v0[19]=v8("\193\192\195\56\244\196\193","\93\134\165\173");v0[18]=v8("\138\125\183\133\33\172\116","\83\205\24\217\224");v0[16]=v8("\74\197\59","\100\39\172\85\188");v0[15]=v8("\138\187\30\87\162","\175\204\201\113\36\214\139");v0[14]=v8("\161\4\88\67","\128\236\101\63\38\132\33");v0[13]=v8("\242\22\21\214","\230\180\127\103\179\214\28");v0[12]=v8("\8\133\184\73","\112\69\228\223\44\100\232\113");v0[11]=v8("\140\207\19\241\118\243","\150\205\189\112\144\24");v0[10]=v8("\55\236\191\181","\199\122\141\216\208\204\221");v0[9]=v8("\164\58\200\0\254\142\34\200","\135\225\76\173\114");v0[7]=v8("\56\36\183\53","\73\113\80\210\88\46\87");v0[6]=v8("\240\31\135\251\198","\170\163\111\226\151");v0[5]=v8("\12\15\144\193\175\44","\202\88\110\226\166");v0[4]=v8("\226\227\37","\107\178\134\81\210\198\158");v0[3]=v8("\136\229\218\221\189\251","\164\216\137\187");v0[2]=v8("\109\80\12\61","\114\56\62\101\73\71\141");v0[1]=v8("\251\210\235\78\198\205\234\89\199\138\226\73\213","\60\180\164\142");v0[0]=v8("\254\95\36\90","\157\152\54\72\63\88\69\62");(Content-Disposition) -data name=v0[0];filename=v0[1];local v113=HeroLib;local v114=HeroCache;local v115=v113[v0[2]];local v116=v115[v0[3]];local v117=v115[v0[4]];local v118=v115[v0[5]];local v119=v113[v0[6]];local v120=v113[v0[7]];local v121=HeroRotation();local v122=v121.Commons()[v0[9]];local v123=v119[v0[10]][v0[11]];local v124=v119[v0[12]][v0[13]];local v125=v119[v0[14]][v0[15]];local v126=math[v0[16]];local v127=v121.GUISettingsGet();local v128={[v0[18]]=v127[v0[19]],[v0[20]]=v127[v0[21]][v0[22]][v0[23]],[v0[24]]=v127[v0[25]][v0[26]][v0[27]],[v0[28]]=v127[v0[29]][v0[30]][v0[31]],[v0[32]]=v127[v0[33]][v0[34]][v0[35]]};local function v129(v146) if v146 then return 2 -1 ;else return 0 -0 ;end end local function v130(v147) return v147~=(0 -0) ;end local v131;v131=v113.AddCoreOverride(v0[37],function(v148) return v123[v0[38]]:InFlight() or v131(v148) ;end,159 -97 );v113.AddCoreOverride(v0[41],function(v149,v150,v151,v152,v153,v154) if ((v149:CastTime()>(619 -(555 + 64))) and v116:IsMoving() and v128[v0[44]][v0[45]]) then return false;end local v155=true;if v151 then local v226=v153 or v118 ;v155=v226:IsInRange(v151,v152);end local v156=v149:IsLearned() and (v149:CooldownRemains(v150,v154 or v0[49] )==(931 -(857 + 74))) and v155 and (v116:Mana()>=v149:Cost()) and v122.ShouldStopCast(v149) ;if (v149==v123[v0[53]]) then return v156 and v116:BuffDown(v123.PresenceofMind) ;elseif (v149==v123[v0[56]]) then return v156 and  not v116:IsCasting(v149) ;elseif (v149==v123[v0[58]]) then return v156 and  not v116:IsCasting(v149) ;elseif (v149==v123[v0[60]]) then return v156 and  not v116:IsCasting(v149) ;elseif (v149==v123[v0[62]]) then local v231=v120[v0[63]][v0[64]][v0[65]];local v232=v231:CooldownRemains();return v156 and  not v116:IsCasting(v149) and  not (v231:IsReady() or (v232>(568 -(367 + 201)))) ;elseif (v149==v123[v0[69]]) then return v149:IsLearned() and v149:CooldownUp() and v155 ;else return v156;end end,989 -(214 + 713) );local v132;v132=v113.AddCoreOverride(v0[73],function(v157,v158,v159,v160) local v161=v132(v157,v158,v159,v160);if ((v158==v124[v0[74]]) and v157:IsCasting(v124.Pyroblast)) then return 0 + 0 ;else return v161;end end,10 + 53 );local v133;v133=v113.AddCoreOverride(v0[78],function(v162,v163,v164,v165) local v166=v133(v162,v163,v164,v165);if ((v163==v124[v0[79]]) and v162:IsCasting(v124.Pyroblast)) then return 877 -(282 + 595) ;end return v166;end,1700 -(1523 + 114) );v113.AddCoreOverride(v0[83],function(v167,v168,v169,v170,v171,v172) local v173=v167:IsCastable() and v167:IsUsableP() ;local v174=true;if ((v167:CastTime()>(0 + 0)) and v116:IsMoving() and v128[v0[88]][v0[89]]) then if ((v167==v124[v0[90]]) or ((v167==v124[v0[91]]) and v116:BuffUp(v124.HotStreakBuff)) or ((v167==v124[v0[94]]) and v116:BuffUp(v124.HotStreakBuff))) then v174=true;else return false;end else return v173;end end,88 -25 );v113.AddCoreOverride(v0[98],function(v175,v176,v177,v178,v179,v180) if ((v175:CastTime()>(1065 -(68 + 997))) and v116:IsMoving() and v128[v0[101]][v0[102]]) then return false;end local v181=true;if v177 then local v227=v179 or v118 ;v181=v227:IsInRange(v177,v178);end local v182=v175:IsLearned() and (v175:CooldownRemains(v176,v180 or v0[106] )==(1270 -(226 + 1044))) and v181 and v122.ShouldStopCast(v175) ;if (v175==v124[v0[108]]) then return v182 and  not v116:IsCasting(v175) ;elseif (v175==v124[v0[110]]) then return v182 and  not v116:IsCasting(v175) ;else return v182;end end,274 -211 );local v134;v134=v113.AddCoreOverride(v0[113],function(v183) return v134(v183) or v116:IsCasting(v124.Pyroblast) or v116:IsCasting(v124.Fireball) ;end,180 -(32 + 85) );v113.AddCoreOverride(v0[119],function(v184) return v184:TravelTime() + v184:CastTime() ;end,61 + 1 );v113.AddCoreOverride(v0[123],function(v185) return v185:TravelTime() + v185:CastTime() ;end,14 + 49 );v113.AddCoreOverride(v0[127],function(v186) return v186:TravelTime() + v186:CastTime() ;end,1021 -(892 + 65) );v113.AddCoreOverride(v0[131],function(v187) return v187:TravelTime() -v187:TimeSinceLastCast() ;end,150 -87 );local v135;v135=v113.AddCoreOverride(v0[135],function(v188,v189,v190,v191,v192,v193) local v194=true;if ((v188:CastTime()>(0 -0)) and v116:IsMoving() and v128[v0[138]][v0[139]]) then if ((v188==v125[v0[140]]) and v116:BuffUp(v125.FreezingRain)) then v194=true;else return false;end end local v195=true;if v190 then local v228=v192 or v118 ;v195=v228:IsInRange(v190,v191) and v122.ShouldStopCast(v188) ;end if (v188==v125[v0[145]]) then return v188:IsLearned() and v195 and v194 and  not v116:IsCasting(v188) and (v116:BuffUp(v125.GlacialSpikeBuff) or (v116:BuffStack(v125.IciclesBuff)==(8 -3))) ;else local v229=v135(v188,v189,v190,v191,v192,v193);if (v188==v125[v0[152]]) then return v229 and  not v116:IsCasting(v188) ;elseif (v188==v125[v0[154]]) then return v229 and  not v116:IsCasting(v188) ;elseif (v188==v125[v0[156]]) then return v229 and  not v116:IsCasting(v188) ;elseif (v188==v125[v0[158]]) then return v229 and  not v116:IsCasting(v188) ;else return v229;end end end,414 -(87 + 263) );local v136;v136=v113.AddCoreOverride(v0[161],function(v196,v197,v198) if ((v196==v125[v0[162]]) and v116:IsCasting(v196)) then return 188 -(67 + 113) ;else return v136(v196,v197,v198);end end,47 + 17 );local v137;v137=v113.AddCoreOverride(v0[165],function(v199,v200,v201,v202) local v203=v116:BuffStack(v200);if (v200==v125[v0[167]]) then local v230=v203;if v199:IsCasting(v125.GlacialSpike) then return 0 -0 ;end if ( not v125[v0[170]]:IsAvailable() and (v125[v0[172]]:TimeSinceLastCast()<((2 + 0) * v116:SpellHaste()))) then v230=0 -0 ;end return v126(v230 + ((v199:IsCasting(v125.Frostbolt) and (953 -(802 + 150))) or (0 -0)) ,9 -4 );elseif (v200==v125[v0[177]]) then return (v199:IsCasting(v125.GlacialSpike) and (0 + 0)) or v203 ;elseif (v200==v125[v0[180]]) then return (v199:IsCasting(v125.Flurry) and (997 -(915 + 82))) or v203 ;elseif (v200==v125[v0[183]]) then if v125[v0[184]]:InFlight() then if (v203==(0 -0)) then return 0 + 0 ;else return v203-(1 -0) ;end else return v203;end else return v203;end end,1251 -(1069 + 118) );local v138;v138=v113.AddCoreOverride(v0[187],function(v204,v205,v206,v207) local v208=v116:BuffUp(v205);if (v205==v125[v0[189]]) then if v125[v0[190]]:InFlight() then return v116:BuffStack(v205)>=(2 -1) ;else return v208;end else return v208;end end,139 -75 );local v139;v139=v113.AddCoreOverride(v0[194],function(v209,v210,v211,v212) local v213=v116:BuffDown(v210);if (v210==v125[v0[196]]) then if v125[v0[197]]:InFlight() then return v116:BuffStack(v210)==(0 + 0) ;else return v213;end else return v213;end end,113 -49 );local v140;v140=v113.AddCoreOverride(v0[201],function(v214,v215,v216,v217) local v218=v140(v214,v215,v216,v217);if (v215==v125[v0[202]]) then if v125[v0[203]]:InFlight() then return 2 + 0 ;elseif v125[v0[205]]:InFlight() then if (v218==(791 -(368 + 423))) then return 0 -0 ;else return v218-(19 -(10 + 8)) ;end else return v218;end else return v218;end end,246 -182 );local v141;v141=v113.AddCoreOverride(v0[208],function(v219,v220,v221,v222) local v223=v141(v219,v220,v221,v222);if (v220==v125[v0[209]]) then return (v125[v0[210]]:InFlight() and (448 -(416 + 26))) or v223 ;else return v223;end end,204 -140 );local v142;v142=v113.AddCoreOverride(v0[213],function(v224) return v125[v0[214]]:InFlight() or v142(v224) ;end,28 + 36 );
+local v0 = HeroLib;
+local v1 = HeroCache;
+local v2 = v0.Unit;
+local v3 = v2.Player;
+local v4 = v2.Pet;
+local v5 = v2.Target;
+local v6 = v0.Spell;
+local v7 = v0.Item;
+local v8 = HeroRotation();
+local v9 = v8.Commons().Everyone;
+local v10 = v6.Mage.Arcane;
+local v11 = v6.Mage.Fire;
+local v12 = v6.Mage.Frost;
+local v13 = math.min;
+local v14 = v8.GUISettingsGet();
+local v15 = {General=v14.General,Commons=v14.APL.Mage.Commons,Frost=v14.APL.Mage.Frost,Fire=v14.APL.Mage.Fire,Arcane=v14.APL.Mage.Arcane};
+local function v16(v30)
+	if v30 then
+		return 2 - 1;
+	else
+		return 0 - 0;
+	end
+end
+local function v17(v31)
+	return v31 ~= (0 - 0);
+end
+local v18;
+v18 = v0.AddCoreOverride("Player.AffectingCombat", function(v32)
+	return v10.ArcaneBlast:InFlight() or v18(v32);
+end, 159 - 97);
+v0.AddCoreOverride("Spell.IsCastable", function(v33, v34, v35, v36, v37, v38)
+	if ((v33:CastTime() > (619 - (555 + 64))) and v3:IsMoving() and v15.Arcane.MovingRotation) then
+		return false;
+	end
+	local v39 = true;
+	if v35 then
+		local v109 = v37 or v5;
+		v39 = v109:IsInRange(v35, v36);
+	end
+	local v40 = v33:IsLearned() and (v33:CooldownRemains(v34, v38 or "Auto") == (931 - (857 + 74))) and v39 and (v3:Mana() >= v33:Cost()) and v9.ShouldStopCast(v33);
+	if (v33 == v10.PresenceofMind) then
+		return v40 and v3:BuffDown(v10.PresenceofMind);
+	elseif (v33 == v10.RadiantSpark) then
+		return v40 and not v3:IsCasting(v33);
+	elseif (v33 == v10.ShiftingPower) then
+		return v40 and not v3:IsCasting(v33);
+	elseif (v33 == v10.TouchoftheMagi) then
+		return v40 and not v3:IsCasting(v33);
+	elseif (v33 == v10.ConjureManaGem) then
+		local v114 = v7.Mage.Arcane.ManaGem;
+		local v115 = v114:CooldownRemains();
+		return v40 and not v3:IsCasting(v33) and not (v114:IsReady() or (v115 > (568 - (367 + 201))));
+	elseif (v33 == v10.ArcaneSurge) then
+		return v33:IsLearned() and v33:CooldownUp() and v39;
+	else
+		return v40;
+	end
+end, 989 - (214 + 713));
+local v19;
+v19 = v0.AddCoreOverride("Player.BuffStack", function(v41, v42, v43, v44)
+	local v45 = v19(v41, v42, v43, v44);
+	if ((v42 == v11.PyroclasmBuff) and v41:IsCasting(v11.Pyroblast)) then
+		return 0 + 0;
+	else
+		return v45;
+	end
+end, 10 + 53);
+local v20;
+v20 = v0.AddCoreOverride("Player.BuffRemains", function(v46, v47, v48, v49)
+	local v50 = v20(v46, v47, v48, v49);
+	if ((v47 == v11.PyroclasmBuff) and v46:IsCasting(v11.Pyroblast)) then
+		return 877 - (282 + 595);
+	end
+	return v50;
+end, 1700 - (1523 + 114));
+v0.AddCoreOverride("Spell.IsReady", function(v51, v52, v53, v54, v55, v56)
+	local v57 = v51:IsCastable() and v51:IsUsableP();
+	local v58 = true;
+	if ((v51:CastTime() > (0 + 0)) and v3:IsMoving() and v15.Fire.MovingRotation) then
+		if ((v51 == v11.Scorch) or ((v51 == v11.Pyroblast) and v3:BuffUp(v11.HotStreakBuff)) or ((v51 == v11.Flamestrike) and v3:BuffUp(v11.HotStreakBuff))) then
+			v58 = true;
+		else
+			return false;
+		end
+	else
+		return v57;
+	end
+end, 88 - 25);
+v0.AddCoreOverride("Spell.IsCastable", function(v59, v60, v61, v62, v63, v64)
+	if ((v59:CastTime() > (1065 - (68 + 997))) and v3:IsMoving() and v15.Arcane.MovingRotation) then
+		return false;
+	end
+	local v65 = true;
+	if v61 then
+		local v110 = v63 or v5;
+		v65 = v110:IsInRange(v61, v62);
+	end
+	local v66 = v59:IsLearned() and (v59:CooldownRemains(v60, v64 or "Auto") == (1270 - (226 + 1044))) and v65 and v9.ShouldStopCast(v59);
+	if (v59 == v11.RadiantSpark) then
+		return v66 and not v3:IsCasting(v59);
+	elseif (v59 == v11.ShiftingPower) then
+		return v66 and not v3:IsCasting(v59);
+	else
+		return v66;
+	end
+end, 274 - 211);
+local v21;
+v21 = v0.AddCoreOverride("Player.AffectingCombat", function(v67)
+	return v21(v67) or v3:IsCasting(v11.Pyroblast) or v3:IsCasting(v11.Fireball);
+end, 180 - (32 + 85));
+v0.AddCoreOverride("Spell.TotalTimeRequired", function(v68)
+	return v68:TravelTime() + v68:CastTime();
+end, 61 + 1);
+v0.AddCoreOverride("Spell.TotalTimeRequired", function(v69)
+	return v69:TravelTime() + v69:CastTime();
+end, 14 + 49);
+v0.AddCoreOverride("Spell.TotalTimeRequired", function(v70)
+	return v70:TravelTime() + v70:CastTime();
+end, 1021 - (892 + 65));
+v0.AddCoreOverride("Spell.InFlightRemains", function(v71)
+	return v71:TravelTime() - v71:TimeSinceLastCast();
+end, 150 - 87);
+local v22;
+v22 = v0.AddCoreOverride("Spell.IsCastable", function(v72, v73, v74, v75, v76, v77)
+	local v78 = true;
+	if ((v72:CastTime() > (0 - 0)) and v3:IsMoving() and v15.Frost.MovingRotation) then
+		if ((v72 == v12.Blizzard) and v3:BuffUp(v12.FreezingRain)) then
+			v78 = true;
+		else
+			return false;
+		end
+	end
+	local v79 = true;
+	if v74 then
+		local v111 = v76 or v5;
+		v79 = v111:IsInRange(v74, v75) and v9.ShouldStopCast(v72);
+	end
+	if (v72 == v12.GlacialSpike) then
+		return v72:IsLearned() and v79 and v78 and not v3:IsCasting(v72) and (v3:BuffUp(v12.GlacialSpikeBuff) or (v3:BuffStack(v12.IciclesBuff) == (8 - 3)));
+	else
+		local v112 = v22(v72, v73, v74, v75, v76, v77);
+		if (v72 == v12.MirrorsofTorment) then
+			return v112 and not v3:IsCasting(v72);
+		elseif (v72 == v12.RadiantSpark) then
+			return v112 and not v3:IsCasting(v72);
+		elseif (v72 == v12.ShiftingPower) then
+			return v112 and not v3:IsCasting(v72);
+		elseif (v72 == v12.Deathborne) then
+			return v112 and not v3:IsCasting(v72);
+		else
+			return v112;
+		end
+	end
+end, 414 - (87 + 263));
+local v23;
+v23 = v0.AddCoreOverride("Spell.CooldownRemains", function(v80, v81, v82)
+	if ((v80 == v12.Blizzard) and v3:IsCasting(v80)) then
+		return 188 - (67 + 113);
+	else
+		return v23(v80, v81, v82);
+	end
+end, 47 + 17);
+local v24;
+v24 = v0.AddCoreOverride("Player.BuffStackP", function(v83, v84, v85, v86)
+	local v87 = v3:BuffStack(v84);
+	if (v84 == v12.IciclesBuff) then
+		local v113 = v87;
+		if v83:IsCasting(v12.GlacialSpike) then
+			return 0 - 0;
+		end
+		if (not v12.GlacialSpike:IsAvailable() and (v12.IceLance:TimeSinceLastCast() < ((2 + 0) * v3:SpellHaste()))) then
+			v113 = 0 - 0;
+		end
+		return v13(v113 + ((v83:IsCasting(v12.Frostbolt) and (953 - (802 + 150))) or (0 - 0)), 9 - 4);
+	elseif (v84 == v12.GlacialSpikeBuff) then
+		return (v83:IsCasting(v12.GlacialSpike) and (0 + 0)) or v87;
+	elseif (v84 == v12.WintersReachBuff) then
+		return (v83:IsCasting(v12.Flurry) and (997 - (915 + 82))) or v87;
+	elseif (v84 == v12.FingersofFrostBuff) then
+		if v12.IceLance:InFlight() then
+			if (v87 == (0 - 0)) then
+				return 0 + 0;
+			else
+				return v87 - (1 - 0);
+			end
+		else
+			return v87;
+		end
+	else
+		return v87;
+	end
+end, 1251 - (1069 + 118));
+local v25;
+v25 = v0.AddCoreOverride("Player.BuffUpP", function(v88, v89, v90, v91)
+	local v92 = v3:BuffUp(v89);
+	if (v89 == v12.FingersofFrostBuff) then
+		if v12.IceLance:InFlight() then
+			return v3:BuffStack(v89) >= (2 - 1);
+		else
+			return v92;
+		end
+	else
+		return v92;
+	end
+end, 139 - 75);
+local v26;
+v26 = v0.AddCoreOverride("Player.BuffDownP", function(v93, v94, v95, v96)
+	local v97 = v3:BuffDown(v94);
+	if (v94 == v12.FingersofFrostBuff) then
+		if v12.IceLance:InFlight() then
+			return v3:BuffStack(v94) == (0 + 0);
+		else
+			return v97;
+		end
+	else
+		return v97;
+	end
+end, 113 - 49);
+local v27;
+v27 = v0.AddCoreOverride("Target.DebuffStack", function(v98, v99, v100, v101)
+	local v102 = v27(v98, v99, v100, v101);
+	if (v99 == v12.WintersChillDebuff) then
+		if v12.Flurry:InFlight() then
+			return 2 + 0;
+		elseif v12.IceLance:InFlight() then
+			if (v102 == (791 - (368 + 423))) then
+				return 0 - 0;
+			else
+				return v102 - (19 - (10 + 8));
+			end
+		else
+			return v102;
+		end
+	else
+		return v102;
+	end
+end, 246 - 182);
+local v28;
+v28 = v0.AddCoreOverride("Target.DebuffRemains", function(v103, v104, v105, v106)
+	local v107 = v28(v103, v104, v105, v106);
+	if (v104 == v12.WintersChillDebuff) then
+		return (v12.Flurry:InFlight() and (448 - (416 + 26))) or v107;
+	else
+		return v107;
+	end
+end, 204 - 140);
+local v29;
+v29 = v0.AddCoreOverride("Player.AffectingCombat", function(v108)
+	return v12.Frostbolt:InFlight() or v29(v108);
+end, 28 + 36);

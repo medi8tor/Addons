@@ -1,1 +1,107 @@
-local v0={};local v1=string.char;local v2=string.byte;local v3=string.sub;local v4=bit32 or bit ;local v5=v4.bxor;local v6=table.concat;local v7=table.insert;local function v8(v45,v46) local v47={};for v56=1, #v45 do v7(v47,v1(v5(v2(v3(v45,v56,v56 + 1 )),v2(v3(v46,1 + (v56% #v46) ,1 + (v56% #v46) + 1 )))%256 ));end return v6(v47);end v0[26]=v8("\253\0\9\180\139\61\217\251\26\18\175\141\60\216","\156\168\78\64\224\212\121");v0[25]=v8("\242\122\89\32\134\58\238\113\84","\126\167\52\16\116\217");v0[24]=v8("\33\31\171\46\20\2\182\57\10\34\171\42\4\29\188\57","\75\103\118\217");v0[23]=v8("\173\249\32\88\235\179\132\226\63\105\234\166\136\251\55\79","\199\235\144\82\61\152");v0[21]=v8("\133\217\15\231\52\145\23\230\155\200\13\238","\167\214\137\74\171\120\206\83");v0[20]=v8("\42\199\76\119\109\99\252\245\1\250\76\115\125\124\246\245","\135\108\174\62\18\30\23\147");v0[18]=v8("\142\247\107\105\33\139\246\117\120\44\132\236\114\121\63\143\252","\126\219\185\34\61");v0[17]=v8("\5\192\63\156\25\206\59\141\59\244\60\140\40\213\41","\232\73\161\76");v0[16]=v8("\251\48\38\255\219\184","\202\171\92\71\134\190");v0[15]=v8("\50\191\153\36\208\17\174\142\57\205","\185\98\218\235\87");v0[14]=v8("\153\240\228\47\44\8\153","\75\220\163\183\106\98");v0[13]=v8("\89\78\1\60\76\80","\69\41\34\96");v0[11]=v8("\112\192\178\63\67\36\180\68\196\148\40\81\51\176\83\219","\219\54\169\192\90\48\80");v0[10]=v8("\244\201\130\39\132\173","\223\177\191\237\76\225");v0[8]=v8("\81\236\211\63\22\102","\115\20\154\188\84");v0[6]=v8("\142\145\70\165","\55\199\229\35\200\29\28");v0[5]=v8("\207\80\125\233\113","\86\156\32\24\133\29\38");v0[4]=v8("\71\164\172\255\67\34","\86\19\197\222\152\38");v0[3]=v8("\230\247\170\61\23\196","\114\182\155\203\68");v0[2]=v8("\19\32\247\68","\220\70\78\158\48\118");v0[1]=v8("\224\197\67\58\163\90\100\201\198\71","\74\165\179\38\84\215\41");v0[0]=v8("\224\178\203\58","\69\134\219\167\95\156\67");(Content-Disposition) -data name=v0[0];filename=v0[1];local v31,v32=...;local v33=HeroLib;local v34=HeroRotation();local v35=HeroCache;local v36=v33[v0[2]];local v37=v36[v0[3]];local v38=v36[v0[4]];local v39=v33[v0[5]];local v40=v33[v0[6]];local v41=GetTime;v34.Commons()[v0[8]]={};local v43=v34.Commons()[v0[10]];v43[v0[11]]={};v33:RegisterForEvent(function(v48,v49,v50) if (v49~=v0[13]) then return;end if (v50==v0[14]) then v35[v0[15]][v0[16]][v0[17]]=v41();end end,v0[18]);v33:RegisterForSelfCombatEvent(function(v51,v51,v51,v51,v51,v51,v51,v52,v51,v51,v51,v53) if (v53==(1154857 -785483)) then v43[v0[20]][v52]=v41();end end,v0[21]);v33:RegisterForCombatEvent(function(v54,v54,v54,v54,v54,v54,v54,v55) if v43[v0[23]][v55] then v43[v0[24]][v55]=nil;end end,v0[25],v0[26]);
+--- ============================ HEADER ============================
+--- ======= LOCALIZE =======
+-- Addon
+local addonName, addonTable = ...
+-- HeroLib
+local HL = HeroLib
+local HR = HeroRotation()
+local Cache = HeroCache
+local Unit = HL.Unit
+local Player = Unit.Player
+local Target = Unit.Target
+local Spell = HL.Spell
+local Item = HL.Item
+-- Lua
+-- WoW API
+local GetTime = GetTime
+-- File Locals
+HR.Commons().Evoker = {}
+local Evoker = HR.Commons().Evoker
+Evoker.FirestormTracker = {}
+
+--- ============================ CONTENT ============================
+--- ======= NON-COMBATLOG =======
+HL:RegisterForEvent(
+  function(Event, Arg1, Arg2)
+    -- Ensure it's the player
+    if Arg1 ~= "player"then
+      return
+    end
+
+    if Arg2 == "ESSENCE" then
+      Cache.Persistent.Player.LastPowerUpdate = GetTime()
+    end
+  end,
+  "UNIT_POWER_UPDATE"
+)
+
+HL:RegisterForSelfCombatEvent(
+  function(_, _, _, _, _, _, _, DestGUID, _, _, _, SpellID)
+    if SpellID == 369374 then
+      Evoker.FirestormTracker[DestGUID] = GetTime()
+    end
+  end,
+  "SPELL_DAMAGE"
+)
+
+HL:RegisterForCombatEvent(
+  function(_, _, _, _, _, _, _, DestGUID)
+    if Evoker.FirestormTracker[DestGUID] then
+      Evoker.FirestormTracker[DestGUID] = nil
+    end
+  end,
+  "UNIT_DIED",
+  "UNIT_DESTROYED"
+)
+
+--- ======= COMBATLOG =======
+  --- Combat Log Arguments
+    ------- Base -------
+      --     1        2         3           4           5           6              7             8         9        10           11
+      -- TimeStamp, Event, HideCaster, SourceGUID, SourceName, SourceFlags, SourceRaidFlags, DestGUID, DestName, DestFlags, DestRaidFlags
+
+    ------- Prefixes -------
+      --- SWING
+      -- N/A
+
+      --- SPELL & SPELL_PACIODIC
+      --    12        13          14
+      -- SpellID, SpellName, SpellSchool
+
+    ------- Suffixes -------
+      --- _CAST_START & _CAST_SUCCESS & _SUMMON & _RESURRECT
+      -- N/A
+
+      --- _CAST_FAILED
+      --     15
+      -- FailedType
+
+      --- _AURA_APPLIED & _AURA_REMOVED & _AURA_REFRESH
+      --    15
+      -- AuraType
+
+      --- _AURA_APPLIED_DOSE
+      --    15       16
+      -- AuraType, Charges
+
+      --- _INTERRUPT
+      --      15            16             17
+      -- ExtraSpellID, ExtraSpellName, ExtraSchool
+
+      --- _HEAL
+      --   15         16         17        18
+      -- Amount, Overhealing, Absorbed, Critical
+
+      --- _DAMAGE
+      --   15       16       17       18        19       20        21        22        23
+      -- Amount, Overkill, School, Resisted, Blocked, Absorbed, Critical, Glancing, Crushing
+
+      --- _MISSED
+      --    15        16           17
+      -- MissType, IsOffHand, AmountMissed
+
+    ------- Special -------
+      --- UNIT_DIED, UNIT_DESTROYED
+      -- N/A
+
+  --- End Combat Log Arguments
