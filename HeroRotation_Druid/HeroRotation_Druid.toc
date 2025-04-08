@@ -1,4 +1,4 @@
-## Interface: 110003
+## Interface: 110100
 
 ## Title: Hero|cFFA330C9Rotation|r [|cFFFF7C0ADruid|r]
 ## Author: Cilraaz
@@ -13,7 +13,7 @@ Settings.lua
 Druid.lua
 Events.lua
 Balance.lua
-#Feral.lua
-#Guardian.lua
+Feral.lua
+Guardian.lua
 Restoration.lua
 Overrides.lua

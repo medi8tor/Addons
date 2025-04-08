@@ -1,256 +1,388 @@
-local v0, v1 = ...;
-local v2 = HeroLib;
-local v3, v4 = HeroCache, v2.Utils;
-local v5 = v2.Unit;
-local v6, v7, v8 = v5.Player, v5.Pet, v5.Target;
-local v9, v10 = v5.Focus, v5.MouseOver;
-local v11, v12, v13 = v5.Arena, v5.Boss, v5.Nameplate;
-local v14, v15 = v5.Party, v5.Raid;
-local v16 = v2.Spell;
-local v17 = v2.Item;
-local v18 = HeroRotation();
-local v19 = v18.Commons().Rogue;
-local v20 = C_Timer;
-local v21 = math.max;
-local v22 = math.min;
-local v23 = math.abs;
-local v24 = pairs;
-local v25 = table.insert;
-local v26 = UnitAttackSpeed;
-local v27 = GetTime;
+--- ============================ HEADER ============================
+--- ======= LOCALIZE =======
+-- Addon
+local addonName, addonTable = ...
+-- HeroLib
+local HL = HeroLib
+local Cache, Utils = HeroCache, HL.Utils
+local Unit = HL.Unit
+local Player, Pet, Target = Unit.Player, Unit.Pet, Unit.Target
+local Focus, MouseOver = Unit.Focus, Unit.MouseOver
+local Arena, Boss, Nameplate = Unit.Arena, Unit.Boss, Unit.Nameplate
+local Party, Raid = Unit.Party, Unit.Raid
+local Spell = HL.Spell
+local Item = HL.Item
+-- HeroRotation
+local HR = HeroRotation()
+local Rogue = HR.Commons().Rogue
+-- Lua
+local C_Timer = C_Timer
+local mathmax = math.max
+local mathmin = math.min
+local mathabs = math.abs
+local pairs = pairs
+local tableinsert = table.insert
+local UnitAttackSpeed = UnitAttackSpeed
+local GetTime = GetTime
+-- File Locals
+
+
+
+--- ============================ CONTENT ============================
+
+--- Roll the Bones Tracking
+--- As buff is "hidden" from the client but we get apply/refresh events for it
 do
-	local v28 = v27();
-	v19.RtBRemains = function(v50)
-		local v51 = (v28 - v27()) - v2.RecoveryOffset(v50);
-		return ((v51 >= (0 - 0)) and v51) or (0 - 0);
-	end;
-	v2:RegisterForSelfCombatEvent(function(v52, v52, v52, v52, v52, v52, v52, v52, v52, v52, v52, v53)
-		if (v53 == (609035 - 293527)) then
-			v28 = v27() + (77 - 47);
-		end
-	end, "SPELL_AURA_APPLIED");
-	v2:RegisterForSelfCombatEvent(function(v54, v54, v54, v54, v54, v54, v54, v54, v54, v54, v54, v55)
-		if (v55 == (316127 - (555 + 64))) then
-			v28 = v27() + v22(971 - (857 + 74), (598 - (367 + 201)) + v19.RtBRemains(true));
-		end
-	end, "SPELL_AURA_REFRESH");
-	v2:RegisterForSelfCombatEvent(function(v56, v56, v56, v56, v56, v56, v56, v56, v56, v56, v56, v57)
-		if (v57 == (316435 - (214 + 713))) then
-			v28 = v27();
-		end
-	end, "SPELL_AURA_REMOVED");
+  local RtBExpiryTime = GetTime()
+  function Rogue.RtBRemains(BypassRecovery)
+    local Remains = RtBExpiryTime - GetTime() - HL.RecoveryOffset(BypassRecovery)
+    return Remains >= 0 and Remains or 0
+  end
+
+  HL:RegisterForSelfCombatEvent(
+    function(_, _, _, _, _, _, _, _, _, _, _, SpellID)
+      if SpellID == 315508 then
+        RtBExpiryTime = GetTime() + 30
+      end
+    end,
+    "SPELL_AURA_APPLIED"
+  )
+  HL:RegisterForSelfCombatEvent(
+    function(_, _, _, _, _, _, _, _, _, _, _, SpellID)
+      if SpellID == 315508 then
+        RtBExpiryTime = GetTime() + mathmin(40, 30 + Rogue.RtBRemains(true))
+      end
+    end,
+    "SPELL_AURA_REFRESH"
+  )
+  HL:RegisterForSelfCombatEvent(
+    function(_, _, _, _, _, _, _, _, _, _, _, SpellID)
+      if SpellID == 315508 then
+        RtBExpiryTime = GetTime()
+      end
+    end,
+    "SPELL_AURA_REMOVED"
+  )
+end
+
+--- Exsanguinated Tracking
+do
+  -- Variables
+  -- { [SpellName] = { [GUID] = boolean } }
+  local ExsanguinatedByBleed = {
+    CrimsonTempest = {},
+    Garrote = {},
+    Rupture = {},
+  }
+
+  -- Exsanguinated Expression
+  function Rogue.Exsanguinated(ThisUnit, ThisSpell)
+    local GUID = ThisUnit:GUID()
+    if not GUID then return false end
+
+    local SpellID = ThisSpell:ID()
+    if SpellID == 121411 then
+      -- Crimson Tempest
+      return ExsanguinatedByBleed.CrimsonTempest[GUID] or false
+    elseif SpellID == 703 then
+      -- Garrote
+      return ExsanguinatedByBleed.Garrote[GUID] or false
+    elseif SpellID == 1943 then
+      -- Rupture
+      return ExsanguinatedByBleed.Rupture[GUID] or false
+    end
+
+    return false
+  end
+
+  function Rogue.WillLoseExsanguinate(ThisUnit, ThisSpell)
+    if Rogue.Exsanguinated(ThisUnit, ThisSpell) then
+      return true
+    end
+
+    return false
+  end
+
+  function Rogue.ExsanguinatedRate(ThisUnit, ThisSpell)
+    if Rogue.Exsanguinated(ThisUnit, ThisSpell) then
+      return 2.0
+    end
+
+    return 1.0
+  end
+
+  -- Exsanguinate OnCast Listener
+  HL:RegisterForSelfCombatEvent(
+    function(_, _, _, _, _, _, _, DestGUID, _, _, _, SpellID)
+      -- Exsanguinate
+      if SpellID == 200806 then
+        for _, ExsanguinatedByGUID in pairs(ExsanguinatedByBleed) do
+          for GUID, _ in pairs(ExsanguinatedByGUID) do
+            if GUID == DestGUID then
+              ExsanguinatedByGUID[GUID] = true
+            end
+          end
+        end
+      end
+    end,
+    "SPELL_CAST_SUCCESS"
+  )
+  -- Bleed OnApply/OnRefresh Listener
+  HL:RegisterForSelfCombatEvent(
+    function(_, _, _, _, _, _, _, DestGUID, _, _, _, SpellID)
+      if SpellID == 121411 then
+        -- Crimson Tempest
+        ExsanguinatedByBleed.CrimsonTempest[DestGUID] = false
+      elseif SpellID == 703 then
+        -- Garrote
+        ExsanguinatedByBleed.Garrote[DestGUID] = false
+      elseif SpellID == 1943 then
+        -- Rupture
+        ExsanguinatedByBleed.Rupture[DestGUID] = false
+      end
+    end,
+    "SPELL_AURA_APPLIED", "SPELL_AURA_REFRESH"
+  )
+  -- Bleed OnRemove Listener
+  HL:RegisterForSelfCombatEvent(
+    function(_, _, _, _, _, _, _, DestGUID, _, _, _, SpellID)
+      if SpellID == 121411 then
+        -- Crimson Tempest
+        if ExsanguinatedByBleed.CrimsonTempest[DestGUID] ~= nil then
+          ExsanguinatedByBleed.CrimsonTempest[DestGUID] = nil
+        end
+      elseif SpellID == 703 then
+        -- Garrote
+        if ExsanguinatedByBleed.Garrote[DestGUID] ~= nil then
+          ExsanguinatedByBleed.Garrote[DestGUID] = nil
+        end
+      elseif SpellID == 1943 then
+        -- Rupture
+        if ExsanguinatedByBleed.Rupture[DestGUID] ~= nil then
+          ExsanguinatedByBleed.Rupture[DestGUID] = nil
+        end
+      end
+    end,
+    "SPELL_AURA_REMOVED"
+  )
+  -- Bleed OnUnitDeath Listener
+  HL:RegisterForCombatEvent(
+    function(_, _, _, _, _, _, _, DestGUID)
+      -- Crimson Tempest
+      if ExsanguinatedByBleed.CrimsonTempest[DestGUID] ~= nil then
+        ExsanguinatedByBleed.CrimsonTempest[DestGUID] = nil
+      end
+      -- Garrote
+      if ExsanguinatedByBleed.Garrote[DestGUID] ~= nil then
+        ExsanguinatedByBleed.Garrote[DestGUID] = nil
+      end
+      -- Rupture
+      if ExsanguinatedByBleed.Rupture[DestGUID] ~= nil then
+        ExsanguinatedByBleed.Rupture[DestGUID] = nil
+      end
+    end,
+    "UNIT_DIED", "UNIT_DESTROYED"
+  )
+end
+
+--- Fan the Hammer Tracking
+do
+  local OpportunityBuff = Spell(195627)
+  local FanCP = 0
+  local FanStart = GetTime()
+
+  function Rogue.FanTheHammerCP()
+    if (GetTime() - FanStart) < 0.5 and FanCP > 0 then
+      if FanCP > Player:ComboPoints() then
+        return FanCP
+      else
+        FanCP = 0
+      end
+    end
+
+    return 0
+  end
+
+  -- Reset counter on energize
+  HL:RegisterForSelfCombatEvent(
+    function(_, _, _, _, _, _, _, _, _, _, _, SpellID, _, _, Amount, Over )
+      if SpellID == 185763 then
+        if (GetTime() - FanStart) > 0.5 then
+          -- Subsequent Fan the Hammer procs are reduced by 1 CP
+          FanCP = mathmin(Rogue.CPMaxSpend(), Player:ComboPoints() + Amount + (mathmax(0, Amount - 1) * mathmin(2, Player:BuffStack(OpportunityBuff) - 1)))
+          FanStart = GetTime()
+        end
+      end
+    end,
+    "SPELL_ENERGIZE"
+  )
+end
+
+--- Shuriken Tornado Tracking
+do
+  local LastEnergizeTime, LastCastTime = 0, 0
+  local ShurikenTornadoBuff = Spell(277925)
+  function Rogue.TimeToNextTornado()
+    if not Player:BuffUp(ShurikenTornadoBuff, nil, true) then
+      return 0
+    end
+    local TimeToNextTick = Player:BuffRemains(ShurikenTornadoBuff, nil, true) % 1
+    -- Tick happened in the same tick, we may not have the CP gain yet
+    if GetTime() == LastEnergizeTime then
+      return 0
+    -- Tick happened very recently, slightly before the predicted buff tick
+    elseif (GetTime() - LastEnergizeTime) < 0.1 and TimeToNextTick < 0.25 then
+      return 1
+    -- Tick hasn't happened yet but the predicted buff tick has passed
+    elseif (TimeToNextTick > 0.9 or TimeToNextTick == 0) and (GetTime() - LastEnergizeTime) > 0.75 then
+      return 0.1
+    end
+    return TimeToNextTick
+  end
+
+  HL:RegisterForSelfCombatEvent(
+    function(_, _, _, _, _, _, _, _, _, _, _, SpellID)
+      -- Shuriken Storm Energize
+      if SpellID == 212743 then
+        LastEnergizeTime = GetTime()
+      -- Actual Shuriken Storm Cast
+      elseif SpellID == 197835 then
+        LastCastTime = GetTime()
+      end
+      -- If the player casts an actual Shuriken Storm, this value is no longer reliable
+      if LastCastTime == LastEnergizeTime then
+        LastEnergizeTime = 0
+      end
+    end,
+    "SPELL_CAST_SUCCESS"
+  )
+end
+
+--- Shadow Techniques Tracking
+do
+  -- Variables
+  local ShadowTechniques = {
+    Counter = 0,
+    LastMH = 0,
+    LastOH = 0,
+  }
+  -- Return Time to x-th auto attack since last proc
+  function Rogue.TimeToSht(Hit)
+    if ShadowTechniques.Counter >= Hit then
+      return 0
+    end
+
+    local MHSpeed, OHSpeed = UnitAttackSpeed("player")
+    -- Generate the base time to use, if we are out of range this is set to the current time
+    local LastMH = mathmax(ShadowTechniques.LastMH + MHSpeed, GetTime())
+    local LastOH = mathmax(ShadowTechniques.LastOH + OHSpeed, GetTime())
+
+    local AATable = {}
+    for i = 0, 2 do
+      tableinsert(AATable, LastMH + i * MHSpeed)
+      tableinsert(AATable, LastOH + i * OHSpeed)
+    end
+    table.sort(AATable)
+
+    local HitInTable = mathmin(5, mathmax(1, Hit - ShadowTechniques.Counter))
+
+    return AATable[HitInTable] - GetTime()
+  end
+  -- Reset on entering world
+  HL:RegisterForSelfCombatEvent(
+    function ()
+      ShadowTechniques.Counter = 0
+      ShadowTechniques.LastMH = GetTime()
+      ShadowTechniques.LastOH = GetTime()
+    end,
+    "PLAYER_ENTERING_WORLD"
+  )
+  -- Reset counter on energize
+  HL:RegisterForSelfCombatEvent(
+    function(_, _, _, _, _, _, _, _, _, _, _, SpellID)
+      -- Shadow Techniques
+      if SpellID == 196911 then
+        ShadowTechniques.Counter = 0
+      end
+    end,
+    "SPELL_ENERGIZE"
+  )
+  -- Increment counter on successful swings
+  HL:RegisterForSelfCombatEvent(
+    function(_, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, IsOffHand)
+      ShadowTechniques.Counter = ShadowTechniques.Counter + 1
+      if IsOffHand then
+        ShadowTechniques.LastOH = GetTime()
+      else
+        ShadowTechniques.LastMH = GetTime()
+      end
+    end,
+    "SWING_DAMAGE"
+  )
+  -- Remember timers on swing misses
+  HL:RegisterForSelfCombatEvent(
+    function(_, _, _, _, _, _, _, _, _, _, _, _, _, _, _, IsOffHand)
+      if IsOffHand then
+        ShadowTechniques.LastOH = GetTime()
+      else
+        ShadowTechniques.LastMH = GetTime()
+      end
+    end,
+    "SWING_MISSED"
+  )
+end
+
+-- Base Crit Tracker (mainly for Outlaw)
+do
+  local BaseCritChance = Player:CritChancePct()
+  local BaseCritChecksPending = 0
+  local function UpdateBaseCrit()
+    if not Player:AffectingCombat() then
+      BaseCritChance = Player:CritChancePct()
+      HL.Debug("Base Crit Set to: " .. BaseCritChance)
+    end
+    if BaseCritChecksPending == nil or BaseCritChecksPending < 0 then
+      BaseCritChecksPending = 0
+    else
+      BaseCritChecksPending = BaseCritChecksPending - 1
+    end
+    if BaseCritChecksPending > 0 then
+      C_Timer.After(3, UpdateBaseCrit)
+    end
+  end
+  HL:RegisterForEvent(
+    function ()
+      if BaseCritChecksPending == 0 then
+        C_Timer.After(3, UpdateBaseCrit)
+        BaseCritChecksPending = 2
+      end
+    end,
+    "PLAYER_EQUIPMENT_CHANGED"
+  )
+
+  function Rogue.BaseAttackCrit()
+    return BaseCritChance
+  end
 end
 do
-	local v30 = {CrimsonTempest={},Garrote={},Rupture={}};
-	v19.Exsanguinated = function(v58, v59)
-		local v60 = v58:GUID();
-		if not v60 then
-			return false;
-		end
-		local v61 = v59:ID();
-		if (v61 == (30391 + 91020)) then
-			return v30.CrimsonTempest[v60] or false;
-		elseif (v61 == (111 + 592)) then
-			return v30.Garrote[v60] or false;
-		elseif (v61 == (2820 - (282 + 595))) then
-			return v30.Rupture[v60] or false;
-		end
-		return false;
-	end;
-	v19.WillLoseExsanguinate = function(v62, v63)
-		if v19.Exsanguinated(v62, v63) then
-			return true;
-		end
-		return false;
-	end;
-	v19.ExsanguinatedRate = function(v64, v65)
-		if v19.Exsanguinated(v64, v65) then
-			return 1639 - (1523 + 114);
-		end
-		return 1 + 0;
-	end;
-	v2:RegisterForSelfCombatEvent(function(v66, v66, v66, v66, v66, v66, v66, v67, v66, v66, v66, v68)
-		if (v68 == (286266 - 85460)) then
-			for v113, v114 in v24(v30) do
-				for v115, v116 in v24(v114) do
-					if (v115 == v67) then
-						v114[v115] = true;
-					end
-				end
-			end
-		end
-	end, "SPELL_CAST_SUCCESS");
-	v2:RegisterForSelfCombatEvent(function(v69, v69, v69, v69, v69, v69, v69, v70, v69, v69, v69, v71)
-		if (v71 == (122476 - (68 + 997))) then
-			v30.CrimsonTempest[v70] = false;
-		elseif (v71 == (1973 - (226 + 1044))) then
-			v30.Garrote[v70] = false;
-		elseif (v71 == (8460 - 6517)) then
-			v30.Rupture[v70] = false;
-		end
-	end, "SPELL_AURA_APPLIED", "SPELL_AURA_REFRESH");
-	v2:RegisterForSelfCombatEvent(function(v72, v72, v72, v72, v72, v72, v72, v73, v72, v72, v72, v74)
-		if (v74 == (121528 - (32 + 85))) then
-			if (v30.CrimsonTempest[v73] ~= nil) then
-				v30.CrimsonTempest[v73] = nil;
-			end
-		elseif (v74 == (689 + 14)) then
-			if (v30.Garrote[v73] ~= nil) then
-				v30.Garrote[v73] = nil;
-			end
-		elseif (v74 == (431 + 1512)) then
-			if (v30.Rupture[v73] ~= nil) then
-				v30.Rupture[v73] = nil;
-			end
-		end
-	end, "SPELL_AURA_REMOVED");
-	v2:RegisterForCombatEvent(function(v75, v75, v75, v75, v75, v75, v75, v76)
-		if (v30.CrimsonTempest[v76] ~= nil) then
-			v30.CrimsonTempest[v76] = nil;
-		end
-		if (v30.Garrote[v76] ~= nil) then
-			v30.Garrote[v76] = nil;
-		end
-		if (v30.Rupture[v76] ~= nil) then
-			v30.Rupture[v76] = nil;
-		end
-	end, "UNIT_DIED", "UNIT_DESTROYED");
-end
-do
-	local v34 = v16(196584 - (892 + 65));
-	local v35 = 0 - 0;
-	local v36 = v27();
-	v19.FanTheHammerCP = function()
-		if (((v27() - v36) < (0.5 - 0)) and (v35 > (0 - 0))) then
-			if (v35 > v6:ComboPoints()) then
-				return v35;
-			else
-				v35 = 350 - (87 + 263);
-			end
-		end
-		return 180 - (67 + 113);
-	end;
-	v2:RegisterForSelfCombatEvent(function(v77, v77, v77, v77, v77, v77, v77, v77, v77, v77, v77, v78, v77, v77, v79, v80)
-		if (v78 == (136215 + 49548)) then
-			if ((v27() - v36) > (0.5 - 0)) then
-				v35 = v22(v19.CPMaxSpend(), v6:ComboPoints() + v79 + (v21(0 + 0, v79 - (3 - 2)) * v22(954 - (802 + 150), v6:BuffStack(v34) - (2 - 1))));
-				v36 = v27();
-			end
-		end
-	end, "SPELL_ENERGIZE");
-end
-do
-	local v38, v39 = 0 - 0, 0 + 0;
-	local v40 = v16(278922 - (915 + 82));
-	v19.TimeToNextTornado = function()
-		if not v6:BuffUp(v40, nil, true) then
-			return 0 - 0;
-		end
-		local v81 = v6:BuffRemains(v40, nil, true) % (1 + 0);
-		if (v27() == v38) then
-			return 0 - 0;
-		elseif (((v27() - v38) < (1187.1 - (1069 + 118))) and (v81 < (0.25 - 0))) then
-			return 1 - 0;
-		elseif (((v81 > (0.9 + 0)) or (v81 == (0 - 0))) and ((v27() - v38) > (0.75 + 0))) then
-			return 791.1 - (368 + 423);
-		end
-		return v81;
-	end;
-	v2:RegisterForSelfCombatEvent(function(v82, v82, v82, v82, v82, v82, v82, v82, v82, v82, v82, v83)
-		if (v83 == (668582 - 455839)) then
-			v38 = v27();
-		elseif (v83 == (197853 - (10 + 8))) then
-			v39 = v27();
-		end
-		if (v39 == v38) then
-			v38 = 0 - 0;
-		end
-	end, "SPELL_CAST_SUCCESS");
-end
-do
-	local v42 = {Counter=(442 - (416 + 26)),LastMH=(0 - 0),LastOH=(0 + 0)};
-	v19.TimeToSht = function(v84)
-		if (v42.Counter >= v84) then
-			return 0 - 0;
-		end
-		local v85, v86 = v26("player");
-		local v87 = v21(v42.LastMH + v85, v27());
-		local v88 = v21(v42.LastOH + v86, v27());
-		local v89 = {};
-		for v103 = 438 - (145 + 293), 432 - (44 + 386) do
-			v25(v89, v87 + (v103 * v85));
-			v25(v89, v88 + (v103 * v86));
-		end
-		table.sort(v89);
-		local v90 = v22(1491 - (998 + 488), v21(1 + 0, v84 - v42.Counter));
-		return v89[v90] - v27();
-	end;
-	v2:RegisterForSelfCombatEvent(function()
-		v42.Counter = 0 + 0;
-		v42.LastMH = v27();
-		v42.LastOH = v27();
-	end, "PLAYER_ENTERING_WORLD");
-	v2:RegisterForSelfCombatEvent(function(v94, v94, v94, v94, v94, v94, v94, v94, v94, v94, v94, v95)
-		if (v95 == (197683 - (201 + 571))) then
-			v42.Counter = 1138 - (116 + 1022);
-		end
-	end, "SPELL_ENERGIZE");
-	v2:RegisterForSelfCombatEvent(function(v96, v96, v96, v96, v96, v96, v96, v96, v96, v96, v96, v96, v96, v96, v96, v96, v96, v96, v96, v96, v96, v96, v96, v97)
-		v42.Counter = v42.Counter + (4 - 3);
-		if v97 then
-			v42.LastOH = v27();
-		else
-			v42.LastMH = v27();
-		end
-	end, "SWING_DAMAGE");
-	v2:RegisterForSelfCombatEvent(function(v99, v99, v99, v99, v99, v99, v99, v99, v99, v99, v99, v99, v99, v99, v99, v100)
-		if v100 then
-			v42.LastOH = v27();
-		else
-			v42.LastMH = v27();
-		end
-	end, "SWING_MISSED");
-end
-do
-	local v44 = v6:CritChancePct();
-	local v45 = 0 + 0;
-	local function v46()
-		if not v6:AffectingCombat() then
-			v44 = v6:CritChancePct();
-			v2.Debug("Base Crit Set to: " .. v44);
-		end
-		if ((v45 == nil) or (v45 < (0 - 0))) then
-			v45 = 0 - 0;
-		else
-			v45 = v45 - (860 - (814 + 45));
-		end
-		if (v45 > (0 - 0)) then
-			v20.After(1 + 2, v46);
-		end
-	end
-	v2:RegisterForEvent(function()
-		if (v45 == (0 + 0)) then
-			v20.After(888 - (261 + 624), v46);
-			v45 = 3 - 1;
-		end
-	end, "PLAYER_EQUIPMENT_CHANGED");
-	v19.BaseAttackCrit = function()
-		return v44;
-	end;
-end
-do
-	local v48 = 1080 - (1020 + 60);
-	v2:RegisterForSelfCombatEvent(function(v101, v101, v101, v101, v101, v101, v101, v101, v101, v101, v101, v102)
-		if (v102 == (53113 - (630 + 793))) then
-			v48 = 6 - 4;
-		end
-		if ((v102 == (915299 - 721984)) or (v102 == (3417 + 5259)) or (v102 == (1480587 - 1050564))) then
-			if (v48 > (1747 - (760 + 987))) then
-				v48 = v48 - (1914 - (1789 + 124));
-			end
-		end
-	end, "SPELL_CAST_SUCCESS");
-	v19.DisorientingStrikesCount = function()
-		return v48;
-	end;
+  local DisorientingStrikesCount = 0
+  -- Track Disorienting Strikes
+  HL:RegisterForSelfCombatEvent(
+    function(_, _, _, _, _, _, _, _, _, _, _, SpellID)
+      -- KillingSpree
+      if SpellID == 51690 then
+        DisorientingStrikesCount = 2
+      end
+      if SpellID == 193315 or SpellID == 8676 or SpellID == 430023 then
+        if DisorientingStrikesCount > 0 then
+          DisorientingStrikesCount = DisorientingStrikesCount - 1
+        end
+      end
+    end,
+    "SPELL_CAST_SUCCESS"
+  )
+
+  function Rogue.DisorientingStrikesCount()
+    return DisorientingStrikesCount
+  end
 end

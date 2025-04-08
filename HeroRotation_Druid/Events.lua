@@ -1,30 +1,94 @@
-local v0, v1 = ...;
-local v2 = HeroLib;
-local v3 = HeroRotation();
-local v4 = HeroCache;
-local v5 = v2.Unit;
-local v6 = v5.Player;
-local v7 = v5.Target;
-local v8 = v2.Spell;
-local v9 = v2.Item;
-local v10 = GetTime;
-local v11 = v8.Druid.Balance;
-v3.Commons().Druid = {};
-local v13 = v3.Commons().Druid;
-v13.FullMoonLastCast = nil;
-v13.OrbitBreakerStacks = 0 - 0;
-v2:RegisterForSelfCombatEvent(function(v16, v17, v17, v17, v17, v17, v17, v17, v17, v17, v17, v18)
-	if (v18 == (579511 - 377014)) then
-		v13.OrbitBreakerStacks = v13.OrbitBreakerStacks + (1 - 0);
-	end
-	if (v18 == (706524 - 432241)) then
-		if (not v11.NewMoon:IsAvailable() or (v11.NewMoon:IsAvailable() and ((v13.FullMoonLastCast == nil) or ((v16 - v13.FullMoonLastCast) > (620.5 - (555 + 64)))))) then
-			v13.OrbitBreakerStacks = 931 - (857 + 74);
-		end
-	end
-end, "SPELL_DAMAGE");
-v2:RegisterForSelfCombatEvent(function(v19, v20, v20, v20, v20, v20, v20, v20, v20, v20, v20, v21)
-	if (v21 == (274851 - (367 + 201))) then
-		v13.FullMoonLastCast = v19;
-	end
-end, "SPELL_CAST_SUCCESS");
+--- ============================ HEADER ============================
+--- ======= LOCALIZE =======
+-- Addon
+local addonName, addonTable = ...
+-- HeroLib
+local HL               = HeroLib
+local HR               = HeroRotation()
+local Cache            = HeroCache
+local Unit             = HL.Unit
+local Player           = Unit.Player
+local Target           = Unit.Target
+local Spell            = HL.Spell
+local Item             = HL.Item
+-- Lua
+local GetTime          = GetTime
+-- File Locals
+local SpellBalance = Spell.Druid.Balance
+HR.Commons().Druid = {}
+local Druid = HR.Commons().Druid
+Druid.FullMoonLastCast = nil
+Druid.OrbitBreakerStacks = 0
+
+--- ============================ CONTENT ============================
+-- Orbit Breaker Tracking
+HL:RegisterForSelfCombatEvent(function(dmgTime, _, _, _, _, _, _, _, _, _, _, spellID)
+  if spellID == 202497 then
+    Druid.OrbitBreakerStacks = Druid.OrbitBreakerStacks + 1
+  end
+  if spellID == 274283 then
+    if (not SpellBalance.NewMoon:IsAvailable()) or (SpellBalance.NewMoon:IsAvailable() and (Druid.FullMoonLastCast == nil or dmgTime - Druid.FullMoonLastCast > 1.5)) then
+      Druid.OrbitBreakerStacks = 0
+    end
+  end
+end, "SPELL_DAMAGE")
+
+HL:RegisterForSelfCombatEvent(function(castTime, _, _, _, _, _, _, _, _, _, _, spellID)
+  if spellID == 274283 then
+    Druid.FullMoonLastCast = castTime
+  end
+end, "SPELL_CAST_SUCCESS")
+
+--- ======= NON-COMBATLOG =======
+
+--- ======= COMBATLOG =======
+  --- Combat Log Arguments
+    ------- Base -------
+      --     1        2         3           4           5           6              7             8         9        10           11
+      -- TimeStamp, Event, HideCaster, SourceGUID, SourceName, SourceFlags, SourceRaidFlags, DestGUID, DestName, DestFlags, DestRaidFlags
+
+    ------- Prefixes -------
+      --- SWING
+      -- N/A
+
+      --- SPELL & SPELL_PACIODIC
+      --    12        13          14
+      -- SpellID, SpellName, SpellSchool
+
+    ------- Suffixes -------
+      --- _CAST_START & _CAST_SUCCESS & _SUMMON & _RESURRECT
+      -- N/A
+
+      --- _CAST_FAILED
+      --     15
+      -- FailedType
+
+      --- _AURA_APPLIED & _AURA_REMOVED & _AURA_REFRESH
+      --    15
+      -- AuraType
+
+      --- _AURA_APPLIED_DOSE
+      --    15       16
+      -- AuraType, Charges
+
+      --- _INTERRUPT
+      --      15            16             17
+      -- ExtraSpellID, ExtraSpellName, ExtraSchool
+
+      --- _HEAL
+      --   15         16         17        18
+      -- Amount, Overhealing, Absorbed, Critical
+
+      --- _DAMAGE
+      --   15       16       17       18        19       20        21        22        23
+      -- Amount, Overkill, School, Resisted, Blocked, Absorbed, Critical, Glancing, Crushing
+
+      --- _MISSED
+      --    15        16           17
+      -- MissType, IsOffHand, AmountMissed
+
+    ------- Special -------
+      --- UNIT_DIED, UNIT_DESTROYED
+      -- N/A
+
+  --- End Combat Log Arguments

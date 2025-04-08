@@ -1,36 +1,107 @@
-local v0, v1 = ...;
-local v2 = HeroLib;
-local v3 = HeroRotation();
-local v4 = HeroCache;
-local v5 = v2.Unit;
-local v6 = v5.Player;
-local v7 = v5.Target;
-local v8 = v2.Spell;
-local v9 = v2.Item;
-local v10 = pairs;
-local v11 = select;
-v3.Commons().Paladin = {};
-local v13 = v3.Commons().Paladin;
-v13.HPGCount = 0 - 0;
-v13.DivineHammerActive = false;
-local v16 = v4.Persistent.Player.Spec[2 - 1];
-v13.HPGCount = 0 - 0;
-v2:RegisterForSelfCombatEvent(function(...)
-	if (v16 == (169 - 103)) then
-		v13.HPGCount = v13.HPGCount + (620 - (555 + 64));
-	end
-end, "SPELL_ENERGIZE");
-v2:RegisterForSelfCombatEvent(function(...)
-	local v17 = v11(943 - (857 + 74), ...);
-	if (v17 == (385695 - (367 + 201))) then
-		v13.HPGCount = 927 - (214 + 713);
-	elseif (v17 == (49571 + 148463)) then
-		v13.DivineHammerActive = true;
-	end
-end, "SPELL_AURA_APPLIED", "SPELL_AURA_APPLIED_DOSE");
-v2:RegisterForSelfCombatEvent(function(...)
-	local v18 = v11(2 + 10, ...);
-	if (v18 == (198911 - (282 + 595))) then
-		v13.DivineHammerActive = false;
-	end
-end, "SPELL_AURA_REMOVED");
+--- ============================ HEADER ============================
+--- ======= LOCALIZE =======
+-- Addon
+local addonName, addonTable = ...
+-- HeroLib
+local HL                    = HeroLib
+local HR                    = HeroRotation()
+local Cache                 = HeroCache
+local Unit                  = HL.Unit
+local Player                = Unit.Player
+local Target                = Unit.Target
+local Spell                 = HL.Spell
+local Item                  = HL.Item
+-- Lua
+local pairs                 = pairs
+local select                = select
+-- File Locals
+HR.Commons().Paladin = {}
+local Paladin = HR.Commons().Paladin
+Paladin.HPGCount = 0
+Paladin.DivineHammerActive = false
+--- ============================ CONTENT ============================
+--- --- ===== HPGTo2Dawn Tracker =====
+local Spec = Cache.Persistent.Player.Spec[1]
+Paladin.HPGCount = 0
+HL:RegisterForSelfCombatEvent(
+  function (...)
+    if Spec == 66 then
+      Paladin.HPGCount = Paladin.HPGCount + 1
+    end
+  end
+, "SPELL_ENERGIZE")
+
+HL:RegisterForSelfCombatEvent(
+  function (...)
+    local SpellID = select(12, ...)
+    if SpellID == 385127 then
+      Paladin.HPGCount = 0
+    elseif SpellID == 198034 then -- Divine Hammer
+      Paladin.DivineHammerActive = true
+    end
+  end
+, "SPELL_AURA_APPLIED", "SPELL_AURA_APPLIED_DOSE")
+
+HL:RegisterForSelfCombatEvent(
+  function (...)
+    local SpellID = select(12, ...)
+    if SpellID == 198034 then -- Divine Hammer
+      Paladin.DivineHammerActive = false
+    end
+  end
+  , "SPELL_AURA_REMOVED"
+)
+
+--- ======= NON-COMBATLOG =======
+
+--- ======= COMBATLOG =======
+--- Combat Log Arguments
+------- Base -------
+--     1        2         3           4           5           6              7             8         9        10           11
+-- TimeStamp, Event, HideCaster, SourceGUID, SourceName, SourceFlags, SourceRaidFlags, DestGUID, DestName, DestFlags, DestRaidFlags
+
+------- Prefixes -------
+--- SWING
+-- N/A
+
+--- SPELL & SPELL_PACIODIC
+--    12        13          14
+-- SpellID, SpellName, SpellSchool
+
+------- Suffixes -------
+--- _CAST_START & _CAST_SUCCESS & _SUMMON & _RESURRECT
+-- N/A
+
+--- _CAST_FAILED
+--     15
+-- FailedType
+
+--- _AURA_APPLIED & _AURA_REMOVED & _AURA_REFRESH
+--    15
+-- AuraType
+
+--- _AURA_APPLIED_DOSE
+--    15       16
+-- AuraType, Charges
+
+--- _INTERRUPT
+--      15            16             17
+-- ExtraSpellID, ExtraSpellName, ExtraSchool
+
+--- _HEAL
+--   15         16         17        18
+-- Amount, Overhealing, Absorbed, Critical
+
+--- _DAMAGE
+--   15       16       17       18        19       20        21        22        23
+-- Amount, Overkill, School, Resisted, Blocked, Absorbed, Critical, Glancing, Crushing
+
+--- _MISSED
+--    15        16           17
+-- MissType, IsOffHand, AmountMissed
+
+------- Special -------
+--- UNIT_DIED, UNIT_DESTROYED
+-- N/A
+
+--- End Combat Log Arguments

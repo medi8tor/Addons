@@ -1,7 +1,8 @@
-## Interface: 110003
+## Interface: 110100
 
 ## Title: Hero|cFFA330C9Rotation|r [|cFF40C7EBMage|r]
 ## Author: KutiKuti
+## Version: 11.1.0.1
 ## Notes: Hero Rotation - Mage Module.
 
 ## DefaultState: Enabled

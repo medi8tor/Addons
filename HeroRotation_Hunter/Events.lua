@@ -1,96 +1,140 @@
-local v0, v1 = ...;
-local v2 = HeroDBC.DBC;
-local v3 = HeroLib;
-local v4 = HeroCache;
-local v5 = HeroRotation();
-local v6 = v3.Unit;
-local v7 = v6.Player;
-local v8 = v6.Target;
-local v9 = v6.Pet;
-local v10 = v3.Spell;
-local v11 = v3.Item;
-local v12 = C_Timer.After;
-local v13 = GetTime;
-local v14 = select;
-v5.Commons().Hunter = {};
-local v16 = v5.Commons().Hunter;
-v16.Pet = {};
-v16.Pet.Status = ((v9:IsActive()) and (2 - 1)) or (0 - 0);
-v16.Pet.GUID = ((v9:IsActive()) and v9:GUID()) or (0 - 0);
-v16.Pet.FeignGUID = 0 - 0;
-v16.Pet.SummonSpells = {(1814 - (857 + 74)),(84169 - (214 + 713)),(13092 + 70151),(84881 - (1523 + 114)),(118672 - 35427),(2252 - (226 + 1044))};
-local v22 = v16.Pet;
-v3:RegisterForSelfCombatEvent(function(...)
-	local v27, v28, v28, v28, v29 = v14(34 - 26, ...);
-	for v40, v41 in pairs(v22.SummonSpells) do
-		if (v29 == v41) then
-			v22.Status = 118 - (32 + 85);
-			v22.GUID = v27;
-			v22.FeignGUID = 0 + 0;
-		end
-	end
-end, "SPELL_SUMMON");
-v3:RegisterForEvent(function()
-	if ((v22.Status == (0 + 0)) and v9:IsActive()) then
-		v22.Status = 958 - (892 + 65);
-		v22.GUID = v9:GUID();
-		v22.FeignGUID = 0 - 0;
-	end
-end, "SPELLS_CHANGED");
-v3:RegisterForSelfCombatEvent(function(...)
-	local v30 = v14(21 - 9, ...);
-	if (v30 == (4848 - 2207)) then
-		v12(351 - (87 + 263), function()
-			v22.Status = 180 - (67 + 113);
-			v22.GUID = 0 + 0;
-			v22.FeignGUID = 0 - 0;
-		end);
-	end
-end, "SPELL_CAST_SUCCESS");
-v3:RegisterForCombatEvent(function(...)
-	local v31 = v14(6 + 2, ...);
-	if (v31 == v22.GUID) then
-		v22.Status = 7 - 5;
-		v22.GUID = 952 - (802 + 150);
-	elseif ((v31 == v7:GUID()) and (v22.Status == (2 - 1))) then
-		v22.Status = 5 - 2;
-		v22.GUID = 0 + 0;
-	end
-end, "UNIT_DIED");
-v3:RegisterForEvent(function(...)
-	local v32, v33, v32, v34 = ...;
-	if (v33 ~= "player") then
-		return;
-	end
-	if (v34 == (210994 - (915 + 82))) then
-		v22.FeignGUID = v22.GUID;
-	end
-	if ((v34 == (594630 - 384630)) and (v22.FeignGUID ~= (0 + 0))) then
-		v22.GUID = v22.FeignGUID;
-		v22.FeignGUID = 0 - 0;
-		v22.Status = 1188 - (1069 + 118);
-	end
-end, "UNIT_SPELLCAST_SUCCEEDED");
-v3:RegisterForEvent(function(...)
-	v22.GUID = 0 - 0;
-	v22.FeignGUID = 0 - 0;
-	v22.Status = 0 + 0;
-end, "CHALLENGE_MODE_START");
-v16.SteadyFocus = {};
-v16.SteadyFocus.Count = 0 - 0;
-v16.SteadyFocus.LastCast = 0 + 0;
-local v26 = v16.SteadyFocus;
-v3:RegisterForSelfCombatEvent(function(...)
-	local v38 = v14(803 - (368 + 423), ...);
-	if (v38 == (178004 - 121363)) then
-		v26.Count = v26.Count + (19 - (10 + 8));
-		v26.LastCast = v13();
-	end
-end, "SPELL_CAST_SUCCESS");
-v3:RegisterForSelfCombatEvent(function(...)
-	local v39 = v14(45 - 33, ...);
-	if (v39 == (193976 - (416 + 26))) then
-		v26.Count = 0 - 0;
-		v26.LastCast = 0 + 0;
-	end
-end, "SPELL_AURA_APPLIED");
+--- ============================ HEADER ============================
+--- ======= LOCALIZE =======
+-- Addon
+local addonName, addonTable = ...
+-- HeroDBC
+local DBC                   = HeroDBC.DBC
+-- HeroLib
+local HL                    = HeroLib
+local Cache                 = HeroCache
+local HR                    = HeroRotation()
+local Unit                  = HL.Unit
+local Player                = Unit.Player
+local Target                = Unit.Target
+local Pet                   = Unit.Pet
+local Spell                 = HL.Spell
+local Item                  = HL.Item
+-- Lua
+local C_TimerAfter          = C_Timer.After
+local GetTime               = GetTime
+local select                = select
+-- File Locals
+HR.Commons().Hunter         = {}
+local Hunter                = HR.Commons().Hunter
+
+Hunter.Pet                  = {}
+
+-- Pet Statuses are 0 (dismissed), 1 (alive), 2 (dead/feigned), or 3 (player died)
+Hunter.Pet.Status           = (Pet:IsActive()) and 1 or 0
+Hunter.Pet.GUID             = (Pet:IsActive()) and Pet:GUID() or 0
+Hunter.Pet.FeignGUID        = 0
+-- SummonSpells are Call Pet 1-5 and Revive Pet
+Hunter.Pet.SummonSpells     = { 883, 83242, 83243, 83244, 83245, 982 }
+local P                     = Hunter.Pet
+HL:RegisterForSelfCombatEvent(
+  function(...)
+    local DestGUID, _, _, _, SpellID = select(8, ...)
+    for _, Spell in pairs(P.SummonSpells) do
+      if SpellID == Spell then
+        P.Status = 1
+        P.GUID = DestGUID
+        P.FeignGUID = 0
+      end
+    end
+  end
+  , "SPELL_SUMMON"
+)
+
+HL:RegisterForEvent(
+  function()
+    if P.Status == 0 and Pet:IsActive() then
+      P.Status = 1
+      P.GUID = Pet:GUID()
+      P.FeignGUID = 0
+    end
+  end
+  , "SPELLS_CHANGED"
+)
+
+HL:RegisterForSelfCombatEvent(
+  function(...)
+    local SpellID = select(12, ...)
+    if SpellID == 2641 then
+      -- Delay for 1s, as SPELL_CAST_SUCCESS fires before SPELLS_CHANGED when casting Dismiss Pet.
+      C_TimerAfter(1, function()
+        P.Status = 0
+        P.GUID = 0
+        P.FeignGUID = 0
+      end)
+    end
+  end
+  , "SPELL_CAST_SUCCESS"
+)
+
+HL:RegisterForCombatEvent(
+  function(...)
+    local DestGUID = select(8, ...)
+    if DestGUID == P.GUID then
+      P.Status = 2
+      P.GUID = 0
+    elseif DestGUID == Player:GUID() and P.Status == 1 then
+      P.Status = 3
+      P.GUID = 0
+    end
+  end
+  , "UNIT_DIED"
+)
+
+HL:RegisterForEvent(
+  function(...)
+    local _, CasterUnit, _, SpellID = ...
+    if CasterUnit ~= "player" then return end
+    if SpellID == 209997 then
+      P.FeignGUID = P.GUID
+    end
+    if SpellID == 210000 and P.FeignGUID ~= 0 then
+      P.GUID = P.FeignGUID
+      P.FeignGUID = 0
+      P.Status = 1
+    end
+  end
+  , "UNIT_SPELLCAST_SUCCEEDED"
+)
+
+HL:RegisterForEvent(
+  function(...)
+    -- CHALLENGE_MODE_START is called at the start of a Mythic+ dungeon, which despawns the pet
+    P.GUID = 0
+    P.FeignGUID = 0
+    P.Status = 0
+  end
+  , "CHALLENGE_MODE_START"
+)
+--- ===== Steady Focus Tracker =====
+Hunter.SteadyFocus = {}
+Hunter.SteadyFocus.Count = 0
+Hunter.SteadyFocus.LastCast = 0
+local SF = Hunter.SteadyFocus
+
+HL:RegisterForSelfCombatEvent(
+  function(...)
+    local SpellID = select(12, ...)
+    if SpellID == 56641 then
+      SF.Count = SF.Count + 1
+      SF.LastCast = GetTime()
+    end
+  end
+  , "SPELL_CAST_SUCCESS"
+)
+
+HL:RegisterForSelfCombatEvent(
+  function(...)
+    local SpellID = select(12, ...)
+    -- If Steady Focus buff is applied, reset the tracker
+    if SpellID == 193534 then
+      SF.Count = 0
+      SF.LastCast = 0
+    end
+  end
+  , "SPELL_AURA_APPLIED"
+)

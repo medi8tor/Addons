@@ -1,0 +1,17 @@
+## Interface: 110100
+
+## Title: Hero|cFFA330C9Rotation|r [|cFFA330C9Demon Hunter|r]
+## Author: Cilraaz, Kojiyama
+## Version: 11.1.0.1
+## Notes: Hero Rotation - Demon Hunter Module.
+
+## DefaultState: Enabled
+## LoadOnDemand: 1
+## Dependencies: HeroRotation
+
+Settings.lua
+DemonHunter.lua
+Events.lua
+Havoc.lua
+Vengeance.lua
+Overrides.lua
