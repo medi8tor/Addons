@@ -1,0 +1,103 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../HeroDBC"
+		},
+		{
+			"path": "../HeroLib"
+		},
+		{
+			"path": "../HeroRotation"
+		},
+		{
+			"path": "../HeroRotation_DeathKnight"
+		},
+		{
+			"path": "../HeroRotation_DemonHunter"
+		},
+		{
+			"path": "../HeroRotation_Druid"
+		},
+		{
+			"path": "../HeroRotation_Evoker"
+		},
+		{
+			"path": "../HeroRotation_Hunter"
+		},
+		{
+			"path": "../HeroRotation_Mage"
+		},
+		{
+			"path": "../HeroRotation_Monk"
+		},
+		{
+			"path": "../HeroRotation_Paladin"
+		},
+		{
+			"path": "../HeroRotation_Priest"
+		},
+		{
+			"path": "../HeroRotation_Rogue"
+		},
+		{
+			"path": "../HeroRotation_Shaman"
+		},
+		{
+			"path": "../HeroRotation_Warlock"
+		},
+		{
+			"path": "../HeroRotation_Warrior"
+		}
+	],
+	"settings": {
+		"Lua.runtime.version": "Lua 5.1",
+		"Lua.runtime.builtin": {
+			"basic": "disable",
+			"debug": "disable",
+			"io": "disable",
+			"math": "disable",
+			"os": "disable",
+			"package": "disable",
+			"string": "disable",
+			"table": "disable",
+			"utf8": "disable"
+		},
+		"Lua.workspace.library": [
+			"~\\.vscode\\extensions\\ketho.wow-api-0.20.6\\Annotations\\Core"
+		],
+		"Lua.diagnostics.globals": [
+			"SlashCmdList",
+			"Object",
+			"AddonCompartmentFrame",
+			"CR_VERSATILITY_DAMAGE_DONE",
+			"NUM_ACTIONBAR_BUTTONS",
+			"NUM_ACTIONBAR_PAGES",
+			"UIDropDownMenu_Initialize",
+			"UIDropDownMenu_SetSelectedValue",
+			"UIDropDownMenu_JustifyText",
+			"GameTooltip_Hide",
+			"ReloadUI",
+			"UIDropDownMenu_AddButton",
+			"UIDropDownMenu_SetSelectedID",
+			"UIDropDownMenu_CreateInfo",
+			"StoreFrame",
+			"UIDropDownMenu_GetText",
+			"SPELL_FAILED_UNIT_NOT_INFRONT",
+			"WorldFrame",
+			"Settings",
+			"COMBATLOG_OBJECT_TYPE_PLAYER",
+			"COMBATLOG_OBJECT_REACTION_HOSTILE",
+			"COMBATLOG_OBJECT_CONTROL_PLAYER",
+			"ACTIVE_CHAT_EDIT_BOX",
+			"RaidNotice_AddMessage",
+			"RaidWarningFrame",
+			"ChatTypeInfo",
+			"TANK",
+			"DAMAGER",
+			"Raid"
+		]
+	}
+}

@@ -2,7 +2,7 @@
 
 ## Title: Hero|cFFA330C9Rotation|r [|cFFFF7C0ADruid|r]
 ## Author: Cilraaz
-## Version: 11.1.0.1
+## Version: 11.1.0.13
 ## Notes: Hero Rotation - Druid Module.
 
 ## DefaultState: Enabled
