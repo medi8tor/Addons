@@ -1,2 +1,2 @@
-HeroDBC.DBC.metaVersion = "11.1.0.60257"
-HeroDBC.DBC.metaTime = "2025-04-12T06:51:39.927548"
+HeroDBC.DBC.metaVersion = "11.1.5.60822"
+HeroDBC.DBC.metaTime = "2025-05-14T07:31:20.445422"

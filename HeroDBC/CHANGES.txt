@@ -1,16 +1,37 @@
-tag ddd2b4ffd13f30f3eb8e4ac123e2b50dff1b6af7 11.0.2.04
+tag 5294e1775e236ffdd2188ee373f8f6ab2df54e7f 11.1.5.02
 Author:	Cilraaz <cilraaz@gmail.com>
-Date:	Tue Sep 17 12:09:04 2024 -0400
+Date:	Thu May 15 22:59:50 2025 -0400
 
-commit beadfde3b9cdd09913fe2e918b7fd9a95fd1b976
+commit 5589b52d759a1cee0bb64bb9b68dae708c3f00de
 Author: Cilraaz <cilraaz@gmail.com>
-Date:   Tue Sep 17 12:08:52 2024 -0400
+Date:   Thu May 15 22:59:40 2025 -0400
 
-    build(TOC): 11.0.2.04 release
+    build(TOC): 11.1.5.02 release
 
-commit d59bdda63a6f96a2941249ca1542fb3a053027d3
+commit 16e4c557b7fceed45e7622f15b8e71319cb9b8c4
 Author: Cilraaz <cilraaz@gmail.com>
-Date:   Tue Sep 17 12:08:25 2024 -0400
+Date:   Thu May 15 22:59:09 2025 -0400
 
-    chore(DBC): 11.0.2.56625 data
+    fix(SpellAuraStat): Change SpellEffect sorting to avoid incorrect values
+    
+    - Sort by id_parent (Spell ID), then descending sub_type. This fixes an issue where some spells were being incorrectly marked as false.
+    - For example, Signet of the Priory trinket uses Spell ID 443531. It has multiple SpellEffect entries of type 6, including one of sub_type 4, which appears to be a "controller" of some kind (trinket increases the highest secondary stat). The other entries are type 189. Re-sorting in this way means the parser sees the sub_type 189 before sub_type 4, giving us a proper true value.
+
+commit afe3db4e7dd37a0f2ba44d7303d2f7930f2af85d
+Author: JoshAU <37181202+joshjau@users.noreply.github.com>
+Date:   Fri May 16 10:41:05 2025 +0800
+
+    chore(DBC): 11.1.5.60822 data (#20)
+    
+    * chore(DBC): 11.1.5.60568 data
+    
+    * refactor(extract/filter.py): Update
+    
+    * fix dumb linter warning
+    
+    * chore(DBC): 11.1.5.60822 data
+    
+    - Updated WoW Retail Data to v11.1.5.60822
+    - Removed SpellConduits.lua from TOC as no longer needed I believe?
+    - Fixed minor issue with ItemRange.py
 
