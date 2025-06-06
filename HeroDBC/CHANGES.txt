@@ -1,37 +1,30 @@
-tag 5294e1775e236ffdd2188ee373f8f6ab2df54e7f 11.1.5.02
+tag 4578dbd56aba071ecc9bce343d5851f7e833a7e4 11.1.5.05
 Author:	Cilraaz <cilraaz@gmail.com>
-Date:	Thu May 15 22:59:50 2025 -0400
+Date:	Wed Jun 4 09:16:04 2025 -0400
 
-commit 5589b52d759a1cee0bb64bb9b68dae708c3f00de
+commit 24dde1f4c88f5358d4f1bfdd841cffc8886e91e8
 Author: Cilraaz <cilraaz@gmail.com>
-Date:   Thu May 15 22:59:40 2025 -0400
+Date:   Wed Jun 4 09:15:54 2025 -0400
 
-    build(TOC): 11.1.5.02 release
+    build(TOC): 11.1.5.05 release
 
-commit 16e4c557b7fceed45e7622f15b8e71319cb9b8c4
+commit f832c2c925663c92bf7250cad6d2e6001e231d4d
 Author: Cilraaz <cilraaz@gmail.com>
-Date:   Thu May 15 22:59:09 2025 -0400
+Date:   Wed Jun 4 09:15:24 2025 -0400
 
-    fix(SpellAuraStat): Change SpellEffect sorting to avoid incorrect values
-    
-    - Sort by id_parent (Spell ID), then descending sub_type. This fixes an issue where some spells were being incorrectly marked as false.
-    - For example, Signet of the Priory trinket uses Spell ID 443531. It has multiple SpellEffect entries of type 6, including one of sub_type 4, which appears to be a "controller" of some kind (trinket increases the highest secondary stat). The other entries are type 189. Re-sorting in this way means the parser sees the sub_type 189 before sub_type 4, giving us a proper true value.
+    fix(ItemRange): Fix incorrect entries in the Hostile ItemRange table
 
-commit afe3db4e7dd37a0f2ba44d7303d2f7930f2af85d
-Author: JoshAU <37181202+joshjau@users.noreply.github.com>
-Date:   Fri May 16 10:41:05 2025 +0800
+commit 10baa2b272fa6132324a4ebf0d41269d38eefbff
+Author: Cilraaz <cilraaz@gmail.com>
+Date:   Wed Jun 4 08:46:59 2025 -0400
 
-    chore(DBC): 11.1.5.60822 data (#20)
+    build(TOC): Fix Dev TOC
+
+commit 9d87130a17d87de4db8d4d081205e3b82ae0a615
+Author: Cilraaz <cilraaz@gmail.com>
+Date:   Mon Jun 2 13:53:38 2025 -0400
+
+    feat(workflow): Update workflow
     
-    * chore(DBC): 11.1.5.60568 data
-    
-    * refactor(extract/filter.py): Update
-    
-    * fix dumb linter warning
-    
-    * chore(DBC): 11.1.5.60822 data
-    
-    - Updated WoW Retail Data to v11.1.5.60822
-    - Removed SpellConduits.lua from TOC as no longer needed I believe?
-    - Fixed minor issue with ItemRange.py
+    - Local checks show the pkgmeta handles topdir well enough.
 
