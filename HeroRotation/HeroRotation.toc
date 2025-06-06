@@ -23,8 +23,11 @@ Settings.lua
 Core.lua
 Events.lua
 Lists.lua
-
-
+CustomAPI\LOSBlacklistManager.lua
+CustomAPI\UnitHealthManager.lua
+CustomAPI\IncomingDamageManager.lua
+CustomAPI\MRTSystemManager.lua
+CustomAPI\BeaconManager.lua
 
 # UI
 UI.xml
