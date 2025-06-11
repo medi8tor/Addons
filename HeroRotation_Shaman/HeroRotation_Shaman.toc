@@ -13,6 +13,6 @@ Settings.lua
 Shaman.lua
 Events.lua
 Enhancement.lua
-Elemental.lua
+#Elemental.lua
 Restoration.lua
 Overrides.lua

@@ -13,6 +13,6 @@ Settings.lua
 DeathKnight.lua
 Events.lua
 Blood.lua
-Frost.lua
+ #Frost.lua
 Unholy.lua
 Overrides.lua
