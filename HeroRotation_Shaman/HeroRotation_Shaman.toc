@@ -2,7 +2,7 @@
 
 ## Title: Hero|cFFA330C9Rotation|r [|cFF0070DDShaman|r]
 ## Author: HeroRotation Team
-## Version: 11.1.0.13
+## Version: 11.1.7.1
 ## Notes: Hero Rotation - Shaman Module.
 
 ## DefaultState: Enabled

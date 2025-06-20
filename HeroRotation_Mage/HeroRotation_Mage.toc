@@ -2,7 +2,7 @@
 
 ## Title: Hero|cFFA330C9Rotation|r [|cFF40C7EBMage|r]
 ## Author: KutiKuti
-## Version: 11.1.0.13
+## Version: 11.1.7.1
 ## Notes: Hero Rotation - Mage Module.
 
 ## DefaultState: Enabled

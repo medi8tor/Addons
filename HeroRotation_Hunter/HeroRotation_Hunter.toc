@@ -2,7 +2,7 @@
 
 ## Title: Hero|cFFA330C9Rotation|r [|cFFABD473Hunter|r]
 ## Author: Krich
-## Version: 11.1.0.13
+## Version: 11.1.7.1
 ## Notes: Hero Rotation - Hunter Module.
 
 ## DefaultState: Enabled

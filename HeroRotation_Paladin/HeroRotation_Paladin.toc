@@ -2,7 +2,7 @@
 
 ## Title: Hero|cFFA330C9Rotation|r [|cFFF58CBAPaladin|r]
 ## Author: Cilraaz
-## Version: 11.1.0.13
+## Version: 11.1.7.1
 ## Notes: Hero Rotation - Paladin Module.
 
 ## DefaultState: Enabled
