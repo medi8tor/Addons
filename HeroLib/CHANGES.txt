@@ -1,16 +1,22 @@
-tag d51d32b5369f5dbfb0b75b60c2562319f3d2dc2c 11.0.2.19
+tag f7b3fc2368937b9d6329297a63f43ec5c9eb70c5 11.2.0.05
 Author:	Cilraaz <cilraaz@gmail.com>
-Date:	Mon Oct 7 14:33:12 2024 -0400
+Date:	Thu Aug 28 15:41:13 2025 -0400
 
-commit abd7d573117ad884b270724f9817775e0612994d
+commit 6c9f6ab6ae37ace6e0d231056a46570c86f2c1ac
 Author: Cilraaz <cilraaz@gmail.com>
-Date:   Mon Oct 7 14:32:55 2024 -0400
+Date:   Thu Aug 28 15:40:54 2025 -0400
 
-    build(TOC): 11.0.2.19 release
+    build(TOC): 11.2.0.05 release
 
-commit 808f9caf8d248588b2e74901fae97bb7c66a7475
+commit db0fd94ef020bab750b0f394f44f5e9240e885d1
+Author: JoshAU <37181202+joshjau@users.noreply.github.com>
+Date:   Thu Aug 28 10:21:02 2025 +0800
+
+    fix(Enemies): Fix incorrect unit insertion in GetEnemiesInRange
+
+commit 62e7c0d5f397001039c132acb704f1cce45d30cd
 Author: Cilraaz <cilraaz@gmail.com>
-Date:   Sun Oct 6 21:06:55 2024 -0400
+Date:   Tue Aug 26 17:38:57 2025 -0400
 
-    fix(Equipment): Fix incorrect Item reference
+    feat(Player): Optimize UpdateTalents event callback
 
